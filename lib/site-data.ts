@@ -1,11 +1,15 @@
 export const SITE = {
-  name: "ConciergeX",
-  brand: "ConciergeX by Raptric",
+  name: "GuestSquad",
+  brand: "GuestSquad",
+  legalName: "Raptric LLC",
+  parentName: "Raptric",
+  parentUrl: "https://raptric.com",
   tagline: "Never miss a guest. Never lose a booking.",
-  url: "https://www.conciergex.com",
-  calendlyUrl: "https://calendly.com/conciergex/15min-demo",
-  email: "hello@conciergex.com",
-  phone: "+1 (000) 000-0000",
+  url: "https://www.guestsquad.com",
+  calendlyUrl: "https://calendly.com/guestsquad/15min-demo",
+  email: "info@guestsquad.com",
+  phone: "+1 509 588 7311",
+  phoneHref: "+15095887311",
 };
 
 export type NavLink = { label: string; href: string };

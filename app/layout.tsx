@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     template: `%s — ${SITE.brand}`,
   },
   description:
-    "ConciergeX by Raptric handles reservations, guest messaging, OTA inquiries, callbacks, upsells, and after-hours support — so your front desk stays focused on in-house guests.",
+    "GuestSquad handles reservations, guest messaging, OTA inquiries, callbacks, upsells, and after-hours support — so your front desk stays focused on in-house guests.",
   openGraph: {
     title: `${SITE.brand} — 24/7 Guest Operations for Hotels`,
     description:

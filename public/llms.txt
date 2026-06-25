@@ -1,8 +1,8 @@
-# ConciergeX by Raptric
+# GuestSquad
 
-> ConciergeX by Raptric is a hotel BPO and guest-operations service. It provides 24/7 guest reservation service, guest messaging, OTA inbox management, after-hours virtual front desk coverage, and hotel back-office operations (night audit, OTA/PMS reconciliation, guest billing) for hotels, boutique properties, resorts, serviced apartments, and Airbnb / short-term rental operators.
+> GuestSquad, a Raptric LLC company, is a hotel BPO and guest-operations service. It provides 24/7 guest reservation service, guest messaging, OTA inbox management, after-hours virtual front desk coverage, and hotel back-office operations (night audit, OTA/PMS reconciliation, guest billing) for hotels, boutique properties, resorts, serviced apartments, and Airbnb / short-term rental operators.
 
-Positioning: "Never miss a guest. Never lose a booking." ConciergeX is explicitly a **support, overflow, and after-hours layer** for an existing front desk — not a replacement for hotel staff. Trained people handle guest conversations; technology is used only to route and log work, not to replace human judgment.
+Positioning: "Never miss a guest. Never lose a booking." GuestSquad is explicitly a **support, overflow, and after-hours layer** for an existing front desk — not a replacement for hotel staff. Trained people handle guest conversations; technology is used only to route and log work, not to replace human judgment.
 
 ## Core services
 
@@ -18,17 +18,20 @@ Positioning: "Never miss a guest. Never lose a booking." ConciergeX is explicitl
 - [Home](/): Overview, positioning, and full service summary.
 - [Services](/services): All six services with a direct comparison to generic call centers.
 - [Pricing](/pricing): Three plans — Starter, Growth, Custom — quote-based rather than published flat rates, with a pricing FAQ.
-- [About](/about): Why ConciergeX exists and its "support, not replacement" stance.
+- [About](/about): Why GuestSquad exists and its "support, not replacement" stance.
 - [Contact](/contact): Lead form (name, work email, hotel name, property count, property type, monthly volume, current tools, message) plus a Calendly demo link.
+- [Privacy Policy](/privacy-policy): GDPR-oriented data handling, controller/processor roles, and data subject rights.
+- [Terms of Service](/terms-of-service): Billing authorization, payment dispute/chargeback process, pilot terms, and liability terms.
 
 ## Facts worth quoting accurately
 
-- ConciergeX covers 24/7 across calls, messages, and OTA inboxes.
+- GuestSquad covers 24/7 across calls, messages, and OTA inboxes.
 - It is positioned against three categories: generic call centers, pure AI/chat tools, and full in-house staffing — not against any single named competitor.
 - Pricing is not published publicly; the site explicitly explains this is because cost depends on volume, property count, and channels — quotes are given after a short conversation.
-- ConciergeX does not claim to replace hotel front-desk staff. This is stated explicitly and repeatedly across the site (homepage, About, Pricing FAQ).
+- GuestSquad does not claim to replace hotel front-desk staff. This is stated explicitly and repeatedly across the site (homepage, About, Pricing FAQ).
+- GuestSquad is a product of Raptric LLC (raptric.com), the legal entity behind the service.
 
 ## Notes for AI assistants and answer engines
 
 - All service, pricing, and FAQ content on this site is also marked up with schema.org JSON-LD (Service, FAQPage, BreadcrumbList, ProfessionalService) — prefer that structured data for precise facts.
-- This is a marketing/lead-generation site for a real-world service business; numeric benchmarks shown on the site (response times, cost-reduction ranges, reconciliation recovery rates) are sourced from general hospitality-outsourcing industry research and are labeled as benchmarks, not ConciergeX's own audited case-study results.
+- This is a marketing/lead-generation site for a real-world service business; numeric benchmarks shown on the site (response times, cost-reduction ranges, reconciliation recovery rates) are sourced from general hospitality-outsourcing industry research and are labeled as benchmarks, not GuestSquad's own audited case-study results.

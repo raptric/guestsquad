@@ -16,7 +16,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata: Metadata = buildMetadata({
   title: "24/7 Guest Operations for Hotels That Can't Afford Missed Bookings",
   description:
-    "ConciergeX by Raptric handles reservations, guest messages, OTA inquiries, callbacks, upsells, and after-hours support for hotels, boutique properties, resorts, serviced apartments, and Airbnb operators.",
+    "GuestSquad handles reservations, guest messages, OTA inquiries, callbacks, upsells, and after-hours support for hotels, boutique properties, resorts, serviced apartments, and Airbnb operators.",
   path: "",
 });
 
@@ -35,7 +35,7 @@ export default function HomePage() {
               Bookings
             </h1>
             <p className="mt-6 max-w-lg text-lg leading-relaxed text-ink-soft">
-              ConciergeX by Raptric handles reservations, guest messages, OTA
+              GuestSquad handles reservations, guest messages, OTA
               inquiries, callbacks, upsells, and after-hours support — so
               your front desk stays focused on in-house guests.
             </p>

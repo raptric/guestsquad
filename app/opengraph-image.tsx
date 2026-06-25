@@ -28,7 +28,7 @@ export default async function OpengraphImage() {
           }}
         >
           <span style={{ fontSize: 64, fontWeight: 600, color: "#0B1220" }}>
-            Concierge<span style={{ color: "#9C7E33" }}>X</span>
+            Guest<span style={{ color: "#9C7E33" }}>Squad</span>
           </span>
           <span style={{ fontSize: 24, color: "#7C8398" }}>by Raptric</span>
         </div>

@@ -11,7 +11,7 @@ import { buildMetadata, breadcrumbSchema } from "@/lib/seo";
 export const metadata: Metadata = buildMetadata({
   title: "About",
   description:
-    "ConciergeX by Raptric was built to give independent hotels, resorts, and short-term rental operators the guest-operations coverage that larger brands take for granted.",
+    "GuestSquad was built to give independent hotels, resorts, and short-term rental operators the guest-operations coverage that larger brands take for granted.",
   path: "/about",
 });
 
@@ -24,9 +24,9 @@ export default function AboutPage() {
       <Breadcrumbs items={[{ name: "Home", path: "/" }, { name: "About", path: "/about" }]} />
 
       <PageHero
-        eyebrow="About ConciergeX"
+        eyebrow="About GuestSquad"
         title="Built for properties that can't staff every hour, on every channel."
-        description="ConciergeX by Raptric exists because independent hotels and small operators were being asked to compete with brands that have round-the-clock reservations teams — without the headcount to do it."
+        description="GuestSquad exists because independent hotels and small operators were being asked to compete with brands that have round-the-clock reservations teams — without the headcount to do it."
       />
 
       <Section>
@@ -34,7 +34,7 @@ export default function AboutPage() {
           <div className="relative aspect-[4/3] overflow-hidden rounded-lg border border-line bg-surface">
             <Image
               src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1000&q=80"
-              alt="ConciergeX operations team reviewing guest communications"
+              alt="GuestSquad operations team reviewing guest communications"
               fill
               unoptimized
               loading="lazy"
@@ -54,7 +54,7 @@ export default function AboutPage() {
               the headcount to meet that expectation around the clock.
             </p>
             <p className="mt-4 text-sm leading-relaxed text-ink-soft">
-              ConciergeX by Raptric was built specifically for that gap. Not a
+              GuestSquad was built specifically for that gap. Not a
               generic call center retrofitted for hospitality — a guest
               operations team trained on hotel systems, OTA workflows, and the
               tone independent properties actually want their guests to hear.
@@ -66,7 +66,7 @@ export default function AboutPage() {
       <Section surface>
         <SectionHeading eyebrow="Our Approach" title="Support, not replacement." align="center" className="mx-auto" />
         <div className="mx-auto mt-10 max-w-2xl text-center text-sm leading-relaxed text-ink-soft">
-          We&rsquo;re explicit about this: ConciergeX is built to extend your
+          We&rsquo;re explicit about this: GuestSquad is built to extend your
           front desk, not replace it. We handle overflow, after-hours, and
           the channels your on-site team doesn&rsquo;t have time to monitor — so
           the people you&rsquo;ve hired can focus on the guests standing in front

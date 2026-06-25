@@ -1,4 +1,6 @@
-# ConciergeX by Raptric — Marketing Website
+# GuestSquad — Marketing Website
+
+A product of Raptric LLC.
 
 Next.js (App Router) + TypeScript + Tailwind CSS + shadcn/ui-style components.
 

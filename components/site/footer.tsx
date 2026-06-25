@@ -8,9 +8,19 @@ export function Footer() {
         <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
             <span className="text-lg font-semibold tracking-tight text-ink">
-              Concierge<span className="text-gold-dark">X</span>
+              Guest<span className="text-gold-dark">Squad</span>
             </span>
-            <p className="mt-1 text-xs text-ink-muted">by Raptric</p>
+            <p className="mt-1 text-xs text-ink-muted">
+              by{" "}
+              <a
+                href={SITE.parentUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-ink"
+              >
+                {SITE.parentName}
+              </a>
+            </p>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-ink-soft">
               24/7 guest operations support for hotels, boutique properties,
               resorts, serviced apartments, and Airbnb operators.
@@ -44,6 +54,7 @@ export function Footer() {
               <li><Link href="/pricing" className="text-sm text-ink-soft hover:text-ink">Pricing</Link></li>
               <li><Link href="/contact" className="text-sm text-ink-soft hover:text-ink">Contact</Link></li>
               <li><Link href="/privacy-policy" className="text-sm text-ink-soft hover:text-ink">Privacy Policy</Link></li>
+              <li><Link href="/terms-of-service" className="text-sm text-ink-soft hover:text-ink">Terms of Service</Link></li>
             </ul>
           </div>
 
@@ -53,7 +64,7 @@ export function Footer() {
             </p>
             <ul className="flex flex-col gap-2.5 text-sm text-ink-soft">
               <li><a href={`mailto:${SITE.email}`} className="hover:text-ink">{SITE.email}</a></li>
-              <li>{SITE.phone}</li>
+              <li><a href={`tel:${SITE.phoneHref}`} className="hover:text-ink">{SITE.phone}</a></li>
               <li>
                 <a href={SITE.calendlyUrl} target="_blank" rel="noopener noreferrer" className="hover:text-ink">
                   Book a 15-min demo →
@@ -64,7 +75,18 @@ export function Footer() {
         </div>
 
         <div className="mt-14 flex flex-col items-center justify-between gap-3 border-t border-line pt-8 text-xs text-ink-muted md:flex-row">
-          <p>© {new Date().getFullYear()} ConciergeX by Raptric. All rights reserved.</p>
+          <p>
+            © {new Date().getFullYear()} {SITE.brand} — a product of{" "}
+            <a
+              href={SITE.parentUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-ink"
+            >
+              {SITE.legalName}
+            </a>
+            . All rights reserved.
+          </p>
           <p>Guest operations support — not a replacement for your team.</p>
         </div>
       </div>

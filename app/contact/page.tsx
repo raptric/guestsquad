@@ -8,7 +8,7 @@ import { buildMetadata, breadcrumbSchema } from "@/lib/seo";
 export const metadata: Metadata = buildMetadata({
   title: "Contact",
   description:
-    "Book a 15-minute demo or send us your property details. ConciergeX by Raptric responds within one business day.",
+    "Book a 15-minute demo or send us your property details. GuestSquad responds within one business day.",
   path: "/contact",
 });
 
@@ -54,10 +54,14 @@ export default function ContactPage() {
         </div>
 
         <div className="mx-auto mt-10 max-w-3xl text-center text-xs text-ink-muted">
-          By submitting this form you agree to be contacted about ConciergeX
+          By submitting this form you agree to be contacted about GuestSquad
           services. See our{" "}
           <a href="/privacy-policy" className="underline-offset-4 hover:underline">
             Privacy Policy
+          </a>{" "}
+          and{" "}
+          <a href="/terms-of-service" className="underline-offset-4 hover:underline">
+            Terms of Service
           </a>
           .
         </div>

@@ -17,7 +17,7 @@ export function Nav() {
       <div className="container flex h-16 items-center justify-between md:h-20">
         <Link href="/" className="flex items-baseline gap-2" onClick={() => setOpen(false)}>
           <span className="text-lg font-semibold tracking-tight text-ink">
-            Concierge<span className="text-gold-dark">X</span>
+            Guest<span className="text-gold-dark">Squad</span>
           </span>
           <span className="hidden text-xs text-ink-muted sm:inline">by Raptric</span>
         </Link>

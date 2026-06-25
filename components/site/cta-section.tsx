@@ -2,7 +2,7 @@ import { ButtonLink } from "@/components/site/button-link";
 
 export function CtaSection({
   title = "Stop losing bookings to silence.",
-  description = "Book a 15-minute demo and see exactly how ConciergeX would cover your reservations, messaging, and after-hours calls.",
+  description = "Book a 15-minute demo and see exactly how GuestSquad would cover your reservations, messaging, and after-hours calls.",
 }: {
   title?: string;
   description?: string;

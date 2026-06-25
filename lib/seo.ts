@@ -47,10 +47,16 @@ export function organizationSchema() {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     name: SITE.brand,
+    legalName: SITE.legalName,
     alternateName: SITE.name,
     url: SITE.url,
+    parentOrganization: {
+      "@type": "Organization",
+      name: SITE.legalName,
+      url: SITE.parentUrl,
+    },
     description:
-      "ConciergeX by Raptric provides 24/7 guest operations support for hotels, boutique properties, resorts, serviced apartments, and Airbnb operators — reservation support, guest messaging, OTA inbox management, after-hours coverage, and back-office guest operations.",
+      "GuestSquad, a Raptric LLC company, provides 24/7 guest operations support for hotels, boutique properties, resorts, serviced apartments, and Airbnb operators — reservation support, guest messaging, OTA inbox management, after-hours coverage, and back-office guest operations.",
     email: SITE.email,
     telephone: SITE.phone,
     areaServed: "Worldwide",

@@ -12,17 +12,6 @@ export function Footer() {
               alt="GuestSquad"
               className="h-8 w-auto"
             />
-            <p className="mt-2 text-xs text-ink-muted">
-              by{" "}
-              <a
-                href={SITE.parentUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-ink"
-              >
-                {SITE.parentName}
-              </a>
-            </p>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-ink-soft">
               24/7 guest operations support for hotels, boutique properties,
               resorts, serviced apartments, and Airbnb operators.

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 260" role="img" aria-labelledby="title desc">
+  <title id="title">GuestSquad brand colors</title>
+  <desc id="desc">Brand color palette for GuestSquad.</desc>
+  <rect width="720" height="260" fill="#FFFFFF"/>
+  <g font-family="'Avenir Next', 'Montserrat', 'Poppins', sans-serif">
+    <text x="42" y="42" fill="#0F172A" font-size="28" font-weight="700" letter-spacing="2">COLOR PALETTE</text>
+    <rect x="42" y="70" width="72" height="72" rx="10" fill="#0F172A"/>
+    <text x="140" y="115" fill="#0F172A" font-size="28" font-weight="600">#0F172A</text>
+    <rect x="42" y="158" width="72" height="72" rx="10" fill="#C89B3C"/>
+    <text x="140" y="203" fill="#0F172A" font-size="28" font-weight="600">#C89B3C</text>
+    <rect x="390" y="70" width="72" height="72" rx="10" fill="#64748B"/>
+    <text x="488" y="115" fill="#0F172A" font-size="28" font-weight="600">#64748B</text>
+    <rect x="390" y="158" width="72" height="72" rx="10" fill="#10B981"/>
+    <text x="488" y="203" fill="#0F172A" font-size="28" font-weight="600">#10B981</text>
+    <rect x="390" y="246" width="72" height="72" rx="10" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2" transform="translate(0 -16)"/>
+    <text x="488" y="247" fill="#0F172A" font-size="28" font-weight="600">#FFFFFF</text>
+  </g>
+</svg>

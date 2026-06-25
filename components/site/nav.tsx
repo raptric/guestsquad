@@ -15,11 +15,12 @@ export function Nav() {
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-paper/95 backdrop-blur">
       <div className="container flex h-16 items-center justify-between md:h-20">
-        <Link href="/" className="flex items-baseline gap-2" onClick={() => setOpen(false)}>
-          <span className="text-lg font-semibold tracking-tight text-ink">
-            Guest<span className="text-gold-dark">Squad</span>
-          </span>
-          <span className="hidden text-xs text-ink-muted sm:inline">by Raptric</span>
+        <Link href="/" className="flex items-center" onClick={() => setOpen(false)}>
+          <img
+            src="/brand-assets/guestsquad-logo-horizontal.svg"
+            alt="GuestSquad"
+            className="h-9 w-auto sm:h-10"
+          />
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">

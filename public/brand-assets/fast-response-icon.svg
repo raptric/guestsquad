@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Fast response icon</title>
+  <desc id="desc">Speed lines and motion arc for fast response.</desc>
+  <g fill="none" stroke="#0F172A" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+    <path d="M8 25h24"/>
+    <path d="M8 33h18"/>
+    <path d="M8 41h24"/>
+    <path d="M31 18h10c9.4 0 17 7.6 17 17s-7.6 17-17 17H31"/>
+    <path d="m38 28 7 7-7 7"/>
+  </g>
+</svg>

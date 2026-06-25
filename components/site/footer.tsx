@@ -7,10 +7,12 @@ export function Footer() {
       <div className="container py-16">
         <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
-            <span className="text-lg font-semibold tracking-tight text-ink">
-              Guest<span className="text-gold-dark">Squad</span>
-            </span>
-            <p className="mt-1 text-xs text-ink-muted">
+            <img
+              src="/brand-assets/guestsquad-logo-horizontal.svg"
+              alt="GuestSquad"
+              className="h-8 w-auto"
+            />
+            <p className="mt-2 text-xs text-ink-muted">
               by{" "}
               <a
                 href={SITE.parentUrl}

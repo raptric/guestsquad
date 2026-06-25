@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Guest communication icon</title>
+  <desc id="desc">Two conversation bubbles representing guest communication.</desc>
+  <g fill="none" stroke="#0F172A" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+    <path d="M24 14c-8.8 0-16 6.3-16 14s7.2 14 16 14h4l7 6v-8.2c5.9-3 9-8.1 9-13.8 0-7.7-7.2-14-16-14h-4Z"/>
+    <path d="M41 22c8.3 0 15 5.7 15 12.8 0 6.1-5 11.2-12 12.5V54l-5.3-4.8"/>
+  </g>
+</svg>

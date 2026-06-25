@@ -66,10 +66,10 @@ export default function AboutPage() {
       <Section surface>
         <SectionHeading eyebrow="Our Approach" title="Support, not replacement." align="center" className="mx-auto" />
         <div className="mx-auto mt-10 max-w-2xl text-center text-sm leading-relaxed text-ink-soft">
-          We're explicit about this: ConciergeX is built to extend your
+          We&rsquo;re explicit about this: ConciergeX is built to extend your
           front desk, not replace it. We handle overflow, after-hours, and
-          the channels your on-site team doesn't have time to monitor — so
-          the people you've hired can focus on the guests standing in front
+          the channels your on-site team doesn&rsquo;t have time to monitor — so
+          the people you&rsquo;ve hired can focus on the guests standing in front
           of them.
         </div>
         <div className="mt-12">

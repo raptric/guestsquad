@@ -20,8 +20,8 @@ export function ContactForm() {
       <div className="rounded-lg border border-line bg-surface p-10 text-center">
         <h3 className="text-xl font-medium text-ink">Thank you.</h3>
         <p className="mt-3 text-sm leading-relaxed text-ink-soft">
-          We've received your details and will be in touch within one
-          business day. If it's urgent, book a slot directly on our
+          We&rsquo;ve received your details and will be in touch within one
+          business day. If it&rsquo;s urgent, book a slot directly on our
           calendar using the link above.
         </p>
       </div>

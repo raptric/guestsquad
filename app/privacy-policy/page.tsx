@@ -5,7 +5,7 @@ import { buildMetadata } from "@/lib/seo";
 import { LEGAL_EFFECTIVE_DATE, PRIVACY_INTRO, PRIVACY_SECTIONS } from "@/lib/legal-content";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Privacy Policy",
+  title: "Privacy Policy | GuestSquad",
   description:
     "How GuestSquad, a Raptric LLC company, collects, uses, and protects personal data, including GDPR data subject rights and our role as controller and processor.",
   path: "/privacy-policy",

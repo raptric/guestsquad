@@ -8,19 +8,16 @@ import { SITE } from "@/lib/site-data";
  */
 export function buildMetadata({
   title,
-  socialTitle,
   description,
   path = "",
   noindex = false,
 }: {
   title: string;
-  socialTitle?: string;
   description: string;
   path?: string;
   noindex?: boolean;
 }): Metadata {
   const url = `${SITE.url}${path}`;
-  const ogTitle = socialTitle ?? title;
 
   return {
     title,
@@ -30,7 +27,7 @@ export function buildMetadata({
       ? { index: false, follow: true }
       : { index: true, follow: true },
     openGraph: {
-      title: `${ogTitle} — ${SITE.brand}`,
+      title,
       description,
       url,
       siteName: SITE.brand,
@@ -38,7 +35,7 @@ export function buildMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: `${ogTitle} — ${SITE.brand}`,
+      title,
       description,
     },
   };

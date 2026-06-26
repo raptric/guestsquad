@@ -6,7 +6,7 @@ import { Section, SectionHeading } from "@/components/site/section";
 import { CtaSection } from "@/components/site/cta-section";
 import { Breadcrumbs } from "@/components/site/breadcrumbs";
 import { JsonLd } from "@/components/site/json-ld";
-import { serviceSchema, breadcrumbSchema } from "@/lib/seo";
+import { serviceSchema, breadcrumbSchema, faqSchema } from "@/lib/seo";
 import { SERVICES } from "@/lib/site-data";
 
 export type ServiceDetailData = {
@@ -18,6 +18,7 @@ export type ServiceDetailData = {
   includes: { title: string; description: string }[];
   whoItsFor: string[];
   notes: string;
+  faqs: { q: string; a: string }[];
 };
 
 export function ServiceDetail({ data }: { data: ServiceDetailData }) {
@@ -34,6 +35,7 @@ export function ServiceDetail({ data }: { data: ServiceDetailData }) {
             { name: "Services", path: "/services" },
             { name: data.eyebrow, path },
           ]),
+          faqSchema(data.faqs),
         ]}
       />
 
@@ -92,6 +94,18 @@ export function ServiceDetail({ data }: { data: ServiceDetailData }) {
         <p className="mt-10 max-w-2xl text-sm leading-relaxed text-ink-muted">
           {data.notes}
         </p>
+      </Section>
+
+      <Section surface>
+        <SectionHeading eyebrow="Questions" title="Common questions about this service." />
+        <div className="mt-10 grid gap-6 sm:grid-cols-2">
+          {data.faqs.map((item) => (
+            <div key={item.q} className="rounded-lg border border-line bg-paper p-6">
+              <h3 className="text-sm font-medium text-ink">{item.q}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-ink-soft">{item.a}</p>
+            </div>
+          ))}
+        </div>
       </Section>
 
       <Section>

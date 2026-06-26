@@ -4,7 +4,7 @@ import { reservationSupportData } from "@/lib/service-content";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Reservation Support",
+  title: "Hotel Reservation Support Service | 24/7 Booking Calls",
   description: reservationSupportData.description,
   path: `/services/${reservationSupportData.slug}`,
 });

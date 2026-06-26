@@ -9,7 +9,7 @@ import { JsonLd } from "@/components/site/json-ld";
 import { buildMetadata, breadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "About",
+  title: "About GuestSquad | Hospitality Guest Operations Company",
   description:
     "GuestSquad was built to give independent hotels, resorts, and short-term rental operators the guest-operations coverage that larger brands take for granted.",
   path: "/about",
@@ -74,6 +74,62 @@ export default function AboutPage() {
         </div>
         <div className="mt-12">
           <Metrics />
+        </div>
+      </Section>
+
+      <Section>
+        <SectionHeading
+          eyebrow="Who We Serve"
+          title="Built for hotels, boutique properties, resorts, and short-term rental operators."
+        />
+        <p className="mt-6 max-w-2xl text-sm leading-relaxed text-ink-soft">
+          GuestSquad works with independent hotels, boutique properties, resorts,
+          serviced apartments, and Airbnb or Vrbo operators — anywhere a guest&rsquo;s
+          call or message can&rsquo;t always reach a person fast enough. Whether
+          that&rsquo;s one boutique property or a small portfolio of short-term
+          rental units, the operating model is the same: a dedicated, trained
+          team works inside your existing PMS, OTA accounts, and phone system,
+          rather than asking you to adopt new software or hand over control of
+          your guest relationships.
+        </p>
+      </Section>
+
+      <Section surface>
+        <SectionHeading
+          eyebrow="Our Standard"
+          title="How agents are trained and quality-assured."
+        />
+        <div className="mt-10 grid gap-6 sm:grid-cols-2">
+          <div className="rounded-lg border border-line bg-paper p-6">
+            <h3 className="text-sm font-medium text-ink">Property-specific briefing</h3>
+            <p className="mt-2 text-sm leading-relaxed text-ink-soft">
+              Before an agent handles a single guest message, they&rsquo;re briefed on
+              your rates, policies, brand voice, escalation preferences, and the
+              questions your guests actually ask.
+            </p>
+          </div>
+          <div className="rounded-lg border border-line bg-paper p-6">
+            <h3 className="text-sm font-medium text-ink">Hospitality-trained, not generic</h3>
+            <p className="mt-2 text-sm leading-relaxed text-ink-soft">
+              Agents come from a hospitality and guest-service background, not a
+              generic call-center pool shared across unrelated industries.
+            </p>
+          </div>
+          <div className="rounded-lg border border-line bg-paper p-6">
+            <h3 className="text-sm font-medium text-ink">Logged, reviewable work</h3>
+            <p className="mt-2 text-sm leading-relaxed text-ink-soft">
+              Every call and message is logged. You can review what was said,
+              what was decided, and what was escalated — nothing happens in your
+              guest channels that you can&rsquo;t see.
+            </p>
+          </div>
+          <div className="rounded-lg border border-line bg-paper p-6">
+            <h3 className="text-sm font-medium text-ink">Clear escalation rules</h3>
+            <p className="mt-2 text-sm leading-relaxed text-ink-soft">
+              We agree on escalation rules with you before going live — what
+              gets handled directly, and what gets routed straight to your team.
+            </p>
+          </div>
         </div>
       </Section>
 

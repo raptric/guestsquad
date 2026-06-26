@@ -6,7 +6,7 @@ import { SITE } from "@/lib/site-data";
 import { buildMetadata, breadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Contact",
+  title: "Contact GuestSquad | Book a Guest Support Demo",
   description:
     "Book a 15-minute demo or send us your property details. GuestSquad responds within one business day.",
   path: "/contact",

@@ -10,12 +10,11 @@ import { DEFAULT_PROCESS } from "@/components/site/process-steps";
 import { Metrics } from "@/components/site/metrics";
 import { PricingCards } from "@/components/site/pricing-cards";
 import { CtaSection } from "@/components/site/cta-section";
-import { SERVICES, SITE } from "@/lib/site-data";
+import { SERVICES } from "@/lib/site-data";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: `24/7 Guest Operations for Hotels That Can't Afford Missed Bookings — ${SITE.subtitle}`,
-  socialTitle: "24/7 Guest Operations for Hotels That Can't Afford Missed Bookings",
+  title: "24/7 Hotel Guest Support & Reservation Services | GuestSquad",
   description:
     "GuestSquad handles reservations, guest messages, OTA inquiries, callbacks, upsells, and after-hours support for hotels, boutique properties, resorts, serviced apartments, and Airbnb operators.",
   path: "",
@@ -32,8 +31,8 @@ export default function HomePage() {
               Guest Operations Support
             </p>
             <h1 className="text-4xl font-medium leading-[1.08] tracking-tight text-ink md:text-5xl">
-              24/7 Guest Operations for Hotels That Can&rsquo;t Afford Missed
-              Bookings
+              24/7 Hotel Guest Support for Properties That Can&rsquo;t Afford
+              Missed Bookings
             </h1>
             <p className="mt-6 max-w-lg text-lg leading-relaxed text-ink-soft">
               GuestSquad handles reservations, guest messages, OTA

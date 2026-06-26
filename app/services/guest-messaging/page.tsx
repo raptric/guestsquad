@@ -4,7 +4,7 @@ import { guestMessagingData } from "@/lib/service-content";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Guest Messaging",
+  title: "Hotel Guest Messaging Service | SMS, WhatsApp & OTA Replies",
   description: guestMessagingData.description,
   path: `/services/${guestMessagingData.slug}`,
 });

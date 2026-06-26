@@ -32,6 +32,20 @@ export type ServiceSummary = {
 
 export const SERVICES: ServiceSummary[] = [
   {
+    slug: "hotel-answering-service",
+    title: "Hotel Answering Service",
+    shortTitle: "Answering Service",
+    description:
+      "24/7 hotel call answering for reservation questions, guest requests, and general inquiries — every call answered by a trained person, not a phone tree.",
+  },
+  {
+    slug: "vacation-rental-answering-service",
+    title: "Vacation Rental Answering Service",
+    shortTitle: "Vacation Rental Support",
+    description:
+      "24/7 answering and messaging coverage for Airbnb, Vrbo, and short-term rental operators — built for hosts who can't be on call around the clock.",
+  },
+  {
     slug: "reservation-support",
     title: "Reservation Support",
     shortTitle: "Reservations",

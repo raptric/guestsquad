@@ -10,11 +10,12 @@ import { DEFAULT_PROCESS } from "@/components/site/process-steps";
 import { Metrics } from "@/components/site/metrics";
 import { PricingCards } from "@/components/site/pricing-cards";
 import { CtaSection } from "@/components/site/cta-section";
-import { SERVICES } from "@/lib/site-data";
+import { SERVICES, SITE } from "@/lib/site-data";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "24/7 Guest Operations for Hotels That Can't Afford Missed Bookings",
+  title: `24/7 Guest Operations for Hotels That Can't Afford Missed Bookings — ${SITE.subtitle}`,
+  socialTitle: "24/7 Guest Operations for Hotels That Can't Afford Missed Bookings",
   description:
     "GuestSquad handles reservations, guest messages, OTA inquiries, callbacks, upsells, and after-hours support for hotels, boutique properties, resorts, serviced apartments, and Airbnb operators.",
   path: "",

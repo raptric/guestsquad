@@ -5,6 +5,7 @@ export const SITE = {
   parentName: "Raptric",
   parentUrl: "https://raptric.com",
   tagline: "Never miss a guest. Never lose a booking.",
+  subtitle: "Your Dedicated Guest Team",
   url: "https://www.guestsquad.com",
   calendlyUrl: "https://calendly.com/guestsquad/15min-demo",
   email: "info@guestsquad.com",

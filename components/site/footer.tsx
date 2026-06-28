@@ -42,6 +42,7 @@ export function Footer() {
             </p>
             <ul className="flex flex-col gap-2.5">
               <li><Link href="/about" className="text-sm text-ink-soft hover:text-ink">About</Link></li>
+              <li><Link href="/resources" className="text-sm text-ink-soft hover:text-ink">Resources</Link></li>
               <li><Link href="/pricing" className="text-sm text-ink-soft hover:text-ink">Pricing</Link></li>
               <li><Link href="/contact" className="text-sm text-ink-soft hover:text-ink">Contact</Link></li>
               <li><Link href="/privacy-policy" className="text-sm text-ink-soft hover:text-ink">Privacy Policy</Link></li>

@@ -126,6 +126,40 @@ export function breadcrumbSchema(items: { name: string; path: string }[]) {
   };
 }
 
+/** Article schema for comparison/resource pages. */
+export function articleSchema({
+  headline,
+  description,
+  path,
+  datePublished,
+  dateModified,
+}: {
+  headline: string;
+  description: string;
+  path: string;
+  datePublished: string;
+  dateModified?: string;
+}) {
+  const url = `${SITE.url}${path}`;
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline,
+    description,
+    url,
+    mainEntityOfPage: url,
+    datePublished,
+    dateModified: dateModified ?? datePublished,
+    author: { "@type": "Organization", name: SITE.brand, url: SITE.url },
+    publisher: {
+      "@type": "Organization",
+      name: SITE.brand,
+      url: SITE.url,
+      logo: { "@type": "ImageObject", url: `${SITE.url}/brand-assets/guestsquad-icon.svg` },
+    },
+  };
+}
+
 /** FAQPage schema — feed it the same FAQ arrays already rendered on the page. */
 export function faqSchema(faqs: { q: string; a: string }[]) {
   return {

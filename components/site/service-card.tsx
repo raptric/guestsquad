@@ -2,10 +2,16 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import type { ServiceSummary } from "@/lib/site-data";
 
-export function ServiceCard({ service }: { service: ServiceSummary }) {
+export function ServiceCard({
+  service,
+  hrefBase = "/services",
+}: {
+  service: ServiceSummary;
+  hrefBase?: string;
+}) {
   return (
     <Link
-      href={`/services/${service.slug}`}
+      href={`${hrefBase}/${service.slug}`}
       className="group flex flex-col justify-between rounded-lg border border-line bg-paper p-7 transition-colors hover:border-gold/50"
     >
       <div>

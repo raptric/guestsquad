@@ -1,12 +1,15 @@
+import Link from "next/link";
 import { Check } from "lucide-react";
 import { ButtonLink } from "@/components/site/button-link";
 import { cn } from "@/lib/utils";
+
+type Feature = { label: string; href?: string };
 
 type Plan = {
   name: string;
   description: string;
   bestFor: string;
-  features: string[];
+  features: Feature[];
   cta: string;
   href: string;
   featured?: boolean;
@@ -18,10 +21,10 @@ const PLANS: Plan[] = [
     description: "After-hours and overflow coverage for a single property.",
     bestFor: "Independent hotels & boutique properties",
     features: [
-      "After-hours front desk support",
-      "Guest messaging (SMS, WhatsApp, email)",
-      "Basic reservation support",
-      "Monthly activity report",
+      { label: "After-hours front desk support", href: "/services/after-hours-support" },
+      { label: "Guest messaging (SMS, WhatsApp, email)", href: "/services/guest-messaging" },
+      { label: "Basic reservation support", href: "/services/reservation-support" },
+      { label: "Monthly activity report" },
     ],
     cta: "Get Quote",
     href: "/contact",
@@ -31,12 +34,12 @@ const PLANS: Plan[] = [
     description: "Full guest-operations coverage across calls, messages, and OTAs.",
     bestFor: "Multi-property groups & resorts",
     features: [
-      "Everything in Starter",
-      "24/7 reservation support",
-      "OTA inbox management",
-      "Callback & lead recovery",
-      "Upsell & revenue support",
-      "Weekly performance reporting",
+      { label: "Everything in Starter" },
+      { label: "24/7 reservation support", href: "/services/reservation-support" },
+      { label: "OTA inbox management", href: "/services/ota-inbox-management" },
+      { label: "Callback & lead recovery", href: "/services/hotel-answering-service" },
+      { label: "Upsell & revenue support" },
+      { label: "Weekly performance reporting" },
     ],
     cta: "Get Quote",
     href: "/contact",
@@ -47,11 +50,11 @@ const PLANS: Plan[] = [
     description: "Tailored coverage for large portfolios or unique operating models.",
     bestFor: "Hotel groups, management companies & STR portfolios",
     features: [
-      "Everything in Growth",
-      "Dedicated account structure",
-      "Custom SOPs & escalation paths",
-      "Back-office guest operations",
-      "Priority onboarding",
+      { label: "Everything in Growth" },
+      { label: "Dedicated account structure" },
+      { label: "Custom SOPs & escalation paths" },
+      { label: "Back-office guest operations", href: "/services/back-office-operations" },
+      { label: "Priority onboarding" },
     ],
     cta: "Book Demo",
     href: "/contact",
@@ -84,9 +87,15 @@ export function PricingCards() {
 
           <ul className="mt-6 flex flex-1 flex-col gap-3">
             {plan.features.map((f) => (
-              <li key={f} className="flex gap-2.5 text-sm text-ink-soft">
+              <li key={f.label} className="flex gap-2.5 text-sm text-ink-soft">
                 <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-gold-dark" />
-                {f}
+                {f.href ? (
+                  <Link href={f.href} className="underline-offset-4 hover:text-gold-dark hover:underline">
+                    {f.label}
+                  </Link>
+                ) : (
+                  f.label
+                )}
               </li>
             ))}
           </ul>

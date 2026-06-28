@@ -37,10 +37,12 @@ export type ResourceArticleData = {
   verdictHeading: string;
   verdictParagraphs: string[];
   faqs: { q: string; a: string }[];
+  relatedServiceSlugs: string[];
 };
 
 export const aiVoiceComparison: ResourceArticleData = {
   slug: "hotel-answering-service-vs-ai-voice",
+  relatedServiceSlugs: ["hotel-answering-service", "reservation-support", "guest-messaging"],
   title: "Hotel Answering Service vs. AI Voice: Which Is Better for Guest Support?",
   description:
     "A direct comparison of a trained human hotel answering service against an AI voice agent — where each one holds up, and where AI still falls short for hospitality.",
@@ -115,6 +117,7 @@ export const aiVoiceComparison: ResourceArticleData = {
 
 export const callCenterComparison: ResourceArticleData = {
   slug: "hotel-answering-service-vs-call-center",
+  relatedServiceSlugs: ["hotel-answering-service", "after-hours-support", "vacation-rental-answering-service"],
   title: "Hotel Answering Service vs. Generic Call Center: What's the Real Difference?",
   description:
     "Why a hospitality-trained, property-specific answering service performs differently from a generic, multi-industry call center — and what to check before you sign with either.",

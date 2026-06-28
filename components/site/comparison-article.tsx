@@ -13,9 +13,7 @@ import { SERVICES } from "@/lib/site-data";
 export function ComparisonArticle({ data }: { data: ResourceArticleData }) {
   const path = `/resources/${data.slug}`;
   const relatedResources = RESOURCES.filter((r) => r.slug !== data.slug);
-  const relatedServices = SERVICES.filter(
-    (s) => s.slug === "hotel-answering-service" || s.slug === "after-hours-support"
-  );
+  const relatedServices = SERVICES.filter((s) => data.relatedServiceSlugs.includes(s.slug));
 
   return (
     <>

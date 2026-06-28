@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { PageHero } from "@/components/site/page-hero";
 import { Section } from "@/components/site/section";
 import { ServiceCard } from "@/components/site/service-card";
@@ -44,6 +45,17 @@ export default function ResourcesPage() {
             />
           ))}
         </div>
+        <p className="mt-10 text-center text-sm text-ink-soft">
+          Already know what you need?{" "}
+          <Link href="/services" className="underline-offset-4 hover:text-gold-dark hover:underline">
+            Browse all services
+          </Link>{" "}
+          or{" "}
+          <Link href="/pricing" className="underline-offset-4 hover:text-gold-dark hover:underline">
+            view pricing
+          </Link>
+          .
+        </p>
       </Section>
 
       <CtaSection />

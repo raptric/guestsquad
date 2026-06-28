@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const GENERIC = [
   "Shared agents juggling unrelated industries",
   "Scripted answers with no property knowledge",
@@ -41,6 +43,15 @@ export function Differentiator() {
             </li>
           ))}
         </ul>
+      </div>
+
+      <div className="md:col-span-2">
+        <Link
+          href="/resources/hotel-answering-service-vs-call-center"
+          className="text-sm font-medium text-ink-soft underline-offset-4 hover:text-gold-dark hover:underline"
+        >
+          Read the full hotel answering service vs. call center comparison →
+        </Link>
       </div>
     </div>
   );

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { PageHero } from "@/components/site/page-hero";
 import { Section, SectionHeading } from "@/components/site/section";
 import { PricingCards } from "@/components/site/pricing-cards";
@@ -52,6 +53,21 @@ export default function PricingPage() {
 
       <Section>
         <PricingCards />
+        <p className="mt-10 text-center text-sm text-ink-soft">
+          Not sure which plan fits?{" "}
+          <Link href="/services" className="underline-offset-4 hover:text-gold-dark hover:underline">
+            Browse all services
+          </Link>{" "}
+          or see how we compare to{" "}
+          <Link href="/resources/hotel-answering-service-vs-ai-voice" className="underline-offset-4 hover:text-gold-dark hover:underline">
+            AI voice agents
+          </Link>{" "}
+          and{" "}
+          <Link href="/resources/hotel-answering-service-vs-call-center" className="underline-offset-4 hover:text-gold-dark hover:underline">
+            generic call centers
+          </Link>
+          .
+        </p>
       </Section>
 
       <Section surface>
@@ -60,7 +76,23 @@ export default function PricingPage() {
           {FAQS.map((item) => (
             <div key={item.q} className="rounded-lg border border-line bg-paper p-6">
               <h3 className="text-sm font-medium text-ink">{item.q}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-ink-soft">{item.a}</p>
+              <p className="mt-2 text-sm leading-relaxed text-ink-soft">
+                {item.q === "Can we start with just one service?" ? (
+                  <>
+                    Yes. Most clients start with{" "}
+                    <Link href="/services/after-hours-support" className="underline-offset-4 hover:text-gold-dark hover:underline">
+                      after-hours coverage
+                    </Link>{" "}
+                    or{" "}
+                    <Link href="/services/ota-inbox-management" className="underline-offset-4 hover:text-gold-dark hover:underline">
+                      OTA inbox management
+                    </Link>
+                    , then expand once they see it working.
+                  </>
+                ) : (
+                  item.a
+                )}
+              </p>
             </div>
           ))}
         </div>

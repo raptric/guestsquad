@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { PageHero } from "@/components/site/page-hero";
 import { Section, SectionHeading } from "@/components/site/section";
 import { Metrics } from "@/components/site/metrics";
@@ -70,7 +71,15 @@ export default function AboutPage() {
           front desk, not replace it. We handle overflow, after-hours, and
           the channels your on-site team doesn&rsquo;t have time to monitor — so
           the people you&rsquo;ve hired can focus on the guests standing in front
-          of them.
+          of them. See how that compares to{" "}
+          <Link href="/resources/hotel-answering-service-vs-ai-voice" className="underline-offset-4 hover:text-gold-dark hover:underline">
+            AI voice agents
+          </Link>{" "}
+          and{" "}
+          <Link href="/resources/hotel-answering-service-vs-call-center" className="underline-offset-4 hover:text-gold-dark hover:underline">
+            generic call centers
+          </Link>
+          .
         </div>
         <div className="mt-12">
           <Metrics />
@@ -84,13 +93,25 @@ export default function AboutPage() {
         />
         <p className="mt-6 max-w-2xl text-sm leading-relaxed text-ink-soft">
           GuestSquad works with independent hotels, boutique properties, resorts,
-          serviced apartments, and Airbnb or Vrbo operators — anywhere a guest&rsquo;s
+          serviced apartments, and{" "}
+          <Link href="/services/vacation-rental-answering-service" className="underline-offset-4 hover:text-gold-dark hover:underline">
+            Airbnb or Vrbo operators
+          </Link>{" "}
+          — anywhere a guest&rsquo;s
           call or message can&rsquo;t always reach a person fast enough. Whether
           that&rsquo;s one boutique property or a small portfolio of short-term
           rental units, the operating model is the same: a dedicated, trained
           team works inside your existing PMS, OTA accounts, and phone system,
           rather than asking you to adopt new software or hand over control of
-          your guest relationships.
+          your guest relationships. See the full list of{" "}
+          <Link href="/services" className="underline-offset-4 hover:text-gold-dark hover:underline">
+            services we cover
+          </Link>
+          , or{" "}
+          <Link href="/pricing" className="underline-offset-4 hover:text-gold-dark hover:underline">
+            view pricing
+          </Link>
+          .
         </p>
       </Section>
 

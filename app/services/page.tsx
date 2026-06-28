@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { PageHero } from "@/components/site/page-hero";
 import { Section, SectionHeading } from "@/components/site/section";
 import { ServiceCard } from "@/components/site/service-card";
@@ -39,6 +40,17 @@ export default function ServicesPage() {
             <ServiceCard key={service.slug} service={service} />
           ))}
         </div>
+        <p className="mt-10 text-center text-sm text-ink-soft">
+          Not sure which service fits?{" "}
+          <Link href="/resources" className="underline-offset-4 hover:text-gold-dark hover:underline">
+            Read our comparisons
+          </Link>{" "}
+          or{" "}
+          <Link href="/pricing" className="underline-offset-4 hover:text-gold-dark hover:underline">
+            view pricing
+          </Link>
+          .
+        </p>
       </Section>
 
       <Section surface>

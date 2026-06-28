@@ -8,6 +8,7 @@ import { Breadcrumbs } from "@/components/site/breadcrumbs";
 import { JsonLd } from "@/components/site/json-ld";
 import { serviceSchema, breadcrumbSchema, faqSchema } from "@/lib/seo";
 import { SERVICES } from "@/lib/site-data";
+import { RESOURCES } from "@/lib/resource-content";
 
 export type ServiceDetailData = {
   slug: string;
@@ -123,6 +124,28 @@ export function ServiceDetail({ data }: { data: ServiceDetailData }) {
               </div>
               <div className="mt-4 flex items-center gap-1.5 text-xs font-medium text-ink-soft group-hover:text-gold-dark">
                 Learn more
+                <ArrowUpRight className="h-3.5 w-3.5" />
+              </div>
+            </Link>
+          ))}
+        </div>
+      </Section>
+
+      <Section surface>
+        <SectionHeading eyebrow="Worth Reading" title="How this compares to the alternatives." />
+        <div className="mt-10 grid gap-6 sm:grid-cols-2">
+          {RESOURCES.map((r) => (
+            <Link
+              key={r.slug}
+              href={`/resources/${r.slug}`}
+              className="group flex flex-col justify-between rounded-lg border border-line bg-paper p-6 transition-colors hover:border-gold/50"
+            >
+              <div>
+                <h3 className="text-sm font-medium text-ink">{r.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-ink-soft">{r.description}</p>
+              </div>
+              <div className="mt-4 flex items-center gap-1.5 text-xs font-medium text-ink-soft group-hover:text-gold-dark">
+                Read comparison
                 <ArrowUpRight className="h-3.5 w-3.5" />
               </div>
             </Link>

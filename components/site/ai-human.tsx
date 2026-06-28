@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const ROWS = [
   {
     title: "Routing & triage",
@@ -18,6 +20,7 @@ const ROWS = [
 
 export function AiHuman() {
   return (
+    <div>
     <div className="overflow-hidden rounded-lg border border-line">
       <div className="grid grid-cols-3 border-b border-line bg-surface text-xs font-semibold uppercase tracking-wide text-ink-muted">
         <div className="px-6 py-4">Function</div>
@@ -34,6 +37,13 @@ export function AiHuman() {
           <div className="px-6 py-6 text-sm leading-relaxed text-ink-soft">{row.human}</div>
         </div>
       ))}
+    </div>
+      <Link
+        href="/resources/hotel-answering-service-vs-ai-voice"
+        className="mt-4 inline-block text-sm font-medium text-ink-soft underline-offset-4 hover:text-gold-dark hover:underline"
+      >
+        See the full human vs. AI voice agent comparison →
+      </Link>
     </div>
   );
 }

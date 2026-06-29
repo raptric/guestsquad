@@ -1,16 +1,15 @@
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Check } from "lucide-react";
 import { PageHero } from "@/components/site/page-hero";
 import { Section, SectionHeading } from "@/components/site/section";
 import { Breadcrumbs } from "@/components/site/breadcrumbs";
-import { ComparisonTable } from "@/components/site/comparison-table";
 import { CtaSection } from "@/components/site/cta-section";
 import { JsonLd } from "@/components/site/json-ld";
 import { articleSchema, breadcrumbSchema, faqSchema } from "@/lib/seo";
-import { RESOURCES, type ResourceArticleData } from "@/lib/resource-content";
+import { RESOURCES, type GuideArticleData } from "@/lib/resource-content";
 import { SERVICES } from "@/lib/site-data";
 
-export function ComparisonArticle({ data }: { data: ResourceArticleData }) {
+export function GuideArticle({ data }: { data: GuideArticleData }) {
   const path = `/resources/${data.slug}`;
   const relatedResources = RESOURCES.filter((r) => r.slug !== data.slug).slice(0, 2);
   const relatedServices = SERVICES.filter((s) => data.relatedServiceSlugs.includes(s.slug));
@@ -44,7 +43,7 @@ export function ComparisonArticle({ data }: { data: ResourceArticleData }) {
       />
 
       <PageHero
-        eyebrow="Comparison"
+        eyebrow="Guide"
         title={data.title}
         description={data.description}
         secondaryCta="View Pricing"
@@ -61,25 +60,32 @@ export function ComparisonArticle({ data }: { data: ResourceArticleData }) {
         </div>
       </Section>
 
-      <Section surface>
-        <SectionHeading eyebrow="Side by Side" title="Factor by factor." />
-        <div className="mt-10">
-          <ComparisonTable columnA={data.columnA} columnB={data.columnB} rows={data.rows} />
-        </div>
-      </Section>
+      {data.sections.map((section, i) => (
+        <Section key={section.heading} surface={i % 2 === 0}>
+          <div className="mx-auto max-w-2xl">
+            <SectionHeading title={section.heading} />
+            <div className="mt-6">
+              {section.paragraphs.map((p, j) => (
+                <p key={j} className="mb-4 text-sm leading-relaxed text-ink-soft">
+                  {p}
+                </p>
+              ))}
+            </div>
+            {section.checklist && (
+              <ul className="mt-2 flex flex-col gap-3">
+                {section.checklist.map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-sm leading-relaxed text-ink-soft">
+                    <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-gold-dark" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+        </Section>
+      ))}
 
-      <Section>
-        <SectionHeading eyebrow="The Verdict" title={data.verdictHeading} />
-        <div className="mx-auto mt-8 max-w-2xl">
-          {data.verdictParagraphs.map((p, i) => (
-            <p key={i} className="mb-5 text-sm leading-relaxed text-ink-soft">
-              {p}
-            </p>
-          ))}
-        </div>
-      </Section>
-
-      <Section surface>
+      <Section surface={data.sections.length % 2 === 0}>
         <SectionHeading eyebrow="Questions" title="Common questions." />
         <div className="mt-10 grid gap-6 sm:grid-cols-2">
           {data.faqs.map((item) => (

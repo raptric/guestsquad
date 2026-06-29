@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero } from "@/components/site/page-hero";
-import { Section } from "@/components/site/section";
+import { Section, SectionHeading } from "@/components/site/section";
 import { ServiceCard } from "@/components/site/service-card";
 import { Breadcrumbs } from "@/components/site/breadcrumbs";
 import { JsonLd } from "@/components/site/json-ld";
@@ -17,6 +17,9 @@ export const metadata: Metadata = buildMetadata({
 });
 
 export default function ResourcesPage() {
+  const comparisons = RESOURCES.filter((r) => r.type === "comparison");
+  const guides = RESOURCES.filter((r) => r.type === "guide");
+
   return (
     <>
       <JsonLd
@@ -31,16 +34,25 @@ export default function ResourcesPage() {
       />
 
       <Section>
-        <div className="grid gap-6 sm:grid-cols-2">
-          {RESOURCES.map((r) => (
+        <SectionHeading eyebrow="Comparisons" title="How GuestSquad stacks up against the alternatives." />
+        <div className="mt-10 grid gap-6 sm:grid-cols-2">
+          {comparisons.map((r) => (
             <ServiceCard
               key={r.slug}
-              service={{
-                slug: r.slug,
-                title: r.title,
-                shortTitle: r.shortTitle,
-                description: r.description,
-              }}
+              service={{ slug: r.slug, title: r.title, shortTitle: r.shortTitle, description: r.description }}
+              hrefBase="/resources"
+            />
+          ))}
+        </div>
+      </Section>
+
+      <Section surface>
+        <SectionHeading eyebrow="Guides & Checklists" title="Practical guides for running guest operations." />
+        <div className="mt-10 grid gap-6 sm:grid-cols-2">
+          {guides.map((r) => (
+            <ServiceCard
+              key={r.slug}
+              service={{ slug: r.slug, title: r.title, shortTitle: r.shortTitle, description: r.description }}
               hrefBase="/resources"
             />
           ))}

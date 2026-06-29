@@ -134,7 +134,7 @@ export function ServiceDetail({ data }: { data: ServiceDetailData }) {
       <Section surface>
         <SectionHeading eyebrow="Worth Reading" title="How this compares to the alternatives." />
         <div className="mt-10 grid gap-6 sm:grid-cols-2">
-          {RESOURCES.map((r) => (
+          {RESOURCES.filter((r) => r.type === "comparison").map((r) => (
             <Link
               key={r.slug}
               href={`/resources/${r.slug}`}
@@ -151,6 +151,11 @@ export function ServiceDetail({ data }: { data: ServiceDetailData }) {
             </Link>
           ))}
         </div>
+        <p className="mt-8 text-center text-sm text-ink-soft">
+          <Link href="/resources" className="underline-offset-4 hover:text-gold-dark hover:underline">
+            Browse all guides and comparisons →
+          </Link>
+        </p>
       </Section>
 
       <CtaSection />

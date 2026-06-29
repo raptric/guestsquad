@@ -68,7 +68,7 @@ export function Footer() {
 
         <div className="mt-14 flex flex-col items-center justify-between gap-3 border-t border-line pt-8 text-xs text-ink-muted md:flex-row">
           <p>
-            © {new Date().getFullYear()} {SITE.brand} — a product of{" "}
+            © {new Date().getFullYear()} {SITE.brand}, a product of{" "}
             <a
               href={SITE.parentUrl}
               target="_blank"
@@ -79,7 +79,7 @@ export function Footer() {
             </a>
             . All rights reserved.
           </p>
-          <p>Guest operations support — not a replacement for your team.</p>
+          <p>Guest operations support, not a replacement for your team.</p>
         </div>
       </div>
     </footer>

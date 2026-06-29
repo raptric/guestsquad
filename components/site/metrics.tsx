@@ -17,7 +17,7 @@ export function Metrics() {
         ))}
       </div>
       <p className="mt-4 text-center text-xs text-ink-muted">
-        Industry benchmarks for outsourced hospitality operations — your results depend on current volume, channels, and gaps.
+        Industry benchmarks for outsourced hospitality operations. Your results depend on current volume, channels, and gaps.
       </p>
     </div>
   );

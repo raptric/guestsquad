@@ -57,7 +57,7 @@ export function organizationSchema() {
       url: SITE.parentUrl,
     },
     description:
-      "GuestSquad, a Raptric LLC company, provides 24/7 guest operations support for hotels, boutique properties, resorts, serviced apartments, and Airbnb operators — reservation support, guest messaging, OTA inbox management, after-hours coverage, and back-office guest operations.",
+      "GuestSquad, a Raptric LLC company, provides 24/7 guest operations support for hotels, boutique properties, resorts, serviced apartments, and Airbnb operators, including reservation support, guest messaging, OTA inbox management, after-hours coverage, and back-office guest operations.",
     email: SITE.email,
     telephone: SITE.phone,
     areaServed: "Worldwide",

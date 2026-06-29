@@ -36,7 +36,7 @@ export default function HomePage() {
             </h1>
             <p className="mt-6 max-w-lg text-lg leading-relaxed text-ink-soft">
               GuestSquad handles reservations, guest messages, OTA
-              inquiries, callbacks, upsells, and after-hours support — so
+              inquiries, callbacks, upsells, and after-hours support, so
               your front desk stays focused on in-house guests.
             </p>
             <div className="mt-9 flex flex-col gap-4 sm:flex-row">
@@ -48,7 +48,7 @@ export default function HomePage() {
               </ButtonLink>
             </div>
             <p className="mt-6 text-xs text-ink-muted">
-              Support, overflow & after-hours coverage — never a replacement for your team.
+              Support, overflow & after-hours coverage. Never a replacement for your team.
             </p>
           </div>
 
@@ -127,7 +127,7 @@ export default function HomePage() {
         <div className="absolute inset-0 flex items-center">
           <div className="container">
             <p className="max-w-md text-2xl font-medium leading-snug text-paper md:text-3xl">
-              The same standard of care your front desk gives in person — extended to every channel, every hour.
+              The same standard of care your front desk gives in person, extended to every channel, every hour.
             </p>
           </div>
         </div>
@@ -150,7 +150,7 @@ export default function HomePage() {
         <SectionHeading
           eyebrow="How It Works"
           title="Technology routes it. People handle it."
-          description="We use software to make sure nothing is missed — but every guest conversation is handled by a trained person, not a bot."
+          description="We use software to make sure nothing is missed, but every guest conversation is handled by a trained person, not a bot."
         />
         <div className="mt-12">
           <AiHuman />
@@ -214,7 +214,7 @@ export default function HomePage() {
         <SectionHeading
           eyebrow="Pricing"
           title="Three ways to get started."
-          description="Every plan starts with a conversation about your property — not a sales pitch."
+          description="Every plan starts with a conversation about your property, not a sales pitch."
         />
         <div className="mt-12">
           <PricingCards />

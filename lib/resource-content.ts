@@ -14,7 +14,7 @@ export const RESOURCES: ResourceSummary[] = [
     title: "Hotel Answering Service vs. AI Voice Agent",
     shortTitle: "Human vs. AI Voice",
     description:
-      "Where a trained human answering service and an AI voice agent each hold up — and where AI still falls short for hospitality.",
+      "Where a trained human answering service and an AI voice agent each hold up, and where AI still falls short for hospitality.",
     type: "comparison",
   },
   {
@@ -38,7 +38,7 @@ export const RESOURCES: ResourceSummary[] = [
     title: "After-Hours Hotel Front Desk Support: A Practical Checklist",
     shortTitle: "After-Hours Checklist",
     description:
-      "What a real after-hours setup needs to cover — overnight calls, night audit phone coverage, and emergency escalation — in checklist form.",
+      "What a real after-hours setup needs to cover, from overnight calls and night audit phone coverage to emergency escalation, in checklist form.",
     type: "guide",
   },
   {
@@ -62,7 +62,7 @@ export const RESOURCES: ResourceSummary[] = [
     title: "Hotel Guest Messaging SOP Template",
     shortTitle: "Messaging SOP Template",
     description:
-      "What to include in a guest messaging SOP — response-time targets, escalation rules, tone guidelines, and a sample outline to start from.",
+      "What to include in a guest messaging SOP: response-time targets, escalation rules, tone guidelines, and a sample outline to start from.",
     type: "guide",
   },
 ];
@@ -90,13 +90,13 @@ export const aiVoiceComparison: ResourceArticleData = {
   relatedServiceSlugs: ["hotel-answering-service", "reservation-support", "guest-messaging"],
   title: "Hotel Answering Service vs. AI Voice: Which Is Better for Guest Support?",
   description:
-    "A direct comparison of a trained human hotel answering service against an AI voice agent — where each one holds up, and where AI still falls short for hospitality.",
+    "A direct comparison of a trained human hotel answering service against an AI voice agent, showing where each one holds up, and where AI still falls short for hospitality.",
   metaTitle: "Hotel Answering Service vs AI Voice | GuestSquad",
   metaDescription:
     "Compare human hotel answering services with AI voice agents for guest calls, reservations, escalations, and after-hours support.",
   datePublished: "2026-06-26",
   intro: [
-    "AI voice agents are now pitched to hotels as a way to answer every call without staffing a single person. They're genuinely good at narrow, repetitive tasks. They're also frequently sold as a full replacement for a human answering service — and that's the part worth examining before you commit a property's phone line to one.",
+    "AI voice agents are now pitched to hotels as a way to answer every call without staffing a single person. They're genuinely good at narrow, repetitive tasks. They're also frequently sold as a full replacement for a human answering service, and that's the part worth examining before you commit a property's phone line to one.",
     "GuestSquad is built the other way around: people answer your calls, with technology used only to route, log, and report on that work. Here's an honest, factor-by-factor comparison rather than a one-sided pitch.",
   ],
   columnA: "GuestSquad (Human)",
@@ -104,22 +104,22 @@ export const aiVoiceComparison: ResourceArticleData = {
   rows: [
     {
       feature: "Unexpected, off-script situations",
-      a: "A trained person adapts in real time — a confused guest, a booking that doesn't fit the usual pattern, a complaint that needs judgment.",
+      a: "A trained person adapts in real time: a confused guest, a booking that doesn't fit the usual pattern, a complaint that needs judgment.",
       b: "Tends to fall back to a transfer, a repeated phrase, or a dead end once the conversation leaves the scripted path.",
     },
     {
       feature: "Booking modifications & exceptions",
-      a: "Applies your policies with judgment — what to bend, what to hold firm on, when to check with you first.",
+      a: "Applies your policies with judgment: what to bend, what to hold firm on, when to check with you first.",
       b: "Handles exceptions only as far as they were explicitly programmed; anything outside that often stalls or escalates broadly.",
     },
     {
       feature: "Tone and guest sentiment",
-      a: "Reads a guest's mood and adjusts — particularly during complaints, where tone matters as much as the answer.",
+      a: "Reads a guest's mood and adjusts, particularly during complaints, where tone matters as much as the answer.",
       b: "Can sound scripted or oddly cheerful in situations that call for empathy, which guests notice quickly.",
     },
     {
       feature: "Setup and go-live time",
-      a: "A property brief and a short onboarding call — live within about five business days.",
+      a: "A property brief and a short onboarding call, live within about five business days.",
       b: "Often requires voice/PMS integration work and prompt tuning before it performs reliably.",
     },
     {
@@ -135,18 +135,18 @@ export const aiVoiceComparison: ResourceArticleData = {
   ],
   verdictHeading: "Where each one actually makes sense",
   verdictParagraphs: [
-    "This isn't an anti-AI argument — AI voice can be genuinely useful for narrow, high-volume, predictable questions (hours of operation, basic directions, simple FAQ-style queries) where the cost of an occasional wrong or awkward answer is low.",
-    "Where it gets risky is reservation calls, complaints, and anything involving exceptions to policy — situations where a guest's first impression of your property is being formed in real time, and where a stilted or wrong answer costs you a booking or a review.",
-    "GuestSquad doesn't compete on being able to answer the highest possible call volume at the lowest possible cost per call. It competes on guest calls being handled the way your best front-desk person would handle them — because that's who's doing it.",
+    "This isn't an anti-AI argument. AI voice can be genuinely useful for narrow, high-volume, predictable questions (hours of operation, basic directions, simple FAQ-style queries) where the cost of an occasional wrong or awkward answer is low.",
+    "Where it gets risky is reservation calls, complaints, and anything involving exceptions to policy, situations where a guest's first impression of your property is being formed in real time, and where a stilted or wrong answer costs you a booking or a review.",
+    "GuestSquad doesn't compete on being able to answer the highest possible call volume at the lowest possible cost per call. It competes on guest calls being handled the way your best front-desk person would handle them, because that's who's doing it.",
   ],
   faqs: [
     {
       q: "Is GuestSquad an AI voice agent?",
-      a: "No. Every guest call is answered by a hospitality-trained person. We use software to route calls, log every interaction, and generate your reporting — never to talk to your guests in place of a person.",
+      a: "No. Every guest call is answered by a hospitality-trained person. We use software to route calls, log every interaction, and generate your reporting. We never use it to talk to your guests in place of a person.",
     },
     {
       q: "Do you use any automation at all?",
-      a: "Yes, behind the scenes — for call routing, logging, and the reports you receive. The guest-facing conversation itself is always handled by a person.",
+      a: "Yes, behind the scenes, for call routing, logging, and the reports you receive. The guest-facing conversation itself is always handled by a person.",
     },
     {
       q: "Can AI voice handle hotel reservations well?",
@@ -154,11 +154,11 @@ export const aiVoiceComparison: ResourceArticleData = {
     },
     {
       q: "Is human support more expensive than an AI voice platform?",
-      a: "It depends on volume and how the AI platform is licensed — per-minute AI pricing plus integration costs can add up quickly at scale. We'd rather give you a real quote based on your call volume than make a blanket cost claim either way.",
+      a: "It depends on volume and how the AI platform is licensed. Per-minute AI pricing plus integration costs can add up quickly at scale. We'd rather give you a real quote based on your call volume than make a blanket cost claim either way.",
     },
     {
       q: "Can we use both AI and a human answering service?",
-      a: "Yes — some properties use a simple chat widget or FAQ bot to deflect the most basic website questions, then route every phone call and anything more nuanced to GuestSquad.",
+      a: "Yes. Some properties use a simple chat widget or FAQ bot to deflect the most basic website questions, then route every phone call and anything more nuanced to GuestSquad.",
     },
   ],
 };
@@ -168,13 +168,13 @@ export const callCenterComparison: ResourceArticleData = {
   relatedServiceSlugs: ["hotel-answering-service", "after-hours-support", "vacation-rental-answering-service"],
   title: "Hotel Answering Service vs. Generic Call Center: What's the Real Difference?",
   description:
-    "Why a hospitality-trained, property-specific answering service performs differently from a generic, multi-industry call center — and what to check before you sign with either.",
+    "Why a hospitality-trained, property-specific answering service performs differently from a generic, multi-industry call center, and what to check before you sign with either.",
   metaTitle: "Hotel Answering Service vs Call Center | GuestSquad",
   metaDescription:
     "Compare hospitality-trained hotel answering services with generic call centers for reservations, guest questions, and front desk overflow.",
   datePublished: "2026-06-26",
   intro: [
-    "\"Call center\" and \"hotel answering service\" often get used interchangeably when hotels start shopping for outsourced phone coverage — but the underlying operating models are usually quite different, and that difference shows up on the call itself.",
+    "\"Call center\" and \"hotel answering service\" often get used interchangeably when hotels start shopping for outsourced phone coverage, but the underlying operating models are usually quite different, and that difference shows up on the call itself.",
     "A generic call center is typically built to handle calls for many unrelated industries from a shared agent pool. A hotel-specific answering service like GuestSquad is built around one property at a time. Here's where that distinction actually matters.",
   ],
   columnA: "Hotel Answering Service",
@@ -188,7 +188,7 @@ export const callCenterComparison: ResourceArticleData = {
     {
       feature: "Agent consistency",
       a: "The same trained team becomes familiar with your property over time.",
-      b: "Calls are typically picked up by whichever agent in the shared pool is available — a different person each time.",
+      b: "Calls are typically picked up by whichever agent in the shared pool is available, a different person each time.",
     },
     {
       feature: "Familiarity with PMS / OTA tools",
@@ -207,30 +207,30 @@ export const callCenterComparison: ResourceArticleData = {
     },
     {
       feature: "Contract structure",
-      a: "Pilot-first, month-to-month — you see results before committing further.",
+      a: "Pilot-first, month-to-month, so you see results before committing further.",
       b: "Often requires longer lock-in contracts before you've seen real performance.",
     },
   ],
   verdictHeading: "What to ask before signing with either",
   verdictParagraphs: [
-    "If you're evaluating outsourced phone coverage, ask directly: will the same agents handle our calls over time, or are we in a shared pool? Are agents trained on hospitality specifically, or generalist call-center scripts? Do agents work inside our actual PMS and OTA accounts? What do we actually receive in reporting — call counts, or real operational insight?",
+    "If you're evaluating outsourced phone coverage, ask directly: will the same agents handle our calls over time, or are we in a shared pool? Are agents trained on hospitality specifically, or generalist call-center scripts? Do agents work inside our actual PMS and OTA accounts? What do we actually receive in reporting: call counts, or real operational insight?",
     "Those four questions tend to separate a true hotel-specific answering service from a relabeled generic call center fairly quickly.",
   ],
   faqs: [
     {
       q: "What's the actual difference between an answering service and a call center?",
-      a: "\"Call center\" usually describes the underlying infrastructure — a shared agent pool handling calls across many clients and industries. \"Hotel answering service\" describes the specialization — agents trained specifically on hospitality and, ideally, your property.",
+      a: "\"Call center\" usually describes the underlying infrastructure: a shared agent pool handling calls across many clients and industries. \"Hotel answering service\" describes the specialization: agents trained specifically on hospitality and, ideally, your property.",
     },
     {
       q: "Will agents actually know our rates and policies, or are they reading a generic script?",
-      a: "With GuestSquad, every account gets a property-specific brief — rates, room types, policies, and tone — before a single call is answered.",
+      a: "With GuestSquad, every account gets a property-specific brief covering rates, room types, policies, and tone before a single call is answered.",
     },
     {
       q: "Do you require a long-term contract like some call centers do?",
       a: "No. Every engagement starts with a 30-day pilot, then continues month-to-month.",
     },
     {
-      q: "We already use a call center for overflow — can you work alongside it?",
+      q: "We already use a call center for overflow. Can you work alongside it?",
       a: "Yes. Many clients start by routing only specific overflow scenarios (after-hours, peak check-in/out) to GuestSquad while keeping existing arrangements for everything else.",
     },
     {
@@ -270,7 +270,7 @@ export const answeringServiceCostGuide: GuideArticleData = {
     "How hotel answering services price their plans, what drives the cost, and the questions to ask before signing with any provider.",
   datePublished: "2026-06-29",
   intro: [
-    "\"How much does this cost?\" is usually the first question a GM asks, and the hardest one to get a straight answer to — most providers, including GuestSquad, don't publish flat rates, because the honest answer depends on your volume, channels, and coverage hours.",
+    "\"How much does this cost?\" is usually the first question a GM asks, and the hardest one to get a straight answer to. Most providers, including GuestSquad, don't publish flat rates, because the honest answer depends on your volume, channels, and coverage hours.",
     "This guide walks through the pricing models actually used in this industry, what genuinely moves the price, and the costs that tend to show up after you've already signed.",
   ],
   sections: [
@@ -280,15 +280,15 @@ export const answeringServiceCostGuide: GuideArticleData = {
         "Most hotel answering and guest-operations providers price using one of three models, sometimes blended:",
       ],
       checklist: [
-        "Per-seat / per-FTE — a flat monthly rate for a dedicated agent or team, regardless of exact call volume.",
-        "Per-call or per-message — a rate charged for each interaction handled, which scales directly with volume.",
-        "Per-minute — common with call-center-style providers and AI voice platforms, billed on talk time.",
+        "Per-seat / per-FTE: a flat monthly rate for a dedicated agent or team, regardless of exact call volume.",
+        "Per-call or per-message: a rate charged for each interaction handled, which scales directly with volume.",
+        "Per-minute: common with call-center-style providers and AI voice platforms, billed on talk time.",
       ],
     },
     {
       heading: "What Actually Drives the Price",
       paragraphs: [
-        "Within any of those models, the quote you get depends on a handful of real factors: your monthly call and message volume, how many properties you're covering, which channels are included (phone only, versus phone plus OTA inboxes plus SMS/WhatsApp/email), and how many hours of coverage you need — after-hours-only coverage costs less than full 24/7 coverage.",
+        "Within any of those models, the quote you get depends on a handful of real factors: your monthly call and message volume, how many properties you're covering, which channels are included (phone only, versus phone plus OTA inboxes plus SMS/WhatsApp/email), and how many hours of coverage you need. After-hours-only coverage costs less than full 24/7 coverage.",
         "Contract length also affects price. Month-to-month plans are typically priced slightly higher per unit than longer commitments, in exchange for the flexibility to leave without penalty.",
       ],
     },
@@ -308,14 +308,14 @@ export const answeringServiceCostGuide: GuideArticleData = {
     {
       heading: "What We Quote Instead",
       paragraphs: [
-        "GuestSquad doesn't publish flat pricing because doing so would mean either overcharging low-volume properties or underpricing high-volume ones. Instead, every engagement starts with a short conversation about your volume and channels, and we recommend one of three plans accordingly — see the full breakdown on the Pricing page. Every plan starts with a 30-day pilot, so you see real numbers before committing further.",
+        "GuestSquad doesn't publish flat pricing because doing so would mean either overcharging low-volume properties or underpricing high-volume ones. Instead, every engagement starts with a short conversation about your volume and channels, and we recommend one of three plans accordingly; see the full breakdown on the Pricing page. Every plan starts with a 30-day pilot, so you see real numbers before committing further.",
       ],
     },
   ],
   faqs: [
     {
       q: "Is there a setup fee?",
-      a: "Setup is included in the pilot fee rather than charged separately — see Pricing for the current pilot terms.",
+      a: "Setup is included in the pilot fee rather than charged separately; see Pricing for the current pilot terms.",
     },
     {
       q: "Does the price change if our call volume spikes?",
@@ -323,11 +323,11 @@ export const answeringServiceCostGuide: GuideArticleData = {
     },
     {
       q: "Is the 30-day pilot really the full service?",
-      a: "Yes — the pilot runs the full Guest Journey service tier, not a stripped-down trial version.",
+      a: "Yes. The pilot runs the full Guest Journey service tier, not a stripped-down trial version.",
     },
     {
       q: "Do you charge per call, per minute, or a flat rate?",
-      a: "Plans are scoped around your volume and channels rather than billed per call or per minute — see Pricing for how the three tiers are structured.",
+      a: "Plans are scoped around your volume and channels rather than billed per call or per minute; see Pricing for how the three tiers are structured.",
     },
   ],
   relatedServiceSlugs: ["hotel-answering-service", "after-hours-support"],
@@ -337,7 +337,7 @@ export const afterHoursChecklistGuide: GuideArticleData = {
   slug: "after-hours-hotel-support-checklist",
   title: "After-Hours Hotel Front Desk Support: A Practical Checklist",
   description:
-    "What a real after-hours setup needs to cover — overnight calls, night audit phone coverage, and emergency escalation — laid out as a working checklist.",
+    "What a real after-hours setup needs to cover, from overnight calls and night audit phone coverage to emergency escalation, laid out as a working checklist.",
   metaTitle: "After-Hours Hotel Answering Service Checklist | GuestSquad",
   metaDescription:
     "A practical checklist for after-hours hotel front desk and night audit phone coverage, including escalation rules and morning handoff.",
@@ -349,7 +349,7 @@ export const afterHoursChecklistGuide: GuideArticleData = {
     {
       heading: "What Counts as \"After-Hours\" for Most Hotels",
       paragraphs: [
-        "Most independent hotels define after-hours as the period between the last front-desk shift change and the morning team arriving — typically somewhere between 11pm and 7am, plus weekends or holidays where staffing is thin. Night audit duties often fall in this same window.",
+        "Most independent hotels define after-hours as the period between the last front-desk shift change and the morning team arriving, typically somewhere between 11pm and 7am, plus weekends or holidays where staffing is thin. Night audit duties often fall in this same window.",
       ],
     },
     {
@@ -357,7 +357,7 @@ export const afterHoursChecklistGuide: GuideArticleData = {
       paragraphs: ["A setup that actually holds up overnight should include:"],
       checklist: [
         "Live call answering for reservation and general guest questions, not a phone tree.",
-        "Night audit phone coverage — calls related to billing, late charges, or audit questions.",
+        "Night audit phone coverage: calls related to billing, late charges, or audit questions.",
         "Clear emergency escalation rules, agreed in advance, for genuine emergencies.",
         "Handling for common late-night requests: late checkout, early arrival, lock-out support coordination.",
         "A morning summary so your day team knows exactly what happened overnight before their shift starts.",
@@ -366,7 +366,7 @@ export const afterHoursChecklistGuide: GuideArticleData = {
     {
       heading: "The Real Risk of Unanswered Overnight Calls",
       paragraphs: [
-        "A booking inquiry that calls at 11pm and gets voicemail rarely calls back — they book elsewhere and you never see the lost revenue. The same applies to an existing guest with an urgent issue: if nobody answers, the complaint often surfaces the next morning as a review instead of a call.",
+        "A booking inquiry that calls at 11pm and gets voicemail rarely calls back. They book elsewhere and you never see the lost revenue. The same applies to an existing guest with an urgent issue: if nobody answers, the complaint often surfaces the next morning as a review instead of a call.",
       ],
     },
     {
@@ -379,11 +379,11 @@ export const afterHoursChecklistGuide: GuideArticleData = {
   faqs: [
     {
       q: "Does after-hours coverage include night audit duties?",
-      a: "It can — phone-based night audit questions (billing, late charges) are typically included; the actual audit/reconciliation process is covered separately under back-office operations.",
+      a: "It can. Phone-based night audit questions (billing, late charges) are typically included; the actual audit/reconciliation process is covered separately under back-office operations.",
     },
     {
       q: "What happens with a genuine emergency overnight?",
-      a: "Escalation rules are agreed before going live — genuine emergencies are routed to your on-call contact immediately, not held for a morning report.",
+      a: "Escalation rules are agreed before going live, so genuine emergencies are routed to your on-call contact immediately, not held for a morning report.",
     },
     {
       q: "Can we start with just weekends, not every night?",
@@ -407,7 +407,7 @@ export const overflowSupportGuide: GuideArticleData = {
     "When to add overflow phone support at your hotel, how it works in practice, and how to set it up alongside your existing front desk team.",
   datePublished: "2026-06-29",
   intro: [
-    "Overflow support isn't the same as replacing your front desk — it's coverage that only activates when your team genuinely can't get to the phone. This guide covers when it makes sense, how it actually works day to day, and what to keep in-house regardless.",
+    "Overflow support isn't the same as replacing your front desk. It's coverage that only activates when your team genuinely can't get to the phone. This guide covers when it makes sense, how it actually works day to day, and what to keep in-house regardless.",
   ],
   sections: [
     {
@@ -423,13 +423,13 @@ export const overflowSupportGuide: GuideArticleData = {
         "Reception regularly lets calls ring through during check-in/check-out hours.",
         "Voicemail messages pile up faster than your team can return them.",
         "Staff describe phones as \"a distraction\" from in-person guests, not a help.",
-        "You suspect — but can't prove — that some calls are going unanswered entirely.",
+        "You suspect, but can't prove, that some calls are going unanswered entirely.",
       ],
     },
     {
       heading: "How Overflow Coverage Actually Works",
       paragraphs: [
-        "Calls route to your existing front desk first. Only calls that aren't picked up within a set number of rings — or calls placed during specific hours you define — route to the overflow team instead. Your in-house staff keeps full control of the calls they can take; overflow exists purely to catch what they can't.",
+        "Calls route to your existing front desk first. Only calls that aren't picked up within a set number of rings, or calls placed during specific hours you define, route to the overflow team instead. Your in-house staff keeps full control of the calls they can take; overflow exists purely to catch what they can't.",
       ],
     },
     {
@@ -446,11 +446,11 @@ export const overflowSupportGuide: GuideArticleData = {
     },
     {
       q: "How is overflow priced differently from full coverage?",
-      a: "Overflow is typically lower-volume than full coverage, so it's usually the more affordable starting point — see Pricing for how plans scale.",
+      a: "Overflow is typically lower-volume than full coverage, so it's usually the more affordable starting point; see Pricing for how plans scale.",
     },
     {
       q: "Can overflow handle reservations, or just take messages?",
-      a: "It can handle full reservation calls, not just message-taking — see Reservation Support for what's included.",
+      a: "It can handle full reservation calls, not just message-taking; see Reservation Support for what's included.",
     },
     {
       q: "How quickly can overflow coverage go live?",
@@ -470,7 +470,7 @@ export const otaInboxChecklistGuide: GuideArticleData = {
     "A practical checklist for managing Booking.com and Expedia guest messages, including response-time targets and common message types.",
   datePublished: "2026-06-29",
   intro: [
-    "OTA inboxes are easy to under-prioritize — they're not the phone ringing in front of you, so messages can sit for hours. But response time inside Booking.com's and Expedia's own messaging tools is one of the few factors a hotel can directly control that affects both conversion and, on some platforms, search ranking.",
+    "OTA inboxes are easy to under-prioritize. They're not the phone ringing in front of you, so messages can sit for hours. But response time inside Booking.com's and Expedia's own messaging tools is one of the few factors a hotel can directly control that affects both conversion and, on some platforms, search ranking.",
   ],
   sections: [
     {
@@ -506,15 +506,15 @@ export const otaInboxChecklistGuide: GuideArticleData = {
   faqs: [
     {
       q: "Do you respond inside Booking.com and Expedia's own tools, or by email?",
-      a: "Inside the platforms' own messaging tools — that's where guests expect a reply and where response-time metrics are tracked.",
+      a: "Inside the platforms' own messaging tools, where guests expect a reply and where response-time metrics are tracked.",
     },
     {
       q: "Can you handle modification and cancellation requests through the OTA, not just questions?",
-      a: "Yes — OTA-side date changes, special requests, and cancellation handling are included; see OTA Inbox Management for the full scope.",
+      a: "Yes. OTA-side date changes, special requests, and cancellation handling are included; see OTA Inbox Management for the full scope.",
     },
     {
       q: "What about Airbnb messages?",
-      a: "Airbnb and Vrbo messaging is covered separately for short-term rental operators — see Vacation Rental Answering Service.",
+      a: "Airbnb and Vrbo messaging is covered separately for short-term rental operators; see Vacation Rental Answering Service.",
     },
     {
       q: "Will this help us convert more OTA leads to direct bookings?",
@@ -528,19 +528,19 @@ export const messagingSopGuide: GuideArticleData = {
   slug: "hotel-guest-messaging-sop-template",
   title: "Hotel Guest Messaging SOP Template",
   description:
-    "What to include in a guest messaging SOP — response-time targets, escalation rules, tone guidelines, and a sample outline to start from.",
+    "What to include in a guest messaging SOP: response-time targets, escalation rules, tone guidelines, and a sample outline to start from.",
   metaTitle: "Hotel Guest Messaging SOP Template | GuestSquad",
   metaDescription:
     "What a hotel guest messaging SOP should include, plus a sample outline covering response times, escalation rules, and tone guidelines.",
   datePublished: "2026-06-29",
   intro: [
-    "Most hotels handle guest messages on instinct rather than a written standard — which works fine until a busy week, a new hire, or an outsourced team needs to step in and there's nothing to brief them on. A short, specific SOP fixes that without becoming bureaucracy nobody reads.",
+    "Most hotels handle guest messages on instinct rather than a written standard. That works fine until a busy week, a new hire, or an outsourced team needs to step in and there's nothing to brief them on. A short, specific SOP fixes that without becoming bureaucracy nobody reads.",
   ],
   sections: [
     {
       heading: "Why Guest Messaging Needs a Written SOP",
       paragraphs: [
-        "Without one, tone and response quality vary by whoever happens to answer, response times aren't tracked against any target, and anyone new — a hire, a temp, or an outsourced team — has nothing concrete to work from beyond \"use your judgment.\" A working SOP doesn't need to be long; it needs to answer the questions that actually come up.",
+        "Without one, tone and response quality vary by whoever happens to answer, response times aren't tracked against any target, and anyone new (a hire, a temp, or an outsourced team) has nothing concrete to work from beyond \"use your judgment.\" A working SOP doesn't need to be long; it needs to answer the questions that actually come up.",
       ],
     },
     {
@@ -548,9 +548,9 @@ export const messagingSopGuide: GuideArticleData = {
       paragraphs: ["At minimum, a usable SOP covers:"],
       checklist: [
         "Response-time targets per channel (e.g., SMS within 15 minutes, OTA messages within 30 minutes).",
-        "Escalation rules — what gets handled directly versus routed to a manager, and to whom.",
+        "Escalation rules: what gets handled directly versus routed to a manager, and to whom.",
         "Tone and brand-voice guidelines, ideally with two or three real example messages.",
-        "A list of every channel actually in use — SMS, WhatsApp, email, OTA inboxes, in-app messaging.",
+        "A list of every channel actually in use: SMS, WhatsApp, email, OTA inboxes, in-app messaging.",
         "Short scripts or guidance for the handful of scenarios that come up weekly: late check-in, complaint, refund request, special occasion request.",
       ],
     },
@@ -562,33 +562,33 @@ export const messagingSopGuide: GuideArticleData = {
         "2. Response-time targets by channel and time of day",
         "3. Tone and brand-voice notes with example messages",
         "4. Common scenarios and how to handle each",
-        "5. Escalation path — what, when, and to whom",
+        "5. Escalation path: what, when, and to whom",
         "6. How interactions are logged and reported",
       ],
     },
     {
       heading: "Keeping the SOP Updated",
       paragraphs: [
-        "An SOP that's never revisited drifts out of date within a season — new rate structures, new channels, or recurring guest questions that deserve their own scripted response. Treat it as a living document reviewed at least quarterly, not a one-time write-up.",
+        "An SOP that's never revisited drifts out of date within a season: new rate structures, new channels, or recurring guest questions that deserve their own scripted response. Treat it as a living document reviewed at least quarterly, not a one-time write-up.",
       ],
     },
   ],
   faqs: [
     {
       q: "Do you build this SOP for us, or do we need one already?",
-      a: "We build the property-specific brief — covering rates, policies, brand voice, and escalation rules — as part of onboarding, whether or not you already have a formal SOP written down.",
+      a: "We build the property-specific brief covering rates, policies, brand voice, and escalation rules as part of onboarding, whether or not you already have a formal SOP written down.",
     },
     {
       q: "How long should a guest messaging SOP actually be?",
-      a: "Short enough that someone new can read it in 15 minutes and use it immediately — a few pages, not a manual.",
+      a: "Short enough that someone new can read it in 15 minutes and use it immediately: a few pages, not a manual.",
     },
     {
       q: "What if our tone differs across property types in our portfolio?",
-      a: "Each property gets its own brief and tone guidelines — a shared parent SOP plus per-property notes works well for multi-property groups.",
+      a: "Each property gets its own brief and tone guidelines; a shared parent SOP plus per-property notes works well for multi-property groups.",
     },
     {
       q: "Does this cover OTA messaging too, or just direct guest messages?",
-      a: "A complete SOP should cover every channel, including OTA inboxes — see OTA Inbox Management and Guest Messaging for how each channel is handled day to day.",
+      a: "A complete SOP should cover every channel, including OTA inboxes; see OTA Inbox Management and Guest Messaging for how each channel is handled day to day.",
     },
   ],
   relatedServiceSlugs: ["guest-messaging", "ota-inbox-management"],

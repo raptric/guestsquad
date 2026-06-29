@@ -6,8 +6,8 @@ export const LEGAL_EFFECTIVE_DATE = "June 26, 2026";
 export const PRIVACY_INTRO = [
   `This Privacy Policy explains how ${SITE.legalName}, operating the GuestSquad service ("GuestSquad," "we," "us," or "our"), collects, uses, discloses, and protects personal data in connection with the ${SITE.url} website (the "Site") and the guest-operations services we provide to hotel, resort, serviced-apartment, and short-term-rental clients (the "Services").`,
   "We act in two distinct roles depending on the data involved, and this policy is structured around that distinction:",
-  "As a Data Controller for personal data collected directly through this Site — for example, when you submit the contact form, book a demo, or otherwise communicate with us as a prospective or existing client.",
-  "As a Data Processor (or \"service provider\"/\"processor\" under applicable law) for guest personal data that we handle on behalf of our hotel and property-management clients while delivering the Services — for example, guest names, contact details, and booking information accessed through a client's PMS, OTA accounts, or messaging channels. Processing of that guest data is governed primarily by the data processing agreement (\"DPA\") between GuestSquad and the relevant client, and by that client's own privacy policy toward its guests. This Site-facing policy describes our general practices and safeguards as a processor, but the client (as controller) remains the primary point of contact for guests exercising rights over their own personal data.",
+  "As a Data Controller for personal data collected directly through this Site, such as when you submit the contact form, book a demo, or otherwise communicate with us as a prospective or existing client.",
+  "As a Data Processor (or \"service provider\"/\"processor\" under applicable law) for guest personal data that we handle on behalf of our hotel and property-management clients while delivering the Services, such as guest names, contact details, and booking information accessed through a client's PMS, OTA accounts, or messaging channels. Processing of that guest data is governed primarily by the data processing agreement (\"DPA\") between GuestSquad and the relevant client, and by that client's own privacy policy toward its guests. This Site-facing policy describes our general practices and safeguards as a processor, but the client (as controller) remains the primary point of contact for guests exercising rights over their own personal data.",
 ];
 
 export const PRIVACY_SECTIONS: LegalSection[] = [
@@ -49,10 +49,10 @@ export const PRIVACY_SECTIONS: LegalSection[] = [
       "Where the GDPR or UK GDPR applies, we rely on the following legal bases under Article 6:",
     ],
     list: [
-      "Consent — for example, when you voluntarily submit the contact form or opt in to receive communications from us. You may withdraw consent at any time (see Section 9).",
-      "Performance of a contract — to respond to your inquiry, provide a demo, or deliver the Services under an agreement with a client.",
-      "Legitimate interests — to operate, secure, and improve the Site and our Services, including fraud prevention and basic analytics, balanced against your rights and freedoms.",
-      "Legal obligation — where processing is necessary to comply with applicable law, regulation, or a valid legal request.",
+      "Consent: for example, when you voluntarily submit the contact form or opt in to receive communications from us. You may withdraw consent at any time (see Section 9).",
+      "Performance of a contract: to respond to your inquiry, provide a demo, or deliver the Services under an agreement with a client.",
+      "Legitimate interests: to operate, secure, and improve the Site and our Services, including fraud prevention and basic analytics, balanced against your rights and freedoms.",
+      "Legal obligation: where processing is necessary to comply with applicable law, regulation, or a valid legal request.",
     ],
   },
   {

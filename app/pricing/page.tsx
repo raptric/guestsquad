@@ -30,7 +30,7 @@ const FAQS = [
   },
   {
     q: "Do you replace our front desk staff?",
-    a: "No. We cover overflow, after-hours, and the channels your team doesn't have time for — your on-site team stays focused on in-house guests.",
+    a: "No. We cover overflow, after-hours, and the channels your team doesn't have time for; your on-site team stays focused on in-house guests.",
   },
 ];
 
@@ -48,7 +48,7 @@ export default function PricingPage() {
       <PageHero
         eyebrow="Pricing"
         title="Plans built around your property, not a generic tier."
-        description="Every engagement starts with a short conversation about your volume, channels, and current gaps — then we recommend the right level of coverage."
+        description="Every engagement starts with a short conversation about your volume, channels, and current gaps, then we recommend the right level of coverage."
       />
 
       <Section>
@@ -100,7 +100,7 @@ export default function PricingPage() {
 
       <CtaSection
         title="Get a quote built around your property."
-        description="Tell us your volume and channels, and we'll come back with a plan and a price — no generic packages."
+        description="Tell us your volume and channels, and we'll come back with a plan and a price, not a generic package."
       />
     </>
   );

@@ -27,7 +27,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About GuestSquad"
         title="Built for properties that can't staff every hour, on every channel."
-        description="GuestSquad exists because independent hotels and small operators were being asked to compete with brands that have round-the-clock reservations teams — without the headcount to do it."
+        description="GuestSquad exists because independent hotels and small operators were being asked to compete with brands that have round-the-clock reservations teams, without the headcount to do it."
       />
 
       <Section>
@@ -50,13 +50,13 @@ export default function AboutPage() {
             />
             <p className="mt-6 text-sm leading-relaxed text-ink-soft">
               Guests now expect a reply within minutes, on whichever channel
-              they chose to reach out on — at 2pm or 2am. Independent hotels,
+              they chose to reach out on, at 2pm or 2am. Independent hotels,
               boutique properties, and short-term rental operators rarely have
               the headcount to meet that expectation around the clock.
             </p>
             <p className="mt-4 text-sm leading-relaxed text-ink-soft">
               GuestSquad was built specifically for that gap. Not a
-              generic call center retrofitted for hospitality — a guest
+              generic call center retrofitted for hospitality, but a guest
               operations team trained on hotel systems, OTA workflows, and the
               tone independent properties actually want their guests to hear.
             </p>
@@ -69,7 +69,7 @@ export default function AboutPage() {
         <div className="mx-auto mt-10 max-w-2xl text-center text-sm leading-relaxed text-ink-soft">
           We&rsquo;re explicit about this: GuestSquad is built to extend your
           front desk, not replace it. We handle overflow, after-hours, and
-          the channels your on-site team doesn&rsquo;t have time to monitor — so
+          the channels your on-site team doesn&rsquo;t have time to monitor, so
           the people you&rsquo;ve hired can focus on the guests standing in front
           of them. See how that compares to{" "}
           <Link href="/resources/hotel-answering-service-vs-ai-voice" className="underline-offset-4 hover:text-gold-dark hover:underline">
@@ -96,8 +96,8 @@ export default function AboutPage() {
           serviced apartments, and{" "}
           <Link href="/services/vacation-rental-answering-service" className="underline-offset-4 hover:text-gold-dark hover:underline">
             Airbnb or Vrbo operators
-          </Link>{" "}
-          — anywhere a guest&rsquo;s
+          </Link>
+          , anywhere a guest&rsquo;s
           call or message can&rsquo;t always reach a person fast enough. Whether
           that&rsquo;s one boutique property or a small portfolio of short-term
           rental units, the operating model is the same: a dedicated, trained
@@ -140,14 +140,14 @@ export default function AboutPage() {
             <h3 className="text-sm font-medium text-ink">Logged, reviewable work</h3>
             <p className="mt-2 text-sm leading-relaxed text-ink-soft">
               Every call and message is logged. You can review what was said,
-              what was decided, and what was escalated — nothing happens in your
+              what was decided, and what was escalated, so nothing happens in your
               guest channels that you can&rsquo;t see.
             </p>
           </div>
           <div className="rounded-lg border border-line bg-paper p-6">
             <h3 className="text-sm font-medium text-ink">Clear escalation rules</h3>
             <p className="mt-2 text-sm leading-relaxed text-ink-soft">
-              We agree on escalation rules with you before going live — what
+              We agree on escalation rules with you before going live: what
               gets handled directly, and what gets routed straight to your team.
             </p>
           </div>

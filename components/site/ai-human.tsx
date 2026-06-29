@@ -9,7 +9,7 @@ const ROWS = [
   {
     title: "Speed",
     ai: "Nothing sits in an inbox waiting to be noticed.",
-    human: "Judgment calls — refunds, complaints, upsells — are handled by a person.",
+    human: "Judgment calls, like refunds, complaints, and upsells, are handled by a person.",
   },
   {
     title: "Memory",

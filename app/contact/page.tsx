@@ -21,11 +21,11 @@ const FAQS = [
   },
   {
     q: "Do I need to know which plan I want first?",
-    a: "No. Most clients aren't sure which plan fits until we've talked through their volume and channels — see the Pricing page for an overview in the meantime.",
+    a: "No. Most clients aren't sure which plan fits until we've talked through their volume and channels; see the Pricing page for an overview in the meantime.",
   },
   {
     q: "Can I just ask questions before committing to anything?",
-    a: "Yes. A demo call is a conversation, not a sales pitch — bring your questions about how the service actually works.",
+    a: "Yes. A demo call is a conversation, not a sales pitch, so bring your questions about how the service actually works.",
   },
 ];
 

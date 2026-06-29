@@ -12,7 +12,7 @@ import { RESOURCES } from "@/lib/resource-content";
 export const metadata: Metadata = buildMetadata({
   title: "Hotel Answering Service Guides & Comparisons | GuestSquad",
   description:
-    "Guides and comparisons on hotel answering services, AI voice agents, and call centers — to help you evaluate what's actually right for your property.",
+    "Guides and comparisons on hotel answering services, AI voice agents, and call centers, to help you evaluate what's actually right for your property.",
   path: "/resources",
 });
 
@@ -30,7 +30,7 @@ export default function ResourcesPage() {
       <PageHero
         eyebrow="Resources"
         title="Hotel Answering Service Guides, Comparisons, and Checklists"
-        description="Straight comparisons between human answering services, AI voice agents, and generic call centers, plus practical guides for running guest operations — written to help you decide, not just to sell."
+        description="Straight comparisons between human answering services, AI voice agents, and generic call centers, plus practical guides for running guest operations, written to help you decide, not just to sell."
       />
 
       <Section>

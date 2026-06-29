@@ -98,7 +98,7 @@ export function ContactForm() {
         <Textarea
           id="message"
           name="message"
-          placeholder="Tell us what's currently falling through the cracks — missed calls, slow OTA replies, after-hours gaps..."
+          placeholder="Tell us what's currently falling through the cracks: missed calls, slow OTA replies, after-hours gaps..."
         />
       </div>
 

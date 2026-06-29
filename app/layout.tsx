@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: `24/7 Hotel Guest Support & Reservation Services | ${SITE.brand}`,
   description:
-    "GuestSquad handles reservations, guest messaging, OTA inquiries, callbacks, upsells, and after-hours support — so your front desk stays focused on in-house guests.",
+    "GuestSquad handles reservations, guest messaging, OTA inquiries, callbacks, upsells, and after-hours support, so your front desk stays focused on in-house guests.",
   openGraph: {
     title: `24/7 Hotel Guest Support & Reservation Services | ${SITE.brand}`,
     description:

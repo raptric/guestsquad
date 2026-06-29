@@ -39,7 +39,7 @@ export const DEFAULT_PROCESS: ProcessStep[] = [
     step: "Step 3",
     title: "Go live",
     description:
-      "Coverage begins on the channels you choose — calls, messages, OTA inbox, or after-hours only.",
+      "Coverage begins on the channels you choose: calls, messages, OTA inbox, or after-hours only.",
   },
   {
     step: "Step 4",

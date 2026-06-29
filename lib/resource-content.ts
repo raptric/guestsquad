@@ -28,6 +28,8 @@ export type ResourceArticleData = {
   slug: string;
   title: string;
   description: string;
+  metaTitle?: string;
+  metaDescription?: string;
   datePublished: string;
   dateModified?: string;
   intro: string[];
@@ -46,6 +48,9 @@ export const aiVoiceComparison: ResourceArticleData = {
   title: "Hotel Answering Service vs. AI Voice: Which Is Better for Guest Support?",
   description:
     "A direct comparison of a trained human hotel answering service against an AI voice agent — where each one holds up, and where AI still falls short for hospitality.",
+  metaTitle: "Hotel Answering Service vs AI Voice | GuestSquad",
+  metaDescription:
+    "Compare human hotel answering services with AI voice agents for guest calls, reservations, escalations, and after-hours support.",
   datePublished: "2026-06-26",
   intro: [
     "AI voice agents are now pitched to hotels as a way to answer every call without staffing a single person. They're genuinely good at narrow, repetitive tasks. They're also frequently sold as a full replacement for a human answering service — and that's the part worth examining before you commit a property's phone line to one.",
@@ -121,6 +126,9 @@ export const callCenterComparison: ResourceArticleData = {
   title: "Hotel Answering Service vs. Generic Call Center: What's the Real Difference?",
   description:
     "Why a hospitality-trained, property-specific answering service performs differently from a generic, multi-industry call center — and what to check before you sign with either.",
+  metaTitle: "Hotel Answering Service vs Call Center | GuestSquad",
+  metaDescription:
+    "Compare hospitality-trained hotel answering services with generic call centers for reservations, guest questions, and front desk overflow.",
   datePublished: "2026-06-26",
   intro: [
     "\"Call center\" and \"hotel answering service\" often get used interchangeably when hotels start shopping for outsourced phone coverage — but the underlying operating models are usually quite different, and that difference shows up on the call itself.",

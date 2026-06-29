@@ -16,7 +16,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata: Metadata = buildMetadata({
   title: "24/7 Hotel Guest Support & Reservation Services | GuestSquad",
   description:
-    "GuestSquad handles reservations, guest messages, OTA inquiries, callbacks, upsells, and after-hours support for hotels, boutique properties, resorts, serviced apartments, and Airbnb operators.",
+    "GuestSquad provides 24/7 hotel guest support, reservation calls, OTA inbox management, messaging, and after-hours front desk coverage.",
   path: "",
 });
 

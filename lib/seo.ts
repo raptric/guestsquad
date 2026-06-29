@@ -46,6 +46,7 @@ export function organizationSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
+    "@id": `${SITE.url}/#organization`,
     name: SITE.brand,
     legalName: SITE.legalName,
     alternateName: SITE.name,
@@ -74,10 +75,12 @@ export function websiteSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
+    "@id": `${SITE.url}/#website`,
     name: SITE.brand,
     url: SITE.url,
     description:
       "24/7 guest operations support for hotels that can't afford missed bookings.",
+    publisher: { "@type": "ProfessionalService", "@id": `${SITE.url}/#organization`, name: SITE.brand },
   };
 }
 
@@ -94,12 +97,14 @@ export function serviceSchema({
   return {
     "@context": "https://schema.org",
     "@type": "Service",
+    "@id": `${SITE.url}${path}#service`,
     serviceType: name,
     name,
     description,
     url: `${SITE.url}${path}`,
     provider: {
       "@type": "ProfessionalService",
+      "@id": `${SITE.url}/#organization`,
       name: SITE.brand,
       url: SITE.url,
     },
@@ -144,15 +149,17 @@ export function articleSchema({
   return {
     "@context": "https://schema.org",
     "@type": "Article",
+    "@id": `${url}#article`,
     headline,
     description,
     url,
     mainEntityOfPage: url,
     datePublished,
     dateModified: dateModified ?? datePublished,
-    author: { "@type": "Organization", name: SITE.brand, url: SITE.url },
+    author: { "@type": "Organization", "@id": `${SITE.url}/#organization`, name: SITE.brand, url: SITE.url },
     publisher: {
       "@type": "Organization",
+      "@id": `${SITE.url}/#organization`,
       name: SITE.brand,
       url: SITE.url,
       logo: { "@type": "ImageObject", url: `${SITE.url}/brand-assets/guestsquad-icon.svg` },

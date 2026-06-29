@@ -4,8 +4,8 @@ import { buildMetadata } from "@/lib/seo";
 import { callCenterComparison } from "@/lib/resource-content";
 
 export const metadata: Metadata = buildMetadata({
-  title: `${callCenterComparison.title} | GuestSquad`,
-  description: callCenterComparison.description,
+  title: callCenterComparison.metaTitle ?? `${callCenterComparison.title} | GuestSquad`,
+  description: callCenterComparison.metaDescription ?? callCenterComparison.description,
   path: `/resources/${callCenterComparison.slug}`,
 });
 

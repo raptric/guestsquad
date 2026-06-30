@@ -9,7 +9,6 @@ import { Button } from "@/components/ui/button";
 import {
   PROPERTY_TYPES,
   PROPERTIES_COUNT_OPTIONS,
-  VOLUME_OPTIONS,
 } from "@/lib/site-data";
 
 export function ContactForm() {
@@ -46,10 +45,7 @@ export function ContactForm() {
       company: (form.elements.namedItem("company") as HTMLInputElement).value,
       properties: (form.elements.namedItem("properties") as HTMLSelectElement).value,
       propertyType: (form.elements.namedItem("propertyType") as HTMLSelectElement).value,
-      volume: (form.elements.namedItem("volume") as HTMLSelectElement).value,
-      tools: (form.elements.namedItem("tools") as HTMLInputElement).value,
       message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
-      // honeypot
       website: (form.elements.namedItem("website") as HTMLInputElement).value,
     };
 
@@ -76,18 +72,18 @@ export function ContactForm() {
       <div className="grid gap-6 sm:grid-cols-2">
         <div>
           <Label htmlFor="name">Name *</Label>
-          <Input id="name" name="name" placeholder="Jane Smith" required />
+          <Input id="name" name="name" placeholder="Your full name" required className="placeholder:text-ink-muted/50" />
         </div>
         <div>
           <Label htmlFor="email">Work email *</Label>
-          <Input id="email" name="email" type="email" placeholder="jane@yourhotel.com" required />
+          <Input id="email" name="email" type="email" placeholder="Your work email" required className="placeholder:text-ink-muted/50" />
         </div>
       </div>
 
       <div className="grid gap-6 sm:grid-cols-2">
         <div>
           <Label htmlFor="company">Hotel / company name *</Label>
-          <Input id="company" name="company" placeholder="The Harbor Hotel" required />
+          <Input id="company" name="company" placeholder="Your hotel or company" required className="placeholder:text-ink-muted/50" />
         </div>
         <div>
           <Label htmlFor="properties">Number of properties</Label>
@@ -100,34 +96,14 @@ export function ContactForm() {
         </div>
       </div>
 
-      <div className="grid gap-6 sm:grid-cols-2">
-        <div>
-          <Label htmlFor="propertyType">Property type</Label>
-          <Select id="propertyType" name="propertyType" defaultValue="">
-            <option value="" disabled>Select an option</option>
-            {PROPERTY_TYPES.map((opt) => (
-              <option key={opt} value={opt}>{opt}</option>
-            ))}
-          </Select>
-        </div>
-        <div>
-          <Label htmlFor="volume">Monthly call / message volume</Label>
-          <Select id="volume" name="volume" defaultValue="">
-            <option value="" disabled>Select an option</option>
-            {VOLUME_OPTIONS.map((opt) => (
-              <option key={opt} value={opt}>{opt}</option>
-            ))}
-          </Select>
-        </div>
-      </div>
-
       <div>
-        <Label htmlFor="tools">Current tools (PMS, CRS, OTA, phone system)</Label>
-        <Input
-          id="tools"
-          name="tools"
-          placeholder="e.g. Opera PMS, SiteMinder, Booking.com, RingCentral"
-        />
+        <Label htmlFor="propertyType">Property type</Label>
+        <Select id="propertyType" name="propertyType" defaultValue="">
+          <option value="" disabled>Select an option</option>
+          {PROPERTY_TYPES.map((opt) => (
+            <option key={opt} value={opt}>{opt}</option>
+          ))}
+        </Select>
       </div>
 
       <div>
@@ -135,7 +111,8 @@ export function ContactForm() {
         <Textarea
           id="message"
           name="message"
-          placeholder="Tell us what&apos;s currently falling through the cracks: missed calls, slow OTA replies, after-hours gaps..."
+          placeholder="Tell us about your property and what you need help with..."
+          className="placeholder:text-ink-muted/50"
         />
       </div>
 

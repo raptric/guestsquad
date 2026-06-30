@@ -25,11 +25,20 @@ export const metadata: Metadata = {
     url: SITE.url,
     siteName: SITE.brand,
     type: "website",
+    images: [
+      {
+        url: `${SITE.url}/brand-assets/og-image.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "GuestSquad — 24/7 human hotel guest support for calls, messages, OTA inboxes, and after-hours coverage.",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "24/7 Hotel Guest Support & Reservation Services",
     description: "Never miss a guest. Never lose a booking.",
+    images: [`${SITE.url}/brand-assets/og-image.jpg`],
   },
   robots: { index: true, follow: true },
 };

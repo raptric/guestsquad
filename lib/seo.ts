@@ -18,6 +18,12 @@ export function buildMetadata({
   noindex?: boolean;
 }): Metadata {
   const url = `${SITE.url}${path}`;
+  const ogImage = {
+    url: `${SITE.url}/brand-assets/og-image.jpg`,
+    width: 1200,
+    height: 630,
+    alt: "GuestSquad — 24/7 human hotel guest support for calls, messages, OTA inboxes, and after-hours coverage.",
+  };
 
   return {
     title,
@@ -32,11 +38,13 @@ export function buildMetadata({
       url,
       siteName: SITE.brand,
       type: "website",
+      images: [ogImage],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
+      images: [ogImage.url],
     },
   };
 }

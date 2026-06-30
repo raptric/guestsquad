@@ -15,7 +15,7 @@ export async function POST(req: Request) {
   }
 
   const gmailUser = process.env.GMAIL_USER;
-  const gmailPass = process.env.GMAIL_APP_PASSWORD;
+  const gmailPass = process.env.GMAIL_APP_PASSWORD ?? process.env.GMAIL_PASSWORD;
 
   if (!gmailUser || !gmailPass) {
     console.error("GMAIL_USER or GMAIL_APP_PASSWORD env vars not set");

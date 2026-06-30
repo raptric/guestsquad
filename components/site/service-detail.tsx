@@ -152,7 +152,7 @@ export function ServiceDetail({ data }: { data: ServiceDetailData }) {
           ))}
         </div>
         <p className="mt-8 text-center text-sm text-ink-soft">
-          <Link href="/resources" className="underline-offset-4 hover:text-gold-dark hover:underline">
+          <Link href="/resources" className="text-gold-dark underline underline-offset-4 hover:text-gold">
             Browse all guides and comparisons →
           </Link>
         </p>

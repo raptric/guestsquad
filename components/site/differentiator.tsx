@@ -48,7 +48,7 @@ export function Differentiator() {
       <div className="md:col-span-2">
         <Link
           href="/resources/hotel-answering-service-vs-call-center"
-          className="text-sm font-medium text-ink-soft underline-offset-4 hover:text-gold-dark hover:underline"
+          className="text-sm font-medium text-gold-dark underline underline-offset-4 hover:text-gold"
         >
           Read the full hotel answering service vs. call center comparison →
         </Link>

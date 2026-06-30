@@ -68,14 +68,14 @@ export function Footer() {
 
         <div className="mt-14 flex flex-col items-center justify-between gap-3 border-t border-line pt-8 text-xs text-ink-muted md:flex-row">
           <p>
-            © {new Date().getFullYear()} {SITE.brand}, a product of{" "}
+            © {new Date().getFullYear()} {SITE.brand} by{" "}
             <a
               href={SITE.parentUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-ink"
+              className="text-gold-dark underline-offset-2 hover:underline"
             >
-              {SITE.legalName}
+              {SITE.parentName}
             </a>
             . All rights reserved.
           </p>

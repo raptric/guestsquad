@@ -59,11 +59,11 @@ export default function ResourcesPage() {
         </div>
         <p className="mt-10 text-center text-sm text-ink-soft">
           Already know what you need?{" "}
-          <Link href="/services" className="underline-offset-4 hover:text-gold-dark hover:underline">
+          <Link href="/services" className="text-gold-dark underline underline-offset-4 hover:text-gold">
             Browse all services
           </Link>{" "}
           or{" "}
-          <Link href="/pricing" className="underline-offset-4 hover:text-gold-dark hover:underline">
+          <Link href="/pricing" className="text-gold-dark underline underline-offset-4 hover:text-gold">
             view pricing
           </Link>
           .

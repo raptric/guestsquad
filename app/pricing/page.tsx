@@ -55,15 +55,15 @@ export default function PricingPage() {
         <PricingCards />
         <p className="mt-10 text-center text-sm text-ink-soft">
           Not sure which plan fits?{" "}
-          <Link href="/services" className="underline-offset-4 hover:text-gold-dark hover:underline">
+          <Link href="/services" className="text-gold-dark underline underline-offset-4 hover:text-gold">
             Browse all services
           </Link>{" "}
           or see how we compare to{" "}
-          <Link href="/resources/hotel-answering-service-vs-ai-voice" className="underline-offset-4 hover:text-gold-dark hover:underline">
+          <Link href="/resources/hotel-answering-service-vs-ai-voice" className="text-gold-dark underline underline-offset-4 hover:text-gold">
             AI voice agents
           </Link>{" "}
           and{" "}
-          <Link href="/resources/hotel-answering-service-vs-call-center" className="underline-offset-4 hover:text-gold-dark hover:underline">
+          <Link href="/resources/hotel-answering-service-vs-call-center" className="text-gold-dark underline underline-offset-4 hover:text-gold">
             generic call centers
           </Link>
           .
@@ -80,11 +80,11 @@ export default function PricingPage() {
                 {item.q === "Can we start with just one service?" ? (
                   <>
                     Yes. Most clients start with{" "}
-                    <Link href="/services/after-hours-support" className="underline-offset-4 hover:text-gold-dark hover:underline">
+                    <Link href="/services/after-hours-support" className="text-gold-dark underline underline-offset-4 hover:text-gold">
                       after-hours coverage
                     </Link>{" "}
                     or{" "}
-                    <Link href="/services/ota-inbox-management" className="underline-offset-4 hover:text-gold-dark hover:underline">
+                    <Link href="/services/ota-inbox-management" className="text-gold-dark underline underline-offset-4 hover:text-gold">
                       OTA inbox management
                     </Link>
                     , then expand once they see it working.

@@ -90,7 +90,7 @@ export function PricingCards() {
               <li key={f.label} className="flex gap-2.5 text-sm text-ink-soft">
                 <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-gold-dark" />
                 {f.href ? (
-                  <Link href={f.href} className="underline-offset-4 hover:text-gold-dark hover:underline">
+                  <Link href={f.href} className="text-gold-dark underline underline-offset-4 hover:text-gold">
                     {f.label}
                   </Link>
                 ) : (

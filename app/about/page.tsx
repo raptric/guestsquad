@@ -72,11 +72,11 @@ export default function AboutPage() {
           the channels your on-site team doesn&rsquo;t have time to monitor, so
           the people you&rsquo;ve hired can focus on the guests standing in front
           of them. See how that compares to{" "}
-          <Link href="/resources/hotel-answering-service-vs-ai-voice" className="underline-offset-4 hover:text-gold-dark hover:underline">
+          <Link href="/resources/hotel-answering-service-vs-ai-voice" className="text-gold-dark underline underline-offset-4 hover:text-gold">
             AI voice agents
           </Link>{" "}
           and{" "}
-          <Link href="/resources/hotel-answering-service-vs-call-center" className="underline-offset-4 hover:text-gold-dark hover:underline">
+          <Link href="/resources/hotel-answering-service-vs-call-center" className="text-gold-dark underline underline-offset-4 hover:text-gold">
             generic call centers
           </Link>
           .
@@ -94,7 +94,7 @@ export default function AboutPage() {
         <p className="mt-6 max-w-2xl text-sm leading-relaxed text-ink-soft">
           GuestSquad works with independent hotels, boutique properties, resorts,
           serviced apartments, and{" "}
-          <Link href="/services/vacation-rental-answering-service" className="underline-offset-4 hover:text-gold-dark hover:underline">
+          <Link href="/services/vacation-rental-answering-service" className="text-gold-dark underline underline-offset-4 hover:text-gold">
             Airbnb or Vrbo operators
           </Link>
           , anywhere a guest&rsquo;s
@@ -104,11 +104,11 @@ export default function AboutPage() {
           team works inside your existing PMS, OTA accounts, and phone system,
           rather than asking you to adopt new software or hand over control of
           your guest relationships. See the full list of{" "}
-          <Link href="/services" className="underline-offset-4 hover:text-gold-dark hover:underline">
+          <Link href="/services" className="text-gold-dark underline underline-offset-4 hover:text-gold">
             services we cover
           </Link>
           , or{" "}
-          <Link href="/pricing" className="underline-offset-4 hover:text-gold-dark hover:underline">
+          <Link href="/pricing" className="text-gold-dark underline underline-offset-4 hover:text-gold">
             view pricing
           </Link>
           .

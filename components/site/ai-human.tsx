@@ -40,7 +40,7 @@ export function AiHuman() {
     </div>
       <Link
         href="/resources/hotel-answering-service-vs-ai-voice"
-        className="mt-4 inline-block text-sm font-medium text-ink-soft underline-offset-4 hover:text-gold-dark hover:underline"
+        className="mt-4 inline-block text-sm font-medium text-gold-dark underline underline-offset-4 hover:text-gold"
       >
         See the full human vs. AI voice agent comparison →
       </Link>

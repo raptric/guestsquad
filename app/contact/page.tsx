@@ -53,11 +53,11 @@ export default function ContactPage() {
             Tell us a little about your operation, or book a 15-minute demo
             directly. We respond within one business day. Not sure where to
             start? Browse our{" "}
-            <Link href="/services" className="underline-offset-4 hover:text-gold-dark hover:underline">
+            <Link href="/services" className="text-gold-dark underline underline-offset-4 hover:text-gold">
               services
             </Link>{" "}
             or{" "}
-            <Link href="/pricing" className="underline-offset-4 hover:text-gold-dark hover:underline">
+            <Link href="/pricing" className="text-gold-dark underline underline-offset-4 hover:text-gold">
               pricing
             </Link>{" "}
             first.
@@ -85,11 +85,11 @@ export default function ContactPage() {
         <div className="mx-auto mt-10 max-w-3xl text-center text-xs text-ink-muted">
           By submitting this form you agree to be contacted about GuestSquad
           services. See our{" "}
-          <Link href="/privacy-policy" className="underline-offset-4 hover:underline">
+          <Link href="/privacy-policy" className="text-gold-dark underline underline-offset-4 hover:text-gold">
             Privacy Policy
           </Link>{" "}
           and{" "}
-          <Link href="/terms-of-service" className="underline-offset-4 hover:underline">
+          <Link href="/terms-of-service" className="text-gold-dark underline underline-offset-4 hover:text-gold">
             Terms of Service
           </Link>
           .
@@ -109,7 +109,7 @@ export default function ContactPage() {
         </div>
         <p className="mt-10 text-center text-sm text-ink-soft">
           Still deciding?{" "}
-          <Link href="/resources" className="underline-offset-4 hover:text-gold-dark hover:underline">
+          <Link href="/resources" className="text-gold-dark underline underline-offset-4 hover:text-gold">
             Read our comparisons
           </Link>{" "}
           on human answering services vs. AI voice agents and generic call centers.

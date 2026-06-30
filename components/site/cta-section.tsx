@@ -1,4 +1,5 @@
 import { ButtonLink } from "@/components/site/button-link";
+import { CalendlyPopupButton } from "@/components/site/calendly-popup-button";
 
 export function CtaSection({
   title = "Stop losing bookings to silence.",
@@ -17,9 +18,9 @@ export function CtaSection({
           {description}
         </p>
         <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <ButtonLink href="/contact" variant="gold" size="lg">
+          <CalendlyPopupButton variant="gold" size="lg">
             Book a 15-Minute Demo
-          </ButtonLink>
+          </CalendlyPopupButton>
           <ButtonLink
             href="/pricing"
             variant="outline"

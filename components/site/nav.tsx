@@ -6,6 +6,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { NAV_LINKS, SITE } from "@/lib/site-data";
 import { ButtonLink } from "@/components/site/button-link";
+import { CalendlyPopupButton } from "@/components/site/calendly-popup-button";
 import { cn } from "@/lib/utils";
 
 export function Nav() {
@@ -39,9 +40,9 @@ export function Nav() {
         </nav>
 
         <div className="hidden md:block">
-          <ButtonLink href="/contact" variant="gold" size="sm">
+          <CalendlyPopupButton variant="gold" size="sm">
             Book a Demo
-          </ButtonLink>
+          </CalendlyPopupButton>
         </div>
 
         <button
@@ -67,9 +68,9 @@ export function Nav() {
               </Link>
             ))}
             <div className="mt-2 px-2">
-              <ButtonLink href="/contact" variant="gold" className="w-full">
+              <CalendlyPopupButton variant="gold" className="w-full">
                 Book a Demo
-              </ButtonLink>
+              </CalendlyPopupButton>
             </div>
           </nav>
         </div>

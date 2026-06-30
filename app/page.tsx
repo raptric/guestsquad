@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { ButtonLink } from "@/components/site/button-link";
+import { CalendlyPopupButton } from "@/components/site/calendly-popup-button";
 import { Section, SectionHeading } from "@/components/site/section";
 import { ServiceCard } from "@/components/site/service-card";
 import { Differentiator } from "@/components/site/differentiator";
@@ -40,9 +41,9 @@ export default function HomePage() {
               your front desk stays focused on in-house guests.
             </p>
             <div className="mt-9 flex flex-col gap-4 sm:flex-row">
-              <ButtonLink href="/contact" variant="gold" size="lg">
+              <CalendlyPopupButton variant="gold" size="lg">
                 Book a 15-Minute Demo
-              </ButtonLink>
+              </CalendlyPopupButton>
               <ButtonLink href="/services" variant="outline" size="lg">
                 See Services
               </ButtonLink>

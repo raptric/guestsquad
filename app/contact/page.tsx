@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ContactForm } from "@/components/site/contact-form";
+import { CalendlyPopupButton } from "@/components/site/calendly-popup-button";
 import { Breadcrumbs } from "@/components/site/breadcrumbs";
 import { JsonLd } from "@/components/site/json-ld";
 import { Section, SectionHeading } from "@/components/site/section";
@@ -68,14 +69,13 @@ export default function ContactPage() {
           <p className="text-sm text-ink-soft">
             Prefer to skip the form?
           </p>
-          <a
-            href={SITE.calendlyUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-2 inline-block text-sm font-medium text-gold-dark underline-offset-4 hover:underline"
+          <CalendlyPopupButton
+            variant="link"
+            size="sm"
+            className="mt-2 text-gold-dark underline-offset-4 hover:underline"
           >
             Book a 15-minute demo on our calendar →
-          </a>
+          </CalendlyPopupButton>
         </div>
 
         <div className="mx-auto mt-12 max-w-3xl rounded-lg border border-line bg-paper p-8 md:p-10">

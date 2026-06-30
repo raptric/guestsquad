@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { SERVICES, SITE } from "@/lib/site-data";
+import { CalendlyPopupButton } from "@/components/site/calendly-popup-button";
 
 export function Footer() {
   return (
@@ -58,9 +59,9 @@ export function Footer() {
               <li><a href={`mailto:${SITE.email}`} className="hover:text-ink">{SITE.email}</a></li>
               <li><a href={`tel:${SITE.phoneHref}`} className="hover:text-ink">{SITE.phone}</a></li>
               <li>
-                <a href={SITE.calendlyUrl} target="_blank" rel="noopener noreferrer" className="hover:text-ink">
+                <CalendlyPopupButton variant="link" size="sm" className="hover:text-ink p-0 h-auto">
                   Book a 15-min demo →
-                </a>
+                </CalendlyPopupButton>
               </li>
             </ul>
           </div>

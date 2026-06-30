@@ -7,7 +7,7 @@ export const SITE = {
   tagline: "Never miss a guest. Never lose a booking.",
   subtitle: "Your Dedicated Guest Team",
   url: "https://guestsquad.com",
-  calendlyUrl: "https://calendly.com/guestsquad/15min-demo",
+  calendlyUrl: "https://calendly.com/guestsquad-info/30min",
   email: "info@guestsquad.com",
   phone: "+1 509 588 7311",
   phoneHref: "+15095887311",

@@ -1,5 +1,5 @@
 import { ButtonLink } from "@/components/site/button-link";
-import { SITE } from "@/lib/site-data";
+import { CalendlyPopupButton } from "@/components/site/calendly-popup-button";
 
 export function PageHero({
   eyebrow,
@@ -18,6 +18,8 @@ export function PageHero({
   secondaryCta?: string;
   secondaryHref?: string;
 }) {
+  const primaryIsPopup = primaryHref === "/contact";
+
   return (
     <section className="border-b border-line bg-paper py-20 md:py-28">
       <div className="container max-w-3xl text-center">
@@ -33,9 +35,15 @@ export function PageHero({
           {description}
         </p>
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <ButtonLink href={primaryHref} variant="gold" size="lg">
-            {primaryCta}
-          </ButtonLink>
+          {primaryIsPopup ? (
+            <CalendlyPopupButton variant="gold" size="lg">
+              {primaryCta}
+            </CalendlyPopupButton>
+          ) : (
+            <ButtonLink href={primaryHref} variant="gold" size="lg">
+              {primaryCta}
+            </ButtonLink>
+          )}
           {secondaryCta && secondaryHref && (
             <ButtonLink href={secondaryHref} variant="outline" size="lg">
               {secondaryCta}

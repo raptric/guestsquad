@@ -14,6 +14,8 @@ import {
 
 export function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
   if (submitted) {
     return (
@@ -28,14 +30,45 @@ export function ContactForm() {
     );
   }
 
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setLoading(true);
+    setError("");
+
+    const form = e.currentTarget;
+    const data = {
+      name: (form.elements.namedItem("name") as HTMLInputElement).value,
+      email: (form.elements.namedItem("email") as HTMLInputElement).value,
+      company: (form.elements.namedItem("company") as HTMLInputElement).value,
+      properties: (form.elements.namedItem("properties") as HTMLSelectElement).value,
+      propertyType: (form.elements.namedItem("propertyType") as HTMLSelectElement).value,
+      volume: (form.elements.namedItem("volume") as HTMLSelectElement).value,
+      tools: (form.elements.namedItem("tools") as HTMLInputElement).value,
+      message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
+      // honeypot
+      website: (form.elements.namedItem("website") as HTMLInputElement).value,
+    };
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      if (!res.ok) throw new Error("Server error");
+      setSubmitted(true);
+    } catch {
+      setError("Something went wrong. Please try again or email us directly at info@guestsquad.com.");
+    } finally {
+      setLoading(false);
+    }
+  }
+
   return (
-    <form
-      onSubmit={(e) => {
-        e.preventDefault();
-        setSubmitted(true);
-      }}
-      className="flex flex-col gap-6"
-    >
+    <form onSubmit={handleSubmit} className="flex flex-col gap-6">
+      {/* Honeypot — hidden from real users, bots fill it */}
+      <input type="text" name="website" tabIndex={-1} aria-hidden="true" className="hidden" />
+
       <div className="grid gap-6 sm:grid-cols-2">
         <div>
           <Label htmlFor="name">Name *</Label>
@@ -98,12 +131,16 @@ export function ContactForm() {
         <Textarea
           id="message"
           name="message"
-          placeholder="Tell us what's currently falling through the cracks: missed calls, slow OTA replies, after-hours gaps..."
+          placeholder="Tell us what&apos;s currently falling through the cracks: missed calls, slow OTA replies, after-hours gaps..."
         />
       </div>
 
-      <Button type="submit" variant="gold" size="lg" className="w-full sm:w-auto">
-        Send message
+      {error && (
+        <p className="text-sm text-red-600">{error}</p>
+      )}
+
+      <Button type="submit" variant="gold" size="lg" className="w-full sm:w-auto" disabled={loading}>
+        {loading ? "Sending…" : "Send message"}
       </Button>
       <p className="text-xs text-ink-muted">
         We respond within one business day. Your information is confidential and never shared.

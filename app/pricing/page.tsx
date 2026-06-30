@@ -9,7 +9,7 @@ import { JsonLd } from "@/components/site/json-ld";
 import { buildMetadata, breadcrumbSchema, faqSchema } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Hotel Guest Support Pricing | GuestSquad Plans & Pilot Program",
+  title: "Hotel Guest Support Pricing | Plans & Pilot Program",
   description:
     "Starter, Growth, and Custom guest operations plans for hotels, resorts, serviced apartments, and Airbnb operators. Get a quote based on your property.",
   path: "/pricing",

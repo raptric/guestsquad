@@ -4,7 +4,7 @@ import { buildMetadata } from "@/lib/seo";
 import { afterHoursChecklistGuide } from "@/lib/resource-content";
 
 export const metadata: Metadata = buildMetadata({
-  title: afterHoursChecklistGuide.metaTitle ?? `${afterHoursChecklistGuide.title} | GuestSquad`,
+  title: afterHoursChecklistGuide.metaTitle ?? afterHoursChecklistGuide.title,
   description: afterHoursChecklistGuide.metaDescription ?? afterHoursChecklistGuide.description,
   path: `/resources/${afterHoursChecklistGuide.slug}`,
 });

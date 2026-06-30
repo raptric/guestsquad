@@ -15,11 +15,11 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
-  title: `24/7 Hotel Guest Support & Reservation Services | ${SITE.brand}`,
+  title: "24/7 Hotel Guest Support & Reservation Services",
   description:
     "GuestSquad handles reservations, guest messaging, OTA inquiries, callbacks, upsells, and after-hours support, so your front desk stays focused on in-house guests.",
   openGraph: {
-    title: `24/7 Hotel Guest Support & Reservation Services | ${SITE.brand}`,
+    title: "24/7 Hotel Guest Support & Reservation Services",
     description:
       "Never miss a guest. Never lose a booking. Guest operations support for hotels, resorts, serviced apartments, and Airbnb operators.",
     url: SITE.url,
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `24/7 Hotel Guest Support & Reservation Services | ${SITE.brand}`,
+    title: "24/7 Hotel Guest Support & Reservation Services",
     description: "Never miss a guest. Never lose a booking.",
   },
   robots: { index: true, follow: true },

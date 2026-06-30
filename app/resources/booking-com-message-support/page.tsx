@@ -4,7 +4,7 @@ import { buildMetadata } from "@/lib/seo";
 import { otaInboxChecklistGuide } from "@/lib/resource-content";
 
 export const metadata: Metadata = buildMetadata({
-  title: otaInboxChecklistGuide.metaTitle ?? `${otaInboxChecklistGuide.title} | GuestSquad`,
+  title: otaInboxChecklistGuide.metaTitle ?? otaInboxChecklistGuide.title,
   description: otaInboxChecklistGuide.metaDescription ?? otaInboxChecklistGuide.description,
   path: `/resources/${otaInboxChecklistGuide.slug}`,
 });

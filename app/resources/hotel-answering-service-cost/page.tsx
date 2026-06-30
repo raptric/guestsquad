@@ -4,7 +4,7 @@ import { buildMetadata } from "@/lib/seo";
 import { answeringServiceCostGuide } from "@/lib/resource-content";
 
 export const metadata: Metadata = buildMetadata({
-  title: answeringServiceCostGuide.metaTitle ?? `${answeringServiceCostGuide.title} | GuestSquad`,
+  title: answeringServiceCostGuide.metaTitle ?? answeringServiceCostGuide.title,
   description: answeringServiceCostGuide.metaDescription ?? answeringServiceCostGuide.description,
   path: `/resources/${answeringServiceCostGuide.slug}`,
 });

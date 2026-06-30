@@ -4,7 +4,7 @@ import { afterHoursData } from "@/lib/service-content";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "After-Hours Hotel Front Desk Support | GuestSquad",
+  title: "After-Hours Hotel Front Desk Support",
   description: afterHoursData.description,
   path: `/services/${afterHoursData.slug}`,
 });

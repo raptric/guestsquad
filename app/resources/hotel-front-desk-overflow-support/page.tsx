@@ -4,7 +4,7 @@ import { buildMetadata } from "@/lib/seo";
 import { overflowSupportGuide } from "@/lib/resource-content";
 
 export const metadata: Metadata = buildMetadata({
-  title: overflowSupportGuide.metaTitle ?? `${overflowSupportGuide.title} | GuestSquad`,
+  title: overflowSupportGuide.metaTitle ?? overflowSupportGuide.title,
   description: overflowSupportGuide.metaDescription ?? overflowSupportGuide.description,
   path: `/resources/${overflowSupportGuide.slug}`,
 });

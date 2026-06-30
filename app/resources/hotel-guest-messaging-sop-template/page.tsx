@@ -4,7 +4,7 @@ import { buildMetadata } from "@/lib/seo";
 import { messagingSopGuide } from "@/lib/resource-content";
 
 export const metadata: Metadata = buildMetadata({
-  title: messagingSopGuide.metaTitle ?? `${messagingSopGuide.title} | GuestSquad`,
+  title: messagingSopGuide.metaTitle ?? messagingSopGuide.title,
   description: messagingSopGuide.metaDescription ?? messagingSopGuide.description,
   path: `/resources/${messagingSopGuide.slug}`,
 });

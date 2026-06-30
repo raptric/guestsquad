@@ -5,7 +5,7 @@ import { buildMetadata } from "@/lib/seo";
 import { LEGAL_EFFECTIVE_DATE, TERMS_INTRO, TERMS_SECTIONS } from "@/lib/legal-content";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Terms of Service | GuestSquad",
+  title: "Terms of Service",
   description:
     "GuestSquad's Terms of Service, including billing authorization, payment dispute and chargeback handling, pilot terms, and liability terms.",
   path: "/terms-of-service",

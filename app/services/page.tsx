@@ -11,7 +11,7 @@ import { SERVICES } from "@/lib/site-data";
 import { buildMetadata, breadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Hotel Guest Operations Services | GuestSquad",
+  title: "Hotel Guest Operations Services",
   description:
     "Reservation support, guest messaging, OTA inbox management, after-hours coverage, back-office operations, and Airbnb guest support, all under one guest operations partner.",
   path: "/services",

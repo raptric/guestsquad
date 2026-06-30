@@ -91,7 +91,7 @@ export const aiVoiceComparison: ResourceArticleData = {
   title: "Hotel Answering Service vs. AI Voice: Which Is Better for Guest Support?",
   description:
     "A direct comparison of a trained human hotel answering service against an AI voice agent, showing where each one holds up, and where AI still falls short for hospitality.",
-  metaTitle: "Hotel Answering Service vs AI Voice | GuestSquad",
+  metaTitle: "Hotel Answering Service vs AI Voice",
   metaDescription:
     "Compare human hotel answering services with AI voice agents for guest calls, reservations, escalations, and after-hours support.",
   datePublished: "2026-06-26",
@@ -169,7 +169,7 @@ export const callCenterComparison: ResourceArticleData = {
   title: "Hotel Answering Service vs. Generic Call Center: What's the Real Difference?",
   description:
     "Why a hospitality-trained, property-specific answering service performs differently from a generic, multi-industry call center, and what to check before you sign with either.",
-  metaTitle: "Hotel Answering Service vs Call Center | GuestSquad",
+  metaTitle: "Hotel Answering Service vs Call Center",
   metaDescription:
     "Compare hospitality-trained hotel answering services with generic call centers for reservations, guest questions, and front desk overflow.",
   datePublished: "2026-06-26",
@@ -265,7 +265,7 @@ export const answeringServiceCostGuide: GuideArticleData = {
   title: "How Much Does a Hotel Answering Service Cost?",
   description:
     "The pricing models hotel answering services actually use, what drives the price up or down, and the hidden costs worth asking about before you sign.",
-  metaTitle: "Hotel Answering Service Cost Guide | GuestSquad",
+  metaTitle: "Hotel Answering Service Cost Guide",
   metaDescription:
     "How hotel answering services price their plans, what drives the cost, and the questions to ask before signing with any provider.",
   datePublished: "2026-06-29",
@@ -338,7 +338,7 @@ export const afterHoursChecklistGuide: GuideArticleData = {
   title: "After-Hours Hotel Front Desk Support: A Practical Checklist",
   description:
     "What a real after-hours setup needs to cover, from overnight calls and night audit phone coverage to emergency escalation, laid out as a working checklist.",
-  metaTitle: "After-Hours Hotel Answering Service Checklist | GuestSquad",
+  metaTitle: "After-Hours Hotel Answering Service Checklist",
   metaDescription:
     "A practical checklist for after-hours hotel front desk and night audit phone coverage, including escalation rules and morning handoff.",
   datePublished: "2026-06-29",
@@ -402,7 +402,7 @@ export const overflowSupportGuide: GuideArticleData = {
   title: "Hotel Front Desk Overflow Support: When to Outsource and What to Keep In-House",
   description:
     "How overflow call coverage actually works, the signs your property needs it, and how to set it up without disrupting the team you already have.",
-  metaTitle: "Hotel Front Desk Overflow Support Guide | GuestSquad",
+  metaTitle: "Hotel Front Desk Overflow Support Guide",
   metaDescription:
     "When to add overflow phone support at your hotel, how it works in practice, and how to set it up alongside your existing front desk team.",
   datePublished: "2026-06-29",
@@ -465,7 +465,7 @@ export const otaInboxChecklistGuide: GuideArticleData = {
   title: "Booking.com and Expedia Message Support: An OTA Inbox Checklist",
   description:
     "Why OTA response time affects bookings and rankings, and a practical checklist for keeping Booking.com and Expedia message inboxes under control.",
-  metaTitle: "Booking.com & Expedia Message Support Checklist | GuestSquad",
+  metaTitle: "Booking.com & Expedia Message Support Checklist",
   metaDescription:
     "A practical checklist for managing Booking.com and Expedia guest messages, including response-time targets and common message types.",
   datePublished: "2026-06-29",
@@ -529,7 +529,7 @@ export const messagingSopGuide: GuideArticleData = {
   title: "Hotel Guest Messaging SOP Template",
   description:
     "What to include in a guest messaging SOP: response-time targets, escalation rules, tone guidelines, and a sample outline to start from.",
-  metaTitle: "Hotel Guest Messaging SOP Template | GuestSquad",
+  metaTitle: "Hotel Guest Messaging SOP Template",
   metaDescription:
     "What a hotel guest messaging SOP should include, plus a sample outline covering response times, escalation rules, and tone guidelines.",
   datePublished: "2026-06-29",

@@ -10,7 +10,7 @@ import { buildMetadata, breadcrumbSchema } from "@/lib/seo";
 import { RESOURCES } from "@/lib/resource-content";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Hotel Answering Service Guides & Comparisons | GuestSquad",
+  title: "Hotel Answering Service Guides & Comparisons",
   description:
     "Guides and comparisons on hotel answering services, AI voice agents, and call centers, to help you evaluate what's actually right for your property.",
   path: "/resources",

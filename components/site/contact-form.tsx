@@ -19,12 +19,16 @@ export function ContactForm() {
 
   if (submitted) {
     return (
-      <div className="rounded-lg border border-line bg-surface p-10 text-center">
-        <h3 className="text-xl font-medium text-ink">Thank you.</h3>
+      <div className="rounded-lg border border-line bg-paper p-10 text-center">
+        <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-gold/10">
+          <svg className="h-7 w-7 text-gold-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+          </svg>
+        </div>
+        <h3 className="text-xl font-medium text-ink">Message received.</h3>
         <p className="mt-3 text-sm leading-relaxed text-ink-soft">
-          We&rsquo;ve received your details and will be in touch within one
-          business day. If it&rsquo;s urgent, book a slot directly on our
-          calendar using the link above.
+          We&rsquo;ll review your details and follow up within one business day.
+          Need a faster answer? Book a 30-minute demo directly on the calendar.
         </p>
       </div>
     );

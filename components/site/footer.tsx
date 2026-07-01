@@ -70,6 +70,7 @@ export function Footer() {
             <ul className="flex flex-col gap-2.5 text-sm text-ink-soft">
               <li><a href={`mailto:${SITE.email}`} className="hover:text-ink">{SITE.email}</a></li>
               <li><a href={`tel:${SITE.phoneHref}`} className="hover:text-ink">{SITE.phone}</a></li>
+              <li className="leading-relaxed">40 Corbin Ave<br />Bay Shore, NY 11706</li>
               <li>
                 <CalendlyPopupButton variant="link" size="sm" className="hover:text-ink p-0 h-auto">
                   Book a 15-min demo →

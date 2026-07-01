@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Check, ArrowUpRight } from "lucide-react";
+import { Check, ArrowUpRight, ArrowRight } from "lucide-react";
 import { PageHero } from "@/components/site/page-hero";
 import { Section, SectionHeading } from "@/components/site/section";
 import { CtaSection } from "@/components/site/cta-section";
@@ -15,8 +15,13 @@ export type ServiceDetailData = {
   eyebrow: string;
   title: string;
   description: string;
+  answerBlock: string;
   image: { src: string; alt: string };
+  includesTitle?: string;
   includes: { title: string; description: string }[];
+  examples?: string;
+  handles?: string[];
+  escalates?: string[];
   whoItsFor: string[];
   notes: string;
   faqs: { q: string; a: string }[];
@@ -56,6 +61,15 @@ export function ServiceDetail({ data }: { data: ServiceDetailData }) {
         secondaryHref="/pricing"
       />
 
+      {/* Direct answer block — LLM-extractable summary */}
+      <div className="border-b border-line bg-surface">
+        <div className="container py-8">
+          <p className="mx-auto max-w-3xl text-sm leading-relaxed text-ink-soft">
+            {data.answerBlock}
+          </p>
+        </div>
+      </div>
+
       <div className="relative h-[280px] overflow-hidden border-b border-line md:h-[380px]">
         <Image
           src={data.image.src}
@@ -69,21 +83,73 @@ export function ServiceDetail({ data }: { data: ServiceDetailData }) {
       </div>
 
       <Section>
-        <SectionHeading eyebrow="What's Included" title="Coverage built for hospitality, not call volume." />
+        <SectionHeading
+          eyebrow="What&apos;s Included"
+          title={data.includesTitle ?? "Coverage built for hospitality, not call volume."}
+        />
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           {data.includes.map((item) => (
             <div key={item.title} className="rounded-lg border border-line bg-paper p-7">
               <h3 className="text-base font-medium text-ink">{item.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-ink-soft">
-                {item.description}
-              </p>
+              <p className="mt-2 text-sm leading-relaxed text-ink-soft">{item.description}</p>
             </div>
           ))}
         </div>
+
+        {data.examples && (
+          <div className="mt-8 rounded-lg border border-line bg-paper p-7">
+            <p className="mb-2 text-xs font-semibold uppercase tracking-[0.14em] text-ink-muted">
+              In Practice
+            </p>
+            <p className="text-sm leading-relaxed text-ink-soft">{data.examples}</p>
+          </div>
+        )}
       </Section>
 
-      <Section surface>
-        <SectionHeading eyebrow="Who It's For" title="Built around how your property actually operates." />
+      {(data.handles || data.escalates) && (
+        <Section surface>
+          <SectionHeading
+            eyebrow="How It Works"
+            title="What we handle, and what we escalate."
+            description="Clear boundaries mean your team stays in control of what matters most."
+          />
+          <div className="mt-10 grid gap-8 md:grid-cols-2">
+            {data.handles && (
+              <div>
+                <p className="mb-5 text-xs font-semibold uppercase tracking-[0.14em] text-gold-dark">
+                  Handled directly
+                </p>
+                <ul className="flex flex-col gap-3">
+                  {data.handles.map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-gold-dark" />
+                      <span className="text-sm leading-relaxed text-ink-soft">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {data.escalates && (
+              <div>
+                <p className="mb-5 text-xs font-semibold uppercase tracking-[0.14em] text-ink-muted">
+                  Escalated to your team
+                </p>
+                <ul className="flex flex-col gap-3">
+                  {data.escalates.map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <ArrowRight className="mt-0.5 h-4 w-4 flex-shrink-0 text-ink-muted" />
+                      <span className="text-sm leading-relaxed text-ink-soft">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+        </Section>
+      )}
+
+      <Section surface={!(data.handles || data.escalates)}>
+        <SectionHeading eyebrow="Who It&apos;s For" title="Built around how your property actually operates." />
         <ul className="mt-10 grid gap-4 sm:grid-cols-2">
           {data.whoItsFor.map((item) => (
             <li key={item} className="flex items-start gap-3 rounded-lg border border-line bg-paper p-5">
@@ -92,9 +158,7 @@ export function ServiceDetail({ data }: { data: ServiceDetailData }) {
             </li>
           ))}
         </ul>
-        <p className="mt-10 max-w-2xl text-sm leading-relaxed text-ink-muted">
-          {data.notes}
-        </p>
+        <p className="mt-10 max-w-2xl text-sm leading-relaxed text-ink-muted">{data.notes}</p>
       </Section>
 
       <Section surface>

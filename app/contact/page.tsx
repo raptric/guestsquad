@@ -21,11 +21,23 @@ const FAQS = [
   },
   {
     q: "Do I need to know which plan I want first?",
-    a: "No. Most clients aren't sure which plan fits until we've talked through their volume and channels; see the Pricing page for an overview in the meantime.",
+    a: "No. Most clients are not sure which plan fits until we have talked through their volume and channels. See the Pricing page for an overview in the meantime.",
   },
   {
     q: "Can I just ask questions before committing to anything?",
-    a: "Yes. A demo call is a conversation, not a sales pitch, so bring your questions about how the service actually works.",
+    a: "Yes. A demo call is a conversation, not a sales pitch. Bring your questions about how the service actually works and what it would look like for your property specifically.",
+  },
+  {
+    q: "What should I prepare before a demo call?",
+    a: "Nothing formal. It helps to have a rough sense of your monthly call or message volume, which channels you use, and the hours where you currently have gaps. We will guide the rest of the conversation.",
+  },
+  {
+    q: "Can I request a quote without booking a full demo?",
+    a: "Yes. Fill in the form with your property details and volume and we will respond with a ballpark range before scheduling anything. A discovery call is only needed if you want to move forward.",
+  },
+  {
+    q: "How fast can GuestSquad review my property needs?",
+    a: "We review all form submissions within one business day. If your situation is time-sensitive, book directly on the calendar for the fastest response.",
   },
 ];
 

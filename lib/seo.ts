@@ -69,11 +69,27 @@ export function organizationSchema() {
     email: SITE.email,
     telephone: SITE.phone,
     areaServed: "Worldwide",
+    logo: {
+      "@type": "ImageObject",
+      url: `${SITE.url}/brand-assets/guestsquad-favicon-official.svg`,
+    },
+    sameAs: ["https://www.linkedin.com/company/guest-squad/"],
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "sales",
+      email: SITE.email,
+      telephone: SITE.phone,
+      availableLanguage: "English",
+    },
     knowsAbout: [
+      "Hotel Guest Operations",
       "Guest Reservation Service",
       "Hotel BPO",
       "Hotel Back Office Operations",
       "Virtual Front Desk",
+      "OTA Inbox Management",
+      "After-Hours Hotel Support",
+      "Airbnb Guest Support",
     ],
   };
 }

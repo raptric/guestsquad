@@ -12,7 +12,8 @@ import { Metrics } from "@/components/site/metrics";
 import { PricingCards } from "@/components/site/pricing-cards";
 import { CtaSection } from "@/components/site/cta-section";
 import { SERVICES } from "@/lib/site-data";
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, faqSchema } from "@/lib/seo";
+import { JsonLd } from "@/components/site/json-ld";
 
 export const metadata: Metadata = buildMetadata({
   title: "24/7 Hotel Guest Support & Reservation Services",
@@ -21,9 +22,37 @@ export const metadata: Metadata = buildMetadata({
   path: "",
 });
 
+const HOME_FAQS = [
+  {
+    q: "What does GuestSquad do?",
+    a: "GuestSquad provides 24/7 human guest operations support for hotels, boutique properties, resorts, serviced apartments, and short-term rental operators. The service covers reservation calls, guest messages, OTA inboxes, after-hours front desk support, front desk overflow, and guest communication gaps, without requiring an additional full-time hire.",
+  },
+  {
+    q: "Is GuestSquad a hotel call center?",
+    a: "No. GuestSquad is a guest operations service built specifically for hospitality, not a generic call center that also handles hotel calls. Agents are trained on hotel systems, OTA workflows, and the tone independent properties want their guests to experience.",
+  },
+  {
+    q: "Which guest channels can GuestSquad cover?",
+    a: "Phone calls, SMS, WhatsApp, email, Booking.com, Expedia, and Airbnb inboxes, and in-app messaging from supported PMS or guest-messaging platforms. Coverage is built around your existing channels, not a new system you have to adopt.",
+  },
+  {
+    q: "What types of properties use GuestSquad?",
+    a: "Independent hotels, boutique properties, resorts, serviced apartments, Airbnb hosts, Vrbo operators, and short-term rental property managers, typically from a single property up to a small portfolio.",
+  },
+  {
+    q: "Does GuestSquad replace our front desk team?",
+    a: "No. GuestSquad is designed to extend your front desk, not replace it. We handle overflow, after-hours, and the channels your on-site team does not have time to monitor, so the people you have hired can focus on the guests in front of them.",
+  },
+  {
+    q: "How quickly can GuestSquad go live?",
+    a: "Most clients are live within 5 business days of signing. Onboarding covers your rates, policies, PMS access, escalation rules, and brand voice before any agent handles a guest interaction.",
+  },
+];
+
 export default function HomePage() {
   return (
     <>
+      <JsonLd data={faqSchema(HOME_FAQS)} />
       {/* HERO */}
       <section className="border-b border-line bg-paper">
         <div className="container grid items-center gap-14 py-20 md:grid-cols-2 md:py-28">
@@ -224,6 +253,24 @@ export default function HomePage() {
           <ButtonLink href="/pricing" variant="link">
             See full pricing details →
           </ButtonLink>
+        </div>
+      </Section>
+
+      {/* FAQ */}
+      <Section>
+        <SectionHeading
+          eyebrow="Common Questions"
+          title="What hotels usually ask before getting started."
+          align="center"
+          className="mx-auto"
+        />
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {HOME_FAQS.map((item) => (
+            <div key={item.q} className="rounded-lg border border-line bg-paper p-6">
+              <h3 className="text-sm font-medium text-ink">{item.q}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-ink-soft">{item.a}</p>
+            </div>
+          ))}
         </div>
       </Section>
 

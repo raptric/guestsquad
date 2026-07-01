@@ -60,10 +60,6 @@ const FAQS = [
     q: "Do you replace our front desk staff?",
     a: "No. We cover overflow, after-hours, and the channels your team does not have time for. Your on-site team stays focused on in-house guests.",
   },
-  {
-    q: "Can we start with just one service?",
-    a: "Yes. Most clients start with after-hours coverage or OTA inbox management, then expand once they see it working.",
-  },
 ];
 
 const PRICING_FACTORS = [
@@ -94,6 +90,15 @@ export default function PricingPage() {
         title="Plans built around your property, not a generic tier."
         description="Every engagement starts with a short conversation about your volume, channels, and current gaps, then we recommend the right level of coverage."
       />
+
+      {/* Direct answer block */}
+      <div className="border-b border-line bg-surface">
+        <div className="container py-8">
+          <p className="mx-auto max-w-3xl text-sm leading-relaxed text-ink-soft">
+            GuestSquad pricing is based on your property's call and message volume, channels covered, hours of coverage, and number of properties. There is no fixed published rate because two properties with different volumes and channels need different plans. A quote is provided after a short discovery call and reflects your actual operation.
+          </p>
+        </div>
+      </div>
 
       <Section>
         <PricingCards />
@@ -136,23 +141,7 @@ export default function PricingPage() {
           {FAQS.map((item) => (
             <div key={item.q} className="rounded-lg border border-line bg-paper p-6">
               <h3 className="text-sm font-medium text-ink">{item.q}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-ink-soft">
-                {item.q === "Can we start with just one service?" ? (
-                  <>
-                    Yes. Most clients start with{" "}
-                    <Link href="/services/after-hours-support" className="text-gold-dark underline underline-offset-4 hover:text-gold">
-                      after-hours coverage
-                    </Link>{" "}
-                    or{" "}
-                    <Link href="/services/ota-inbox-management" className="text-gold-dark underline underline-offset-4 hover:text-gold">
-                      OTA inbox management
-                    </Link>
-                    , then expand once they see it working.
-                  </>
-                ) : (
-                  item.a
-                )}
-              </p>
+              <p className="mt-2 text-sm leading-relaxed text-ink-soft">{item.a}</p>
             </div>
           ))}
         </div>

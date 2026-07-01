@@ -9,6 +9,7 @@ import { Breadcrumbs } from "@/components/site/breadcrumbs";
 import { JsonLd } from "@/components/site/json-ld";
 import { SERVICES } from "@/lib/site-data";
 import { buildMetadata, breadcrumbSchema, faqSchema } from "@/lib/seo";
+import { SITE } from "@/lib/site-data";
 
 export const metadata: Metadata = buildMetadata({
   title: "Hotel Guest Operations Services",
@@ -60,6 +61,19 @@ export default function ServicesPage() {
             { name: "Services", path: "/services" },
           ]),
           faqSchema(SERVICE_FAQS),
+          {
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            name: "GuestSquad Hotel Guest Operations Services",
+            url: `${SITE.url}/services`,
+            itemListElement: SERVICES.map((s, i) => ({
+              "@type": "ListItem",
+              position: i + 1,
+              name: s.title,
+              url: `${SITE.url}/services/${s.slug}`,
+              description: s.description,
+            })),
+          },
         ]}
       />
       <Breadcrumbs items={[{ name: "Home", path: "/" }, { name: "Services", path: "/services" }]} />

@@ -22,8 +22,12 @@ export type ServiceDetailData = {
   examples?: string;
   handles?: string[];
   escalates?: string[];
+  whoItsForTitle?: string;
   whoItsFor: string[];
   notes: string;
+  faqTitle?: string;
+  relatedTitle?: string;
+  comparisonTitle?: string;
   faqs: { q: string; a: string }[];
 };
 
@@ -149,7 +153,7 @@ export function ServiceDetail({ data }: { data: ServiceDetailData }) {
       )}
 
       <Section surface={!(data.handles || data.escalates)}>
-        <SectionHeading eyebrow="Who It&apos;s For" title="Built around how your property actually operates." />
+        <SectionHeading eyebrow="Who It&apos;s For" title={data.whoItsForTitle ?? "Built around how your property actually operates."} />
         <ul className="mt-10 grid gap-4 sm:grid-cols-2">
           {data.whoItsFor.map((item) => (
             <li key={item} className="flex items-start gap-3 rounded-lg border border-line bg-paper p-5">
@@ -162,7 +166,7 @@ export function ServiceDetail({ data }: { data: ServiceDetailData }) {
       </Section>
 
       <Section surface>
-        <SectionHeading eyebrow="Questions" title="Common questions about this service." />
+        <SectionHeading eyebrow="Questions" title={data.faqTitle ?? "Common questions about this service."} />
         <div className="mt-10 grid gap-6 sm:grid-cols-2">
           {data.faqs.map((item) => (
             <div key={item.q} className="rounded-lg border border-line bg-paper p-6">
@@ -174,7 +178,7 @@ export function ServiceDetail({ data }: { data: ServiceDetailData }) {
       </Section>
 
       <Section>
-        <SectionHeading eyebrow="Explore More" title="Other coverage hotels usually pair with this." />
+        <SectionHeading eyebrow="Explore More" title={data.relatedTitle ?? "Other coverage hotels usually pair with this."} />
         <div className="mt-10 grid gap-6 sm:grid-cols-3">
           {related.map((s) => (
             <Link
@@ -196,7 +200,7 @@ export function ServiceDetail({ data }: { data: ServiceDetailData }) {
       </Section>
 
       <Section surface>
-        <SectionHeading eyebrow="Worth Reading" title="How this compares to the alternatives." />
+        <SectionHeading eyebrow="Worth Reading" title={data.comparisonTitle ?? "How this compares to the alternatives."} />
         <div className="mt-10 grid gap-6 sm:grid-cols-2">
           {RESOURCES.filter((r) => r.type === "comparison").map((r) => (
             <Link

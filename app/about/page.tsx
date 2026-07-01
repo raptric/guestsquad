@@ -56,6 +56,15 @@ export default function AboutPage() {
         description="GuestSquad exists because independent hotels and small operators were being asked to compete with brands that have round-the-clock reservations teams, without the headcount to do it."
       />
 
+      {/* Direct answer block */}
+      <div className="border-b border-line bg-surface">
+        <div className="container py-8">
+          <p className="mx-auto max-w-3xl text-sm leading-relaxed text-ink-soft">
+            GuestSquad is a human guest operations service operated by Raptric LLC, built for independent hotels, boutique properties, resorts, serviced apartments, and short-term rental operators. Every guest interaction is handled by a trained person working inside your existing systems. GuestSquad is not a software platform or AI tool. It is a dedicated guest operations team that covers the hours and channels your in-house team cannot.
+          </p>
+        </div>
+      </div>
+
       {/* Founder story */}
       <Section>
         <div className="grid gap-12 md:grid-cols-2 md:items-center">

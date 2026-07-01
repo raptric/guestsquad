@@ -35,6 +35,7 @@ export const hotelAnsweringServiceData: ServiceDetailData = {
     "Anything involving guest safety or a security concern",
     "High-value group or corporate inquiries that warrant a direct sales conversation",
   ],
+  whoItsForTitle: "Set up around your call routing and front-desk hours.",
   whoItsFor: [
     "Hotels whose front desk cannot always get to the phone",
     "Properties relying on voicemail or a phone tree after hours",
@@ -43,6 +44,9 @@ export const hotelAnsweringServiceData: ServiceDetailData = {
   ],
   notes:
     "This is a true call-answering layer. Every call reaches a hospitality-trained person, not an automated system. It pairs naturally with Reservation Support and After-Hours Support for full phone coverage.",
+  faqTitle: "Hotel answering service questions, answered.",
+  relatedTitle: "Pair call answering with after-hours and reservation support.",
+  comparisonTitle: "Hotel answering vs voicemail, IVR, and generic call centers.",
   faqs: [
     { q: "How is this different from your Reservation Support service?", a: "Reservation Support focuses on bookings, quotes, and modifications. Hotel Answering Service is the broader call-answering layer, including general questions and overflow, and the two are often used together for complete phone coverage." },
     { q: "Do you use an automated phone tree or IVR?", a: "No. Calls are answered by a trained person. Automated menus are exactly what this service is built to avoid." },
@@ -91,6 +95,7 @@ export const reservationSupportData: ServiceDetailData = {
     "Booking disputes or overbooking situations requiring your team's resolution",
     "Any inquiry that reveals a PMS error or availability conflict",
   ],
+  whoItsForTitle: "Built around your rates, room types, and booking rules.",
   whoItsFor: [
     "Hotels without 24/7 front-desk phone coverage",
     "Properties losing direct bookings to OTAs after hours",
@@ -99,6 +104,9 @@ export const reservationSupportData: ServiceDetailData = {
   ],
   notes:
     "Reservation support is delivered by people trained on your specific rates, room types, and policies, not a shared script across unrelated properties.",
+  faqTitle: "Reservation support questions, answered.",
+  relatedTitle: "Pair reservation support with call answering and after-hours coverage.",
+  comparisonTitle: "Reservation support vs unanswered inquiries and OTA dependency.",
   faqs: [
     { q: "Do your agents work inside our PMS to check live availability?", a: "Yes. Agents are briefed on your PMS or booking engine and confirm real-time availability and rates before quoting, with no guesswork and no overbooking." },
     { q: "Can you handle group or multi-room bookings?", a: "Yes. Group inquiries, multi-room requests, and rate negotiations within your approved policy are handled directly, with anything outside policy routed to your team." },
@@ -146,6 +154,7 @@ export const guestMessagingData: ServiceDetailData = {
     "Safety or security concerns that need immediate on-property response",
     "Sensitive billing or dispute situations",
   ],
+  whoItsForTitle: "Built around the channels your guests already use.",
   whoItsFor: [
     "Properties offering digital guest communication without staff to monitor it",
     "Hotels using guest messaging apps that go unanswered after hours",
@@ -154,6 +163,9 @@ export const guestMessagingData: ServiceDetailData = {
   ],
   notes:
     "Every message is logged and visible to your team, so nothing happens in your guest communication channels that you cannot see.",
+  faqTitle: "Guest messaging questions, answered.",
+  relatedTitle: "Pair messaging support with OTA inbox management and after-hours coverage.",
+  comparisonTitle: "Human guest messaging vs auto-replies and slow response times.",
   faqs: [
     { q: "Which channels do you actually cover?", a: "SMS, WhatsApp, email, and in-app messaging from your PMS or guest-messaging platform. OTA messaging (Booking.com, Expedia, Airbnb) is covered under our separate OTA Inbox Management service." },
     { q: "Can you match our brand's tone of voice?", a: "Yes. Agents are briefed on your specific tone, terminology, and any phrases you do or do not want used before handling a single message." },
@@ -200,6 +212,7 @@ export const otaInboxData: ServiceDetailData = {
     "Compensation offers or exceptions that require your approval",
     "Anything that reveals an availability conflict or PMS sync error",
   ],
+  whoItsForTitle: "Built around your OTA platforms and listing structure.",
   whoItsFor: [
     "Hotels relying heavily on Booking.com, Expedia, or Airbnb for bookings",
     "Properties with multiple OTA inboxes and no dedicated owner",
@@ -208,6 +221,9 @@ export const otaInboxData: ServiceDetailData = {
   ],
   notes:
     "OTA response time is one of the few factors hotels can directly control that affects ranking and conversion, so we treat it accordingly.",
+  faqTitle: "OTA inbox management questions, answered.",
+  relatedTitle: "Pair OTA coverage with reservation support and guest messaging.",
+  comparisonTitle: "OTA inbox management vs auto-replies and once-a-day checking.",
   faqs: [
     { q: "Which OTA platforms do you cover?", a: "Booking.com, Expedia, and Airbnb messaging are covered as standard. Other platforms can be added if you use them." },
     { q: "Can you answer pre-booking questions, or just post-booking?", a: "Both. Pre-booking questions about rates, availability, and policies are answered fast enough to win the booking, not just service it after the fact." },
@@ -255,6 +271,7 @@ export const afterHoursData: ServiceDetailData = {
     "Property damage requiring immediate on-site response",
     "Complaints or compensation requests that cannot be resolved overnight",
   ],
+  whoItsForTitle: "Built around your hours, escalation rules, and on-call contacts.",
   whoItsFor: [
     "Properties without a 24-hour front desk",
     "Hotels currently relying on a single overnight staff member",
@@ -263,6 +280,9 @@ export const afterHoursData: ServiceDetailData = {
   ],
   notes:
     "After-hours coverage is built around your existing escalation preferences. We handle what we can, and route the rest to the right person, every time.",
+  faqTitle: "After-hours support questions, answered.",
+  relatedTitle: "Pair after-hours coverage with call answering and OTA inbox management.",
+  comparisonTitle: "After-hours support vs hiring overnight staff or going unanswered.",
   faqs: [
     { q: "What hours do you actually cover?", a: "Whatever gap you need filled: overnight only, weekends only, or full 24/7 coverage. Most clients start with overnight and weekend gaps before expanding." },
     { q: "What counts as a genuine emergency, and how is it handled?", a: "Anything involving guest safety, security, or property damage is routed to your on-call contact immediately, following the escalation protocol we agree on during setup." },
@@ -309,6 +329,7 @@ export const backOfficeData: ServiceDetailData = {
     "Systemic PMS errors affecting multiple folios",
     "Any finding that requires your controller or ownership group to take direct action",
   ],
+  whoItsForTitle: "Built around your PMS, OTA extranets, and finance workflow.",
   whoItsFor: [
     "Properties relying on a single person to handle night audit and reconciliation",
     "Multi-property groups reconciling across several OTAs and PMS instances",
@@ -317,6 +338,9 @@ export const backOfficeData: ServiceDetailData = {
   ],
   notes:
     "Back-office support runs alongside your existing accounting team and PMS. We do not replace your controller; we make sure the daily reconciliation work that protects your revenue actually gets done every day.",
+  faqTitle: "Back office operations questions, answered.",
+  relatedTitle: "Pair back office coverage with reservation support and OTA inbox management.",
+  comparisonTitle: "Back office outsourcing vs in-house reconciliation gaps.",
   faqs: [
     { q: "Do you replace our accountant or controller?", a: "No. We handle the daily reconciliation legwork: night audit, OTA payout matching, and billing exceptions. Everything is reported into your existing finance team or controller." },
     { q: "What exactly gets reconciled against what?", a: "OTA payout reports from Booking.com, Expedia, and Airbnb are matched against your PMS folios and processor settlements to flag missing, short, or duplicate payments." },
@@ -364,6 +388,7 @@ export const airbnbSupportData: ServiceDetailData = {
     "Refund requests, dispute resolution, or Airbnb Resolution Centre cases",
     "Situations where the property owner needs to communicate directly with the guest",
   ],
+  whoItsForTitle: "Built around your listings, house rules, and access setup.",
   whoItsFor: [
     "Hosts managing multiple Airbnb or Vrbo listings",
     "Serviced apartment operators without on-site staff",
@@ -372,6 +397,9 @@ export const airbnbSupportData: ServiceDetailData = {
   ],
   notes:
     "Built for the realities of remote hosting: no front desk, no on-site team, but guests who still expect a fast, human response.",
+  faqTitle: "Airbnb guest support questions, answered.",
+  relatedTitle: "Pair Airbnb support with vacation rental answering and OTA inbox management.",
+  comparisonTitle: "Airbnb guest support vs responding to guests personally at 2am.",
   faqs: [
     { q: "How many listings can you cover?", a: "As many as you manage. Pricing scales with listing count and message volume, not a flat per-host fee." },
     { q: "What if a guest needs something only I can handle, like a maintenance visit?", a: "It is escalated to you immediately with full context, while the guest is kept informed in the meantime so they are not left waiting without an update." },
@@ -418,6 +446,7 @@ export const vacationRentalAnsweringData: ServiceDetailData = {
     "Refund or compensation requests requiring owner decision",
     "Situations where the owner or property manager must speak directly with the guest",
   ],
+  whoItsForTitle: "Built around your listings, call routing, and escalation contacts.",
   whoItsFor: [
     "Hosts and co-hosts managing multiple listings",
     "STR and serviced-apartment operators without on-site staff",
@@ -426,6 +455,9 @@ export const vacationRentalAnsweringData: ServiceDetailData = {
   ],
   notes:
     "Built for the realities of remote hosting: no front desk, no on-site team, but guests who still expect a fast, human answer when they call or message.",
+  faqTitle: "Vacation rental answering questions, answered.",
+  relatedTitle: "Pair vacation rental answering with Airbnb guest support and OTA coverage.",
+  comparisonTitle: "Vacation rental answering vs being the 24/7 on-call line yourself.",
   faqs: [
     { q: "Do you answer phone calls, or just Airbnb/Vrbo messages?", a: "Both. This service covers live phone answering as well as Airbnb, Vrbo, and direct-booking messaging." },
     { q: "How many listings or units can this cover?", a: "As many as you manage. Pricing scales with listing count and volume, not a flat per-host fee." },

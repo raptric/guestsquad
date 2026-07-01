@@ -95,7 +95,7 @@ export default function PricingPage() {
       <div className="border-b border-line bg-surface">
         <div className="container py-8">
           <p className="mx-auto max-w-3xl text-sm leading-relaxed text-ink-soft">
-            GuestSquad pricing is based on your property's call and message volume, channels covered, hours of coverage, and number of properties. There is no fixed published rate because two properties with different volumes and channels need different plans. A quote is provided after a short discovery call and reflects your actual operation.
+            GuestSquad pricing is based on your property&rsquo;s call and message volume, channels covered, hours of coverage, and number of properties. There is no fixed published rate because two properties with different volumes and channels need different plans. A quote is provided after a short discovery call and reflects your actual operation.
           </p>
         </div>
       </div>

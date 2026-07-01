@@ -105,7 +105,7 @@ export default function AboutPage() {
             GuestSquad is a focused hospitality operations service built around the guest communication gaps that independent hotels, serviced apartments, resorts, and short-term rental operators face every day: missed calls, unanswered guest messages, slow OTA replies, after-hours gaps, and front desk overload.
           </p>
           <p className="mt-4 text-sm leading-relaxed text-ink-soft">
-            Every service decision starts with how hospitality properties actually operate. The team is built exclusively around guest-facing operations, not software delivery or generic outsourcing volume.
+            Every service decision starts with how hospitality properties actually operate. The team is built exclusively around guest-facing operations.
           </p>
         </div>
       </Section>

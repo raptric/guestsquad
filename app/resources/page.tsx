@@ -37,7 +37,7 @@ export default function ResourcesPage() {
       <div className="border-b border-line bg-surface">
         <div className="container py-8">
           <p className="mx-auto max-w-3xl text-sm leading-relaxed text-ink-soft">
-            These guides compare hotel answering services against the most common alternatives — AI voice agents and generic call centers — and cover the operational questions property teams ask most before choosing a guest support model. Each guide is written to help you evaluate options, not to push a specific product.
+            These guides compare hotel answering services against the most common alternatives, including AI voice agents and generic call centers, and cover the operational questions property teams ask most before choosing a guest support model. Each guide is written to help you evaluate options, not to push a specific product.
           </p>
         </div>
       </div>

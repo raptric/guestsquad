@@ -87,7 +87,7 @@ export default function ContactPage() {
               </p>
               <div className="mb-5 rounded-lg border border-line bg-surface px-6 py-4">
                 <p className="text-sm leading-relaxed text-ink-soft">
-                  GuestSquad is best suited for properties that receive regular call or message volume your team cannot always cover — independent hotels, boutique properties, resorts, serviced apartments, and short-term rental operators. If that sounds like your property,{" "}
+                  GuestSquad is best suited for properties that receive regular call or message volume your team cannot always cover: independent hotels, boutique properties, resorts, serviced apartments, and short-term rental operators. If that sounds like your property,{" "}
                   <Link href="/pricing" className="text-gold-dark underline underline-offset-4 hover:text-gold">
                     view pricing
                   </Link>{" "}

@@ -12,14 +12,14 @@ import { buildMetadata, breadcrumbSchema, faqSchema } from "@/lib/seo";
 export const metadata: Metadata = buildMetadata({
   title: "About GuestSquad | Hospitality Guest Operations Company",
   description:
-    "GuestSquad provides human guest operations support for hotels, boutique properties, resorts, serviced apartments, and short-term rental operators. Operated by Raptric LLC.",
+    "GuestSquad provides human guest operations support for hotels, boutique properties, resorts, serviced apartments, and short-term rental operators. Every interaction is handled by a trained person, not a bot.",
   path: "/about",
 });
 
 const ABOUT_FAQS = [
   {
     q: "Who operates GuestSquad?",
-    a: "GuestSquad is a hospitality guest operations service operated by Raptric LLC. The team is built exclusively for guest-facing operations: reservation calls, messaging, OTA inboxes, after-hours coverage, and back-office support for hotels, boutique properties, and short-term rental operators.",
+    a: "GuestSquad is a hospitality guest operations service with a team built exclusively for guest-facing operations: reservation calls, messaging, OTA inboxes, after-hours coverage, and back-office support for hotels, boutique properties, and short-term rental operators.",
   },
   {
     q: "How are GuestSquad agents trained?",
@@ -60,7 +60,7 @@ export default function AboutPage() {
       <div className="border-b border-line bg-surface">
         <div className="container py-8">
           <p className="mx-auto max-w-3xl text-sm leading-relaxed text-ink-soft">
-            GuestSquad is a human guest operations support service for hotels, boutique properties, resorts, serviced apartments, and short-term rental operators. Operated by Raptric LLC, GuestSquad helps properties cover reservation calls, guest messages, OTA inboxes, after-hours support, front desk overflow, and back-office guest operations using trained agents, property-specific briefing, escalation rules, and quality review.
+            GuestSquad is a human guest operations support service for hotels, boutique properties, resorts, serviced apartments, and short-term rental operators. The service covers reservation calls, guest messages, OTA inboxes, after-hours support, front desk overflow, and back-office guest operations using trained agents, property-specific briefing, escalation rules, and quality review.
           </p>
         </div>
       </div>
@@ -100,12 +100,12 @@ export default function AboutPage() {
       {/* Founder-led block */}
       <Section surface>
         <div className="mx-auto max-w-2xl text-center">
-          <SectionHeading eyebrow="How We Operate" title="Founder-led, process-driven." align="center" className="mx-auto" />
+          <SectionHeading eyebrow="How We Operate" title="A dedicated team, built around your operation." align="center" className="mx-auto" />
           <p className="mt-6 text-sm leading-relaxed text-ink-soft">
-            GuestSquad is operated by Raptric LLC and built as a focused hospitality operations brand, not a generic outsourcing desk. The service model is designed around the guest communication gaps that independent hotels, serviced apartments, resorts, and short-term rental operators face every day: missed calls, unanswered guest messages, slow OTA replies, after-hours gaps, and front desk overload.
+            GuestSquad is a focused hospitality operations service built around the guest communication gaps that independent hotels, serviced apartments, resorts, and short-term rental operators face every day: missed calls, unanswered guest messages, slow OTA replies, after-hours gaps, and front desk overload.
           </p>
           <p className="mt-4 text-sm leading-relaxed text-ink-soft">
-            Every service decision starts with how hospitality properties actually operate, not with a software product roadmap or a call-center volume model.
+            Every service decision starts with how hospitality properties actually operate. The team is built exclusively around guest-facing operations, not software delivery or generic outsourcing volume.
           </p>
         </div>
       </Section>

@@ -33,6 +33,15 @@ export default function ResourcesPage() {
         description="Straight comparisons between human answering services, AI voice agents, and generic call centers, plus practical guides for running guest operations, written to help you decide, not just to sell."
       />
 
+      {/* Hub intro */}
+      <div className="border-b border-line bg-surface">
+        <div className="container py-8">
+          <p className="mx-auto max-w-3xl text-sm leading-relaxed text-ink-soft">
+            These guides compare hotel answering services against the most common alternatives — AI voice agents and generic call centers — and cover the operational questions property teams ask most before choosing a guest support model. Each guide is written to help you evaluate options, not to push a specific product.
+          </p>
+        </div>
+      </div>
+
       <Section>
         <SectionHeading eyebrow="Comparisons" title="How GuestSquad stacks up against the alternatives." />
         <div className="mt-10 grid gap-6 sm:grid-cols-2">

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { ButtonLink } from "@/components/site/button-link";
 import { CalendlyPopupButton } from "@/components/site/calendly-popup-button";
 import { Section, SectionHeading } from "@/components/site/section";
@@ -101,7 +102,11 @@ export default function HomePage() {
       <div className="border-b border-line bg-surface">
         <div className="container py-8">
           <p className="mx-auto max-w-3xl text-sm leading-relaxed text-ink-soft">
-            GuestSquad provides 24/7 human guest operations support for hotels, boutique properties, resorts, serviced apartments, and short-term rental operators. The service covers reservation calls, guest messages, OTA inboxes (Booking.com, Expedia, Airbnb), after-hours front desk coverage, and guest communication gaps, without requiring an additional full-time hire or a change to your existing systems.
+            GuestSquad provides 24/7 human guest operations support for hotels, boutique properties, resorts, serviced apartments, and short-term rental operators. The service covers reservation calls, guest messages, OTA inboxes (Booking.com, Expedia, Airbnb), after-hours front desk coverage, and guest communication gaps, without requiring an additional full-time hire or a change to your existing systems.{" "}
+            <Link href="/about" className="text-gold-dark underline underline-offset-4 hover:text-gold">
+              Learn about how GuestSquad operates
+            </Link>
+            .
           </p>
         </div>
       </div>

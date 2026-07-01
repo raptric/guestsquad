@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Linkedin } from "lucide-react";
 import { SERVICES, SITE } from "@/lib/site-data";
 import { CalendlyPopupButton } from "@/components/site/calendly-popup-button";
 
@@ -17,6 +18,17 @@ export function Footer() {
               24/7 guest operations support for hotels, boutique properties,
               resorts, serviced apartments, and Airbnb operators.
             </p>
+            <div className="mt-4">
+              <a
+                href="https://www.linkedin.com/company/guest-squad/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GuestSquad on LinkedIn"
+                className="inline-flex items-center justify-center rounded-md border border-line p-2 text-ink-muted hover:border-gold-dark hover:text-gold-dark transition-colors"
+              >
+                <Linkedin className="h-4 w-4" />
+              </a>
+            </div>
           </div>
 
           <div>

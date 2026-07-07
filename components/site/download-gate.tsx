@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { Download, X, Loader2 } from "lucide-react";
+import { CalendlyPopupButton } from "@/components/site/calendly-popup-button";
 
 interface DownloadGateProps {
   asset: string;
@@ -146,9 +147,19 @@ export function DownloadGate({ asset, pdfHref, ctaLabel = "Download PDF", block,
                   >
                     Click here if the download did not start
                   </a>
+                  <div className="mt-6 border-t border-line pt-5 text-center">
+                    <p className="text-xs text-ink-soft">
+                      If this exposed a real coverage gap, book a review and we&rsquo;ll help you prioritize what to fix first.
+                    </p>
+                    <div className="mt-3">
+                      <CalendlyPopupButton variant="gold" size="sm">
+                        Book a Coverage Review
+                      </CalendlyPopupButton>
+                    </div>
+                  </div>
                   <button
                     onClick={closeModal}
-                    className="mt-5 text-xs text-ink-muted underline underline-offset-2 hover:text-ink"
+                    className="mt-4 text-xs text-ink-muted underline underline-offset-2 hover:text-ink"
                   >
                     Close
                   </button>

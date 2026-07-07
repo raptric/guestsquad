@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { DownloadGate } from "@/components/site/download-gate";
 import { buildMetadata } from "@/lib/seo";
 import { MissedBookingCalculator } from "@/components/site/missed-booking-calculator";
 import { PageHero } from "@/components/site/page-hero";
@@ -131,9 +132,12 @@ export default function CalculatorPage() {
           </p>
           <p className="mt-4 text-sm leading-relaxed text-ink-soft">
             If you want to see where your specific gaps are before requesting a quote, the{" "}
-            <Link href="/resources/coverage-gap-assessment" className="text-gold-dark underline underline-offset-4 hover:text-gold">
-              Coverage Gap Assessment
-            </Link>{" "}
+            <DownloadGate
+              asset="coverage-gap-assessment"
+              pdfHref="/downloads/coverage-gap-assessment.pdf"
+              ctaLabel="Coverage Gap Assessment"
+              inline
+            />{" "}
             walks through your hours, channels, and escalation readiness and tells you which service to start with.
           </p>
         </div>

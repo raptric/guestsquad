@@ -14,12 +14,7 @@ const PRIORITY: Record<string, number> = {
 };
 
 const ASSET_ROUTES = [
-  "/resources/sample-weekly-report",
   "/resources/missed-booking-calculator",
-  "/resources/after-hours-checklist",
-  "/resources/guest-messaging-sop",
-  "/resources/ota-inbox-response-checklist",
-  "/resources/coverage-gap-assessment",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

@@ -8,6 +8,8 @@ interface DownloadGateProps {
   ctaLabel?: string;
   /** Render as a full-width block button (for cards) */
   block?: boolean;
+  /** Render as an inline text link (for use inside paragraphs) */
+  inline?: boolean;
 }
 
 const ASSET_TITLES: Record<string, string> = {
@@ -27,7 +29,7 @@ const PROPERTY_TYPES = [
   "Other",
 ];
 
-export function DownloadGate({ asset, pdfHref, ctaLabel = "Download PDF", block }: DownloadGateProps) {
+export function DownloadGate({ asset, pdfHref, ctaLabel = "Download PDF", block, inline }: DownloadGateProps) {
   const [open, setOpen] = useState(false);
   const [email, setEmail] = useState("");
   const [propertyType, setPropertyType] = useState("");
@@ -86,12 +88,14 @@ export function DownloadGate({ asset, pdfHref, ctaLabel = "Download PDF", block 
       <button
         onClick={openModal}
         className={
-          block
+          inline
+            ? "text-gold-dark underline underline-offset-4 hover:text-gold"
+            : block
             ? "inline-flex w-full items-center justify-center gap-2 rounded-lg bg-ink px-5 py-3 text-sm font-medium text-paper transition-colors hover:bg-ink/90"
             : "inline-flex items-center gap-2 rounded-lg border border-line bg-paper px-5 py-2.5 text-sm font-medium text-ink transition-colors hover:border-gold-dark hover:text-gold-dark"
         }
       >
-        <Download className="h-4 w-4" />
+        {!inline && <Download className="h-4 w-4" />}
         {ctaLabel}
       </button>
 

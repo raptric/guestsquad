@@ -7,6 +7,7 @@ export const metadata: Metadata = buildMetadata({
   description:
     "A printable SOP template for hotel guest messaging: response time targets, brand voice guidelines, escalation matrix, and scenario handling guide.",
   path: "/resources/guest-messaging-sop",
+  robots: { index: false, follow: false },
 });
 
 function FillLine({ label, wide }: { label: string; wide?: boolean }) {

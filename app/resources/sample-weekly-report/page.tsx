@@ -7,6 +7,7 @@ export const metadata: Metadata = buildMetadata({
   description:
     "See exactly what a GuestSquad weekly report looks like: calls handled, messages, OTA replies, escalations, response times, and recommendations.",
   path: "/resources/sample-weekly-report",
+  robots: { index: false, follow: false },
 });
 
 const CALL_DAYS = [

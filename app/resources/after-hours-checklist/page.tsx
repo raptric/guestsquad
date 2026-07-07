@@ -7,6 +7,7 @@ export const metadata: Metadata = buildMetadata({
   description:
     "A practical checklist for auditing your hotel or STR property's after-hours coverage gaps, from overnight calls to emergency escalation and morning handoff.",
   path: "/resources/after-hours-checklist",
+  robots: { index: false, follow: false },
 });
 
 function CheckItem({ children }: { children: React.ReactNode }) {

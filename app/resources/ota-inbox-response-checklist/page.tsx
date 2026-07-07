@@ -7,7 +7,7 @@ export const metadata: Metadata = buildMetadata({
   description:
     "A practical checklist for managing Booking.com, Expedia, and Airbnb message inboxes: response standards, message categories, escalation rules, and review protocol.",
   path: "/resources/ota-inbox-response-checklist",
-  robots: { index: false, follow: false },
+  noindex: true,
 });
 
 function CheckItem({ children, indent }: { children: React.ReactNode; indent?: boolean }) {

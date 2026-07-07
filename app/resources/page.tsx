@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Calculator, FileText, ClipboardList, BarChart2 } from "lucide-react";
 import { PageHero } from "@/components/site/page-hero";
 import { Section, SectionHeading } from "@/components/site/section";
 import { ServiceCard } from "@/components/site/service-card";
@@ -8,6 +9,51 @@ import { JsonLd } from "@/components/site/json-ld";
 import { CtaSection } from "@/components/site/cta-section";
 import { buildMetadata, breadcrumbSchema } from "@/lib/seo";
 import { RESOURCES } from "@/lib/resource-content";
+
+const TOOLS = [
+  {
+    href: "/resources/sample-weekly-report",
+    icon: BarChart2,
+    badge: "Sample Report",
+    title: "Sample Weekly Guest Operations Report",
+    description: "See exactly what a GuestSquad weekly report looks like: calls handled, messages, OTA replies, escalations, response times, and weekly recommendations.",
+  },
+  {
+    href: "/resources/missed-booking-calculator",
+    icon: Calculator,
+    badge: "Calculator",
+    title: "Missed Booking Revenue Calculator",
+    description: "Estimate how much revenue unanswered reservation calls are costing your property each month. Adjust volume, booking value, and conversion rate.",
+  },
+  {
+    href: "/resources/after-hours-checklist",
+    icon: ClipboardList,
+    badge: "Checklist",
+    title: "After-Hours Guest Coverage Checklist",
+    description: "Audit your overnight and weekend coverage gaps: call handling, emergency escalation, night audit coverage, and morning handoff process.",
+  },
+  {
+    href: "/resources/guest-messaging-sop",
+    icon: FileText,
+    badge: "SOP Template",
+    title: "Hotel Guest Messaging SOP Template",
+    description: "A printable SOP template covering channels, response time targets, brand voice, scenario handling, escalation matrix, and logging process.",
+  },
+  {
+    href: "/resources/ota-inbox-response-checklist",
+    icon: ClipboardList,
+    badge: "Checklist",
+    title: "OTA Inbox Response Checklist",
+    description: "Standards for managing Booking.com, Expedia, and Airbnb inboxes: pre-booking, post-booking, complaints, review responses, and escalation triggers.",
+  },
+  {
+    href: "/resources/coverage-gap-assessment",
+    icon: ClipboardList,
+    badge: "Self-Assessment",
+    title: "Guest Coverage Gap Assessment",
+    description: "Identify uncovered hours, unmanned channels, and escalation gaps across your property. Includes a service recommendation guide based on your answers.",
+  },
+];
 
 export const metadata: Metadata = buildMetadata({
   title: "Hotel Answering Service Guides & Comparisons",
@@ -42,7 +88,31 @@ export default function ResourcesPage() {
         </div>
       </div>
 
+      {/* Tools and assets */}
       <Section>
+        <SectionHeading eyebrow="Tools and Assets" title="Checklists, templates, and tools for hospitality operators." />
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {TOOLS.map((tool) => {
+            const Icon = tool.icon;
+            return (
+              <Link
+                key={tool.href}
+                href={tool.href}
+                className="group flex flex-col rounded-lg border border-line bg-paper p-6 transition-colors hover:border-gold-dark"
+              >
+                <div className="flex items-center justify-between">
+                  <Icon className="h-5 w-5 text-gold-dark" />
+                  <span className="rounded bg-surface px-2.5 py-1 text-xs font-medium text-ink-muted">{tool.badge}</span>
+                </div>
+                <h3 className="mt-4 text-sm font-medium text-ink group-hover:text-gold-dark transition-colors">{tool.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-ink-soft">{tool.description}</p>
+              </Link>
+            );
+          })}
+        </div>
+      </Section>
+
+      <Section surface>
         <SectionHeading eyebrow="Comparisons" title="How GuestSquad stacks up against the alternatives." />
         <div className="mt-10 grid gap-6 sm:grid-cols-2">
           {comparisons.map((r) => (

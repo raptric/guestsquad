@@ -74,9 +74,9 @@ export default function RootLayout({
       </head>
       <body className="flex min-h-screen flex-col font-sans">
         <JsonLd data={[organizationSchema(), websiteSchema()]} />
-        <Nav />
+        <div className="no-print"><Nav /></div>
         <main className="flex-1">{children}</main>
-        <Footer />
+        <div className="no-print"><Footer /></div>
       </body>
     </html>
   );

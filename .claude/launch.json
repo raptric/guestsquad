@@ -1,0 +1,13 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "GuestSquad Dev",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["node_modules/next/dist/bin/next", "dev"],
+      "cwd": "E:\\Vibe Coding Projects\\HotelBPO\\new website",
+      "port": 3000,
+      "autoPort": true
+    }
+  ]
+}

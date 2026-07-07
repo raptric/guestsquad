@@ -65,7 +65,7 @@ export default function ContactPage() {
               Let&rsquo;s talk about your property.
             </h1>
             <p className="mt-5 text-lg leading-relaxed text-ink-soft">
-              Book a demo directly in the calendar, or fill in the form and we&rsquo;ll
+              Book a coverage review directly in the calendar, or fill in the form and we&rsquo;ll
               reach out within one business day.
             </p>
           </div>

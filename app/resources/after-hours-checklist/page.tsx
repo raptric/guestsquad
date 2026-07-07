@@ -154,7 +154,7 @@ export default function AfterHoursChecklistPage() {
 
       <div className="mt-10 rounded-lg border border-line bg-surface p-6 text-center">
         <p className="text-sm font-medium text-ink">Want GuestSquad to cover your after-hours gaps?</p>
-        <p className="mt-1 text-xs text-ink-soft">Book a demo at guestsquad.com/contact or visit guestsquad.com/services/after-hours-support</p>
+        <p className="mt-1 text-xs text-ink-soft">Book a coverage review at guestsquad.com/contact or visit guestsquad.com/services/after-hours-support</p>
       </div>
     </PrintLayout>
   );

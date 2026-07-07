@@ -389,7 +389,7 @@ export default function AboutPage() {
 
       <CtaSection
         title="See Where GuestSquad Fits Into Your Operation"
-        description="Book a short demo and we will map your current guest communication gaps, the channels you need covered, and the escalation rules your team would keep control of."
+        description="Book a coverage review and we will map your current guest communication gaps, the channels you need covered, and the escalation rules your team would keep control of."
       />
     </>
   );

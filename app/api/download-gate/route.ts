@@ -78,7 +78,7 @@ export async function POST(req: Request) {
               </p>
               <p style="margin-top:24px;font-size:13px;color:#666">
                 If you have questions about how GuestSquad can cover the gaps your property has,
-                <a href="https://guestsquad.com/contact" style="color:#9C7E33">book a 15-minute coverage review</a>.
+                <a href="https://guestsquad.com/contact" style="color:#9C7E33">book a coverage review</a>.
               </p>
               <p style="margin-top:32px;font-size:12px;color:#aaa">GuestSquad &middot; guestsquad.com</p>
             </div>

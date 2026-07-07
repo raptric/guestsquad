@@ -5,7 +5,7 @@ export function PageHero({
   eyebrow,
   title,
   description,
-  primaryCta = "Book a 15-Minute Demo",
+  primaryCta = "Book a Coverage Review",
   primaryHref = "/contact",
   secondaryCta,
   secondaryHref,

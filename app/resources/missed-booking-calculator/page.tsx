@@ -157,7 +157,7 @@ export default function CalculatorPage() {
 
       <CtaSection
         title="Ready to stop leaving bookings on the table?"
-        description="Book a short demo and we will walk through your actual call volume, coverage gaps, and what a plan would cost."
+        description="Book a coverage review and we will walk through your actual call volume, coverage gaps, and what a plan would cost."
       />
     </>
   );

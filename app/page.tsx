@@ -73,7 +73,7 @@ export default function HomePage() {
             </p>
             <div className="mt-9 flex flex-col gap-4 sm:flex-row">
               <CalendlyPopupButton variant="gold" size="lg">
-                Book a 15-Minute Demo
+                Book a Coverage Review
               </CalendlyPopupButton>
               <ButtonLink href="/services" variant="outline" size="lg">
                 See Services

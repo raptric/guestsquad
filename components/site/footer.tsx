@@ -73,7 +73,7 @@ export function Footer() {
               <li className="leading-relaxed">40 Corbin Ave<br />Bay Shore, NY 11706</li>
               <li>
                 <CalendlyPopupButton variant="link" size="sm" className="hover:text-ink p-0 h-auto">
-                  Book a 15-min demo →
+                  Book a Coverage Review →
                 </CalendlyPopupButton>
               </li>
             </ul>

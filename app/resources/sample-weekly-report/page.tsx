@@ -277,7 +277,7 @@ export default function SampleWeeklyReportPage() {
       {/* CTA */}
       <div className="mt-10 rounded-lg border border-line bg-surface p-6 text-center">
         <p className="text-sm font-medium text-ink">Ready to receive a report like this for your property?</p>
-        <p className="mt-1 text-xs text-ink-soft">Book a 15-minute demo at guestsquad.com/contact</p>
+        <p className="mt-1 text-xs text-ink-soft">Book a coverage review at guestsquad.com/contact</p>
       </div>
     </PrintLayout>
   );

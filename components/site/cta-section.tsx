@@ -3,7 +3,7 @@ import { CalendlyPopupButton } from "@/components/site/calendly-popup-button";
 
 export function CtaSection({
   title = "Stop losing bookings to silence.",
-  description = "Book a 15-minute demo and see exactly how GuestSquad would cover your reservations, messaging, and after-hours calls.",
+  description = "Book a coverage review and see exactly how GuestSquad would cover your reservations, messaging, and after-hours calls.",
 }: {
   title?: string;
   description?: string;
@@ -19,7 +19,7 @@ export function CtaSection({
         </p>
         <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <CalendlyPopupButton variant="gold" size="lg">
-            Book a 15-Minute Demo
+            Book a Coverage Review
           </CalendlyPopupButton>
           <ButtonLink
             href="/pricing"

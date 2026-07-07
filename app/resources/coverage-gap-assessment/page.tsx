@@ -217,7 +217,7 @@ export default function CoverageGapAssessmentPage() {
 
       <div className="mt-10 rounded-lg border border-line bg-surface p-6 text-center">
         <p className="text-sm font-medium text-ink">Ready to close the gaps you found?</p>
-        <p className="mt-1 text-xs text-ink-soft">Book a 15-minute coverage review at guestsquad.com/contact</p>
+        <p className="mt-1 text-xs text-ink-soft">Book a coverage review at guestsquad.com/contact</p>
       </div>
     </PrintLayout>
   );

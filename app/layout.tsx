@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Nav } from "@/components/site/nav";
 import { Footer } from "@/components/site/footer";
+import { CookieConsent } from "@/components/site/cookie-consent";
 import { JsonLd } from "@/components/site/json-ld";
 import { SITE } from "@/lib/site-data";
 import { organizationSchema, websiteSchema } from "@/lib/seo";
@@ -77,6 +78,7 @@ export default function RootLayout({
         <div className="no-print"><Nav /></div>
         <main className="flex-1">{children}</main>
         <div className="no-print"><Footer /></div>
+        <CookieConsent />
       </body>
     </html>
   );

@@ -12,7 +12,7 @@ const ASSET_LABELS: Record<string, string> = {
 export async function POST(req: Request) {
   try {
     const body = await req.json();
-    const { email, propertyType, asset, website } = body;
+    const { email, propertyType, asset, website, source_page, referrer, utm_source, utm_medium, utm_campaign } = body;
 
     // Honeypot — bots fill this, real users don't
     if (website) return NextResponse.json({ ok: true });
@@ -50,7 +50,12 @@ export async function POST(req: Request) {
           <table style="width:100%;border-collapse:collapse;margin-top:20px">
             <tr><td style="padding:10px 0;border-bottom:1px solid #eee;font-weight:600;width:180px">Asset</td><td style="padding:10px 0;border-bottom:1px solid #eee">${assetLabel}</td></tr>
             <tr><td style="padding:10px 0;border-bottom:1px solid #eee;font-weight:600">Email</td><td style="padding:10px 0;border-bottom:1px solid #eee"><a href="mailto:${email}">${email}</a></td></tr>
-            <tr><td style="padding:10px 0;font-weight:600">Property Type</td><td style="padding:10px 0">${propertyType || "—"}</td></tr>
+            <tr><td style="padding:10px 0;border-bottom:1px solid #eee;font-weight:600">Property Type</td><td style="padding:10px 0;border-bottom:1px solid #eee">${propertyType || "—"}</td></tr>
+            <tr><td style="padding:10px 0;border-bottom:1px solid #eee;font-weight:600;font-size:12px;color:#555">Source page</td><td style="padding:10px 0;border-bottom:1px solid #eee;font-size:12px;color:#555">${source_page || "—"}</td></tr>
+            <tr><td style="padding:10px 0;border-bottom:1px solid #eee;font-weight:600;font-size:12px;color:#555">Referrer</td><td style="padding:10px 0;border-bottom:1px solid #eee;font-size:12px;color:#555">${referrer || "—"}</td></tr>
+            <tr><td style="padding:10px 0;border-bottom:1px solid #eee;font-weight:600;font-size:12px;color:#555">utm_source</td><td style="padding:10px 0;border-bottom:1px solid #eee;font-size:12px;color:#555">${utm_source || "—"}</td></tr>
+            <tr><td style="padding:10px 0;border-bottom:1px solid #eee;font-weight:600;font-size:12px;color:#555">utm_medium</td><td style="padding:10px 0;border-bottom:1px solid #eee;font-size:12px;color:#555">${utm_medium || "—"}</td></tr>
+            <tr><td style="padding:10px 0;font-weight:600;font-size:12px;color:#555">utm_campaign</td><td style="padding:10px 0;font-size:12px;color:#555">${utm_campaign || "—"}</td></tr>
           </table>
           <p style="margin-top:32px;font-size:12px;color:#888">Sent from guestsquad.com asset download gate</p>
         </div>

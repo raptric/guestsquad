@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -11,10 +11,36 @@ import {
   PROPERTIES_COUNT_OPTIONS,
 } from "@/lib/site-data";
 
+function getUtmParam(search: string, key: string): string {
+  return new URLSearchParams(search).get(key) ?? "";
+}
+
 export function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const [tracking, setTracking] = useState({
+    source_page: "",
+    referrer: "",
+    utm_source: "",
+    utm_medium: "",
+    utm_campaign: "",
+    utm_term: "",
+    utm_content: "",
+  });
+
+  useEffect(() => {
+    const search = window.location.search;
+    setTracking({
+      source_page: window.location.pathname,
+      referrer: document.referrer,
+      utm_source: getUtmParam(search, "utm_source"),
+      utm_medium: getUtmParam(search, "utm_medium"),
+      utm_campaign: getUtmParam(search, "utm_campaign"),
+      utm_term: getUtmParam(search, "utm_term"),
+      utm_content: getUtmParam(search, "utm_content"),
+    });
+  }, []);
 
   if (submitted) {
     return (
@@ -27,7 +53,7 @@ export function ContactForm() {
         <h3 className="text-xl font-medium text-ink">Message received.</h3>
         <p className="mt-3 text-sm leading-relaxed text-ink-soft">
           We&rsquo;ll review your details and follow up within one business day.
-          Need a faster answer? Book a 30-minute demo directly on the calendar.
+          Need a faster answer? Book a coverage review directly on the calendar.
         </p>
       </div>
     );
@@ -47,6 +73,7 @@ export function ContactForm() {
       propertyType: (form.elements.namedItem("propertyType") as HTMLSelectElement).value,
       message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
       website: (form.elements.namedItem("website") as HTMLInputElement).value,
+      ...tracking,
     };
 
     try {

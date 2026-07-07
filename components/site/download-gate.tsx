@@ -36,6 +36,13 @@ export function DownloadGate({ asset, pdfHref, ctaLabel = "Download PDF", block,
   const [propertyType, setPropertyType] = useState("");
   const [website, setWebsite] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "done" | "error">("idle");
+  const [tracking, setTracking] = useState({ source_page: "", referrer: "", utm_source: "", utm_medium: "", utm_campaign: "" });
+
+  useEffect(() => {
+    const s = window.location.search;
+    const p = (k: string) => new URLSearchParams(s).get(k) ?? "";
+    setTracking({ source_page: window.location.pathname, referrer: document.referrer, utm_source: p("utm_source"), utm_medium: p("utm_medium"), utm_campaign: p("utm_campaign") });
+  }, []);
 
   // Lock body scroll while modal is open
   useEffect(() => {
@@ -64,7 +71,7 @@ export function DownloadGate({ asset, pdfHref, ctaLabel = "Download PDF", block,
       const res = await fetch("/api/download-gate", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, propertyType, asset, website }),
+        body: JSON.stringify({ email, propertyType, asset, website, ...tracking }),
       });
       if (!res.ok) throw new Error("Request failed");
       setStatus("done");

@@ -3,7 +3,7 @@ import nodemailer from "nodemailer";
 
 export async function POST(req: Request) {
   const body = await req.json();
-  const { name, email, company, properties, propertyType, volume, tools, message, website } = body;
+  const { name, email, company, properties, propertyType, volume, tools, message, website, source_page, referrer, utm_source, utm_medium, utm_campaign } = body;
 
   // Honeypot — bots fill the hidden website field, real users don't
   if (website) {
@@ -41,6 +41,14 @@ export async function POST(req: Request) {
         <tr><td style="padding:10px 0;border-bottom:1px solid #eee;font-weight:600">Monthly Volume</td><td style="padding:10px 0;border-bottom:1px solid #eee">${volume || "—"}</td></tr>
         <tr><td style="padding:10px 0;border-bottom:1px solid #eee;font-weight:600">Current Tools</td><td style="padding:10px 0;border-bottom:1px solid #eee">${tools || "—"}</td></tr>
         <tr><td style="padding:10px 0;font-weight:600;vertical-align:top">Message</td><td style="padding:10px 0;white-space:pre-wrap">${message || "—"}</td></tr>
+      </table>
+      <h3 style="margin-top:28px;font-size:13px;color:#888;border-top:1px solid #eee;padding-top:16px">Attribution</h3>
+      <table style="width:100%;border-collapse:collapse">
+        <tr><td style="padding:6px 0;font-weight:600;font-size:12px;width:200px;color:#555">Source page</td><td style="padding:6px 0;font-size:12px;color:#555">${source_page || "—"}</td></tr>
+        <tr><td style="padding:6px 0;font-weight:600;font-size:12px;color:#555">Referrer</td><td style="padding:6px 0;font-size:12px;color:#555">${referrer || "—"}</td></tr>
+        <tr><td style="padding:6px 0;font-weight:600;font-size:12px;color:#555">utm_source</td><td style="padding:6px 0;font-size:12px;color:#555">${utm_source || "—"}</td></tr>
+        <tr><td style="padding:6px 0;font-weight:600;font-size:12px;color:#555">utm_medium</td><td style="padding:6px 0;font-size:12px;color:#555">${utm_medium || "—"}</td></tr>
+        <tr><td style="padding:6px 0;font-weight:600;font-size:12px;color:#555">utm_campaign</td><td style="padding:6px 0;font-size:12px;color:#555">${utm_campaign || "—"}</td></tr>
       </table>
       <p style="margin-top:32px;font-size:12px;color:#888">Sent from the contact form at guestsquad.com</p>
     </div>

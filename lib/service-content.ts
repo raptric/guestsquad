@@ -63,6 +63,8 @@ export const hotelAnsweringServiceData: ServiceDetailData = {
     { label: "View Sample Weekly Report", href: "/resources/sample-weekly-report" },
     { label: "Download After-Hours Checklist", href: "/resources/after-hours-checklist" },
   ],
+  ctaTitle: "Turn missed calls into handled guest conversations.",
+  ctaDescription: "Book a coverage review and see exactly how GuestSquad would cover your reservation calls, guest inquiries, and after-hours lines.",
 };
 
 export const reservationSupportData: ServiceDetailData = {
@@ -128,6 +130,8 @@ export const reservationSupportData: ServiceDetailData = {
     { label: "View Sample Weekly Report", href: "/resources/sample-weekly-report" },
     { label: "Guest Coverage Gap Assessment", href: "/resources/coverage-gap-assessment" },
   ],
+  ctaTitle: "Stop losing bookings to unanswered reservation calls.",
+  ctaDescription: "Book a coverage review and see exactly how GuestSquad would handle your inbound reservation inquiries and guest calls.",
 };
 
 export const guestMessagingData: ServiceDetailData = {
@@ -191,6 +195,8 @@ export const guestMessagingData: ServiceDetailData = {
     { label: "Download OTA Inbox Response Checklist", href: "/resources/ota-inbox-response-checklist" },
     { label: "View Sample Weekly Report", href: "/resources/sample-weekly-report" },
   ],
+  ctaTitle: "Keep every guest conversation moving.",
+  ctaDescription: "Book a coverage review and see how GuestSquad handles your messaging channels so guests always get a reply.",
 };
 
 export const otaInboxData: ServiceDetailData = {
@@ -255,6 +261,8 @@ export const otaInboxData: ServiceDetailData = {
     { label: "Download Guest Messaging SOP Template", href: "/resources/guest-messaging-sop" },
     { label: "View Sample Weekly Report", href: "/resources/sample-weekly-report" },
   ],
+  ctaTitle: "Reply before the guest books somewhere else.",
+  ctaDescription: "Book a coverage review and see how GuestSquad manages your OTA inboxes so no message sits unread.",
 };
 
 export const afterHoursData: ServiceDetailData = {
@@ -318,6 +326,8 @@ export const afterHoursData: ServiceDetailData = {
     { label: "View Sample Weekly Report", href: "/resources/sample-weekly-report" },
     { label: "Guest Coverage Gap Assessment", href: "/resources/coverage-gap-assessment" },
   ],
+  ctaTitle: "Give guests an answer after your front desk closes.",
+  ctaDescription: "Book a coverage review and see exactly how GuestSquad would handle your overnight calls, messages, and emergency escalations.",
 };
 
 export const backOfficeData: ServiceDetailData = {
@@ -381,6 +391,8 @@ export const backOfficeData: ServiceDetailData = {
     { label: "View Sample Weekly Report", href: "/resources/sample-weekly-report" },
     { label: "Guest Coverage Gap Assessment", href: "/resources/coverage-gap-assessment" },
   ],
+  ctaTitle: "Catch revenue leakage before month-end.",
+  ctaDescription: "Book a coverage review and see how GuestSquad's back-office support keeps your OTA payouts, billing, and night audit reconciled daily.",
 };
 
 export const airbnbSupportData: ServiceDetailData = {
@@ -444,6 +456,8 @@ export const airbnbSupportData: ServiceDetailData = {
     { label: "Download After-Hours Checklist", href: "/resources/after-hours-checklist" },
     { label: "Download Guest Messaging SOP Template", href: "/resources/guest-messaging-sop" },
   ],
+  ctaTitle: "Keep guest replies moving without being on call all night.",
+  ctaDescription: "Book a coverage review and see how GuestSquad covers your Airbnb messages, check-in issues, and guest questions around the clock.",
 };
 
 export const vacationRentalAnsweringData: ServiceDetailData = {
@@ -507,4 +521,6 @@ export const vacationRentalAnsweringData: ServiceDetailData = {
     { label: "Guest Coverage Gap Assessment", href: "/resources/coverage-gap-assessment" },
     { label: "View Sample Weekly Report", href: "/resources/sample-weekly-report" },
   ],
+  ctaTitle: "Keep guest replies moving without being on call all night.",
+  ctaDescription: "Book a coverage review and see how GuestSquad covers your Airbnb, Vrbo, and direct-booking guest calls around the clock.",
 };

@@ -32,6 +32,8 @@ export type ServiceDetailData = {
   comparisonTitle?: string;
   faqs: { q: string; a: string }[];
   assetLinks?: { label: string; href: string }[];
+  ctaTitle?: string;
+  ctaDescription?: string;
 };
 
 export function ServiceDetail({ data }: { data: ServiceDetailData }) {
@@ -244,7 +246,7 @@ export function ServiceDetail({ data }: { data: ServiceDetailData }) {
         <BoFuTrustBlock />
       </Section>
 
-      <CtaSection />
+      <CtaSection title={data.ctaTitle} description={data.ctaDescription} />
     </>
   );
 }

@@ -9,6 +9,7 @@ import { JsonLd } from "@/components/site/json-ld";
 import { buildMetadata, breadcrumbSchema, faqSchema } from "@/lib/seo";
 import { AssetBlock } from "@/components/site/asset-block";
 import { BoFuTrustBlock } from "@/components/site/bofu-trust-block";
+import { PostBookingSteps } from "@/components/site/post-booking-steps";
 
 export const metadata: Metadata = buildMetadata({
   title: "Hotel Guest Support Pricing | Plans & Pilot Program",
@@ -174,6 +175,10 @@ export default function PricingPage() {
       </Section>
 
       <Section>
+        <PostBookingSteps />
+      </Section>
+
+      <Section surface>
         <BoFuTrustBlock />
       </Section>
 

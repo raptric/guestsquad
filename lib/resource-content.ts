@@ -67,6 +67,16 @@ export const RESOURCES: ResourceSummary[] = [
   },
 ];
 
+export type ArticleAssetCta = {
+  heading: string;
+  asset?: string;
+  pdfHref?: string;
+  ctaLabel?: string;
+  calculatorHref?: string;
+  serviceHref?: string;
+  serviceLabel?: string;
+};
+
 export type ResourceArticleData = {
   slug: string;
   title: string;
@@ -83,6 +93,7 @@ export type ResourceArticleData = {
   verdictParagraphs: string[];
   faqs: { q: string; a: string }[];
   relatedServiceSlugs: string[];
+  assetCta?: ArticleAssetCta;
 };
 
 export const aiVoiceComparison: ResourceArticleData = {
@@ -161,6 +172,14 @@ export const aiVoiceComparison: ResourceArticleData = {
       a: "Yes. Some properties use a simple chat widget or FAQ bot to deflect the most basic website questions, then route every phone call and anything more nuanced to GuestSquad.",
     },
   ],
+  assetCta: {
+    heading: "See what consistent human coverage actually looks like in practice.",
+    asset: "sample-weekly-report",
+    pdfHref: "/downloads/sample-weekly-report.pdf",
+    ctaLabel: "Download Sample Weekly Report",
+    serviceHref: "/services/hotel-answering-service",
+    serviceLabel: "Hotel Answering Service",
+  },
 };
 
 export const callCenterComparison: ResourceArticleData = {
@@ -258,6 +277,7 @@ export type GuideArticleData = {
   sections: GuideSection[];
   faqs: { q: string; a: string }[];
   relatedServiceSlugs: string[];
+  assetCta?: ArticleAssetCta;
 };
 
 export const answeringServiceCostGuide: GuideArticleData = {
@@ -331,6 +351,13 @@ export const answeringServiceCostGuide: GuideArticleData = {
     },
   ],
   relatedServiceSlugs: ["hotel-answering-service", "after-hours-support"],
+  assetCta: {
+    heading: "Estimate what unanswered calls are actually costing your property.",
+    calculatorHref: "/resources/missed-booking-calculator",
+    ctaLabel: "Open the Missed Booking Calculator",
+    serviceHref: "/pricing",
+    serviceLabel: "View Pricing",
+  },
 };
 
 export const afterHoursChecklistGuide: GuideArticleData = {
@@ -395,6 +422,14 @@ export const afterHoursChecklistGuide: GuideArticleData = {
     },
   ],
   relatedServiceSlugs: ["after-hours-support", "hotel-answering-service", "back-office-operations"],
+  assetCta: {
+    heading: "Download the After-Hours Guest Coverage Checklist to audit your overnight gaps.",
+    asset: "after-hours-checklist",
+    pdfHref: "/downloads/after-hours-checklist.pdf",
+    ctaLabel: "Download After-Hours Checklist",
+    serviceHref: "/services/after-hours-support",
+    serviceLabel: "After-Hours Support",
+  },
 };
 
 export const overflowSupportGuide: GuideArticleData = {
@@ -458,6 +493,14 @@ export const overflowSupportGuide: GuideArticleData = {
     },
   ],
   relatedServiceSlugs: ["hotel-answering-service", "reservation-support", "after-hours-support"],
+  assetCta: {
+    heading: "Find the specific coverage gaps your property has right now.",
+    asset: "coverage-gap-assessment",
+    pdfHref: "/downloads/coverage-gap-assessment.pdf",
+    ctaLabel: "Download Coverage Gap Assessment",
+    serviceHref: "/services/hotel-answering-service",
+    serviceLabel: "Hotel Answering Service",
+  },
 };
 
 export const otaInboxChecklistGuide: GuideArticleData = {
@@ -522,6 +565,14 @@ export const otaInboxChecklistGuide: GuideArticleData = {
     },
   ],
   relatedServiceSlugs: ["ota-inbox-management", "guest-messaging", "vacation-rental-answering-service"],
+  assetCta: {
+    heading: "Download the OTA Inbox Response Checklist to standardize your inbox process.",
+    asset: "ota-inbox-response-checklist",
+    pdfHref: "/downloads/ota-inbox-response-checklist.pdf",
+    ctaLabel: "Download OTA Inbox Checklist",
+    serviceHref: "/services/ota-inbox-management",
+    serviceLabel: "OTA Inbox Management",
+  },
 };
 
 export const messagingSopGuide: GuideArticleData = {
@@ -592,6 +643,14 @@ export const messagingSopGuide: GuideArticleData = {
     },
   ],
   relatedServiceSlugs: ["guest-messaging", "ota-inbox-management"],
+  assetCta: {
+    heading: "Download the Hotel Guest Messaging SOP Template to put this into practice.",
+    asset: "guest-messaging-sop",
+    pdfHref: "/downloads/guest-messaging-sop.pdf",
+    ctaLabel: "Download Guest Messaging SOP",
+    serviceHref: "/services/guest-messaging",
+    serviceLabel: "Guest Messaging Service",
+  },
 };
 
 export const RESOURCE_ARTICLES: Record<string, ResourceArticleData> = {

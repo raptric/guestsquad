@@ -5,6 +5,7 @@ import { Section, SectionHeading } from "@/components/site/section";
 import { Breadcrumbs } from "@/components/site/breadcrumbs";
 import { ComparisonTable } from "@/components/site/comparison-table";
 import { CtaSection } from "@/components/site/cta-section";
+import { DownloadGate } from "@/components/site/download-gate";
 import { JsonLd } from "@/components/site/json-ld";
 import { articleSchema, breadcrumbSchema, faqSchema } from "@/lib/seo";
 import { RESOURCES, type ResourceArticleData } from "@/lib/resource-content";
@@ -128,6 +129,38 @@ export function ComparisonArticle({ data }: { data: ResourceArticleData }) {
           ))}
         </div>
       </Section>
+
+      {data.assetCta && (
+        <Section surface>
+          <div className="rounded-lg border border-line bg-paper p-8">
+            <p className="text-base font-medium text-ink">{data.assetCta.heading}</p>
+            <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center">
+              {data.assetCta.asset && data.assetCta.pdfHref ? (
+                <DownloadGate
+                  asset={data.assetCta.asset}
+                  pdfHref={data.assetCta.pdfHref}
+                  ctaLabel={data.assetCta.ctaLabel ?? "Download PDF"}
+                />
+              ) : data.assetCta.calculatorHref ? (
+                <Link
+                  href={data.assetCta.calculatorHref}
+                  className="inline-flex items-center gap-2 rounded-md bg-gold px-4 py-2 text-sm font-medium text-ink hover:bg-gold/90"
+                >
+                  {data.assetCta.ctaLabel}
+                </Link>
+              ) : null}
+              {data.assetCta.serviceHref && (
+                <Link
+                  href={data.assetCta.serviceHref}
+                  className="inline-flex items-center gap-1.5 text-sm font-medium text-gold-dark hover:text-gold"
+                >
+                  {data.assetCta.serviceLabel} <ArrowUpRight className="h-3.5 w-3.5" />
+                </Link>
+              )}
+            </div>
+          </div>
+        </Section>
+      )}
 
       <CtaSection />
     </>

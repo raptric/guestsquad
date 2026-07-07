@@ -8,6 +8,7 @@ import { Breadcrumbs } from "@/components/site/breadcrumbs";
 import { JsonLd } from "@/components/site/json-ld";
 import { buildMetadata, breadcrumbSchema, faqSchema } from "@/lib/seo";
 import { AssetBlock } from "@/components/site/asset-block";
+import { BoFuTrustBlock } from "@/components/site/bofu-trust-block";
 
 export const metadata: Metadata = buildMetadata({
   title: "Hotel Guest Support Pricing | Plans & Pilot Program",
@@ -170,6 +171,10 @@ export default function PricingPage() {
             assets={[{ label: "View Sample Weekly Report", href: "/resources/sample-weekly-report" }]}
           />
         </div>
+      </Section>
+
+      <Section>
+        <BoFuTrustBlock />
       </Section>
 
       <CtaSection

@@ -7,6 +7,7 @@ import { JsonLd } from "@/components/site/json-ld";
 import { Section, SectionHeading } from "@/components/site/section";
 import { buildMetadata, breadcrumbSchema, faqSchema } from "@/lib/seo";
 import { AssetBlock } from "@/components/site/asset-block";
+import { BoFuTrustBlock } from "@/components/site/bofu-trust-block";
 
 export const metadata: Metadata = buildMetadata({
   title: "Contact GuestSquad | Book a Guest Support Demo",
@@ -133,6 +134,10 @@ export default function ContactPage() {
           </Link>{" "}
           on human answering services vs. AI voice agents and generic call centers.
         </p>
+      </Section>
+
+      <Section>
+        <BoFuTrustBlock />
       </Section>
 
       <Section surface>

@@ -10,6 +10,7 @@ import { serviceSchema, breadcrumbSchema, faqSchema } from "@/lib/seo";
 import { SERVICES } from "@/lib/site-data";
 import { RESOURCES } from "@/lib/resource-content";
 import { AssetBlock } from "@/components/site/asset-block";
+import { BoFuTrustBlock } from "@/components/site/bofu-trust-block";
 
 export type ServiceDetailData = {
   slug: string;
@@ -238,6 +239,10 @@ export function ServiceDetail({ data }: { data: ServiceDetailData }) {
           </div>
         </Section>
       )}
+
+      <Section>
+        <BoFuTrustBlock />
+      </Section>
 
       <CtaSection />
     </>

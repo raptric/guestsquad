@@ -42,6 +42,7 @@ export default function AfterHoursChecklistPage() {
       title="After-Hours Guest Coverage Checklist"
       subtitle="Audit your overnight and weekend gaps before they cost you bookings or reviews."
       badge="Free Checklist"
+      downloadHref="/downloads/after-hours-checklist.pdf"
     >
       <p className="text-sm leading-relaxed text-ink-soft">
         Use this checklist to assess how well your current after-hours setup covers overnight calls, weekend gaps, emergency escalation, and morning handoff. Work through each section and note what is in place, what is missing, and what needs to be formalised.

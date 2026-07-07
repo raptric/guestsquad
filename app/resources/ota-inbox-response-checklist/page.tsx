@@ -34,6 +34,7 @@ export default function OtaInboxChecklistPage() {
       title="OTA Inbox Response Checklist"
       subtitle="Booking.com | Expedia | Airbnb | Vrbo — Message Handling Standards"
       badge="Free Checklist"
+      downloadHref="/downloads/ota-inbox-response-checklist.pdf"
     >
       <p className="text-sm leading-relaxed text-ink-soft">
         Use this checklist to standardise how your team or external support partners manage OTA inboxes. Consistent, fast, policy-aligned responses improve your OTA ranking, reduce booking friction, and prevent complaints from surfacing in reviews.

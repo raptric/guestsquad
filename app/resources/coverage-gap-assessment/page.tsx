@@ -43,6 +43,7 @@ export default function CoverageGapAssessmentPage() {
       title="Guest Coverage Gap Assessment"
       subtitle="Identify where your property is losing bookings and guests to coverage gaps."
       badge="Self-Assessment"
+      downloadHref="/downloads/coverage-gap-assessment.pdf"
     >
       <p className="text-sm leading-relaxed text-ink-soft">
         Complete this assessment to map your current guest communication coverage against what guests actually expect. Work through each section honestly. The gaps you identify are the starting point for deciding which coverage to add first.

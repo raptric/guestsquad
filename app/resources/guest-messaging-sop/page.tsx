@@ -42,6 +42,7 @@ export default function GuestMessagingSopPage() {
       title="Hotel Guest Messaging SOP"
       subtitle="Standard Operating Procedure — Guest Communication"
       badge="SOP Template"
+      downloadHref="/downloads/guest-messaging-sop.pdf"
     >
       <p className="text-sm leading-relaxed text-ink-soft">
         Complete each section of this template to create a working guest messaging SOP for your property. A finished SOP gives any team member or external support partner enough context to handle guest communications consistently, on brand, and within your defined escalation rules.

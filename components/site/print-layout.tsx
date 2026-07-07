@@ -1,14 +1,15 @@
 "use client";
-import { Printer } from "lucide-react";
+import { Printer, Download } from "lucide-react";
 
 interface PrintLayoutProps {
   title: string;
   subtitle?: string;
   badge?: string;
+  downloadHref?: string;
   children: React.ReactNode;
 }
 
-export function PrintLayout({ title, subtitle, badge, children }: PrintLayoutProps) {
+export function PrintLayout({ title, subtitle, badge, downloadHref, children }: PrintLayoutProps) {
   return (
     <div className="min-h-screen bg-surface">
       {/* Controls bar — hidden when printing */}
@@ -17,13 +18,25 @@ export function PrintLayout({ title, subtitle, badge, children }: PrintLayoutPro
           <p className="text-sm text-ink-soft">
             View, save, or print this document using your browser&rsquo;s print function.
           </p>
-          <button
-            onClick={() => window.print()}
-            className="inline-flex shrink-0 items-center gap-2 rounded-lg bg-ink px-5 py-2.5 text-sm font-medium text-paper transition-colors hover:bg-ink/90"
-          >
-            <Printer className="h-4 w-4" />
-            Save as PDF
-          </button>
+          <div className="flex shrink-0 items-center gap-3">
+            {downloadHref && (
+              <a
+                href={downloadHref}
+                download
+                className="inline-flex items-center gap-2 rounded-lg border border-line bg-paper px-5 py-2.5 text-sm font-medium text-ink transition-colors hover:border-gold-dark hover:text-gold-dark"
+              >
+                <Download className="h-4 w-4" />
+                Download PDF
+              </a>
+            )}
+            <button
+              onClick={() => window.print()}
+              className="inline-flex items-center gap-2 rounded-lg bg-ink px-5 py-2.5 text-sm font-medium text-paper transition-colors hover:bg-ink/90"
+            >
+              <Printer className="h-4 w-4" />
+              Save as PDF
+            </button>
+          </div>
         </div>
       </div>
 

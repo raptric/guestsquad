@@ -93,8 +93,12 @@ export default function ContactPage() {
                   GuestSquad is best suited for properties that receive regular call or message volume your team cannot always cover: independent hotels, boutique properties, resorts, serviced apartments, and short-term rental operators. If that sounds like your property,{" "}
                   <Link href="/pricing" className="text-gold-dark underline underline-offset-4 hover:text-gold">
                     view pricing
-                  </Link>{" "}
-                  or send us the details below.
+                  </Link>
+                  ,{" "}
+                  <Link href="/services" className="text-gold-dark underline underline-offset-4 hover:text-gold">
+                    browse services
+                  </Link>
+                  , or send us the details below.
                 </p>
               </div>
               <div className="rounded-lg border border-line bg-paper p-8">

@@ -41,7 +41,7 @@ export function Nav() {
 
         <div className="hidden md:block">
           <CalendlyPopupButton variant="gold" size="sm">
-            Book a Demo
+            Book a Coverage Review
           </CalendlyPopupButton>
         </div>
 
@@ -69,7 +69,7 @@ export function Nav() {
             ))}
             <div className="mt-2 px-2">
               <CalendlyPopupButton variant="gold" className="w-full">
-                Book a Demo
+                Book a Coverage Review
               </CalendlyPopupButton>
             </div>
           </nav>

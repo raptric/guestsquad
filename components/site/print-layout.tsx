@@ -1,15 +1,17 @@
 "use client";
-import { Printer, Download } from "lucide-react";
+import { Printer } from "lucide-react";
+import { DownloadGate } from "@/components/site/download-gate";
 
 interface PrintLayoutProps {
   title: string;
   subtitle?: string;
   badge?: string;
+  asset?: string;
   downloadHref?: string;
   children: React.ReactNode;
 }
 
-export function PrintLayout({ title, subtitle, badge, downloadHref, children }: PrintLayoutProps) {
+export function PrintLayout({ title, subtitle, badge, asset, downloadHref, children }: PrintLayoutProps) {
   return (
     <div className="min-h-screen bg-surface">
       {/* Controls bar — hidden when printing */}
@@ -19,15 +21,8 @@ export function PrintLayout({ title, subtitle, badge, downloadHref, children }: 
             View, save, or print this document using your browser&rsquo;s print function.
           </p>
           <div className="flex shrink-0 items-center gap-3">
-            {downloadHref && (
-              <a
-                href={downloadHref}
-                download
-                className="inline-flex items-center gap-2 rounded-lg border border-line bg-paper px-5 py-2.5 text-sm font-medium text-ink transition-colors hover:border-gold-dark hover:text-gold-dark"
-              >
-                <Download className="h-4 w-4" />
-                Download PDF
-              </a>
+            {asset && downloadHref && (
+              <DownloadGate asset={asset} pdfHref={downloadHref} ctaLabel="Download PDF" />
             )}
             <button
               onClick={() => window.print()}

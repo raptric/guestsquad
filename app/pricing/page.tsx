@@ -7,6 +7,7 @@ import { CtaSection } from "@/components/site/cta-section";
 import { Breadcrumbs } from "@/components/site/breadcrumbs";
 import { JsonLd } from "@/components/site/json-ld";
 import { buildMetadata, breadcrumbSchema, faqSchema } from "@/lib/seo";
+import { AssetBlock } from "@/components/site/asset-block";
 
 export const metadata: Metadata = buildMetadata({
   title: "Hotel Guest Support Pricing | Plans & Pilot Program",
@@ -144,6 +145,30 @@ export default function PricingPage() {
               <p className="mt-2 text-sm leading-relaxed text-ink-soft">{item.a}</p>
             </div>
           ))}
+        </div>
+      </Section>
+
+      <Section>
+        <SectionHeading
+          eyebrow="Not Sure What Coverage You Need?"
+          title="Use these tools before requesting a quote."
+        />
+        <p className="mt-3 text-sm leading-relaxed text-ink-soft">
+          Or book a 15-minute review and we will walk through them with you.
+        </p>
+        <div className="mt-8 grid gap-4 sm:grid-cols-3">
+          <AssetBlock
+            heading="Estimate missed revenue"
+            assets={[{ label: "Missed Booking Revenue Calculator", href: "/resources/missed-booking-calculator" }]}
+          />
+          <AssetBlock
+            heading="Find your coverage gaps"
+            assets={[{ label: "Guest Coverage Gap Assessment", href: "/resources/coverage-gap-assessment" }]}
+          />
+          <AssetBlock
+            heading="See what reporting looks like"
+            assets={[{ label: "View Sample Weekly Report", href: "/resources/sample-weekly-report" }]}
+          />
         </div>
       </Section>
 

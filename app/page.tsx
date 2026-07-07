@@ -15,6 +15,7 @@ import { CtaSection } from "@/components/site/cta-section";
 import { SERVICES } from "@/lib/site-data";
 import { buildMetadata, faqSchema } from "@/lib/seo";
 import { JsonLd } from "@/components/site/json-ld";
+import { AssetBlock } from "@/components/site/asset-block";
 
 export const metadata: Metadata = buildMetadata({
   title: "24/7 Hotel Guest Support & Reservation Services",
@@ -285,6 +286,27 @@ export default function HomePage() {
               <p className="mt-2 text-sm leading-relaxed text-ink-soft">{item.a}</p>
             </div>
           ))}
+        </div>
+      </Section>
+
+      <Section>
+        <SectionHeading
+          eyebrow="Tools and Resources"
+          title="Find and fix your guest coverage gaps."
+        />
+        <div className="mt-8 grid gap-4 sm:grid-cols-3">
+          <AssetBlock
+            heading="Estimate missed revenue"
+            assets={[{ label: "Missed Booking Revenue Calculator", href: "/resources/missed-booking-calculator" }]}
+          />
+          <AssetBlock
+            heading="See how reporting works"
+            assets={[{ label: "View Sample Weekly Report", href: "/resources/sample-weekly-report" }]}
+          />
+          <AssetBlock
+            heading="Identify your gaps"
+            assets={[{ label: "Guest Coverage Gap Assessment", href: "/resources/coverage-gap-assessment" }]}
+          />
         </div>
       </Section>
 

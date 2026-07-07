@@ -42,6 +42,7 @@ export default function AfterHoursChecklistPage() {
       title="After-Hours Guest Coverage Checklist"
       subtitle="Audit your overnight and weekend gaps before they cost you bookings or reviews."
       badge="Free Checklist"
+      asset="after-hours-checklist"
       downloadHref="/downloads/after-hours-checklist.pdf"
     >
       <p className="text-sm leading-relaxed text-ink-soft">

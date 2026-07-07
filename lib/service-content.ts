@@ -58,6 +58,11 @@ export const hotelAnsweringServiceData: ServiceDetailData = {
     { q: "What happens if a caller asks for something outside our policy?", a: "The caller is informed politely that the request needs your team's direct approval, and the inquiry is logged and routed with full context so your team can follow up promptly." },
     { q: "Can calls be transferred to our team when needed?", a: "Yes. Live transfer to your designated number is available for situations that require your team's direct involvement, following the escalation rules we agree on during setup." },
   ],
+  assetLinks: [
+    { label: "Missed Booking Revenue Calculator", href: "/resources/missed-booking-calculator" },
+    { label: "View Sample Weekly Report", href: "/resources/sample-weekly-report" },
+    { label: "Download After-Hours Checklist", href: "/resources/after-hours-checklist" },
+  ],
 };
 
 export const reservationSupportData: ServiceDetailData = {
@@ -118,6 +123,11 @@ export const reservationSupportData: ServiceDetailData = {
     { q: "Can your team manage booking modifications?", a: "Yes. Date changes, room-type switches, and cancellations that fall within your policy are handled directly, without escalating to your team." },
     { q: "What happens if a guest asks for a discount or exception?", a: "If the request falls within your pre-approved parameters, it is handled directly. If it requires management discretion, it is escalated immediately with full call context so your team can respond with everything they need." },
   ],
+  assetLinks: [
+    { label: "Missed Booking Revenue Calculator", href: "/resources/missed-booking-calculator" },
+    { label: "View Sample Weekly Report", href: "/resources/sample-weekly-report" },
+    { label: "Guest Coverage Gap Assessment", href: "/resources/coverage-gap-assessment" },
+  ],
 };
 
 export const guestMessagingData: ServiceDetailData = {
@@ -175,6 +185,11 @@ export const guestMessagingData: ServiceDetailData = {
     { q: "Can GuestSquad respond to WhatsApp and SMS messages overnight?", a: "Yes. Overnight message coverage is one of the most common reasons clients use this service. Guests who message after hours receive a real response instead of silence or a generic auto-reply." },
     { q: "Can GuestSquad support multilingual guest messages?", a: "English is the primary language of operation. For multilingual requirements, we can discuss whether your specific language needs are within scope during the onboarding call." },
     { q: "How are housekeeping or maintenance requests routed?", a: "Requests are logged with the guest's room number, request details, and timestamp, then sent to your designated on-site contact immediately. The guest receives a confirmation that their request has been received." },
+  ],
+  assetLinks: [
+    { label: "Download Guest Messaging SOP Template", href: "/resources/guest-messaging-sop" },
+    { label: "Download OTA Inbox Response Checklist", href: "/resources/ota-inbox-response-checklist" },
+    { label: "View Sample Weekly Report", href: "/resources/sample-weekly-report" },
   ],
 };
 
@@ -235,6 +250,11 @@ export const otaInboxData: ServiceDetailData = {
     { q: "Do you handle cancellation, modification, and policy questions?", a: "Yes. Modifications and cancellations that fall within your pre-agreed policy are processed directly. Anything outside policy, or requiring a refund decision, is escalated to your team with full context." },
     { q: "Can you help move repeat guests toward direct booking when appropriate?", a: "Yes. Where it is within OTA terms and appropriate to the conversation, agents will mention your direct booking option for future stays, helping reduce OTA commission costs over time." },
   ],
+  assetLinks: [
+    { label: "Download OTA Inbox Response Checklist", href: "/resources/ota-inbox-response-checklist" },
+    { label: "Download Guest Messaging SOP Template", href: "/resources/guest-messaging-sop" },
+    { label: "View Sample Weekly Report", href: "/resources/sample-weekly-report" },
+  ],
 };
 
 export const afterHoursData: ServiceDetailData = {
@@ -292,6 +312,11 @@ export const afterHoursData: ServiceDetailData = {
     { q: "Can GuestSquad cover only nights and weekends?", a: "Yes. Most clients start with exactly that: overnight and weekend coverage where their team is absent. Coverage hours are agreed during setup and can be adjusted as your needs change." },
     { q: "Can after-hours support reduce front desk burnout?", a: "Yes. One of the most common reasons teams use this service is to remove the expectation that front desk staff will also handle overnight calls. Clear separation of hours reduces the pressure on your in-house team." },
     { q: "How does GuestSquad decide what gets escalated overnight?", a: "Escalation rules are agreed with your team before going live. You specify what can be handled directly, what should be logged for morning review, and what should trigger an immediate call to your on-call contact." },
+  ],
+  assetLinks: [
+    { label: "Download After-Hours Checklist", href: "/resources/after-hours-checklist" },
+    { label: "View Sample Weekly Report", href: "/resources/sample-weekly-report" },
+    { label: "Guest Coverage Gap Assessment", href: "/resources/coverage-gap-assessment" },
   ],
 };
 
@@ -352,6 +377,10 @@ export const backOfficeData: ServiceDetailData = {
     { q: "Does GuestSquad process payments or only reconcile records?", a: "We reconcile records only. Payment processing remains within your existing systems and authorization chain. We identify discrepancies and report them; your team or controller takes action on anything that requires a financial decision." },
     { q: "How are exceptions reported to management?", a: "Exception reports are delivered by email on a schedule you choose: daily, weekly, or both. Reports are structured for quick review, flagging specific folios, booking references, and variance amounts." },
   ],
+  assetLinks: [
+    { label: "View Sample Weekly Report", href: "/resources/sample-weekly-report" },
+    { label: "Guest Coverage Gap Assessment", href: "/resources/coverage-gap-assessment" },
+  ],
 };
 
 export const airbnbSupportData: ServiceDetailData = {
@@ -410,6 +439,11 @@ export const airbnbSupportData: ServiceDetailData = {
     { q: "Can GuestSquad answer check-in questions across multiple listings?", a: "Yes. Each listing has its own briefing document with specific check-in instructions, house rules, and access details. Agents use the correct information for each property." },
     { q: "Can GuestSquad use listing-specific instructions for each unit?", a: "Yes. During onboarding, we build a briefing document for each listing you operate. This covers check-in details, house rules, amenity instructions, and your escalation preferences for that specific unit." },
   ],
+  assetLinks: [
+    { label: "Guest Coverage Gap Assessment", href: "/resources/coverage-gap-assessment" },
+    { label: "Download After-Hours Checklist", href: "/resources/after-hours-checklist" },
+    { label: "Download Guest Messaging SOP Template", href: "/resources/guest-messaging-sop" },
+  ],
 };
 
 export const vacationRentalAnsweringData: ServiceDetailData = {
@@ -467,5 +501,10 @@ export const vacationRentalAnsweringData: ServiceDetailData = {
     { q: "Is this only for Airbnb or also Vrbo and direct bookings?", a: "All three. Airbnb, Vrbo, and direct-booking guests are covered from the same point of coverage, so you are not managing separate answering arrangements per platform." },
     { q: "Can GuestSquad answer calls for multiple properties or listings?", a: "Yes. Each property or listing has its own briefing in our system. Agents use the correct information for whichever unit a guest is calling about." },
     { q: "What information do you need for each listing?", a: "During onboarding we collect check-in instructions, access codes, house rules, amenity details, local recommendations, and your escalation contacts. The more detail you provide, the more we can handle without needing to reach you." },
+  ],
+  assetLinks: [
+    { label: "Download After-Hours Checklist", href: "/resources/after-hours-checklist" },
+    { label: "Guest Coverage Gap Assessment", href: "/resources/coverage-gap-assessment" },
+    { label: "View Sample Weekly Report", href: "/resources/sample-weekly-report" },
   ],
 };

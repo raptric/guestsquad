@@ -6,6 +6,7 @@ import { Breadcrumbs } from "@/components/site/breadcrumbs";
 import { JsonLd } from "@/components/site/json-ld";
 import { Section, SectionHeading } from "@/components/site/section";
 import { buildMetadata, breadcrumbSchema, faqSchema } from "@/lib/seo";
+import { AssetBlock } from "@/components/site/asset-block";
 
 export const metadata: Metadata = buildMetadata({
   title: "Contact GuestSquad | Book a Guest Support Demo",
@@ -132,6 +133,24 @@ export default function ContactPage() {
           </Link>{" "}
           on human answering services vs. AI voice agents and generic call centers.
         </p>
+      </Section>
+
+      <Section surface>
+        <SectionHeading eyebrow="Not Ready to Book Yet?" title="Start with one of these." />
+        <div className="mt-8 grid gap-4 sm:grid-cols-3">
+          <AssetBlock
+            heading="See what reporting looks like"
+            assets={[{ label: "View Sample Weekly Report", href: "/resources/sample-weekly-report" }]}
+          />
+          <AssetBlock
+            heading="Find your coverage gaps"
+            assets={[{ label: "Start Coverage Gap Assessment", href: "/resources/coverage-gap-assessment" }]}
+          />
+          <AssetBlock
+            heading="Estimate missed revenue"
+            assets={[{ label: "Missed Booking Revenue Calculator", href: "/resources/missed-booking-calculator" }]}
+          />
+        </div>
       </Section>
     </>
   );

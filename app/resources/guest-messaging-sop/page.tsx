@@ -42,6 +42,7 @@ export default function GuestMessagingSopPage() {
       title="Hotel Guest Messaging SOP"
       subtitle="Standard Operating Procedure — Guest Communication"
       badge="SOP Template"
+      asset="guest-messaging-sop"
       downloadHref="/downloads/guest-messaging-sop.pdf"
     >
       <p className="text-sm leading-relaxed text-ink-soft">

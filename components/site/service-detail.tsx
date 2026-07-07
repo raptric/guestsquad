@@ -9,6 +9,7 @@ import { JsonLd } from "@/components/site/json-ld";
 import { serviceSchema, breadcrumbSchema, faqSchema } from "@/lib/seo";
 import { SERVICES } from "@/lib/site-data";
 import { RESOURCES } from "@/lib/resource-content";
+import { AssetBlock } from "@/components/site/asset-block";
 
 export type ServiceDetailData = {
   slug: string;
@@ -29,6 +30,7 @@ export type ServiceDetailData = {
   relatedTitle?: string;
   comparisonTitle?: string;
   faqs: { q: string; a: string }[];
+  assetLinks?: { label: string; href: string }[];
 };
 
 export function ServiceDetail({ data }: { data: ServiceDetailData }) {
@@ -225,6 +227,17 @@ export function ServiceDetail({ data }: { data: ServiceDetailData }) {
           </Link>
         </p>
       </Section>
+
+      {data.assetLinks && data.assetLinks.length > 0 && (
+        <Section>
+          <SectionHeading eyebrow="Tools for Your Property" title="Useful resources before you decide." />
+          <div className="mt-8 grid gap-4 sm:grid-cols-3">
+            {data.assetLinks.map((a) => (
+              <AssetBlock key={a.href} assets={[a]} />
+            ))}
+          </div>
+        </Section>
+      )}
 
       <CtaSection />
     </>

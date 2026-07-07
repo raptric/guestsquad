@@ -13,12 +13,21 @@ const PRIORITY: Record<string, number> = {
   "/terms-of-service": 0.2,
 };
 
+const ASSET_ROUTES = [
+  "/resources/sample-weekly-report",
+  "/resources/missed-booking-calculator",
+  "/resources/after-hours-checklist",
+  "/resources/guest-messaging-sop",
+  "/resources/ota-inbox-response-checklist",
+  "/resources/coverage-gap-assessment",
+];
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = Object.keys(PRIORITY);
   const serviceRoutes = SERVICES.map((s) => `/services/${s.slug}`);
   const resourceRoutes = RESOURCES.map((r) => `/resources/${r.slug}`);
 
-  return [...staticRoutes, ...serviceRoutes, ...resourceRoutes].map((route) => ({
+  return [...staticRoutes, ...serviceRoutes, ...resourceRoutes, ...ASSET_ROUTES].map((route) => ({
     url: `${SITE.url}${route}`,
     lastModified: new Date(),
     changeFrequency: route.startsWith("/resources/") ? "yearly" : "monthly",

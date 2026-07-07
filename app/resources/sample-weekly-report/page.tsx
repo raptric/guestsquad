@@ -66,6 +66,7 @@ export default function SampleWeeklyReportPage() {
       title="Weekly Guest Operations Report"
       subtitle="The Langford Boutique Hotel — Sample 7-Day Period"
       badge="Sample Report"
+      asset="sample-weekly-report"
       downloadHref="/downloads/sample-weekly-report.pdf"
     >
       {/* Disclaimer */}

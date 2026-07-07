@@ -43,6 +43,7 @@ export default function CoverageGapAssessmentPage() {
       title="Guest Coverage Gap Assessment"
       subtitle="Identify where your property is losing bookings and guests to coverage gaps."
       badge="Self-Assessment"
+      asset="coverage-gap-assessment"
       downloadHref="/downloads/coverage-gap-assessment.pdf"
     >
       <p className="text-sm leading-relaxed text-ink-soft">

@@ -12,6 +12,13 @@ import { RESOURCES } from "@/lib/resource-content";
 
 const TOOLS = [
   {
+    href: "/resources/missed-booking-calculator",
+    icon: Calculator,
+    badge: "Free Tool",
+    title: "Missed Booking Revenue Calculator",
+    description: "Estimate how much revenue unanswered reservation calls are costing your property each month. Adjust volume, booking value, and conversion rate.",
+  },
+  {
     href: "/resources/sample-weekly-report",
     icon: BarChart2,
     badge: "Sample Report",
@@ -19,11 +26,11 @@ const TOOLS = [
     description: "See exactly what a GuestSquad weekly report looks like: calls handled, messages, OTA replies, escalations, response times, and weekly recommendations.",
   },
   {
-    href: "/resources/missed-booking-calculator",
-    icon: Calculator,
-    badge: "Calculator",
-    title: "Missed Booking Revenue Calculator",
-    description: "Estimate how much revenue unanswered reservation calls are costing your property each month. Adjust volume, booking value, and conversion rate.",
+    href: "/resources/coverage-gap-assessment",
+    icon: ClipboardList,
+    badge: "Self-Assessment",
+    title: "Guest Coverage Gap Assessment",
+    description: "Identify uncovered hours, unmanned channels, and escalation gaps across your property. Includes a service recommendation guide based on your answers.",
   },
   {
     href: "/resources/after-hours-checklist",
@@ -45,13 +52,6 @@ const TOOLS = [
     badge: "Checklist",
     title: "OTA Inbox Response Checklist",
     description: "Standards for managing Booking.com, Expedia, and Airbnb inboxes: pre-booking, post-booking, complaints, review responses, and escalation triggers.",
-  },
-  {
-    href: "/resources/coverage-gap-assessment",
-    icon: ClipboardList,
-    badge: "Self-Assessment",
-    title: "Guest Coverage Gap Assessment",
-    description: "Identify uncovered hours, unmanned channels, and escalation gaps across your property. Includes a service recommendation guide based on your answers.",
   },
 ];
 
@@ -76,7 +76,7 @@ export default function ResourcesPage() {
       <PageHero
         eyebrow="Resources"
         title="Hotel Answering Service Guides, Comparisons, and Checklists"
-        description="Straight comparisons between human answering services, AI voice agents, and generic call centers, plus practical guides for running guest operations, written to help you decide, not just to sell."
+        description="Straight comparisons between human answering services, AI voice agents, and generic call centers, plus practical guides and tools for running guest operations."
       />
 
       {/* Hub intro */}
@@ -88,9 +88,12 @@ export default function ResourcesPage() {
         </div>
       </div>
 
-      {/* Tools and assets */}
+      {/* Tools and Templates */}
       <Section>
-        <SectionHeading eyebrow="Tools and Assets" title="Checklists, templates, and tools for hospitality operators." />
+        <SectionHeading
+          eyebrow="Tools and Templates"
+          title="Calculators, checklists, and templates for hospitality operators."
+        />
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {TOOLS.map((tool) => {
             const Icon = tool.icon;
@@ -104,7 +107,7 @@ export default function ResourcesPage() {
                   <Icon className="h-5 w-5 text-gold-dark" />
                   <span className="rounded bg-surface px-2.5 py-1 text-xs font-medium text-ink-muted">{tool.badge}</span>
                 </div>
-                <h3 className="mt-4 text-sm font-medium text-ink group-hover:text-gold-dark transition-colors">{tool.title}</h3>
+                <h3 className="mt-4 text-sm font-medium text-ink transition-colors group-hover:text-gold-dark">{tool.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-ink-soft">{tool.description}</p>
               </Link>
             );
@@ -112,8 +115,12 @@ export default function ResourcesPage() {
         </div>
       </Section>
 
+      {/* Guides and Comparisons */}
       <Section surface>
-        <SectionHeading eyebrow="Comparisons" title="How GuestSquad stacks up against the alternatives." />
+        <SectionHeading
+          eyebrow="Guides and Comparisons"
+          title="How GuestSquad stacks up against the alternatives."
+        />
         <div className="mt-10 grid gap-6 sm:grid-cols-2">
           {comparisons.map((r) => (
             <ServiceCard
@@ -123,19 +130,17 @@ export default function ResourcesPage() {
             />
           ))}
         </div>
-      </Section>
-
-      <Section surface>
-        <SectionHeading eyebrow="Guides & Checklists" title="Practical guides for running guest operations." />
-        <div className="mt-10 grid gap-6 sm:grid-cols-2">
-          {guides.map((r) => (
-            <ServiceCard
-              key={r.slug}
-              service={{ slug: r.slug, title: r.title, shortTitle: r.shortTitle, description: r.description }}
-              hrefBase="/resources"
-            />
-          ))}
-        </div>
+        {guides.length > 0 && (
+          <div className="mt-6 grid gap-6 sm:grid-cols-2">
+            {guides.map((r) => (
+              <ServiceCard
+                key={r.slug}
+                service={{ slug: r.slug, title: r.title, shortTitle: r.shortTitle, description: r.description }}
+                hrefBase="/resources"
+              />
+            ))}
+          </div>
+        )}
         <p className="mt-10 text-center text-sm text-ink-soft">
           Already know what you need?{" "}
           <Link href="/services" className="text-gold-dark underline underline-offset-4 hover:text-gold">

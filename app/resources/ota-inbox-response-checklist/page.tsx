@@ -34,6 +34,7 @@ export default function OtaInboxChecklistPage() {
       title="OTA Inbox Response Checklist"
       subtitle="Booking.com | Expedia | Airbnb | Vrbo — Message Handling Standards"
       badge="Free Checklist"
+      asset="ota-inbox-response-checklist"
       downloadHref="/downloads/ota-inbox-response-checklist.pdf"
     >
       <p className="text-sm leading-relaxed text-ink-soft">

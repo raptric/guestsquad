@@ -8,6 +8,7 @@ import { CtaSection } from "@/components/site/cta-section";
 import { Breadcrumbs } from "@/components/site/breadcrumbs";
 import { JsonLd } from "@/components/site/json-ld";
 import { buildMetadata, breadcrumbSchema, faqSchema } from "@/lib/seo";
+import { SITE } from "@/lib/site-data";
 
 export const metadata: Metadata = buildMetadata({
   title: "About GuestSquad | Hospitality Guest Operations Company",
@@ -361,6 +362,28 @@ export default function AboutPage() {
           </Link>
           .
         </p>
+      </Section>
+
+      {/* GuestSquad at a glance */}
+      <Section>
+        <SectionHeading eyebrow="Quick Reference" title="GuestSquad at a glance" />
+        <div className="mt-8 overflow-hidden rounded-lg border border-line">
+          {[
+            { label: "Company", value: "GuestSquad" },
+            { label: "Parent company", value: "Raptric LLC" },
+            { label: "Category", value: "Hospitality guest operations support" },
+            { label: "Services", value: "Reservation answering, guest messaging, OTA inbox management, after-hours support, back-office operations" },
+            { label: "Serves", value: "Independent hotels, boutique properties, resorts, serviced apartments, Airbnb hosts, Vrbo operators, short-term rental managers" },
+            { label: "Coverage", value: "24/7 human guest support — every interaction handled by a trained person" },
+            { label: "Email", value: SITE.email },
+            { label: "Phone", value: SITE.phone },
+          ].map((row, i) => (
+            <div key={row.label} className={`grid grid-cols-[180px_1fr] gap-4 px-6 py-4 text-sm ${i % 2 === 0 ? "bg-paper" : "bg-surface"}`}>
+              <span className="font-medium text-ink">{row.label}</span>
+              <span className="text-ink-soft">{row.value}</span>
+            </div>
+          ))}
+        </div>
       </Section>
 
       {/* About FAQ */}

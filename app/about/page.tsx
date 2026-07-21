@@ -13,7 +13,7 @@ import { SITE } from "@/lib/site-data";
 export const metadata: Metadata = buildMetadata({
   title: "About GuestSquad | Hospitality Guest Operations Company",
   description:
-    "GuestSquad provides human guest operations support for hotels, boutique properties, resorts, serviced apartments, and short-term rental operators. Every interaction is handled by a trained person, not a bot.",
+    "Human guest operations support for hotels, resorts, serviced apartments, and STR operators. Reservation calls, OTA inboxes, messaging, and after-hours coverage — handled by trained people, not bots.",
   path: "/about",
 });
 

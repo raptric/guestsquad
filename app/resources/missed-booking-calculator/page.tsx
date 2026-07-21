@@ -117,7 +117,7 @@ export default function CalculatorPage() {
             ))}
           </div>
           <p className="mt-6 text-xs leading-relaxed text-ink-muted">
-            The recovery estimate assumes a 70% capture rate, meaning GuestSquad answers and converts 70% of previously missed calls. Actual results depend on call type, time of day, and how enquiries are handled. This calculator is for estimation purposes only.{" "}
+            The recovery estimate assumes a 70% capture rate as a starting baseline. The 15–25% industry conversion range and 20–30% trained-agent range are based on typical independent hotel benchmarks — adjust both inputs to match your own property data for a more accurate picture. Actual results depend on call type, time of day, and how inquiries are handled. This calculator is for estimation purposes only.{" "}
             <Link href="/contact" className="text-gold-dark underline underline-offset-4 hover:text-gold">
               Talk to us for a property-specific assessment.
             </Link>

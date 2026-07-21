@@ -159,6 +159,36 @@ export default function CalculatorPage() {
         </div>
       </Section>
 
+      <Section surface>
+        <SectionHeading eyebrow="Close the Gap" title="The two services that recover missed bookings." />
+        <div className="mt-8 grid gap-6 sm:grid-cols-2">
+          {[
+            {
+              href: "/services/hotel-answering-service",
+              label: "Hotel Answering Service",
+              body: "Live call answering for reservation inquiries, guest questions, and overflow — so every inbound call reaches a trained person instead of voicemail.",
+            },
+            {
+              href: "/services/after-hours-support",
+              label: "After-Hours Hotel Support",
+              body: "Overnight and weekend front-desk coverage for calls and messages your team cannot take outside working hours, without hiring a night shift.",
+            },
+          ].map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="group flex flex-col justify-between rounded-lg border border-line bg-paper p-6 transition-colors hover:border-gold/50"
+            >
+              <div>
+                <h3 className="text-sm font-medium text-ink">{item.label}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-ink-soft">{item.body}</p>
+              </div>
+              <p className="mt-4 text-xs font-medium text-gold-dark group-hover:text-gold">View service →</p>
+            </Link>
+          ))}
+        </div>
+      </Section>
+
       <CtaSection
         title="Ready to stop leaving bookings on the table?"
         description="Book a coverage review and we will walk through your actual call volume, coverage gaps, and what a plan would cost."

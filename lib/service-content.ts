@@ -43,7 +43,12 @@ export const hotelAnsweringServiceData: ServiceDetailData = {
     "Groups wanting consistent call handling across multiple properties",
   ],
   notes:
-    "This is a true call-answering layer. Every call reaches a hospitality-trained person, not an automated system. It pairs naturally with Reservation Support and After-Hours Support for full phone coverage.",
+    "This is a true call-answering layer. Every call reaches a hospitality-trained person, not an automated system.",
+  pairsWith: [
+    { label: "After-Hours Support", slug: "after-hours-support" },
+    { label: "Reservation Support", slug: "reservation-support" },
+  ],
+  relatedSlugs: ["after-hours-support", "reservation-support", "ota-inbox-management"],
   faqTitle: "Hotel answering service questions, answered.",
   relatedTitle: "Pair call answering with after-hours and reservation support.",
   comparisonTitle: "Hotel answering vs voicemail, IVR, and generic call centers.",
@@ -113,6 +118,11 @@ export const reservationSupportData: ServiceDetailData = {
   ],
   notes:
     "Reservation support is delivered by people trained on your specific rates, room types, and policies, not a shared script across unrelated properties.",
+  pairsWith: [
+    { label: "Hotel Answering Service", slug: "hotel-answering-service" },
+    { label: "After-Hours Support", slug: "after-hours-support" },
+  ],
+  relatedSlugs: ["hotel-answering-service", "after-hours-support", "ota-inbox-management"],
   faqTitle: "Reservation support questions, answered.",
   relatedTitle: "Pair reservation support with call answering and after-hours coverage.",
   comparisonTitle: "Reservation support vs unanswered inquiries and OTA dependency.",
@@ -179,6 +189,11 @@ export const guestMessagingData: ServiceDetailData = {
   ],
   notes:
     "Every message is logged and visible to your team, so nothing happens in your guest communication channels that you cannot see.",
+  pairsWith: [
+    { label: "OTA Inbox Management", slug: "ota-inbox-management" },
+    { label: "After-Hours Support", slug: "after-hours-support" },
+  ],
+  relatedSlugs: ["ota-inbox-management", "after-hours-support", "hotel-answering-service"],
   faqTitle: "Guest messaging questions, answered.",
   relatedTitle: "Pair messaging support with OTA inbox management and after-hours coverage.",
   comparisonTitle: "Human guest messaging vs auto-replies and slow response times.",
@@ -244,6 +259,11 @@ export const otaInboxData: ServiceDetailData = {
   ],
   notes:
     "OTA response time is one of the few factors hotels can directly control that affects ranking and conversion, so we treat it accordingly.",
+  pairsWith: [
+    { label: "Guest Messaging", slug: "guest-messaging" },
+    { label: "Reservation Support", slug: "reservation-support" },
+  ],
+  relatedSlugs: ["guest-messaging", "hotel-answering-service", "reservation-support"],
   faqTitle: "OTA inbox management questions, answered.",
   relatedTitle: "Pair OTA coverage with reservation support and guest messaging.",
   comparisonTitle: "OTA inbox management vs auto-replies and once-a-day checking.",
@@ -311,6 +331,11 @@ export const afterHoursData: ServiceDetailData = {
   ],
   notes:
     "After-hours coverage is built around your existing escalation preferences. We handle what we can, and route the rest to the right person, every time.",
+  pairsWith: [
+    { label: "Hotel Answering Service", slug: "hotel-answering-service" },
+    { label: "Vacation Rental Answering Service", slug: "vacation-rental-answering-service" },
+  ],
+  relatedSlugs: ["hotel-answering-service", "vacation-rental-answering-service", "back-office-operations"],
   faqTitle: "After-hours support questions, answered.",
   relatedTitle: "Pair after-hours coverage with call answering and OTA inbox management.",
   comparisonTitle: "After-hours support vs hiring overnight staff or going unanswered.",
@@ -378,6 +403,11 @@ export const backOfficeData: ServiceDetailData = {
   ],
   notes:
     "Back-office support runs alongside your existing accounting team and PMS. We do not replace your controller; we make sure the daily reconciliation work that protects your revenue actually gets done every day.",
+  pairsWith: [
+    { label: "After-Hours Support", slug: "after-hours-support" },
+    { label: "Reservation Support", slug: "reservation-support" },
+  ],
+  relatedSlugs: ["after-hours-support", "hotel-answering-service", "reservation-support"],
   faqTitle: "Back office operations questions, answered.",
   relatedTitle: "Pair back office coverage with reservation support and OTA inbox management.",
   comparisonTitle: "Back office outsourcing vs in-house reconciliation gaps.",
@@ -443,6 +473,11 @@ export const airbnbSupportData: ServiceDetailData = {
   ],
   notes:
     "Built for the realities of remote hosting: no front desk, no on-site team, but guests who still expect a fast, human response.",
+  pairsWith: [
+    { label: "Vacation Rental Answering Service", slug: "vacation-rental-answering-service" },
+    { label: "OTA Inbox Management", slug: "ota-inbox-management" },
+  ],
+  relatedSlugs: ["vacation-rental-answering-service", "ota-inbox-management", "after-hours-support"],
   faqTitle: "Airbnb guest support questions, answered.",
   relatedTitle: "Pair Airbnb support with vacation rental answering and OTA inbox management.",
   comparisonTitle: "Airbnb guest support vs responding to guests personally at 2am.",
@@ -509,6 +544,11 @@ export const vacationRentalAnsweringData: ServiceDetailData = {
   ],
   notes:
     "Built for the realities of remote hosting: no front desk, no on-site team, but guests who still expect a fast, human answer when they call or message.",
+  pairsWith: [
+    { label: "After-Hours Support", slug: "after-hours-support" },
+    { label: "Airbnb Guest Support", slug: "airbnb-guest-support" },
+  ],
+  relatedSlugs: ["after-hours-support", "airbnb-guest-support", "ota-inbox-management"],
   faqTitle: "Vacation rental answering questions, answered.",
   relatedTitle: "Pair vacation rental answering with Airbnb guest support and OTA coverage.",
   comparisonTitle: "Vacation rental answering vs being the 24/7 on-call line yourself.",

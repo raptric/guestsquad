@@ -28,6 +28,8 @@ export type ServiceDetailData = {
   whoItsForTitle?: string;
   whoItsFor: string[];
   notes: string;
+  pairsWith?: { label: string; slug: string }[];
+  relatedSlugs: string[];
   faqTitle?: string;
   relatedTitle?: string;
   comparisonTitle?: string;
@@ -39,7 +41,8 @@ export type ServiceDetailData = {
 
 export function ServiceDetail({ data }: { data: ServiceDetailData }) {
   const path = `/services/${data.slug}`;
-  const related = SERVICES.filter((s) => s.slug !== data.slug).slice(0, 3);
+  const related = SERVICES.filter((s) => data.relatedSlugs.includes(s.slug))
+    .sort((a, b) => data.relatedSlugs.indexOf(a.slug) - data.relatedSlugs.indexOf(b.slug));
 
   return (
     <>
@@ -169,6 +172,19 @@ export function ServiceDetail({ data }: { data: ServiceDetailData }) {
           ))}
         </ul>
         <p className="mt-10 max-w-2xl text-sm leading-relaxed text-ink-muted">{data.notes}</p>
+        {data.pairsWith && data.pairsWith.length > 0 && (
+          <p className="mt-3 max-w-2xl text-sm text-ink-muted">
+            Pairs well with:{" "}
+            {data.pairsWith.map((p, i) => (
+              <span key={p.slug}>
+                <Link href={`/services/${p.slug}`} className="text-gold-dark underline underline-offset-4 hover:text-gold">
+                  {p.label}
+                </Link>
+                {i < data.pairsWith!.length - 1 ? ", " : "."}
+              </span>
+            ))}
+          </p>
+        )}
       </Section>
 
       <Section surface>

@@ -277,6 +277,7 @@ export type GuideArticleData = {
   sections: GuideSection[];
   faqs: { q: string; a: string }[];
   relatedServiceSlugs: string[];
+  relatedResourceSlugs?: string[];
   assetCta?: ArticleAssetCta;
 };
 
@@ -351,6 +352,7 @@ export const answeringServiceCostGuide: GuideArticleData = {
     },
   ],
   relatedServiceSlugs: ["hotel-answering-service", "after-hours-support"],
+  relatedResourceSlugs: ["hotel-answering-service-vs-ai-voice", "after-hours-hotel-support-checklist"],
   assetCta: {
     heading: "Estimate what unanswered calls are actually costing your property.",
     calculatorHref: "/resources/missed-booking-calculator",
@@ -422,6 +424,7 @@ export const afterHoursChecklistGuide: GuideArticleData = {
     },
   ],
   relatedServiceSlugs: ["after-hours-support", "hotel-answering-service", "back-office-operations"],
+  relatedResourceSlugs: ["hotel-front-desk-overflow-support", "hotel-answering-service-vs-ai-voice"],
   assetCta: {
     heading: "Download the After-Hours Guest Coverage Checklist to audit your overnight gaps.",
     asset: "after-hours-checklist",
@@ -493,6 +496,7 @@ export const overflowSupportGuide: GuideArticleData = {
     },
   ],
   relatedServiceSlugs: ["hotel-answering-service", "reservation-support", "after-hours-support"],
+  relatedResourceSlugs: ["hotel-answering-service-vs-call-center", "after-hours-hotel-support-checklist"],
   assetCta: {
     heading: "Find the specific coverage gaps your property has right now.",
     asset: "coverage-gap-assessment",
@@ -565,6 +569,7 @@ export const otaInboxChecklistGuide: GuideArticleData = {
     },
   ],
   relatedServiceSlugs: ["ota-inbox-management", "guest-messaging", "vacation-rental-answering-service"],
+  relatedResourceSlugs: ["hotel-guest-messaging-sop-template", "hotel-answering-service-vs-call-center"],
   assetCta: {
     heading: "Download the OTA Inbox Response Checklist to standardize your inbox process.",
     asset: "ota-inbox-response-checklist",
@@ -643,6 +648,7 @@ export const messagingSopGuide: GuideArticleData = {
     },
   ],
   relatedServiceSlugs: ["guest-messaging", "ota-inbox-management"],
+  relatedResourceSlugs: ["booking-com-message-support", "hotel-front-desk-overflow-support"],
   assetCta: {
     heading: "Download the Hotel Guest Messaging SOP Template to put this into practice.",
     asset: "guest-messaging-sop",

@@ -12,7 +12,10 @@ import { SERVICES } from "@/lib/site-data";
 
 export function GuideArticle({ data }: { data: GuideArticleData }) {
   const path = `/resources/${data.slug}`;
-  const relatedResources = RESOURCES.filter((r) => r.slug !== data.slug).slice(0, 2);
+  const relatedResources = data.relatedResourceSlugs
+    ? RESOURCES.filter((r) => data.relatedResourceSlugs!.includes(r.slug))
+        .sort((a, b) => data.relatedResourceSlugs!.indexOf(a.slug) - data.relatedResourceSlugs!.indexOf(b.slug))
+    : RESOURCES.filter((r) => r.slug !== data.slug).slice(0, 2);
   const relatedServices = SERVICES.filter((s) => data.relatedServiceSlugs.includes(s.slug));
 
   return (

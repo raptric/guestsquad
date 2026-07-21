@@ -9,7 +9,7 @@ import { Differentiator } from "@/components/site/differentiator";
 import { AiHuman } from "@/components/site/ai-human";
 import { PropertyTypes } from "@/components/site/property-types";
 import { DEFAULT_PROCESS } from "@/components/site/process-steps";
-import { Metrics } from "@/components/site/metrics";
+import { Guarantees } from "@/components/site/guarantees";
 import { PricingCards } from "@/components/site/pricing-cards";
 import { CtaSection } from "@/components/site/cta-section";
 import { SERVICES } from "@/lib/site-data";
@@ -246,11 +246,11 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* METRICS */}
+      {/* GUARANTEES */}
       <Section>
-        <SectionHeading eyebrow="What to Expect" title="Coverage that shows up in the numbers." align="center" className="mx-auto" />
+        <SectionHeading eyebrow="Our Commitments" title="What every client gets from day one." align="center" className="mx-auto" />
         <div className="mt-12">
-          <Metrics />
+          <Guarantees />
         </div>
       </Section>
 

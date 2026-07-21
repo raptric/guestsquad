@@ -1,7 +1,7 @@
 declare global {
   interface Window {
     gtag?: (...args: unknown[]) => void;
-    dataLayer?: unknown[];
+    dataLayer?: Record<string, unknown>[];
   }
 }
 
@@ -11,6 +11,8 @@ export function trackEvent(
   eventName: string,
   params?: Record<string, string | number | boolean>
 ) {
-  if (typeof window === "undefined" || !window.gtag) return;
-  window.gtag("event", eventName, { ...params });
+  if (typeof window === "undefined") return;
+  // Push to dataLayer — GTM forwards to GA4 via Configuration tag
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({ event: eventName, ...params });
 }

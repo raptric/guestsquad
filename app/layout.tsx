@@ -9,7 +9,8 @@ import { JsonLd } from "@/components/site/json-ld";
 import { ScrollTracker } from "@/components/site/scroll-tracker";
 import { SITE } from "@/lib/site-data";
 import { organizationSchema, websiteSchema } from "@/lib/seo";
-import { GA_ID } from "@/lib/analytics";
+
+const GTM_ID = "GTM-PDHSJNXB";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -77,13 +78,22 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://images.unsplash.com" />
       </head>
       <body className="flex min-h-screen flex-col font-sans">
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
-          strategy="afterInteractive"
-        />
-        <Script id="ga4-init" strategy="afterInteractive">
-          {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_ID}',{page_path:window.location.pathname});`}
+        {/* GTM — initialise dataLayer before GTM script loads */}
+        <Script id="gtm-init" strategy="beforeInteractive">
+          {`window.dataLayer=window.dataLayer||[];`}
         </Script>
+        <Script id="gtm-script" strategy="afterInteractive">
+          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${GTM_ID}');`}
+        </Script>
+        {/* GTM noscript fallback */}
+        <noscript>
+          <iframe
+            src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
         <JsonLd data={[organizationSchema(), websiteSchema()]} />
         <ScrollTracker />
         <div className="no-print"><Nav /></div>

@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { Download, X, Loader2 } from "lucide-react";
 import { CalendlyPopupButton } from "@/components/site/calendly-popup-button";
+import { trackEvent } from "@/lib/analytics";
 
 interface DownloadGateProps {
   asset: string;
@@ -74,6 +75,11 @@ export function DownloadGate({ asset, pdfHref, ctaLabel = "Download PDF", block,
         body: JSON.stringify({ email, propertyType, asset, website, ...tracking }),
       });
       if (!res.ok) throw new Error("Request failed");
+      trackEvent("pdf_download", {
+        asset_name: asset,
+        source_page: tracking.source_page,
+        utm_source: tracking.utm_source || "direct",
+      });
       setStatus("done");
       // Trigger download
       const link = document.createElement("a");

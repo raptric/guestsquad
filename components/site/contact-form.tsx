@@ -10,6 +10,7 @@ import {
   PROPERTY_TYPES,
   PROPERTIES_COUNT_OPTIONS,
 } from "@/lib/site-data";
+import { trackEvent } from "@/lib/analytics";
 
 function getUtmParam(search: string, key: string): string {
   return new URLSearchParams(search).get(key) ?? "";
@@ -83,6 +84,11 @@ export function ContactForm() {
         body: JSON.stringify(data),
       });
       if (!res.ok) throw new Error("Server error");
+      trackEvent("generate_lead", {
+        source_page: tracking.source_page,
+        utm_source: tracking.utm_source || "direct",
+        property_type: data.propertyType || "unknown",
+      });
       setSubmitted(true);
     } catch {
       setError("Something went wrong. Please try again or email us directly at info@guestsquad.com.");

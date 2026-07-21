@@ -1,12 +1,15 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { Nav } from "@/components/site/nav";
 import { Footer } from "@/components/site/footer";
 import { CookieConsent } from "@/components/site/cookie-consent";
 import { JsonLd } from "@/components/site/json-ld";
+import { ScrollTracker } from "@/components/site/scroll-tracker";
 import { SITE } from "@/lib/site-data";
 import { organizationSchema, websiteSchema } from "@/lib/seo";
+import { GA_ID } from "@/lib/analytics";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -74,7 +77,15 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://images.unsplash.com" />
       </head>
       <body className="flex min-h-screen flex-col font-sans">
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="ga4-init" strategy="afterInteractive">
+          {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_ID}',{page_path:window.location.pathname});`}
+        </Script>
         <JsonLd data={[organizationSchema(), websiteSchema()]} />
+        <ScrollTracker />
         <div className="no-print"><Nav /></div>
         <main className="flex-1">{children}</main>
         <div className="no-print"><Footer /></div>

@@ -1,6 +1,7 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import { trackEvent } from "@/lib/analytics";
 
 function usd(n: number) {
   return new Intl.NumberFormat("en-US", {
@@ -18,11 +19,27 @@ export function MissedBookingCalculator({ compact = false }: Props) {
   const [missedCalls, setMissedCalls] = useState(30);
   const [bookingValue, setBookingValue] = useState(280);
   const [convRate, setConvRate] = useState(20);
+  const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const interacted = useRef(false);
 
   const monthly = missedCalls * (convRate / 100) * bookingValue;
   const annual = monthly * 12;
   const recovered = monthly * 0.7;
   const breakEven = bookingValue > 0 ? Math.ceil(150 / bookingValue) : 1;
+
+  useEffect(() => {
+    if (!interacted.current) { interacted.current = true; return; }
+    if (debounceRef.current) clearTimeout(debounceRef.current);
+    debounceRef.current = setTimeout(() => {
+      trackEvent("calculator_engagement", {
+        missed_calls: missedCalls,
+        booking_value: bookingValue,
+        conv_rate: convRate,
+        monthly_impact: Math.round(monthly),
+      });
+    }, 1500);
+    return () => { if (debounceRef.current) clearTimeout(debounceRef.current); };
+  }, [missedCalls, bookingValue, convRate, monthly]);
 
   return (
     <div className={compact ? "" : "mx-auto max-w-2xl"}>

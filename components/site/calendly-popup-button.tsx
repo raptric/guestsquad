@@ -3,6 +3,7 @@
 import { buttonVariants, type ButtonProps } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { SITE } from "@/lib/site-data";
+import { trackEvent } from "@/lib/analytics";
 
 declare global {
   interface Window {
@@ -41,6 +42,7 @@ export function CalendlyPopupButton({
   ...props
 }: CalendlyPopupButtonProps) {
   const handleClick = () => {
+    trackEvent("calendly_open", { source_page: window.location.pathname });
     loadCalendlyAssets(() => {
       window.Calendly?.initPopupWidget({ url: SITE.calendlyUrl });
     });

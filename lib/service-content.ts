@@ -48,6 +48,7 @@ export const hotelAnsweringServiceData: ServiceDetailData = {
   relatedTitle: "Pair call answering with after-hours and reservation support.",
   comparisonTitle: "Hotel answering vs voicemail, IVR, and generic call centers.",
   faqs: [
+    { q: "What is a hotel answering service?", a: "A hotel answering service provides live, human call coverage so reservation inquiries, guest questions, and overflow calls are answered by a trained person instead of going to voicemail or a phone tree. GuestSquad operates using your rates, policies, and property information, covering calls during peak periods, after hours, and any time your front desk cannot get to the phone." },
     { q: "How is this different from your Reservation Support service?", a: "Reservation Support focuses on bookings, quotes, and modifications. Hotel Answering Service is the broader call-answering layer, including general questions and overflow, and the two are often used together for complete phone coverage." },
     { q: "Do you use an automated phone tree or IVR?", a: "No. Calls are answered by a trained person. Automated menus are exactly what this service is built to avoid." },
     { q: "Can you cover just our busiest hours, not all day?", a: "Yes. Many clients start with peak-hour overflow coverage during check-in and check-out rushes rather than committing to full-day coverage." },
@@ -247,6 +248,7 @@ export const otaInboxData: ServiceDetailData = {
   relatedTitle: "Pair OTA coverage with reservation support and guest messaging.",
   comparisonTitle: "OTA inbox management vs auto-replies and once-a-day checking.",
   faqs: [
+    { q: "What is hotel OTA messaging?", a: "Hotel OTA messaging refers to the guest messages that arrive through platforms such as Booking.com, Expedia, and Airbnb before and after a booking is confirmed. Pre-booking messages are especially high-value because an unanswered question often results in the guest booking a competitor instead. GuestSquad monitors and responds to OTA messages across your active platforms so response times stay fast and inquiries convert." },
     { q: "Which OTA platforms do you cover?", a: "Booking.com, Expedia, and Airbnb messaging are covered as standard. Other platforms can be added if you use them." },
     { q: "Can you answer pre-booking questions, or just post-booking?", a: "Both. Pre-booking questions about rates, availability, and policies are answered fast enough to win the booking, not just service it after the fact." },
     { q: "Do you respond to guest reviews too?", a: "Yes, where that is part of your plan. Review responses are written in your brand voice and on the schedule you set." },
@@ -313,6 +315,7 @@ export const afterHoursData: ServiceDetailData = {
   relatedTitle: "Pair after-hours coverage with call answering and OTA inbox management.",
   comparisonTitle: "After-hours support vs hiring overnight staff or going unanswered.",
   faqs: [
+    { q: "Can hotels get 24/7 coverage without hiring overnight staff?", a: "Yes. Hotels can get hotel 24/7 coverage without hiring a full night shift by using an after-hours support service. GuestSquad covers overnight calls, late check-in questions, access issues, and guest messages using your property rules and escalation contacts. Genuine emergencies are routed to your on-call person. Most properties go live within 5 business days." },
     { q: "What hours do you actually cover?", a: "Whatever gap you need filled: overnight only, weekends only, or full 24/7 coverage. Most clients start with overnight and weekend gaps before expanding." },
     { q: "What counts as a genuine emergency, and how is it handled?", a: "Anything involving guest safety, security, or property damage is routed to your on-call contact immediately, following the escalation protocol we agree on during setup." },
     { q: "Can you handle a lockout or late check-in at 2am?", a: "Yes. Late check-in, early arrival, and access issues are among the most common overnight requests and are handled directly using your property's procedures." },
@@ -510,6 +513,7 @@ export const vacationRentalAnsweringData: ServiceDetailData = {
   relatedTitle: "Pair vacation rental answering with Airbnb guest support and OTA coverage.",
   comparisonTitle: "Vacation rental answering vs being the 24/7 on-call line yourself.",
   faqs: [
+    { q: "What is vacation rental after-hours support?", a: "Vacation rental after-hours support means guest calls and messages are answered outside normal working hours, including late check-in questions, access issues, urgent guest concerns, and escalation requests. GuestSquad handles or routes these issues using your property-specific rules and on-call contacts so you are not personally on call every night." },
     { q: "Do you answer phone calls, or just Airbnb/Vrbo messages?", a: "Both. This service covers live phone answering as well as Airbnb, Vrbo, and direct-booking messaging." },
     { q: "How many listings or units can this cover?", a: "As many as you manage. Pricing scales with listing count and volume, not a flat per-host fee." },
     { q: "What happens with something only I can fix, like a broken appliance?", a: "It is escalated to you or your maintenance contact immediately, while the guest is kept informed so they are not left waiting." },

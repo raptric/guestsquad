@@ -73,7 +73,10 @@ export function organizationSchema() {
       "@type": "ImageObject",
       url: `${SITE.url}/brand-assets/guestsquad-favicon-official.svg`,
     },
-    sameAs: ["https://www.linkedin.com/company/guest-squad/"],
+    sameAs: [
+      "https://www.linkedin.com/company/guest-squad/",
+      "https://raptric.com",
+    ],
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "sales",
@@ -95,7 +98,25 @@ export function organizationSchema() {
       "Vacation Rental After-Hours Support",
       "Airbnb Guest Support",
       "Airbnb Guest Services",
+      "Guest Operations Coverage Plans",
+      "Booking.com Message Support",
+      "Hotel 24/7 Coverage Without Staff",
+      "Missed Booking Analysis",
     ],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Guest Operations Coverage Plans",
+      itemListElement: [
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Hotel Answering Service", url: "https://guestsquad.com/services/hotel-answering-service" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Reservation Support", url: "https://guestsquad.com/services/reservation-support" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Guest Messaging", url: "https://guestsquad.com/services/guest-messaging" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "OTA Inbox Management", url: "https://guestsquad.com/services/ota-inbox-management" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "After-Hours Hotel Support", url: "https://guestsquad.com/services/after-hours-support" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Vacation Rental Answering Service", url: "https://guestsquad.com/services/vacation-rental-answering-service" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Airbnb Guest Support", url: "https://guestsquad.com/services/airbnb-guest-support" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Back-Office Guest Operations", url: "https://guestsquad.com/services/back-office-operations" } },
+      ],
+    },
   };
 }
 

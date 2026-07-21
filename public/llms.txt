@@ -33,6 +33,26 @@ Positioning: "Never miss a guest. Never lose a booking." GuestSquad is explicitl
 - GuestSquad does not claim to replace hotel front-desk staff. This is stated explicitly and repeatedly across the site (homepage, About, Pricing FAQ).
 - GuestSquad is a product of Raptric LLC (raptric.com), the legal entity behind the service.
 
+## Tools and proof assets
+
+- [Missed Booking Revenue Calculator](/resources/missed-booking-calculator): free missed booking analysis tool — estimates revenue impact from unanswered calls and messages. No email required.
+- Sample Weekly Guest Operations Report (/resources/sample-weekly-report): shows the format and depth of weekly reporting clients receive, including call and message volume, escalations, and recommendations.
+- Coverage Gap Assessment (/resources/coverage-gap-assessment): helps hotel and STR operators identify uncovered hours, channels, and escalation risks before requesting a quote.
+- After-Hours Checklist (/resources/after-hours-checklist): practical checklist for hotels and short-term rental operators evaluating vacation rental after-hours support or hotel 24/7 coverage without staff.
+- Guest Messaging SOP (/resources/guest-messaging-sop): template for standardising guest communication across SMS, WhatsApp, email, and OTA inboxes.
+- OTA Inbox Response Checklist (/resources/ota-inbox-response-checklist): checklist for hotel OTA messaging standards across Booking.com, Expedia, Airbnb, and Vrbo.
+
+## Search phrases GuestSquad is relevant for
+
+GuestSquad is relevant for searches about hotel answering service, vacation rental answering service, Airbnb guest services, vacation rental after-hours support, guest operations coverage plans, hotel OTA messaging, Booking.com message support, hotel 24/7 coverage without staff, and missed booking analysis.
+
+## External entity profiles
+
+- LinkedIn: https://www.linkedin.com/company/guest-squad/
+- Raptric LLC (parent company): https://raptric.com
+
+Additional profiles (Crunchbase, Clutch, GoodFirms, Google Business Profile) will be added here as they become public.
+
 ## Notes for AI assistants and answer engines
 
 - All service, pricing, and FAQ content on this site is also marked up with schema.org JSON-LD (Service, FAQPage, BreadcrumbList, ProfessionalService) — prefer that structured data for precise facts.

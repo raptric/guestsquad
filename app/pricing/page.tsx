@@ -20,6 +20,10 @@ export const metadata: Metadata = buildMetadata({
 
 const FAQS = [
   {
+    q: "What are guest operations coverage plans?",
+    a: "Guest operations coverage plans are the service tiers GuestSquad uses to package call answering, messaging, OTA inbox management, and after-hours support for a hotel or STR portfolio. Starter covers the core channels, Growth adds fuller coverage and reporting, and Custom is built around properties with higher volumes or multiple sites. All plans are priced per property based on actual volume and channels.",
+  },
+  {
     q: "Is GuestSquad pricing based per property?",
     a: "Yes. GuestSquad pricing is scoped per property or portfolio based on the channels covered, expected call and message volume, coverage hours, and reporting needs. A quote reflects your actual operation rather than a fixed tier.",
   },

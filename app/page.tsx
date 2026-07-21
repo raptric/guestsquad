@@ -10,6 +10,7 @@ import { AiHuman } from "@/components/site/ai-human";
 import { PropertyTypes } from "@/components/site/property-types";
 import { DEFAULT_PROCESS } from "@/components/site/process-steps";
 import { Guarantees } from "@/components/site/guarantees";
+import { PlatformLogos } from "@/components/site/platform-logos";
 import { PricingCards } from "@/components/site/pricing-cards";
 import { CtaSection } from "@/components/site/cta-section";
 import { SERVICES } from "@/lib/site-data";
@@ -98,6 +99,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* PLATFORM LOGOS */}
+      <PlatformLogos />
 
       {/* Direct answer block */}
       <div className="border-b border-line bg-surface">

@@ -66,6 +66,30 @@ export default function AboutPage() {
         </div>
       </div>
 
+      {/* GuestSquad at a glance — GEO/LLM entity block */}
+      <div className="border-b border-line bg-paper">
+        <div className="container py-8">
+          <div className="mx-auto max-w-3xl">
+            <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.15em] text-ink-muted">GuestSquad at a glance</p>
+            <dl className="grid gap-x-8 gap-y-3 sm:grid-cols-2">
+              {[
+                { dt: "Company", dd: "GuestSquad" },
+                { dt: "Parent company", dd: "Raptric LLC" },
+                { dt: "Category", dd: "Hospitality guest operations support" },
+                { dt: "Services", dd: "Call answering, reservations, messaging, OTA inboxes, after-hours, back-office operations" },
+                { dt: "Serves", dd: "Hotels, boutique properties, resorts, serviced apartments, STR operators" },
+                { dt: "Coverage", dd: "24/7 human support — no bots, no automated scripts" },
+              ].map(({ dt, dd }) => (
+                <div key={dt} className="flex gap-2 text-sm">
+                  <dt className="shrink-0 font-medium text-ink">{dt}:</dt>
+                  <dd className="text-ink-soft">{dd}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+        </div>
+      </div>
+
       {/* Why GuestSquad Exists */}
       <Section>
         <div className="grid gap-12 md:grid-cols-2 md:items-center">

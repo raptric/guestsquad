@@ -12,6 +12,10 @@ import { faqSchema, breadcrumbSchema } from "@/lib/seo";
 
 const FAQS = [
   {
+    q: "How does missed booking analysis work?",
+    a: "Missed booking analysis estimates the revenue a property loses from unanswered calls and messages. You enter your monthly missed call volume, average booking value, and typical conversion rate. The calculator shows how much revenue those unanswered calls represent and what a realistic recovery looks like if each call had been answered by a trained person. It is a starting point for understanding whether a coverage gap is worth fixing.",
+  },
+  {
     q: "What counts as a missed call for this calculator?",
     a: "Any inbound call that goes unanswered: rings out, reaches voicemail, or is abandoned by the caller before speaking to someone. This includes overnight calls, calls during busy check-in periods when your team is occupied, and calls during days your front desk is understaffed.",
   },

@@ -6,10 +6,10 @@ const GUARANTEES = [
     counter: "Enterprise BPOs take months.",
   },
   {
-    commitment: "Agents briefed on your actual property",
+    commitment: "Hospitality-trained staff, ready for your guests from day one.",
     detail:
-      "Every agent reviews your past guest Q&A, rates, policies, and brand voice before going live. No generic scripts. No guesswork.",
-    counter: "Generic call centers use shared scripts.",
+      "Every team member reviews your past guest Q&A, rates, policies, and brand voice before going live. Prepared for your property, not a generic script.",
+    counter: "Built around your operation, not a shared call center pool.",
   },
   {
     commitment: "Every interaction logged",
@@ -18,10 +18,10 @@ const GUARANTEES = [
     counter: "Most services report call counts, not outcomes.",
   },
   {
-    commitment: "Cancel any month",
+    commitment: "No contracts. No lock-in.",
     detail:
-      "Plans are month-to-month with 30 days notice. No penalties, no lock-in, no awkward conversation. We earn renewal through performance.",
-    counter: "Competitors lock you in for 6–12 months.",
+      "Plans are month-to-month with 30 days notice. We would rather earn your business through performance than hold you to a term.",
+    counter: "Some providers require 6–12 month commitments upfront.",
   },
 ];
 

@@ -20,6 +20,10 @@ export const metadata: Metadata = buildMetadata({
 
 const FAQS = [
   {
+    q: "Is GuestSquad pricing based per property?",
+    a: "Yes. GuestSquad pricing is scoped per property or portfolio based on the channels covered, expected call and message volume, coverage hours, and reporting needs. A quote reflects your actual operation rather than a fixed tier.",
+  },
+  {
     q: "Why don't you list exact prices?",
     a: "Pricing depends on call and message volume, number of properties, and which channels you need covered. A quote takes one short call and reflects your actual operation, not a generic tier.",
   },
@@ -98,7 +102,7 @@ export default function PricingPage() {
       <div className="border-b border-line bg-surface">
         <div className="container py-8">
           <p className="mx-auto max-w-3xl text-sm leading-relaxed text-ink-soft">
-            GuestSquad pricing is based on your property&rsquo;s call and message volume, channels covered, hours of coverage, and number of properties. There is no fixed published rate because two properties with different volumes and channels need different plans. A quote is provided after a short discovery call and reflects your actual operation.
+            GuestSquad pricing is scoped per property or portfolio based on channels covered, call and message volume, hours of coverage, and reporting needs. There is no fixed published rate because two properties with different volumes and channels need different guest operations coverage plans. A quote is provided after a short discovery call and reflects your actual operation.
           </p>
         </div>
       </div>

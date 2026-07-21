@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { PageHero } from "@/components/site/page-hero";
 import { Section, SectionHeading } from "@/components/site/section";
-import { Metrics } from "@/components/site/metrics";
+import { Guarantees } from "@/components/site/guarantees";
 import { CtaSection } from "@/components/site/cta-section";
 import { Breadcrumbs } from "@/components/site/breadcrumbs";
 import { JsonLd } from "@/components/site/json-ld";
@@ -129,7 +129,7 @@ export default function AboutPage() {
           .
         </div>
         <div className="mt-12">
-          <Metrics />
+          <Guarantees />
         </div>
       </Section>
 

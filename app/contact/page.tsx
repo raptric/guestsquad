@@ -78,7 +78,7 @@ export default function ContactPage() {
             {/* Left — Calendly inline widget */}
             <div>
               <p className="mb-4 text-xs font-semibold uppercase tracking-[0.16em] text-ink-muted">
-                Book a 30-Minute Demo
+                Book a Coverage Review
               </p>
               <CalendlyInlineWidget />
             </div>

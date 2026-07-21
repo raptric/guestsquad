@@ -207,7 +207,7 @@ export const otaInboxData: ServiceDetailData = {
   description:
     "Booking.com, Expedia, and Airbnb inboxes monitored and answered around the clock, so pre-booking questions convert instead of disappearing.",
   answerBlock:
-    "GuestSquad's OTA inbox management service monitors and responds to messages across Booking.com, Expedia, and Airbnb on your behalf. Pre-booking inquiries are answered fast enough to win the booking, post-booking questions are resolved without your team having to check multiple extranets, and reviews are responded to in your brand voice. OTA response time is one of the few ranking factors hotels can directly control, and we treat it accordingly.",
+    "GuestSquad's OTA inbox management service monitors and responds to messages across Booking.com, Expedia, and Airbnb on your behalf. Pre-booking inquiries are answered fast enough to win the booking, post-booking questions are resolved without your team having to check multiple extranets, and reviews are responded to in your brand voice. OTA response time is one of the few ranking factors hotels can directly control, and we treat it accordingly. For hotels comparing hotel OTA messaging support, GuestSquad helps monitor and respond to Booking.com, Expedia, Airbnb, and Vrbo messages using your property-specific instructions.",
   image: {
     src: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=1600&q=90",
     alt: "Team monitoring OTA inboxes across multiple screens",

@@ -19,8 +19,8 @@ Positioning: "Never miss a guest. Never lose a booking." GuestSquad is explicitl
 
 - [Home](/): Overview, positioning, and full service summary.
 - [Services](/services): All six services with a direct comparison to generic call centers.
-- [Pricing](/pricing): Three plans — Starter, Growth, Custom — quote-based rather than published flat rates, with a pricing FAQ.
-- [About](/about): Why GuestSquad exists and its "support, not replacement" stance.
+- [Pricing](/pricing): Three guest operations coverage plans — Starter, Growth, Custom — priced per property or portfolio based on channels, volume, and coverage hours. Quote-based, not published flat rates.
+- [About](/about): Why GuestSquad exists, its "support, not replacement" stance, agent training standards, QA process, data handling, and four operational commitments (live in 5 days, hospitality-trained staff, every interaction logged, no contracts).
 - [Contact](/contact): Lead form (name, work email, hotel name, property count, property type, monthly volume, current tools, message) plus a Calendly demo link.
 - [Privacy Policy](/privacy-policy): GDPR-oriented data handling, controller/processor roles, and data subject rights.
 - [Terms of Service](/terms-of-service): Billing authorization, payment dispute/chargeback process, pilot terms, and liability terms.

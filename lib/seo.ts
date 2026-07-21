@@ -89,6 +89,7 @@ export function organizationSchema() {
       "Hotel Back Office Operations",
       "Virtual Front Desk",
       "OTA Inbox Management",
+      "Hotel OTA Messaging",
       "After-Hours Hotel Support",
       "Vacation Rental Answering Service",
       "Vacation Rental After-Hours Support",

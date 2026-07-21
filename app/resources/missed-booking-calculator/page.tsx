@@ -72,7 +72,7 @@ export default function CalculatorPage() {
       <PageHero
         eyebrow="Revenue Calculator"
         title="How much are missed calls costing you each month?"
-        description="Adjust the inputs below to estimate the revenue impact of unanswered reservation calls at your property. No email required to use the calculator."
+        description="Use this missed booking analysis to estimate how unanswered calls and messages are affecting your monthly and annual revenue. Adjust the inputs below for your property. No email required."
       />
 
       <Section>

@@ -83,13 +83,17 @@ export function organizationSchema() {
     },
     knowsAbout: [
       "Hotel Guest Operations",
+      "Hotel Answering Service",
       "Guest Reservation Service",
       "Hotel BPO",
       "Hotel Back Office Operations",
       "Virtual Front Desk",
       "OTA Inbox Management",
       "After-Hours Hotel Support",
+      "Vacation Rental Answering Service",
+      "Vacation Rental After-Hours Support",
       "Airbnb Guest Support",
+      "Airbnb Guest Services",
     ],
   };
 }

@@ -57,6 +57,7 @@ export const hotelAnsweringServiceData: ServiceDetailData = {
     { q: "Can GuestSquad handle direct booking calls from our website or Google profile?", a: "Yes. Calls from any channel, whether your website, Google Business profile, or a direct number, are answered the same way: by a trained person with your property information." },
     { q: "What happens if a caller asks for something outside our policy?", a: "The caller is informed politely that the request needs your team's direct approval, and the inquiry is logged and routed with full context so your team can follow up promptly." },
     { q: "Can calls be transferred to our team when needed?", a: "Yes. Live transfer to your designated number is available for situations that require your team's direct involvement, following the escalation rules we agree on during setup." },
+    { q: "How does a hotel answering service work without adding staff?", a: "A hotel answering service gives your property live call coverage without hiring another front desk shift. GuestSquad answers reservation calls, guest questions, overflow calls, and after-hours inquiries using your property rules, escalation contacts, and approved guest-handling instructions. It pairs naturally with after-hours support for full overnight coverage." },
   ],
   assetLinks: [
     { label: "Missed Booking Revenue Calculator", href: "/resources/missed-booking-calculator" },
@@ -272,7 +273,7 @@ export const afterHoursData: ServiceDetailData = {
   description:
     "Overnight and weekend front-desk coverage for calls and messages your on-site team cannot take outside working hours, without hiring a night shift.",
   answerBlock:
-    "GuestSquad's after-hours hotel support covers overnight and weekend calls and messages for properties that do not staff a full 24-hour front desk. Late check-ins, access questions, noise complaints, and common overnight inquiries are handled directly. Genuine emergencies involving guest safety, security, or property damage are escalated immediately to your on-call contact following the protocol you set during onboarding.",
+    "GuestSquad's after-hours hotel support covers overnight and weekend calls and messages for properties that do not staff a full 24-hour front desk. Late check-ins, access questions, noise complaints, and common overnight inquiries are handled directly. Genuine emergencies involving guest safety, security, or property damage are escalated immediately to your on-call contact following the protocol you set during onboarding. GuestSquad also supports vacation rental and short-term rental operators that need after-hours guest coverage for late arrivals, access problems, urgent guest messages, and host-side escalation.",
   image: {
     src: "https://images.unsplash.com/photo-1534679541758-8dc76ff8081d?w=1600&q=90",
     alt: "Modern hotel lobby and reception desk lit at night",
@@ -320,6 +321,7 @@ export const afterHoursData: ServiceDetailData = {
     { q: "Can GuestSquad cover only nights and weekends?", a: "Yes. Most clients start with exactly that: overnight and weekend coverage where their team is absent. Coverage hours are agreed during setup and can be adjusted as your needs change." },
     { q: "Can after-hours support reduce front desk burnout?", a: "Yes. One of the most common reasons teams use this service is to remove the expectation that front desk staff will also handle overnight calls. Clear separation of hours reduces the pressure on your in-house team." },
     { q: "How does GuestSquad decide what gets escalated overnight?", a: "Escalation rules are agreed with your team before going live. You specify what can be handled directly, what should be logged for morning review, and what should trigger an immediate call to your on-call contact." },
+    { q: "Do you provide vacation rental after-hours support?", a: "Yes. GuestSquad provides vacation rental after-hours support for short-term rental operators, Airbnb hosts, serviced apartments, and property managers who need guest calls and messages covered outside normal working hours. Access issues, check-in questions, and urgent guest concerns are handled or escalated according to your rules. This pairs with the vacation rental answering service for complete coverage." },
   ],
   assetLinks: [
     { label: "Download After-Hours Checklist", href: "/resources/after-hours-checklist" },
@@ -402,7 +404,7 @@ export const airbnbSupportData: ServiceDetailData = {
   description:
     "Round-the-clock guest support for Airbnb hosts and serviced apartment operators, with check-in help, issue resolution, and FAQs handled across every listing.",
   answerBlock:
-    "GuestSquad's Airbnb guest support service provides 24/7 message handling and guest communication for Airbnb hosts, Vrbo operators, and serviced apartment managers who cannot personally monitor inquiries around the clock. Check-in coordination, in-stay issues, listing-specific questions, and review management are handled by trained agents using your listing instructions, so your response rate stays high and your guest experience stays consistent.",
+    "GuestSquad's Airbnb guest support service provides 24/7 message handling and guest communication for Airbnb hosts, Vrbo operators, and serviced apartment managers who cannot personally monitor inquiries around the clock. Check-in coordination, in-stay issues, listing-specific questions, and review management are handled by trained agents using your listing instructions, so your response rate stays high and your guest experience stays consistent. For hosts and operators comparing Airbnb guest services, GuestSquad provides human guest support across guest messages, access questions, listing FAQs, escalation issues, and after-hours coverage.",
   image: {
     src: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1600&q=90",
     alt: "Modern short-term rental interior guests check into",
@@ -450,6 +452,7 @@ export const airbnbSupportData: ServiceDetailData = {
     { q: "Can GuestSquad help protect Airbnb response rate?", a: "Yes. Response rate is directly tied to how quickly messages are answered. Having trained agents monitoring your Airbnb inbox around the clock means guests receive prompt replies at any hour, protecting your response rate and platform ranking." },
     { q: "Can GuestSquad answer check-in questions across multiple listings?", a: "Yes. Each listing has its own briefing document with specific check-in instructions, house rules, and access details. Agents use the correct information for each property." },
     { q: "Can GuestSquad use listing-specific instructions for each unit?", a: "Yes. During onboarding, we build a briefing document for each listing you operate. This covers check-in details, house rules, amenity instructions, and your escalation preferences for that specific unit." },
+    { q: "Is GuestSquad an Airbnb guest services provider?", a: "Yes. GuestSquad provides Airbnb guest services for hosts, serviced apartment operators, and short-term rental managers who need human guest support without personally monitoring every message. Coverage includes guest questions, check-in help, listing-specific FAQs, issue routing, and after-hours escalation. It pairs naturally with the vacation rental answering service for full call and message coverage." },
   ],
   assetLinks: [
     { label: "Guest Coverage Gap Assessment", href: "/resources/coverage-gap-assessment" },
@@ -515,6 +518,7 @@ export const vacationRentalAnsweringData: ServiceDetailData = {
     { q: "Is this only for Airbnb or also Vrbo and direct bookings?", a: "All three. Airbnb, Vrbo, and direct-booking guests are covered from the same point of coverage, so you are not managing separate answering arrangements per platform." },
     { q: "Can GuestSquad answer calls for multiple properties or listings?", a: "Yes. Each property or listing has its own briefing in our system. Agents use the correct information for whichever unit a guest is calling about." },
     { q: "What information do you need for each listing?", a: "During onboarding we collect check-in instructions, access codes, house rules, amenity details, local recommendations, and your escalation contacts. The more detail you provide, the more we can handle without needing to reach you." },
+    { q: "Does the vacation rental answering service cover after-hours calls and emergencies?", a: "Yes. GuestSquad covers vacation rental after-hours support for late check-in questions, access issues, urgent guest calls, and messages that arrive when your team or host is offline. True emergencies are escalated to your on-call contact using your property-specific rules. This pairs with the after-hours support service for full overnight coverage." },
   ],
   assetLinks: [
     { label: "Download After-Hours Checklist", href: "/resources/after-hours-checklist" },

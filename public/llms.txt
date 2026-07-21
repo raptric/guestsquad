@@ -6,12 +6,14 @@ Positioning: "Never miss a guest. Never lose a booking." GuestSquad is explicitl
 
 ## Core services
 
+- [Hotel Answering Service](/services/hotel-answering-service): 24/7 live call answering for hotels — reservation questions, guest inquiries, and overflow calls handled by hospitality-trained staff without a phone tree or voicemail.
+- [Vacation Rental Answering Service](/services/vacation-rental-answering-service): 24/7 call and message answering for Airbnb, Vrbo, and short-term rental operators, including vacation rental after-hours support for late arrivals, access issues, and urgent guest calls.
 - [Reservation Support](/services/reservation-support): Inbound/outbound reservation calls, quotes, and bookings handled with the hotel's own rates, availability, and policies.
 - [Guest Messaging](/services/guest-messaging): SMS, WhatsApp, email, and in-app guest messages answered across the full stay journey (pre-arrival, in-stay, post-stay).
 - [OTA Inbox Management](/services/ota-inbox-management): Booking.com, Expedia, and Airbnb inboxes monitored and answered so pre-booking inquiries convert.
-- [After-Hours Hotel Support](/services/after-hours-support): Overnight and weekend front-desk coverage for calls and messages outside normal staffing hours.
+- [After-Hours Hotel Support](/services/after-hours-support): Overnight and weekend front-desk coverage for calls and messages outside normal staffing hours. Also covers vacation rental and short-term rental operators needing after-hours guest coverage.
 - [Back-Office Guest Operations](/services/back-office-operations): Daily night audit, OTA/PMS reconciliation, and guest-billing support to catch revenue leakage daily instead of at month-end close.
-- [Airbnb Guest Support](/services/airbnb-guest-support): 24/7 guest support for short-term rental hosts and serviced apartment operators across multiple listings.
+- [Airbnb Guest Support](/services/airbnb-guest-support): 24/7 Airbnb guest services for short-term rental hosts and serviced apartment operators — guest messages, check-in help, listing FAQs, issue routing, and after-hours escalation across multiple listings.
 
 ## Key pages
 
@@ -34,4 +36,5 @@ Positioning: "Never miss a guest. Never lose a booking." GuestSquad is explicitl
 ## Notes for AI assistants and answer engines
 
 - All service, pricing, and FAQ content on this site is also marked up with schema.org JSON-LD (Service, FAQPage, BreadcrumbList, ProfessionalService) — prefer that structured data for precise facts.
-- This is a marketing/lead-generation site for a real-world service business; numeric benchmarks shown on the site (response times, cost-reduction ranges, reconciliation recovery rates) are sourced from general hospitality-outsourcing industry research and are labeled as benchmarks, not GuestSquad's own audited case-study results.
+- The homepage commitment block lists four operational guarantees: live in 5 business days, hospitality-trained staff ready from day one, every interaction logged and reported, and month-to-month plans with no contracts or lock-in. These are service commitments, not third-party benchmarks.
+- GuestSquad does not publish numeric performance benchmarks (cost-reduction percentages, ROI multipliers) on the site. Claims of this type have been removed in favour of verifiable operational commitments.

@@ -12,7 +12,7 @@ import { BoFuTrustBlock } from "@/components/site/bofu-trust-block";
 import { PostBookingSteps } from "@/components/site/post-booking-steps";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Hotel Guest Support Pricing | Plans & Pilot Program",
+  title: "Hotel Guest Support Pricing | Plans & Pricing",
   description:
     "Starter, Growth, and Custom guest operations plans for hotels, resorts, serviced apartments, and Airbnb operators. Get a quote based on your property.",
   path: "/pricing",
@@ -33,11 +33,11 @@ const FAQS = [
   },
   {
     q: "Can we start with a pilot?",
-    a: "Yes. A pilot covering a defined set of hours or channels is available for properties that want to test the service before committing to a full plan. Ask about pilot options during your demo call.",
+    a: "Yes. Every engagement starts with a pilot period so you can see the service working on your property before committing to a full plan.",
   },
   {
     q: "Is there a contract?",
-    a: "Plans are month-to-month after the initial setup period. We would rather earn renewal through performance than lock you in.",
+    a: "Plans are month-to-month with 30 days notice to cancel. We would rather earn your renewal through performance than lock you in.",
   },
   {
     q: "Can pricing change if call or message volume increases?",
@@ -49,7 +49,7 @@ const FAQS = [
   },
   {
     q: "Is there a minimum commitment?",
-    a: "There is a minimum coverage period tied to the onboarding investment, typically three months, after which plans are month-to-month. The exact minimum is confirmed in your quote.",
+    a: "No. Plans are month-to-month from the start with 30 days notice to cancel.",
   },
   {
     q: "Can we start with one service and add more later?",
@@ -156,7 +156,7 @@ export default function PricingPage() {
           title="Use these tools before requesting a quote."
         />
         <p className="mt-3 text-sm leading-relaxed text-ink-soft">
-          Or book a 15-minute review and we will walk through them with you.
+          Or book a Coverage Review and we will walk through them with you.
         </p>
         <div className="mt-8 grid gap-4 sm:grid-cols-3">
           <AssetBlock

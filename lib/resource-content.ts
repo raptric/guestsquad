@@ -226,7 +226,7 @@ export const callCenterComparison: ResourceArticleData = {
     },
     {
       feature: "Contract structure",
-      a: "Pilot-first, month-to-month, so you see results before committing further.",
+      a: "Pilot-first, then month-to-month with 30 days notice to cancel — so you see results before committing further.",
       b: "Often requires longer lock-in contracts before you've seen real performance.",
     },
   ],
@@ -246,7 +246,7 @@ export const callCenterComparison: ResourceArticleData = {
     },
     {
       q: "Do you require a long-term contract like some call centers do?",
-      a: "No. Every engagement starts with a 30-day pilot, then continues month-to-month.",
+      a: "No. Every engagement starts with a pilot period, then continues month-to-month with 30 days notice to cancel.",
     },
     {
       q: "We already use a call center for overflow. Can you work alongside it?",
@@ -328,22 +328,22 @@ export const answeringServiceCostGuide: GuideArticleData = {
     {
       heading: "What We Quote Instead",
       paragraphs: [
-        "GuestSquad doesn't publish flat pricing because doing so would mean either overcharging low-volume properties or underpricing high-volume ones. Instead, every engagement starts with a short conversation about your volume and channels, and we recommend one of three plans accordingly; see the full breakdown on the Pricing page. Every plan starts with a 30-day pilot, so you see real numbers before committing further.",
+        "GuestSquad doesn't publish flat pricing because doing so would mean either overcharging low-volume properties or underpricing high-volume ones. Instead, every engagement starts with a short conversation about your volume and channels, and we recommend one of three plans accordingly; see the full breakdown on the Pricing page. Every plan starts with a pilot period so you see real results before committing further.",
       ],
     },
   ],
   faqs: [
     {
       q: "Is there a setup fee?",
-      a: "Setup is included in the pilot fee rather than charged separately; see Pricing for the current pilot terms.",
+      a: "There is a one-time onboarding fee that covers property briefing, agent training, and go-live setup. It is disclosed during your quote call.",
     },
     {
       q: "Does the price change if our call volume spikes?",
       a: "Plans are scoped to your typical volume range. A sustained increase would mean revisiting the plan together, not a surprise overage charge.",
     },
     {
-      q: "Is the 30-day pilot really the full service?",
-      a: "Yes. The pilot runs the full Guest Journey service tier, not a stripped-down trial version.",
+      q: "Is the pilot really the full service?",
+      a: "Yes. The pilot runs the full service for your property — not a stripped-down trial version.",
     },
     {
       q: "Do you charge per call, per minute, or a flat rate?",

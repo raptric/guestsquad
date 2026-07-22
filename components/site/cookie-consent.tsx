@@ -28,7 +28,7 @@ export function CookieConsent() {
   if (!visible) return null;
 
   return (
-    <div className="fixed bottom-4 left-4 right-4 z-[60] mx-auto max-w-2xl rounded-xl border border-line bg-paper shadow-lg md:left-6 md:right-auto md:max-w-lg">
+    <div className="fixed bottom-4 left-4 right-4 z-[60] mx-auto max-w-2xl rounded-xl border border-line bg-paper shadow-lg">
       <div className="p-5">
         <p className="text-sm font-semibold text-ink">Cookie consent</p>
         <p className="mt-2 text-sm leading-relaxed text-ink-soft">

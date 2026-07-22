@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Check } from "lucide-react";
 import { CalendlyPopupButton } from "@/components/site/calendly-popup-button";
+import { ButtonLink } from "@/components/site/button-link";
 import { cn } from "@/lib/utils";
 
 type Feature = { label: string; href?: string };
@@ -11,6 +12,7 @@ type Plan = {
   bestFor: string;
   features: Feature[];
   featured?: boolean;
+  ctaType: "calendly" | "contact";
 };
 
 const PLANS: Plan[] = [
@@ -24,6 +26,7 @@ const PLANS: Plan[] = [
       { label: "Basic reservation support", href: "/services/reservation-support" },
       { label: "Monthly activity report" },
     ],
+    ctaType: "calendly",
   },
   {
     name: "Growth",
@@ -38,6 +41,7 @@ const PLANS: Plan[] = [
       { label: "Weekly performance reporting" },
     ],
     featured: true,
+    ctaType: "calendly",
   },
   {
     name: "Custom",
@@ -50,6 +54,7 @@ const PLANS: Plan[] = [
       { label: "Back-office guest operations", href: "/services/back-office-operations" },
       { label: "Priority onboarding" },
     ],
+    ctaType: "contact",
   },
 ];
 
@@ -92,13 +97,23 @@ export function PricingCards() {
             ))}
           </ul>
 
-          <CalendlyPopupButton
-            variant={plan.featured ? "gold" : "outline"}
-            size="default"
-            className="mt-8 w-full"
-          >
-            Book a Coverage Review
-          </CalendlyPopupButton>
+          {plan.ctaType === "calendly" ? (
+            <CalendlyPopupButton
+              variant={plan.featured ? "gold" : "outline"}
+              size="default"
+              className="mt-8 w-full"
+            >
+              Get a Quote
+            </CalendlyPopupButton>
+          ) : (
+            <ButtonLink
+              href="/contact"
+              variant="outline"
+              className="mt-8 w-full"
+            >
+              Contact Sales
+            </ButtonLink>
+          )}
         </div>
       ))}
     </div>

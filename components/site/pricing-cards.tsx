@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Check } from "lucide-react";
-import { ButtonLink } from "@/components/site/button-link";
+import { CalendlyPopupButton } from "@/components/site/calendly-popup-button";
 import { cn } from "@/lib/utils";
 
 type Feature = { label: string; href?: string };
@@ -10,8 +10,6 @@ type Plan = {
   description: string;
   bestFor: string;
   features: Feature[];
-  cta: string;
-  href: string;
   featured?: boolean;
 };
 
@@ -26,8 +24,6 @@ const PLANS: Plan[] = [
       { label: "Basic reservation support", href: "/services/reservation-support" },
       { label: "Monthly activity report" },
     ],
-    cta: "Get Quote",
-    href: "/contact",
   },
   {
     name: "Growth",
@@ -41,8 +37,6 @@ const PLANS: Plan[] = [
       { label: "Upsell & revenue support" },
       { label: "Weekly performance reporting" },
     ],
-    cta: "Get Quote",
-    href: "/contact",
     featured: true,
   },
   {
@@ -56,8 +50,6 @@ const PLANS: Plan[] = [
       { label: "Back-office guest operations", href: "/services/back-office-operations" },
       { label: "Priority onboarding" },
     ],
-    cta: "Book Demo",
-    href: "/contact",
   },
 ];
 
@@ -100,13 +92,13 @@ export function PricingCards() {
             ))}
           </ul>
 
-          <ButtonLink
-            href={plan.href}
+          <CalendlyPopupButton
             variant={plan.featured ? "gold" : "outline"}
+            size="default"
             className="mt-8 w-full"
           >
-            {plan.cta}
-          </ButtonLink>
+            Book a Coverage Review
+          </CalendlyPopupButton>
         </div>
       ))}
     </div>

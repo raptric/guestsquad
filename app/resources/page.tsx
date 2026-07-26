@@ -9,7 +9,7 @@ import { CtaSection } from "@/components/site/cta-section";
 import { DownloadGate } from "@/components/site/download-gate";
 import { buildMetadata, breadcrumbSchema } from "@/lib/seo";
 import { RESOURCES } from "@/lib/resource-content";
-import { Calculator, FileText, ClipboardList, BarChart2 } from "lucide-react";
+import { Calculator, FileText, ClipboardList, BarChart2, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = buildMetadata({
   title: "Hotel Answering Service Guides & Comparisons",
@@ -34,51 +34,99 @@ export default function ResourcesPage() {
         description="Practical tools, templates, and guides for hospitality operators evaluating guest support options."
       />
 
-      {/* Free Tools */}
+      {/* Journey strip */}
+      <div className="border-b border-line bg-surface">
+        <div className="container py-5">
+          <div className="flex flex-wrap items-center gap-2 text-xs text-ink-muted">
+            {[
+              "Calculate your revenue gap",
+              "Identify your coverage gaps",
+              "Get the right templates",
+              "See what GuestSquad delivers",
+              "Book a coverage review",
+            ].map((step, i, arr) => (
+              <span key={step} className="flex items-center gap-2">
+                <span className="flex items-center gap-1.5">
+                  <span className="flex h-5 w-5 items-center justify-center rounded-full bg-gold-dark text-[10px] font-semibold text-paper">
+                    {i + 1}
+                  </span>
+                  <span>{step}</span>
+                </span>
+                {i < arr.length - 1 && <ArrowRight className="h-3 w-3 shrink-0 text-ink-muted/50" />}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Step 1 — Calculator */}
       <Section>
         <SectionHeading
-          eyebrow="Free Tools"
-          title="Calculate and assess your coverage gaps."
+          eyebrow="Step 1"
+          title="Calculate how much unanswered calls are costing you."
         />
-        <div className="mt-10 grid gap-6 sm:grid-cols-2">
+        <div className="mt-8">
           <Link
             href="/resources/missed-booking-calculator"
-            className="group flex flex-col rounded-lg border border-line bg-paper p-6 transition-colors hover:border-gold-dark"
+            className="group flex flex-col rounded-lg border border-line bg-paper p-6 transition-colors hover:border-gold-dark sm:flex-row sm:items-center sm:justify-between"
           >
-            <div className="flex items-center justify-between">
-              <Calculator className="h-5 w-5 text-gold-dark" />
-              <span className="rounded bg-surface px-2.5 py-1 text-xs font-medium text-ink-muted">Free Tool</span>
+            <div className="flex items-start gap-4">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-line bg-surface">
+                <Calculator className="h-5 w-5 text-gold-dark" />
+              </div>
+              <div>
+                <h3 className="text-sm font-medium text-ink transition-colors group-hover:text-gold-dark">
+                  Missed Booking Revenue Calculator
+                </h3>
+                <p className="mt-1 text-sm leading-relaxed text-ink-soft">
+                  Enter your missed call volume, average booking value, and conversion rate. The calculator shows the monthly and annual revenue impact and how many recovered bookings it takes to break even on coverage.
+                </p>
+              </div>
             </div>
-            <h3 className="mt-4 text-sm font-medium text-ink transition-colors group-hover:text-gold-dark">
-              Missed Booking Revenue Calculator
-            </h3>
-            <p className="mt-2 flex-1 text-sm leading-relaxed text-ink-soft">
-              Estimate how much revenue unanswered reservation calls are costing your property each month.
+            <p className="mt-4 shrink-0 text-xs font-medium text-gold-dark sm:ml-8 sm:mt-0">
+              Open calculator →
             </p>
-            <p className="mt-4 text-xs font-medium text-gold-dark">Open calculator →</p>
           </Link>
+        </div>
+      </Section>
 
+      {/* Step 2 — Gap Assessment */}
+      <Section surface>
+        <SectionHeading
+          eyebrow="Step 2"
+          title="Find out exactly where your coverage gaps are."
+        />
+        <div className="mt-8 max-w-2xl">
           <div className="flex flex-col rounded-lg border border-line bg-paper p-6">
-            <div className="flex items-center justify-between">
-              <ClipboardList className="h-5 w-5 text-gold-dark" />
-              <span className="rounded bg-surface px-2.5 py-1 text-xs font-medium text-ink-muted">Self-Assessment</span>
-            </div>
-            <h3 className="mt-4 text-sm font-medium text-ink">Guest Coverage Gap Assessment</h3>
-            <p className="mt-2 flex-1 text-sm leading-relaxed text-ink-soft">
-              Identify uncovered hours, unmanned channels, and escalation gaps across your property.
-            </p>
-            <div className="mt-5">
-              <DownloadGate asset="coverage-gap-assessment" pdfHref="/downloads/coverage-gap-assessment.pdf" ctaLabel="Download PDF" block />
+            <div className="flex items-start gap-4">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-line bg-surface">
+                <ClipboardList className="h-5 w-5 text-gold-dark" />
+              </div>
+              <div className="flex-1">
+                <h3 className="text-sm font-medium text-ink">Guest Coverage Gap Assessment</h3>
+                <p className="mt-1 text-sm leading-relaxed text-ink-soft">
+                  The calculator shows the cost. This assessment shows the cause — uncovered hours, unmanned channels, and escalation blind spots across your property.
+                </p>
+                <div className="mt-5">
+                  <DownloadGate
+                    asset="coverage-gap-assessment"
+                    pdfHref="/downloads/coverage-gap-assessment.pdf"
+                    ctaLabel="Download Gap Assessment"
+                    block
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </Section>
 
-      {/* Templates and Checklists */}
-      <Section surface>
+      {/* Step 3 — Templates and Checklists */}
+      <Section>
         <SectionHeading
-          eyebrow="Templates and Checklists"
-          title="Ready-to-use operational documents."
+          eyebrow="Step 3"
+          title="Get the templates to fix what you find."
+          description="Use these to build or audit your guest operations before handing anything off."
         />
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           <div className="flex flex-col rounded-lg border border-line bg-paper p-6">
@@ -125,13 +173,14 @@ export default function ResourcesPage() {
         </div>
       </Section>
 
-      {/* Proof Assets */}
-      <Section>
+      {/* Step 4 — Proof */}
+      <Section surface>
         <SectionHeading
-          eyebrow="Proof Assets"
-          title="See how GuestSquad reports and what coverage looks like."
+          eyebrow="Step 4"
+          title="See what GuestSquad actually delivers each week."
+          description="Download the sample report to see the format before committing to anything."
         />
-        <div className="mt-10 max-w-sm">
+        <div className="mt-8 max-w-sm">
           <div className="flex flex-col rounded-lg border border-line bg-paper p-6">
             <div className="flex items-center justify-between">
               <BarChart2 className="h-5 w-5 text-gold-dark" />
@@ -139,7 +188,7 @@ export default function ResourcesPage() {
             </div>
             <h3 className="mt-4 text-sm font-medium text-ink">Sample Weekly Guest Operations Report</h3>
             <p className="mt-2 flex-1 text-sm leading-relaxed text-ink-soft">
-              See exactly what a GuestSquad weekly report looks like: calls handled, messages, OTA replies, escalations, and recommendations.
+              Calls handled, messages sent, OTA replies, escalations flagged, and recommendations for the week ahead.
             </p>
             <div className="mt-5">
               <DownloadGate asset="sample-weekly-report" pdfHref="/downloads/sample-weekly-report.pdf" ctaLabel="Download Sample Report" block />
@@ -149,10 +198,10 @@ export default function ResourcesPage() {
       </Section>
 
       {/* Buying Guides */}
-      <Section surface>
+      <Section>
         <SectionHeading
-          eyebrow="Buying Guides"
-          title="How GuestSquad stacks up against the alternatives."
+          eyebrow="Further Reading"
+          title="How GuestSquad compares to the alternatives."
           description="Straight comparisons to help you evaluate guest support options before choosing."
         />
         <div className="mt-10 grid gap-6 sm:grid-cols-2">
@@ -177,7 +226,10 @@ export default function ResourcesPage() {
         </p>
       </Section>
 
-      <CtaSection />
+      <CtaSection
+        title="Ready to book a coverage review?"
+        description="Tell us your volume and channels and we will walk through exactly what coverage your property needs."
+      />
     </>
   );
 }

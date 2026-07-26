@@ -12,6 +12,7 @@ import { RESOURCES } from "@/lib/resource-content";
 import { AssetBlock } from "@/components/site/asset-block";
 import { BoFuTrustBlock } from "@/components/site/bofu-trust-block";
 import { ChannelBadges } from "@/components/site/channel-badges";
+import { DownloadGate } from "@/components/site/download-gate";
 
 export type ServiceDetailData = {
   slug: string;
@@ -35,6 +36,7 @@ export type ServiceDetailData = {
   comparisonTitle?: string;
   faqs: { q: string; a: string }[];
   assetLinks?: { label: string; href: string }[];
+  downloadAsset?: { asset: string; pdfHref: string; label: string; description: string };
   ctaTitle?: string;
   ctaDescription?: string;
 };
@@ -118,6 +120,22 @@ export function ServiceDetail({ data }: { data: ServiceDetailData }) {
           </div>
         )}
       </Section>
+
+      {data.downloadAsset && (
+        <Section surface>
+          <div className="mx-auto max-w-2xl rounded-xl border border-line bg-paper px-8 py-6">
+            <p className="text-xs font-semibold uppercase tracking-widest text-ink-muted">Free resource</p>
+            <p className="mt-2 text-sm font-medium text-ink">{data.downloadAsset.description}</p>
+            <div className="mt-4">
+              <DownloadGate
+                asset={data.downloadAsset.asset}
+                pdfHref={data.downloadAsset.pdfHref}
+                ctaLabel={data.downloadAsset.label}
+              />
+            </div>
+          </div>
+        </Section>
+      )}
 
       {(data.handles || data.escalates) && (
         <Section surface>

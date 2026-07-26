@@ -65,6 +65,12 @@ export const hotelAnsweringServiceData: ServiceDetailData = {
     { q: "Can calls be transferred to our team when needed?", a: "Yes. Live transfer to your designated number is available for situations that require your team's direct involvement, following the escalation rules we agree on during setup." },
     { q: "How does a hotel answering service work without adding staff?", a: "A hotel answering service gives your property live call coverage without hiring another front desk shift. GuestSquad answers reservation calls, guest questions, overflow calls, and after-hours inquiries using your property rules, escalation contacts, and approved guest-handling instructions. It pairs naturally with after-hours support for full overnight coverage." },
   ],
+  downloadAsset: {
+    asset: "coverage-gap-assessment",
+    pdfHref: "/downloads/coverage-gap-assessment.pdf",
+    label: "Download Coverage Gap Assessment",
+    description: "Not sure where your call coverage gaps are? The Coverage Gap Assessment walks through your hours, channels, and escalation readiness so you know exactly what to fix first.",
+  },
   assetLinks: [
     { label: "Missed Booking Revenue Calculator", href: "/resources/missed-booking-calculator" },
     { label: "View Sample Weekly Report", href: "/resources/sample-weekly-report" },
@@ -137,6 +143,12 @@ export const reservationSupportData: ServiceDetailData = {
     { q: "Can your team manage booking modifications?", a: "Yes. Date changes, room-type switches, and cancellations that fall within your policy are handled directly, without escalating to your team." },
     { q: "What happens if a guest asks for a discount or exception?", a: "If the request falls within your pre-approved parameters, it is handled directly. If it requires management discretion, it is escalated immediately with full call context so your team can respond with everything they need." },
   ],
+  downloadAsset: {
+    asset: "coverage-gap-assessment",
+    pdfHref: "/downloads/coverage-gap-assessment.pdf",
+    label: "Download Coverage Gap Assessment",
+    description: "Find out which hours and channels are leaving bookings on the table. The Coverage Gap Assessment identifies overnight gaps, peak-period blind spots, and escalation weaknesses across your property.",
+  },
   assetLinks: [
     { label: "Missed Booking Revenue Calculator", href: "/resources/missed-booking-calculator" },
     { label: "View Sample Weekly Report", href: "/resources/sample-weekly-report" },
@@ -207,6 +219,12 @@ export const guestMessagingData: ServiceDetailData = {
     { q: "Can GuestSquad support multilingual guest messages?", a: "English is the primary language of operation. For multilingual requirements, we can discuss whether your specific language needs are within scope during the onboarding call." },
     { q: "How are housekeeping or maintenance requests routed?", a: "Requests are logged with the guest's room number, request details, and timestamp, then sent to your designated on-site contact immediately. The guest receives a confirmation that their request has been received." },
   ],
+  downloadAsset: {
+    asset: "guest-messaging-sop",
+    pdfHref: "/downloads/guest-messaging-sop.pdf",
+    label: "Download Guest Messaging SOP Template",
+    description: "Use this SOP template to document your channels, response time targets, brand voice, and escalation rules before handing messaging off to your team or a partner.",
+  },
   assetLinks: [
     { label: "Download Guest Messaging SOP Template", href: "/resources/guest-messaging-sop" },
     { label: "Download OTA Inbox Response Checklist", href: "/resources/ota-inbox-response-checklist" },
@@ -279,6 +297,12 @@ export const otaInboxData: ServiceDetailData = {
     { q: "Do you handle cancellation, modification, and policy questions?", a: "Yes. Modifications and cancellations that fall within your pre-agreed policy are processed directly. Anything outside policy, or requiring a refund decision, is escalated to your team with full context." },
     { q: "Can you help move repeat guests toward direct booking when appropriate?", a: "Yes. Where it is within OTA terms and appropriate to the conversation, agents will mention your direct booking option for future stays, helping reduce OTA commission costs over time." },
   ],
+  downloadAsset: {
+    asset: "ota-inbox-response-checklist",
+    pdfHref: "/downloads/ota-inbox-response-checklist.pdf",
+    label: "Download OTA Inbox Response Checklist",
+    description: "This checklist covers the standards your Booking.com, Expedia, and Airbnb inboxes should meet: response times, pre-booking replies, complaint handling, and escalation triggers.",
+  },
   assetLinks: [
     { label: "Download OTA Inbox Response Checklist", href: "/resources/ota-inbox-response-checklist" },
     { label: "Download Guest Messaging SOP Template", href: "/resources/guest-messaging-sop" },
@@ -351,6 +375,12 @@ export const afterHoursData: ServiceDetailData = {
     { q: "How does GuestSquad decide what gets escalated overnight?", a: "Escalation rules are agreed with your team before going live. You specify what can be handled directly, what should be logged for morning review, and what should trigger an immediate call to your on-call contact." },
     { q: "Do you provide vacation rental after-hours support?", a: "Yes. GuestSquad provides vacation rental after-hours support for short-term rental operators, Airbnb hosts, serviced apartments, and property managers who need guest calls and messages covered outside normal working hours. Access issues, check-in questions, and urgent guest concerns are handled or escalated according to your rules. This pairs with the vacation rental answering service for complete coverage." },
   ],
+  downloadAsset: {
+    asset: "after-hours-checklist",
+    pdfHref: "/downloads/after-hours-checklist.pdf",
+    label: "Download After-Hours Checklist",
+    description: "Audit your overnight and weekend coverage before setting up support. This checklist identifies gaps in call handling, emergency escalation, and morning handoff procedures.",
+  },
   assetLinks: [
     { label: "Download After-Hours Checklist", href: "/resources/after-hours-checklist" },
     { label: "View Sample Weekly Report", href: "/resources/sample-weekly-report" },
@@ -422,6 +452,12 @@ export const backOfficeData: ServiceDetailData = {
     { q: "Does GuestSquad process payments or only reconcile records?", a: "We reconcile records only. Payment processing remains within your existing systems and authorization chain. We identify discrepancies and report them; your team or controller takes action on anything that requires a financial decision." },
     { q: "How are exceptions reported to management?", a: "Exception reports are delivered by email on a schedule you choose: daily, weekly, or both. Reports are structured for quick review, flagging specific folios, booking references, and variance amounts." },
   ],
+  downloadAsset: {
+    asset: "coverage-gap-assessment",
+    pdfHref: "/downloads/coverage-gap-assessment.pdf",
+    label: "Download Coverage Gap Assessment",
+    description: "Identify the back-office gaps costing your property time and money. The Coverage Gap Assessment covers channels, overnight handling, and escalation readiness across your operation.",
+  },
   assetLinks: [
     { label: "View Sample Weekly Report", href: "/resources/sample-weekly-report" },
     { label: "Guest Coverage Gap Assessment", href: "/resources/coverage-gap-assessment" },
@@ -492,6 +528,12 @@ export const airbnbSupportData: ServiceDetailData = {
     { q: "Can GuestSquad use listing-specific instructions for each unit?", a: "Yes. During onboarding, we build a briefing document for each listing you operate. This covers check-in details, house rules, amenity instructions, and your escalation preferences for that specific unit." },
     { q: "Is GuestSquad an Airbnb guest services provider?", a: "Yes. GuestSquad provides Airbnb guest services for hosts, serviced apartment operators, and short-term rental managers who need human guest support without personally monitoring every message. Coverage includes guest questions, check-in help, listing-specific FAQs, issue routing, and after-hours escalation. It pairs naturally with the vacation rental answering service for full call and message coverage." },
   ],
+  downloadAsset: {
+    asset: "coverage-gap-assessment",
+    pdfHref: "/downloads/coverage-gap-assessment.pdf",
+    label: "Download Coverage Gap Assessment",
+    description: "Find out which hours and channels are leaving your Airbnb guests without a reply. The Coverage Gap Assessment walks through your listing coverage, escalation rules, and overnight gaps.",
+  },
   assetLinks: [
     { label: "Guest Coverage Gap Assessment", href: "/resources/coverage-gap-assessment" },
     { label: "Download After-Hours Checklist", href: "/resources/after-hours-checklist" },
@@ -564,6 +606,12 @@ export const vacationRentalAnsweringData: ServiceDetailData = {
     { q: "What information do you need for each listing?", a: "During onboarding we collect check-in instructions, access codes, house rules, amenity details, local recommendations, and your escalation contacts. The more detail you provide, the more we can handle without needing to reach you." },
     { q: "Does the vacation rental answering service cover after-hours calls and emergencies?", a: "Yes. GuestSquad covers vacation rental after-hours support for late check-in questions, access issues, urgent guest calls, and messages that arrive when your team or host is offline. True emergencies are escalated to your on-call contact using your property-specific rules. This pairs with the after-hours support service for full overnight coverage." },
   ],
+  downloadAsset: {
+    asset: "after-hours-checklist",
+    pdfHref: "/downloads/after-hours-checklist.pdf",
+    label: "Download After-Hours Checklist",
+    description: "Audit your overnight and weekend coverage before setting up support. This checklist identifies gaps in call handling, emergency escalation, and morning handoff across your vacation rental operation.",
+  },
   assetLinks: [
     { label: "Download After-Hours Checklist", href: "/resources/after-hours-checklist" },
     { label: "Guest Coverage Gap Assessment", href: "/resources/coverage-gap-assessment" },

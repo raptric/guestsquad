@@ -81,7 +81,7 @@ export function ComparisonArticle({ data }: { data: ResourceArticleData }) {
       </Section>
 
       {data.inlineAsset && data.inlineAsset.asset && data.inlineAsset.pdfHref && (
-        <div className="container py-6">
+        <div className="container -mt-8 pb-4">
           <div className="mx-auto max-w-2xl border-l-2 border-gold/40 pl-5">
             <p className="text-sm text-ink-soft">{data.inlineAsset.heading}</p>
             <div className="mt-3">

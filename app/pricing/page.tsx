@@ -10,6 +10,7 @@ import { buildMetadata, breadcrumbSchema, faqSchema } from "@/lib/seo";
 import { AssetBlock } from "@/components/site/asset-block";
 import { BoFuTrustBlock } from "@/components/site/bofu-trust-block";
 import { PostBookingSteps } from "@/components/site/post-booking-steps";
+import { DownloadGate } from "@/components/site/download-gate";
 
 export const metadata: Metadata = buildMetadata({
   title: "Hotel Guest Support Pricing | Plans & Pricing",
@@ -128,6 +129,24 @@ export default function PricingPage() {
           </Link>
           .
         </p>
+      </Section>
+
+      {/* Sample report proof block */}
+      <Section surface>
+        <div className="mx-auto max-w-2xl rounded-xl border border-line bg-paper p-8">
+          <p className="text-xs font-semibold uppercase tracking-widest text-ink-muted">Before you book a call</p>
+          <h2 className="mt-3 text-lg font-medium text-ink">See exactly what you receive each week.</h2>
+          <p className="mt-3 text-sm leading-relaxed text-ink-soft">
+            Every GuestSquad client gets a weekly guest operations report: calls handled, messages sent, OTA replies, escalations flagged, and recommendations for the week ahead. Download the sample to see the format before committing to anything.
+          </p>
+          <div className="mt-6">
+            <DownloadGate
+              asset="sample-weekly-report"
+              pdfHref="/downloads/sample-weekly-report.pdf"
+              ctaLabel="Download Sample Report"
+            />
+          </div>
+        </div>
       </Section>
 
       {/* Pricing factors */}

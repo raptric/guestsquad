@@ -22,6 +22,29 @@ const ASSET_TITLES: Record<string, string> = {
   "sample-weekly-report": "Sample Weekly Guest Operations Report",
 };
 
+const ASSET_POST_DOWNLOAD: Record<string, { body: string; cta: string }> = {
+  "coverage-gap-assessment": {
+    body: "Ready to close the gaps you just found? Book a review and we will walk through your property's specific blind spots and what it takes to cover them.",
+    cta: "Book a Coverage Review",
+  },
+  "after-hours-checklist": {
+    body: "Want us to cover the overnight gaps on your checklist? Book a review and we will show you exactly how GuestSquad handles your after-hours calls and messages.",
+    cta: "Book a Coverage Review",
+  },
+  "guest-messaging-sop": {
+    body: "Want us to run this SOP for your property? Book a review and we will show you how GuestSquad handles your messaging channels so guests always get a reply.",
+    cta: "Book a Messaging Review",
+  },
+  "ota-inbox-response-checklist": {
+    body: "Ready to hand your OTA inboxes to a trained team? Book a review and we will show you how GuestSquad keeps Booking.com, Expedia, and Airbnb inboxes under control.",
+    cta: "Book a Coverage Review",
+  },
+  "sample-weekly-report": {
+    body: "This is what you get every week as a GuestSquad client. Book a review and we will walk through what coverage would look like for your property.",
+    cta: "Book a Coverage Review",
+  },
+};
+
 const PROPERTY_TYPES = [
   "Independent hotel",
   "Boutique hotel",
@@ -95,6 +118,10 @@ export function DownloadGate({ asset, pdfHref, ctaLabel = "Download PDF", block,
   }
 
   const assetTitle = ASSET_TITLES[asset] ?? "this resource";
+  const postDownload = ASSET_POST_DOWNLOAD[asset] ?? {
+    body: "If this exposed a real coverage gap, book a review and we will help you prioritize what to fix first.",
+    cta: "Book a Coverage Review",
+  };
 
   return (
     <>
@@ -161,12 +188,10 @@ export function DownloadGate({ asset, pdfHref, ctaLabel = "Download PDF", block,
                     Click here if the download did not start
                   </a>
                   <div className="mt-6 border-t border-line pt-5 text-center">
-                    <p className="text-xs text-ink-soft">
-                      If this exposed a real coverage gap, book a review and we&rsquo;ll help you prioritize what to fix first.
-                    </p>
+                    <p className="text-xs text-ink-soft">{postDownload.body}</p>
                     <div className="mt-3">
                       <CalendlyPopupButton variant="gold" size="sm">
-                        Book a Coverage Review
+                        {postDownload.cta}
                       </CalendlyPopupButton>
                     </div>
                   </div>

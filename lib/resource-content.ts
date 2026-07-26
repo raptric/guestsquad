@@ -306,6 +306,7 @@ export const answeringServiceCostGuide: GuideArticleData = {
   datePublished: "2026-06-29",
   intro: [
     "\"How much does this cost?\" is usually the first question a GM asks, and the hardest one to get a straight answer to. Most providers, including GuestSquad, don't publish flat rates, because the honest answer depends on your volume, channels, and coverage hours.",
+    "What most properties find when they run the numbers: a single recovered group booking or a week of captured after-hours reservations covers the monthly cost entirely. The right question is not what the service costs — it is whether it pays for itself on your volume.",
     "This guide walks through the pricing models actually used in this industry, what genuinely moves the price, and the costs that tend to show up after you've already signed.",
   ],
   sections: [

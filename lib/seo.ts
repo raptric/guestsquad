@@ -68,6 +68,14 @@ export function organizationSchema() {
       "GuestSquad, a Raptric LLC company, provides 24/7 guest operations support for hotels, boutique properties, resorts, serviced apartments, and Airbnb operators, including reservation support, guest messaging, OTA inbox management, after-hours coverage, and back-office guest operations.",
     email: SITE.email,
     telephone: SITE.phone,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "40 Corbin Ave",
+      addressLocality: "Bay Shore",
+      addressRegion: "NY",
+      postalCode: "11706",
+      addressCountry: "US",
+    },
     areaServed: "Worldwide",
     logo: {
       "@type": "ImageObject",

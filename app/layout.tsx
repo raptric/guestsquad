@@ -20,7 +20,10 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
-  title: "24/7 Hotel Guest Support & Reservation Services",
+  title: {
+    default: "GuestSquad — 24/7 Hotel Guest Support",
+    template: "%s | GuestSquad",
+  },
   description:
     "GuestSquad handles reservations, guest messaging, OTA inquiries, callbacks, upsells, and after-hours support, so your front desk stays focused on in-house guests.",
   openGraph: {

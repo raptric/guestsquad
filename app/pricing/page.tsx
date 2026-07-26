@@ -136,7 +136,7 @@ export default function PricingPage() {
             <div>
               <p className="text-sm font-medium text-ink">See exactly what you receive each week.</p>
               <p className="mt-1 text-sm leading-relaxed text-ink-soft">
-                Download the sample weekly report — calls handled, OTA replies, escalations, and recommendations — before committing to anything.
+                Download the sample weekly report to see calls handled, OTA replies, escalations, and recommendations before committing to anything.
               </p>
             </div>
             <div className="shrink-0">

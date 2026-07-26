@@ -70,13 +70,15 @@ export function ComparisonArticle({ data }: { data: ResourceArticleData }) {
       </Section>
 
       <Section>
-        <SectionHeading eyebrow="The Verdict" title={data.verdictHeading} />
-        <div className="mx-auto mt-8 max-w-2xl">
-          {data.verdictParagraphs.map((p, i) => (
-            <p key={i} className="mb-5 text-sm leading-relaxed text-ink-soft">
-              {p}
-            </p>
-          ))}
+        <div className="mx-auto max-w-2xl">
+          <SectionHeading eyebrow="The Verdict" title={data.verdictHeading} />
+          <div className="mt-8">
+            {data.verdictParagraphs.map((p, i) => (
+              <p key={i} className="mb-5 text-sm leading-relaxed text-ink-soft">
+                {p}
+              </p>
+            ))}
+          </div>
         </div>
       </Section>
 

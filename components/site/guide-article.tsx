@@ -89,6 +89,22 @@ export function GuideArticle({ data }: { data: GuideArticleData }) {
         </Section>
       ))}
 
+      {data.inlineAsset && data.inlineAsset.asset && data.inlineAsset.pdfHref && (
+        <Section surface={data.sections.length % 2 !== 0}>
+          <div className="mx-auto max-w-2xl border-l-2 border-gold/40 pl-5">
+            <p className="text-sm text-ink-soft">{data.inlineAsset.heading}</p>
+            <div className="mt-3">
+              <DownloadGate
+                asset={data.inlineAsset.asset}
+                pdfHref={data.inlineAsset.pdfHref}
+                ctaLabel={data.inlineAsset.ctaLabel ?? "Download PDF"}
+                inline
+              />
+            </div>
+          </div>
+        </Section>
+      )}
+
       <Section surface={data.sections.length % 2 === 0}>
         <SectionHeading eyebrow="Questions" title="Common questions." />
         <div className="mt-10 grid gap-6 sm:grid-cols-2">

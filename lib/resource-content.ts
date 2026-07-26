@@ -93,6 +93,7 @@ export type ResourceArticleData = {
   verdictParagraphs: string[];
   faqs: { q: string; a: string }[];
   relatedServiceSlugs: string[];
+  inlineAsset?: ArticleAssetCta;
   assetCta?: ArticleAssetCta;
 };
 
@@ -172,6 +173,12 @@ export const aiVoiceComparison: ResourceArticleData = {
       a: "Yes. Some properties use a simple chat widget or FAQ bot to deflect the most basic website questions, then route every phone call and anything more nuanced to GuestSquad.",
     },
   ],
+  inlineAsset: {
+    heading: "Before you decide, audit your overnight and peak-period gaps. The After-Hours Checklist walks through what real coverage needs to cover.",
+    asset: "after-hours-checklist",
+    pdfHref: "/downloads/after-hours-checklist.pdf",
+    ctaLabel: "Download After-Hours Checklist",
+  },
   assetCta: {
     heading: "See what consistent human coverage actually looks like in practice.",
     asset: "sample-weekly-report",
@@ -235,6 +242,12 @@ export const callCenterComparison: ResourceArticleData = {
     "If you're evaluating outsourced phone coverage, ask directly: will the same agents handle our calls over time, or are we in a shared pool? Are agents trained on hospitality specifically, or generalist call-center scripts? Do agents work inside our actual PMS and OTA accounts? What do we actually receive in reporting: call counts, or real operational insight?",
     "Those four questions tend to separate a true hotel-specific answering service from a relabeled generic call center fairly quickly.",
   ],
+  inlineAsset: {
+    heading: "Not sure where your coverage gaps actually are? The Coverage Gap Assessment identifies your unprotected hours, channels, and escalation blind spots.",
+    asset: "coverage-gap-assessment",
+    pdfHref: "/downloads/coverage-gap-assessment.pdf",
+    ctaLabel: "Download Coverage Gap Assessment",
+  },
   faqs: [
     {
       q: "What's the actual difference between an answering service and a call center?",
@@ -278,6 +291,7 @@ export type GuideArticleData = {
   faqs: { q: string; a: string }[];
   relatedServiceSlugs: string[];
   relatedResourceSlugs?: string[];
+  inlineAsset?: ArticleAssetCta;
   assetCta?: ArticleAssetCta;
 };
 
@@ -353,6 +367,12 @@ export const answeringServiceCostGuide: GuideArticleData = {
   ],
   relatedServiceSlugs: ["hotel-answering-service", "after-hours-support"],
   relatedResourceSlugs: ["hotel-answering-service-vs-ai-voice", "after-hours-hotel-support-checklist"],
+  inlineAsset: {
+    heading: "While you're evaluating costs, find out which hours are actually unprotected at your property.",
+    asset: "coverage-gap-assessment",
+    pdfHref: "/downloads/coverage-gap-assessment.pdf",
+    ctaLabel: "Download Coverage Gap Assessment",
+  },
   assetCta: {
     heading: "Estimate what unanswered calls are actually costing your property.",
     calculatorHref: "/resources/missed-booking-calculator",
@@ -425,6 +445,12 @@ export const afterHoursChecklistGuide: GuideArticleData = {
   ],
   relatedServiceSlugs: ["after-hours-support", "hotel-answering-service", "back-office-operations"],
   relatedResourceSlugs: ["hotel-front-desk-overflow-support", "hotel-answering-service-vs-ai-voice"],
+  inlineAsset: {
+    heading: "Use this checklist to audit your overnight setup before putting any coverage in place.",
+    asset: "after-hours-checklist",
+    pdfHref: "/downloads/after-hours-checklist.pdf",
+    ctaLabel: "Download After-Hours Checklist PDF",
+  },
   assetCta: {
     heading: "Download the After-Hours Guest Coverage Checklist to audit your overnight gaps.",
     asset: "after-hours-checklist",
@@ -497,6 +523,12 @@ export const overflowSupportGuide: GuideArticleData = {
   ],
   relatedServiceSlugs: ["hotel-answering-service", "reservation-support", "after-hours-support"],
   relatedResourceSlugs: ["hotel-answering-service-vs-call-center", "after-hours-hotel-support-checklist"],
+  inlineAsset: {
+    heading: "Identify exactly which call volumes and hours your property is leaving uncovered right now.",
+    asset: "coverage-gap-assessment",
+    pdfHref: "/downloads/coverage-gap-assessment.pdf",
+    ctaLabel: "Download Coverage Gap Assessment",
+  },
   assetCta: {
     heading: "Find the specific coverage gaps your property has right now.",
     asset: "coverage-gap-assessment",
@@ -570,6 +602,12 @@ export const otaInboxChecklistGuide: GuideArticleData = {
   ],
   relatedServiceSlugs: ["ota-inbox-management", "guest-messaging", "vacation-rental-answering-service"],
   relatedResourceSlugs: ["hotel-guest-messaging-sop-template", "hotel-answering-service-vs-call-center"],
+  inlineAsset: {
+    heading: "Download the OTA Inbox Response Checklist to put a consistent standard in place for Booking.com, Expedia, and Airbnb.",
+    asset: "ota-inbox-response-checklist",
+    pdfHref: "/downloads/ota-inbox-response-checklist.pdf",
+    ctaLabel: "Download OTA Inbox Checklist",
+  },
   assetCta: {
     heading: "Download the OTA Inbox Response Checklist to standardize your inbox process.",
     asset: "ota-inbox-response-checklist",
@@ -649,6 +687,12 @@ export const messagingSopGuide: GuideArticleData = {
   ],
   relatedServiceSlugs: ["guest-messaging", "ota-inbox-management"],
   relatedResourceSlugs: ["booking-com-message-support", "hotel-front-desk-overflow-support"],
+  inlineAsset: {
+    heading: "Ready to put a standard in place? Download the SOP template and fill in your channels, targets, and escalation rules.",
+    asset: "guest-messaging-sop",
+    pdfHref: "/downloads/guest-messaging-sop.pdf",
+    ctaLabel: "Download Guest Messaging SOP Template",
+  },
   assetCta: {
     heading: "Download the Hotel Guest Messaging SOP Template to put this into practice.",
     asset: "guest-messaging-sop",

@@ -157,6 +157,43 @@ export default function ServicesPage() {
         </div>
       </Section>
 
+      {/* Useful resources */}
+      <Section surface>
+        <SectionHeading eyebrow="Useful Resources" title="Practical guides before you decide." />
+        <div className="mt-8 grid gap-4 sm:grid-cols-2">
+          <Link
+            href="/resources/booking-com-message-support"
+            className="group flex flex-col justify-between rounded-lg border border-line bg-paper p-6 transition-colors hover:border-gold/50"
+          >
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-widest text-ink-muted">Checklist</p>
+              <h3 className="mt-2 text-sm font-medium text-ink transition-colors group-hover:text-gold-dark">
+                Booking.com and Expedia Message Support Checklist
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-ink-soft">
+                Response-time targets, pre-booking standards, complaint handling, and escalation rules for OTA inboxes.
+              </p>
+            </div>
+            <p className="mt-4 text-xs font-medium text-gold-dark">Read checklist →</p>
+          </Link>
+          <Link
+            href="/resources/hotel-guest-messaging-sop-template"
+            className="group flex flex-col justify-between rounded-lg border border-line bg-paper p-6 transition-colors hover:border-gold/50"
+          >
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-widest text-ink-muted">Template</p>
+              <h3 className="mt-2 text-sm font-medium text-ink transition-colors group-hover:text-gold-dark">
+                Hotel Guest Messaging SOP Template
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-ink-soft">
+                Document your channels, response targets, brand voice, and escalation rules before handing messaging off to any team.
+              </p>
+            </div>
+            <p className="mt-4 text-xs font-medium text-gold-dark">Read template →</p>
+          </Link>
+        </div>
+      </Section>
+
       {/* Service finder FAQ */}
       <Section surface>
         <SectionHeading eyebrow="Questions" title="Choosing the right coverage." />

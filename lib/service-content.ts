@@ -226,7 +226,7 @@ export const guestMessagingData: ServiceDetailData = {
     description: "Use this SOP template to document your channels, response time targets, brand voice, and escalation rules before handing messaging off to your team or a partner.",
   },
   assetLinks: [
-    { label: "Download Guest Messaging SOP Template", href: "/resources/guest-messaging-sop" },
+    { label: "Guest messaging SOP template", href: "/resources/hotel-guest-messaging-sop-template" },
     { label: "Download OTA Inbox Response Checklist", href: "/resources/ota-inbox-response-checklist" },
     { label: "View Sample Weekly Report", href: "/resources/sample-weekly-report" },
   ],
@@ -305,7 +305,7 @@ export const otaInboxData: ServiceDetailData = {
   },
   assetLinks: [
     { label: "Download OTA Inbox Response Checklist", href: "/resources/ota-inbox-response-checklist" },
-    { label: "Download Guest Messaging SOP Template", href: "/resources/guest-messaging-sop" },
+    { label: "Booking.com message support checklist", href: "/resources/booking-com-message-support" },
     { label: "View Sample Weekly Report", href: "/resources/sample-weekly-report" },
   ],
   ctaTitle: "Reply before the guest books somewhere else.",

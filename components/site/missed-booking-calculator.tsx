@@ -2,6 +2,7 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { trackEvent } from "@/lib/analytics";
+import { DownloadGate } from "@/components/site/download-gate";
 
 function usd(n: number) {
   return new Intl.NumberFormat("en-US", {
@@ -21,6 +22,7 @@ export function MissedBookingCalculator({ compact = false }: Props) {
   const [convRate, setConvRate] = useState(20);
   const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const interacted = useRef(false);
+  const [showBridge, setShowBridge] = useState(false);
 
   const monthly = missedCalls * (convRate / 100) * bookingValue;
   const annual = monthly * 12;
@@ -29,6 +31,7 @@ export function MissedBookingCalculator({ compact = false }: Props) {
 
   useEffect(() => {
     if (!interacted.current) { interacted.current = true; return; }
+    setShowBridge(true);
     if (debounceRef.current) clearTimeout(debounceRef.current);
     debounceRef.current = setTimeout(() => {
       trackEvent("calculator_engagement", {
@@ -135,6 +138,23 @@ export function MissedBookingCalculator({ compact = false }: Props) {
           {breakEven !== 1 ? "s" : ""} per month at your average booking value.
         </p>
       </div>
+
+      {/* Gap Assessment bridge — appears after first slider interaction */}
+      {!compact && showBridge && (
+        <div className="mt-6 rounded-lg border border-gold/40 bg-gold/5 px-6 py-5">
+          <p className="text-sm font-medium text-ink">Now see which hours are unprotected.</p>
+          <p className="mt-1 text-sm leading-relaxed text-ink-soft">
+            The calculator shows the revenue cost. The Coverage Gap Assessment shows exactly where the gaps are: overnight, peak periods, OTA channels, and escalation blind spots.
+          </p>
+          <div className="mt-4">
+            <DownloadGate
+              asset="coverage-gap-assessment"
+              pdfHref="/downloads/coverage-gap-assessment.pdf"
+              ctaLabel="Download Coverage Gap Assessment"
+            />
+          </div>
+        </div>
+      )}
 
       {!compact && (
         <div className="mt-6 space-y-3 text-center">

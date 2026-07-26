@@ -90,7 +90,7 @@ export function GuideArticle({ data }: { data: GuideArticleData }) {
       ))}
 
       {data.inlineAsset && data.inlineAsset.asset && data.inlineAsset.pdfHref && (
-        <Section surface={data.sections.length % 2 !== 0}>
+        <div className="container py-6">
           <div className="mx-auto max-w-2xl border-l-2 border-gold/40 pl-5">
             <p className="text-sm text-ink-soft">{data.inlineAsset.heading}</p>
             <div className="mt-3">
@@ -102,7 +102,7 @@ export function GuideArticle({ data }: { data: GuideArticleData }) {
               />
             </div>
           </div>
-        </Section>
+        </div>
       )}
 
       <Section surface={data.sections.length % 2 === 0}>

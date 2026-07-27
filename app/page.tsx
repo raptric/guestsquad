@@ -17,6 +17,7 @@ import { SERVICES } from "@/lib/site-data";
 import { buildMetadata, faqSchema } from "@/lib/seo";
 import { JsonLd } from "@/components/site/json-ld";
 import { AssetBlock } from "@/components/site/asset-block";
+import { ClientTrustBlock } from "@/components/site/client-trust-block";
 
 export const metadata: Metadata = buildMetadata({
   title: "24/7 Hotel Guest Support & Reservation Services | GuestSquad",
@@ -273,6 +274,11 @@ export default function HomePage() {
             See full pricing details →
           </ButtonLink>
         </div>
+      </Section>
+
+      {/* TRUST BLOCK */}
+      <Section surface>
+        <ClientTrustBlock />
       </Section>
 
       {/* FAQ */}

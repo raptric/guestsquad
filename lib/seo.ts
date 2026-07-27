@@ -86,6 +86,7 @@ export function organizationSchema() {
       "https://raptric.com",
       "https://www.crunchbase.com/organization/guest-squad",
       "https://about.me/usman-khalid",
+      "https://www.trustpilot.com/review/guestsquad.com",
     ],
     contactPoint: {
       "@type": "ContactPoint",

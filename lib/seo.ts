@@ -84,6 +84,8 @@ export function organizationSchema() {
     sameAs: [
       "https://www.linkedin.com/company/guest-squad/",
       "https://raptric.com",
+      "https://www.crunchbase.com/organization/guest-squad",
+      "https://about.me/usman-khalid",
     ],
     contactPoint: {
       "@type": "ContactPoint",

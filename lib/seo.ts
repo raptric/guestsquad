@@ -136,11 +136,51 @@ export function websiteSchema() {
     "@id": `${SITE.url}/#website`,
     name: SITE.brand,
     url: SITE.url,
-    description:
-      "24/7 guest operations support for hotels that can't afford missed bookings.",
-    publisher: { "@type": "ProfessionalService", "@id": `${SITE.url}/#organization`, name: SITE.brand },
+    publisher: {
+      "@type": "ProfessionalService",
+      "@id": `${SITE.url}/#organization`,
+      name: SITE.brand,
+    },
   };
 }
+
+/** ContactPage schema for the /contact route. */
+export function contactPageSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "@id": `${SITE.url}/contact#contactpage`,
+    url: `${SITE.url}/contact`,
+    name: "Contact GuestSquad",
+    description:
+      "Contact GuestSquad to book a coverage review for hotel answering service, guest messaging, OTA inbox management, after-hours support, and managed guest operations coverage.",
+    isPartOf: {
+      "@type": "WebSite",
+      "@id": `${SITE.url}/#website`,
+      url: SITE.url,
+      name: SITE.brand,
+    },
+    about: {
+      "@type": "ProfessionalService",
+      "@id": `${SITE.url}/#organization`,
+      name: SITE.brand,
+    },
+    mainEntity: {
+      "@type": "ContactPoint",
+      contactType: "sales",
+      telephone: SITE.phone,
+      email: SITE.email,
+      availableLanguage: ["English"],
+    },
+  };
+}
+
+const ALWAYS_AVAILABLE = {
+  "@type": "OpeningHoursSpecification",
+  dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+  opens: "00:00",
+  closes: "23:59",
+};
 
 /** Service schema for an individual service detail page. */
 export function serviceSchema({
@@ -166,6 +206,7 @@ export function serviceSchema({
       name: SITE.brand,
       url: SITE.url,
     },
+    hoursAvailable: ALWAYS_AVAILABLE,
     areaServed: "Worldwide",
     audience: {
       "@type": "Audience",

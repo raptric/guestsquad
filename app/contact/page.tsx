@@ -5,7 +5,7 @@ import { CalendlyInlineWidget } from "@/components/site/calendly-inline-widget";
 import { Breadcrumbs } from "@/components/site/breadcrumbs";
 import { JsonLd } from "@/components/site/json-ld";
 import { Section, SectionHeading } from "@/components/site/section";
-import { buildMetadata, breadcrumbSchema, faqSchema } from "@/lib/seo";
+import { buildMetadata, breadcrumbSchema, faqSchema, contactPageSchema } from "@/lib/seo";
 import { AssetBlock } from "@/components/site/asset-block";
 import { BoFuTrustBlock } from "@/components/site/bofu-trust-block";
 import { PostBookingSteps } from "@/components/site/post-booking-steps";
@@ -51,6 +51,7 @@ export default function ContactPage() {
         data={[
           breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Contact", path: "/contact" }]),
           faqSchema(FAQS),
+          contactPageSchema(),
         ]}
       />
       <Breadcrumbs items={[{ name: "Home", path: "/" }, { name: "Contact", path: "/contact" }]} />

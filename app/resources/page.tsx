@@ -7,7 +7,7 @@ import { Breadcrumbs } from "@/components/site/breadcrumbs";
 import { JsonLd } from "@/components/site/json-ld";
 import { CtaSection } from "@/components/site/cta-section";
 import { DownloadGate } from "@/components/site/download-gate";
-import { buildMetadata, breadcrumbSchema } from "@/lib/seo";
+import { buildMetadata, breadcrumbSchema, faqSchema } from "@/lib/seo";
 import { RESOURCES } from "@/lib/resource-content";
 import { Calculator, FileText, ClipboardList, BarChart2, ArrowRight } from "lucide-react";
 
@@ -18,13 +18,39 @@ export const metadata: Metadata = buildMetadata({
   path: "/resources",
 });
 
+const RESOURCES_FAQS = [
+  {
+    q: "What GuestSquad resources should a hotel start with?",
+    a: "Most hotels should start with the Missed Booking Revenue Calculator to estimate revenue risk, then use the Coverage Gap Assessment or After-Hours Checklist to identify which calls, messages, and OTA inboxes need coverage first.",
+  },
+  {
+    q: "Which resource helps compare human support with AI voice agents?",
+    a: "The Hotel Answering Service vs AI Voice guide compares human guest support with AI voice tools for reservation calls, guest questions, escalations, and after-hours situations where judgment matters.",
+  },
+  {
+    q: "Which resource helps with Booking.com and Expedia messages?",
+    a: "The Booking.com and Expedia Message Support Checklist helps properties define OTA response standards, common reply types, escalation rules, and inbox coverage gaps.",
+  },
+  {
+    q: "Can these resources help before booking a coverage review?",
+    a: "Yes. GuestSquad resources are designed to help hospitality teams understand missed revenue, after-hours gaps, OTA inbox standards, guest messaging SOPs, and reporting expectations before booking a coverage review.",
+  },
+  {
+    q: "Are GuestSquad templates free to use?",
+    a: "GuestSquad provides free tools, checklists, and templates to help hotels and property operators assess guest communication gaps. Some downloadable assets may require a short form before access.",
+  },
+];
+
 export default function ResourcesPage() {
   const buyingGuides = RESOURCES;
 
   return (
     <>
       <JsonLd
-        data={breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Resources", path: "/resources" }])}
+        data={[
+          breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Resources", path: "/resources" }]),
+          faqSchema(RESOURCES_FAQS),
+        ]}
       />
       <Breadcrumbs items={[{ name: "Home", path: "/" }, { name: "Resources", path: "/resources" }]} />
 
@@ -224,6 +250,18 @@ export default function ResourcesPage() {
           </Link>
           .
         </p>
+      </Section>
+
+      <Section surface>
+        <SectionHeading eyebrow="Questions" title="Common questions about these resources." />
+        <div className="mt-10 grid gap-6 sm:grid-cols-2">
+          {RESOURCES_FAQS.map((item) => (
+            <div key={item.q} className="rounded-lg border border-line bg-paper p-6">
+              <h3 className="text-sm font-medium text-ink">{item.q}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-ink-soft">{item.a}</p>
+            </div>
+          ))}
+        </div>
       </Section>
 
       <CtaSection

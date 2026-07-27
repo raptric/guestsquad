@@ -142,15 +142,15 @@ export default function ContactPage() {
         </p>
       </Section>
 
-      <Section>
+      <Section compact>
         <PostBookingSteps />
       </Section>
 
-      <Section surface>
+      <Section surface compact>
         <BoFuTrustBlock />
       </Section>
 
-      <Section surface>
+      <Section surface compact>
         <SectionHeading eyebrow="Not Ready to Book Yet?" title="Start with one of these." />
         <div className="mt-8 grid gap-4 sm:grid-cols-3">
           <AssetBlock

@@ -3,18 +3,20 @@ import { cn } from "@/lib/utils";
 export function Section({
   className,
   surface = false,
+  compact = false,
   children,
   id,
 }: {
   className?: string;
   surface?: boolean;
+  compact?: boolean;
   children: React.ReactNode;
   id?: string;
 }) {
   return (
     <section
       id={id}
-      className={cn("py-20 md:py-28", surface && "bg-surface", className)}
+      className={cn(compact ? "py-12 md:py-16" : "py-20 md:py-28", surface && "bg-surface", className)}
     >
       <div className="container">{children}</div>
     </section>

@@ -167,7 +167,7 @@ export default function PricingPage() {
         </ul>
       </Section>
 
-      <Section surface>
+      <Section surface compact>
         <ClientTrustBlock />
       </Section>
 
@@ -207,11 +207,11 @@ export default function PricingPage() {
         </div>
       </Section>
 
-      <Section>
+      <Section compact>
         <PostBookingSteps />
       </Section>
 
-      <Section surface>
+      <Section surface compact>
         <BoFuTrustBlock />
       </Section>
 

@@ -122,7 +122,7 @@ export function ServiceDetail({ data }: { data: ServiceDetailData }) {
       </Section>
 
       {data.downloadAsset && (
-        <Section surface>
+        <Section surface compact>
           <div className="mx-auto max-w-2xl rounded-xl border border-line bg-paper px-8 py-6">
             <p className="text-xs font-semibold uppercase tracking-widest text-ink-muted">Free resource</p>
             <p className="mt-2 text-sm font-medium text-ink">{data.downloadAsset.description}</p>
@@ -277,11 +277,11 @@ export function ServiceDetail({ data }: { data: ServiceDetailData }) {
         </Section>
       )}
 
-      <Section surface>
+      <Section surface compact>
         <ChannelBadges />
       </Section>
 
-      <Section>
+      <Section compact>
         <BoFuTrustBlock />
       </Section>
 

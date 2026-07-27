@@ -277,7 +277,7 @@ export default function HomePage() {
       </Section>
 
       {/* TRUST BLOCK */}
-      <Section surface>
+      <Section surface compact>
         <ClientTrustBlock />
       </Section>
 

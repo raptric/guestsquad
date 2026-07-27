@@ -19,7 +19,7 @@ import { JsonLd } from "@/components/site/json-ld";
 import { AssetBlock } from "@/components/site/asset-block";
 
 export const metadata: Metadata = buildMetadata({
-  title: "24/7 Hotel Guest Support & Reservation Services",
+  title: "24/7 Hotel Guest Support & Reservation Services | GuestSquad",
   description:
     "GuestSquad provides 24/7 hotel guest support, reservation calls, OTA inbox management, messaging, and after-hours front desk coverage.",
   path: "",

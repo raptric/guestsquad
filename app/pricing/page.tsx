@@ -42,8 +42,8 @@ const FAQS = [
     a: "There is a one-time onboarding fee that covers property briefing, agent training, system access, and go-live testing. The fee is disclosed during your initial quote call and is not a recurring charge.",
   },
   {
-    q: "Can we start with a pilot?",
-    a: "Yes. Every engagement starts with a pilot period so you can see the service working on your property before committing to a full plan.",
+    q: "Can we start with a pilot before committing to monthly coverage?",
+    a: "Yes. Qualified properties can start with a 2-week pilot before moving into month-to-month coverage. This allows both teams to validate fit, guest communication workflows, escalation rules, and channel coverage before ongoing service continues.",
   },
   {
     q: "Is there a contract?",
@@ -129,6 +129,10 @@ export default function PricingPage() {
             generic call centers
           </Link>
           .
+        </p>
+
+        <p className="mt-6 text-center text-sm text-ink-soft">
+          Qualified properties can start with a 2-week pilot before moving into month-to-month coverage.
         </p>
 
         {/* Sample report — proof block directly under plans */}

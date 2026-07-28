@@ -17,7 +17,10 @@ export function CtaSection({
         <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-paper/65">
           {description}
         </p>
-        <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
+        <p className="mx-auto mt-6 max-w-xl text-sm leading-relaxed text-paper/50">
+          Qualified properties can start with a 2-week pilot before moving into month-to-month coverage.
+        </p>
+        <div className="mt-6 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <CalendlyPopupButton variant="gold" size="lg">
             Book a Coverage Review
           </CalendlyPopupButton>

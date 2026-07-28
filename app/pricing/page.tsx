@@ -43,7 +43,7 @@ const FAQS = [
   },
   {
     q: "Can we start with a pilot before committing to monthly coverage?",
-    a: "Yes. Qualified properties can start with a 2-week pilot before moving into month-to-month coverage. This allows both teams to validate fit, guest communication workflows, escalation rules, and channel coverage before ongoing service continues.",
+    a: "Yes. Qualified properties can start with a 2-week pilot before moving into month-to-month coverage. This gives both teams time to validate fit, guest communication workflows, escalation rules, and channel coverage before ongoing service continues.",
   },
   {
     q: "Is there a contract?",

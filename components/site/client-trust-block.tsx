@@ -6,7 +6,6 @@ const COMMITMENTS = [
   "Written escalation rules",
   "Weekly reporting",
   "Human response, not generic scripts",
-  "Month-to-month after pilot",
   "2-week pilot available for qualified properties",
 ];
 

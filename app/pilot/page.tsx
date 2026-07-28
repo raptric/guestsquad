@@ -16,34 +16,53 @@ export const metadata: Metadata = buildMetadata({
   path: "/pilot",
 });
 
-const TRUST_POINTS = [
-  "Human guest support",
-  "Calls, texts & OTA inboxes",
-  "After-hours coverage",
-  "Month-to-month after pilot",
-  "Property-specific briefing",
+const REASSURANCE_POINTS = [
+  "Built for independent hotels, inns, serviced apartments, and short-term rental operators",
+  "Supports calls, texts, OTA inboxes, and approved guest messaging tools",
+  "Property-specific briefing completed before any coverage begins",
+  "Month-to-month after the pilot — no long-term contract",
+  "Reporting included where agreed in the pilot scope",
 ];
 
 const PAIN_CARDS = [
   {
     icon: Phone,
     title: "Missed reservation calls",
-    body: "High-intent callers who found your property move on within minutes when no one answers.",
+    body: "High-intent callers move on within minutes when no one answers.",
   },
   {
     icon: Inbox,
     title: "Slow OTA inbox responses",
-    body: "Booking.com and Expedia surface faster-responding properties when your reply window slips.",
+    body: "Booking.com and Expedia surface faster-responding properties ahead of yours.",
   },
   {
     icon: MessageSquare,
     title: "Guest texts after hours",
-    body: "Check-in questions, access issues, and complaints that arrive at 11pm stay unanswered until morning.",
+    body: "Check-in questions and access issues that arrive at 11pm wait until morning.",
   },
   {
     icon: Users,
     title: "Front desk overflow",
-    body: "Calls pile up during check-in peaks and busy periods while your team is occupied with in-house guests.",
+    body: "Calls pile up during check-in peaks while your team is with in-house guests.",
+  },
+];
+
+const OPERATOR_CONCERNS = [
+  {
+    heading: "Guests need fast human responses",
+    body: "A delayed answer on a reservation call or OTA message is often a lost booking. Speed and accuracy matter more than the channel.",
+  },
+  {
+    heading: "Operators need clear escalation rules",
+    body: "Coverage only works when the handling team knows exactly what to resolve and what to escalate immediately to the property.",
+  },
+  {
+    heading: "Owners need visibility into what was handled",
+    body: "Reporting on call volume, message types, and escalations tells ownership whether coverage is actually working — before they renew.",
+  },
+  {
+    heading: "Teams need coverage without hiring another shift",
+    body: "The goal is to close coverage gaps without adding headcount. That means a service that plugs in around the existing team.",
   },
 ];
 
@@ -51,7 +70,7 @@ const COVERAGE_ITEMS = [
   { label: "Reservation calls", note: "Inbound booking inquiries, quotes, and availability" },
   { label: "Guest texts / SMS", note: "Pre-arrival, in-stay, and check-out messages" },
   { label: "OTA inboxes", note: "Booking.com, Expedia, Airbnb message threads" },
-  { label: "WhatsApp & email", note: "Guest communication on your approved channels" },
+  { label: "WhatsApp & email", note: "Approved guest communication channels" },
   { label: "Cloudbeds / channel manager", note: "Messages routed via your PMS or channel tools" },
   { label: "Akia & guest messaging tools", note: "Supported platforms included in agreed scope" },
   { label: "After-hours support", note: "Overnight and weekend coverage gaps" },
@@ -60,24 +79,24 @@ const COVERAGE_ITEMS = [
 
 const PILOT_STEPS = [
   {
-    step: "01",
+    n: "01",
     title: "Qualification call",
-    body: "A short call to review your property, channels, current gaps, and whether a 2-week pilot is a realistic fit.",
+    body: "A short call to review your property, channels, gaps, and whether a 2-week pilot is a realistic fit.",
   },
   {
-    step: "02",
-    title: "Property briefing & channel setup",
-    body: "We document your rates, policies, escalation contacts, guest tone, and channel access. Nothing goes live without your review.",
+    n: "02",
+    title: "Property briefing",
+    body: "We document rates, policies, escalation contacts, guest tone, and channel access. Nothing goes live without your approval.",
   },
   {
-    step: "03",
-    title: "Pilot coverage begins",
-    body: "GuestSquad handles agreed channels for 2 weeks. You receive a weekly report showing volume, handling, and escalations.",
+    n: "03",
+    title: "Pilot coverage",
+    body: "GuestSquad handles agreed channels for 2 weeks. Weekly report shows volume, handling, and escalations.",
   },
   {
-    step: "04",
-    title: "Review & decide",
-    body: "After the pilot, you decide whether to continue month-to-month. No long-term commitment and no pressure.",
+    n: "04",
+    title: "Review and decide",
+    body: "You decide whether to continue month-to-month. No long-term commitment, no pressure.",
   },
 ];
 
@@ -108,42 +127,15 @@ const FAQS = [
   },
 ];
 
-const LEAD_MAGNETS = [
-  {
-    title: "Sample Weekly Report",
-    description: "See exactly what GuestSquad reports each week: calls handled, messages sent, escalations, and recommendations.",
-    cta: "View Sample Report",
-    href: "/resources/sample-weekly-report",
-    featured: true,
-  },
-  {
-    title: "After-Hours Coverage Checklist",
-    description: "Audit your overnight and weekend coverage gaps before agreeing pilot scope.",
-    cta: "Download Checklist",
-    href: "/resources/after-hours-hotel-support-checklist",
-    featured: false,
-  },
-  {
-    title: "Guest Messaging SOP Template",
-    description: "The SOP framework GuestSquad uses during property briefing, adapted for your own team.",
-    cta: "View Template",
-    href: "/resources/hotel-guest-messaging-sop-template",
-    featured: false,
-  },
-  {
-    title: "OTA Inbox Response Checklist",
-    description: "Standards for Booking.com, Expedia, and Airbnb inbox handling — useful before any pilot scope discussion.",
-    cta: "View Checklist",
-    href: "/resources/booking-com-message-support",
-    featured: false,
-  },
-  {
-    title: "Coverage Gap Assessment",
-    description: "Identify which hours, channels, and escalation paths are unprotected at your property.",
-    cta: "Download Assessment",
-    href: "/resources/coverage-gap-assessment",
-    featured: false,
-  },
+const SAMPLE_REPORT_ROWS = [
+  { date: "Mon", channel: "Phone", type: "Reservation enquiry", outcome: "Handled", note: "Rate and availability confirmed" },
+  { date: "Mon", channel: "Booking.com", type: "Pre-booking question", outcome: "Handled", note: "Check-in time and parking confirmed" },
+  { date: "Tue", channel: "SMS", type: "After-hours access", outcome: "Handled", note: "Key code provided per property brief" },
+  { date: "Tue", channel: "Phone", type: "Complaint — noise", outcome: "Escalated", note: "Forwarded to on-call contact per rules" },
+  { date: "Wed", channel: "Expedia", type: "Rate dispute", outcome: "Escalated", note: "Outside approved handling scope" },
+  { date: "Wed", channel: "Phone", type: "Reservation enquiry", outcome: "Handled", note: "Booking confirmed" },
+  { date: "Thu", channel: "WhatsApp", type: "Pre-arrival question", outcome: "Handled", note: "Directions and check-in instructions sent" },
+  { date: "Thu", channel: "Airbnb", type: "Guest review concern", outcome: "Escalated", note: "Owner decision required" },
 ];
 
 export default function PilotPage() {
@@ -171,220 +163,251 @@ export default function PilotPage() {
       />
 
       {/* ── HERO ── */}
-      <section className="border-b border-line bg-paper py-16 md:py-24">
+      <section className="border-b border-line bg-paper py-14 md:py-20">
         <div className="container max-w-3xl">
-          <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-gold-dark">
-            2-Week Pilot Programme
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-gold-dark">
+            2-Week No-Obligation Pilot
           </p>
-          <h1 className="text-4xl font-medium leading-[1.1] tracking-tight text-ink md:text-5xl lg:text-6xl">
-            Find Out If Your Property Qualifies for a 2-Week Guest Coverage Pilot
+          <h1 className="text-4xl font-medium leading-[1.1] tracking-tight text-ink md:text-5xl lg:text-[3.25rem]">
+            Cover Your Guest Communication Gaps Without Adding Another Front Desk Shift
           </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-ink-soft">
-            GuestSquad helps independent hotels cover reservation calls, guest texts, OTA inboxes, and after-hours guest communication without adding another front desk shift.
+          <p className="mt-5 max-w-2xl text-lg leading-relaxed text-ink-soft">
+            GuestSquad handles reservation calls, guest texts, OTA inboxes, and after-hours coverage for independent hotels and property operators. Qualified properties can start with a 2-week no-obligation pilot before moving into month-to-month coverage.
           </p>
-          <p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink-muted">
-            For qualified properties, we can start with a 2-week no-obligation pilot before moving into month-to-month coverage.
-          </p>
-          <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
+          <div className="mt-8">
             <a
               href="#qualify"
-              className="inline-flex items-center justify-center rounded-lg bg-gold-dark px-6 py-3 text-sm font-semibold text-paper shadow-sm transition-colors hover:bg-gold"
+              className="inline-flex items-center justify-center rounded-lg bg-gold-dark px-7 py-3.5 text-sm font-semibold text-paper shadow-sm transition-colors hover:bg-gold"
             >
               Check Pilot Fit
-            </a>
-            <a
-              href="#calculator"
-              className="inline-flex items-center justify-center gap-2 rounded-lg border border-line bg-paper px-6 py-3 text-sm font-medium text-ink transition-colors hover:border-gold-dark/50"
-            >
-              Calculate Missed Booking Risk
             </a>
           </div>
         </div>
       </section>
 
-      {/* ── TRUST STRIP ── */}
+      {/* ── REASSURANCE BLOCK ── */}
       <div className="border-b border-line bg-surface">
-        <div className="container py-4">
-          <div className="flex flex-wrap items-center gap-x-7 gap-y-2">
-            {TRUST_POINTS.map((point) => (
-              <span key={point} className="flex items-center gap-2 text-xs font-medium text-ink-soft">
-                <Check className="h-3.5 w-3.5 shrink-0 text-gold-dark" />
-                {point}
-              </span>
+        <div className="container py-6">
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+            {REASSURANCE_POINTS.map((point) => (
+              <div key={point} className="flex items-start gap-2.5">
+                <Check className="mt-0.5 h-3.5 w-3.5 shrink-0 text-gold-dark" />
+                <span className="text-xs leading-relaxed text-ink-soft">{point}</span>
+              </div>
             ))}
           </div>
         </div>
       </div>
 
       {/* ── PAIN ── */}
-      <Section>
+      <Section compact>
         <SectionHeading
-          eyebrow="The Problem"
-          title="Guest communication gaps usually show up after the booking inquiry."
+          eyebrow="Where Revenue Leaks"
+          title="Guest communication gaps cost more than they look."
         />
-        <p className="mt-4 max-w-2xl text-sm leading-relaxed text-ink-soft">
-          Independent properties often lose revenue or damage the guest experience when calls, texts, OTA inboxes, and after-hours questions are not covered consistently. The volume is rarely catastrophic on any single day — the cost accumulates quietly.
-        </p>
-        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {PAIN_CARDS.map((card) => (
-            <div key={card.title} className="rounded-lg border border-line bg-paper p-6">
+            <div key={card.title} className="rounded-lg border border-line bg-paper p-5">
               <card.icon className="h-5 w-5 text-gold-dark" />
-              <h3 className="mt-4 text-sm font-medium text-ink">{card.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-ink-soft">{card.body}</p>
+              <h3 className="mt-3 text-sm font-medium text-ink">{card.title}</h3>
+              <p className="mt-1.5 text-sm leading-relaxed text-ink-soft">{card.body}</p>
             </div>
           ))}
         </div>
       </Section>
 
       {/* ── CALCULATOR ── */}
-      <Section surface id="calculator">
+      <Section surface compact id="calculator">
         <SectionHeading
-          eyebrow="Missed Booking Risk"
+          eyebrow="Revenue Calculator"
           title="Estimate your missed booking risk."
         />
-        <p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink-soft">
-          Adjust the sliders to your property. The estimate shows why even a few missed calls or delayed responses can matter at scale.
+        <p className="mt-3 max-w-xl text-sm leading-relaxed text-ink-soft">
+          Adjust the sliders to your property volume. Most properties find coverage pays for itself with one or two recovered bookings per month.
         </p>
-        <div className="mt-10">
+        <div className="mt-8">
           <MissedBookingCalculator compact />
         </div>
-        <div className="mt-8">
-          <a
-            href="#qualify"
-            className="inline-flex items-center gap-2 text-sm font-medium text-gold-dark hover:text-gold"
-          >
-            Check if GuestSquad can cover this gap <ArrowRight className="h-4 w-4" />
+        <div className="mt-6 flex items-center gap-4">
+          <a href="#qualify" className="inline-flex items-center gap-1.5 text-sm font-medium text-gold-dark hover:text-gold">
+            Check pilot fit <ArrowRight className="h-3.5 w-3.5" />
           </a>
         </div>
       </Section>
 
-      {/* ── COVERAGE SCOPE ── */}
-      <Section>
+      {/* ── WHAT OPERATORS CARE ABOUT ── */}
+      <Section compact>
         <SectionHeading
-          eyebrow="What a Pilot Can Include"
-          title="What a guest coverage pilot can include."
+          eyebrow="What We Hear"
+          title="What operators care about before handing over guest communication."
         />
-        <p className="mt-4 max-w-2xl text-sm leading-relaxed text-ink-soft">
-          During the pilot, we agree on the channels, escalation rules, and property-specific information before handling any guest communication. Final scope depends on qualification and your agreed channels.
-        </p>
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {COVERAGE_ITEMS.map((item) => (
-            <div key={item.label} className="rounded-lg border border-line bg-paper px-5 py-4">
-              <p className="text-sm font-medium text-ink">{item.label}</p>
-              <p className="mt-1 text-xs leading-relaxed text-ink-muted">{item.note}</p>
+        <div className="mt-8 grid gap-4 sm:grid-cols-2">
+          {OPERATOR_CONCERNS.map((item) => (
+            <div key={item.heading} className="rounded-lg border border-line bg-paper p-6">
+              <h3 className="text-sm font-medium text-ink">{item.heading}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-ink-soft">{item.body}</p>
             </div>
           ))}
         </div>
       </Section>
 
-      {/* ── QUALIFICATION FORM ── */}
-      <Section surface id="qualify">
-        <div className="grid gap-12 lg:grid-cols-[1fr_1.6fr]">
-          <div>
-            <SectionHeading
-              eyebrow="Check Pilot Fit"
-              title="Tell us about your property."
-            />
-            <p className="mt-4 text-sm leading-relaxed text-ink-soft">
-              Fill in the details below so we can review whether a 2-week pilot is a good fit for your property and guest communication setup.
-            </p>
-            <div className="mt-8 space-y-4">
-              {[
-                "We review every submission within one business day.",
-                "No commitment required to submit.",
-                "We'll follow up with a short qualification call.",
-                "Pilot scope and terms are agreed before anything starts.",
-              ].map((line) => (
-                <div key={line} className="flex items-start gap-3">
-                  <Check className="mt-0.5 h-4 w-4 shrink-0 text-gold-dark" />
-                  <p className="text-sm leading-relaxed text-ink-soft">{line}</p>
-                </div>
-              ))}
+      {/* ── COVERAGE SCOPE ── */}
+      <Section surface compact>
+        <SectionHeading
+          eyebrow="Coverage Scope"
+          title="What the pilot can include."
+        />
+        <p className="mt-3 max-w-xl text-sm leading-relaxed text-ink-soft">
+          Scope is agreed during qualification. Final channels depend on your property setup and what is agreed before go-live.
+        </p>
+        <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          {COVERAGE_ITEMS.map((item) => (
+            <div key={item.label} className="rounded-lg border border-line bg-paper px-4 py-3.5">
+              <p className="text-sm font-medium text-ink">{item.label}</p>
+              <p className="mt-0.5 text-xs leading-relaxed text-ink-muted">{item.note}</p>
             </div>
-            <div className="mt-10 rounded-lg border border-line bg-paper p-6">
-              <p className="text-sm font-medium text-ink">Prefer to book directly?</p>
-              <p className="mt-2 text-sm leading-relaxed text-ink-soft">
-                Skip the form and book a 30-minute coverage review. We&rsquo;ll walk through your property, gaps, and whether a pilot makes sense.
+          ))}
+        </div>
+      </Section>
+
+      {/* ── SAMPLE REPORT PREVIEW ── */}
+      <Section compact>
+        <div className="grid gap-10 lg:grid-cols-[1fr_1.5fr] lg:items-start">
+          <div>
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-gold-dark">Reporting</p>
+            <h2 className="text-2xl font-medium leading-tight text-ink md:text-3xl">
+              Visibility into everything handled and escalated.
+            </h2>
+            <p className="mt-4 text-sm leading-relaxed text-ink-soft">
+              Every pilot includes a weekly report covering what was handled directly, what was escalated, and what patterns emerged across your agreed channels. Ownership and management get a clear picture without chasing their team.
+            </p>
+            <div className="mt-6">
+              <Link
+                href="/resources/sample-weekly-report"
+                className="inline-flex items-center gap-1.5 text-sm font-medium text-gold-dark hover:text-gold"
+              >
+                View Sample Weekly Report <ArrowRight className="h-3.5 w-3.5" />
+              </Link>
+            </div>
+          </div>
+
+          {/* Sample report table */}
+          <div className="rounded-xl border border-line bg-surface p-1 overflow-hidden">
+            <div className="rounded-lg border border-line bg-paper overflow-hidden">
+              <div className="flex items-center justify-between border-b border-line px-4 py-3">
+                <p className="text-xs font-semibold text-ink">Sample reporting view</p>
+                <span className="rounded bg-gold/10 px-2 py-0.5 text-[10px] font-medium text-gold-dark">Example only</span>
+              </div>
+              <div className="overflow-x-auto">
+                <table className="w-full min-w-[480px] text-xs">
+                  <thead>
+                    <tr className="border-b border-line bg-surface">
+                      <th className="px-3 py-2.5 text-left font-semibold uppercase tracking-wide text-ink-muted">Day</th>
+                      <th className="px-3 py-2.5 text-left font-semibold uppercase tracking-wide text-ink-muted">Channel</th>
+                      <th className="px-3 py-2.5 text-left font-semibold uppercase tracking-wide text-ink-muted">Type</th>
+                      <th className="px-3 py-2.5 text-left font-semibold uppercase tracking-wide text-ink-muted">Outcome</th>
+                      <th className="px-3 py-2.5 text-left font-semibold uppercase tracking-wide text-ink-muted">Note</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {SAMPLE_REPORT_ROWS.map((row, i) => (
+                      <tr key={i} className={`border-b border-line last:border-0 ${row.outcome === "Escalated" ? "bg-amber-50/50 dark:bg-amber-950/10" : ""}`}>
+                        <td className="px-3 py-2.5 text-ink-muted">{row.date}</td>
+                        <td className="px-3 py-2.5 font-medium text-ink">{row.channel}</td>
+                        <td className="px-3 py-2.5 text-ink-soft">{row.type}</td>
+                        <td className="px-3 py-2.5">
+                          <span className={`inline-block rounded px-1.5 py-0.5 text-[10px] font-semibold ${
+                            row.outcome === "Handled"
+                              ? "bg-emerald-100 text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-400"
+                              : "bg-amber-100 text-amber-700 dark:bg-amber-950/40 dark:text-amber-400"
+                          }`}>
+                            {row.outcome}
+                          </span>
+                        </td>
+                        <td className="px-3 py-2.5 text-ink-muted">{row.note}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <p className="border-t border-line px-4 py-2.5 text-[10px] leading-relaxed text-ink-muted">
+                Example only. Final reports depend on agreed channels and property workflow.
               </p>
-              <div className="mt-5">
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      {/* ── HOW IT WORKS ── */}
+      <Section surface compact>
+        <SectionHeading
+          eyebrow="How It Works"
+          title="From submission to live coverage in four steps."
+        />
+        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {PILOT_STEPS.map((item) => (
+            <div key={item.n} className="rounded-lg border border-line bg-paper p-5">
+              <span className="text-xl font-medium text-gold-dark">{item.n}</span>
+              <h3 className="mt-3 text-sm font-medium text-ink">{item.title}</h3>
+              <p className="mt-1.5 text-sm leading-relaxed text-ink-soft">{item.body}</p>
+            </div>
+          ))}
+        </div>
+        <p className="mt-6 text-xs text-ink-muted">
+          No long-term contract. Month-to-month if continued. Scope agreed before any guest handling begins.
+        </p>
+      </Section>
+
+      {/* ── QUALIFICATION FORM ── */}
+      <Section id="qualify">
+        <div className="grid gap-10 lg:grid-cols-[1fr_1.8fr] lg:items-start">
+          <div className="lg:sticky lg:top-24">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-gold-dark">Check Pilot Fit</p>
+            <h2 className="text-2xl font-medium leading-tight text-ink md:text-3xl">
+              Tell us about your property.
+            </h2>
+            <p className="mt-3 text-sm leading-relaxed text-ink-soft">
+              Fill in your property details and we&rsquo;ll review whether a 2-week pilot is a realistic fit. We follow up within one business day.
+            </p>
+            <ul className="mt-6 space-y-3">
+              {[
+                "Reviewed within one business day.",
+                "No commitment required to submit.",
+                "Pilot scope and terms agreed before anything starts.",
+              ].map((line) => (
+                <li key={line} className="flex items-start gap-2.5">
+                  <Check className="mt-0.5 h-4 w-4 shrink-0 text-gold-dark" />
+                  <span className="text-sm leading-relaxed text-ink-soft">{line}</span>
+                </li>
+              ))}
+            </ul>
+            <div className="mt-8 border-t border-line pt-7">
+              <p className="text-sm font-medium text-ink">Prefer a direct call?</p>
+              <p className="mt-1.5 text-sm leading-relaxed text-ink-soft">
+                Book a 30-minute coverage review and we&rsquo;ll come prepared with questions about your property.
+              </p>
+              <div className="mt-4">
                 <CalendlyPopupButton variant="outline" size="sm">
                   Book a Coverage Review
                 </CalendlyPopupButton>
               </div>
             </div>
           </div>
-          <div className="rounded-xl border border-line bg-paper p-8">
+          <div className="rounded-xl border border-line bg-paper p-7 md:p-8">
             <PilotForm />
           </div>
         </div>
       </Section>
 
-      {/* ── LEAD MAGNETS ── */}
-      <Section>
-        <SectionHeading
-          eyebrow="Before You Commit"
-          title="See how coverage becomes operationally visible."
-        />
-        <p className="mt-4 max-w-2xl text-sm leading-relaxed text-ink-soft">
-          Before committing to ongoing coverage, operators want to know what is being handled. Our reporting shows volume, recurring questions, escalations, and recommendations.
-        </p>
-        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {LEAD_MAGNETS.map((asset) => (
-            <Link
-              key={asset.href}
-              href={asset.href}
-              className={`group flex flex-col justify-between rounded-lg border p-6 transition-colors hover:border-gold-dark/50 ${
-                asset.featured
-                  ? "border-gold bg-gold/5"
-                  : "border-line bg-paper"
-              }`}
-            >
-              <div>
-                {asset.featured && (
-                  <span className="mb-3 inline-block rounded bg-gold/15 px-2.5 py-1 text-xs font-medium text-gold-dark">
-                    Recommended first read
-                  </span>
-                )}
-                <h3 className="text-sm font-medium text-ink">{asset.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-ink-soft">{asset.description}</p>
-              </div>
-              <p className="mt-5 text-xs font-medium text-gold-dark group-hover:text-gold">{asset.cta} →</p>
-            </Link>
-          ))}
-        </div>
-      </Section>
-
-      {/* ── HOW IT WORKS ── */}
-      <Section surface>
-        <SectionHeading
-          eyebrow="How the Pilot Works"
-          title="How the 2-week pilot works."
-        />
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {PILOT_STEPS.map((item) => (
-            <div key={item.step} className="flex flex-col gap-4 rounded-lg border border-line bg-paper p-6">
-              <span className="text-2xl font-medium text-gold-dark">{item.step}</span>
-              <div>
-                <h3 className="text-sm font-medium text-ink">{item.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-ink-soft">{item.body}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-        <p className="mt-8 text-sm text-ink-muted">
-          No long-term contract. Month-to-month if continued. Scope is agreed before launch. Property-specific briefing happens before guest handling begins.
-        </p>
-      </Section>
-
       {/* ── FAQ ── */}
-      <Section>
+      <Section surface compact>
         <SectionHeading
           eyebrow="Questions"
           title="Common questions about the pilot."
         />
-        <div className="mt-10 grid gap-6 sm:grid-cols-2">
+        <div className="mt-8 grid gap-4 sm:grid-cols-2">
           {FAQS.map((item) => (
-            <div key={item.q} className="rounded-lg border border-line bg-paper p-6">
+            <div key={item.q} className="rounded-lg border border-line bg-paper p-5">
               <h3 className="text-sm font-medium text-ink">{item.q}</h3>
               <p className="mt-2 text-sm leading-relaxed text-ink-soft">{item.a}</p>
             </div>
@@ -393,25 +416,25 @@ export default function PilotPage() {
       </Section>
 
       {/* ── FINAL CTA ── */}
-      <section className="bg-ink py-16 md:py-20">
+      <section className="bg-ink py-14 md:py-18">
         <div className="container max-w-2xl text-center">
           <h2 className="text-3xl font-medium leading-tight text-paper md:text-4xl">
-            Want to see if your property qualifies?
+            Find out if your property qualifies.
           </h2>
-          <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-paper/65">
-            Submit your property details or book a coverage review. We&rsquo;ll help you determine whether a 2-week pilot makes sense for your guest communication needs.
+          <p className="mx-auto mt-4 max-w-lg text-base leading-relaxed text-paper/60">
+            Submit your details or book a coverage review. We&rsquo;ll review your property and let you know whether a 2-week pilot is the right starting point.
           </p>
-          <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <a
               href="#qualify"
-              className="inline-flex items-center justify-center rounded-lg bg-gold-dark px-6 py-3 text-sm font-semibold text-paper shadow-sm transition-colors hover:bg-gold"
+              className="inline-flex items-center justify-center rounded-lg bg-gold-dark px-7 py-3.5 text-sm font-semibold text-paper shadow-sm transition-colors hover:bg-gold"
             >
               Submit for Pilot Review
             </a>
             <CalendlyPopupButton
               variant="outline"
               size="lg"
-              className="border-paper/25 text-paper hover:border-paper/60"
+              className="border-paper/25 text-paper hover:border-paper/50"
             >
               Book a Coverage Review
             </CalendlyPopupButton>

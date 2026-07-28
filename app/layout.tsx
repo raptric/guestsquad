@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import { Nav } from "@/components/site/nav";
-import { Footer } from "@/components/site/footer";
+import { FooterWrapper } from "@/components/site/footer-wrapper";
 import { CookieConsent } from "@/components/site/cookie-consent";
 import { JsonLd } from "@/components/site/json-ld";
 import { ScrollTracker } from "@/components/site/scroll-tracker";
@@ -101,7 +101,7 @@ export default function RootLayout({
         <ScrollTracker />
         <div className="no-print"><Nav /></div>
         <main className="flex-1">{children}</main>
-        <div className="no-print"><Footer /></div>
+        <div className="no-print"><FooterWrapper /></div>
         <CookieConsent />
       </body>
     </html>

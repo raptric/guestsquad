@@ -9,9 +9,30 @@ import { ButtonLink } from "@/components/site/button-link";
 import { CalendlyPopupButton } from "@/components/site/calendly-popup-button";
 import { cn } from "@/lib/utils";
 
+const CAMPAIGN_PATHS = ["/pilot"];
+
 export function Nav() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+
+  if (CAMPAIGN_PATHS.includes(pathname)) {
+    return (
+      <header className="sticky top-0 z-50 border-b border-line bg-paper/95 backdrop-blur">
+        <div className="container flex h-16 items-center justify-between">
+          <Link href="/">
+            <img
+              src="/brand-assets/guestsquad-logo-horizontal.svg"
+              alt="GuestSquad"
+              className="h-8 w-auto"
+            />
+          </Link>
+          <CalendlyPopupButton variant="gold" size="sm">
+            Book a Coverage Review
+          </CalendlyPopupButton>
+        </div>
+      </header>
+    );
+  }
 
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-paper/95 backdrop-blur">

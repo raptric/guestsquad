@@ -132,7 +132,10 @@ export default function PricingPage() {
         </p>
 
         <p className="mt-6 text-center text-sm text-ink-soft">
-          Qualified properties can start with a 2-week pilot before moving into month-to-month coverage.
+          Qualified properties can start with a 2-week pilot before moving into month-to-month coverage.{" "}
+          <Link href="/pilot" className="text-gold-dark underline underline-offset-4 hover:text-gold">
+            See if you qualify →
+          </Link>
         </p>
 
         {/* Sample report — proof block directly under plans */}

@@ -279,33 +279,17 @@ export default function PilotPage() {
               Visibility into everything handled and escalated.
             </h2>
             <p className="mt-4 text-sm leading-relaxed text-ink-soft">
-              Every pilot includes a weekly report covering what was handled directly, what was escalated, and what patterns emerged across your agreed channels. Ownership and management get a clear picture without chasing their team.
+              Every pilot includes a weekly report covering what was handled, what was escalated, and what patterns emerged across your agreed channels. Ownership gets a clear picture without chasing the team.
             </p>
             <div className="mt-6">
               <a
                 href="/downloads/sample-weekly-report.pdf"
                 download
-                className="inline-flex items-center gap-1.5 text-sm font-semibold text-gold-dark hover:text-gold"
+                className="inline-flex items-center gap-2 rounded-lg border border-gold-dark px-5 py-2.5 text-sm font-semibold text-gold-dark transition-colors hover:bg-gold-dark hover:text-paper"
               >
-                Download Sample Weekly Report <ArrowRight className="h-3.5 w-3.5" />
+                Download Sample Weekly Report
+                <ArrowRight className="h-3.5 w-3.5" />
               </a>
-            </div>
-            <div className="mt-5 flex flex-col gap-2">
-              {[
-                { label: "After-Hours Checklist", href: "/downloads/after-hours-checklist.pdf" },
-                { label: "Guest Messaging SOP", href: "/downloads/guest-messaging-sop.pdf" },
-                { label: "OTA Inbox Checklist", href: "/downloads/ota-inbox-response-checklist.pdf" },
-                { label: "Coverage Gap Assessment", href: "/downloads/coverage-gap-assessment.pdf" },
-              ].map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  download
-                  className="text-xs text-ink-muted hover:text-ink-soft underline underline-offset-2"
-                >
-                  {link.label}
-                </a>
-              ))}
             </div>
           </div>
 
@@ -376,6 +360,26 @@ export default function PilotPage() {
         </p>
       </Section>
 
+      {/* ── BOOK A CALL CTA ── */}
+      <section className="border-y border-line bg-gold/5 py-10">
+        <div className="container flex flex-col items-center justify-between gap-6 sm:flex-row">
+          <div className="max-w-lg">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold-dark">Talk to an Advisor</p>
+            <h2 className="mt-2 text-xl font-medium leading-snug text-ink md:text-2xl">
+              Not sure if a pilot is the right fit for your property?
+            </h2>
+            <p className="mt-2 text-sm leading-relaxed text-ink-soft">
+              Book a 30-minute coverage review and speak directly with an advisor. We&rsquo;ll ask the right questions about your property, channels, and gaps — and tell you honestly whether GuestSquad is the right match.
+            </p>
+          </div>
+          <div className="shrink-0">
+            <CalendlyPopupButton variant="gold" size="lg">
+              Book a Coverage Review
+            </CalendlyPopupButton>
+          </div>
+        </div>
+      </section>
+
       {/* ── QUALIFICATION FORM ── */}
       <Section id="qualify">
         <div className="grid gap-10 lg:grid-cols-[1fr_1.8fr] lg:items-start">
@@ -399,17 +403,6 @@ export default function PilotPage() {
                 </li>
               ))}
             </ul>
-            <div className="mt-8 border-t border-line pt-7">
-              <p className="text-sm font-medium text-ink">Prefer a direct call?</p>
-              <p className="mt-1.5 text-sm leading-relaxed text-ink-soft">
-                Book a 30-minute coverage review and we&rsquo;ll come prepared with questions about your property.
-              </p>
-              <div className="mt-4">
-                <CalendlyPopupButton variant="outline" size="sm">
-                  Book a Coverage Review
-                </CalendlyPopupButton>
-              </div>
-            </div>
           </div>
           <div className="rounded-xl border border-line bg-paper p-7 md:p-8">
             <PilotForm />

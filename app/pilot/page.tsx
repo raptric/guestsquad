@@ -102,8 +102,8 @@ const PILOT_STEPS = [
 
 const FAQS = [
   {
-    q: "Is this a free trial?",
-    a: "No. We call it a 2-week no-obligation pilot because the goal is to validate fit, scope, channels, and workflows before moving into month-to-month coverage. Pilot terms are confirmed during qualification.",
+    q: "What is included in the 2-week pilot?",
+    a: "The pilot is designed to validate fit, channel coverage, escalation rules, and guest communication workflows before ongoing month-to-month coverage begins. Pilot terms are confirmed during qualification.",
   },
   {
     q: "What properties qualify for a pilot?",
@@ -282,12 +282,30 @@ export default function PilotPage() {
               Every pilot includes a weekly report covering what was handled directly, what was escalated, and what patterns emerged across your agreed channels. Ownership and management get a clear picture without chasing their team.
             </p>
             <div className="mt-6">
-              <Link
-                href="/resources/sample-weekly-report"
-                className="inline-flex items-center gap-1.5 text-sm font-medium text-gold-dark hover:text-gold"
+              <a
+                href="/downloads/sample-weekly-report.pdf"
+                download
+                className="inline-flex items-center gap-1.5 text-sm font-semibold text-gold-dark hover:text-gold"
               >
-                View Sample Weekly Report <ArrowRight className="h-3.5 w-3.5" />
-              </Link>
+                Download Sample Weekly Report <ArrowRight className="h-3.5 w-3.5" />
+              </a>
+            </div>
+            <div className="mt-5 flex flex-col gap-2">
+              {[
+                { label: "After-Hours Checklist", href: "/downloads/after-hours-checklist.pdf" },
+                { label: "Guest Messaging SOP", href: "/downloads/guest-messaging-sop.pdf" },
+                { label: "OTA Inbox Checklist", href: "/downloads/ota-inbox-response-checklist.pdf" },
+                { label: "Coverage Gap Assessment", href: "/downloads/coverage-gap-assessment.pdf" },
+              ].map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  download
+                  className="text-xs text-ink-muted hover:text-ink-soft underline underline-offset-2"
+                >
+                  {link.label}
+                </a>
+              ))}
             </div>
           </div>
 

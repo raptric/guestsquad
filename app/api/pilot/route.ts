@@ -8,11 +8,7 @@ export async function POST(req: Request) {
     propertyWebsite,
     propertyType,
     rooms,
-    location,
-    callsPerDay,
     channels,
-    afterHours,
-    tools,
     pain,
     name,
     email,
@@ -59,11 +55,7 @@ export async function POST(req: Request) {
         <tr><td style="padding:9px 0;border-bottom:1px solid #eee;font-weight:600">Website</td><td style="padding:9px 0;border-bottom:1px solid #eee">${propertyWebsite || "—"}</td></tr>
         <tr><td style="padding:9px 0;border-bottom:1px solid #eee;font-weight:600">Property Type</td><td style="padding:9px 0;border-bottom:1px solid #eee">${propertyType || "—"}</td></tr>
         <tr><td style="padding:9px 0;border-bottom:1px solid #eee;font-weight:600">Rooms / Units</td><td style="padding:9px 0;border-bottom:1px solid #eee">${rooms || "—"}</td></tr>
-        <tr><td style="padding:9px 0;border-bottom:1px solid #eee;font-weight:600">Location</td><td style="padding:9px 0;border-bottom:1px solid #eee">${location || "—"}</td></tr>
-        <tr><td style="padding:9px 0;border-bottom:1px solid #eee;font-weight:600">Calls per Day</td><td style="padding:9px 0;border-bottom:1px solid #eee">${callsPerDay || "—"}</td></tr>
         <tr><td style="padding:9px 0;border-bottom:1px solid #eee;font-weight:600">Channels Needed</td><td style="padding:9px 0;border-bottom:1px solid #eee">${channelList}</td></tr>
-        <tr><td style="padding:9px 0;border-bottom:1px solid #eee;font-weight:600">After-Hours Needed</td><td style="padding:9px 0;border-bottom:1px solid #eee">${afterHours || "—"}</td></tr>
-        <tr><td style="padding:9px 0;border-bottom:1px solid #eee;font-weight:600">Current Tools</td><td style="padding:9px 0;border-bottom:1px solid #eee">${tools || "—"}</td></tr>
         <tr><td style="padding:9px 0;font-weight:600;vertical-align:top">Main Pain Point</td><td style="padding:9px 0;white-space:pre-wrap">${pain || "—"}</td></tr>
       </table>
       <h3 style="margin-top:24px;font-size:13px;color:#888;text-transform:uppercase;letter-spacing:0.08em">Contact</h3>

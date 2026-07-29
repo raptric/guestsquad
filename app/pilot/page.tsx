@@ -20,7 +20,7 @@ const REASSURANCE_POINTS = [
   "Built for independent hotels, inns, serviced apartments, and short-term rental operators",
   "Supports calls, texts, OTA inboxes, and approved guest messaging tools",
   "Property-specific briefing completed before any coverage begins",
-  "Month-to-month after the pilot — no long-term contract",
+  "Month-to-month coverage — no long-term contract",
   "Reporting included where agreed in the pilot scope",
 ];
 
@@ -172,17 +172,17 @@ export default function PilotPage() {
             Cover Your Guest Communication Gaps Without Adding Another Front Desk Shift
           </h1>
           <p className="mt-5 max-w-2xl text-lg leading-relaxed text-ink-soft">
-            GuestSquad handles reservation calls, guest texts, OTA inboxes, and after-hours coverage for independent hotels and property operators. Qualified properties can start with a 2-week no-obligation pilot before moving into month-to-month coverage.
+            GuestSquad handles reservation calls, guest texts, OTA inboxes, and after-hours coverage for independent hotels and property operators. We&rsquo;ll review your property, channels, and coverage gaps to determine whether a 2-week no-obligation pilot is the right starting point.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <a
               href="#qualify"
               className="inline-flex items-center justify-center rounded-lg bg-gold-dark px-7 py-3.5 text-sm font-semibold text-paper shadow-sm transition-colors hover:bg-gold"
             >
-              See If You Qualify
+              Request Pilot Review
             </a>
             <a href="#calculator" className="text-sm font-medium text-ink-soft underline underline-offset-2 hover:text-ink">
-              Estimate your revenue impact first
+              Estimate Missed Booking Risk
             </a>
           </div>
         </div>
@@ -226,14 +226,14 @@ export default function PilotPage() {
           title="Estimate your missed booking risk."
         />
         <p className="mt-3 max-w-xl text-sm leading-relaxed text-ink-soft">
-          Adjust the sliders to your property volume. Most properties find coverage pays for itself with one or two recovered bookings per month.
+          Adjust the sliders to your property volume. For many properties, one or two recovered bookings can offset a meaningful portion of guest coverage costs.
         </p>
         <div className="mt-8">
           <MissedBookingCalculator compact />
         </div>
         <div className="mt-6 flex items-center gap-4">
           <a href="#qualify" className="inline-flex items-center gap-1.5 rounded-lg bg-gold-dark px-5 py-2.5 text-sm font-semibold text-paper transition-colors hover:bg-gold">
-            Stop Losing Revenue — See If You Qualify <ArrowRight className="h-3.5 w-3.5" />
+            Review My Coverage Gap <ArrowRight className="h-3.5 w-3.5" />
           </a>
         </div>
       </Section>
@@ -268,14 +268,23 @@ export default function PilotPage() {
             <p className="mt-4 text-sm leading-relaxed text-ink-soft">
               Every pilot includes a weekly report covering what was handled, what was escalated, and what patterns emerged across your agreed channels. Ownership gets a clear picture without chasing the team.
             </p>
-            <div className="mt-6">
+            <div className="mt-6 flex flex-col gap-3">
               <a
                 href="/downloads/sample-weekly-report.pdf"
                 download
                 className="inline-flex items-center gap-2 rounded-lg border border-gold-dark px-5 py-2.5 text-sm font-semibold text-gold-dark transition-colors hover:bg-gold-dark hover:text-paper"
               >
-                Download Sample Weekly Report
+                Download Sample Report
                 <ArrowRight className="h-3.5 w-3.5" />
+              </a>
+              <p className="text-xs font-medium text-ink-soft">
+                Want this level of visibility during a pilot?
+              </p>
+              <a
+                href="#qualify"
+                className="inline-flex items-center gap-1.5 text-sm font-semibold text-gold-dark hover:text-gold"
+              >
+                Request Pilot Review <ArrowRight className="h-3.5 w-3.5" />
               </a>
             </div>
           </div>
@@ -347,36 +356,32 @@ export default function PilotPage() {
         </p>
       </Section>
 
-      {/* ── BOOK A CALL CTA ── */}
-      <section className="border-y border-line bg-gold/5 py-10">
-        <div className="container flex flex-col items-center justify-between gap-6 sm:flex-row">
-          <div className="max-w-lg">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold-dark">Talk to an Advisor</p>
-            <h2 className="mt-2 text-xl font-medium leading-snug text-ink md:text-2xl">
-              Not sure if a pilot is the right fit for your property?
-            </h2>
-            <p className="mt-2 text-sm leading-relaxed text-ink-soft">
-              Book a 30-minute coverage review and speak directly with an advisor. We&rsquo;ll ask the right questions about your property, channels, and gaps — and tell you honestly whether GuestSquad is the right match.
-            </p>
-          </div>
-          <div className="shrink-0">
-            <CalendlyPopupButton variant="gold" size="lg">
-              Book a Coverage Review
-            </CalendlyPopupButton>
-          </div>
+      {/* ── WHAT OPERATORS CARE ABOUT ── */}
+      <Section compact>
+        <SectionHeading
+          eyebrow="What We Hear"
+          title="Built to protect guest experience, not just answer messages."
+        />
+        <div className="mt-8 grid gap-4 sm:grid-cols-2">
+          {OPERATOR_CONCERNS.map((item) => (
+            <div key={item.heading} className="rounded-lg border border-line bg-paper p-6">
+              <h3 className="text-sm font-medium text-ink">{item.heading}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-ink-soft">{item.body}</p>
+            </div>
+          ))}
         </div>
-      </section>
+      </Section>
 
       {/* ── QUALIFICATION FORM ── */}
       <Section id="qualify">
         <div className="grid gap-10 lg:grid-cols-[1fr_1.8fr] lg:items-start">
           <div className="lg:sticky lg:top-24">
-            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-gold-dark">Check Pilot Fit</p>
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-gold-dark">Request Pilot Review</p>
             <h2 className="text-2xl font-medium leading-tight text-ink md:text-3xl">
               Tell us about your property.
             </h2>
             <p className="mt-3 text-sm leading-relaxed text-ink-soft">
-              Fill in your property details and we&rsquo;ll review whether a 2-week pilot is a realistic fit. We follow up within one business day.
+              Share a few property details and we&rsquo;ll review whether a 2-week no-obligation pilot is the right starting point.
             </p>
             <ul className="mt-6 space-y-3">
               {[
@@ -440,21 +445,25 @@ export default function PilotPage() {
         </div>
       </Section>
 
-      {/* ── WHAT OPERATORS CARE ABOUT ── */}
-      <Section compact>
-        <SectionHeading
-          eyebrow="What We Hear"
-          title="What operators tell us before they start."
-        />
-        <div className="mt-8 grid gap-4 sm:grid-cols-2">
-          {OPERATOR_CONCERNS.map((item) => (
-            <div key={item.heading} className="rounded-lg border border-line bg-paper p-6">
-              <h3 className="text-sm font-medium text-ink">{item.heading}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-ink-soft">{item.body}</p>
-            </div>
-          ))}
+      {/* ── TALK TO ADVISOR ── */}
+      <section className="border-y border-line bg-gold/5 py-10">
+        <div className="container flex flex-col items-center justify-between gap-6 sm:flex-row">
+          <div className="max-w-lg">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold-dark">Talk to an Advisor</p>
+            <h2 className="mt-2 text-xl font-medium leading-snug text-ink md:text-2xl">
+              Prefer to talk first?
+            </h2>
+            <p className="mt-2 text-sm leading-relaxed text-ink-soft">
+              Book a 30-minute coverage review and we&rsquo;ll walk through your guest communication gaps, channels, and pilot fit.
+            </p>
+          </div>
+          <div className="shrink-0">
+            <CalendlyPopupButton variant="gold" size="lg">
+              Book a Coverage Review
+            </CalendlyPopupButton>
+          </div>
         </div>
-      </Section>
+      </section>
 
       {/* ── FAQ ── */}
       <Section surface compact>
@@ -476,17 +485,17 @@ export default function PilotPage() {
       <section className="bg-ink py-14 md:py-18">
         <div className="container max-w-2xl text-center">
           <h2 className="text-3xl font-medium leading-tight text-paper md:text-4xl">
-            Find out if your property qualifies.
+            Ready to review your guest coverage gap?
           </h2>
           <p className="mx-auto mt-4 max-w-lg text-base leading-relaxed text-paper/60">
-            Submit your details or book a coverage review. We&rsquo;ll review your property and let you know whether a 2-week pilot is the right starting point.
+            Submit your property details or book a coverage review. We&rsquo;ll help determine whether a 2-week no-obligation pilot is the right starting point.
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <a
               href="#qualify"
               className="inline-flex items-center justify-center rounded-lg bg-gold-dark px-7 py-3.5 text-sm font-semibold text-paper shadow-sm transition-colors hover:bg-gold"
             >
-              Submit for Pilot Review
+              Request Pilot Review
             </a>
             <CalendlyPopupButton
               variant="outline"

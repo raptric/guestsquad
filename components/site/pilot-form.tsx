@@ -289,7 +289,7 @@ export function PilotForm() {
 
       <div>
         <Button type="submit" variant="gold" size="lg" className="w-full sm:w-auto" disabled={loading}>
-          {loading ? "Submitting…" : "Submit for Pilot Review"}
+          {loading ? "Submitting…" : "Request Pilot Review"}
         </Button>
         <p className="mt-2.5 text-xs text-ink-muted">
           Reviewed within one business day. Confidential — never shared.

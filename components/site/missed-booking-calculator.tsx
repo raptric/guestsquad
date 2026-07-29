@@ -125,7 +125,7 @@ export function MissedBookingCalculator({ compact = false }: Props) {
           </div>
           <div className="rounded-lg border border-line bg-paper p-5">
             <p className="text-2xl font-medium text-ink">{usd(annual)}</p>
-            <p className="mt-1 text-xs text-ink-muted">Annualised impact</p>
+            <p className="mt-1 text-xs text-ink-muted">Annualized impact</p>
           </div>
           <div className="rounded-lg border-2 border-gold bg-paper p-5">
             <p className="text-2xl font-medium text-gold-dark">{usd(recovered)}</p>

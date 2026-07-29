@@ -523,7 +523,7 @@ export default function PilotPage() {
       {/* ── FINAL CTA ── */}
       <section className="bg-ink py-14 md:py-18">
         <div className="container max-w-2xl text-center">
-          <h2 className="text-3xl font-medium leading-tight text-paper md:text-4xl">
+          <h2 className="text-3xl font-medium leading-tight text-paper md:text-[2rem] lg:text-4xl whitespace-nowrap">
             Ready to review your guest coverage gap?
           </h2>
           <p className="mx-auto mt-4 max-w-lg text-base leading-relaxed text-paper/60">

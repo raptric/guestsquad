@@ -174,12 +174,15 @@ export default function PilotPage() {
           <p className="mt-5 max-w-2xl text-lg leading-relaxed text-ink-soft">
             GuestSquad handles reservation calls, guest texts, OTA inboxes, and after-hours coverage for independent hotels and property operators. Qualified properties can start with a 2-week no-obligation pilot before moving into month-to-month coverage.
           </p>
-          <div className="mt-8">
+          <div className="mt-8 flex flex-wrap items-center gap-4">
             <a
               href="#qualify"
               className="inline-flex items-center justify-center rounded-lg bg-gold-dark px-7 py-3.5 text-sm font-semibold text-paper shadow-sm transition-colors hover:bg-gold"
             >
-              Check Pilot Fit
+              See If You Qualify
+            </a>
+            <a href="#calculator" className="text-sm font-medium text-ink-soft underline underline-offset-2 hover:text-ink">
+              Estimate your revenue impact first
             </a>
           </div>
         </div>
@@ -229,25 +232,9 @@ export default function PilotPage() {
           <MissedBookingCalculator compact />
         </div>
         <div className="mt-6 flex items-center gap-4">
-          <a href="#qualify" className="inline-flex items-center gap-1.5 text-sm font-medium text-gold-dark hover:text-gold">
-            Check pilot fit <ArrowRight className="h-3.5 w-3.5" />
+          <a href="#qualify" className="inline-flex items-center gap-1.5 rounded-lg bg-gold-dark px-5 py-2.5 text-sm font-semibold text-paper transition-colors hover:bg-gold">
+            Stop Losing Revenue — See If You Qualify <ArrowRight className="h-3.5 w-3.5" />
           </a>
-        </div>
-      </Section>
-
-      {/* ── WHAT OPERATORS CARE ABOUT ── */}
-      <Section compact>
-        <SectionHeading
-          eyebrow="What We Hear"
-          title="What operators care about before handing over guest communication."
-        />
-        <div className="mt-8 grid gap-4 sm:grid-cols-2">
-          {OPERATOR_CONCERNS.map((item) => (
-            <div key={item.heading} className="rounded-lg border border-line bg-paper p-6">
-              <h3 className="text-sm font-medium text-ink">{item.heading}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-ink-soft">{item.body}</p>
-            </div>
-          ))}
         </div>
       </Section>
 
@@ -403,10 +390,69 @@ export default function PilotPage() {
                 </li>
               ))}
             </ul>
+
+            {/* Mini report preview */}
+            <div className="mt-8 overflow-hidden rounded-xl border border-line bg-surface p-1">
+              <div className="rounded-lg border border-line bg-paper overflow-hidden">
+                <div className="flex items-center justify-between border-b border-line px-3 py-2">
+                  <p className="text-[11px] font-semibold text-ink">Weekly pilot report</p>
+                  <span className="rounded bg-gold/10 px-1.5 py-0.5 text-[9px] font-medium text-gold-dark">Example</span>
+                </div>
+                <table className="w-full text-[11px]">
+                  <thead>
+                    <tr className="border-b border-line bg-surface">
+                      <th className="px-2.5 py-1.5 text-left font-semibold text-ink-muted">Channel</th>
+                      <th className="px-2.5 py-1.5 text-left font-semibold text-ink-muted">Type</th>
+                      <th className="px-2.5 py-1.5 text-left font-semibold text-ink-muted">Outcome</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {[
+                      { channel: "Phone", type: "Reservation enquiry", outcome: "Handled" },
+                      { channel: "Booking.com", type: "Pre-arrival question", outcome: "Handled" },
+                      { channel: "SMS", type: "After-hours access", outcome: "Handled" },
+                      { channel: "Phone", type: "Noise complaint", outcome: "Escalated" },
+                      { channel: "WhatsApp", type: "Check-in directions", outcome: "Handled" },
+                    ].map((row, i) => (
+                      <tr key={i} className="border-b border-line last:border-0">
+                        <td className="px-2.5 py-1.5 font-medium text-ink">{row.channel}</td>
+                        <td className="px-2.5 py-1.5 text-ink-soft">{row.type}</td>
+                        <td className="px-2.5 py-1.5">
+                          <span className={`inline-block rounded px-1.5 py-0.5 text-[9px] font-semibold ${
+                            row.outcome === "Handled"
+                              ? "bg-emerald-100 text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-400"
+                              : "bg-amber-100 text-amber-700 dark:bg-amber-950/40 dark:text-amber-400"
+                          }`}>{row.outcome}</span>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+                <p className="border-t border-line px-3 py-2 text-[9px] text-ink-muted">
+                  You receive a report like this every week during the pilot.
+                </p>
+              </div>
+            </div>
           </div>
           <div className="rounded-xl border border-line bg-paper p-7 md:p-8">
             <PilotForm />
           </div>
+        </div>
+      </Section>
+
+      {/* ── WHAT OPERATORS CARE ABOUT ── */}
+      <Section compact>
+        <SectionHeading
+          eyebrow="What We Hear"
+          title="What operators tell us before they start."
+        />
+        <div className="mt-8 grid gap-4 sm:grid-cols-2">
+          {OPERATOR_CONCERNS.map((item) => (
+            <div key={item.heading} className="rounded-lg border border-line bg-paper p-6">
+              <h3 className="text-sm font-medium text-ink">{item.heading}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-ink-soft">{item.body}</p>
+            </div>
+          ))}
         </div>
       </Section>
 

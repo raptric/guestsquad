@@ -31,6 +31,7 @@ const PAIN_OPTIONS = [
   "No overnight or weekend coverage",
   "Too many channels to manage",
   "Losing bookings to faster competitors",
+  "Other / not sure yet",
 ];
 
 function getUtmParam(search: string, key: string): string {
@@ -250,21 +251,22 @@ export function PilotForm() {
         </div>
       </div>
 
-      <div>
-        <Label>Channels needing coverage *</Label>
-        <div className="mt-1.5">
-          <ChannelMultiSelect selected={selectedChannels} onChange={setSelectedChannels} />
+      <div className="grid gap-4 sm:grid-cols-2">
+        <div>
+          <Label>Channels needing coverage *</Label>
+          <div className="mt-1.5">
+            <ChannelMultiSelect selected={selectedChannels} onChange={setSelectedChannels} />
+          </div>
         </div>
-      </div>
-
-      <div>
-        <Label htmlFor="pain">Main coverage gap *</Label>
-        <Select id="pain" name="pain" defaultValue="" required>
-          <option value="" disabled>Select your biggest challenge</option>
-          {PAIN_OPTIONS.map((opt) => (
-            <option key={opt} value={opt}>{opt}</option>
-          ))}
-        </Select>
+        <div>
+          <Label htmlFor="pain">Biggest coverage gap *</Label>
+          <Select id="pain" name="pain" defaultValue="" required>
+            <option value="" disabled>Select your challenge</option>
+            {PAIN_OPTIONS.map((opt) => (
+              <option key={opt} value={opt}>{opt}</option>
+            ))}
+          </Select>
+        </div>
       </div>
 
       <div className="grid gap-4 sm:grid-cols-2">

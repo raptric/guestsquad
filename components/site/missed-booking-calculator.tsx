@@ -133,9 +133,7 @@ export function MissedBookingCalculator({ compact = false }: Props) {
           </div>
         </div>
         <p className="mt-4 text-xs leading-relaxed text-ink-soft">
-          Coverage pays for itself if it converts just{" "}
-          <strong>{breakEven}</strong> additional booking
-          {breakEven !== 1 ? "s" : ""} per month at your average booking value.
+          One recovered booking per month can offset a meaningful portion of guest coverage costs.
         </p>
       </div>
 

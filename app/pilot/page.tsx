@@ -352,7 +352,7 @@ export default function PilotPage() {
           ))}
         </div>
         <p className="mt-6 text-xs text-ink-muted">
-          No long-term contract. Month-to-month if continued. Scope agreed before any guest handling begins.
+          Month-to-month coverage after the pilot — no long-term contract. Scope agreed before any guest handling begins.
         </p>
       </Section>
 

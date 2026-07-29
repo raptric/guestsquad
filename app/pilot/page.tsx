@@ -1,13 +1,21 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import dynamic from "next/dynamic";
 import { Check, ArrowRight, Phone, MessageSquare, Inbox, Users } from "lucide-react";
 import { buildMetadata, breadcrumbSchema, faqSchema } from "@/lib/seo";
 import { JsonLd } from "@/components/site/json-ld";
 import { Section, SectionHeading } from "@/components/site/section";
 import { CalendlyPopupButton } from "@/components/site/calendly-popup-button";
-import { MissedBookingCalculator } from "@/components/site/missed-booking-calculator";
-import { PilotForm } from "@/components/site/pilot-form";
 import { SITE } from "@/lib/site-data";
+
+const MissedBookingCalculator = dynamic(
+  () => import("@/components/site/missed-booking-calculator").then((m) => m.MissedBookingCalculator),
+  { ssr: false, loading: () => <div className="h-48 rounded-lg border border-line bg-surface animate-pulse" /> }
+);
+
+const PilotForm = dynamic(
+  () => import("@/components/site/pilot-form").then((m) => m.PilotForm),
+  { ssr: false, loading: () => <div className="h-96 rounded-lg border border-line bg-surface animate-pulse" /> }
+);
 
 export const metadata: Metadata = buildMetadata({
   title: "2-Week Guest Coverage Pilot for Hotels",

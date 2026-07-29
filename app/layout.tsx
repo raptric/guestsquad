@@ -82,7 +82,7 @@ export default function RootLayout({
       </head>
       <body className="flex min-h-screen flex-col font-sans">
         {/* GTM — initialise dataLayer before GTM script loads */}
-        <Script id="gtm-init" strategy="beforeInteractive">
+        <Script id="gtm-init" strategy="afterInteractive">
           {`window.dataLayer=window.dataLayer||[];`}
         </Script>
         <Script id="gtm-script" strategy="afterInteractive">

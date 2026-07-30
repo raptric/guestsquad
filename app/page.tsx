@@ -77,8 +77,8 @@ export default function HomePage() {
               <CalendlyPopupButton variant="gold" size="lg">
                 Book a Coverage Review
               </CalendlyPopupButton>
-              <ButtonLink href="/services" variant="outline" size="lg">
-                See Services
+              <ButtonLink href="/pilot" variant="outline" size="lg">
+                Request Pilot Review
               </ButtonLink>
             </div>
             <p className="mt-6 text-xs text-ink-muted">
@@ -108,12 +108,16 @@ export default function HomePage() {
       <div className="border-b border-line bg-surface">
         <div className="container py-8">
           <p className="mx-auto max-w-3xl text-sm leading-relaxed text-ink-soft">
-            Guest Squad provides 24/7 human guest operations support for hotels, boutique properties, resorts, serviced apartments, and short-term rental operators. The service covers reservation calls, guest messages, OTA inboxes (Booking.com, Expedia, Airbnb), after-hours front desk coverage, and guest communication gaps, without requiring an additional full-time hire or a change to your existing systems.{" "}
-            <Link href="/about" className="text-gold-dark underline underline-offset-4 hover:text-gold">
-              Learn about how Guest Squad operates
-            </Link>
-            .
+            Guest Squad provides 24/7 human guest operations support for hotels, boutique properties, resorts, serviced apartments, and short-term rental operators. The service covers reservation calls, guest messages, OTA inboxes (Booking.com, Expedia, Airbnb), after-hours front desk coverage, and guest communication gaps, without requiring an additional full-time hire or a change to your existing systems.
           </p>
+          <div className="mx-auto mt-5 max-w-3xl">
+            <p className="text-sm text-ink-soft">Not sure what level of coverage you need?</p>
+            <div className="mt-3">
+              <ButtonLink href="/pilot" variant="outline" size="sm">
+                Request a Pilot Review
+              </ButtonLink>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -251,6 +255,21 @@ export default function HomePage() {
         </div>
       </Section>
 
+      {/* PILOT CTA */}
+      <div className="border-t border-b border-line bg-gold/5">
+        <div className="container py-10 text-center">
+          <p className="text-base font-medium text-ink">Start with a no-obligation pilot review</p>
+          <p className="mx-auto mt-2 max-w-xl text-sm leading-relaxed text-ink-soft">
+            We&rsquo;ll review your calls, guest messages, OTA inboxes, after-hours gaps, and escalation needs, then recommend whether a 2-week pilot is the right fit.
+          </p>
+          <div className="mt-5">
+            <ButtonLink href="/pilot" variant="gold" size="lg">
+              Request Pilot Review
+            </ButtonLink>
+          </div>
+        </div>
+      </div>
+
       {/* GUARANTEES */}
       <Section>
         <SectionHeading eyebrow="Our Commitments" title="What every client gets from day one." align="center" className="mx-auto" />
@@ -309,9 +328,17 @@ export default function HomePage() {
           <PricingCards />
         </div>
         <div className="mt-10 text-center">
-          <ButtonLink href="/pricing" variant="link">
-            See full pricing details →
-          </ButtonLink>
+          <p className="text-sm text-ink-soft">
+            Qualified properties can start with a 2-week no-obligation pilot before moving into month-to-month coverage.
+          </p>
+          <div className="mt-4 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+            <ButtonLink href="/pilot" variant="gold" size="lg">
+              Request Pilot Review
+            </ButtonLink>
+            <ButtonLink href="/pricing" variant="link">
+              See full pricing details →
+            </ButtonLink>
+          </div>
         </div>
       </Section>
 

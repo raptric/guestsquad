@@ -25,12 +25,12 @@ export function CtaSection({
             Book a Coverage Review
           </CalendlyPopupButton>
           <ButtonLink
-            href="/pricing"
+            href="/pilot"
             variant="outline"
             size="lg"
             className="border-paper/25 text-paper hover:border-paper/60"
           >
-            View Pricing
+            Request Pilot Review
           </ButtonLink>
         </div>
       </div>

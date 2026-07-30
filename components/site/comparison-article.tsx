@@ -48,8 +48,10 @@ export function ComparisonArticle({ data }: { data: ResourceArticleData }) {
         eyebrow="Comparison"
         title={data.title}
         description={data.description}
-        secondaryCta="View Pricing"
-        secondaryHref="/pricing"
+        primaryCta={data.heroPrimaryCta}
+        primaryHref={data.heroPrimaryHref}
+        secondaryCta={data.heroSecondaryCta ?? "View Pricing"}
+        secondaryHref={data.heroSecondaryHref ?? "/pricing"}
       />
 
       <Section>
@@ -60,6 +62,28 @@ export function ComparisonArticle({ data }: { data: ResourceArticleData }) {
             </p>
           ))}
         </div>
+        {data.postIntroCta && (
+          <div className="mx-auto mt-8 max-w-2xl rounded-lg border border-gold/30 bg-gold/5 px-6 py-5">
+            <p className="text-sm font-medium text-ink">{data.postIntroCta.heading}</p>
+            <p className="mt-1 text-sm leading-relaxed text-ink-soft">{data.postIntroCta.body}</p>
+            <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:items-center">
+              <Link
+                href={data.postIntroCta.primaryHref}
+                className="inline-flex items-center justify-center rounded-md bg-gold px-4 py-2 text-sm font-medium text-ink hover:bg-gold/90"
+              >
+                {data.postIntroCta.primaryLabel}
+              </Link>
+              {data.postIntroCta.secondaryLabel && data.postIntroCta.secondaryHref && (
+                <Link
+                  href={data.postIntroCta.secondaryHref}
+                  className="text-sm font-medium text-gold-dark hover:text-gold"
+                >
+                  {data.postIntroCta.secondaryLabel} →
+                </Link>
+              )}
+            </div>
+          </div>
+        )}
       </Section>
 
       <Section surface>
@@ -68,6 +92,23 @@ export function ComparisonArticle({ data }: { data: ResourceArticleData }) {
           <ComparisonTable columnA={data.columnA} columnB={data.columnB} columnC={data.columnC} rows={data.rows} />
         </div>
       </Section>
+
+      {data.postTableCta && (
+        <div className="container py-6">
+          <div className="mx-auto max-w-2xl rounded-lg border border-line bg-surface px-6 py-5">
+            <p className="text-sm font-medium text-ink">{data.postTableCta.heading}</p>
+            <p className="mt-1 text-sm leading-relaxed text-ink-soft">{data.postTableCta.body}</p>
+            <div className="mt-4">
+              <Link
+                href={data.postTableCta.primaryHref}
+                className="inline-flex items-center justify-center rounded-md bg-ink px-4 py-2 text-sm font-medium text-paper hover:bg-ink/90"
+              >
+                {data.postTableCta.primaryLabel}
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
 
       <Section>
         <div className="mx-auto max-w-2xl">

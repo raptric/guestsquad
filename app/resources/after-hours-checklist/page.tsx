@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo";
 import { PrintLayout } from "@/components/site/print-layout";
 
 export const metadata: Metadata = buildMetadata({
-  title: "After-Hours Hotel Coverage Checklist | GuestSquad",
+  title: "After-Hours Hotel Coverage Checklist | Guest Squad",
   description:
     "A practical checklist for auditing your hotel or STR property's after-hours coverage gaps, from overnight calls to emergency escalation and morning handoff.",
   path: "/resources/after-hours-checklist",
@@ -153,7 +153,7 @@ export default function AfterHoursChecklistPage() {
       </Section>
 
       <div className="mt-10 rounded-lg border border-line bg-surface p-6 text-center">
-        <p className="text-sm font-medium text-ink">Want GuestSquad to cover your after-hours gaps?</p>
+        <p className="text-sm font-medium text-ink">Want Guest Squad to cover your after-hours gaps?</p>
         <p className="mt-1 text-xs text-ink-soft">Book a coverage review at guestsquad.com/contact or visit guestsquad.com/services/after-hours-support</p>
       </div>
     </PrintLayout>

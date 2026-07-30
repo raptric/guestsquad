@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { Printer } from "lucide-react";
 import { DownloadGate } from "@/components/site/download-gate";
 
@@ -42,7 +42,7 @@ export function PrintLayout({ title, subtitle, badge, asset, downloadHref, child
           <div className="flex items-center justify-between">
             <img
               src="/brand-assets/guestsquad-logo-horizontal.svg"
-              alt="GuestSquad"
+              alt="Guest Squad"
               className="h-7 w-auto brightness-0 invert"
             />
             {badge && (
@@ -66,7 +66,7 @@ export function PrintLayout({ title, subtitle, badge, asset, downloadHref, child
           <div className="flex items-center justify-between">
             <span className="text-xs text-ink-muted">guestsquad.com</span>
             <span className="text-xs text-ink-muted">
-              &copy; {new Date().getFullYear()} GuestSquad. All rights reserved.
+              &copy; {new Date().getFullYear()} Guest Squad. All rights reserved.
             </span>
           </div>
         </div>

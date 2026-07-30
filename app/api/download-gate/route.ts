@@ -1,4 +1,4 @@
-import { NextResponse } from "next/server";
+﻿import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
 const ASSET_LABELS: Record<string, string> = {
@@ -40,7 +40,7 @@ export async function POST(req: Request) {
 
     // Internal lead notification — non-blocking
     transporter.sendMail({
-      from: `"GuestSquad Website" <${gmailUser}>`,
+      from: `"Guest Squad Website" <${gmailUser}>`,
       to: "info@guestsquad.com",
       replyTo: email,
       subject: `New asset download — ${assetLabel}`,
@@ -65,13 +65,13 @@ export async function POST(req: Request) {
     // Delivery email to the lead — await this one so we know it went
     try {
       await transporter.sendMail({
-        from: `"GuestSquad" <${gmailUser}>`,
+        from: `"Guest Squad" <${gmailUser}>`,
         to: email,
         subject: `Your download: ${assetLabel}`,
         html: `
           <div style="font-family:sans-serif;max-width:600px;margin:0 auto;color:#1a1a1a">
             <div style="background:#0B1220;padding:32px 40px">
-              <img src="https://guestsquad.com/brand-assets/guestsquad-logo-horizontal.svg" alt="GuestSquad" style="height:28px;filter:brightness(0) invert(1)" />
+              <img src="https://guestsquad.com/brand-assets/guestsquad-logo-horizontal.svg" alt="Guest Squad" style="height:28px;filter:brightness(0) invert(1)" />
             </div>
             <div style="border-top:3px solid #C7A24A"></div>
             <div style="padding:40px">
@@ -82,10 +82,10 @@ export async function POST(req: Request) {
                 </a>
               </p>
               <p style="margin-top:24px;font-size:13px;color:#666">
-                If you have questions about how GuestSquad can cover the gaps your property has,
+                If you have questions about how Guest Squad can cover the gaps your property has,
                 <a href="https://guestsquad.com/contact" style="color:#9C7E33">book a coverage review</a>.
               </p>
-              <p style="margin-top:32px;font-size:12px;color:#aaa">GuestSquad &middot; guestsquad.com</p>
+              <p style="margin-top:32px;font-size:12px;color:#aaa">Guest Squad &middot; guestsquad.com</p>
             </div>
           </div>
         `,

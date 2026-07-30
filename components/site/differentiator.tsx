@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 
 const GENERIC = [
   "Shared agents juggling unrelated industries",
@@ -33,7 +33,7 @@ export function Differentiator() {
 
       <div className="rounded-lg border border-gold/30 bg-paper p-8 shadow-soft">
         <h3 className="text-sm font-semibold uppercase tracking-wide text-gold-dark">
-          GuestSquad
+          Guest Squad
         </h3>
         <ul className="mt-5 flex flex-col gap-3.5">
           {GUESTSQUAD.map((item) => (

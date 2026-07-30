@@ -1,9 +1,9 @@
-import { ButtonLink } from "@/components/site/button-link";
+﻿import { ButtonLink } from "@/components/site/button-link";
 import { CalendlyPopupButton } from "@/components/site/calendly-popup-button";
 
 export function CtaSection({
   title = "Stop losing bookings to silence.",
-  description = "Book a coverage review and see exactly how GuestSquad would cover your reservations, messaging, and after-hours calls.",
+  description = "Book a coverage review and see exactly how Guest Squad would cover your reservations, messaging, and after-hours calls.",
 }: {
   title?: string;
   description?: string;

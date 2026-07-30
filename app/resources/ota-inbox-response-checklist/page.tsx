@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo";
 import { PrintLayout } from "@/components/site/print-layout";
 
 export const metadata: Metadata = buildMetadata({
-  title: "OTA Inbox Response Checklist | GuestSquad",
+  title: "OTA Inbox Response Checklist | Guest Squad",
   description:
     "A practical checklist for managing Booking.com, Expedia, and Airbnb message inboxes: response standards, message categories, escalation rules, and review protocol.",
   path: "/resources/ota-inbox-response-checklist",
@@ -149,7 +149,7 @@ export default function OtaInboxChecklistPage() {
       </DocSection>
 
       <div className="mt-10 rounded-lg border border-line bg-surface p-6 text-center">
-        <p className="text-sm font-medium text-ink">Want GuestSquad to manage your OTA inboxes?</p>
+        <p className="text-sm font-medium text-ink">Want Guest Squad to manage your OTA inboxes?</p>
         <p className="mt-1 text-xs text-ink-soft">guestsquad.com/services/ota-inbox-management</p>
       </div>
     </PrintLayout>

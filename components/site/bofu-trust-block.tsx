@@ -1,4 +1,4 @@
-import { Check } from "lucide-react";
+﻿import { Check } from "lucide-react";
 
 const BULLETS = [
   "Property-specific briefing before go-live",
@@ -7,17 +7,17 @@ const BULLETS = [
   "OTA, PMS, and inbox workflows mapped before coverage starts",
   "Daily or weekly activity summaries",
   "Quality review of guest interactions",
-  "Clear boundary between what GuestSquad handles and what your team approves",
+  "Clear boundary between what Guest Squad handles and what your team approves",
 ];
 
 export function BoFuTrustBlock() {
   return (
     <div className="rounded-lg border border-line bg-surface p-8">
       <h2 className="text-xl font-medium text-ink">
-        How GuestSquad keeps guest support controlled
+        How Guest Squad keeps guest support controlled
       </h2>
       <p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink-soft">
-        Before coverage goes live, GuestSquad documents your property rules,
+        Before coverage goes live, Guest Squad documents your property rules,
         escalation contacts, brand voice, channels, and guest-handling
         boundaries. Agents follow your approved instructions, escalate what
         your team needs to own, and provide reporting so nothing disappears

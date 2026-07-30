@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { SITE } from "@/lib/site-data";
 
 /**
@@ -22,7 +22,7 @@ export function buildMetadata({
     url: `${SITE.url}/brand-assets/og-image.jpg`,
     width: 1200,
     height: 630,
-    alt: "GuestSquad — 24/7 human hotel guest support for calls, messages, OTA inboxes, and after-hours coverage.",
+    alt: "Guest Squad — 24/7 human hotel guest support for calls, messages, OTA inboxes, and after-hours coverage.",
   };
 
   return {
@@ -65,7 +65,7 @@ export function organizationSchema() {
       url: SITE.parentUrl,
     },
     description:
-      "GuestSquad, a Raptric LLC company, provides 24/7 guest operations support for hotels, boutique properties, resorts, serviced apartments, and Airbnb operators, including reservation support, guest messaging, OTA inbox management, after-hours coverage, and back-office guest operations.",
+      "Guest Squad, a Raptric LLC company, provides 24/7 guest operations support for hotels, boutique properties, resorts, serviced apartments, and Airbnb operators, including reservation support, guest messaging, OTA inbox management, after-hours coverage, and back-office guest operations.",
     email: SITE.email,
     telephone: SITE.phone,
     address: {
@@ -154,9 +154,9 @@ export function contactPageSchema() {
     "@type": "ContactPage",
     "@id": `${SITE.url}/contact#contactpage`,
     url: `${SITE.url}/contact`,
-    name: "Contact GuestSquad",
+    name: "Contact Guest Squad",
     description:
-      "Contact GuestSquad to book a coverage review for hotel answering service, guest messaging, OTA inbox management, after-hours support, and managed guest operations coverage.",
+      "Contact Guest Squad to book a coverage review for hotel answering service, guest messaging, OTA inbox management, after-hours support, and managed guest operations coverage.",
     isPartOf: {
       "@type": "WebSite",
       "@id": `${SITE.url}/#website`,

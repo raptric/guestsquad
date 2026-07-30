@@ -1,4 +1,4 @@
-import { NextResponse } from "next/server";
+﻿import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
 export async function POST(req: Request) {
@@ -77,7 +77,7 @@ export async function POST(req: Request) {
   `;
 
   await transporter.sendMail({
-    from: `"GuestSquad Website" <${gmailUser}>`,
+    from: `"Guest Squad Website" <${gmailUser}>`,
     to: gmailUser,
     replyTo: email,
     subject: `Pilot Qualification — ${propertyName} (${propertyType || "Unknown type"})`,

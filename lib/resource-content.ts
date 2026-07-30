@@ -1,4 +1,4 @@
-import type { ComparisonRow } from "@/components/site/comparison-table";
+﻿import type { ComparisonRow } from "@/components/site/comparison-table";
 
 export type ResourceSummary = {
   slug: string;
@@ -97,6 +97,24 @@ export type ResourceArticleData = {
   verdictClosure?: string;
   faqs: { q: string; a: string }[];
   relatedServiceSlugs: string[];
+  heroPrimaryCta?: string;
+  heroPrimaryHref?: string;
+  heroSecondaryCta?: string;
+  heroSecondaryHref?: string;
+  postIntroCta?: {
+    heading: string;
+    body: string;
+    primaryLabel: string;
+    primaryHref: string;
+    secondaryLabel?: string;
+    secondaryHref?: string;
+  };
+  postTableCta?: {
+    heading: string;
+    body: string;
+    primaryLabel: string;
+    primaryHref: string;
+  };
   inlineAsset?: ArticleAssetCta;
   assetCta?: ArticleAssetCta;
 };
@@ -113,9 +131,9 @@ export const aiVoiceComparison: ResourceArticleData = {
   datePublished: "2026-06-26",
   intro: [
     "AI voice agents are now pitched to hotels as a way to answer every call without staffing a single person. They're genuinely good at narrow, repetitive tasks. They're also frequently sold as a full replacement for a human answering service, and that's the part worth examining before you commit a property's phone line to one.",
-    "GuestSquad is built the other way around: people answer your calls, with technology used only to route, log, and report on that work. Here's an honest, factor-by-factor comparison rather than a one-sided pitch.",
+    "Guest Squad is built the other way around: people answer your calls, with technology used only to route, log, and report on that work. Here's an honest, factor-by-factor comparison rather than a one-sided pitch.",
   ],
-  columnA: "GuestSquad (Human)",
+  columnA: "Guest Squad (Human)",
   columnB: "AI Voice Agent",
   rows: [
     {
@@ -153,11 +171,11 @@ export const aiVoiceComparison: ResourceArticleData = {
   verdictParagraphs: [
     "This isn't an anti-AI argument. AI voice can be genuinely useful for narrow, high-volume, predictable questions (hours of operation, basic directions, simple FAQ-style queries) where the cost of an occasional wrong or awkward answer is low.",
     "Where it gets risky is reservation calls, complaints, and anything involving exceptions to policy, situations where a guest's first impression of your property is being formed in real time, and where a stilted or wrong answer costs you a booking or a review.",
-    "GuestSquad doesn't compete on being able to answer the highest possible call volume at the lowest possible cost per call. It competes on guest calls being handled the way your best front-desk person would handle them, because that's who's doing it.",
+    "Guest Squad doesn't compete on being able to answer the highest possible call volume at the lowest possible cost per call. It competes on guest calls being handled the way your best front-desk person would handle them, because that's who's doing it.",
   ],
   faqs: [
     {
-      q: "Is GuestSquad an AI voice agent?",
+      q: "Is Guest Squad an AI voice agent?",
       a: "No. Every guest call is answered by a hospitality-trained person. We use software to route calls, log every interaction, and generate your reporting. We never use it to talk to your guests in place of a person.",
     },
     {
@@ -174,7 +192,7 @@ export const aiVoiceComparison: ResourceArticleData = {
     },
     {
       q: "Can we use both AI and a human answering service?",
-      a: "Yes. Some properties use a simple chat widget or FAQ bot to deflect the most basic website questions, then route every phone call and anything more nuanced to GuestSquad.",
+      a: "Yes. Some properties use a simple chat widget or FAQ bot to deflect the most basic website questions, then route every phone call and anything more nuanced to Guest Squad.",
     },
   ],
   inlineAsset: {
@@ -206,11 +224,29 @@ export const callCenterComparison: ResourceArticleData = {
   dateModified: "2026-07-30",
   intro: [
     "\"Call center\" and \"hotel answering service\" often get used interchangeably when hotels start shopping for outsourced phone coverage, but the underlying operating models are usually quite different, and that difference shows up on the call itself.",
-    "A generic call center is typically built to handle calls for many unrelated industries from a shared agent pool. A hotel-specific answering service like GuestSquad is built around one property at a time. Here's where that distinction actually matters.",
+    "A generic call center is typically built to handle calls for many unrelated industries from a shared agent pool. A hotel-specific answering service like Guest Squad is built around one property at a time. Here's where that distinction actually matters.",
   ],
+  heroPrimaryCta: "Request Pilot Review",
+  heroPrimaryHref: "/pilot",
+  heroSecondaryCta: "Download Coverage Gap Assessment",
+  heroSecondaryHref: "/resources/coverage-gap-assessment",
+  postIntroCta: {
+    heading: "Not sure if you need a hotel answering service or a call center?",
+    body: "Review your current guest coverage gaps before choosing a provider.",
+    primaryLabel: "Compare My Current Coverage",
+    primaryHref: "/pilot",
+    secondaryLabel: "Download Coverage Gap Assessment",
+    secondaryHref: "/resources/coverage-gap-assessment",
+  },
+  postTableCta: {
+    heading: "Want to see how this would apply to your property?",
+    body: "Guest Squad can review your calls, guest messages, OTA inboxes, and after-hours coverage needs before you commit.",
+    primaryLabel: "Request Pilot Review",
+    primaryHref: "/pilot",
+  },
   columnA: "Hotel Answering Service",
   columnB: "Generic Call Center",
-  columnC: "GuestSquad Approach",
+  columnC: "Guest Squad Approach",
   tableHeading: "Hotel answering service vs. hotel call center, factor by factor.",
   rows: [
     {
@@ -297,7 +333,7 @@ export const callCenterComparison: ResourceArticleData = {
     },
     {
       q: "Will agents actually know our rates and policies, or are they reading a generic script?",
-      a: "With GuestSquad, every account gets a property-specific brief covering rates, room types, policies, and tone before a single call is answered.",
+      a: "With Guest Squad, every account gets a property-specific brief covering rates, room types, policies, and tone before a single call is answered.",
     },
     {
       q: "Do you require a long-term contract like some call centers do?",
@@ -305,7 +341,7 @@ export const callCenterComparison: ResourceArticleData = {
     },
     {
       q: "We already use a call center for overflow. Can you work alongside it?",
-      a: "Yes. Many clients start by routing only specific overflow scenarios (after-hours, peak check-in/out) to GuestSquad while keeping existing arrangements for everything else.",
+      a: "Yes. Many clients start by routing only specific overflow scenarios (after-hours, peak check-in/out) to Guest Squad while keeping existing arrangements for everything else.",
     },
     {
       q: "How fast can we switch from our current call center?",
@@ -321,15 +357,15 @@ export const callCenterComparison: ResourceArticleData = {
     },
     {
       q: "Can a hotel call center handle OTA messages from Booking.com or Expedia?",
-      a: "Most generic call centers cover phone only. OTA inbox management — responding inside Booking.com's Message Center, Expedia's Partner Central, or Airbnb's messaging tools — requires platform access and familiarity with each OTA's workflow. It's worth confirming explicitly whether any provider you evaluate covers OTA inboxes as part of their scope. GuestSquad covers OTA inboxes within agreed scope.",
+      a: "Most generic call centers cover phone only. OTA inbox management — responding inside Booking.com's Message Center, Expedia's Partner Central, or Airbnb's messaging tools — requires platform access and familiarity with each OTA's workflow. It's worth confirming explicitly whether any provider you evaluate covers OTA inboxes as part of their scope. Guest Squad covers OTA inboxes within agreed scope.",
     },
     {
-      q: "How quickly can GuestSquad start hotel answering service coverage?",
+      q: "How quickly can Guest Squad start hotel answering service coverage?",
       a: "Most properties go live within approximately five business days of the initial discovery call. Onboarding covers your rates, room types, policies, escalation contacts, and channel access before any agent handles a guest interaction.",
     },
     {
-      q: "Is GuestSquad an outsourced hotel answering service?",
-      a: "GuestSquad provides external guest operations support for hotels and property operators, but we are not a generic outsourced call center. Our team is briefed on your property, channels, escalation rules, and guest communication standards before coverage begins.",
+      q: "Is Guest Squad an outsourced hotel answering service?",
+      a: "Guest Squad provides external guest operations support for hotels and property operators, but we are not a generic outsourced call center. Our team is briefed on your property, channels, escalation rules, and guest communication standards before coverage begins.",
     },
   ],
 };
@@ -367,7 +403,7 @@ export const answeringServiceCostGuide: GuideArticleData = {
     "How hotel answering services price their plans, what drives the cost, and the questions to ask before signing with any provider.",
   datePublished: "2026-06-29",
   intro: [
-    "\"How much does this cost?\" is usually the first question a GM asks, and the hardest one to get a straight answer to. Most providers, including GuestSquad, don't publish flat rates, because the honest answer depends on your volume, channels, and coverage hours.",
+    "\"How much does this cost?\" is usually the first question a GM asks, and the hardest one to get a straight answer to. Most providers, including Guest Squad, don't publish flat rates, because the honest answer depends on your volume, channels, and coverage hours.",
     "What most properties find when they run the numbers: a single recovered group booking or a week of captured after-hours reservations covers the monthly cost entirely. The right question is not what the service costs — it is whether it pays for itself on your volume.",
     "This guide walks through the pricing models actually used in this industry, what genuinely moves the price, and the costs that tend to show up after you've already signed.",
   ],
@@ -406,7 +442,7 @@ export const answeringServiceCostGuide: GuideArticleData = {
     {
       heading: "What We Quote Instead",
       paragraphs: [
-        "GuestSquad doesn't publish flat pricing because doing so would mean either overcharging low-volume properties or underpricing high-volume ones. Instead, every engagement starts with a short conversation about your volume and channels, and we recommend one of three plans accordingly; see the full breakdown on the Pricing page. Every plan starts with a pilot period so you see real results before committing further.",
+        "Guest Squad doesn't publish flat pricing because doing so would mean either overcharging low-volume properties or underpricing high-volume ones. Instead, every engagement starts with a short conversation about your volume and channels, and we recommend one of three plans accordingly; see the full breakdown on the Pricing page. Every plan starts with a pilot period so you see real results before committing further.",
       ],
     },
   ],

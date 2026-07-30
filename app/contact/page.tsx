@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { ContactForm } from "@/components/site/contact-form";
 import { CalendlyInlineWidget } from "@/components/site/calendly-inline-widget";
@@ -11,9 +11,9 @@ import { BoFuTrustBlock } from "@/components/site/bofu-trust-block";
 import { PostBookingSteps } from "@/components/site/post-booking-steps";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Contact GuestSquad | Book a Guest Support Demo",
+  title: "Contact Guest Squad | Book a Guest Support Demo",
   description:
-    "Book a 30-minute demo or send us your property details. GuestSquad responds within one business day.",
+    "Book a 30-minute demo or send us your property details. Guest Squad responds within one business day.",
   path: "/contact",
 });
 
@@ -39,7 +39,7 @@ const FAQS = [
     a: "Yes. Fill in the form with your property details and volume and we will respond with a ballpark range before scheduling anything. A discovery call is only needed if you want to move forward.",
   },
   {
-    q: "How fast can GuestSquad review my property needs?",
+    q: "How fast can Guest Squad review my property needs?",
     a: "We review all form submissions within one business day. If your situation is time-sensitive, book directly on the calendar for the fastest response.",
   },
 ];
@@ -91,7 +91,7 @@ export default function ContactPage() {
               </p>
               <div className="mb-5 rounded-lg border border-line bg-surface px-6 py-4">
                 <p className="text-sm leading-relaxed text-ink-soft">
-                  GuestSquad is best suited for properties that receive regular call or message volume your team cannot always cover: independent hotels, boutique properties, resorts, serviced apartments, and short-term rental operators. If that sounds like your property,{" "}
+                  Guest Squad is best suited for properties that receive regular call or message volume your team cannot always cover: independent hotels, boutique properties, resorts, serviced apartments, and short-term rental operators. If that sounds like your property,{" "}
                   <Link href="/pricing" className="text-gold-dark underline underline-offset-4 hover:text-gold">
                     view pricing
                   </Link>
@@ -106,7 +106,7 @@ export default function ContactPage() {
                 <ContactForm />
               </div>
               <p className="mt-6 text-center text-xs text-ink-muted">
-                By submitting this form you agree to be contacted about GuestSquad
+                By submitting this form you agree to be contacted about Guest Squad
                 services. See our{" "}
                 <Link href="/privacy-policy" className="text-gold-dark underline underline-offset-4 hover:text-gold">
                   Privacy Policy

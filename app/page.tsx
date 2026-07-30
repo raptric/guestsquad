@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ButtonLink } from "@/components/site/button-link";
@@ -20,35 +20,35 @@ import { AssetBlock } from "@/components/site/asset-block";
 import { ClientTrustBlock } from "@/components/site/client-trust-block";
 
 export const metadata: Metadata = buildMetadata({
-  title: "24/7 Hotel Guest Support & Reservation Services | GuestSquad",
+  title: "24/7 Hotel Guest Support & Reservation Services | Guest Squad",
   description:
-    "GuestSquad provides 24/7 hotel guest support, reservation calls, OTA inbox management, messaging, and after-hours front desk coverage.",
+    "Guest Squad provides 24/7 hotel guest support, reservation calls, OTA inbox management, messaging, and after-hours front desk coverage.",
   path: "",
 });
 
 const HOME_FAQS = [
   {
-    q: "What does GuestSquad do?",
-    a: "GuestSquad provides 24/7 human guest operations support for hotels, boutique properties, resorts, serviced apartments, and short-term rental operators. The service covers reservation calls, guest messages, OTA inboxes, after-hours front desk support, front desk overflow, and guest communication gaps, without requiring an additional full-time hire.",
+    q: "What does Guest Squad do?",
+    a: "Guest Squad provides 24/7 human guest operations support for hotels, boutique properties, resorts, serviced apartments, and short-term rental operators. The service covers reservation calls, guest messages, OTA inboxes, after-hours front desk support, front desk overflow, and guest communication gaps, without requiring an additional full-time hire.",
   },
   {
-    q: "Is GuestSquad a hotel call center?",
-    a: "No. GuestSquad is a guest operations service built specifically for hospitality, not a generic call center that also handles hotel calls. Agents are trained on hotel systems, OTA workflows, and the tone independent properties want their guests to experience.",
+    q: "Is Guest Squad a hotel call center?",
+    a: "No. Guest Squad is a guest operations service built specifically for hospitality, not a generic call center that also handles hotel calls. Agents are trained on hotel systems, OTA workflows, and the tone independent properties want their guests to experience.",
   },
   {
-    q: "Which guest channels can GuestSquad cover?",
+    q: "Which guest channels can Guest Squad cover?",
     a: "Phone calls, SMS, WhatsApp, email, Booking.com, Expedia, and Airbnb inboxes, and in-app messaging from supported PMS or guest-messaging platforms. Coverage is built around your existing channels, not a new system you have to adopt.",
   },
   {
-    q: "What types of properties use GuestSquad?",
+    q: "What types of properties use Guest Squad?",
     a: "Independent hotels, boutique properties, resorts, serviced apartments, Airbnb hosts, Vrbo operators, and short-term rental property managers, typically from a single property up to a small portfolio.",
   },
   {
-    q: "Does GuestSquad replace our front desk team?",
-    a: "No. GuestSquad is designed to extend your front desk, not replace it. We handle overflow, after-hours, and the channels your on-site team does not have time to monitor, so the people you have hired can focus on the guests in front of them.",
+    q: "Does Guest Squad replace our front desk team?",
+    a: "No. Guest Squad is designed to extend your front desk, not replace it. We handle overflow, after-hours, and the channels your on-site team does not have time to monitor, so the people you have hired can focus on the guests in front of them.",
   },
   {
-    q: "How quickly can GuestSquad go live?",
+    q: "How quickly can Guest Squad go live?",
     a: "Most clients are live within 5 business days of signing. Onboarding covers your rates, policies, PMS access, escalation rules, and brand voice before any agent handles a guest interaction.",
   },
 ];
@@ -69,7 +69,7 @@ export default function HomePage() {
               Missed Bookings
             </h1>
             <p className="mt-6 max-w-lg text-lg leading-relaxed text-ink-soft">
-              GuestSquad handles reservations, guest messages, OTA
+              Guest Squad handles reservations, guest messages, OTA
               inquiries, callbacks, upsells, and after-hours support, so
               your front desk stays focused on in-house guests.
             </p>
@@ -108,9 +108,9 @@ export default function HomePage() {
       <div className="border-b border-line bg-surface">
         <div className="container py-8">
           <p className="mx-auto max-w-3xl text-sm leading-relaxed text-ink-soft">
-            GuestSquad provides 24/7 human guest operations support for hotels, boutique properties, resorts, serviced apartments, and short-term rental operators. The service covers reservation calls, guest messages, OTA inboxes (Booking.com, Expedia, Airbnb), after-hours front desk coverage, and guest communication gaps, without requiring an additional full-time hire or a change to your existing systems.{" "}
+            Guest Squad provides 24/7 human guest operations support for hotels, boutique properties, resorts, serviced apartments, and short-term rental operators. The service covers reservation calls, guest messages, OTA inboxes (Booking.com, Expedia, Airbnb), after-hours front desk coverage, and guest communication gaps, without requiring an additional full-time hire or a change to your existing systems.{" "}
             <Link href="/about" className="text-gold-dark underline underline-offset-4 hover:text-gold">
-              Learn about how GuestSquad operates
+              Learn about how Guest Squad operates
             </Link>
             .
           </p>
@@ -273,7 +273,7 @@ export default function HomePage() {
                 location: "Southeast US",
               },
               {
-                quote: "Our OTA response times were hurting our ranking on Booking.com. GuestSquad took over the inbox during the pilot and we saw the response window drop significantly. The weekly report made it easy to verify.",
+                quote: "Our OTA response times were hurting our ranking on Booking.com. Guest Squad took over the inbox during the pilot and we saw the response window drop significantly. The weekly report made it easy to verify.",
                 attr: "Owner-operator, serviced apartment portfolio",
                 location: "UK",
               },

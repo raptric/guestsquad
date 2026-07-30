@@ -1,20 +1,20 @@
-import { SITE } from "@/lib/site-data";
+﻿import { SITE } from "@/lib/site-data";
 import type { LegalSection } from "@/components/site/legal-page";
 
 export const LEGAL_EFFECTIVE_DATE = "June 26, 2026";
 
 export const PRIVACY_INTRO = [
-  `This Privacy Policy explains how ${SITE.legalName}, operating the GuestSquad service ("GuestSquad," "we," "us," or "our"), collects, uses, discloses, and protects personal data in connection with the ${SITE.url} website (the "Site") and the guest-operations services we provide to hotel, resort, serviced-apartment, and short-term-rental clients (the "Services").`,
+  `This Privacy Policy explains how ${SITE.legalName}, operating the Guest Squad service ("Guest Squad," "we," "us," or "our"), collects, uses, discloses, and protects personal data in connection with the ${SITE.url} website (the "Site") and the guest-operations services we provide to hotel, resort, serviced-apartment, and short-term-rental clients (the "Services").`,
   "We act in two distinct roles depending on the data involved, and this policy is structured around that distinction:",
   "As a Data Controller for personal data collected directly through this Site, such as when you submit the contact form, book a demo, or otherwise communicate with us as a prospective or existing client.",
-  "As a Data Processor (or \"service provider\"/\"processor\" under applicable law) for guest personal data that we handle on behalf of our hotel and property-management clients while delivering the Services, such as guest names, contact details, and booking information accessed through a client's PMS, OTA accounts, or messaging channels. Processing of that guest data is governed primarily by the data processing agreement (\"DPA\") between GuestSquad and the relevant client, and by that client's own privacy policy toward its guests. This Site-facing policy describes our general practices and safeguards as a processor, but the client (as controller) remains the primary point of contact for guests exercising rights over their own personal data.",
+  "As a Data Processor (or \"service provider\"/\"processor\" under applicable law) for guest personal data that we handle on behalf of our hotel and property-management clients while delivering the Services, such as guest names, contact details, and booking information accessed through a client's PMS, OTA accounts, or messaging channels. Processing of that guest data is governed primarily by the data processing agreement (\"DPA\") between Guest Squad and the relevant client, and by that client's own privacy policy toward its guests. This Site-facing policy describes our general practices and safeguards as a processor, but the client (as controller) remains the primary point of contact for guests exercising rights over their own personal data.",
 ];
 
 export const PRIVACY_SECTIONS: LegalSection[] = [
   {
     heading: "Who We Are",
     paragraphs: [
-      `GuestSquad is operated by ${SITE.legalName}. For the purposes of the EU General Data Protection Regulation ("GDPR"), the UK GDPR, and other applicable data protection laws, ${SITE.legalName} is the data controller for personal data described in Section 2 below, and acts as a processor for client guest data as described in Section 3.`,
+      `Guest Squad is operated by ${SITE.legalName}. For the purposes of the EU General Data Protection Regulation ("GDPR"), the UK GDPR, and other applicable data protection laws, ${SITE.legalName} is the data controller for personal data described in Section 2 below, and acts as a processor for client guest data as described in Section 3.`,
       `You can contact us about this Policy at ${SITE.email} or ${SITE.phone}.`,
     ],
   },
@@ -34,13 +34,13 @@ export const PRIVACY_SECTIONS: LegalSection[] = [
   {
     heading: "Personal Data We Process on Behalf of Clients (Processor Role)",
     paragraphs: [
-      "Where you are a guest of a hotel, resort, serviced-apartment, or short-term-rental property that has engaged GuestSquad, we may process your personal data strictly to deliver the Services our client has contracted for. This typically includes:",
+      "Where you are a guest of a hotel, resort, serviced-apartment, or short-term-rental property that has engaged Guest Squad, we may process your personal data strictly to deliver the Services our client has contracted for. This typically includes:",
     ],
     list: [
       "Guest identity and contact details (name, email, phone number).",
       "Reservation and booking details (dates, room/unit type, rate, special requests).",
       "Communications exchanged via phone, SMS, WhatsApp, email, in-app messaging, or OTA messaging platforms.",
-      "Payment-adjacent metadata necessary for reservation handling (we do not store full payment card numbers; card data, where involved at all, is handled within the client's own PMS or payment processor, not by GuestSquad directly).",
+      "Payment-adjacent metadata necessary for reservation handling (we do not store full payment card numbers; card data, where involved at all, is handled within the client's own PMS or payment processor, not by Guest Squad directly).",
     ],
   },
   {
@@ -82,7 +82,7 @@ export const PRIVACY_SECTIONS: LegalSection[] = [
       "Service providers and sub-processors who support our operations (e.g., hosting, email delivery, scheduling/Calendly, analytics, customer relationship management), bound by confidentiality and data protection obligations at least as protective as this Policy.",
       "Our clients, where the data relates to that client's own guests, as necessary to deliver the Services to that client.",
       "Professional advisors (legal, accounting) where reasonably necessary.",
-      "Law enforcement, regulators, or other third parties where required by law, legal process, or to protect the rights, property, or safety of GuestSquad, our clients, or others.",
+      "Law enforcement, regulators, or other third parties where required by law, legal process, or to protect the rights, property, or safety of Guest Squad, our clients, or others.",
       "A successor entity in connection with a merger, acquisition, financing, or sale of assets, subject to standard confidentiality protections.",
     ],
   },
@@ -143,7 +143,7 @@ export const PRIVACY_SECTIONS: LegalSection[] = [
 ];
 
 export const TERMS_INTRO = [
-  `These Terms of Service ("Terms") govern your access to and use of the ${SITE.url} website and the guest-operations services (the "Services") provided by ${SITE.legalName}, operating as GuestSquad ("GuestSquad," "we," "us," or "our"). By signing an order form, statement of work, or pilot agreement with us, accessing the Site, or otherwise engaging the Services, you ("Client," "you," or "your") agree to be bound by these Terms.`,
+  `These Terms of Service ("Terms") govern your access to and use of the ${SITE.url} website and the guest-operations services (the "Services") provided by ${SITE.legalName}, operating as Guest Squad ("Guest Squad," "we," "us," or "our"). By signing an order form, statement of work, or pilot agreement with us, accessing the Site, or otherwise engaging the Services, you ("Client," "you," or "your") agree to be bound by these Terms.`,
   "If you are entering into these Terms on behalf of a company or other legal entity, you represent that you have the authority to bind that entity, in which case \"you\" refers to that entity.",
 ];
 
@@ -151,39 +151,39 @@ export const TERMS_SECTIONS: LegalSection[] = [
   {
     heading: "Description of Services",
     paragraphs: [
-      "GuestSquad provides outsourced guest-communications and back-office support for hotels, resorts, serviced apartments, and short-term-rental operators, which may include reservation support, guest messaging, OTA inbox management, after-hours front-desk coverage, callback and lead recovery, upsell and revenue support, and back-office guest operations (collectively, the \"Services\"), as further described on the Site or in an applicable order form, statement of work, or pilot agreement (each, an \"Order\").",
-      "GuestSquad provides Services as a support, overflow, and after-hours layer for Client's existing operations. GuestSquad does not guarantee specific booking volumes, revenue outcomes, response times, or any other business result, except to the extent expressly and specifically stated in a signed Order.",
+      "Guest Squad provides outsourced guest-communications and back-office support for hotels, resorts, serviced apartments, and short-term-rental operators, which may include reservation support, guest messaging, OTA inbox management, after-hours front-desk coverage, callback and lead recovery, upsell and revenue support, and back-office guest operations (collectively, the \"Services\"), as further described on the Site or in an applicable order form, statement of work, or pilot agreement (each, an \"Order\").",
+      "Guest Squad provides Services as a support, overflow, and after-hours layer for Client's existing operations. Guest Squad does not guarantee specific booking volumes, revenue outcomes, response times, or any other business result, except to the extent expressly and specifically stated in a signed Order.",
     ],
   },
   {
     heading: "Client Responsibilities",
     paragraphs: [
-      "Client is responsible for providing accurate and current information about its property, rates, policies, escalation preferences, and brand voice, and for granting GuestSquad timely access to the systems (PMS, CRS, OTA accounts, phone systems, messaging platforms) reasonably necessary to perform the Services. Delays or inaccuracies caused by Client's failure to provide such access or information may affect service quality and are not attributable to GuestSquad.",
-      "Client represents that it has all necessary rights, consents, and lawful basis to share any guest or third-party personal data with GuestSquad for purposes of the Services, including any consents required for GuestSquad to act as a processor under applicable data protection law.",
+      "Client is responsible for providing accurate and current information about its property, rates, policies, escalation preferences, and brand voice, and for granting Guest Squad timely access to the systems (PMS, CRS, OTA accounts, phone systems, messaging platforms) reasonably necessary to perform the Services. Delays or inaccuracies caused by Client's failure to provide such access or information may affect service quality and are not attributable to Guest Squad.",
+      "Client represents that it has all necessary rights, consents, and lawful basis to share any guest or third-party personal data with Guest Squad for purposes of the Services, including any consents required for Guest Squad to act as a processor under applicable data protection law.",
     ],
   },
   {
     heading: "Fees, Billing, and Payment Authorization",
     paragraphs: [
-      "Fees for the Services are as set out in the applicable Order. By providing a payment method (credit card, ACH, wire, or other agreed method) and signing an Order, Client expressly authorizes GuestSquad to charge that payment method for all fees described in the Order on the agreed billing schedule, including recurring monthly charges where applicable, until the Order or these Terms are terminated in accordance with Section 7.",
-      "Client agrees to keep payment method details current and to promptly notify GuestSquad of any changes. GuestSquad is not responsible for failed charges, late fees, or service interruption resulting from outdated or invalid payment information on file.",
-      "Invoices are due upon receipt unless otherwise stated in the Order. Late payments may accrue interest at the lesser of 1.5% per month or the maximum rate permitted by applicable law, and GuestSquad may suspend Services for accounts more than 15 days past due, upon prior written notice.",
+      "Fees for the Services are as set out in the applicable Order. By providing a payment method (credit card, ACH, wire, or other agreed method) and signing an Order, Client expressly authorizes Guest Squad to charge that payment method for all fees described in the Order on the agreed billing schedule, including recurring monthly charges where applicable, until the Order or these Terms are terminated in accordance with Section 7.",
+      "Client agrees to keep payment method details current and to promptly notify Guest Squad of any changes. Guest Squad is not responsible for failed charges, late fees, or service interruption resulting from outdated or invalid payment information on file.",
+      "Invoices are due upon receipt unless otherwise stated in the Order. Late payments may accrue interest at the lesser of 1.5% per month or the maximum rate permitted by applicable law, and Guest Squad may suspend Services for accounts more than 15 days past due, upon prior written notice.",
     ],
   },
   {
     heading: "Billing Disputes and Chargebacks",
     paragraphs: [
-      "If Client believes any charge is incorrect, Client agrees to contact GuestSquad at " +
+      "If Client believes any charge is incorrect, Client agrees to contact Guest Squad at " +
         SITE.email +
         " within thirty (30) days of the charge date to attempt to resolve the dispute directly with us before contacting Client's bank or card issuer to dispute or reverse the charge (a \"Chargeback\").",
-      "Client agrees not to initiate a Chargeback for fees properly authorized under a signed Order and these Terms. Initiating a Chargeback for an authorized, undisputed-in-good-faith charge, without first attempting resolution as described above, is a material breach of these Terms. In such cases, GuestSquad reserves the right to: (a) suspend or terminate Services immediately; (b) pursue collection of the disputed amount through any lawful means, including third-party collections; and (c) recover GuestSquad's reasonable costs of collection, including chargeback fees imposed by GuestSquad's payment processor and reasonable attorneys' fees, to the extent permitted by applicable law.",
+      "Client agrees not to initiate a Chargeback for fees properly authorized under a signed Order and these Terms. Initiating a Chargeback for an authorized, undisputed-in-good-faith charge, without first attempting resolution as described above, is a material breach of these Terms. In such cases, Guest Squad reserves the right to: (a) suspend or terminate Services immediately; (b) pursue collection of the disputed amount through any lawful means, including third-party collections; and (c) recover Guest Squad's reasonable costs of collection, including chargeback fees imposed by Guest Squad's payment processor and reasonable attorneys' fees, to the extent permitted by applicable law.",
       "Nothing in this Section limits any right Client may have under applicable consumer protection law where such law cannot be waived; this Section applies to the maximum extent permitted by law in a business-to-business context.",
     ],
   },
   {
     heading: "Pilot Program Terms",
     paragraphs: [
-      "Where Client purchases a discounted pilot engagement (a \"Pilot\") as described on the Site or in an Order, the Pilot fee is charged at the outset of the Pilot period and is non-refundable once the Pilot has commenced, except as required by applicable law. The Pilot does not automatically convert into a recurring paid plan; continuation beyond the Pilot period requires Client's affirmative agreement to a subsequent Order. GuestSquad will provide a performance summary at or near the end of the Pilot period to support that decision.",
+      "Where Client purchases a discounted pilot engagement (a \"Pilot\") as described on the Site or in an Order, the Pilot fee is charged at the outset of the Pilot period and is non-refundable once the Pilot has commenced, except as required by applicable law. The Pilot does not automatically convert into a recurring paid plan; continuation beyond the Pilot period requires Client's affirmative agreement to a subsequent Order. Guest Squad will provide a performance summary at or near the end of the Pilot period to support that decision.",
     ],
   },
   {
@@ -196,8 +196,8 @@ export const TERMS_SECTIONS: LegalSection[] = [
   {
     heading: "Term and Termination",
     paragraphs: [
-      "These Terms remain in effect for as long as an Order between the parties is active. Either party may terminate an Order for the other party's uncured material breach upon thirty (30) days' written notice describing the breach, if the breach remains uncured at the end of that period. GuestSquad may suspend or terminate Services immediately for non-payment (subject to Section 4) or for Client's violation of Section 6 (Chargebacks).",
-      "Upon termination, Client remains liable for all fees accrued prior to the termination date, and GuestSquad will, upon request and consistent with our data processing agreement, return or delete Client and guest data in our possession, except as required to be retained by law.",
+      "These Terms remain in effect for as long as an Order between the parties is active. Either party may terminate an Order for the other party's uncured material breach upon thirty (30) days' written notice describing the breach, if the breach remains uncured at the end of that period. Guest Squad may suspend or terminate Services immediately for non-payment (subject to Section 4) or for Client's violation of Section 6 (Chargebacks).",
+      "Upon termination, Client remains liable for all fees accrued prior to the termination date, and Guest Squad will, upon request and consistent with our data processing agreement, return or delete Client and guest data in our possession, except as required to be retained by law.",
     ],
   },
   {
@@ -209,13 +209,13 @@ export const TERMS_SECTIONS: LegalSection[] = [
   {
     heading: "Data Protection",
     paragraphs: [
-      "GuestSquad's collection and use of personal data is described in our Privacy Policy, available at /privacy-policy, which is incorporated by reference. Where GuestSquad processes personal data on Client's behalf as a processor, the parties will, upon request, enter into a separate data processing agreement governing that processing in accordance with applicable data protection law.",
+      "Guest Squad's collection and use of personal data is described in our Privacy Policy, available at /privacy-policy, which is incorporated by reference. Where Guest Squad processes personal data on Client's behalf as a processor, the parties will, upon request, enter into a separate data processing agreement governing that processing in accordance with applicable data protection law.",
     ],
   },
   {
     heading: "Intellectual Property",
     paragraphs: [
-      "GuestSquad retains all right, title, and interest in and to its own methodologies, software, templates, training materials, and know-how used to deliver the Services. Client retains all right, title, and interest in its own brand, trademarks, content, and data. Nothing in these Terms transfers ownership of either party's pre-existing intellectual property to the other.",
+      "Guest Squad retains all right, title, and interest in and to its own methodologies, software, templates, training materials, and know-how used to deliver the Services. Client retains all right, title, and interest in its own brand, trademarks, content, and data. Nothing in these Terms transfers ownership of either party's pre-existing intellectual property to the other.",
     ],
   },
   {
@@ -234,7 +234,7 @@ export const TERMS_SECTIONS: LegalSection[] = [
   {
     heading: "Indemnification",
     paragraphs: [
-      "Client agrees to indemnify, defend, and hold harmless GuestSquad and its officers, employees, and agents from and against any third-party claims, damages, liabilities, and reasonable expenses (including attorneys' fees) arising out of Client's breach of these Terms, Client's provision of inaccurate information, or Client's failure to obtain necessary consents or rights for data shared with GuestSquad.",
+      "Client agrees to indemnify, defend, and hold harmless Guest Squad and its officers, employees, and agents from and against any third-party claims, damages, liabilities, and reasonable expenses (including attorneys' fees) arising out of Client's breach of these Terms, Client's provision of inaccurate information, or Client's failure to obtain necessary consents or rights for data shared with Guest Squad.",
     ],
   },
   {
@@ -252,13 +252,13 @@ export const TERMS_SECTIONS: LegalSection[] = [
   {
     heading: "General Provisions",
     paragraphs: [
-      "These Terms, together with any applicable Order, constitute the entire agreement between the parties regarding the Services and supersede any prior agreements on the subject matter. If any provision of these Terms is found unenforceable, the remaining provisions will remain in full force and effect. Neither party may assign these Terms without the other party's prior written consent, except in connection with a merger, acquisition, or sale of substantially all assets. GuestSquad may update these Terms from time to time; material changes will be communicated to active Clients, and continued use of the Services after the effective date of an update constitutes acceptance of the revised Terms.",
+      "These Terms, together with any applicable Order, constitute the entire agreement between the parties regarding the Services and supersede any prior agreements on the subject matter. If any provision of these Terms is found unenforceable, the remaining provisions will remain in full force and effect. Neither party may assign these Terms without the other party's prior written consent, except in connection with a merger, acquisition, or sale of substantially all assets. Guest Squad may update these Terms from time to time; material changes will be communicated to active Clients, and continued use of the Services after the effective date of an update constitutes acceptance of the revised Terms.",
     ],
   },
   {
     heading: "Contact Information",
     paragraphs: [
-      `Questions about these Terms should be directed to ${SITE.email} or ${SITE.phone}. ${SITE.legalName} operates GuestSquad; for general company information, visit ${SITE.parentUrl}.`,
+      `Questions about these Terms should be directed to ${SITE.email} or ${SITE.phone}. ${SITE.legalName} operates Guest Squad; for general company information, visit ${SITE.parentUrl}.`,
       "These Terms are provided as a general commercial template and do not constitute legal advice. We strongly recommend having these Terms reviewed by qualified legal counsel licensed in your jurisdiction before relying on them, particularly the billing authorization, chargeback, and limitation of liability provisions, to ensure enforceability under applicable law and your card-network/payment-processor rules.",
     ],
   },

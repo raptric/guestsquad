@@ -1,4 +1,4 @@
-const CHANNELS = [
+﻿const CHANNELS = [
   "Booking.com inbox",
   "Expedia Partner Central",
   "Airbnb messages",
@@ -30,7 +30,7 @@ export function ChannelBadges() {
         ))}
       </div>
       <p className="mt-4 text-xs text-ink-muted">
-        GuestSquad works with your existing guest communication channels and documented workflows. Platform names are used descriptively only.
+        Guest Squad works with your existing guest communication channels and documented workflows. Platform names are used descriptively only.
       </p>
     </div>
   );

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { Breadcrumbs } from "@/components/site/breadcrumbs";
 import { LegalPage } from "@/components/site/legal-page";
 import { buildMetadata } from "@/lib/seo";
@@ -7,7 +7,7 @@ import { LEGAL_EFFECTIVE_DATE, TERMS_INTRO, TERMS_SECTIONS } from "@/lib/legal-c
 export const metadata: Metadata = buildMetadata({
   title: "Terms of Service",
   description:
-    "GuestSquad's Terms of Service, including billing authorization, payment dispute and chargeback handling, pilot terms, and liability terms.",
+    "Guest Squad's Terms of Service, including billing authorization, payment dispute and chargeback handling, pilot terms, and liability terms.",
   path: "/terms-of-service",
 });
 

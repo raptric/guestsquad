@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero } from "@/components/site/page-hero";
 import { Section, SectionHeading } from "@/components/site/section";
@@ -23,18 +23,18 @@ export const metadata: Metadata = buildMetadata({
 const FAQS = [
   {
     q: "What are guest operations coverage plans?",
-    a: "Guest operations coverage plans are the service tiers GuestSquad uses to package call answering, messaging, OTA inbox management, and after-hours support for a hotel or STR portfolio. Starter covers the core channels, Growth adds fuller coverage and reporting, and Custom is built around properties with higher volumes or multiple sites. All plans are priced per property based on actual volume and channels.",
+    a: "Guest operations coverage plans are the service tiers Guest Squad uses to package call answering, messaging, OTA inbox management, and after-hours support for a hotel or STR portfolio. Starter covers the core channels, Growth adds fuller coverage and reporting, and Custom is built around properties with higher volumes or multiple sites. All plans are priced per property based on actual volume and channels.",
   },
   {
-    q: "Is GuestSquad pricing based per property?",
-    a: "Yes. GuestSquad pricing is scoped per property or portfolio based on the channels covered, expected call and message volume, coverage hours, and reporting needs. A quote reflects your actual operation rather than a fixed tier.",
+    q: "Is Guest Squad pricing based per property?",
+    a: "Yes. Guest Squad pricing is scoped per property or portfolio based on the channels covered, expected call and message volume, coverage hours, and reporting needs. A quote reflects your actual operation rather than a fixed tier.",
   },
   {
     q: "Why don't you list exact prices?",
     a: "Pricing depends on call and message volume, number of properties, and which channels you need covered. A quote takes one short call and reflects your actual operation, not a generic tier.",
   },
   {
-    q: "What affects GuestSquad pricing the most?",
+    q: "What affects Guest Squad pricing the most?",
     a: "Volume is the biggest factor: total call and message volume across your covered channels. The number of properties, hours of coverage, and PMS or OTA complexity also affect the plan. A property receiving 200 calls per month is priced differently from one receiving 2,000.",
   },
   {
@@ -108,7 +108,7 @@ export default function PricingPage() {
       <div className="border-b border-line bg-surface">
         <div className="container py-8">
           <p className="mx-auto max-w-3xl text-sm leading-relaxed text-ink-soft">
-            GuestSquad pricing is scoped per property or portfolio based on channels covered, call and message volume, hours of coverage, and reporting needs. There is no fixed published rate because two properties with different volumes and channels need different guest operations coverage plans. A quote is provided after a short discovery call and reflects your actual operation.
+            Guest Squad pricing is scoped per property or portfolio based on channels covered, call and message volume, hours of coverage, and reporting needs. There is no fixed published rate because two properties with different volumes and channels need different guest operations coverage plans. A quote is provided after a short discovery call and reflects your actual operation.
           </p>
         </div>
       </div>

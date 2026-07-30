@@ -1,11 +1,11 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo";
 import { PrintLayout } from "@/components/site/print-layout";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Sample Weekly Guest Operations Report | GuestSquad",
+  title: "Sample Weekly Guest Operations Report | Guest Squad",
   description:
-    "See exactly what a GuestSquad weekly report looks like: calls handled, messages, OTA replies, escalations, response times, and recommendations.",
+    "See exactly what a Guest Squad weekly report looks like: calls handled, messages, OTA replies, escalations, response times, and recommendations.",
   path: "/resources/sample-weekly-report",
   noindex: true,
 });

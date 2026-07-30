@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import Link from "next/link";
 import { Calculator, FileText, ClipboardList, BarChart2 } from "lucide-react";
 import { DownloadGate } from "@/components/site/download-gate";
@@ -20,7 +20,7 @@ const TOOLS = [
     badge: "Sample Report",
     title: "Sample Weekly Guest Operations Report",
     description:
-      "See exactly what a GuestSquad weekly report looks like: calls handled, messages, OTA replies, escalations, response times, and weekly recommendations.",
+      "See exactly what a Guest Squad weekly report looks like: calls handled, messages, OTA replies, escalations, response times, and weekly recommendations.",
   },
   {
     type: "download" as const,

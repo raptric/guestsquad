@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { useState, useEffect } from "react";
 import { Download, X, Loader2 } from "lucide-react";
 import { CalendlyPopupButton } from "@/components/site/calendly-popup-button";
@@ -28,19 +28,19 @@ const ASSET_POST_DOWNLOAD: Record<string, { body: string; cta: string }> = {
     cta: "Book a Coverage Review",
   },
   "after-hours-checklist": {
-    body: "Want us to cover the overnight gaps on your checklist? Book a review and we will show you exactly how GuestSquad handles your after-hours calls and messages.",
+    body: "Want us to cover the overnight gaps on your checklist? Book a review and we will show you exactly how Guest Squad handles your after-hours calls and messages.",
     cta: "Book a Coverage Review",
   },
   "guest-messaging-sop": {
-    body: "Want us to run this SOP for your property? Book a review and we will show you how GuestSquad handles your messaging channels so guests always get a reply.",
+    body: "Want us to run this SOP for your property? Book a review and we will show you how Guest Squad handles your messaging channels so guests always get a reply.",
     cta: "Book a Messaging Review",
   },
   "ota-inbox-response-checklist": {
-    body: "Ready to hand your OTA inboxes to a trained team? Book a review and we will show you how GuestSquad keeps Booking.com, Expedia, and Airbnb inboxes under control.",
+    body: "Ready to hand your OTA inboxes to a trained team? Book a review and we will show you how Guest Squad keeps Booking.com, Expedia, and Airbnb inboxes under control.",
     cta: "Book a Coverage Review",
   },
   "sample-weekly-report": {
-    body: "This is what you get every week as a GuestSquad client. Book a review and we will walk through what coverage would look like for your property.",
+    body: "This is what you get every week as a Guest Squad client. Book a review and we will walk through what coverage would look like for your property.",
     cta: "Book a Coverage Review",
   },
 };

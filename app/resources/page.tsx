@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero } from "@/components/site/page-hero";
 import { Section, SectionHeading } from "@/components/site/section";
@@ -20,7 +20,7 @@ export const metadata: Metadata = buildMetadata({
 
 const RESOURCES_FAQS = [
   {
-    q: "What GuestSquad resources should a hotel start with?",
+    q: "What Guest Squad resources should a hotel start with?",
     a: "Most hotels should start with the Missed Booking Revenue Calculator to estimate revenue risk, then use the Coverage Gap Assessment or After-Hours Checklist to identify which calls, messages, and OTA inboxes need coverage first.",
   },
   {
@@ -33,11 +33,11 @@ const RESOURCES_FAQS = [
   },
   {
     q: "Can these resources help before booking a coverage review?",
-    a: "Yes. GuestSquad resources are designed to help hospitality teams understand missed revenue, after-hours gaps, OTA inbox standards, guest messaging SOPs, and reporting expectations before booking a coverage review.",
+    a: "Yes. Guest Squad resources are designed to help hospitality teams understand missed revenue, after-hours gaps, OTA inbox standards, guest messaging SOPs, and reporting expectations before booking a coverage review.",
   },
   {
-    q: "Are GuestSquad templates free to use?",
-    a: "GuestSquad provides free tools, checklists, and templates to help hotels and property operators assess guest communication gaps. Some downloadable assets may require a short form before access.",
+    q: "Are Guest Squad templates free to use?",
+    a: "Guest Squad provides free tools, checklists, and templates to help hotels and property operators assess guest communication gaps. Some downloadable assets may require a short form before access.",
   },
 ];
 
@@ -68,7 +68,7 @@ export default function ResourcesPage() {
               "Calculate your revenue gap",
               "Identify your coverage gaps",
               "Get the right templates",
-              "See what GuestSquad delivers",
+              "See what Guest Squad delivers",
               "Book a coverage review",
             ].map((step, i, arr) => (
               <span key={step} className="flex items-center gap-2">
@@ -203,7 +203,7 @@ export default function ResourcesPage() {
       <Section surface>
         <SectionHeading
           eyebrow="Step 4"
-          title="See what GuestSquad actually delivers each week."
+          title="See what Guest Squad actually delivers each week."
           description="Download the sample report to see the format before committing to anything."
         />
         <div className="mt-8 max-w-sm">
@@ -227,7 +227,7 @@ export default function ResourcesPage() {
       <Section>
         <SectionHeading
           eyebrow="Further Reading"
-          title="How GuestSquad compares to the alternatives."
+          title="How Guest Squad compares to the alternatives."
           description="Straight comparisons to help you evaluate guest support options before choosing."
         />
         <div className="mt-10 grid gap-6 sm:grid-cols-2">

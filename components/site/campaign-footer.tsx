@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import { SITE } from "@/lib/site-data";
 import { CalendlyPopupButton } from "@/components/site/calendly-popup-button";
 
@@ -11,7 +11,7 @@ export function CampaignFooter() {
             <Link href="/">
               <img
                 src="/brand-assets/guestsquad-logo-horizontal.svg"
-                alt="GuestSquad"
+                alt="Guest Squad"
                 className="h-7 w-auto"
               />
             </Link>

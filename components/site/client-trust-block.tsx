@@ -1,4 +1,4 @@
-import { Check } from "lucide-react";
+﻿import { Check } from "lucide-react";
 
 const COMMITMENTS = [
   "5-business-day setup",
@@ -22,7 +22,7 @@ export function ClientTrustBlock() {
         ))}
       </ul>
       <p className="mt-6 max-w-2xl text-sm leading-relaxed text-ink-soft border-t border-line pt-6">
-        Before we handle a single guest call or message, we document your rates, policies, escalation contacts, guest tone, and brand voice. Nothing goes live until your team has reviewed the coverage brief and approved how GuestSquad should handle and escalate guest situations.
+        Before we handle a single guest call or message, we document your rates, policies, escalation contacts, guest tone, and brand voice. Nothing goes live until your team has reviewed the coverage brief and approved how Guest Squad should handle and escalate guest situations.
       </p>
     </div>
   );

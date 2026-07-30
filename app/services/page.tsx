@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero } from "@/components/site/page-hero";
 import { Section, SectionHeading } from "@/components/site/section";
@@ -20,7 +20,7 @@ export const metadata: Metadata = buildMetadata({
 
 const SERVICE_FAQS = [
   {
-    q: "Which GuestSquad service should my property start with?",
+    q: "Which Guest Squad service should my property start with?",
     a: "Most properties start with whichever gap is costing them the most right now. After-hours coverage is the most common starting point for hotels that are losing overnight calls. OTA inbox management is the fastest win for properties whose response time on Booking.com or Expedia is dragging down their ranking.",
   },
   {
@@ -33,10 +33,10 @@ const SERVICE_FAQS = [
   },
   {
     q: "Do you cover both calls and messages?",
-    a: "Yes. GuestSquad covers phone calls, SMS, WhatsApp, email, OTA inboxes (Booking.com, Expedia, Airbnb), and in-app messaging from supported PMS or guest-messaging platforms.",
+    a: "Yes. Guest Squad covers phone calls, SMS, WhatsApp, email, OTA inboxes (Booking.com, Expedia, Airbnb), and in-app messaging from supported PMS or guest-messaging platforms.",
   },
   {
-    q: "How does GuestSquad escalate issues to our team?",
+    q: "How does Guest Squad escalate issues to our team?",
     a: "Escalation rules are agreed with your team during onboarding. You specify what can be resolved directly, what should be logged for morning review, and what triggers an immediate notification to your on-call contact. Nothing is escalated without the context your team needs to act.",
   },
 ];
@@ -64,7 +64,7 @@ export default function ServicesPage() {
           {
             "@context": "https://schema.org",
             "@type": "ItemList",
-            name: "GuestSquad Hotel Guest Operations Services",
+            name: "Guest Squad Hotel Guest Operations Services",
             url: `${SITE.url}/services`,
             itemListElement: SERVICES.map((s, i) => ({
               "@type": "ListItem",
@@ -88,7 +88,7 @@ export default function ServicesPage() {
       <div className="border-b border-line bg-surface">
         <div className="container py-8">
           <p className="mx-auto max-w-3xl text-sm leading-relaxed text-ink-soft">
-            GuestSquad covers the full range of guest-facing operations for hotels, boutique properties, resorts, serviced apartments, and short-term rental operators. Services can be combined to fill specific gaps or bundled for complete coverage. Every plan starts with a conversation about your property, not a fixed package.
+            Guest Squad covers the full range of guest-facing operations for hotels, boutique properties, resorts, serviced apartments, and short-term rental operators. Services can be combined to fill specific gaps or bundled for complete coverage. Every plan starts with a conversation about your property, not a fixed package.
           </p>
         </div>
       </div>

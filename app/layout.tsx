@@ -1,4 +1,4 @@
-import type { Metadata, Viewport } from "next";
+﻿import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
@@ -21,11 +21,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: "GuestSquad — 24/7 Hotel Guest Support",
-    template: "%s | GuestSquad",
+    default: "Guest Squad — 24/7 Hotel Guest Support",
+    template: "%s | Guest Squad",
   },
   description:
-    "GuestSquad handles reservations, guest messaging, OTA inquiries, callbacks, upsells, and after-hours support, so your front desk stays focused on in-house guests.",
+    "Guest Squad handles reservations, guest messaging, OTA inquiries, callbacks, upsells, and after-hours support, so your front desk stays focused on in-house guests.",
   openGraph: {
     title: "24/7 Hotel Guest Support & Reservation Services",
     description:
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
         url: `${SITE.url}/brand-assets/og-image.jpg`,
         width: 1200,
         height: 630,
-        alt: "GuestSquad — 24/7 human hotel guest support for calls, messages, OTA inboxes, and after-hours coverage.",
+        alt: "Guest Squad — 24/7 human hotel guest support for calls, messages, OTA inboxes, and after-hours coverage.",
       },
     ],
   },

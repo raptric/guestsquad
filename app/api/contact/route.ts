@@ -1,4 +1,4 @@
-import { NextResponse } from "next/server";
+﻿import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
 export async function POST(req: Request) {
@@ -30,7 +30,7 @@ export async function POST(req: Request) {
   const html = `
     <div style="font-family:sans-serif;max-width:600px;margin:0 auto;color:#1a1a1a">
       <h2 style="border-bottom:2px solid #c9a84c;padding-bottom:12px;color:#c9a84c">
-        New GuestSquad Enquiry
+        New Guest Squad Enquiry
       </h2>
       <table style="width:100%;border-collapse:collapse;margin-top:20px">
         <tr><td style="padding:10px 0;border-bottom:1px solid #eee;font-weight:600;width:200px">Name</td><td style="padding:10px 0;border-bottom:1px solid #eee">${name}</td></tr>
@@ -55,7 +55,7 @@ export async function POST(req: Request) {
   `;
 
   await transporter.sendMail({
-    from: `"GuestSquad Website" <${gmailUser}>`,
+    from: `"Guest Squad Website" <${gmailUser}>`,
     to: gmailUser,
     replyTo: email,
     subject: `New enquiry from ${name} — ${company}`,

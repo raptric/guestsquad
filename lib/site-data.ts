@@ -1,6 +1,6 @@
-export const SITE = {
-  name: "GuestSquad",
-  brand: "GuestSquad",
+﻿export const SITE = {
+  name: "Guest Squad",
+  brand: "Guest Squad",
   legalName: "Raptric LLC",
   parentName: "Raptric",
   parentUrl: "https://raptric.com",

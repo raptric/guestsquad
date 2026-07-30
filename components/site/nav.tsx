@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -22,7 +22,7 @@ export function Nav() {
           <Link href="/">
             <img
               src="/brand-assets/guestsquad-logo-horizontal.svg"
-              alt="GuestSquad"
+              alt="Guest Squad"
               className="h-8 w-auto"
             />
           </Link>
@@ -40,7 +40,7 @@ export function Nav() {
         <Link href="/" className="flex items-center" onClick={() => setOpen(false)}>
           <img
             src="/brand-assets/guestsquad-logo-horizontal.svg"
-            alt="GuestSquad"
+            alt="Guest Squad"
             className="h-9 w-auto sm:h-10"
           />
         </Link>

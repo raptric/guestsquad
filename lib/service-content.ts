@@ -1,4 +1,4 @@
-import type { ServiceDetailData } from "@/components/site/service-detail";
+﻿import type { ServiceDetailData } from "@/components/site/service-detail";
 
 export const hotelAnsweringServiceData: ServiceDetailData = {
   slug: "hotel-answering-service",
@@ -7,7 +7,7 @@ export const hotelAnsweringServiceData: ServiceDetailData = {
   description:
     "Every call answered by a trained person: reservation questions, general guest inquiries, and overflow during busy periods, without a phone tree or voicemail.",
   answerBlock:
-    "GuestSquad's hotel answering service provides live, human call answering for hotels, boutique properties, and independent operators that cannot always have someone at the front desk. Every inbound call reaches a hospitality-trained person working with your rates, policies, and property information, so no reservation inquiry, guest question, or overflow call goes unanswered.",
+    "Guest Squad's hotel answering service provides live, human call answering for hotels, boutique properties, and independent operators that cannot always have someone at the front desk. Every inbound call reaches a hospitality-trained person working with your rates, policies, and property information, so no reservation inquiry, guest question, or overflow call goes unanswered.",
   image: {
     src: "https://images.unsplash.com/photo-1525182008055-f88b95ff7980?w=1600&q=90",
     alt: "Agent answering a hotel call at a desk with monitors",
@@ -53,17 +53,17 @@ export const hotelAnsweringServiceData: ServiceDetailData = {
   relatedTitle: "Pair call answering with after-hours and reservation support.",
   comparisonTitle: "Hotel answering vs voicemail, IVR, and generic call centers.",
   faqs: [
-    { q: "What is a hotel answering service?", a: "A hotel answering service provides live, human call coverage so reservation inquiries, guest questions, and overflow calls are answered by a trained person instead of going to voicemail or a phone tree. GuestSquad operates using your rates, policies, and property information, covering calls during peak periods, after hours, and any time your front desk cannot get to the phone." },
+    { q: "What is a hotel answering service?", a: "A hotel answering service provides live, human call coverage so reservation inquiries, guest questions, and overflow calls are answered by a trained person instead of going to voicemail or a phone tree. Guest Squad operates using your rates, policies, and property information, covering calls during peak periods, after hours, and any time your front desk cannot get to the phone." },
     { q: "How is this different from your Reservation Support service?", a: "Reservation Support focuses on bookings, quotes, and modifications. Hotel Answering Service is the broader call-answering layer, including general questions and overflow, and the two are often used together for complete phone coverage." },
     { q: "Do you use an automated phone tree or IVR?", a: "No. Calls are answered by a trained person. Automated menus are exactly what this service is built to avoid." },
     { q: "Can you cover just our busiest hours, not all day?", a: "Yes. Many clients start with peak-hour overflow coverage during check-in and check-out rushes rather than committing to full-day coverage." },
     { q: "What happens with a call that needs management attention?", a: "It is logged with full context and routed to the right person immediately, so nothing sits in a generic voicemail box." },
     { q: "Is this only for hotels, or does it work for smaller properties too?", a: "It works for any property type with a phone line: independent hotels, boutique properties, and small groups alike." },
-    { q: "Can GuestSquad answer calls using our hotel name?", a: "Yes. Agents answer in your hotel's name using your preferred greeting, so the experience is seamless for the guest." },
-    { q: "Can GuestSquad handle direct booking calls from our website or Google profile?", a: "Yes. Calls from any channel, whether your website, Google Business profile, or a direct number, are answered the same way: by a trained person with your property information." },
+    { q: "Can Guest Squad answer calls using our hotel name?", a: "Yes. Agents answer in your hotel's name using your preferred greeting, so the experience is seamless for the guest." },
+    { q: "Can Guest Squad handle direct booking calls from our website or Google profile?", a: "Yes. Calls from any channel, whether your website, Google Business profile, or a direct number, are answered the same way: by a trained person with your property information." },
     { q: "What happens if a caller asks for something outside our policy?", a: "The caller is informed politely that the request needs your team's direct approval, and the inquiry is logged and routed with full context so your team can follow up promptly." },
     { q: "Can calls be transferred to our team when needed?", a: "Yes. Live transfer to your designated number is available for situations that require your team's direct involvement, following the escalation rules we agree on during setup." },
-    { q: "How does a hotel answering service work without adding staff?", a: "A hotel answering service gives your property live call coverage without hiring another front desk shift. GuestSquad answers reservation calls, guest questions, overflow calls, and after-hours inquiries using your property rules, escalation contacts, and approved guest-handling instructions. It pairs naturally with after-hours support for full overnight coverage." },
+    { q: "How does a hotel answering service work without adding staff?", a: "A hotel answering service gives your property live call coverage without hiring another front desk shift. Guest Squad answers reservation calls, guest questions, overflow calls, and after-hours inquiries using your property rules, escalation contacts, and approved guest-handling instructions. It pairs naturally with after-hours support for full overnight coverage." },
   ],
   downloadAsset: {
     asset: "coverage-gap-assessment",
@@ -77,7 +77,7 @@ export const hotelAnsweringServiceData: ServiceDetailData = {
     { label: "Download After-Hours Checklist", href: "/resources/after-hours-checklist" },
   ],
   ctaTitle: "Turn missed calls into handled guest conversations.",
-  ctaDescription: "Book a coverage review and see exactly how GuestSquad would cover your reservation calls, guest inquiries, and after-hours lines.",
+  ctaDescription: "Book a coverage review and see exactly how Guest Squad would cover your reservation calls, guest inquiries, and after-hours lines.",
 };
 
 export const reservationSupportData: ServiceDetailData = {
@@ -87,7 +87,7 @@ export const reservationSupportData: ServiceDetailData = {
   description:
     "Inbound and outbound reservation calls handled with your rates, availability, and policies, so no booking inquiry goes unanswered, day or night.",
   answerBlock:
-    "GuestSquad's reservation support service handles inbound and outbound booking calls for hotels that need consistent coverage beyond their front desk hours. Agents work inside your PMS using your live rates, room types, and policies, so reservation calls that arrive overnight, at weekends, or during busy periods convert into confirmed bookings instead of going to voicemail.",
+    "Guest Squad's reservation support service handles inbound and outbound booking calls for hotels that need consistent coverage beyond their front desk hours. Agents work inside your PMS using your live rates, room types, and policies, so reservation calls that arrive overnight, at weekends, or during busy periods convert into confirmed bookings instead of going to voicemail.",
   image: {
     src: "https://images.unsplash.com/photo-1525182008055-f88b95ff7980?w=1600&q=90",
     alt: "Reservation agent on a phone call at a desk with monitors",
@@ -138,8 +138,8 @@ export const reservationSupportData: ServiceDetailData = {
     { q: "What happens if a guest wants something only our team can approve?", a: "It is escalated immediately with full context: what was asked, what was discussed, and what the guest expects next." },
     { q: "Do you replace our reservations team?", a: "No. We cover overflow, after-hours, and the calls your team cannot get to. Your team stays in control of policy and pricing decisions." },
     { q: "How fast can this go live?", a: "Most clients are live within 5 business days of signing, once we have access to your rates, policies, and booking system." },
-    { q: "Can GuestSquad help reduce missed direct bookings?", a: "Yes. The main source of missed direct bookings is unanswered calls and slow responses to inquiries. Having a trained person available on every call, at any hour, addresses that directly." },
-    { q: "Can GuestSquad handle rate and availability questions?", a: "Yes. Agents work inside your PMS or booking engine to check real-time availability and quote accurate rates before confirming anything with the guest." },
+    { q: "Can Guest Squad help reduce missed direct bookings?", a: "Yes. The main source of missed direct bookings is unanswered calls and slow responses to inquiries. Having a trained person available on every call, at any hour, addresses that directly." },
+    { q: "Can Guest Squad handle rate and availability questions?", a: "Yes. Agents work inside your PMS or booking engine to check real-time availability and quote accurate rates before confirming anything with the guest." },
     { q: "Can your team manage booking modifications?", a: "Yes. Date changes, room-type switches, and cancellations that fall within your policy are handled directly, without escalating to your team." },
     { q: "What happens if a guest asks for a discount or exception?", a: "If the request falls within your pre-approved parameters, it is handled directly. If it requires management discretion, it is escalated immediately with full call context so your team can respond with everything they need." },
   ],
@@ -155,7 +155,7 @@ export const reservationSupportData: ServiceDetailData = {
     { label: "Guest Coverage Gap Assessment", href: "/resources/coverage-gap-assessment" },
   ],
   ctaTitle: "Stop losing bookings to unanswered reservation calls.",
-  ctaDescription: "Book a coverage review and see exactly how GuestSquad would handle your inbound reservation inquiries and guest calls.",
+  ctaDescription: "Book a coverage review and see exactly how Guest Squad would handle your inbound reservation inquiries and guest calls.",
 };
 
 export const guestMessagingData: ServiceDetailData = {
@@ -165,7 +165,7 @@ export const guestMessagingData: ServiceDetailData = {
   description:
     "SMS, WhatsApp, email, and in-app messages monitored and answered across the full stay journey: pre-arrival, in-stay, and post-stay.",
   answerBlock:
-    "GuestSquad's guest messaging service monitors and responds to SMS, WhatsApp, email, and supported in-app messages across the full guest stay cycle. Pre-arrival questions, in-stay requests, and post-stay follow-ups are handled by trained agents in your property's voice, with housekeeping, maintenance, safety, and compensation issues routed immediately to your team.",
+    "Guest Squad's guest messaging service monitors and responds to SMS, WhatsApp, email, and supported in-app messages across the full guest stay cycle. Pre-arrival questions, in-stay requests, and post-stay follow-ups are handled by trained agents in your property's voice, with housekeeping, maintenance, safety, and compensation issues routed immediately to your team.",
   image: {
     src: "https://images.unsplash.com/photo-1592890288564-76628a30a657?w=1600&q=90",
     alt: "Close-up of a guest message being typed and sent on a phone",
@@ -215,8 +215,8 @@ export const guestMessagingData: ServiceDetailData = {
     { q: "What happens with requests that need a physical response, like housekeeping?", a: "Those are logged and routed to the right on-site team immediately, with the guest kept informed that the request has been received and is being handled." },
     { q: "Do you handle complaints over messaging?", a: "Straightforward issues are resolved directly. Anything sensitive, requiring compensation, or needing management judgment is escalated to your team with full message history attached." },
     { q: "Is there a log of every conversation?", a: "Yes. Every message and outcome is recorded and visible to your team, so nothing happens in your guest channels that you cannot see." },
-    { q: "Can GuestSquad respond to WhatsApp and SMS messages overnight?", a: "Yes. Overnight message coverage is one of the most common reasons clients use this service. Guests who message after hours receive a real response instead of silence or a generic auto-reply." },
-    { q: "Can GuestSquad support multilingual guest messages?", a: "English is the primary language of operation. For multilingual requirements, we can discuss whether your specific language needs are within scope during the onboarding call." },
+    { q: "Can Guest Squad respond to WhatsApp and SMS messages overnight?", a: "Yes. Overnight message coverage is one of the most common reasons clients use this service. Guests who message after hours receive a real response instead of silence or a generic auto-reply." },
+    { q: "Can Guest Squad support multilingual guest messages?", a: "English is the primary language of operation. For multilingual requirements, we can discuss whether your specific language needs are within scope during the onboarding call." },
     { q: "How are housekeeping or maintenance requests routed?", a: "Requests are logged with the guest's room number, request details, and timestamp, then sent to your designated on-site contact immediately. The guest receives a confirmation that their request has been received." },
   ],
   downloadAsset: {
@@ -231,7 +231,7 @@ export const guestMessagingData: ServiceDetailData = {
     { label: "View Sample Weekly Report", href: "/resources/sample-weekly-report" },
   ],
   ctaTitle: "Keep every guest conversation moving.",
-  ctaDescription: "Book a coverage review and see how GuestSquad handles your messaging channels so guests always get a reply.",
+  ctaDescription: "Book a coverage review and see how Guest Squad handles your messaging channels so guests always get a reply.",
 };
 
 export const otaInboxData: ServiceDetailData = {
@@ -241,7 +241,7 @@ export const otaInboxData: ServiceDetailData = {
   description:
     "Booking.com, Expedia, and Airbnb inboxes monitored and answered around the clock, so pre-booking questions convert instead of disappearing.",
   answerBlock:
-    "GuestSquad's OTA inbox management service monitors and responds to messages across Booking.com, Expedia, and Airbnb on your behalf. Pre-booking inquiries are answered fast enough to win the booking, post-booking questions are resolved without your team having to check multiple extranets, and reviews are responded to in your brand voice. OTA response time is one of the few ranking factors hotels can directly control, and we treat it accordingly. For hotels comparing hotel OTA messaging support, GuestSquad helps monitor and respond to Booking.com, Expedia, Airbnb, and Vrbo messages using your property-specific instructions.",
+    "Guest Squad's OTA inbox management service monitors and responds to messages across Booking.com, Expedia, and Airbnb on your behalf. Pre-booking inquiries are answered fast enough to win the booking, post-booking questions are resolved without your team having to check multiple extranets, and reviews are responded to in your brand voice. OTA response time is one of the few ranking factors hotels can directly control, and we treat it accordingly. For hotels comparing hotel OTA messaging support, Guest Squad helps monitor and respond to Booking.com, Expedia, Airbnb, and Vrbo messages using your property-specific instructions.",
   image: {
     src: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=1600&q=90",
     alt: "Team monitoring OTA inboxes across multiple screens",
@@ -286,14 +286,14 @@ export const otaInboxData: ServiceDetailData = {
   relatedTitle: "Pair OTA coverage with reservation support and guest messaging.",
   comparisonTitle: "OTA inbox management vs auto-replies and once-a-day checking.",
   faqs: [
-    { q: "What is hotel OTA messaging?", a: "Hotel OTA messaging refers to the guest messages that arrive through platforms such as Booking.com, Expedia, and Airbnb before and after a booking is confirmed. Pre-booking messages are especially high-value because an unanswered question often results in the guest booking a competitor instead. GuestSquad monitors and responds to OTA messages across your active platforms so response times stay fast and inquiries convert." },
+    { q: "What is hotel OTA messaging?", a: "Hotel OTA messaging refers to the guest messages that arrive through platforms such as Booking.com, Expedia, and Airbnb before and after a booking is confirmed. Pre-booking messages are especially high-value because an unanswered question often results in the guest booking a competitor instead. Guest Squad monitors and responds to OTA messages across your active platforms so response times stay fast and inquiries convert." },
     { q: "Which OTA platforms do you cover?", a: "Booking.com, Expedia, and Airbnb messaging are covered as standard. Other platforms can be added if you use them." },
     { q: "Can you answer pre-booking questions, or just post-booking?", a: "Both. Pre-booking questions about rates, availability, and policies are answered fast enough to win the booking, not just service it after the fact." },
     { q: "Do you respond to guest reviews too?", a: "Yes, where that is part of your plan. Review responses are written in your brand voice and on the schedule you set." },
     { q: "Will you try to move guests off the OTA and onto direct bookings?", a: "Where appropriate and within OTA terms, yes. We will nudge repeat or future bookings toward your direct channel." },
     { q: "How is this different from an OTA's own auto-reply tools?", a: "Auto-replies handle static FAQs. We handle the actual back-and-forth: rate questions, special requests, and anything that requires real judgment and property knowledge." },
-    { q: "Can GuestSquad answer Booking.com guest questions before they book?", a: "Yes. Pre-booking questions on Booking.com are typically the highest-value messages to answer quickly, as unresolved questions at that stage often result in the guest booking a competitor instead." },
-    { q: "Can GuestSquad improve OTA response time?", a: "Yes. Consistent monitoring and fast response across OTA inboxes directly improves the response-time metrics that affect your ranking and conversion on Booking.com, Expedia, and Airbnb." },
+    { q: "Can Guest Squad answer Booking.com guest questions before they book?", a: "Yes. Pre-booking questions on Booking.com are typically the highest-value messages to answer quickly, as unresolved questions at that stage often result in the guest booking a competitor instead." },
+    { q: "Can Guest Squad improve OTA response time?", a: "Yes. Consistent monitoring and fast response across OTA inboxes directly improves the response-time metrics that affect your ranking and conversion on Booking.com, Expedia, and Airbnb." },
     { q: "Do you handle cancellation, modification, and policy questions?", a: "Yes. Modifications and cancellations that fall within your pre-agreed policy are processed directly. Anything outside policy, or requiring a refund decision, is escalated to your team with full context." },
     { q: "Can you help move repeat guests toward direct booking when appropriate?", a: "Yes. Where it is within OTA terms and appropriate to the conversation, agents will mention your direct booking option for future stays, helping reduce OTA commission costs over time." },
   ],
@@ -309,7 +309,7 @@ export const otaInboxData: ServiceDetailData = {
     { label: "View Sample Weekly Report", href: "/resources/sample-weekly-report" },
   ],
   ctaTitle: "Reply before the guest books somewhere else.",
-  ctaDescription: "Book a coverage review and see how GuestSquad manages your OTA inboxes so no message sits unread.",
+  ctaDescription: "Book a coverage review and see how Guest Squad manages your OTA inboxes so no message sits unread.",
 };
 
 export const afterHoursData: ServiceDetailData = {
@@ -319,7 +319,7 @@ export const afterHoursData: ServiceDetailData = {
   description:
     "Overnight and weekend front-desk coverage for calls and messages your on-site team cannot take outside working hours, without hiring a night shift.",
   answerBlock:
-    "GuestSquad's after-hours hotel support covers overnight and weekend calls and messages for properties that do not staff a full 24-hour front desk. Late check-ins, access questions, noise complaints, and common overnight inquiries are handled directly. Genuine emergencies involving guest safety, security, or property damage are escalated immediately to your on-call contact following the protocol you set during onboarding. GuestSquad also supports vacation rental and short-term rental operators that need after-hours guest coverage for late arrivals, access problems, urgent guest messages, and host-side escalation.",
+    "Guest Squad's after-hours hotel support covers overnight and weekend calls and messages for properties that do not staff a full 24-hour front desk. Late check-ins, access questions, noise complaints, and common overnight inquiries are handled directly. Genuine emergencies involving guest safety, security, or property damage are escalated immediately to your on-call contact following the protocol you set during onboarding. Guest Squad also supports vacation rental and short-term rental operators that need after-hours guest coverage for late arrivals, access problems, urgent guest messages, and host-side escalation.",
   image: {
     src: "https://images.unsplash.com/photo-1534679541758-8dc76ff8081d?w=1600&q=90",
     alt: "Modern hotel lobby and reception desk lit at night",
@@ -364,16 +364,16 @@ export const afterHoursData: ServiceDetailData = {
   relatedTitle: "Pair after-hours coverage with call answering and OTA inbox management.",
   comparisonTitle: "After-hours support vs hiring overnight staff or going unanswered.",
   faqs: [
-    { q: "Can hotels get 24/7 coverage without hiring overnight staff?", a: "Yes. Hotels can get hotel 24/7 coverage without hiring a full night shift by using an after-hours support service. GuestSquad covers overnight calls, late check-in questions, access issues, and guest messages using your property rules and escalation contacts. Genuine emergencies are routed to your on-call person. Most properties go live within 5 business days." },
+    { q: "Can hotels get 24/7 coverage without hiring overnight staff?", a: "Yes. Hotels can get hotel 24/7 coverage without hiring a full night shift by using an after-hours support service. Guest Squad covers overnight calls, late check-in questions, access issues, and guest messages using your property rules and escalation contacts. Genuine emergencies are routed to your on-call person. Most properties go live within 5 business days." },
     { q: "What hours do you actually cover?", a: "Whatever gap you need filled: overnight only, weekends only, or full 24/7 coverage. Most clients start with overnight and weekend gaps before expanding." },
     { q: "What counts as a genuine emergency, and how is it handled?", a: "Anything involving guest safety, security, or property damage is routed to your on-call contact immediately, following the escalation protocol we agree on during setup." },
     { q: "Can you handle a lockout or late check-in at 2am?", a: "Yes. Late check-in, early arrival, and access issues are among the most common overnight requests and are handled directly using your property's procedures." },
     { q: "Do we still need a night auditor?", a: "We cover guest-facing calls and messages. The financial night-audit function is a separate service under Back-Office Operations if you need that covered too." },
-    { q: "Is this cheaper than hiring overnight staff?", a: "GuestSquad is not outsourced labor. It is a managed guest operations layer built around your property's standards, escalation rules, and guest experience. Every agent covering your overnight hours has been briefed on your property before handling a single call, so guests get the same standard of care at 2am as they do at check-in." },
-    { q: "Can GuestSquad cover only nights and weekends?", a: "Yes. Most clients start with exactly that: overnight and weekend coverage where their team is absent. Coverage hours are agreed during setup and can be adjusted as your needs change." },
+    { q: "Is this cheaper than hiring overnight staff?", a: "Guest Squad is not outsourced labor. It is a managed guest operations layer built around your property's standards, escalation rules, and guest experience. Every agent covering your overnight hours has been briefed on your property before handling a single call, so guests get the same standard of care at 2am as they do at check-in." },
+    { q: "Can Guest Squad cover only nights and weekends?", a: "Yes. Most clients start with exactly that: overnight and weekend coverage where their team is absent. Coverage hours are agreed during setup and can be adjusted as your needs change." },
     { q: "Can after-hours support reduce front desk burnout?", a: "Yes. One of the most common reasons teams use this service is to remove the expectation that front desk staff will also handle overnight calls. Clear separation of hours reduces the pressure on your in-house team." },
-    { q: "How does GuestSquad decide what gets escalated overnight?", a: "Escalation rules are agreed with your team before going live. You specify what can be handled directly, what should be logged for morning review, and what should trigger an immediate call to your on-call contact." },
-    { q: "Do you provide vacation rental after-hours support?", a: "Yes. GuestSquad provides vacation rental after-hours support for short-term rental operators, Airbnb hosts, serviced apartments, and property managers who need guest calls and messages covered outside normal working hours. Access issues, check-in questions, and urgent guest concerns are handled or escalated according to your rules. This pairs with the vacation rental answering service for complete coverage." },
+    { q: "How does Guest Squad decide what gets escalated overnight?", a: "Escalation rules are agreed with your team before going live. You specify what can be handled directly, what should be logged for morning review, and what should trigger an immediate call to your on-call contact." },
+    { q: "Do you provide vacation rental after-hours support?", a: "Yes. Guest Squad provides vacation rental after-hours support for short-term rental operators, Airbnb hosts, serviced apartments, and property managers who need guest calls and messages covered outside normal working hours. Access issues, check-in questions, and urgent guest concerns are handled or escalated according to your rules. This pairs with the vacation rental answering service for complete coverage." },
   ],
   downloadAsset: {
     asset: "after-hours-checklist",
@@ -387,7 +387,7 @@ export const afterHoursData: ServiceDetailData = {
     { label: "Guest Coverage Gap Assessment", href: "/resources/coverage-gap-assessment" },
   ],
   ctaTitle: "Give guests an answer after your front desk closes.",
-  ctaDescription: "Book a coverage review and see exactly how GuestSquad would handle your overnight calls, messages, and emergency escalations.",
+  ctaDescription: "Book a coverage review and see exactly how Guest Squad would handle your overnight calls, messages, and emergency escalations.",
 };
 
 export const backOfficeData: ServiceDetailData = {
@@ -397,7 +397,7 @@ export const backOfficeData: ServiceDetailData = {
   description:
     "Daily night audit, OTA reconciliation, and guest-billing support, so revenue leakage from missed payouts, fee discrepancies, and unposted charges gets caught the day it happens, not in next month's close.",
   answerBlock:
-    "GuestSquad's back-office operations service covers daily night audit, OTA payout reconciliation, and guest-billing exception reporting for hotels that cannot dedicate in-house staff to this function every day. Revenue discrepancies between your PMS, OTA payouts, and processor settlements are flagged the day they occur, not discovered at month-end. The service works inside your existing systems and reports into your finance team or ownership group.",
+    "Guest Squad's back-office operations service covers daily night audit, OTA payout reconciliation, and guest-billing exception reporting for hotels that cannot dedicate in-house staff to this function every day. Revenue discrepancies between your PMS, OTA payouts, and processor settlements are flagged the day they occur, not discovered at month-end. The service works inside your existing systems and reports into your finance team or ownership group.",
   image: {
     src: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1600&q=90",
     alt: "Back-office team reviewing daily reconciliation reports",
@@ -448,8 +448,8 @@ export const backOfficeData: ServiceDetailData = {
     { q: "What do we actually receive from this?", a: "Exception reports on the schedule you choose, flagging anything that does not reconcile cleanly, plus routine folio and cash-drawer balancing each night." },
     { q: "Can this work with our existing PMS?", a: "Yes. We work inside your current PMS, OTA extranets, and processor portals rather than asking you to adopt new software." },
     { q: "What is included in hotel night audit support?", a: "Day-end revenue posting, folio balancing, room status verification, cash-drawer reconciliation, and the exception report for the following morning. The exact scope is confirmed during setup based on your PMS and operating procedures." },
-    { q: "Can GuestSquad reconcile Booking.com and Expedia payouts?", a: "Yes. Payout reconciliation across Booking.com, Expedia, and Airbnb is one of the core functions of the service. Discrepancies between payout amounts and PMS records are flagged and reported the same day." },
-    { q: "Does GuestSquad process payments or only reconcile records?", a: "We reconcile records only. Payment processing remains within your existing systems and authorization chain. We identify discrepancies and report them; your team or controller takes action on anything that requires a financial decision." },
+    { q: "Can Guest Squad reconcile Booking.com and Expedia payouts?", a: "Yes. Payout reconciliation across Booking.com, Expedia, and Airbnb is one of the core functions of the service. Discrepancies between payout amounts and PMS records are flagged and reported the same day." },
+    { q: "Does Guest Squad process payments or only reconcile records?", a: "We reconcile records only. Payment processing remains within your existing systems and authorization chain. We identify discrepancies and report them; your team or controller takes action on anything that requires a financial decision." },
     { q: "How are exceptions reported to management?", a: "Exception reports are delivered by email on a schedule you choose: daily, weekly, or both. Reports are structured for quick review, flagging specific folios, booking references, and variance amounts." },
   ],
   downloadAsset: {
@@ -463,7 +463,7 @@ export const backOfficeData: ServiceDetailData = {
     { label: "Guest Coverage Gap Assessment", href: "/resources/coverage-gap-assessment" },
   ],
   ctaTitle: "Catch revenue leakage before month-end.",
-  ctaDescription: "Book a coverage review and see how GuestSquad's back-office support keeps your OTA payouts, billing, and night audit reconciled daily.",
+  ctaDescription: "Book a coverage review and see how Guest Squad's back-office support keeps your OTA payouts, billing, and night audit reconciled daily.",
 };
 
 export const airbnbSupportData: ServiceDetailData = {
@@ -473,7 +473,7 @@ export const airbnbSupportData: ServiceDetailData = {
   description:
     "Round-the-clock guest support for Airbnb hosts and serviced apartment operators, with check-in help, issue resolution, and FAQs handled across every listing.",
   answerBlock:
-    "GuestSquad's Airbnb guest support service provides 24/7 message handling and guest communication for Airbnb hosts, Vrbo operators, and serviced apartment managers who cannot personally monitor inquiries around the clock. Check-in coordination, in-stay issues, listing-specific questions, and review management are handled by trained agents using your listing instructions, so your response rate stays high and your guest experience stays consistent. For hosts and operators comparing Airbnb guest services, GuestSquad provides human guest support across guest messages, access questions, listing FAQs, escalation issues, and after-hours coverage.",
+    "Guest Squad's Airbnb guest support service provides 24/7 message handling and guest communication for Airbnb hosts, Vrbo operators, and serviced apartment managers who cannot personally monitor inquiries around the clock. Check-in coordination, in-stay issues, listing-specific questions, and review management are handled by trained agents using your listing instructions, so your response rate stays high and your guest experience stays consistent. For hosts and operators comparing Airbnb guest services, Guest Squad provides human guest support across guest messages, access questions, listing FAQs, escalation issues, and after-hours coverage.",
   image: {
     src: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1600&q=90",
     alt: "Modern short-term rental interior guests check into",
@@ -523,10 +523,10 @@ export const airbnbSupportData: ServiceDetailData = {
     { q: "Do you cover Vrbo and direct bookings too, or just Airbnb?", a: "Airbnb, Vrbo, and direct-booking messages are all covered from a single point of coverage." },
     { q: "Will this affect my response rate or Superhost status?", a: "That is the point. Fast, consistent responses around the clock protect response-rate metrics and guest ratings, especially overnight when most hosts are unavailable." },
     { q: "I'm not a hotel; does this still make sense for one host with a few units?", a: "Yes. This is built specifically for hosts and small STR operators who cannot realistically be on call 24/7 themselves." },
-    { q: "Can GuestSquad help protect Airbnb response rate?", a: "Yes. Response rate is directly tied to how quickly messages are answered. Having trained agents monitoring your Airbnb inbox around the clock means guests receive prompt replies at any hour, protecting your response rate and platform ranking." },
-    { q: "Can GuestSquad answer check-in questions across multiple listings?", a: "Yes. Each listing has its own briefing document with specific check-in instructions, house rules, and access details. Agents use the correct information for each property." },
-    { q: "Can GuestSquad use listing-specific instructions for each unit?", a: "Yes. During onboarding, we build a briefing document for each listing you operate. This covers check-in details, house rules, amenity instructions, and your escalation preferences for that specific unit." },
-    { q: "Is GuestSquad an Airbnb guest services provider?", a: "Yes. GuestSquad provides Airbnb guest services for hosts, serviced apartment operators, and short-term rental managers who need human guest support without personally monitoring every message. Coverage includes guest questions, check-in help, listing-specific FAQs, issue routing, and after-hours escalation. It pairs naturally with the vacation rental answering service for full call and message coverage." },
+    { q: "Can Guest Squad help protect Airbnb response rate?", a: "Yes. Response rate is directly tied to how quickly messages are answered. Having trained agents monitoring your Airbnb inbox around the clock means guests receive prompt replies at any hour, protecting your response rate and platform ranking." },
+    { q: "Can Guest Squad answer check-in questions across multiple listings?", a: "Yes. Each listing has its own briefing document with specific check-in instructions, house rules, and access details. Agents use the correct information for each property." },
+    { q: "Can Guest Squad use listing-specific instructions for each unit?", a: "Yes. During onboarding, we build a briefing document for each listing you operate. This covers check-in details, house rules, amenity instructions, and your escalation preferences for that specific unit." },
+    { q: "Is Guest Squad an Airbnb guest services provider?", a: "Yes. Guest Squad provides Airbnb guest services for hosts, serviced apartment operators, and short-term rental managers who need human guest support without personally monitoring every message. Coverage includes guest questions, check-in help, listing-specific FAQs, issue routing, and after-hours escalation. It pairs naturally with the vacation rental answering service for full call and message coverage." },
   ],
   downloadAsset: {
     asset: "coverage-gap-assessment",
@@ -540,7 +540,7 @@ export const airbnbSupportData: ServiceDetailData = {
     { label: "Download Guest Messaging SOP Template", href: "/resources/guest-messaging-sop" },
   ],
   ctaTitle: "Keep guest replies moving without being on call all night.",
-  ctaDescription: "Book a coverage review and see how GuestSquad covers your Airbnb messages, check-in issues, and guest questions around the clock.",
+  ctaDescription: "Book a coverage review and see how Guest Squad covers your Airbnb messages, check-in issues, and guest questions around the clock.",
 };
 
 export const vacationRentalAnsweringData: ServiceDetailData = {
@@ -550,7 +550,7 @@ export const vacationRentalAnsweringData: ServiceDetailData = {
   description:
     "Round-the-clock call and message answering for Airbnb, Vrbo, and short-term rental operators, built for hosts and property managers who cannot be on call all night.",
   answerBlock:
-    "GuestSquad's vacation rental answering service provides 24/7 phone and message coverage for Airbnb, Vrbo, and direct-booking operators who need a real person available to guests at any hour. Calls that would otherwise go to a host's personal voicemail are answered by trained agents using your listing-specific instructions. Guest questions, check-in issues, and maintenance escalations are handled without requiring you to be personally on call.",
+    "Guest Squad's vacation rental answering service provides 24/7 phone and message coverage for Airbnb, Vrbo, and direct-booking operators who need a real person available to guests at any hour. Calls that would otherwise go to a host's personal voicemail are answered by trained agents using your listing-specific instructions. Guest questions, check-in issues, and maintenance escalations are handled without requiring you to be personally on call.",
   image: {
     src: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1600&q=90",
     alt: "Modern short-term rental interior guests check into",
@@ -595,16 +595,16 @@ export const vacationRentalAnsweringData: ServiceDetailData = {
   relatedTitle: "Pair vacation rental answering with Airbnb guest support and OTA coverage.",
   comparisonTitle: "Vacation rental answering vs being the 24/7 on-call line yourself.",
   faqs: [
-    { q: "What is vacation rental after-hours support?", a: "Vacation rental after-hours support means guest calls and messages are answered outside normal working hours, including late check-in questions, access issues, urgent guest concerns, and escalation requests. GuestSquad handles or routes these issues using your property-specific rules and on-call contacts so you are not personally on call every night." },
+    { q: "What is vacation rental after-hours support?", a: "Vacation rental after-hours support means guest calls and messages are answered outside normal working hours, including late check-in questions, access issues, urgent guest concerns, and escalation requests. Guest Squad handles or routes these issues using your property-specific rules and on-call contacts so you are not personally on call every night." },
     { q: "Do you answer phone calls, or just Airbnb/Vrbo messages?", a: "Both. This service covers live phone answering as well as Airbnb, Vrbo, and direct-booking messaging." },
     { q: "How many listings or units can this cover?", a: "As many as you manage. Pricing scales with listing count and volume, not a flat per-host fee." },
     { q: "What happens with something only I can fix, like a broken appliance?", a: "It is escalated to you or your maintenance contact immediately, while the guest is kept informed so they are not left waiting." },
     { q: "Will this help protect my Superhost status or response rate?", a: "That is the core purpose. Consistent, fast responses around the clock protect response-rate metrics and guest satisfaction, especially overnight." },
     { q: "I only have 2-3 units; is this still worth it?", a: "Yes. Many clients start with just a handful of units specifically because they cannot personally be on call every night." },
     { q: "Is this only for Airbnb or also Vrbo and direct bookings?", a: "All three. Airbnb, Vrbo, and direct-booking guests are covered from the same point of coverage, so you are not managing separate answering arrangements per platform." },
-    { q: "Can GuestSquad answer calls for multiple properties or listings?", a: "Yes. Each property or listing has its own briefing in our system. Agents use the correct information for whichever unit a guest is calling about." },
+    { q: "Can Guest Squad answer calls for multiple properties or listings?", a: "Yes. Each property or listing has its own briefing in our system. Agents use the correct information for whichever unit a guest is calling about." },
     { q: "What information do you need for each listing?", a: "During onboarding we collect check-in instructions, access codes, house rules, amenity details, local recommendations, and your escalation contacts. The more detail you provide, the more we can handle without needing to reach you." },
-    { q: "Does the vacation rental answering service cover after-hours calls and emergencies?", a: "Yes. GuestSquad covers vacation rental after-hours support for late check-in questions, access issues, urgent guest calls, and messages that arrive when your team or host is offline. True emergencies are escalated to your on-call contact using your property-specific rules. This pairs with the after-hours support service for full overnight coverage." },
+    { q: "Does the vacation rental answering service cover after-hours calls and emergencies?", a: "Yes. Guest Squad covers vacation rental after-hours support for late check-in questions, access issues, urgent guest calls, and messages that arrive when your team or host is offline. True emergencies are escalated to your on-call contact using your property-specific rules. This pairs with the after-hours support service for full overnight coverage." },
   ],
   downloadAsset: {
     asset: "after-hours-checklist",
@@ -618,5 +618,5 @@ export const vacationRentalAnsweringData: ServiceDetailData = {
     { label: "View Sample Weekly Report", href: "/resources/sample-weekly-report" },
   ],
   ctaTitle: "Keep guest replies moving without being on call all night.",
-  ctaDescription: "Book a coverage review and see how GuestSquad covers your Airbnb, Vrbo, and direct-booking guest calls around the clock.",
+  ctaDescription: "Book a coverage review and see how Guest Squad covers your Airbnb, Vrbo, and direct-booking guest calls around the clock.",
 };

@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo";
 import { PrintLayout } from "@/components/site/print-layout";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Hotel Guest Messaging SOP Template | GuestSquad",
+  title: "Hotel Guest Messaging SOP Template | Guest Squad",
   description:
     "A printable SOP template for hotel guest messaging: response time targets, brand voice guidelines, escalation matrix, and scenario handling guide.",
   path: "/resources/guest-messaging-sop",
@@ -256,7 +256,7 @@ export default function GuestMessagingSopPage() {
 
       <div className="mt-10 rounded-lg border border-line bg-surface p-6 text-center">
         <p className="text-sm font-medium text-ink">Need a team to work inside this SOP for your property?</p>
-        <p className="mt-1 text-xs text-ink-soft">GuestSquad agents are briefed on your SOP before handling any guest interaction. guestsquad.com/contact</p>
+        <p className="mt-1 text-xs text-ink-soft">Guest Squad agents are briefed on your SOP before handling any guest interaction. guestsquad.com/contact</p>
       </div>
     </PrintLayout>
   );

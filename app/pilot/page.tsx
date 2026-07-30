@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 import { Check, ArrowRight, Phone, MessageSquare, Inbox, Users } from "lucide-react";
 import { buildMetadata, breadcrumbSchema, faqSchema } from "@/lib/seo";
@@ -20,7 +20,7 @@ const PilotForm = dynamic(
 export const metadata: Metadata = buildMetadata({
   title: "2-Week Guest Coverage Pilot for Hotels",
   description:
-    "See if your property qualifies for a 2-week GuestSquad pilot. Cover reservation calls, guest texts, OTA inboxes, and after-hours guest communication without another front desk shift.",
+    "See if your property qualifies for a 2-week Guest Squad pilot. Cover reservation calls, guest texts, OTA inboxes, and after-hours guest communication without another front desk shift.",
   path: "/pilot",
 });
 
@@ -99,7 +99,7 @@ const PILOT_STEPS = [
   {
     n: "03",
     title: "Pilot coverage",
-    body: "GuestSquad handles agreed channels for 2 weeks. Weekly report shows volume, handling, and escalations.",
+    body: "Guest Squad handles agreed channels for 2 weeks. Weekly report shows volume, handling, and escalations.",
   },
   {
     n: "04",
@@ -118,8 +118,8 @@ const FAQS = [
     a: "Independent hotels, boutique hotels, inns, serviced apartments, aparthotels, resorts, and short-term rental operators with guest communication gaps across calls, texts, OTA inboxes, after-hours support, or front desk overflow may qualify.",
   },
   {
-    q: "What channels can GuestSquad cover?",
-    a: "GuestSquad can support reservation calls, guest texts, OTA inboxes, email, WhatsApp/SMS, Cloudbeds or channel manager messages, Akia, and other approved guest communication tools depending on the agreed scope.",
+    q: "What channels can Guest Squad cover?",
+    a: "Guest Squad can support reservation calls, guest texts, OTA inboxes, email, WhatsApp/SMS, Cloudbeds or channel manager messages, Akia, and other approved guest communication tools depending on the agreed scope.",
   },
   {
     q: "Do we need to sign a long-term contract?",
@@ -127,11 +127,11 @@ const FAQS = [
   },
   {
     q: "How quickly can coverage start?",
-    a: "Timing depends on scope, access, and property briefing. GuestSquad reviews your property details, escalation rules, guest FAQs, and channel access before coverage begins.",
+    a: "Timing depends on scope, access, and property briefing. Guest Squad reviews your property details, escalation rules, guest FAQs, and channel access before coverage begins.",
   },
   {
-    q: "Will guests know they are speaking with GuestSquad?",
-    a: "GuestSquad follows the approved property tone, workflows, and escalation rules. The goal is to support the guest experience as an extension of the property's team.",
+    q: "Will guests know they are speaking with Guest Squad?",
+    a: "Guest Squad follows the approved property tone, workflows, and escalation rules. The goal is to support the guest experience as an extension of the property's team.",
   },
 ];
 
@@ -161,9 +161,9 @@ export default function PilotPage() {
             "@type": "WebPage",
             "@id": `${SITE.url}/pilot#webpage`,
             url: `${SITE.url}/pilot`,
-            name: "2-Week Guest Coverage Pilot for Hotels | GuestSquad",
+            name: "2-Week Guest Coverage Pilot for Hotels | Guest Squad",
             description:
-              "See if your property qualifies for a 2-week GuestSquad pilot covering reservation calls, guest texts, OTA inboxes, and after-hours guest communication.",
+              "See if your property qualifies for a 2-week Guest Squad pilot covering reservation calls, guest texts, OTA inboxes, and after-hours guest communication.",
             isPartOf: { "@type": "WebSite", "@id": `${SITE.url}/#website` },
             about: { "@type": "ProfessionalService", "@id": `${SITE.url}/#organization` },
           },
@@ -180,7 +180,7 @@ export default function PilotPage() {
             Cover Your Guest Communication Gaps Without Adding Another Front Desk Shift
           </h1>
           <p className="mt-5 max-w-2xl text-lg leading-relaxed text-ink-soft">
-            GuestSquad handles reservation calls, guest texts, OTA inboxes, and after-hours coverage for independent hotels and property operators. We&rsquo;ll review your property, channels, and coverage gaps to determine whether a 2-week no-obligation pilot is the right starting point.
+            Guest Squad handles reservation calls, guest texts, OTA inboxes, and after-hours coverage for independent hotels and property operators. We&rsquo;ll review your property, channels, and coverage gaps to determine whether a 2-week no-obligation pilot is the right starting point.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <a
@@ -394,7 +394,7 @@ export default function PilotPage() {
                 location: "Southeast US",
               },
               {
-                quote: "Our OTA response times were hurting our ranking on Booking.com. GuestSquad took over the inbox during the pilot and we saw the response window drop significantly. The weekly report made it easy to verify.",
+                quote: "Our OTA response times were hurting our ranking on Booking.com. Guest Squad took over the inbox during the pilot and we saw the response window drop significantly. The weekly report made it easy to verify.",
                 attr: "Owner-operator, serviced apartment portfolio",
                 location: "UK",
               },

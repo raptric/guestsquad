@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { DownloadGate } from "@/components/site/download-gate";
 import { buildMetadata } from "@/lib/seo";
@@ -29,7 +29,7 @@ const FAQS = [
   },
   {
     q: "How is the recovery estimate calculated?",
-    a: "The recovery estimate assumes GuestSquad answers and converts 70 percent of previously missed calls. The remaining 30 percent accounts for callers who have already booked elsewhere, are not serious inquiries, or call outside bookable hours. This is a conservative assumption based on typical call-type distribution.",
+    a: "The recovery estimate assumes Guest Squad answers and converts 70 percent of previously missed calls. The remaining 30 percent accounts for callers who have already booked elsewhere, are not serious inquiries, or call outside bookable hours. This is a conservative assumption based on typical call-type distribution.",
   },
   {
     q: "How many calls does the average hotel actually miss?",
@@ -40,13 +40,13 @@ const FAQS = [
     a: "Yes. Use your average booking payout per stay as the booking value, and adjust the conversion rate to reflect how often an answered inquiry turns into a confirmed booking at your property.",
   },
   {
-    q: "What is the break-even point for GuestSquad coverage?",
+    q: "What is the break-even point for Guest Squad coverage?",
     a: "The calculator shows you how many recovered bookings per month it takes to cover the cost of a basic plan. For most properties, recovering one or two bookings per month is enough to break even, with everything beyond that as a net gain.",
   },
 ];
 
 export const metadata: Metadata = buildMetadata({
-  title: "Missed Booking Revenue Calculator | GuestSquad",
+  title: "Missed Booking Revenue Calculator | Guest Squad",
   description:
     "Estimate how much revenue unanswered reservation calls are costing your hotel each month. Adjust call volume, booking value, and conversion rate.",
   path: "/resources/missed-booking-calculator",

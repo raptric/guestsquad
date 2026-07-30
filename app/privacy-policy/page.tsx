@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { Breadcrumbs } from "@/components/site/breadcrumbs";
 import { LegalPage } from "@/components/site/legal-page";
 import { buildMetadata } from "@/lib/seo";
@@ -7,7 +7,7 @@ import { LEGAL_EFFECTIVE_DATE, PRIVACY_INTRO, PRIVACY_SECTIONS } from "@/lib/leg
 export const metadata: Metadata = buildMetadata({
   title: "Privacy Policy",
   description:
-    "How GuestSquad, a Raptric LLC company, collects, uses, and protects personal data, including GDPR data subject rights and our role as controller and processor.",
+    "How Guest Squad, a Raptric LLC company, collects, uses, and protects personal data, including GDPR data subject rights and our role as controller and processor.",
   path: "/privacy-policy",
 });
 

@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import { Linkedin } from "lucide-react";
 import { SERVICES, SITE } from "@/lib/site-data";
 import { CalendlyPopupButton } from "@/components/site/calendly-popup-button";
@@ -11,7 +11,7 @@ export function Footer() {
           <div>
             <img
               src="/brand-assets/guestsquad-logo-horizontal.svg"
-              alt="GuestSquad"
+              alt="Guest Squad"
               className="h-8 w-auto"
             />
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-ink-soft">
@@ -23,7 +23,7 @@ export function Footer() {
                 href="https://www.linkedin.com/company/guest-squad/"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="GuestSquad on LinkedIn"
+                aria-label="Guest Squad on LinkedIn"
                 className="inline-flex items-center justify-center rounded-md border border-line p-2 text-ink-muted hover:border-gold-dark hover:text-gold-dark transition-colors"
               >
                 <Linkedin className="h-4 w-4" />

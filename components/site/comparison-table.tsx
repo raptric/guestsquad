@@ -17,13 +17,15 @@ export function ComparisonTable({
   rows: ComparisonRow[];
 }) {
   const hasThird = Boolean(columnC);
-  const gridCols = hasThird
-    ? "grid-cols-[1.1fr_1fr_1fr_1fr]"
-    : "grid-cols-[1.1fr_1fr_1fr]";
 
   return (
     <div className="overflow-hidden rounded-lg border border-line">
-      <div className={`hidden border-b border-line bg-surface sm:grid ${gridCols}`}>
+      {/* Header */}
+      <div
+        className={`hidden border-b border-line bg-surface sm:grid ${
+          hasThird ? "grid-cols-[1.1fr_1fr_1fr_1fr]" : "grid-cols-[1.1fr_1fr_1fr]"
+        }`}
+      >
         <div className="px-5 py-4 text-xs font-semibold uppercase tracking-wide text-ink-muted">
           Factor
         </div>
@@ -39,10 +41,14 @@ export function ComparisonTable({
           </div>
         )}
       </div>
+
+      {/* Rows */}
       {rows.map((row, i) => (
         <div
           key={row.feature}
-          className={`grid sm:${gridCols} ${i !== rows.length - 1 ? "border-b border-line" : ""}`}
+          className={`grid ${
+            hasThird ? "sm:grid-cols-[1.1fr_1fr_1fr_1fr]" : "sm:grid-cols-[1.1fr_1fr_1fr]"
+          } ${i !== rows.length - 1 ? "border-b border-line" : ""}`}
         >
           <div className="bg-surface px-5 py-4 text-sm font-medium text-ink sm:bg-transparent sm:py-5">
             {row.feature}

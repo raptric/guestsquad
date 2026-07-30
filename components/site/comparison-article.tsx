@@ -63,7 +63,7 @@ export function ComparisonArticle({ data }: { data: ResourceArticleData }) {
       </Section>
 
       <Section surface>
-        <SectionHeading eyebrow="Side by Side" title="Factor by factor." />
+        <SectionHeading eyebrow="Side by Side" title={data.tableHeading ?? "Factor by factor."} />
         <div className="mt-10">
           <ComparisonTable columnA={data.columnA} columnB={data.columnB} columnC={data.columnC} rows={data.rows} />
         </div>

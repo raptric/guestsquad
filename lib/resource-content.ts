@@ -89,6 +89,7 @@ export type ResourceArticleData = {
   columnA: string;
   columnB: string;
   columnC?: string;
+  tableHeading?: string;
   rows: ComparisonRow[];
   verdictHeading: string;
   verdictParagraphs: string[];
@@ -210,6 +211,7 @@ export const callCenterComparison: ResourceArticleData = {
   columnA: "Hotel Answering Service",
   columnB: "Generic Call Center",
   columnC: "GuestSquad Approach",
+  tableHeading: "Hotel answering service vs. hotel call center, factor by factor.",
   rows: [
     {
       feature: "Agent training",
@@ -324,6 +326,10 @@ export const callCenterComparison: ResourceArticleData = {
     {
       q: "How quickly can GuestSquad start hotel answering service coverage?",
       a: "Most properties go live within approximately five business days of the initial discovery call. Onboarding covers your rates, room types, policies, escalation contacts, and channel access before any agent handles a guest interaction.",
+    },
+    {
+      q: "Is GuestSquad an outsourced hotel answering service?",
+      a: "GuestSquad provides external guest operations support for hotels and property operators, but we are not a generic outsourced call center. Our team is briefed on your property, channels, escalation rules, and guest communication standards before coverage begins.",
     },
   ],
 };

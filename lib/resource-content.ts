@@ -88,9 +88,12 @@ export type ResourceArticleData = {
   intro: string[];
   columnA: string;
   columnB: string;
+  columnC?: string;
   rows: ComparisonRow[];
   verdictHeading: string;
   verdictParagraphs: string[];
+  verdictChecklist?: string[];
+  verdictClosure?: string;
   faqs: { q: string; a: string }[];
   relatedServiceSlugs: string[];
   inlineAsset?: ArticleAssetCta;
@@ -199,54 +202,91 @@ export const callCenterComparison: ResourceArticleData = {
   metaDescription:
     "Compare hospitality-trained hotel answering services with generic call centers for reservations, guest questions, and front desk overflow.",
   datePublished: "2026-06-26",
+  dateModified: "2026-07-30",
   intro: [
     "\"Call center\" and \"hotel answering service\" often get used interchangeably when hotels start shopping for outsourced phone coverage, but the underlying operating models are usually quite different, and that difference shows up on the call itself.",
     "A generic call center is typically built to handle calls for many unrelated industries from a shared agent pool. A hotel-specific answering service like GuestSquad is built around one property at a time. Here's where that distinction actually matters.",
   ],
   columnA: "Hotel Answering Service",
   columnB: "Generic Call Center",
+  columnC: "GuestSquad Approach",
   rows: [
     {
       feature: "Agent training",
       a: "Hospitality-trained, briefed specifically on your property's rates, policies, and tone before going live.",
       b: "Generalist call-handling training, often shared across industries with no hospitality-specific grounding.",
+      c: "Agents briefed on your specific property — rates, room types, escalation contacts, and brand tone — before any call is answered.",
     },
     {
       feature: "Agent consistency",
       a: "The same trained team becomes familiar with your property over time.",
       b: "Calls are typically picked up by whichever agent in the shared pool is available, a different person each time.",
+      c: "The same team handles your property consistently; familiarity with your guests and patterns builds over time.",
     },
     {
       feature: "Familiarity with PMS / OTA tools",
       a: "Comfortable operating inside your actual PMS and OTA accounts, not just taking a message.",
       b: "Often limited to scripted call handling and message-taking, without working inside your systems.",
+      c: "Works inside your PMS and OTA accounts directly; OTA inboxes covered inside Booking.com, Expedia, and Airbnb's own tools.",
+    },
+    {
+      feature: "OTA messages",
+      a: "Covered by hotel answering services that include OTA inbox management in their scope.",
+      b: "Not typically covered; most generic call centers handle phone only.",
+      c: "Booking.com, Expedia, and Airbnb inboxes covered as part of agreed scope, inside each platform's own messaging tools.",
     },
     {
       feature: "Reporting",
       a: "Calls logged with context, summarized into a report that tells you what actually happened.",
       b: "Typically raw call logs only, with little operational insight into patterns or recovered revenue.",
+      c: "Weekly report covering handled interactions, escalations, channel breakdown, and recurring patterns.",
     },
     {
       feature: "Escalation accuracy",
       a: "Knows what's genuinely urgent for your specific property and routes accordingly.",
       b: "Follows generic escalation rules not tailored to your operation.",
+      c: "Written escalation rules agreed before go-live; urgent issues routed immediately, everything else held for the daily summary.",
     },
     {
       feature: "Contract structure",
       a: "Pilot-first, then month-to-month with 30 days notice to cancel — so you see results before committing further.",
       b: "Often requires longer lock-in contracts before you've seen real performance.",
+      c: "Pilot period first, then month-to-month with 30 days' written notice — no long-term commitment required.",
+    },
+    {
+      feature: "Speed to launch",
+      a: "Typically one to two weeks depending on onboarding complexity.",
+      b: "Weeks to months depending on integration and script-build requirements.",
+      c: "Live within approximately five business days of your discovery call.",
     },
   ],
-  verdictHeading: "What to ask before signing with either",
+  verdictHeading: "Which fits your property: hotel answering service or call center?",
   verdictParagraphs: [
-    "If you're evaluating outsourced phone coverage, ask directly: will the same agents handle our calls over time, or are we in a shared pool? Are agents trained on hospitality specifically, or generalist call-center scripts? Do agents work inside our actual PMS and OTA accounts? What do we actually receive in reporting: call counts, or real operational insight?",
-    "Those four questions tend to separate a true hotel-specific answering service from a relabeled generic call center fairly quickly.",
+    "A generic hotel call center can be the right fit in specific situations. Large hotel chains handling thousands of calls per month may prioritize raw volume capacity over per-property familiarity. Enterprise reservations teams with standardized scripts and high repeatability may find a shared agent pool cost-effective. For those operations, a call center built for volume is often a reasonable match.",
+    "For independent hotels, boutique properties, inns, serviced apartments, resorts, and short-term rental operators, a hotel answering service typically outperforms a generic call center on the interactions that matter most. Reservation calls where a guest is choosing between you and a competing property. In-stay issues that require judgment rather than a scripted response. OTA inboxes where a slow reply affects your ranking on Booking.com or Expedia. These are the moments where property-specific knowledge and hospitality training determine whether the guest books or moves on.",
+    "Before signing with any hotel answering service or call center provider, ask these directly:",
   ],
+  verdictChecklist: [
+    "Will the same agents handle our calls over time, or are we in a shared pool?",
+    "Are agents trained specifically on hospitality, or are they using a generic call-handling script?",
+    "Do you handle OTA inboxes — Booking.com, Expedia, Airbnb — or only phone calls?",
+    "Can agents manage guest texts and WhatsApp messages, not just inbound calls?",
+    "Do we receive weekly reporting with real operational insight, or just raw call logs?",
+    "Is there a long-term contract, or can we start with a pilot and go month-to-month?",
+    "How are urgent escalations handled, and what is the expected response time?",
+  ],
+  verdictClosure:
+    "Those seven questions separate a true hotel answering service from a relabeled generic call center quickly. A provider that can answer all of them directly — with specifics about your property, not generalities — is worth evaluating further.",
   inlineAsset: {
     heading: "Not sure where your coverage gaps actually are? The Coverage Gap Assessment identifies your unprotected hours, channels, and escalation blind spots.",
     asset: "coverage-gap-assessment",
     pdfHref: "/downloads/coverage-gap-assessment.pdf",
     ctaLabel: "Download Coverage Gap Assessment",
+  },
+  assetCta: {
+    heading: "Not sure which coverage model fits your property? Review your guest communication gaps before committing to any provider.",
+    serviceHref: "/pilot",
+    serviceLabel: "Request Pilot Review",
   },
   faqs: [
     {
@@ -268,6 +308,22 @@ export const callCenterComparison: ResourceArticleData = {
     {
       q: "How fast can we switch from our current call center?",
       a: "Typical onboarding is about five business days from your discovery call to go-live.",
+    },
+    {
+      q: "Is a hotel answering service the same as a hotel call center?",
+      a: "Not usually. \"Call center\" describes the infrastructure — a shared agent pool handling calls across many industries. \"Hotel answering service\" describes the specialization — agents trained on hospitality and, ideally, your specific property. The terms are often used interchangeably in sales materials, which is why it's worth asking the questions above before you sign with either.",
+    },
+    {
+      q: "What is better for a boutique hotel — a hotel answering service or a call center?",
+      a: "A hotel answering service with property-specific briefing. Boutique hotels compete on guest experience, and that starts with the first conversation. Reservation calls, check-in questions, and in-stay issues require property knowledge and judgment that a generic call center's shared agent pool is not designed to provide consistently.",
+    },
+    {
+      q: "Can a hotel call center handle OTA messages from Booking.com or Expedia?",
+      a: "Most generic call centers cover phone only. OTA inbox management — responding inside Booking.com's Message Center, Expedia's Partner Central, or Airbnb's messaging tools — requires platform access and familiarity with each OTA's workflow. It's worth confirming explicitly whether any provider you evaluate covers OTA inboxes as part of their scope. GuestSquad covers OTA inboxes within agreed scope.",
+    },
+    {
+      q: "How quickly can GuestSquad start hotel answering service coverage?",
+      a: "Most properties go live within approximately five business days of the initial discovery call. Onboarding covers your rates, room types, policies, escalation contacts, and channel access before any agent handles a guest interaction.",
     },
   ],
 };

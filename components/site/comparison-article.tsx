@@ -65,7 +65,7 @@ export function ComparisonArticle({ data }: { data: ResourceArticleData }) {
       <Section surface>
         <SectionHeading eyebrow="Side by Side" title="Factor by factor." />
         <div className="mt-10">
-          <ComparisonTable columnA={data.columnA} columnB={data.columnB} rows={data.rows} />
+          <ComparisonTable columnA={data.columnA} columnB={data.columnB} columnC={data.columnC} rows={data.rows} />
         </div>
       </Section>
 
@@ -78,6 +78,23 @@ export function ComparisonArticle({ data }: { data: ResourceArticleData }) {
                 {p}
               </p>
             ))}
+            {data.verdictChecklist && data.verdictChecklist.length > 0 && (
+              <ul className="mb-5 space-y-2">
+                {data.verdictChecklist.map((item, i) => (
+                  <li key={i} className="flex items-start gap-2.5 text-sm leading-relaxed text-ink-soft">
+                    <span className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full border border-gold/50 bg-gold/10">
+                      <svg className="h-2.5 w-2.5 text-gold-dark" viewBox="0 0 10 10" fill="none">
+                        <path d="M1.5 5l2.5 2.5 4.5-4.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            )}
+            {data.verdictClosure && (
+              <p className="mb-5 text-sm leading-relaxed text-ink-soft">{data.verdictClosure}</p>
+            )}
           </div>
         </div>
       </Section>

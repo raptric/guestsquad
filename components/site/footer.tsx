@@ -93,7 +93,15 @@ export function Footer() {
             </a>
             . All rights reserved.
           </p>
-          <p>Guest operations support, not a replacement for your team.</p>
+          <a
+            href="https://www.trustpilot.com/review/guestsquad.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1.5 text-ink-muted transition-colors hover:text-ink"
+          >
+            <span className="text-[#00b67a] tracking-tight">★★★★★</span>
+            <span>Rated 5 stars on Trustpilot</span>
+          </a>
         </div>
       </div>
     </footer>

@@ -383,9 +383,20 @@ export default function PilotPage() {
       {/* ── SOCIAL PROOF ── */}
       <div className="border-t border-line bg-surface">
         <div className="container py-10">
-          <p className="mb-7 text-xs font-semibold uppercase tracking-[0.18em] text-ink-muted">
-            From operators who started with a pilot
-          </p>
+          <div className="mb-5 text-center">
+            <a
+              href="https://www.trustpilot.com/review/guestsquad.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm text-ink-soft transition-colors hover:text-ink"
+            >
+              <span className="text-[#00b67a]">★★★★★</span>
+              <span>Rated 5 stars on Trustpilot</span>
+            </a>
+            <p className="mt-2 text-xs font-semibold uppercase tracking-[0.18em] text-ink-muted">
+              What early operators say about Guest Squad
+            </p>
+          </div>
           <div className="grid gap-5 sm:grid-cols-3">
             {[
               {

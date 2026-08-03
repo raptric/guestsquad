@@ -170,7 +170,7 @@ export default function HomePage() {
       <section className="relative h-[320px] overflow-hidden border-b border-line md:h-[420px]">
         <Image
           src="https://images.unsplash.com/photo-1543325042-c67825847491?w=1800&q=90"
-          alt="Sleek hotel reception desk with a wall reading RECEPTION"
+          alt="Hotel front desk reception area representing 24/7 guest coverage for independent hotels"
           fill
           unoptimized
           loading="lazy"
@@ -229,7 +229,7 @@ export default function HomePage() {
           <div className="relative aspect-[4/5] overflow-hidden rounded-lg border border-line">
             <Image
               src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=1200&q=90"
-              alt="Onboarding and property briefing in progress"
+              alt="Guest Squad property briefing and onboarding session before hotel answering service goes live"
               fill
               loading="lazy"
               sizes="(max-width: 1024px) 100vw, 50vw"

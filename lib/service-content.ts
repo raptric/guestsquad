@@ -10,7 +10,7 @@ export const hotelAnsweringServiceData: ServiceDetailData = {
     "Guest Squad's hotel answering service provides live, human call answering for hotels, boutique properties, and independent operators that cannot always have someone at the front desk. Every inbound call reaches a hospitality-trained person working with your rates, policies, and property information, so no reservation inquiry, guest question, or overflow call goes unanswered.",
   image: {
     src: "https://images.unsplash.com/photo-1525182008055-f88b95ff7980?w=1600&q=90",
-    alt: "Agent answering a hotel call at a desk with monitors",
+    alt: "Hospitality-trained agent handling inbound hotel reservation calls and guest inquiries",
   },
   includesTitle: "Calls your front desk should never lose to voicemail.",
   includes: [
@@ -168,7 +168,7 @@ export const guestMessagingData: ServiceDetailData = {
     "Guest Squad's guest messaging service monitors and responds to SMS, WhatsApp, email, and supported in-app messages across the full guest stay cycle. Pre-arrival questions, in-stay requests, and post-stay follow-ups are handled by trained agents in your property's voice, with housekeeping, maintenance, safety, and compensation issues routed immediately to your team.",
   image: {
     src: "https://images.unsplash.com/photo-1592890288564-76628a30a657?w=1600&q=90",
-    alt: "Close-up of a guest message being typed and sent on a phone",
+    alt: "Hotel guest messaging support across SMS, WhatsApp, and OTA channels",
   },
   includesTitle: "SMS, WhatsApp, email, and guest-app replies across the stay journey.",
   includes: [
@@ -476,7 +476,7 @@ export const airbnbSupportData: ServiceDetailData = {
     "Guest Squad's Airbnb guest support service provides 24/7 message handling and guest communication for Airbnb hosts, Vrbo operators, and serviced apartment managers who cannot personally monitor inquiries around the clock. Check-in coordination, in-stay issues, listing-specific questions, and review management are handled by trained agents using your listing instructions, so your response rate stays high and your guest experience stays consistent. For hosts and operators comparing Airbnb guest services, Guest Squad provides human guest support across guest messages, access questions, listing FAQs, escalation issues, and after-hours coverage.",
   image: {
     src: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1600&q=90",
-    alt: "Modern short-term rental interior guests check into",
+    alt: "Airbnb host property with round-the-clock guest support and messaging coverage",
   },
   includesTitle: "Guest replies, access issues, and listing FAQs handled around the clock.",
   includes: [
@@ -553,7 +553,7 @@ export const vacationRentalAnsweringData: ServiceDetailData = {
     "Guest Squad's vacation rental answering service provides 24/7 phone and message coverage for Airbnb, Vrbo, and direct-booking operators who need a real person available to guests at any hour. Calls that would otherwise go to a host's personal voicemail are answered by trained agents using your listing-specific instructions. Guest questions, check-in issues, and maintenance escalations are handled without requiring you to be personally on call.",
   image: {
     src: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1600&q=90",
-    alt: "Modern short-term rental interior guests check into",
+    alt: "Short-term rental property where guest communication is managed remotely by a trained support team",
   },
   includesTitle: "Phone and message coverage so you stop being the 24/7 on-call line.",
   includes: [

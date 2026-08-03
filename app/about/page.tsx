@@ -144,11 +144,11 @@ export default function AboutPage() {
         <div className="mx-auto mt-4 max-w-2xl text-center text-sm text-ink-soft">
           See how that compares to{" "}
           <Link href="/resources/hotel-answering-service-vs-ai-voice" className="text-gold-dark underline underline-offset-4 hover:text-gold">
-            AI voice agents
+            hotel answering service vs AI voice agent
           </Link>{" "}
           and{" "}
           <Link href="/resources/hotel-answering-service-vs-call-center" className="text-gold-dark underline underline-offset-4 hover:text-gold">
-            generic call centers
+            hotel answering service vs call center
           </Link>
           .
         </div>

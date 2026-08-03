@@ -242,7 +242,7 @@ export default function ResourcesPage() {
         <p className="mt-10 text-center text-sm text-ink-soft">
           Already know what you need?{" "}
           <Link href="/services" className="text-gold-dark underline underline-offset-4 hover:text-gold">
-            Browse all services
+            Browse all guest operations services
           </Link>{" "}
           or{" "}
           <Link href="/pricing" className="text-gold-dark underline underline-offset-4 hover:text-gold">

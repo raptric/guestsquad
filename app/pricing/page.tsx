@@ -122,11 +122,11 @@ export default function PricingPage() {
           </Link>{" "}
           or see how we compare to{" "}
           <Link href="/resources/hotel-answering-service-vs-ai-voice" className="text-gold-dark underline underline-offset-4 hover:text-gold">
-            AI voice agents
+            hotel answering service vs AI voice agent
           </Link>{" "}
           and{" "}
           <Link href="/resources/hotel-answering-service-vs-call-center" className="text-gold-dark underline underline-offset-4 hover:text-gold">
-            generic call centers
+            hotel answering service vs call center
           </Link>
           .
         </p>
@@ -134,7 +134,7 @@ export default function PricingPage() {
         <p className="mt-6 text-center text-sm text-ink-soft">
           Qualified properties can start with a 2-week pilot before moving into month-to-month coverage.{" "}
           <Link href="/pilot" className="text-gold-dark underline underline-offset-4 hover:text-gold">
-            See if you qualify →
+            See if you qualify for a 2-week pilot →
           </Link>
         </p>
 

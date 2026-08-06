@@ -20,7 +20,7 @@ import { AssetBlock } from "@/components/site/asset-block";
 import { ClientTrustBlock } from "@/components/site/client-trust-block";
 
 export const metadata: Metadata = buildMetadata({
-  title: "24/7 Hotel Guest Support & Reservation Services | Guest Squad",
+  title: "Hotel Answering Service & 24/7 Guest Support | Guest Squad",
   description:
     "Guest Squad provides 24/7 hotel guest support, reservation calls, OTA inbox management, messaging, and after-hours front desk coverage.",
   path: "",
@@ -30,6 +30,10 @@ const HOME_FAQS = [
   {
     q: "What does Guest Squad do?",
     a: "Guest Squad provides 24/7 human guest operations support for hotels, boutique properties, resorts, serviced apartments, and short-term rental operators. The service covers reservation calls, guest messages, OTA inboxes, after-hours front desk support, front desk overflow, and guest communication gaps, without requiring an additional full-time hire.",
+  },
+  {
+    q: "Is Guest Squad a hotel answering service?",
+    a: "Yes. Guest Squad provides hotel answering service coverage for reservation calls, guest questions, after-hours support, and front desk overflow. Unlike a generic call center, we also support guest messages, OTA inboxes, and property-specific escalation workflows.",
   },
   {
     q: "Is Guest Squad a hotel call center?",
@@ -65,13 +69,14 @@ export default function HomePage() {
               Guest Operations Support
             </p>
             <h1 className="text-4xl font-medium leading-[1.08] tracking-tight text-ink md:text-5xl">
-              24/7 Hotel Guest Support for Properties That Can&rsquo;t Afford
+              24/7 Hotel Answering Service & Guest Support for Properties That Can&rsquo;t Afford
               Missed Bookings
             </h1>
             <p className="mt-6 max-w-lg text-lg leading-relaxed text-ink-soft">
-              Guest Squad handles reservations, guest messages, OTA
-              inquiries, callbacks, upsells, and after-hours support, so
-              your front desk stays focused on in-house guests.
+              Guest Squad is a hotel answering service and guest operations
+              team that handles reservations, guest messages, OTA inquiries,
+              callbacks, upsells, and after-hours support, so your front
+              desk stays focused on in-house guests.
             </p>
             <div className="mt-9 flex flex-col gap-4 sm:flex-row">
               <CalendlyPopupButton variant="gold" size="lg">
@@ -108,7 +113,11 @@ export default function HomePage() {
       <div className="border-b border-line bg-surface">
         <div className="container py-8">
           <p className="mx-auto max-w-3xl text-sm leading-relaxed text-ink-soft">
-            Guest Squad provides 24/7 human guest operations support for hotels, boutique properties, resorts, serviced apartments, and short-term rental operators. The service covers reservation calls, guest messages, OTA inboxes (Booking.com, Expedia, Airbnb), after-hours front desk coverage, and guest communication gaps, without requiring an additional full-time hire or a change to your existing systems.
+            Guest Squad provides 24/7 human guest operations support for hotels, boutique properties, resorts, serviced apartments, and short-term rental operators. From{" "}
+            <Link href="/services/hotel-answering-service" className="text-gold-dark underline underline-offset-4 hover:text-gold">
+              hotel answering service for independent hotels
+            </Link>{" "}
+            to OTA inbox management and after-hours coverage, the service fills guest communication gaps without requiring an additional full-time hire or a change to your existing systems.
           </p>
           <div className="mx-auto mt-5 max-w-3xl rounded-lg border border-gold/30 bg-gold/5 px-5 py-4">
             <p className="text-sm font-medium text-ink">Not sure what level of coverage you need?</p>

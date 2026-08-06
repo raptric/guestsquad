@@ -3,9 +3,9 @@
 export const hotelAnsweringServiceData: ServiceDetailData = {
   slug: "hotel-answering-service",
   eyebrow: "Hotel Answering Service",
-  title: "24/7 Hotel Answering Service for Reservation Calls and Guest Questions",
+  title: "Hotel Answering Service for Independent Hotels and Boutique Properties",
   description:
-    "Every call answered by a trained person: reservation questions, general guest inquiries, and overflow during busy periods, without a phone tree or voicemail.",
+    "Guest Squad provides 24/7 hotel answering service coverage for reservation calls, guest questions, and front-desk overflow — answered by a trained person, not a phone tree or voicemail. Purpose-built for independent hotels and boutique properties.",
   primaryCta: "Request Pilot Review",
   primaryHref: "/pilot",
   introHeading: "What is a hotel answering service?",
@@ -31,6 +31,8 @@ export const hotelAnsweringServiceData: ServiceDetailData = {
     "Late check-in and early-arrival requests using your property procedures",
     "Direct booking calls from your website or Google Business profile",
     "Call-back scheduling for inquiries that need a follow-up",
+    "After-hours and overnight calls when your front desk is off-site",
+    "Calls from guests who booked via OTAs asking about check-in, parking, or early arrival",
   ],
   escalates: [
     "Complaints, disputes, or compensation requests requiring management discretion",
@@ -40,10 +42,12 @@ export const hotelAnsweringServiceData: ServiceDetailData = {
   ],
   whoItsForTitle: "Set up around your call routing and front-desk hours.",
   whoItsFor: [
-    "Hotels whose front desk cannot always get to the phone",
-    "Properties relying on voicemail or a phone tree after hours",
-    "Independent hotels without a dedicated reservations line",
-    "Groups wanting consistent call handling across multiple properties",
+    "Independent hotels and boutique properties with lean front-desk staffing",
+    "Properties losing booking calls to voicemail during peak check-in and check-out",
+    "Hotels without a dedicated reservations line or after-hours call coverage",
+    "Serviced apartments and lodge operators who need professional call handling without adding headcount",
+    "Properties that receive direct booking calls from their website or Google Business profile",
+    "Multi-property groups who want consistent call handling across every site",
   ],
   notes:
     "This is a true call-answering layer. Every call reaches a hospitality-trained person, not an automated system.",
@@ -70,6 +74,10 @@ export const hotelAnsweringServiceData: ServiceDetailData = {
     { q: "What happens if a caller asks for something outside our policy?", a: "The caller is informed politely that the request needs your team's direct approval, and the inquiry is logged and routed with full context so your team can follow up promptly." },
     { q: "Can calls be transferred to our team when needed?", a: "Yes. Live transfer to your designated number is available for situations that require your team's direct involvement, following the escalation rules we agree on during setup." },
     { q: "How does a hotel answering service work without adding staff?", a: "A hotel answering service gives your property live call coverage without hiring another front desk shift. Guest Squad answers reservation calls, guest questions, overflow calls, and after-hours inquiries using your property rules, escalation contacts, and approved guest-handling instructions. It pairs naturally with after-hours support for full overnight coverage." },
+    { q: "How does Guest Squad compare to a hotel call center?", a: "A hotel call center typically uses a shared agent pool trained for volume, not hospitality. Guest Squad agents are briefed on your specific property: your room types, rates, local area, and escalation contacts. The experience for the guest is indistinguishable from your own front desk." },
+    { q: "Can Guest Squad answer reservation calls after hours?", a: "Yes. Overnight and after-hours reservation calls are a core part of what the hotel answering service covers. When your desk is off-site, calls still reach a trained person who can answer questions, quote rates, and confirm bookings in your system — so no inquiry goes to voicemail." },
+    { q: "Is this suitable for independent hotels and small boutique properties?", a: "Yes. Independent hotels and boutique properties are Guest Squad's primary clients. The service is sized to your call volume: a 20-room boutique has a very different plan from a 200-room independent, and pricing reflects that." },
+    { q: "How do we start — is there a trial period?", a: "Qualified properties start with a 2-week pilot review before moving to month-to-month coverage. The pilot gives both teams time to validate call flows, escalation rules, and property briefing before committing to ongoing service." },
   ],
   downloadAsset: {
     asset: "coverage-gap-assessment",

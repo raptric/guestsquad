@@ -4,7 +4,7 @@ import { airbnbSupportData } from "@/lib/service-content";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "24/7 Airbnb Guest Support for STR Operators",
+  title: "24/7 Airbnb Guest Support for Hosts and Short-Term Rental Operators",
   description: airbnbSupportData.description,
   path: `/services/${airbnbSupportData.slug}`,
 });

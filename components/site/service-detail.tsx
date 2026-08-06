@@ -19,8 +19,11 @@ export type ServiceDetailData = {
   eyebrow: string;
   title: string;
   description: string;
+  introHeading?: string;
   answerBlock: string;
   image: { src: string; alt: string };
+  primaryCta?: string;
+  primaryHref?: string;
   includesTitle?: string;
   includes: { title: string; description: string }[];
   examples?: string;
@@ -34,6 +37,7 @@ export type ServiceDetailData = {
   faqTitle?: string;
   relatedTitle?: string;
   comparisonTitle?: string;
+  comparisonSlugs?: string[];
   faqs: { q: string; a: string }[];
   assetLinks?: { label: string; href: string }[];
   downloadAsset?: { asset: string; pdfHref: string; label: string; description: string };
@@ -72,16 +76,25 @@ export function ServiceDetail({ data }: { data: ServiceDetailData }) {
         eyebrow={data.eyebrow}
         title={data.title}
         description={data.description}
+        primaryCta={data.primaryCta}
+        primaryHref={data.primaryHref}
         secondaryCta="View Pricing"
         secondaryHref="/pricing"
       />
 
       {/* Direct answer block — LLM-extractable summary */}
       <div className="border-b border-line bg-surface">
-        <div className="container py-8">
-          <p className="mx-auto max-w-3xl text-sm leading-relaxed text-ink-soft">
-            {data.answerBlock}
-          </p>
+        <div className="container py-10">
+          {data.introHeading && (
+            <h2 className="mx-auto max-w-3xl text-lg font-semibold text-ink mb-4">
+              {data.introHeading}
+            </h2>
+          )}
+          {data.answerBlock.split("\n\n").map((para, i) => (
+            <p key={i} className="mx-auto max-w-3xl text-sm leading-relaxed text-ink-soft mt-3 first:mt-0">
+              {para}
+            </p>
+          ))}
         </div>
       </div>
 
@@ -242,7 +255,11 @@ export function ServiceDetail({ data }: { data: ServiceDetailData }) {
       <Section surface>
         <SectionHeading eyebrow="Worth Reading" title={data.comparisonTitle ?? "How this compares to the alternatives."} />
         <div className="mt-10 grid gap-6 sm:grid-cols-2">
-          {RESOURCES.filter((r) => r.type === "comparison").map((r) => (
+          {RESOURCES.filter((r) =>
+            data.comparisonSlugs
+              ? data.comparisonSlugs.includes(r.slug)
+              : r.type === "comparison"
+          ).map((r) => (
             <Link
               key={r.slug}
               href={`/resources/${r.slug}`}

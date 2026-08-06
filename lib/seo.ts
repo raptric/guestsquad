@@ -118,14 +118,14 @@ export function organizationSchema() {
       "@type": "OfferCatalog",
       name: "Guest Operations Coverage Plans",
       itemListElement: [
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Hotel Answering Service", url: "https://guestsquad.com/services/hotel-answering-service" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Reservation Support", url: "https://guestsquad.com/services/reservation-support" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Guest Messaging", url: "https://guestsquad.com/services/guest-messaging" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "OTA Inbox Management", url: "https://guestsquad.com/services/ota-inbox-management" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "After-Hours Hotel Support", url: "https://guestsquad.com/services/after-hours-support" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Vacation Rental Answering Service", url: "https://guestsquad.com/services/vacation-rental-answering-service" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Airbnb Guest Support", url: "https://guestsquad.com/services/airbnb-guest-support" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Back-Office Guest Operations", url: "https://guestsquad.com/services/back-office-operations" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Hotel Answering Service", serviceType: "Hotel Answering Service", url: "https://guestsquad.com/services/hotel-answering-service", areaServed: "Worldwide", provider: { "@type": "Organization", "@id": `${SITE.url}/#organization` } } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Reservation Support", serviceType: "Hotel Reservation Support", url: "https://guestsquad.com/services/reservation-support", areaServed: "Worldwide", provider: { "@type": "Organization", "@id": `${SITE.url}/#organization` } } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Guest Messaging", serviceType: "Hotel Guest Messaging", url: "https://guestsquad.com/services/guest-messaging", areaServed: "Worldwide", provider: { "@type": "Organization", "@id": `${SITE.url}/#organization` } } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "OTA Inbox Management", serviceType: "OTA Inbox Management", url: "https://guestsquad.com/services/ota-inbox-management", areaServed: "Worldwide", provider: { "@type": "Organization", "@id": `${SITE.url}/#organization` } } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "After-Hours Hotel Support", serviceType: "After-Hours Hotel Support", url: "https://guestsquad.com/services/after-hours-support", areaServed: "Worldwide", provider: { "@type": "Organization", "@id": `${SITE.url}/#organization` } } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Vacation Rental Answering Service", serviceType: "Vacation Rental Answering Service", url: "https://guestsquad.com/services/vacation-rental-answering-service", areaServed: "Worldwide", provider: { "@type": "Organization", "@id": `${SITE.url}/#organization` } } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Airbnb Guest Support", serviceType: "Airbnb Guest Support", url: "https://guestsquad.com/services/airbnb-guest-support", areaServed: "Worldwide", provider: { "@type": "Organization", "@id": `${SITE.url}/#organization` } } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Back-Office Guest Operations", serviceType: "Hotel Back-Office Operations", url: "https://guestsquad.com/services/back-office-operations", areaServed: "Worldwide", provider: { "@type": "Organization", "@id": `${SITE.url}/#organization` } } },
       ],
     },
   };
@@ -216,6 +216,50 @@ export function serviceSchema({
       audienceType:
         "Hotels, boutique properties, resorts, serviced apartments, Airbnb and short-term rental operators",
     },
+    offers: {
+      "@type": "Offer",
+      description: "2-week pilot review for qualified properties, then month-to-month coverage with no long-term contract.",
+      url: `${SITE.url}/pilot`,
+      availability: "https://schema.org/InStock",
+      areaServed: "Worldwide",
+      seller: { "@type": "Organization", "@id": `${SITE.url}/#organization` },
+    },
+  };
+}
+
+/** WebPage schema — ties service page entities together for entity coherence. */
+export function webPageSchema({
+  name,
+  description,
+  path,
+  primaryImageUrl,
+  primaryImageAlt,
+}: {
+  name: string;
+  description: string;
+  path: string;
+  primaryImageUrl: string;
+  primaryImageAlt: string;
+}) {
+  const url = `${SITE.url}${path}`;
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${url}#webpage`,
+    url,
+    name,
+    description,
+    isPartOf: { "@type": "WebSite", "@id": `${SITE.url}/#website` },
+    about: { "@type": "Service", "@id": `${url}#service` },
+    primaryImageOfPage: {
+      "@type": "ImageObject",
+      url: primaryImageUrl,
+      description: primaryImageAlt,
+    },
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["h1", "h2", ".answer-block"],
+    },
   };
 }
 
@@ -240,12 +284,16 @@ export function articleSchema({
   path,
   datePublished,
   dateModified,
+  about,
+  mentions,
 }: {
   headline: string;
   description: string;
   path: string;
   datePublished: string;
   dateModified?: string;
+  about?: { type: string; name: string };
+  mentions?: { type: string; name: string }[];
 }) {
   const url = `${SITE.url}${path}`;
   return {
@@ -266,6 +314,8 @@ export function articleSchema({
       url: SITE.url,
       logo: { "@type": "ImageObject", url: `${SITE.url}/brand-assets/guestsquad-icon.svg` },
     },
+    ...(about && { about: { "@type": about.type, name: about.name } }),
+    ...(mentions && { mentions: mentions.map((m) => ({ "@type": m.type, name: m.name })) }),
   };
 }
 

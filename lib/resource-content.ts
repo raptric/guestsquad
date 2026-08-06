@@ -117,6 +117,8 @@ export type ResourceArticleData = {
   };
   inlineAsset?: ArticleAssetCta;
   assetCta?: ArticleAssetCta;
+  schemaAbout?: { type: string; name: string };
+  schemaMentions?: { type: string; name: string }[];
 };
 
 export const aiVoiceComparison: ResourceArticleData = {
@@ -288,11 +290,11 @@ export const callCenterComparison: ResourceArticleData = {
   title: "Hotel Answering Service vs Call Center: Key Differences for Hotels",
   description:
     "Why a hospitality-trained, property-specific answering service performs differently from a generic, multi-industry call center, and what to check before you sign with either.",
-  metaTitle: "Hotel Answering Service vs Call Center for Hotels | Guest Squad",
+  metaTitle: "Hotel Answering Service vs Call Center for Hotels",
   metaDescription:
     "Compare a hotel answering service vs a generic call center, including training, property knowledge, OTA coverage, reporting, costs and the best fit for your hotel.",
   datePublished: "2026-06-26",
-  dateModified: "2026-07-30",
+  dateModified: "2026-08-06",
   intro: [
     "\"Call center\" and \"hotel answering service\" often get used interchangeably when hotels start shopping for outsourced phone coverage, but the underlying operating models are usually quite different, and that difference shows up on the call itself.",
     "A generic call center is typically built to handle calls for many unrelated industries from a shared agent pool. A hotel answering service like Guest Squad is built around one property at a time. Here's where that distinction actually matters.",
@@ -451,6 +453,13 @@ export const callCenterComparison: ResourceArticleData = {
       a: "Guest Squad provides external guest operations support for hotels and property operators, but we are not a generic outsourced call center. Our team is briefed on your property, channels, escalation rules, and guest communication standards before coverage begins.",
     },
   ],
+  schemaAbout: { type: "Service", name: "Hotel Answering Service" },
+  schemaMentions: [
+    { type: "Thing", name: "Hotel Call Center" },
+    { type: "Thing", name: "After-Hours Hotel Support" },
+    { type: "Thing", name: "Answering Service vs Call Center" },
+    { type: "Thing", name: "OTA Inbox Management" },
+  ],
 };
 
 export type GuideSection = {
@@ -474,6 +483,8 @@ export type GuideArticleData = {
   relatedResourceSlugs?: string[];
   inlineAsset?: ArticleAssetCta;
   assetCta?: ArticleAssetCta;
+  schemaAbout?: { type: string; name: string };
+  schemaMentions?: { type: string; name: string }[];
 };
 
 export const answeringServiceCostGuide: GuideArticleData = {
@@ -484,7 +495,7 @@ export const answeringServiceCostGuide: GuideArticleData = {
   metaTitle: "Hotel Answering Service Cost Guide",
   metaDescription:
     "How hotel answering services price their plans, what drives the cost, and the questions to ask before signing with any provider.",
-  datePublished: "2026-06-29",
+  datePublished: "2026-08-06",
   intro: [
     "\"How much does this cost?\" is usually the first question a GM asks, and the hardest one to get a straight answer to. Most providers, including Guest Squad, don't publish flat rates, because the honest answer depends on your volume, channels, and coverage hours.",
     "What most properties find when they run the numbers: a single recovered group booking or a week of captured after-hours reservations covers the monthly cost entirely. The right question is not what the service costs — it is whether it pays for itself on your volume.",
@@ -562,6 +573,13 @@ export const answeringServiceCostGuide: GuideArticleData = {
     serviceHref: "/pricing",
     serviceLabel: "View Pricing",
   },
+  schemaAbout: { type: "Service", name: "Hotel Answering Service" },
+  schemaMentions: [
+    { type: "Thing", name: "Hotel Answering Service Cost" },
+    { type: "Thing", name: "Flat Monthly Pricing" },
+    { type: "Thing", name: "Per-Minute Call Billing" },
+    { type: "Thing", name: "Hotel Guest Support Coverage" },
+  ],
 };
 
 export const afterHoursChecklistGuide: GuideArticleData = {

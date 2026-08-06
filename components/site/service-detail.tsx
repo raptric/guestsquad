@@ -6,7 +6,7 @@ import { Section, SectionHeading } from "@/components/site/section";
 import { CtaSection } from "@/components/site/cta-section";
 import { Breadcrumbs } from "@/components/site/breadcrumbs";
 import { JsonLd } from "@/components/site/json-ld";
-import { serviceSchema, breadcrumbSchema, faqSchema } from "@/lib/seo";
+import { serviceSchema, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/seo";
 import { SERVICES } from "@/lib/site-data";
 import { RESOURCES } from "@/lib/resource-content";
 import { AssetBlock } from "@/components/site/asset-block";
@@ -55,6 +55,13 @@ export function ServiceDetail({ data }: { data: ServiceDetailData }) {
       <JsonLd
         data={[
           serviceSchema({ name: data.eyebrow, description: data.description, path }),
+          webPageSchema({
+            name: data.title,
+            description: data.description,
+            path,
+            primaryImageUrl: data.image.src,
+            primaryImageAlt: data.image.alt,
+          }),
           breadcrumbSchema([
             { name: "Home", path: "/" },
             { name: "Services", path: "/services" },

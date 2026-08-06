@@ -21,17 +21,17 @@ const ASSET_ROUTES = [
 // Update these dates whenever meaningful content changes are made to a page
 const LAST_MODIFIED: Record<string, string> = {
   // Static pages
-  "": "2026-08-04",
+  "": "2026-08-06",
   "/pilot": "2026-08-04",
-  "/services": "2026-08-04",
-  "/pricing": "2026-07-27",
+  "/services": "2026-08-06",
+  "/pricing": "2026-08-06",
   "/contact": "2026-06-26",
   "/resources": "2026-08-04",
   "/about": "2026-07-27",
   "/privacy-policy": "2026-06-26",
   "/terms-of-service": "2026-06-26",
   // Service pages — updated with PDF download blocks
-  "/services/hotel-answering-service": "2026-08-04",
+  "/services/hotel-answering-service": "2026-08-06",
   "/services/reservation-support": "2026-07-27",
   "/services/guest-messaging": "2026-08-04",
   "/services/ota-inbox-management": "2026-07-27",
@@ -41,8 +41,8 @@ const LAST_MODIFIED: Record<string, string> = {
   "/services/vacation-rental-answering-service": "2026-07-27",
   // Resource articles — updated with inline PDF hooks today
   "/resources/hotel-answering-service-vs-ai-voice": "2026-08-06",
-  "/resources/hotel-answering-service-vs-call-center": "2026-08-04",
-  "/resources/hotel-answering-service-cost": "2026-07-27",
+  "/resources/hotel-answering-service-vs-call-center": "2026-08-06",
+  "/resources/hotel-answering-service-cost": "2026-08-06",
   "/resources/after-hours-hotel-support-checklist": "2026-07-27",
   "/resources/hotel-front-desk-overflow-support": "2026-07-27",
   "/resources/booking-com-message-support": "2026-07-27",

@@ -28,6 +28,8 @@ export function GuideArticle({ data }: { data: GuideArticleData }) {
             path,
             datePublished: data.datePublished,
             dateModified: data.dateModified,
+            about: data.schemaAbout,
+            mentions: data.schemaMentions,
           }),
           breadcrumbSchema([
             { name: "Home", path: "/" },

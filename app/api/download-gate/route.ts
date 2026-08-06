@@ -25,10 +25,10 @@ export async function POST(req: Request) {
     const pdfUrl = `https://guestsquad.com/downloads/${asset}.pdf`;
 
     const gmailUser = process.env.GMAIL_USER;
-    const gmailPass = process.env.GMAIL_PASSWORD;
+    const gmailPass = process.env.GMAIL_APP_PASSWORD ?? process.env.GMAIL_PASSWORD;
 
     if (!gmailUser || !gmailPass) {
-      console.error("[download-gate] GMAIL_USER or GMAIL_APP_PASSWORD env vars not set");
+      console.error("[download-gate] GMAIL_USER or GMAIL_PASSWORD env vars not set");
       // Still return ok — don't block the download because of email config
       return NextResponse.json({ ok: true, pdfUrl });
     }
@@ -38,10 +38,10 @@ export async function POST(req: Request) {
       auth: { user: gmailUser, pass: gmailPass },
     });
 
-    // Internal lead notification — non-blocking
-    transporter.sendMail({
+    // Internal lead notification
+    await transporter.sendMail({
       from: `"Guest Squad Website" <${gmailUser}>`,
-      to: "info@guestsquad.com",
+      to: gmailUser,
       replyTo: email,
       subject: `New asset download — ${assetLabel}`,
       html: `

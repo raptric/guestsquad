@@ -3,7 +3,7 @@ import { buildMetadata } from "@/lib/seo";
 import { PrintLayout } from "@/components/site/print-layout";
 
 export const metadata: Metadata = buildMetadata({
-  title: "OTA Inbox Response Checklist | Guest Squad",
+  title: "OTA Inbox Response Checklist",
   description:
     "A practical checklist for managing Booking.com, Expedia, and Airbnb message inboxes: response standards, message categories, escalation rules, and review protocol.",
   path: "/resources/ota-inbox-response-checklist",

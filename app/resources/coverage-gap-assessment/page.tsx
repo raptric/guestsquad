@@ -3,7 +3,7 @@ import { buildMetadata } from "@/lib/seo";
 import { PrintLayout } from "@/components/site/print-layout";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Guest Coverage Gap Assessment | Guest Squad",
+  title: "Guest Coverage Gap Assessment",
   description:
     "A self-assessment for hotel and STR operators to identify uncovered hours, unmanned channels, escalation gaps, and which Guest Squad service to start with.",
   path: "/resources/coverage-gap-assessment",

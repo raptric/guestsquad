@@ -3,7 +3,7 @@ import { buildMetadata } from "@/lib/seo";
 import { PrintLayout } from "@/components/site/print-layout";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Hotel Guest Messaging SOP Template | Guest Squad",
+  title: "Hotel Guest Messaging SOP Template",
   description:
     "A printable SOP template for hotel guest messaging: response time targets, brand voice guidelines, escalation matrix, and scenario handling guide.",
   path: "/resources/guest-messaging-sop",

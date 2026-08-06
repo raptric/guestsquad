@@ -290,7 +290,7 @@ export const callCenterComparison: ResourceArticleData = {
   title: "Hotel Answering Service vs Call Center: Key Differences for Hotels",
   description:
     "Why a hospitality-trained, property-specific answering service performs differently from a generic, multi-industry call center, and what to check before you sign with either.",
-  metaTitle: "Hotel Answering Service vs Call Center for Hotels",
+  metaTitle: "Hotel Answering Service vs Call Center",
   metaDescription:
     "Compare a hotel answering service vs a generic call center, including training, property knowledge, OTA coverage, reporting, costs and the best fit for your hotel.",
   datePublished: "2026-06-26",
@@ -587,7 +587,7 @@ export const afterHoursChecklistGuide: GuideArticleData = {
   title: "After-Hours Hotel Front Desk Support: A Practical Checklist",
   description:
     "What a real after-hours setup needs to cover, from overnight calls and night audit phone coverage to emergency escalation, laid out as a working checklist.",
-  metaTitle: "After-Hours Hotel Answering Service Checklist",
+  metaTitle: "After Hours Hotel Answering Service Checklist",
   metaDescription:
     "A practical checklist for after-hours hotel front desk and night audit phone coverage, including escalation rules and morning handoff.",
   datePublished: "2026-06-29",
@@ -744,7 +744,7 @@ export const otaInboxChecklistGuide: GuideArticleData = {
   title: "Booking.com and Expedia Message Support: An OTA Inbox Checklist",
   description:
     "Why OTA response time affects bookings and rankings, and a practical checklist for keeping Booking.com and Expedia message inboxes under control.",
-  metaTitle: "Booking.com & Expedia Message Support Checklist",
+  metaTitle: "Booking.com & Expedia Message Checklist",
   metaDescription:
     "A practical checklist for managing Booking.com and Expedia guest messages, including response-time targets and common message types.",
   datePublished: "2026-06-29",

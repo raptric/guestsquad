@@ -3,7 +3,7 @@ import { buildMetadata } from "@/lib/seo";
 import { PrintLayout } from "@/components/site/print-layout";
 
 export const metadata: Metadata = buildMetadata({
-  title: "After-Hours Hotel Coverage Checklist | Guest Squad",
+  title: "After Hours Hotel Coverage Checklist",
   description:
     "A practical checklist for auditing your hotel or STR property's after-hours coverage gaps, from overnight calls to emergency escalation and morning handoff.",
   path: "/resources/after-hours-checklist",

@@ -4,7 +4,7 @@ import { backOfficeData } from "@/lib/service-content";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Hotel Back Office Operations | Night Audit & OTA Reconciliation",
+  title: "Hotel Back Office Operations | Night Audit",
   description:
     "Daily night audit, OTA reconciliation, and guest-billing support, so revenue leakage gets caught the day it happens, not at month-end close.",
   path: `/services/${backOfficeData.slug}`,

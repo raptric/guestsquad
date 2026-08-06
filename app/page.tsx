@@ -20,7 +20,7 @@ import { AssetBlock } from "@/components/site/asset-block";
 import { ClientTrustBlock } from "@/components/site/client-trust-block";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Hotel Answering Service & 24/7 Guest Support | Guest Squad",
+  title: "Hotel Answering Service & 24/7 Guest Support",
   description:
     "Guest Squad provides 24/7 hotel guest support, reservation calls, OTA inbox management, messaging, and after-hours front desk coverage.",
   path: "",

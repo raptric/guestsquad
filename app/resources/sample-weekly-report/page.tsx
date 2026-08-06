@@ -3,7 +3,7 @@ import { buildMetadata } from "@/lib/seo";
 import { PrintLayout } from "@/components/site/print-layout";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Sample Weekly Guest Operations Report | Guest Squad",
+  title: "Sample Weekly Guest Operations Report",
   description:
     "See exactly what a Guest Squad weekly report looks like: calls handled, messages, OTA replies, escalations, response times, and recommendations.",
   path: "/resources/sample-weekly-report",

@@ -11,7 +11,7 @@ import { BoFuTrustBlock } from "@/components/site/bofu-trust-block";
 import { PostBookingSteps } from "@/components/site/post-booking-steps";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Contact Guest Squad | Book a Guest Support Demo",
+  title: "Contact Guest Squad | Book a Demo",
   description:
     "Book a 30-minute demo or send us your property details. Guest Squad responds within one business day.",
   path: "/contact",

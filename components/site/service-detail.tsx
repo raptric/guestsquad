@@ -92,7 +92,14 @@ export function ServiceDetail({ data }: { data: ServiceDetailData }) {
           )}
           {data.answerBlock.split("\n\n").map((para, i) => (
             <p key={i} className="mx-auto max-w-3xl text-sm leading-relaxed text-ink-soft mt-3 first:mt-0">
-              {para}
+              {para.split(/(\[[^\]]+\]\([^)]+\))/).map((part, j) => {
+                const match = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+                return match ? (
+                  <Link key={j} href={match[2]} className="text-gold-dark underline underline-offset-4 hover:text-gold">
+                    {match[1]}
+                  </Link>
+                ) : part;
+              })}
             </p>
           ))}
         </div>

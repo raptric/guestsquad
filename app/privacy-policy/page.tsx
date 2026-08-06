@@ -7,7 +7,7 @@ import { LEGAL_EFFECTIVE_DATE, PRIVACY_INTRO, PRIVACY_SECTIONS } from "@/lib/leg
 export const metadata: Metadata = buildMetadata({
   title: "Privacy Policy",
   description:
-    "How Guest Squad, a Raptric LLC company, collects, uses, and protects personal data, including GDPR data subject rights and our role as controller and processor.",
+    "How Guest Squad collects, uses, and protects personal data. Covers data subject rights, our role as controller and processor, and GDPR compliance.",
   path: "/privacy-policy",
 });
 

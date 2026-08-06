@@ -22,13 +22,13 @@ const ASSET_ROUTES = [
 const LAST_MODIFIED: Record<string, string> = {
   // Static pages
   "": "2026-08-06",
-  "/pilot": "2026-08-04",
+  "/pilot": "2026-08-06",
   "/services": "2026-08-06",
   "/pricing": "2026-08-06",
   "/contact": "2026-08-06",
   "/resources": "2026-08-04",
   "/about": "2026-08-06",
-  "/privacy-policy": "2026-06-26",
+  "/privacy-policy": "2026-08-06",
   "/terms-of-service": "2026-06-26",
   // Service pages — updated with PDF download blocks
   "/services/hotel-answering-service": "2026-08-06",

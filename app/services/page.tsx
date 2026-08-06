@@ -14,7 +14,7 @@ import { SITE } from "@/lib/site-data";
 export const metadata: Metadata = buildMetadata({
   title: "Hotel Guest Operations Services",
   description:
-    "Reservation support, guest messaging, OTA inbox management, after-hours coverage, back-office operations, and Airbnb guest support, all under one guest operations partner.",
+    "Reservation calls, guest messaging, OTA inbox management, after-hours coverage, and back-office operations — all under one guest operations partner.",
   path: "/services",
 });
 

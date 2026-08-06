@@ -20,7 +20,7 @@ const PilotForm = dynamic(
 export const metadata: Metadata = buildMetadata({
   title: "2-Week Guest Coverage Pilot for Hotels",
   description:
-    "See if your property qualifies for a 2-week Guest Squad pilot. Cover reservation calls, guest texts, OTA inboxes, and after-hours guest communication without another front desk shift.",
+    "Start with a 2-week pilot before monthly coverage. Guest Squad reviews your call gaps, OTA inboxes, and after-hours needs and recommends a plan that fits.",
   path: "/pilot",
 });
 

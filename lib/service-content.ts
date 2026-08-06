@@ -5,7 +5,7 @@ export const hotelAnsweringServiceData: ServiceDetailData = {
   eyebrow: "Hotel Answering Service",
   title: "Hotel Answering Service for Independent Hotels and Boutique Properties",
   description:
-    "Guest Squad provides 24/7 hotel answering service coverage for reservation calls, guest questions, and front-desk overflow — answered by a trained person, not a phone tree or voicemail. Purpose-built for independent hotels and boutique properties.",
+    "Hotel answering service for independent hotels. Every reservation call and guest question answered by a trained person — no phone tree, no voicemail.",
   primaryCta: "Request Pilot Review",
   primaryHref: "/pilot",
   introHeading: "What is a hotel answering service?",
@@ -590,7 +590,7 @@ export const vacationRentalAnsweringData: ServiceDetailData = {
   eyebrow: "Vacation Rental Answering Service",
   title: "24/7 Vacation Rental Answering Service for Airbnb, Vrbo, and STR Operators",
   description:
-    "Live call answering for Airbnb, Vrbo, and short-term rental operators, so guest calls reach a real person instead of your personal voicemail — day or night.",
+    "24/7 call answering for Airbnb, Vrbo, and short-term rental operators — built for hosts and property managers who cannot be on call all night.",
   introHeading: "What is a vacation rental answering service?",
   answerBlock:
     "A vacation rental answering service provides live phone coverage for short-term rental operators who cannot personally answer every guest call. When a guest calls with a check-in question, an access problem, or a pre-booking inquiry, a trained agent picks up in your property's name — using your listing-specific instructions — instead of the call hitting your personal voicemail.\n\nThis service is phone-first and built for call volume: prospective guests asking about availability, arriving guests who cannot find the lockbox, in-stay callers reporting an issue. Airbnb and Vrbo in-app messaging is handled separately under Airbnb Guest Support, so each service is focused on the channel that needs the most attention.",

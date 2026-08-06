@@ -134,7 +134,12 @@ export function ComparisonArticle({ data }: { data: ResourceArticleData }) {
               </ul>
             )}
             {data.verdictClosure && (
-              <p className="mb-5 text-sm leading-relaxed text-ink-soft">{data.verdictClosure}</p>
+              <p className="mb-5 text-sm leading-relaxed text-ink-soft">
+                {data.verdictClosure.split(/(\[[^\]]+\]\([^)]+\))/).map((part, j) => {
+                  const m = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+                  return m ? <Link key={j} href={m[2]} className="text-gold-dark underline underline-offset-4 hover:text-gold">{m[1]}</Link> : part;
+                })}
+              </p>
             )}
           </div>
         </div>

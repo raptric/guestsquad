@@ -397,7 +397,7 @@ export const callCenterComparison: ResourceArticleData = {
     "How are urgent escalations handled, and what is the expected response time?",
   ],
   verdictClosure:
-    "Those seven questions separate a true hotel answering service from a relabeled generic call center quickly. A provider that can answer all of them directly — with specifics about your property, not generalities — is worth evaluating further.",
+    "Those seven questions separate a true hotel answering service from a relabeled generic call center quickly. A provider that can answer all of them directly — with specifics about your property, not generalities — is worth evaluating further. If you are ready to see how a 24/7 hotel answering service works in practice, the [Guest Squad Hotel Answering Service](/services/hotel-answering-service) page covers what is included and how to start.",
   inlineAsset: {
     heading: "Not sure where your coverage gaps actually are? The Coverage Gap Assessment identifies your unprotected hours, channels, and escalation blind spots.",
     asset: "coverage-gap-assessment",
@@ -525,7 +525,7 @@ export const answeringServiceCostGuide: GuideArticleData = {
     {
       heading: "What We Quote Instead",
       paragraphs: [
-        "Guest Squad doesn't publish flat pricing because doing so would mean either overcharging low-volume properties or underpricing high-volume ones. Instead, every engagement starts with a short conversation about your volume and channels, and we recommend one of three plans accordingly; see the full breakdown on the Pricing page. Every plan starts with a pilot period so you see real results before committing further.",
+        "Guest Squad doesn't publish flat pricing because doing so would mean either overcharging low-volume properties or underpricing high-volume ones. Instead, every engagement starts with a short conversation about your volume and channels, and we recommend one of three plans accordingly; see the full breakdown on the Pricing page. Every plan starts with a pilot period so you see real results before committing further. If you want to understand what the [hotel answering service for independent hotels](/services/hotel-answering-service) actually covers before requesting a quote, that is a good place to start.",
       ],
     },
   ],

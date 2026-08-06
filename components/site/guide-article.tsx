@@ -71,7 +71,10 @@ export function GuideArticle({ data }: { data: GuideArticleData }) {
             <div className="mt-6">
               {section.paragraphs.map((p, j) => (
                 <p key={j} className="mb-4 text-sm leading-relaxed text-ink-soft">
-                  {p}
+                  {p.split(/(\[[^\]]+\]\([^)]+\))/).map((part, k) => {
+                    const m = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+                    return m ? <Link key={k} href={m[2]} className="text-gold-dark underline underline-offset-4 hover:text-gold">{m[1]}</Link> : part;
+                  })}
                 </p>
               ))}
             </div>

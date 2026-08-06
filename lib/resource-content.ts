@@ -297,7 +297,7 @@ export const callCenterComparison: ResourceArticleData = {
   dateModified: "2026-08-06",
   intro: [
     "\"Call center\" and \"hotel answering service\" often get used interchangeably when hotels start shopping for outsourced phone coverage, but the underlying operating models are usually quite different, and that difference shows up on the call itself.",
-    "A generic call center is typically built to handle calls for many unrelated industries from a shared agent pool. A hotel answering service like Guest Squad is built around one property at a time. Here's where that distinction actually matters.",
+    "A generic call center is typically built to handle calls for many unrelated industries from a shared agent pool. A [hotel answering service](/services/hotel-answering-service) like Guest Squad is built around one property at a time. Here's where that distinction actually matters.",
   ],
   heroPrimaryCta: "Request Pilot Review",
   heroPrimaryHref: "/pilot",

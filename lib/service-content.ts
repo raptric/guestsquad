@@ -87,6 +87,8 @@ export const hotelAnsweringServiceData: ServiceDetailData = {
   },
   assetLinks: [
     { label: "Missed Booking Revenue Calculator", href: "/resources/missed-booking-calculator" },
+    { label: "Hotel Answering Service vs Call Center", href: "/resources/hotel-answering-service-vs-call-center" },
+    { label: "How Much Does a Hotel Answering Service Cost?", href: "/resources/hotel-answering-service-cost" },
     { label: "View Sample Weekly Report", href: "/resources/sample-weekly-report" },
     { label: "Download After-Hours Checklist", href: "/resources/after-hours-checklist" },
   ],
@@ -252,6 +254,7 @@ export const guestMessagingData: ServiceDetailData = {
   assetLinks: [
     { label: "Guest messaging SOP template", href: "/resources/hotel-guest-messaging-sop-template" },
     { label: "Download OTA Inbox Response Checklist", href: "/resources/ota-inbox-response-checklist" },
+    { label: "Booking.com message support checklist", href: "/resources/booking-com-message-support" },
     { label: "View Sample Weekly Report", href: "/resources/sample-weekly-report" },
   ],
   ctaTitle: "Keep every guest conversation moving.",
@@ -334,6 +337,7 @@ export const otaInboxData: ServiceDetailData = {
   assetLinks: [
     { label: "Download OTA Inbox Response Checklist", href: "/resources/ota-inbox-response-checklist" },
     { label: "Booking.com message support checklist", href: "/resources/booking-com-message-support" },
+    { label: "Guest Messaging SOP Template", href: "/resources/hotel-guest-messaging-sop-template" },
     { label: "View Sample Weekly Report", href: "/resources/sample-weekly-report" },
   ],
   ctaTitle: "Reply before the guest books somewhere else.",
@@ -417,6 +421,7 @@ export const afterHoursData: ServiceDetailData = {
   },
   assetLinks: [
     { label: "Download After-Hours Checklist", href: "/resources/after-hours-checklist" },
+    { label: "Missed Booking Revenue Calculator", href: "/resources/missed-booking-calculator" },
     { label: "View Sample Weekly Report", href: "/resources/sample-weekly-report" },
     { label: "Guest Coverage Gap Assessment", href: "/resources/coverage-gap-assessment" },
   ],
@@ -578,6 +583,7 @@ export const airbnbSupportData: ServiceDetailData = {
   },
   assetLinks: [
     { label: "Guest Coverage Gap Assessment", href: "/resources/coverage-gap-assessment" },
+    { label: "Missed Booking Revenue Calculator", href: "/resources/missed-booking-calculator" },
     { label: "Download After-Hours Checklist", href: "/resources/after-hours-checklist" },
     { label: "Download Guest Messaging SOP Template", href: "/resources/guest-messaging-sop" },
   ],
@@ -660,6 +666,7 @@ export const vacationRentalAnsweringData: ServiceDetailData = {
   },
   assetLinks: [
     { label: "Download After-Hours Checklist", href: "/resources/after-hours-checklist" },
+    { label: "Missed Booking Revenue Calculator", href: "/resources/missed-booking-calculator" },
     { label: "Guest Coverage Gap Assessment", href: "/resources/coverage-gap-assessment" },
     { label: "View Sample Weekly Report", href: "/resources/sample-weekly-report" },
   ],

@@ -40,7 +40,7 @@ const LAST_MODIFIED: Record<string, string> = {
   "/services/airbnb-guest-support": "2026-07-27",
   "/services/vacation-rental-answering-service": "2026-07-27",
   // Resource articles — updated with inline PDF hooks today
-  "/resources/hotel-answering-service-vs-ai-voice": "2026-07-27",
+  "/resources/hotel-answering-service-vs-ai-voice": "2026-08-06",
   "/resources/hotel-answering-service-vs-call-center": "2026-08-04",
   "/resources/hotel-answering-service-cost": "2026-07-27",
   "/resources/after-hours-hotel-support-checklist": "2026-07-27",

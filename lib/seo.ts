@@ -118,14 +118,14 @@ export function organizationSchema() {
       "@type": "OfferCatalog",
       name: "Guest Operations Coverage Plans",
       itemListElement: [
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Hotel Answering Service", serviceType: "Hotel Answering Service", url: "https://guestsquad.com/services/hotel-answering-service", areaServed: "Worldwide", provider: { "@type": "Organization", "@id": `${SITE.url}/#organization` } } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Reservation Support", serviceType: "Hotel Reservation Support", url: "https://guestsquad.com/services/reservation-support", areaServed: "Worldwide", provider: { "@type": "Organization", "@id": `${SITE.url}/#organization` } } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Guest Messaging", serviceType: "Hotel Guest Messaging", url: "https://guestsquad.com/services/guest-messaging", areaServed: "Worldwide", provider: { "@type": "Organization", "@id": `${SITE.url}/#organization` } } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "OTA Inbox Management", serviceType: "OTA Inbox Management", url: "https://guestsquad.com/services/ota-inbox-management", areaServed: "Worldwide", provider: { "@type": "Organization", "@id": `${SITE.url}/#organization` } } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "After-Hours Hotel Support", serviceType: "After-Hours Hotel Support", url: "https://guestsquad.com/services/after-hours-support", areaServed: "Worldwide", provider: { "@type": "Organization", "@id": `${SITE.url}/#organization` } } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Vacation Rental Answering Service", serviceType: "Vacation Rental Answering Service", url: "https://guestsquad.com/services/vacation-rental-answering-service", areaServed: "Worldwide", provider: { "@type": "Organization", "@id": `${SITE.url}/#organization` } } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Airbnb Guest Support", serviceType: "Airbnb Guest Support", url: "https://guestsquad.com/services/airbnb-guest-support", areaServed: "Worldwide", provider: { "@type": "Organization", "@id": `${SITE.url}/#organization` } } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Back-Office Guest Operations", serviceType: "Hotel Back-Office Operations", url: "https://guestsquad.com/services/back-office-operations", areaServed: "Worldwide", provider: { "@type": "Organization", "@id": `${SITE.url}/#organization` } } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Hotel Answering Service", serviceType: "Hotel Answering Service", url: "https://guestsquad.com/services/hotel-answering-service", areaServed: "Worldwide", hoursAvailable: ALWAYS_AVAILABLE, provider: { "@type": "Organization", "@id": `${SITE.url}/#organization` } } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Reservation Support", serviceType: "Hotel Reservation Support", url: "https://guestsquad.com/services/reservation-support", areaServed: "Worldwide", hoursAvailable: ALWAYS_AVAILABLE, provider: { "@type": "Organization", "@id": `${SITE.url}/#organization` } } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Guest Messaging", serviceType: "Hotel Guest Messaging", url: "https://guestsquad.com/services/guest-messaging", areaServed: "Worldwide", hoursAvailable: ALWAYS_AVAILABLE, provider: { "@type": "Organization", "@id": `${SITE.url}/#organization` } } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "OTA Inbox Management", serviceType: "OTA Inbox Management", url: "https://guestsquad.com/services/ota-inbox-management", areaServed: "Worldwide", hoursAvailable: ALWAYS_AVAILABLE, provider: { "@type": "Organization", "@id": `${SITE.url}/#organization` } } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "After-Hours Hotel Support", serviceType: "After-Hours Hotel Support", url: "https://guestsquad.com/services/after-hours-support", areaServed: "Worldwide", hoursAvailable: ALWAYS_AVAILABLE, provider: { "@type": "Organization", "@id": `${SITE.url}/#organization` } } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Vacation Rental Answering Service", serviceType: "Vacation Rental Answering Service", url: "https://guestsquad.com/services/vacation-rental-answering-service", areaServed: "Worldwide", hoursAvailable: ALWAYS_AVAILABLE, provider: { "@type": "Organization", "@id": `${SITE.url}/#organization` } } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Airbnb Guest Support", serviceType: "Airbnb Guest Support", url: "https://guestsquad.com/services/airbnb-guest-support", areaServed: "Worldwide", hoursAvailable: ALWAYS_AVAILABLE, provider: { "@type": "Organization", "@id": `${SITE.url}/#organization` } } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Back-Office Guest Operations", serviceType: "Hotel Back-Office Operations", url: "https://guestsquad.com/services/back-office-operations", areaServed: "Worldwide", hoursAvailable: ALWAYS_AVAILABLE, provider: { "@type": "Organization", "@id": `${SITE.url}/#organization` } } },
       ],
     },
   };
@@ -292,7 +292,7 @@ export function articleSchema({
   path: string;
   datePublished: string;
   dateModified?: string;
-  about?: { type: string; name: string };
+  about?: { type: string; name: string; url?: string; serviceType?: string; areaServed?: string };
   mentions?: { type: string; name: string }[];
 }) {
   const url = `${SITE.url}${path}`;
@@ -314,7 +314,7 @@ export function articleSchema({
       url: SITE.url,
       logo: { "@type": "ImageObject", url: `${SITE.url}/brand-assets/guestsquad-icon.svg` },
     },
-    ...(about && { about: { "@type": about.type, name: about.name } }),
+    ...(about && { about: { "@type": about.type, name: about.name, ...(about.url && { url: about.url }), ...(about.serviceType && { serviceType: about.serviceType }), ...(about.areaServed && { areaServed: about.areaServed }) } }),
     ...(mentions && { mentions: mentions.map((m) => ({ "@type": m.type, name: m.name })) }),
   };
 }

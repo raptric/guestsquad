@@ -453,7 +453,7 @@ export const callCenterComparison: ResourceArticleData = {
       a: "Guest Squad provides external guest operations support for hotels and property operators, but we are not a generic outsourced call center. Our team is briefed on your property, channels, escalation rules, and guest communication standards before coverage begins.",
     },
   ],
-  schemaAbout: { type: "Service", name: "Hotel Answering Service" },
+  schemaAbout: { type: "Service", name: "Hotel Answering Service", url: "https://guestsquad.com/services/hotel-answering-service", serviceType: "Hotel Answering Service", areaServed: "Worldwide" },
   schemaMentions: [
     { type: "Thing", name: "Hotel Call Center" },
     { type: "Thing", name: "After-Hours Hotel Support" },
@@ -573,7 +573,7 @@ export const answeringServiceCostGuide: GuideArticleData = {
     serviceHref: "/pricing",
     serviceLabel: "View Pricing",
   },
-  schemaAbout: { type: "Service", name: "Hotel Answering Service" },
+  schemaAbout: { type: "Service", name: "Hotel Answering Service", url: "https://guestsquad.com/services/hotel-answering-service", serviceType: "Hotel Answering Service", areaServed: "Worldwide" },
   schemaMentions: [
     { type: "Thing", name: "Hotel Answering Service Cost" },
     { type: "Thing", name: "Flat Monthly Pricing" },

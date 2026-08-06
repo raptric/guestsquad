@@ -117,7 +117,7 @@ export type ResourceArticleData = {
   };
   inlineAsset?: ArticleAssetCta;
   assetCta?: ArticleAssetCta;
-  schemaAbout?: { type: string; name: string };
+  schemaAbout?: { type: string; name: string; url?: string; serviceType?: string; areaServed?: string };
   schemaMentions?: { type: string; name: string }[];
 };
 
@@ -483,7 +483,7 @@ export type GuideArticleData = {
   relatedResourceSlugs?: string[];
   inlineAsset?: ArticleAssetCta;
   assetCta?: ArticleAssetCta;
-  schemaAbout?: { type: string; name: string };
+  schemaAbout?: { type: string; name: string; url?: string; serviceType?: string; areaServed?: string };
   schemaMentions?: { type: string; name: string }[];
 };
 

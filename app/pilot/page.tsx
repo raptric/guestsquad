@@ -110,28 +110,24 @@ const PILOT_STEPS = [
 
 const FAQS = [
   {
-    q: "What is included in the 2-week pilot?",
-    a: "The pilot is designed to validate fit, channel coverage, escalation rules, and guest communication workflows before ongoing month-to-month coverage begins. Pilot terms are confirmed during qualification.",
+    q: "Who qualifies for a 2-week pilot?",
+    a: "Independent hotels, boutique hotels, inns, serviced apartments, aparthotels, resorts, and short-term rental operators with guest communication gaps across calls, texts, OTA inboxes, after-hours support, or front desk overflow may qualify. Qualification is confirmed during a short call before the pilot begins.",
   },
   {
-    q: "What properties qualify for a pilot?",
-    a: "Independent hotels, boutique hotels, inns, serviced apartments, aparthotels, resorts, and short-term rental operators with guest communication gaps across calls, texts, OTA inboxes, after-hours support, or front desk overflow may qualify.",
+    q: "Is the pilot no-obligation?",
+    a: "Yes. The 2-week pilot carries no commitment to continue. After the pilot, you decide whether to move to month-to-month coverage. There is no long-term contract — ongoing coverage runs 30 days' written notice unless otherwise agreed.",
   },
   {
-    q: "What channels can Guest Squad cover?",
-    a: "Guest Squad can support reservation calls, guest texts, OTA inboxes, email, WhatsApp/SMS, Cloudbeds or channel manager messages, Akia, and other approved guest communication tools depending on the agreed scope.",
+    q: "What happens after the pilot?",
+    a: "At the end of the 2-week pilot you receive a report covering calls handled, messages, escalations, and patterns across your agreed channels. You then decide whether to continue month-to-month. Most properties extend coverage; some adjust scope first. Either way, there is no obligation to continue.",
   },
   {
-    q: "Do we need to sign a long-term contract?",
-    a: "No. After the pilot, ongoing coverage is month-to-month with 30 days' written notice unless otherwise agreed.",
+    q: "Which channels can Guest Squad cover?",
+    a: "Guest Squad can support reservation calls, guest texts, OTA inboxes (Booking.com, Expedia, Airbnb), email, WhatsApp/SMS, Cloudbeds or channel manager messages, Akia, and other approved guest communication tools. Final channels are agreed before the pilot begins.",
   },
   {
-    q: "How quickly can coverage start?",
-    a: "Timing depends on scope, access, and property briefing. Guest Squad reviews your property details, escalation rules, guest FAQs, and channel access before coverage begins.",
-  },
-  {
-    q: "Will guests know they are speaking with Guest Squad?",
-    a: "Guest Squad follows the approved property tone, workflows, and escalation rules. The goal is to support the guest experience as an extension of the property's team.",
+    q: "Do we need to change our PMS or phone system?",
+    a: "No. Guest Squad works with your existing setup. The property briefing documents your current systems — rates, room types, escalation contacts, channel access — and coverage begins without requiring changes to your PMS, phone system, or booking engine.",
   },
 ];
 
@@ -166,6 +162,36 @@ export default function PilotPage() {
               "See if your property qualifies for a 2-week Guest Squad pilot covering reservation calls, guest texts, OTA inboxes, and after-hours guest communication.",
             isPartOf: { "@type": "WebSite", "@id": `${SITE.url}/#website` },
             about: { "@type": "ProfessionalService", "@id": `${SITE.url}/#organization` },
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "@id": `${SITE.url}/pilot#service`,
+            name: "2-Week Guest Coverage Pilot",
+            serviceType: "Hotel Guest Operations Pilot",
+            description:
+              "A no-obligation 2-week pilot covering reservation calls, guest texts, OTA inboxes, and after-hours support for independent hotels and short-term rental operators. Scope agreed before coverage begins.",
+            url: `${SITE.url}/pilot`,
+            provider: {
+              "@type": "ProfessionalService",
+              "@id": `${SITE.url}/#organization`,
+              name: SITE.brand,
+              url: SITE.url,
+            },
+            areaServed: "Worldwide",
+            audience: {
+              "@type": "Audience",
+              audienceType: "Independent hotels, boutique properties, serviced apartments, and short-term rental operators",
+            },
+            offers: {
+              "@type": "Offer",
+              name: "2-Week No-Obligation Pilot",
+              description: "2-week pilot review with no long-term contract required. Month-to-month coverage available after the pilot.",
+              url: `${SITE.url}/pilot`,
+              availability: "https://schema.org/InStock",
+              areaServed: "Worldwide",
+              seller: { "@type": "Organization", "@id": `${SITE.url}/#organization` },
+            },
           },
         ]}
       />

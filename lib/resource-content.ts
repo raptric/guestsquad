@@ -726,10 +726,11 @@ export const overflowSupportGuide: GuideArticleData = {
   title: "Hotel Front Desk Overflow Support: When to Outsource and What to Keep In-House",
   description:
     "How overflow call coverage actually works, the signs your property needs it, and how to set it up without disrupting the team you already have.",
-  metaTitle: "Hotel Front Desk Overflow Support Guide",
+  metaTitle: "Hotel Front Desk Overflow Support: When and How to Outsource",
   metaDescription:
     "When to add overflow phone support at your hotel, how it works in practice, and how to set it up alongside your existing front desk team.",
   datePublished: "2026-06-29",
+  dateModified: "2026-08-07",
   intro: [
     "Overflow support isn't the same as replacing your front desk. It's coverage that only activates when your team genuinely can't get to the phone. This guide covers when it makes sense, how it actually works day to day, and what to keep in-house regardless.",
   ],
@@ -753,7 +754,7 @@ export const overflowSupportGuide: GuideArticleData = {
     {
       heading: "How Overflow Coverage Actually Works",
       paragraphs: [
-        "Calls route to your existing front desk first. Only calls that aren't picked up within a set number of rings, or calls placed during specific hours you define, route to the overflow team instead. Your in-house staff keeps full control of the calls they can take; overflow exists purely to catch what they can't.",
+        "Calls route to your existing front desk first. Only calls that aren't picked up within a set number of rings, or calls placed during specific hours you define, route to the [overflow team](/services/hotel-answering-service) instead. Your in-house staff keeps full control of the calls they can take; overflow exists purely to catch what they can't.",
       ],
     },
     {
@@ -770,15 +771,35 @@ export const overflowSupportGuide: GuideArticleData = {
     },
     {
       q: "How is overflow priced differently from full coverage?",
-      a: "Overflow is typically lower-volume than full coverage, so it's usually the more affordable starting point; see Pricing for how plans scale.",
+      a: "Overflow is typically lower-volume than full coverage, so it's usually the more affordable starting point. There is no setup fee to get started. [Book a coverage review](/pilot) for a quote scoped to your property.",
     },
     {
       q: "Can overflow handle reservations, or just take messages?",
-      a: "It can handle full reservation calls, not just message-taking; see Reservation Support for what's included.",
+      a: "It can handle full reservation calls, not just message-taking. Agents are briefed on your rates, room types, and policies before going live.",
     },
     {
       q: "How quickly can overflow coverage go live?",
       a: "Typical onboarding is about five business days from your discovery call to go-live.",
+    },
+    {
+      q: "What is hotel front desk overflow support?",
+      a: "Hotel front desk overflow support routes calls to a trained external team only when your in-house staff can't get to the phone — during check-in rushes, peak periods, or when a single agent is covering the desk alone. Your team handles everything it can; overflow catches the rest. [See how it works](/services/hotel-answering-service).",
+    },
+    {
+      q: "When should a hotel consider overflow call coverage?",
+      a: "When calls are regularly going unanswered during check-in and check-out peaks, when voicemails pile up faster than your team can return them, or when front desk staff describe the phone as a distraction from in-person guests rather than a manageable part of the job.",
+    },
+    {
+      q: "Can overflow coverage handle after-hours calls too?",
+      a: "Yes. Many properties start with overflow during peak daytime hours and expand to overnight and weekend coverage as needed. The two can run from the same setup with different routing rules for each window.",
+    },
+    {
+      q: "How is hotel overflow support different from a full answering service?",
+      a: "Overflow is the lighter option — your team handles the majority of calls as normal and outside coverage only catches what they miss. A full hotel answering service routes all calls to the external team. Most clients start with overflow and expand only if the data shows it's worth it.",
+    },
+    {
+      q: "Will overflow agents know our rates and property details?",
+      a: "Yes. Agents are briefed on your specific property before handling any call — rates, room types, policies, and escalation contacts — so the experience is consistent with your own front desk.",
     },
   ],
   relatedServiceSlugs: ["hotel-answering-service", "reservation-support", "after-hours-support"],
@@ -797,6 +818,17 @@ export const overflowSupportGuide: GuideArticleData = {
     serviceHref: "/services/hotel-answering-service",
     serviceLabel: "Hotel Answering Service",
   },
+  schemaAbout: { type: "Service", name: "Hotel Answering Service", url: "https://guestsquad.com/services/hotel-answering-service", serviceType: "Hotel Front Desk Overflow Support", areaServed: "Worldwide" },
+  schemaMentions: [
+    { type: "Thing", name: "Hotel Front Desk Call Overflow" },
+    { type: "Thing", name: "Peak Period Hotel Coverage" },
+    { type: "Thing", name: "Hotel Check-In Rush Coverage" },
+    { type: "Thing", name: "Outsourced Hotel Reception" },
+    { type: "Thing", name: "Hotel Call Routing" },
+    { type: "Thing", name: "Missed Hotel Calls" },
+    { type: "Thing", name: "Hotel Reservation Overflow" },
+    { type: "Thing", name: "Hotel Voicemail Alternative" },
+  ],
 };
 
 export const otaInboxChecklistGuide: GuideArticleData = {

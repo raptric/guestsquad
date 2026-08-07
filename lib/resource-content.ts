@@ -947,10 +947,11 @@ export const messagingSopGuide: GuideArticleData = {
   title: "Hotel Guest Messaging SOP Template",
   description:
     "What to include in a guest messaging SOP: response-time targets, escalation rules, tone guidelines, and a sample outline to start from.",
-  metaTitle: "Hotel Guest Messaging SOP Template",
+  metaTitle: "Hotel Guest Messaging SOP: Free Template and Checklist",
   metaDescription:
     "What a hotel guest messaging SOP should include, plus a sample outline covering response times, escalation rules, and tone guidelines.",
   datePublished: "2026-06-29",
+  dateModified: "2026-08-07",
   intro: [
     "Most hotels handle guest messages on instinct rather than a written standard. That works fine until a busy week, a new hire, or an outsourced team needs to step in and there's nothing to brief them on. A short, specific SOP fixes that without becoming bureaucracy nobody reads.",
   ],
@@ -958,7 +959,7 @@ export const messagingSopGuide: GuideArticleData = {
     {
       heading: "Why Guest Messaging Needs a Written SOP",
       paragraphs: [
-        "Without one, tone and response quality vary by whoever happens to answer, response times aren't tracked against any target, and anyone new (a hire, a temp, or an outsourced team) has nothing concrete to work from beyond \"use your judgment.\" A working SOP doesn't need to be long; it needs to answer the questions that actually come up.",
+        "Without one, tone and response quality vary by whoever happens to answer, response times aren't tracked against any target, and anyone new (a hire, a temp, or an outsourced [guest messaging](/services/guest-messaging) team) has nothing concrete to work from beyond \"use your judgment.\" A working SOP doesn't need to be long; it needs to answer the questions that actually come up.",
       ],
     },
     {
@@ -1006,7 +1007,27 @@ export const messagingSopGuide: GuideArticleData = {
     },
     {
       q: "Does this cover OTA messaging too, or just direct guest messages?",
-      a: "A complete SOP should cover every channel, including OTA inboxes; see OTA Inbox Management and Guest Messaging for how each channel is handled day to day.",
+      a: "A complete SOP should cover every channel, including OTA inboxes. [See how OTA inbox management works](/services/ota-inbox-management) day to day.",
+    },
+    {
+      q: "What is a hotel guest messaging SOP?",
+      a: "A hotel guest messaging SOP is a written standard that defines how your property handles every guest message — which channels are covered, who responds, how fast, in what tone, and what gets escalated. It ensures consistent guest communication whether your in-house team or an outsourced partner is handling messages. [Download the free template](/resources/hotel-guest-messaging-sop-template) to build yours.",
+    },
+    {
+      q: "What should a hotel messaging response time target be?",
+      a: "A practical standard: SMS and WhatsApp within 15 minutes, OTA messages within 30 minutes for pre-booking inquiries, email within two hours. The most important target is pre-booking — an unanswered question at that stage often results in the guest booking a competitor instead.",
+    },
+    {
+      q: "How do we handle guest messages overnight without staff?",
+      a: "Two options: an outsourced team covering overnight messaging on your behalf, or an auto-reply that sets expectations and promises a human follow-up by a specific time. The first protects pre-booking conversion; the second is better than silence but loses bookings to faster competitors. [Book a coverage review](/pilot) to see which fits your property.",
+    },
+    {
+      q: "How much does hotel guest messaging support cost?",
+      a: "There is no setup fee to get started. Coverage is scoped to your message volume and channels. [Book a coverage review](/pilot) for a quote tailored to your property.",
+    },
+    {
+      q: "Can one team handle SMS, WhatsApp, email, and OTA messages together?",
+      a: "Yes. Guest Squad covers all messaging channels from a single point of coverage — SMS, WhatsApp, email, and OTA inboxes — so your guests get a consistent response regardless of which channel they use.",
     },
   ],
   relatedServiceSlugs: ["guest-messaging", "ota-inbox-management"],
@@ -1025,6 +1046,17 @@ export const messagingSopGuide: GuideArticleData = {
     serviceHref: "/services/guest-messaging",
     serviceLabel: "Guest Messaging Service",
   },
+  schemaAbout: { type: "Service", name: "Hotel Guest Messaging", url: "https://guestsquad.com/services/guest-messaging", serviceType: "Hotel Guest Messaging Support", areaServed: "Worldwide" },
+  schemaMentions: [
+    { type: "Thing", name: "Hotel Guest Messaging SOP" },
+    { type: "Thing", name: "Guest Response Time Standard" },
+    { type: "Thing", name: "Hotel SMS Support" },
+    { type: "Thing", name: "WhatsApp Hotel Messaging" },
+    { type: "Thing", name: "OTA Inbox Response Guidelines" },
+    { type: "Thing", name: "Hotel Brand Voice Guidelines" },
+    { type: "Thing", name: "Guest Escalation Rules" },
+    { type: "Thing", name: "Hotel Messaging Channels" },
+  ],
 };
 
 export const RESOURCE_ARTICLES: Record<string, ResourceArticleData> = {

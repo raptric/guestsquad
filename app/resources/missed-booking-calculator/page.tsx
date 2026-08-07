@@ -8,7 +8,7 @@ import { Section, SectionHeading } from "@/components/site/section";
 import { Breadcrumbs } from "@/components/site/breadcrumbs";
 import { CtaSection } from "@/components/site/cta-section";
 import { JsonLd } from "@/components/site/json-ld";
-import { faqSchema, breadcrumbSchema } from "@/lib/seo";
+import { faqSchema, breadcrumbSchema, webPageSchema } from "@/lib/seo";
 
 const FAQS = [
   {
@@ -57,6 +57,21 @@ export default function CalculatorPage() {
     <>
       <JsonLd
         data={[
+          webPageSchema({
+            name: "Missed Booking Revenue Calculator | Guest Squad",
+            description: "Estimate how much revenue unanswered reservation calls are costing your hotel each month. Adjust call volume, booking value, and conversion rate.",
+            path: "/resources/missed-booking-calculator",
+            about: { "@type": "ProfessionalService", "@id": "https://guestsquad.com/#organization" },
+            mentions: [
+              { "@type": "Accommodation", "name": "Hotel" },
+              { "@type": "Accommodation", "name": "Boutique Hotel" },
+              { "@type": "Accommodation", "name": "Independent Hotel" },
+              { "@type": "Accommodation", "name": "Vacation Rental" },
+              { "@type": "Thing", "name": "Hotel Answering Service" },
+              { "@type": "Thing", "name": "After-Hours Hotel Support" },
+              { "@type": "Thing", "name": "Hotel Front Desk Coverage" },
+            ],
+          }),
           breadcrumbSchema([
             { name: "Home", path: "/" },
             { name: "Resources", path: "/resources" },

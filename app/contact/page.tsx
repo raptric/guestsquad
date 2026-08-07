@@ -5,7 +5,7 @@ import { CalendlyInlineWidget } from "@/components/site/calendly-inline-widget";
 import { Breadcrumbs } from "@/components/site/breadcrumbs";
 import { JsonLd } from "@/components/site/json-ld";
 import { Section, SectionHeading } from "@/components/site/section";
-import { buildMetadata, breadcrumbSchema, faqSchema, contactPageSchema } from "@/lib/seo";
+import { buildMetadata, breadcrumbSchema, faqSchema, contactPageSchema, webPageSchema, organizationSchema } from "@/lib/seo";
 import { AssetBlock } from "@/components/site/asset-block";
 import { BoFuTrustBlock } from "@/components/site/bofu-trust-block";
 import { PostBookingSteps } from "@/components/site/post-booking-steps";
@@ -49,6 +49,25 @@ export default function ContactPage() {
     <>
       <JsonLd
         data={[
+          organizationSchema(),
+          webPageSchema({
+            name: "Contact Guest Squad | Book a Coverage Review",
+            description: "Book a 30-minute coverage review or send your property details. Guest Squad responds within one business day.",
+            path: "/contact",
+            about: { "@type": "ProfessionalService", "@id": "https://guestsquad.com/#organization" },
+            mentions: [
+              { "@type": "Accommodation", "name": "Hotel" },
+              { "@type": "Accommodation", "name": "Boutique Hotel" },
+              { "@type": "Accommodation", "name": "Independent Hotel" },
+              { "@type": "Accommodation", "name": "Serviced Apartment" },
+              { "@type": "Accommodation", "name": "Vacation Rental" },
+              { "@type": "Organization", "name": "Booking.com" },
+              { "@type": "Organization", "name": "Expedia" },
+              { "@type": "Organization", "name": "Airbnb" },
+              { "@type": "Thing", "name": "Hotel Answering Service" },
+              { "@type": "Thing", "name": "Hotel Guest Operations" },
+            ],
+          }),
           breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Contact", path: "/contact" }]),
           faqSchema(FAQS),
           contactPageSchema(),

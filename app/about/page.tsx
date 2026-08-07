@@ -7,7 +7,7 @@ import { Guarantees } from "@/components/site/guarantees";
 import { CtaSection } from "@/components/site/cta-section";
 import { Breadcrumbs } from "@/components/site/breadcrumbs";
 import { JsonLd } from "@/components/site/json-ld";
-import { buildMetadata, breadcrumbSchema, faqSchema } from "@/lib/seo";
+import { buildMetadata, breadcrumbSchema, faqSchema, webPageSchema, organizationSchema } from "@/lib/seo";
 import { SITE } from "@/lib/site-data";
 
 export const metadata: Metadata = buildMetadata({
@@ -45,6 +45,31 @@ export default function AboutPage() {
     <>
       <JsonLd
         data={[
+          organizationSchema(),
+          webPageSchema({
+            name: "About Guest Squad | Hotel Guest Operations",
+            description: "Guest Squad is a managed guest operations company providing 24/7 human support for hotels, boutique properties, resorts, and short-term rental operators.",
+            path: "/about",
+            about: { "@type": "ProfessionalService", "@id": "https://guestsquad.com/#organization" },
+            mentions: [
+              { "@type": "Accommodation", "name": "Hotel" },
+              { "@type": "Accommodation", "name": "Boutique Hotel" },
+              { "@type": "Accommodation", "name": "Chain Hotel" },
+              { "@type": "Accommodation", "name": "Independent Hotel" },
+              { "@type": "Accommodation", "name": "Serviced Apartment" },
+              { "@type": "Accommodation", "name": "Airbnb Apartment" },
+              { "@type": "Accommodation", "name": "Vacation Rental" },
+              { "@type": "Organization", "name": "Booking.com" },
+              { "@type": "Organization", "name": "Expedia" },
+              { "@type": "Organization", "name": "Airbnb" },
+              { "@type": "SoftwareApplication", "name": "Opera PMS" },
+              { "@type": "SoftwareApplication", "name": "Cloudbeds" },
+              { "@type": "Thing", "name": "Hotel Guest Operations" },
+              { "@type": "Thing", "name": "OTA Inbox Management" },
+              { "@type": "Thing", "name": "After-Hours Hotel Support" },
+              { "@type": "Thing", "name": "Hotel Answering Service" },
+            ],
+          }),
           breadcrumbSchema([{ name: "Home", path: "/" }, { name: "About", path: "/about" }]),
           faqSchema(ABOUT_FAQS),
         ]}

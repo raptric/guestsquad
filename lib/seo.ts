@@ -233,7 +233,7 @@ export function serviceSchema({
   };
 }
 
-/** WebPage schema — ties service page entities together for entity coherence. */
+/** WebPage schema — ties page entities together for entity coherence. */
 export function webPageSchema({
   name,
   description,
@@ -241,13 +241,15 @@ export function webPageSchema({
   primaryImageUrl,
   primaryImageAlt,
   mentions,
+  about,
 }: {
   name: string;
   description: string;
   path: string;
-  primaryImageUrl: string;
-  primaryImageAlt: string;
+  primaryImageUrl?: string;
+  primaryImageAlt?: string;
   mentions?: { "@type": string; name: string }[];
+  about?: Record<string, string>;
 }) {
   const url = `${SITE.url}${path}`;
   return {
@@ -258,12 +260,14 @@ export function webPageSchema({
     name,
     description,
     isPartOf: { "@type": "WebSite", "@id": `${SITE.url}/#website` },
-    about: { "@type": "Service", "@id": `${url}#service` },
-    primaryImageOfPage: {
-      "@type": "ImageObject",
-      url: primaryImageUrl,
-      description: primaryImageAlt,
-    },
+    about: about ?? { "@type": "Service", "@id": `${url}#service` },
+    ...(primaryImageUrl && {
+      primaryImageOfPage: {
+        "@type": "ImageObject",
+        url: primaryImageUrl,
+        description: primaryImageAlt,
+      },
+    }),
     ...(mentions && mentions.length > 0 && { mentions }),
     speakable: {
       "@type": "SpeakableSpecification",

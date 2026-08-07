@@ -14,7 +14,7 @@ import { PlatformLogos } from "@/components/site/platform-logos";
 import { PricingCards } from "@/components/site/pricing-cards";
 import { CtaSection } from "@/components/site/cta-section";
 import { SERVICES } from "@/lib/site-data";
-import { buildMetadata, faqSchema } from "@/lib/seo";
+import { buildMetadata, faqSchema, organizationSchema, websiteSchema, webPageSchema } from "@/lib/seo";
 import { JsonLd } from "@/components/site/json-ld";
 import { AssetBlock } from "@/components/site/asset-block";
 import { ClientTrustBlock } from "@/components/site/client-trust-block";
@@ -60,7 +60,40 @@ const HOME_FAQS = [
 export default function HomePage() {
   return (
     <>
-      <JsonLd data={faqSchema(HOME_FAQS)} />
+      <JsonLd
+        data={[
+          organizationSchema(),
+          websiteSchema(),
+          webPageSchema({
+            name: "Hotel Answering Service & 24/7 Guest Support | Guest Squad",
+            description: "Guest Squad provides 24/7 hotel guest support, reservation calls, OTA inbox management, messaging, and after-hours front desk coverage.",
+            path: "",
+            about: { "@type": "ProfessionalService", "@id": "https://guestsquad.com/#organization" },
+            mentions: [
+              { "@type": "Organization", "name": "Booking.com" },
+              { "@type": "Organization", "name": "Expedia" },
+              { "@type": "Organization", "name": "Airbnb" },
+              { "@type": "Organization", "name": "Vrbo" },
+              { "@type": "SoftwareApplication", "name": "Opera PMS" },
+              { "@type": "SoftwareApplication", "name": "Cloudbeds" },
+              { "@type": "SoftwareApplication", "name": "Mews" },
+              { "@type": "SoftwareApplication", "name": "Little Hotelier" },
+              { "@type": "Accommodation", "name": "Hotel" },
+              { "@type": "Accommodation", "name": "Boutique Hotel" },
+              { "@type": "Accommodation", "name": "Chain Hotel" },
+              { "@type": "Accommodation", "name": "Independent Hotel" },
+              { "@type": "Accommodation", "name": "Serviced Apartment" },
+              { "@type": "Accommodation", "name": "Airbnb Apartment" },
+              { "@type": "Accommodation", "name": "Vacation Rental" },
+              { "@type": "Thing", "name": "Hotel Front Desk Coverage" },
+              { "@type": "Thing", "name": "OTA Inbox Management" },
+              { "@type": "Thing", "name": "After-Hours Hotel Support" },
+              { "@type": "Thing", "name": "Direct Hotel Bookings" },
+            ],
+          }),
+          faqSchema(HOME_FAQS),
+        ]}
+      />
       {/* HERO */}
       <section className="border-b border-line bg-paper">
         <div className="container grid items-center gap-14 py-20 md:grid-cols-2 md:py-28">

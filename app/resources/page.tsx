@@ -7,7 +7,7 @@ import { Breadcrumbs } from "@/components/site/breadcrumbs";
 import { JsonLd } from "@/components/site/json-ld";
 import { CtaSection } from "@/components/site/cta-section";
 import { DownloadGate } from "@/components/site/download-gate";
-import { buildMetadata, breadcrumbSchema, faqSchema } from "@/lib/seo";
+import { buildMetadata, breadcrumbSchema, faqSchema, webPageSchema, organizationSchema } from "@/lib/seo";
 import { RESOURCES } from "@/lib/resource-content";
 import { Calculator, FileText, ClipboardList, BarChart2, ArrowRight } from "lucide-react";
 
@@ -48,6 +48,26 @@ export default function ResourcesPage() {
     <>
       <JsonLd
         data={[
+          organizationSchema(),
+          webPageSchema({
+            name: "Hotel Answering Service Guides & Comparisons | Guest Squad",
+            description: "Guides and comparisons on hotel answering services, AI voice agents, and call centers, to help you evaluate what's actually right for your property.",
+            path: "/resources",
+            about: { "@type": "ProfessionalService", "@id": "https://guestsquad.com/#organization" },
+            mentions: [
+              { "@type": "Organization", "name": "Booking.com" },
+              { "@type": "Organization", "name": "Expedia" },
+              { "@type": "Organization", "name": "Airbnb" },
+              { "@type": "Accommodation", "name": "Hotel" },
+              { "@type": "Accommodation", "name": "Boutique Hotel" },
+              { "@type": "Accommodation", "name": "Serviced Apartment" },
+              { "@type": "Accommodation", "name": "Vacation Rental" },
+              { "@type": "Thing", "name": "Hotel Answering Service" },
+              { "@type": "Thing", "name": "Hotel Guest Operations" },
+              { "@type": "Thing", "name": "After-Hours Hotel Support" },
+              { "@type": "Thing", "name": "OTA Inbox Management" },
+            ],
+          }),
           breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Resources", path: "/resources" }]),
           faqSchema(RESOURCES_FAQS),
         ]}

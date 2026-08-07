@@ -6,7 +6,7 @@ import { PricingCards } from "@/components/site/pricing-cards";
 import { CtaSection } from "@/components/site/cta-section";
 import { Breadcrumbs } from "@/components/site/breadcrumbs";
 import { JsonLd } from "@/components/site/json-ld";
-import { buildMetadata, breadcrumbSchema, faqSchema } from "@/lib/seo";
+import { buildMetadata, breadcrumbSchema, faqSchema, webPageSchema, organizationSchema } from "@/lib/seo";
 import { AssetBlock } from "@/components/site/asset-block";
 import { BoFuTrustBlock } from "@/components/site/bofu-trust-block";
 import { PostBookingSteps } from "@/components/site/post-booking-steps";
@@ -92,6 +92,29 @@ export default function PricingPage() {
     <>
       <JsonLd
         data={[
+          organizationSchema(),
+          webPageSchema({
+            name: "Hotel Guest Support Pricing | Plans & Pricing | Guest Squad",
+            description: "Starter, Growth, and Custom guest operations plans for hotels, resorts, serviced apartments, and Airbnb operators. Get a quote based on your property.",
+            path: "/pricing",
+            about: { "@type": "ProfessionalService", "@id": "https://guestsquad.com/#organization" },
+            mentions: [
+              { "@type": "Accommodation", "name": "Hotel" },
+              { "@type": "Accommodation", "name": "Boutique Hotel" },
+              { "@type": "Accommodation", "name": "Serviced Apartment" },
+              { "@type": "Accommodation", "name": "Airbnb Apartment" },
+              { "@type": "Accommodation", "name": "Vacation Rental" },
+              { "@type": "Organization", "name": "Booking.com" },
+              { "@type": "Organization", "name": "Expedia" },
+              { "@type": "Organization", "name": "Airbnb" },
+              { "@type": "SoftwareApplication", "name": "Opera PMS" },
+              { "@type": "SoftwareApplication", "name": "Cloudbeds" },
+              { "@type": "Thing", "name": "Hotel Answering Service" },
+              { "@type": "Thing", "name": "Hotel Guest Operations" },
+              { "@type": "Thing", "name": "OTA Inbox Management" },
+              { "@type": "Thing", "name": "After-Hours Hotel Support" },
+            ],
+          }),
           breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Pricing", path: "/pricing" }]),
           faqSchema(FAQS),
         ]}

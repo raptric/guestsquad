@@ -1,7 +1,7 @@
 ﻿import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 import { Check, ArrowRight, Phone, MessageSquare, Inbox, Users } from "lucide-react";
-import { buildMetadata, breadcrumbSchema, faqSchema } from "@/lib/seo";
+import { buildMetadata, breadcrumbSchema, faqSchema, webPageSchema, organizationSchema } from "@/lib/seo";
 import { JsonLd } from "@/components/site/json-ld";
 import { Section, SectionHeading } from "@/components/site/section";
 import { CalendlyPopupButton } from "@/components/site/calendly-popup-button";
@@ -147,22 +147,33 @@ export default function PilotPage() {
     <>
       <JsonLd
         data={[
+          organizationSchema(),
+          webPageSchema({
+            name: "2-Week Guest Coverage Pilot for Hotels | Guest Squad",
+            description: "Start with a 2-week pilot before monthly coverage. Guest Squad reviews your call gaps, OTA inboxes, and after-hours needs and recommends a plan that fits.",
+            path: "/pilot",
+            about: { "@type": "ProfessionalService", "@id": "https://guestsquad.com/#organization" },
+            mentions: [
+              { "@type": "Accommodation", "name": "Hotel" },
+              { "@type": "Accommodation", "name": "Boutique Hotel" },
+              { "@type": "Accommodation", "name": "Independent Hotel" },
+              { "@type": "Accommodation", "name": "Serviced Apartment" },
+              { "@type": "Accommodation", "name": "Airbnb Apartment" },
+              { "@type": "Accommodation", "name": "Vacation Rental" },
+              { "@type": "Organization", "name": "Booking.com" },
+              { "@type": "Organization", "name": "Expedia" },
+              { "@type": "Organization", "name": "Airbnb" },
+              { "@type": "SoftwareApplication", "name": "Cloudbeds" },
+              { "@type": "Thing", "name": "Hotel Answering Service" },
+              { "@type": "Thing", "name": "After-Hours Hotel Support" },
+              { "@type": "Thing", "name": "Hotel Front Desk Coverage" },
+            ],
+          }),
           breadcrumbSchema([
             { name: "Home", path: "/" },
             { name: "2-Week Pilot", path: "/pilot" },
           ]),
           faqSchema(FAQS),
-          {
-            "@context": "https://schema.org",
-            "@type": "WebPage",
-            "@id": `${SITE.url}/pilot#webpage`,
-            url: `${SITE.url}/pilot`,
-            name: "2-Week Guest Coverage Pilot for Hotels | Guest Squad",
-            description:
-              "See if your property qualifies for a 2-week Guest Squad pilot covering reservation calls, guest texts, OTA inboxes, and after-hours guest communication.",
-            isPartOf: { "@type": "WebSite", "@id": `${SITE.url}/#website` },
-            about: { "@type": "ProfessionalService", "@id": `${SITE.url}/#organization` },
-          },
           {
             "@context": "https://schema.org",
             "@type": "Service",

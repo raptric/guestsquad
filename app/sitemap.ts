@@ -21,24 +21,24 @@ const ASSET_ROUTES = [
 // Update these dates whenever meaningful content changes are made to a page
 const LAST_MODIFIED: Record<string, string> = {
   // Static pages
-  "": "2026-08-06",
-  "/pilot": "2026-08-06",
-  "/services": "2026-08-06",
-  "/pricing": "2026-08-06",
-  "/contact": "2026-08-06",
-  "/resources": "2026-08-04",
-  "/about": "2026-08-06",
+  "": "2026-08-08",
+  "/pilot": "2026-08-08",
+  "/services": "2026-08-08",
+  "/pricing": "2026-08-08",
+  "/contact": "2026-08-08",
+  "/resources": "2026-08-08",
+  "/about": "2026-08-08",
   "/privacy-policy": "2026-08-06",
   "/terms-of-service": "2026-06-26",
-  // Service pages — updated with PDF download blocks
-  "/services/hotel-answering-service": "2026-08-06",
-  "/services/reservation-support": "2026-08-06",
-  "/services/guest-messaging": "2026-08-06",
-  "/services/ota-inbox-management": "2026-08-06",
-  "/services/after-hours-support": "2026-08-06",
-  "/services/back-office-operations": "2026-08-06",
-  "/services/airbnb-guest-support": "2026-08-06",
-  "/services/vacation-rental-answering-service": "2026-08-06",
+  // Service pages — schema enriched with about, serviceOutput, mentions
+  "/services/hotel-answering-service": "2026-08-08",
+  "/services/reservation-support": "2026-08-08",
+  "/services/guest-messaging": "2026-08-08",
+  "/services/ota-inbox-management": "2026-08-08",
+  "/services/after-hours-support": "2026-08-08",
+  "/services/back-office-operations": "2026-08-08",
+  "/services/airbnb-guest-support": "2026-08-08",
+  "/services/vacation-rental-answering-service": "2026-08-08",
   // Resource articles — updated with inline PDF hooks today
   "/resources/hotel-answering-service-vs-ai-voice": "2026-08-07",
   "/resources/hotel-answering-service-vs-call-center": "2026-08-07",
@@ -47,7 +47,7 @@ const LAST_MODIFIED: Record<string, string> = {
   "/resources/hotel-front-desk-overflow-support": "2026-08-07",
   "/resources/booking-com-message-support": "2026-08-07",
   "/resources/hotel-guest-messaging-sop-template": "2026-08-07",
-  "/resources/missed-booking-calculator": "2026-08-06",
+  "/resources/missed-booking-calculator": "2026-08-08",
 };
 
 export default function sitemap(): MetadataRoute.Sitemap {

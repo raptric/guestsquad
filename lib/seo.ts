@@ -190,10 +190,14 @@ export function serviceSchema({
   name,
   description,
   path,
+  about,
+  serviceOutput,
 }: {
   name: string;
   description: string;
   path: string;
+  about?: { "@type": string; name: string };
+  serviceOutput?: string;
 }) {
   return {
     "@context": "https://schema.org",
@@ -203,6 +207,8 @@ export function serviceSchema({
     name,
     description,
     url: `${SITE.url}${path}`,
+    ...(about && { about }),
+    ...(serviceOutput && { serviceOutput }),
     provider: {
       "@type": "ProfessionalService",
       "@id": `${SITE.url}/#organization`,
@@ -234,12 +240,14 @@ export function webPageSchema({
   path,
   primaryImageUrl,
   primaryImageAlt,
+  mentions,
 }: {
   name: string;
   description: string;
   path: string;
   primaryImageUrl: string;
   primaryImageAlt: string;
+  mentions?: { "@type": string; name: string }[];
 }) {
   const url = `${SITE.url}${path}`;
   return {
@@ -256,6 +264,7 @@ export function webPageSchema({
       url: primaryImageUrl,
       description: primaryImageAlt,
     },
+    ...(mentions && mentions.length > 0 && { mentions }),
     speakable: {
       "@type": "SpeakableSpecification",
       cssSelector: ["h1", "h2", ".answer-block"],

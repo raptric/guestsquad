@@ -20,6 +20,9 @@ export type ServiceDetailData = {
   eyebrow: string;
   title: string;
   description: string;
+  schemaAbout?: { "@type": string; name: string };
+  schemaServiceOutput?: string;
+  schemaMentions?: { "@type": string; name: string }[];
   introHeading?: string;
   answerBlock: string;
   image: { src: string; alt: string };
@@ -56,13 +59,20 @@ export function ServiceDetail({ data }: { data: ServiceDetailData }) {
       <ServicePageViewTracker serviceName={data.slug} />
       <JsonLd
         data={[
-          serviceSchema({ name: data.eyebrow, description: data.description, path }),
+          serviceSchema({
+            name: data.eyebrow,
+            description: data.description,
+            path,
+            about: data.schemaAbout,
+            serviceOutput: data.schemaServiceOutput,
+          }),
           webPageSchema({
             name: data.title,
             description: data.description,
             path,
             primaryImageUrl: data.image.src,
             primaryImageAlt: data.image.alt,
+            mentions: data.schemaMentions,
           }),
           breadcrumbSchema([
             { name: "Home", path: "/" },

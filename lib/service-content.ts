@@ -269,7 +269,7 @@ export const guestMessagingData: ServiceDetailData = {
   faqTitle: "Guest messaging questions, answered.",
   relatedTitle: "Pair messaging support with OTA inbox management and after-hours coverage.",
   comparisonTitle: "Human guest messaging vs auto-replies and slow response times.",
-  comparisonSlugs: ["hotel-answering-service-vs-ai-voice"],
+  comparisonSlugs: ["hotel-answering-service-vs-ai-voice", "hotel-answering-service-vs-call-center"],
   faqs: [
     { q: "How much does hotel guest messaging support cost?", a: "Pricing is quote-based based on your message volume, channels covered, and coverage hours. Guest Squad does not charge per-message rates. The starting point is a 2-week pilot review at /pilot, which maps your actual message types and volumes before recommending a plan." },
     { q: "How quickly can guest messaging support go live?", a: "Most properties go live within 5 business days of signing. Setup covers channel access, brand voice briefing, response guidelines, escalation rules, and agent training on your property." },
@@ -362,7 +362,7 @@ export const otaInboxData: ServiceDetailData = {
   faqTitle: "OTA inbox management questions, answered.",
   relatedTitle: "Pair OTA coverage with reservation support and guest messaging.",
   comparisonTitle: "OTA inbox management vs auto-replies and once-a-day checking.",
-  comparisonSlugs: ["hotel-answering-service-vs-call-center"],
+  comparisonSlugs: ["hotel-answering-service-vs-call-center", "hotel-answering-service-vs-ai-voice"],
   faqs: [
     { q: "How much does OTA inbox management cost?", a: "Pricing depends on how many OTA platforms you use, your monthly message volume, and whether review responses are included. It is quote-based rather than a flat monthly rate. The starting point is a 2-week pilot review at /pilot, which maps your actual OTA message load before recommending a plan." },
     { q: "How quickly can OTA inbox management go live?", a: "Most properties go live within 5 business days. Setup covers OTA platform access, property briefing, response guidelines, and escalation rules for modification requests, disputes, and anything that needs your team's direct involvement." },
@@ -646,7 +646,7 @@ export const airbnbSupportData: ServiceDetailData = {
   faqTitle: "Airbnb guest support questions, answered.",
   relatedTitle: "Pair Airbnb support with vacation rental answering and OTA inbox management.",
   comparisonTitle: "Airbnb guest support vs responding to guests personally at 2am.",
-  comparisonSlugs: ["hotel-answering-service-vs-ai-voice"],
+  comparisonSlugs: ["hotel-answering-service-vs-ai-voice", "hotel-answering-service-vs-call-center"],
   faqs: [
     { q: "How much does Airbnb guest support cost?", a: "Pricing is based on the number of listings you manage and your monthly message volume. It is quote-based rather than a flat per-host rate. The starting point is a coverage review at /pilot, which maps your listing count, message patterns, and response-time gaps before recommending a plan." },
     { q: "How quickly can Airbnb guest support go live?", a: "Most hosts and operators go live within 5 business days of signing. Setup covers listing-specific briefing documents, access configuration, brand voice guidelines, and escalation rules for each property." },

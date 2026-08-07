@@ -40,13 +40,13 @@ const LAST_MODIFIED: Record<string, string> = {
   "/services/airbnb-guest-support": "2026-08-06",
   "/services/vacation-rental-answering-service": "2026-08-06",
   // Resource articles — updated with inline PDF hooks today
-  "/resources/hotel-answering-service-vs-ai-voice": "2026-08-06",
-  "/resources/hotel-answering-service-vs-call-center": "2026-08-06",
-  "/resources/hotel-answering-service-cost": "2026-08-06",
-  "/resources/after-hours-hotel-support-checklist": "2026-08-06",
-  "/resources/hotel-front-desk-overflow-support": "2026-07-27",
-  "/resources/booking-com-message-support": "2026-08-06",
-  "/resources/hotel-guest-messaging-sop-template": "2026-07-27",
+  "/resources/hotel-answering-service-vs-ai-voice": "2026-08-07",
+  "/resources/hotel-answering-service-vs-call-center": "2026-08-07",
+  "/resources/hotel-answering-service-cost": "2026-08-07",
+  "/resources/after-hours-hotel-support-checklist": "2026-08-07",
+  "/resources/hotel-front-desk-overflow-support": "2026-08-07",
+  "/resources/booking-com-message-support": "2026-08-07",
+  "/resources/hotel-guest-messaging-sop-template": "2026-08-07",
   "/resources/missed-booking-calculator": "2026-08-06",
 };
 

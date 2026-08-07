@@ -131,7 +131,7 @@ export const aiVoiceComparison: ResourceArticleData = {
   metaDescription:
     "Compare human hotel answering services with AI voice agents for guest calls, reservations, OTA inboxes, and after-hours support. A practical guide for hotel operators.",
   datePublished: "2026-06-26",
-  dateModified: "2026-08-06",
+  dateModified: "2026-08-07",
   heroPrimaryCta: "Request Pilot Review",
   heroPrimaryHref: "/pilot",
   heroSecondaryCta: "See How It Works",
@@ -301,7 +301,7 @@ export const callCenterComparison: ResourceArticleData = {
   metaDescription:
     "Compare hotel answering service vs call center: training, property knowledge, OTA coverage, reporting, costs, and which fits your hotel best.",
   datePublished: "2026-06-26",
-  dateModified: "2026-08-06",
+  dateModified: "2026-08-07",
   intro: [
     "\"Call center\" and \"hotel answering service\" often get used interchangeably when hotels start shopping for outsourced phone coverage, but the underlying operating models are usually quite different, and that difference shows up on the call itself.",
     "A generic call center is typically built to handle calls for many unrelated industries from a shared agent pool. A [hotel answering service](/services/hotel-answering-service) like Guest Squad is built around one property at a time. Here's where that distinction actually matters.",

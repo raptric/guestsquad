@@ -279,8 +279,8 @@ export const aiVoiceComparison: ResourceArticleData = {
     asset: "sample-weekly-report",
     pdfHref: "/downloads/sample-weekly-report.pdf",
     ctaLabel: "Download Sample Weekly Report",
-    serviceHref: "/services/hotel-answering-service",
-    serviceLabel: "Hotel Answering Service",
+    serviceHref: "/resources/hotel-answering-service-cost",
+    serviceLabel: "How Much Does a Hotel Answering Service Cost?",
   },
   schemaAbout: { type: "Service", name: "Hotel Answering Service", url: "https://guestsquad.com/services/hotel-answering-service", serviceType: "Hotel Answering Service", areaServed: "Worldwide" },
   schemaMentions: [
@@ -499,10 +499,11 @@ export const answeringServiceCostGuide: GuideArticleData = {
   title: "How Much Does a Hotel Answering Service Cost?",
   description:
     "The pricing models hotel answering services actually use, what drives the price up or down, and the hidden costs worth asking about before you sign.",
-  metaTitle: "Hotel Answering Service Cost Guide",
+  metaTitle: "How Much Does a Hotel Answering Service Cost?",
   metaDescription:
     "How hotel answering services price their plans, what drives the cost, and the questions to ask before signing with any provider.",
   datePublished: "2026-08-06",
+  dateModified: "2026-08-07",
   intro: [
     "\"How much does this cost?\" is usually the first question a GM asks, and the hardest one to get a straight answer to. Most providers, including Guest Squad, don't publish flat rates, because the honest answer depends on your volume, channels, and coverage hours.",
     "What most properties find when they run the numbers: a single recovered group booking or a week of captured after-hours reservations covers the monthly cost entirely. The right question is not what the service costs — it is whether it pays for itself on your volume.",
@@ -550,19 +551,39 @@ export const answeringServiceCostGuide: GuideArticleData = {
   faqs: [
     {
       q: "Is there a setup fee?",
-      a: "There is a one-time onboarding fee that covers property briefing, agent training, and go-live setup. It is disclosed during your quote call.",
+      a: "No. Getting started with Guest Squad has no setup fee. [Book a coverage review](/pilot) to see how coverage works for your property.",
+    },
+    {
+      q: "What does the pilot cover?",
+      a: "The pilot scope is agreed with you before it starts — based on your property's channels, call volume, and coverage gaps. [Book a coverage review](/pilot) to walk through what makes sense for your property.",
     },
     {
       q: "Does the price change if our call volume spikes?",
       a: "Plans are scoped to your typical volume range. A sustained increase would mean revisiting the plan together, not a surprise overage charge.",
     },
     {
-      q: "Is the pilot really the full service?",
-      a: "Yes. The pilot runs the full service for your property — not a stripped-down trial version.",
-    },
-    {
       q: "Do you charge per call, per minute, or a flat rate?",
       a: "Plans are scoped around your volume and channels rather than billed per call or per minute; see Pricing for how the three tiers are structured.",
+    },
+    {
+      q: "How much does it cost to outsource hotel front desk calls?",
+      a: "The cost depends on your call volume, coverage hours, and which channels are included. Most properties find that a single recovered group booking or a week of captured after-hours reservations covers the monthly cost entirely.",
+    },
+    {
+      q: "Is a hotel answering service worth the cost?",
+      a: "For most independent hotels and boutique properties, yes — provided your property receives a meaningful volume of inbound calls. The break-even point is usually low: one or two reservation calls captured after hours that would otherwise have gone to voicemail typically covers the monthly cost.",
+    },
+    {
+      q: "How does the cost compare to hiring overnight staff?",
+      a: "Hiring a dedicated overnight position involves salary, benefits, and turnover costs year-round regardless of call volume. An answering service is scoped to your actual volume, so for most independent hotels it is significantly less expensive per answered call than a full overnight hire.",
+    },
+    {
+      q: "What is included in the price — just calls, or messaging too?",
+      a: "It depends on the plan. Some plans cover phone calls only; others include OTA inbox management, SMS, WhatsApp, and email alongside call answering. Guest Squad scopes each plan to the channels you actually need coverage for.",
+    },
+    {
+      q: "Can we start small and expand later?",
+      a: "Yes. Most clients start with after-hours or overflow-only coverage and expand to full-day or multi-channel coverage once they see the results.",
     },
   ],
   relatedServiceSlugs: ["hotel-answering-service", "after-hours-support"],

@@ -615,10 +615,11 @@ export const afterHoursChecklistGuide: GuideArticleData = {
   title: "After-Hours Hotel Front Desk Support: A Practical Checklist",
   description:
     "What a real after-hours setup needs to cover, from overnight calls and night audit phone coverage to emergency escalation, laid out as a working checklist.",
-  metaTitle: "After Hours Hotel Answering Service Checklist",
+  metaTitle: "After-Hours Hotel Front Desk Support Checklist",
   metaDescription:
     "A practical checklist for after-hours hotel front desk and night audit phone coverage, including escalation rules and morning handoff.",
   datePublished: "2026-06-29",
+  dateModified: "2026-08-07",
   intro: [
     "\"After-hours coverage\" means different things to different properties. For some it's just making sure the phone gets answered after 11pm. For others it includes night audit calls, emergency escalation, and a morning handoff report. This checklist breaks down what a complete setup actually covers.",
   ],
@@ -649,7 +650,7 @@ export const afterHoursChecklistGuide: GuideArticleData = {
     {
       heading: "Build vs. Outsource",
       paragraphs: [
-        "Staffing a dedicated overnight position is the traditional fix, but it's expensive for the call volume most independent properties actually get overnight, and turnover on graveyard shifts is high. Outsourced after-hours coverage is typically priced closer to the actual volume of overnight activity, with the same person or team handling it night after night rather than rotating through whoever's on shift.",
+        "Staffing a dedicated overnight position is the traditional fix, but it's expensive for the call volume most independent properties actually get overnight, and turnover on graveyard shifts is high. Outsourced [after-hours hotel support](/services/after-hours-support) is typically priced closer to the actual volume of overnight activity, with the same person or team handling it night after night rather than rotating through whoever's on shift.",
       ],
     },
   ],
@@ -670,6 +671,26 @@ export const afterHoursChecklistGuide: GuideArticleData = {
       q: "How do we know what happened overnight?",
       a: "You receive a daily summary every morning logging every call and message handled, so nothing happens in your guest channels you can't see.",
     },
+    {
+      q: "What is after-hours hotel front desk support?",
+      a: "After-hours hotel front desk support means a trained person covers guest calls and messages through the night and on weekends — handling late check-ins, overnight questions, and escalating genuine emergencies — without you hiring a full overnight shift. [See how it works](/services/after-hours-support).",
+    },
+    {
+      q: "How do I cover my hotel phone overnight without hiring staff?",
+      a: "Outsourced after-hours coverage routes overnight calls to a trained team using your property's procedures and escalation rules. Most properties go live within five business days with no new headcount added.",
+    },
+    {
+      q: "What should hotel night audit phone coverage include?",
+      a: "At minimum: live call answering for billing and late-charge questions, clear escalation rules for genuine emergencies, and a morning summary so your day team knows what happened overnight before their shift starts.",
+    },
+    {
+      q: "How much does after-hours hotel support cost?",
+      a: "There is no setup fee to get started. Coverage is scoped to your overnight call volume and hours. [Book a coverage review](/pilot) for a quote scoped to your property.",
+    },
+    {
+      q: "Can after-hours coverage handle Airbnb and vacation rental properties?",
+      a: "Yes. After-hours support covers short-term rental operators, Airbnb hosts, and serviced apartment operators as well as hotels — handling check-in questions, access issues, and escalations using your listing-specific instructions.",
+    },
   ],
   relatedServiceSlugs: ["after-hours-support", "hotel-answering-service", "back-office-operations"],
   relatedResourceSlugs: ["hotel-front-desk-overflow-support", "hotel-answering-service-vs-ai-voice"],
@@ -687,6 +708,17 @@ export const afterHoursChecklistGuide: GuideArticleData = {
     serviceHref: "/services/after-hours-support",
     serviceLabel: "After-Hours Support",
   },
+  schemaAbout: { type: "Service", name: "After-Hours Hotel Support", url: "https://guestsquad.com/services/after-hours-support", serviceType: "After-Hours Hotel Front Desk Support", areaServed: "Worldwide" },
+  schemaMentions: [
+    { type: "Thing", name: "Hotel Night Audit Phone Coverage" },
+    { type: "Thing", name: "Overnight Hotel Front Desk" },
+    { type: "Thing", name: "Hotel Emergency Escalation" },
+    { type: "Thing", name: "After-Hours Hotel Answering Service" },
+    { type: "Thing", name: "Late Check-In Support" },
+    { type: "Thing", name: "Hotel Voicemail Alternative" },
+    { type: "Thing", name: "Overnight Guest Calls" },
+    { type: "Thing", name: "Weekend Hotel Coverage" },
+  ],
 };
 
 export const overflowSupportGuide: GuideArticleData = {

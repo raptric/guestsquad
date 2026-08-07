@@ -20,7 +20,7 @@ export function CampaignFooter() {
             </p>
           </div>
           <div className="flex flex-col gap-4 sm:items-end">
-            <CalendlyPopupButton variant="gold" size="sm">
+            <CalendlyPopupButton variant="gold" size="sm" ctaLocation="campaign_footer">
               Book a Coverage Review
             </CalendlyPopupButton>
             <div className="flex flex-wrap gap-x-5 gap-y-1.5 text-xs text-ink-muted sm:justify-end">

@@ -79,7 +79,7 @@ export default function HomePage() {
               desk stays focused on in-house guests.
             </p>
             <div className="mt-9 flex flex-col gap-4 sm:flex-row">
-              <CalendlyPopupButton variant="gold" size="lg">
+              <CalendlyPopupButton variant="gold" size="lg" ctaLocation="homepage_hero">
                 Book a Coverage Review
               </CalendlyPopupButton>
               <ButtonLink href="/pilot" variant="outline" size="lg">

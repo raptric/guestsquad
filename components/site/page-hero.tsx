@@ -36,7 +36,7 @@ export function PageHero({
         </p>
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
           {primaryIsPopup ? (
-            <CalendlyPopupButton variant="gold" size="lg">
+            <CalendlyPopupButton variant="gold" size="lg" ctaLocation="page_hero">
               {primaryCta}
             </CalendlyPopupButton>
           ) : (

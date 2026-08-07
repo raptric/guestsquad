@@ -26,7 +26,7 @@ export function Nav() {
               className="h-8 w-auto"
             />
           </Link>
-          <CalendlyPopupButton variant="gold" size="sm">
+          <CalendlyPopupButton variant="gold" size="sm" ctaLocation="nav_campaign">
             Book a Coverage Review
           </CalendlyPopupButton>
         </div>
@@ -61,7 +61,7 @@ export function Nav() {
         </nav>
 
         <div className="hidden md:block">
-          <CalendlyPopupButton variant="gold" size="sm">
+          <CalendlyPopupButton variant="gold" size="sm" ctaLocation="nav">
             Book a Coverage Review
           </CalendlyPopupButton>
         </div>
@@ -89,7 +89,7 @@ export function Nav() {
               </Link>
             ))}
             <div className="mt-2 px-2">
-              <CalendlyPopupButton variant="gold" className="w-full">
+              <CalendlyPopupButton variant="gold" className="w-full" ctaLocation="nav_mobile">
                 Book a Coverage Review
               </CalendlyPopupButton>
             </div>

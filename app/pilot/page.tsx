@@ -542,7 +542,7 @@ export default function PilotPage() {
             </p>
           </div>
           <div className="shrink-0">
-            <CalendlyPopupButton variant="gold" size="lg">
+            <CalendlyPopupButton variant="gold" size="lg" ctaLocation="pilot_talk_to_advisor">
               Book a Coverage Review
             </CalendlyPopupButton>
           </div>
@@ -585,6 +585,7 @@ export default function PilotPage() {
               variant="outline"
               size="lg"
               className="border-paper/25 text-paper hover:border-paper/50"
+              ctaLocation="pilot_final_cta"
             >
               Book a Coverage Review
             </CalendlyPopupButton>

@@ -190,7 +190,7 @@ export function DownloadGate({ asset, pdfHref, ctaLabel = "Download PDF", block,
                   <div className="mt-6 border-t border-line pt-5 text-center">
                     <p className="text-xs text-ink-soft">{postDownload.body}</p>
                     <div className="mt-3">
-                      <CalendlyPopupButton variant="gold" size="sm">
+                      <CalendlyPopupButton variant="gold" size="sm" ctaLocation="download_gate_post_download">
                         {postDownload.cta}
                       </CalendlyPopupButton>
                     </div>

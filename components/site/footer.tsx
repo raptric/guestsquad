@@ -72,7 +72,7 @@ export function Footer() {
               <li><a href={`tel:${SITE.phoneHref}`} className="hover:text-ink">{SITE.phone}</a></li>
               <li className="leading-relaxed">40 Corbin Ave<br />Bay Shore, NY 11706</li>
               <li>
-                <CalendlyPopupButton variant="link" size="sm" className="hover:text-ink p-0 h-auto">
+                <CalendlyPopupButton variant="link" size="sm" className="hover:text-ink p-0 h-auto" ctaLocation="footer">
                   Book a Coverage Review →
                 </CalendlyPopupButton>
               </li>

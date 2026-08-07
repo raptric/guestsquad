@@ -102,6 +102,7 @@ export function PricingCards() {
               variant={plan.featured ? "gold" : "outline"}
               size="default"
               className="mt-8 w-full"
+              ctaLocation="pricing_card"
             >
               Get a Quote
             </CalendlyPopupButton>

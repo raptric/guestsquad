@@ -39,7 +39,7 @@ const FAQS = [
   },
   {
     q: "Is there a setup fee?",
-    a: "There is a one-time onboarding fee that covers property briefing, agent training, system access, and go-live testing. The fee is disclosed during your initial quote call and is not a recurring charge.",
+    a: "No. There is no setup fee or onboarding fee. Property briefing, agent training, system access, and go-live testing are included as part of getting coverage started.",
   },
   {
     q: "Can we start with a pilot before committing to monthly coverage?",

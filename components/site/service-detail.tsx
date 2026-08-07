@@ -13,6 +13,7 @@ import { AssetBlock } from "@/components/site/asset-block";
 import { BoFuTrustBlock } from "@/components/site/bofu-trust-block";
 import { ChannelBadges } from "@/components/site/channel-badges";
 import { DownloadGate } from "@/components/site/download-gate";
+import { ServicePageViewTracker } from "@/components/site/service-page-view-tracker";
 
 export type ServiceDetailData = {
   slug: string;
@@ -52,6 +53,7 @@ export function ServiceDetail({ data }: { data: ServiceDetailData }) {
 
   return (
     <>
+      <ServicePageViewTracker serviceName={data.slug} />
       <JsonLd
         data={[
           serviceSchema({ name: data.eyebrow, description: data.description, path }),

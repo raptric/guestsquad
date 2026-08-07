@@ -34,6 +34,7 @@ interface CalendlyPopupButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     Pick<ButtonProps, "variant" | "size"> {
   children: React.ReactNode;
+  ctaLocation?: string;
 }
 
 export function CalendlyPopupButton({
@@ -41,6 +42,7 @@ export function CalendlyPopupButton({
   variant = "gold",
   size = "lg",
   className,
+  ctaLocation,
   ...props
 }: CalendlyPopupButtonProps) {
   // Preload assets on mount so the popup opens instantly on click
@@ -49,7 +51,7 @@ export function CalendlyPopupButton({
   }, []);
 
   const handleClick = () => {
-    trackEvent("calendly_open", { source_page: window.location.pathname });
+    trackEvent("book_coverage_review_click", { cta_location: ctaLocation ?? "unspecified" });
     if (window.Calendly) {
       window.Calendly.initPopupWidget({ url: SITE.calendlyUrl });
     } else {

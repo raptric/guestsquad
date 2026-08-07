@@ -7,6 +7,7 @@ import { ComparisonTable } from "@/components/site/comparison-table";
 import { CtaSection } from "@/components/site/cta-section";
 import { DownloadGate } from "@/components/site/download-gate";
 import { JsonLd } from "@/components/site/json-ld";
+import { TrackedLink } from "@/components/site/tracked-link";
 import { articleSchema, breadcrumbSchema, faqSchema } from "@/lib/seo";
 import { RESOURCES, type ResourceArticleData } from "@/lib/resource-content";
 import { SERVICES } from "@/lib/site-data";
@@ -195,9 +196,11 @@ export function ComparisonArticle({ data }: { data: ResourceArticleData }) {
             </Link>
           ))}
           {relatedServices.map((s) => (
-            <Link
+            <TrackedLink
               key={s.slug}
               href={`/services/${s.slug}`}
+              eventName="resource_to_service_click"
+              eventParams={{ resource_name: data.slug, service_name: s.slug }}
               className="group flex flex-col justify-between rounded-lg border border-line bg-paper p-6 transition-colors hover:border-gold/50"
             >
               <div>
@@ -208,7 +211,7 @@ export function ComparisonArticle({ data }: { data: ResourceArticleData }) {
                 View service
                 <ArrowUpRight className="h-3.5 w-3.5" />
               </div>
-            </Link>
+            </TrackedLink>
           ))}
         </div>
       </Section>

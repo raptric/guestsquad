@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -20,6 +20,13 @@ export function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const startedRef = useRef(false);
+
+  function handleFormStart() {
+    if (startedRef.current) return;
+    startedRef.current = true;
+    trackEvent("contact_form_start", { form_name: "contact_form" });
+  }
   const [tracking, setTracking] = useState({
     source_page: "",
     referrer: "",
@@ -84,11 +91,7 @@ export function ContactForm() {
         body: JSON.stringify(data),
       });
       if (!res.ok) throw new Error("Server error");
-      trackEvent("generate_lead", {
-        source_page: tracking.source_page,
-        utm_source: tracking.utm_source || "direct",
-        property_type: data.propertyType || "unknown",
-      });
+      trackEvent("contact_form_submit", { form_name: "contact_form" });
       setSubmitted(true);
     } catch {
       setError("Something went wrong. Please try again or email us directly at info@guestsquad.com.");
@@ -98,7 +101,7 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-6">
+    <form onSubmit={handleSubmit} onFocus={handleFormStart} className="flex flex-col gap-6">
       {/* Honeypot — hidden from real users, bots fill it */}
       <input type="text" name="website" tabIndex={-1} aria-hidden="true" className="hidden" />
 

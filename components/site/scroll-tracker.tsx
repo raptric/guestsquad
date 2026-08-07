@@ -19,7 +19,7 @@ export function ScrollTracker() {
       for (const milestone of MILESTONES) {
         if (!fired.current.has(milestone) && pct >= milestone) {
           fired.current.add(milestone);
-          trackEvent("scroll_depth", { percent: milestone, page: pathname });
+          trackEvent("scroll_depth", { scroll_percent: milestone, page_path: pathname });
         }
       }
     }

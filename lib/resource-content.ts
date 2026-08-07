@@ -139,7 +139,7 @@ export const aiVoiceComparison: ResourceArticleData = {
   intro: [
     "AI voice agents are now actively marketed to hotels as a way to cover every inbound call without adding staff. The pitch is compelling: 24/7 availability, no sick days, consistent tone, and a fraction of the cost of a human team. For some use cases in hospitality, that pitch holds up.",
     "Where it gets complicated is reservation calls, in-stay complaints, booking exceptions, and any situation where a guest's first or lasting impression of your property is being shaped in real time. That is where hospitality operators report the widest gap between what AI voice vendors promise and what the technology actually delivers.",
-    "This comparison is not a case against AI. It is an honest look at which call types and property situations each option handles well — so you can make the decision based on your actual call mix rather than a vendor's best-case demo.",
+    "This comparison is not a case against AI. It is an honest look at which call types and property situations each option handles well — and where a [hotel answering service](/services/hotel-answering-service) holds an edge on the calls that matter most — so you can make the decision based on your actual call mix rather than a vendor's best-case demo.",
   ],
   postIntroCta: {
     heading: "Not sure what your actual call mix looks like?",
@@ -225,7 +225,7 @@ export const aiVoiceComparison: ResourceArticleData = {
     "Does the solution cover OTA message inboxes, or phone calls only?",
   ],
   verdictClosure:
-    "A vendor confident in their hospitality performance will answer all of those with data from real hotel deployments, not general platform statistics. The answers tell you whether the technology is ready for your call mix, or whether you would be running an extended pilot at your guests' expense.",
+    "A vendor confident in their hospitality performance will answer all of those with data from real hotel deployments, not general platform statistics. The answers tell you whether the technology is ready for your call mix, or whether you would be running an extended pilot at your guests' expense. For properties choosing consistent human coverage across calls, OTA inboxes, and after-hours windows, the [hotel answering service](/services/hotel-answering-service) page covers what Guest Squad includes and how to start.",
   faqs: [
     {
       q: "What are AI voice agents for hotels?",
@@ -282,6 +282,13 @@ export const aiVoiceComparison: ResourceArticleData = {
     serviceHref: "/services/hotel-answering-service",
     serviceLabel: "Hotel Answering Service",
   },
+  schemaAbout: { type: "Service", name: "Hotel Answering Service", url: "https://guestsquad.com/services/hotel-answering-service", serviceType: "Hotel Answering Service", areaServed: "Worldwide" },
+  schemaMentions: [
+    { type: "Thing", name: "AI Voice Agent for Hotels" },
+    { type: "Thing", name: "Hotel Phone Answering" },
+    { type: "Thing", name: "After-Hours Hotel Coverage" },
+    { type: "Thing", name: "Hotel Reservation Calls" },
+  ],
 };
 
 export const callCenterComparison: ResourceArticleData = {

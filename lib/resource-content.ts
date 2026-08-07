@@ -406,7 +406,7 @@ export const callCenterComparison: ResourceArticleData = {
     "How are urgent escalations handled, and what is the expected response time?",
   ],
   verdictClosure:
-    "Those seven questions separate a true hotel answering service from a relabeled generic call center quickly. A provider that can answer all of them directly — with specifics about your property, not generalities — is worth evaluating further. If you are ready to see how a 24/7 hotel answering service works in practice, the [Guest Squad Hotel Answering Service](/services/hotel-answering-service) page covers what is included and how to start.",
+    "Those seven questions separate a true hotel answering service from a relabeled generic call center quickly. A provider that can answer all of them directly — with specifics about your property, not generalities — is worth evaluating further. If OTA inboxes are part of your coverage gap, the [Booking.com and Expedia message support checklist](/resources/booking-com-message-support) is a practical starting point. If you are ready to see how a 24/7 hotel answering service works in practice, the [Guest Squad Hotel Answering Service](/services/hotel-answering-service) page covers what is included and how to start.",
   inlineAsset: {
     heading: "Not sure where your coverage gaps actually are? The Coverage Gap Assessment identifies your unprotected hours, channels, and escalation blind spots.",
     asset: "coverage-gap-assessment",
@@ -836,10 +836,11 @@ export const otaInboxChecklistGuide: GuideArticleData = {
   title: "Booking.com and Expedia Message Support: An OTA Inbox Checklist",
   description:
     "Why OTA response time affects bookings and rankings, and a practical checklist for keeping Booking.com and Expedia message inboxes under control.",
-  metaTitle: "Booking.com & Expedia Message Checklist",
+  metaTitle: "Booking.com and Expedia Message Support: Hotel OTA Inbox Checklist",
   metaDescription:
     "A practical checklist for managing Booking.com and Expedia guest messages, including response-time targets and common message types.",
   datePublished: "2026-06-29",
+  dateModified: "2026-08-07",
   intro: [
     "OTA inboxes are easy to under-prioritize. They're not the phone ringing in front of you, so messages can sit for hours. But response time inside Booking.com's and Expedia's own messaging tools is one of the few factors a hotel can directly control that affects both conversion and, on some platforms, search ranking.",
   ],
@@ -847,7 +848,7 @@ export const otaInboxChecklistGuide: GuideArticleData = {
     {
       heading: "Why OTA Response Time Matters",
       paragraphs: [
-        "A pre-booking question left unanswered for hours is a booking that often goes to a competing property instead. Post-booking, slow responses to modification requests or guest questions show up in reviews. Some OTAs also factor response metrics into how listings are ranked or featured, which compounds the cost of slow replies beyond the single missed booking.",
+        "A pre-booking question left unanswered for hours is a booking that often goes to a competing property instead. Post-booking, slow responses to modification requests or guest questions show up in reviews. Some OTAs also factor response metrics into how listings are ranked or featured, which compounds the cost of slow replies beyond the single missed booking. Consistent [OTA inbox management](/services/ota-inbox-management) is one of the few ranking factors hotels can directly control on these platforms.",
       ],
     },
     {
@@ -881,15 +882,35 @@ export const otaInboxChecklistGuide: GuideArticleData = {
     },
     {
       q: "Can you handle modification and cancellation requests through the OTA, not just questions?",
-      a: "Yes. OTA-side date changes, special requests, and cancellation handling are included; see OTA Inbox Management for the full scope.",
+      a: "Yes. OTA-side date changes, special requests, and cancellation handling are included. [See the full scope](/services/ota-inbox-management).",
     },
     {
       q: "What about Airbnb messages?",
-      a: "Airbnb and Vrbo messaging is covered separately for short-term rental operators; see Vacation Rental Answering Service.",
+      a: "Airbnb and Vrbo messaging is covered separately for short-term rental operators under the Vacation Rental Answering Service.",
     },
     {
       q: "Will this help us convert more OTA leads to direct bookings?",
       a: "Where appropriate, guests are nudged toward booking directly for future stays as part of the same conversation, without disrupting the OTA relationship.",
+    },
+    {
+      q: "What is OTA message support for hotels?",
+      a: "OTA message support means your Booking.com, Expedia, and Airbnb inboxes are monitored and answered by a trained person — not checked once a day between other tasks. Pre-booking questions are answered fast enough to win the booking before the guest moves on. [See how it works](/services/ota-inbox-management).",
+    },
+    {
+      q: "How fast should hotels respond to Booking.com messages?",
+      a: "Booking.com tracks response time and factors it into how listings are ranked and featured. A practical internal target is under 30 minutes for pre-booking inquiries specifically — the window where an unanswered question most often results in the guest booking a competitor instead.",
+    },
+    {
+      q: "Does slow OTA response time affect hotel rankings?",
+      a: "Yes. On Booking.com and Expedia, response rate and speed are factors in how properties are ranked and featured in search results. Consistently slow replies compound over time — affecting both conversion on individual inquiries and overall listing visibility.",
+    },
+    {
+      q: "How much does OTA inbox management cost?",
+      a: "There is no setup fee to get started. Coverage is scoped to your OTA platforms and message volume. [Book a coverage review](/pilot) for a quote tailored to your property.",
+    },
+    {
+      q: "Can one team manage Booking.com, Expedia, and Airbnb inboxes together?",
+      a: "Yes. Guest Squad covers all three platforms from a single point of coverage, so pre-booking questions, post-booking messages, and review responses across every OTA are handled without your team logging into multiple extranets.",
     },
   ],
   relatedServiceSlugs: ["ota-inbox-management", "guest-messaging", "vacation-rental-answering-service"],
@@ -908,6 +929,17 @@ export const otaInboxChecklistGuide: GuideArticleData = {
     serviceHref: "/services/ota-inbox-management",
     serviceLabel: "OTA Inbox Management",
   },
+  schemaAbout: { type: "Service", name: "OTA Inbox Management", url: "https://guestsquad.com/services/ota-inbox-management", serviceType: "OTA Inbox Management for Hotels", areaServed: "Worldwide" },
+  schemaMentions: [
+    { type: "Thing", name: "Booking.com Message Center" },
+    { type: "Thing", name: "Expedia Partner Central Inbox" },
+    { type: "Thing", name: "OTA Response Time" },
+    { type: "Thing", name: "Hotel OTA Ranking" },
+    { type: "Thing", name: "Pre-Booking Guest Messages" },
+    { type: "Thing", name: "OTA Cancellation Handling" },
+    { type: "Thing", name: "Airbnb Guest Messaging" },
+    { type: "Thing", name: "Hotel Direct Booking Conversion" },
+  ],
 };
 
 export const messagingSopGuide: GuideArticleData = {

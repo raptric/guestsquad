@@ -28,8 +28,8 @@ const LAST_MODIFIED: Record<string, string> = {
   "/contact": "2026-08-08",
   "/resources": "2026-08-08",
   "/about": "2026-08-08",
-  "/privacy-policy": "2026-08-06",
-  "/terms-of-service": "2026-06-26",
+  "/privacy-policy": "2026-08-08",
+  "/terms-of-service": "2026-08-08",
   // Service pages — schema enriched with about, serviceOutput, mentions
   "/services/hotel-answering-service": "2026-08-08",
   "/services/reservation-support": "2026-08-08",

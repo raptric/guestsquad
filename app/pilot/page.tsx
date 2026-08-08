@@ -1,5 +1,6 @@
 ﻿import type { Metadata } from "next";
 import dynamic from "next/dynamic";
+import Link from "next/link";
 import { Check, ArrowRight, Phone, MessageSquare, Inbox, Users } from "lucide-react";
 import { buildMetadata, breadcrumbSchema, faqSchema, webPageSchema, organizationSchema } from "@/lib/seo";
 import { JsonLd } from "@/components/site/json-ld";
@@ -70,7 +71,7 @@ const OPERATOR_CONCERNS = [
   },
   {
     heading: "Teams need coverage without hiring another shift",
-    body: "The goal is to close coverage gaps without adding headcount. That means a service that plugs in around the existing team.",
+    body: "The goal is to close coverage gaps without adding headcount. That means a hotel answering service that plugs in around the existing team, not a generic call center handling volume across industries.",
   },
 ];
 
@@ -129,6 +130,22 @@ const FAQS = [
     q: "Do we need to change our PMS or phone system?",
     a: "No. Guest Squad works with your existing setup. The property briefing documents your current systems — rates, room types, escalation contacts, channel access — and coverage begins without requiring changes to your PMS, phone system, or booking engine.",
   },
+  {
+    q: "How much does the 2-week pilot cost?",
+    a: "Pilot pricing is agreed during the qualification call based on your property, channels, and volume. There is no fixed published rate because two properties with different call volumes and coverage needs require different plans. Pricing is confirmed before any coverage begins.",
+  },
+  {
+    q: "What is included in the pilot report?",
+    a: "The weekly pilot report covers: total calls and messages handled, breakdown by channel, escalations logged and routed, patterns identified, and any recommendations for adjusting scope. You receive one report per week during the pilot, then a summary at the end.",
+  },
+  {
+    q: "Can we extend the pilot beyond 2 weeks?",
+    a: "Yes. If you need more time to evaluate coverage before committing to month-to-month, the pilot scope and duration can be adjusted. This is agreed during the qualification call or before the standard 2-week period ends.",
+  },
+  {
+    q: "How is Guest Squad different from a generic answering service?",
+    a: "Generic answering services handle volume across many industries using standard scripts. Guest Squad is a hotel answering service built specifically for hospitality: agents are trained on OTA platforms, PMS systems, hotel escalation protocols, and the guest communication standards independent properties expect. Handling is property-specific, not templated.",
+  },
 ];
 
 const SAMPLE_REPORT_ROWS = [
@@ -154,19 +171,27 @@ export default function PilotPage() {
             path: "/pilot",
             about: { "@type": "ProfessionalService", "@id": "https://guestsquad.com/#organization" },
             mentions: [
+              // OTAs named in COVERAGE_ITEMS, PAIN_CARDS, and FAQ answers
+              { "@type": "Organization", "name": "Booking.com" },
+              { "@type": "Organization", "name": "Expedia" },
+              { "@type": "Organization", "name": "Airbnb" },
+              // PMS tools named explicitly in COVERAGE_ITEMS and FAQ answers
+              { "@type": "SoftwareApplication", "name": "Cloudbeds" },
+              { "@type": "SoftwareApplication", "name": "Akia" },
+              // Accommodation types named in FAQ answers
               { "@type": "Accommodation", "name": "Hotel" },
               { "@type": "Accommodation", "name": "Boutique Hotel" },
               { "@type": "Accommodation", "name": "Independent Hotel" },
               { "@type": "Accommodation", "name": "Serviced Apartment" },
-              { "@type": "Accommodation", "name": "Airbnb Apartment" },
               { "@type": "Accommodation", "name": "Vacation Rental" },
-              { "@type": "Organization", "name": "Booking.com" },
-              { "@type": "Organization", "name": "Expedia" },
-              { "@type": "Organization", "name": "Airbnb" },
-              { "@type": "SoftwareApplication", "name": "Cloudbeds" },
+              { "@type": "Accommodation", "name": "Inn" },
+              { "@type": "Accommodation", "name": "Resort" },
+              { "@type": "Accommodation", "name": "Aparthotel" },
+              // Service concepts named in headings, COVERAGE_ITEMS, and FAQ answers
               { "@type": "Thing", "name": "Hotel Answering Service" },
               { "@type": "Thing", "name": "After-Hours Hotel Support" },
               { "@type": "Thing", "name": "Hotel Front Desk Coverage" },
+              { "@type": "Thing", "name": "Hotel Guest Operations" },
             ],
           }),
           breadcrumbSchema([
@@ -415,6 +440,17 @@ export default function PilotPage() {
             </div>
           ))}
         </div>
+        <p className="mt-8 max-w-2xl text-sm leading-relaxed text-ink-soft">
+          Guest Squad is a{" "}
+          <Link href="/services/hotel-answering-service" className="text-gold-dark underline underline-offset-4 hover:text-gold">
+            hotel answering service
+          </Link>{" "}
+          built for independent hotels and property operators — not a generic call center. If you want to understand how those differ before requesting a pilot, see our comparison of{" "}
+          <Link href="/resources/hotel-answering-service-vs-call-center" className="text-gold-dark underline underline-offset-4 hover:text-gold">
+            hotel answering service vs call center
+          </Link>
+          .
+        </p>
       </Section>
 
       {/* ── SOCIAL PROOF ── */}

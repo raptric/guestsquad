@@ -55,17 +55,19 @@ export default function ResourcesPage() {
             path: "/resources",
             about: { "@type": "ProfessionalService", "@id": "https://guestsquad.com/#organization" },
             mentions: [
+              // OTAs — named in FAQ answers and checklist titles
               { "@type": "Organization", "name": "Booking.com" },
               { "@type": "Organization", "name": "Expedia" },
               { "@type": "Organization", "name": "Airbnb" },
+              // Accommodation types — named in resource card descriptions
               { "@type": "Accommodation", "name": "Hotel" },
               { "@type": "Accommodation", "name": "Boutique Hotel" },
-              { "@type": "Accommodation", "name": "Serviced Apartment" },
-              { "@type": "Accommodation", "name": "Vacation Rental" },
+              // Service concepts — named in headings and FAQ answers
               { "@type": "Thing", "name": "Hotel Answering Service" },
               { "@type": "Thing", "name": "Hotel Guest Operations" },
               { "@type": "Thing", "name": "After-Hours Hotel Support" },
               { "@type": "Thing", "name": "OTA Inbox Management" },
+              { "@type": "Thing", "name": "Hotel Front Desk Coverage" },
             ],
           }),
           breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Resources", path: "/resources" }]),

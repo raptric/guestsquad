@@ -55,6 +55,14 @@ const HOME_FAQS = [
     q: "How quickly can Guest Squad go live?",
     a: "Most clients are live within 5 business days of signing. Onboarding covers your rates, policies, PMS access, escalation rules, and brand voice before any agent handles a guest interaction.",
   },
+  {
+    q: "How does hotel answering service pricing work?",
+    a: "Pricing is scoped per property based on call and message volume, channels covered, hours of coverage, and reporting needs. There is no fixed published rate because two properties with different volumes and channels need different coverage plans. A quote is provided after a short discovery call.",
+  },
+  {
+    q: "What is hotel guest operations?",
+    a: "Hotel guest operations covers every channel a property uses to communicate with guests: reservation calls, guest messages, OTA inboxes, after-hours support, and front desk overflow. Guest Squad manages these channels so your on-site team can focus on guests in the building.",
+  },
 ];
 
 export default function HomePage() {
@@ -70,25 +78,30 @@ export default function HomePage() {
             path: "",
             about: { "@type": "ProfessionalService", "@id": "https://guestsquad.com/#organization" },
             mentions: [
+              // OTAs — all shown in PlatformLogos component
               { "@type": "Organization", "name": "Booking.com" },
               { "@type": "Organization", "name": "Expedia" },
               { "@type": "Organization", "name": "Airbnb" },
               { "@type": "Organization", "name": "Vrbo" },
-              { "@type": "SoftwareApplication", "name": "Opera PMS" },
+              { "@type": "Organization", "name": "Hotels.com" },
+              // PMS — shown in PlatformLogos component
               { "@type": "SoftwareApplication", "name": "Cloudbeds" },
               { "@type": "SoftwareApplication", "name": "Mews" },
-              { "@type": "SoftwareApplication", "name": "Little Hotelier" },
+              { "@type": "SoftwareApplication", "name": "Opera PMS" },
+              { "@type": "SoftwareApplication", "name": "Guesty" },
+              // Accommodation types — named in body text and FAQs
               { "@type": "Accommodation", "name": "Hotel" },
               { "@type": "Accommodation", "name": "Boutique Hotel" },
-              { "@type": "Accommodation", "name": "Chain Hotel" },
               { "@type": "Accommodation", "name": "Independent Hotel" },
               { "@type": "Accommodation", "name": "Serviced Apartment" },
-              { "@type": "Accommodation", "name": "Airbnb Apartment" },
               { "@type": "Accommodation", "name": "Vacation Rental" },
-              { "@type": "Thing", "name": "Hotel Front Desk Coverage" },
+              { "@type": "Accommodation", "name": "Resort" },
+              // Service concepts — named in headings and body
+              { "@type": "Thing", "name": "Hotel Answering Service" },
+              { "@type": "Thing", "name": "Hotel Guest Operations" },
               { "@type": "Thing", "name": "OTA Inbox Management" },
               { "@type": "Thing", "name": "After-Hours Hotel Support" },
-              { "@type": "Thing", "name": "Direct Hotel Bookings" },
+              { "@type": "Thing", "name": "Hotel Front Desk Coverage" },
             ],
           }),
           faqSchema(HOME_FAQS),

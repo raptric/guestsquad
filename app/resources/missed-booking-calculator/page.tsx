@@ -63,10 +63,11 @@ export default function CalculatorPage() {
             path: "/resources/missed-booking-calculator",
             about: { "@type": "ProfessionalService", "@id": "https://guestsquad.com/#organization" },
             mentions: [
+              // Accommodation types — named in FAQ answers and body text
               { "@type": "Accommodation", "name": "Hotel" },
-              { "@type": "Accommodation", "name": "Boutique Hotel" },
               { "@type": "Accommodation", "name": "Independent Hotel" },
               { "@type": "Accommodation", "name": "Vacation Rental" },
+              // Service concepts — named in "Close the Gap" service links and body text
               { "@type": "Thing", "name": "Hotel Answering Service" },
               { "@type": "Thing", "name": "After-Hours Hotel Support" },
               { "@type": "Thing", "name": "Hotel Front Desk Coverage" },

@@ -11,7 +11,7 @@ import { BoFuTrustBlock } from "@/components/site/bofu-trust-block";
 import { PostBookingSteps } from "@/components/site/post-booking-steps";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Contact Guest Squad | Book a Demo",
+  title: "Contact Guest Squad | Hotel Answering Service Demo",
   description:
     "Book a 30-minute demo or send us your property details. Guest Squad responds within one business day.",
   path: "/contact",
@@ -56,14 +56,14 @@ export default function ContactPage() {
             path: "/contact",
             about: { "@type": "ProfessionalService", "@id": "https://guestsquad.com/#organization" },
             mentions: [
+              // Accommodation types — named in body text
               { "@type": "Accommodation", "name": "Hotel" },
               { "@type": "Accommodation", "name": "Boutique Hotel" },
               { "@type": "Accommodation", "name": "Independent Hotel" },
               { "@type": "Accommodation", "name": "Serviced Apartment" },
               { "@type": "Accommodation", "name": "Vacation Rental" },
-              { "@type": "Organization", "name": "Booking.com" },
-              { "@type": "Organization", "name": "Expedia" },
-              { "@type": "Organization", "name": "Airbnb" },
+              { "@type": "Accommodation", "name": "Resort" },
+              // Service concepts — named in the form description and body copy
               { "@type": "Thing", "name": "Hotel Answering Service" },
               { "@type": "Thing", "name": "Hotel Guest Operations" },
             ],

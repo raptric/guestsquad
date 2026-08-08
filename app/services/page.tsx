@@ -63,17 +63,18 @@ export default function ServicesPage() {
             path: "/services",
             about: { "@type": "ProfessionalService", "@id": "https://guestsquad.com/#organization" },
             mentions: [
-              { "@type": "Accommodation", "name": "Hotel" },
-              { "@type": "Accommodation", "name": "Boutique Hotel" },
-              { "@type": "Accommodation", "name": "Independent Hotel" },
-              { "@type": "Accommodation", "name": "Serviced Apartment" },
-              { "@type": "Accommodation", "name": "Airbnb Apartment" },
-              { "@type": "Accommodation", "name": "Vacation Rental" },
+              // OTAs — named in NEED_TABLE and FAQ answers
               { "@type": "Organization", "name": "Booking.com" },
               { "@type": "Organization", "name": "Expedia" },
               { "@type": "Organization", "name": "Airbnb" },
               { "@type": "Organization", "name": "Vrbo" },
-              { "@type": "SoftwareApplication", "name": "Cloudbeds" },
+              // Accommodation types — named in body text
+              { "@type": "Accommodation", "name": "Hotel" },
+              { "@type": "Accommodation", "name": "Boutique Hotel" },
+              { "@type": "Accommodation", "name": "Serviced Apartment" },
+              { "@type": "Accommodation", "name": "Vacation Rental" },
+              { "@type": "Accommodation", "name": "Resort" },
+              // Service concepts — named in service cards, headings, and FAQ answers
               { "@type": "Thing", "name": "Hotel Answering Service" },
               { "@type": "Thing", "name": "Hotel Guest Operations" },
               { "@type": "Thing", "name": "OTA Inbox Management" },

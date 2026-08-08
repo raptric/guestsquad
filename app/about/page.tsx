@@ -11,7 +11,7 @@ import { buildMetadata, breadcrumbSchema, faqSchema, webPageSchema, organization
 import { SITE } from "@/lib/site-data";
 
 export const metadata: Metadata = buildMetadata({
-  title: "About Guest Squad | Hotel Operations",
+  title: "About Guest Squad | Hotel Guest Operations Service",
   description:
     "Guest Squad is a managed guest operations company providing 24/7 human support for hotels, boutique properties, resorts, and short-term rental operators.",
   path: "/about",
@@ -38,6 +38,22 @@ const ABOUT_FAQS = [
     q: "Is Guest Squad a software platform or a human support service?",
     a: "Human support service. Guest Squad is not a software product or AI tool. Every guest interaction is handled by a trained person working inside your existing systems, not a bot generating automated responses.",
   },
+  {
+    q: "Does Guest Squad work with any PMS or booking system?",
+    a: "Guest Squad agents are trained on the PMS or booking system your property already uses. During onboarding, your team provisions access and agents are briefed on your specific setup. No new software is required.",
+  },
+  {
+    q: "Can Guest Squad support a portfolio of properties?",
+    a: "Yes. Guest Squad works with operators managing multiple properties, including hotel groups, serviced apartment portfolios, and short-term rental managers with several listings. Each property is briefed separately with its own escalation rules and communication standards.",
+  },
+  {
+    q: "How does Guest Squad handle an escalation?",
+    a: "Escalation rules are documented and agreed before coverage begins. When a situation falls outside the agreed handling scope — a complaint requiring owner approval, a safety issue, a rate dispute — the interaction is immediately routed to your designated escalation contact using the method and priority level you specify.",
+  },
+  {
+    q: "What makes Guest Squad different from a hotel call center?",
+    a: "Generic call centers handle volume across many industries. Guest Squad is built exclusively for hospitality: agents are trained on OTA platforms, PMS workflows, hotel escalation protocols, and the tone independent properties expect in guest-facing communication. See how we compare in our [hotel answering service vs call center](/resources/hotel-answering-service-vs-call-center) guide.",
+  },
 ];
 
 export default function AboutPage() {
@@ -52,22 +68,21 @@ export default function AboutPage() {
             path: "/about",
             about: { "@type": "ProfessionalService", "@id": "https://guestsquad.com/#organization" },
             mentions: [
+              // OTAs named in FAQ answers ("Airbnb hosts, Vrbo operators")
+              { "@type": "Organization", "name": "Airbnb" },
+              { "@type": "Organization", "name": "Vrbo" },
+              // Accommodation types named in FAQ answers and body text
               { "@type": "Accommodation", "name": "Hotel" },
               { "@type": "Accommodation", "name": "Boutique Hotel" },
-              { "@type": "Accommodation", "name": "Chain Hotel" },
               { "@type": "Accommodation", "name": "Independent Hotel" },
               { "@type": "Accommodation", "name": "Serviced Apartment" },
-              { "@type": "Accommodation", "name": "Airbnb Apartment" },
               { "@type": "Accommodation", "name": "Vacation Rental" },
-              { "@type": "Organization", "name": "Booking.com" },
-              { "@type": "Organization", "name": "Expedia" },
-              { "@type": "Organization", "name": "Airbnb" },
-              { "@type": "SoftwareApplication", "name": "Opera PMS" },
-              { "@type": "SoftwareApplication", "name": "Cloudbeds" },
+              { "@type": "Accommodation", "name": "Resort" },
+              // Service concepts named in headings, body, and FAQ answers
               { "@type": "Thing", "name": "Hotel Guest Operations" },
+              { "@type": "Thing", "name": "Hotel Answering Service" },
               { "@type": "Thing", "name": "OTA Inbox Management" },
               { "@type": "Thing", "name": "After-Hours Hotel Support" },
-              { "@type": "Thing", "name": "Hotel Answering Service" },
             ],
           }),
           breadcrumbSchema([{ name: "Home", path: "/" }, { name: "About", path: "/about" }]),
@@ -442,7 +457,12 @@ export default function AboutPage() {
           {ABOUT_FAQS.map((item) => (
             <div key={item.q} className="rounded-lg border border-line bg-paper p-6">
               <h3 className="text-sm font-medium text-ink">{item.q}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-ink-soft">{item.a}</p>
+              <p className="mt-2 text-sm leading-relaxed text-ink-soft">
+                {item.a.split(/(\[[^\]]+\]\([^)]+\))/).map((part, j) => {
+                  const m = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+                  return m ? <Link key={j} href={m[2]} className="text-gold-dark underline underline-offset-4 hover:text-gold">{m[1]}</Link> : part;
+                })}
+              </p>
             </div>
           ))}
         </div>

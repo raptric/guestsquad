@@ -551,11 +551,11 @@ export const answeringServiceCostGuide: GuideArticleData = {
   faqs: [
     {
       q: "Is there a setup fee?",
-      a: "No. Getting started with Guest Squad has no setup fee. [Book a coverage review](/pilot) to see how coverage works for your property.",
+      a: "No. Getting started with Guest Squad has no setup fee. Book a coverage review to see how coverage works for your property.",
     },
     {
       q: "What does the pilot cover?",
-      a: "The pilot scope is agreed with you before it starts — based on your property's channels, call volume, and coverage gaps. [Book a coverage review](/pilot) to walk through what makes sense for your property.",
+      a: "The pilot scope is agreed with you before it starts — based on your property's channels, call volume, and coverage gaps. Book a coverage review to walk through what makes sense for your property.",
     },
     {
       q: "Does the price change if our call volume spikes?",
@@ -673,7 +673,7 @@ export const afterHoursChecklistGuide: GuideArticleData = {
     },
     {
       q: "What is after-hours hotel front desk support?",
-      a: "After-hours hotel front desk support means a trained person covers guest calls and messages through the night and on weekends — handling late check-ins, overnight questions, and escalating genuine emergencies — without you hiring a full overnight shift. [See how it works](/services/after-hours-support).",
+      a: "After-hours hotel front desk support means a trained person covers guest calls and messages through the night and on weekends — handling late check-ins, overnight questions, and escalating genuine emergencies — without you hiring a full overnight shift.",
     },
     {
       q: "How do I cover my hotel phone overnight without hiring staff?",
@@ -685,7 +685,7 @@ export const afterHoursChecklistGuide: GuideArticleData = {
     },
     {
       q: "How much does after-hours hotel support cost?",
-      a: "There is no setup fee to get started. Coverage is scoped to your overnight call volume and hours. [Book a coverage review](/pilot) for a quote scoped to your property.",
+      a: "There is no setup fee to get started. Coverage is scoped to your overnight call volume and hours. Book a coverage review for a quote scoped to your property.",
     },
     {
       q: "Can after-hours coverage handle Airbnb and vacation rental properties?",
@@ -771,7 +771,7 @@ export const overflowSupportGuide: GuideArticleData = {
     },
     {
       q: "How is overflow priced differently from full coverage?",
-      a: "Overflow is typically lower-volume than full coverage, so it's usually the more affordable starting point. There is no setup fee to get started. [Book a coverage review](/pilot) for a quote scoped to your property.",
+      a: "Overflow is typically lower-volume than full coverage, so it's usually the more affordable starting point. There is no setup fee to get started. Book a coverage review for a quote scoped to your property.",
     },
     {
       q: "Can overflow handle reservations, or just take messages?",
@@ -783,7 +783,7 @@ export const overflowSupportGuide: GuideArticleData = {
     },
     {
       q: "What is hotel front desk overflow support?",
-      a: "Hotel front desk overflow support routes calls to a trained external team only when your in-house staff can't get to the phone — during check-in rushes, peak periods, or when a single agent is covering the desk alone. Your team handles everything it can; overflow catches the rest. [See how it works](/services/hotel-answering-service).",
+      a: "Hotel front desk overflow support routes calls to a trained external team only when your in-house staff can't get to the phone — during check-in rushes, peak periods, or when a single agent is covering the desk alone. Your team handles everything it can; overflow catches the rest.",
     },
     {
       q: "When should a hotel consider overflow call coverage?",
@@ -882,7 +882,7 @@ export const otaInboxChecklistGuide: GuideArticleData = {
     },
     {
       q: "Can you handle modification and cancellation requests through the OTA, not just questions?",
-      a: "Yes. OTA-side date changes, special requests, and cancellation handling are included. [See the full scope](/services/ota-inbox-management).",
+      a: "Yes. OTA-side date changes, special requests, and cancellation handling are included.",
     },
     {
       q: "What about Airbnb messages?",
@@ -894,7 +894,7 @@ export const otaInboxChecklistGuide: GuideArticleData = {
     },
     {
       q: "What is OTA message support for hotels?",
-      a: "OTA message support means your Booking.com, Expedia, and Airbnb inboxes are monitored and answered by a trained person — not checked once a day between other tasks. Pre-booking questions are answered fast enough to win the booking before the guest moves on. [See how it works](/services/ota-inbox-management).",
+      a: "OTA message support means your Booking.com, Expedia, and Airbnb inboxes are monitored and answered by a trained person — not checked once a day between other tasks. Pre-booking questions are answered fast enough to win the booking before the guest moves on.",
     },
     {
       q: "How fast should hotels respond to Booking.com messages?",
@@ -906,7 +906,7 @@ export const otaInboxChecklistGuide: GuideArticleData = {
     },
     {
       q: "How much does OTA inbox management cost?",
-      a: "There is no setup fee to get started. Coverage is scoped to your OTA platforms and message volume. [Book a coverage review](/pilot) for a quote tailored to your property.",
+      a: "There is no setup fee to get started. Coverage is scoped to your OTA platforms and message volume. Book a coverage review for a quote tailored to your property.",
     },
     {
       q: "Can one team manage Booking.com, Expedia, and Airbnb inboxes together?",
@@ -1007,11 +1007,11 @@ export const messagingSopGuide: GuideArticleData = {
     },
     {
       q: "Does this cover OTA messaging too, or just direct guest messages?",
-      a: "A complete SOP should cover every channel, including OTA inboxes. [See how OTA inbox management works](/services/ota-inbox-management) day to day.",
+      a: "A complete SOP should cover every channel, including OTA inboxes. OTA inbox management covers Booking.com, Expedia, and Airbnb message handling day to day.",
     },
     {
       q: "What is a hotel guest messaging SOP?",
-      a: "A hotel guest messaging SOP is a written standard that defines how your property handles every guest message — which channels are covered, who responds, how fast, in what tone, and what gets escalated. It ensures consistent guest communication whether your in-house team or an outsourced partner is handling messages. [Download the free template](/resources/hotel-guest-messaging-sop-template) to build yours.",
+      a: "A hotel guest messaging SOP is a written standard that defines how your property handles every guest message — which channels are covered, who responds, how fast, in what tone, and what gets escalated. It ensures consistent guest communication whether your in-house team or an outsourced partner is handling messages.",
     },
     {
       q: "What should a hotel messaging response time target be?",
@@ -1019,11 +1019,11 @@ export const messagingSopGuide: GuideArticleData = {
     },
     {
       q: "How do we handle guest messages overnight without staff?",
-      a: "Two options: an outsourced team covering overnight messaging on your behalf, or an auto-reply that sets expectations and promises a human follow-up by a specific time. The first protects pre-booking conversion; the second is better than silence but loses bookings to faster competitors. [Book a coverage review](/pilot) to see which fits your property.",
+      a: "Two options: an outsourced team covering overnight messaging on your behalf, or an auto-reply that sets expectations and promises a human follow-up by a specific time. The first protects pre-booking conversion; the second is better than silence but loses bookings to faster competitors.",
     },
     {
       q: "How much does hotel guest messaging support cost?",
-      a: "There is no setup fee to get started. Coverage is scoped to your message volume and channels. [Book a coverage review](/pilot) for a quote tailored to your property.",
+      a: "There is no setup fee to get started. Coverage is scoped to your message volume and channels. Book a coverage review for a quote tailored to your property.",
     },
     {
       q: "Can one team handle SMS, WhatsApp, email, and OTA messages together?",

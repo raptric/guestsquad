@@ -65,6 +65,7 @@ export function ServiceDetail({ data }: { data: ServiceDetailData }) {
             path,
             about: data.schemaAbout,
             serviceOutput: data.schemaServiceOutput,
+            dateModified: "2026-08-10",
           }),
           webPageSchema({
             name: data.title,

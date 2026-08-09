@@ -192,12 +192,14 @@ export function serviceSchema({
   path,
   about,
   serviceOutput,
+  dateModified,
 }: {
   name: string;
   description: string;
   path: string;
   about?: { "@type": string; name: string };
   serviceOutput?: string;
+  dateModified?: string;
 }) {
   return {
     "@context": "https://schema.org",
@@ -207,6 +209,7 @@ export function serviceSchema({
     name,
     description,
     url: `${SITE.url}${path}`,
+    ...(dateModified && { dateModified }),
     ...(about && { about }),
     ...(serviceOutput && { serviceOutput }),
     provider: {
@@ -329,6 +332,10 @@ export function articleSchema({
     },
     ...(about && { about: { "@type": about.type, name: about.name, ...(about.url && { url: about.url }), ...(about.serviceType && { serviceType: about.serviceType }), ...(about.areaServed && { areaServed: about.areaServed }) } }),
     ...(mentions && { mentions: mentions.map((m) => ({ "@type": m.type, name: m.name })) }),
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["h1", "h2", ".answer-block"],
+    },
   };
 }
 

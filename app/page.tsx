@@ -77,6 +77,7 @@ export default function HomePage() {
             description: "Guest Squad provides 24/7 hotel guest support, reservation calls, OTA inbox management, messaging, and after-hours front desk coverage.",
             path: "",
             about: { "@type": "ProfessionalService", "@id": "https://guestsquad.com/#organization" },
+            audienceTypes: ["Independent Hotel","Boutique Hotel","Inn","Resort","Serviced Apartment","Aparthotel","Airbnb Host","Vrbo Host","Short-Term Rental Operator","Vacation Rental Operator","Vacation Rental Property Manager"],
             mentions: [
               // OTAs — all shown in PlatformLogos component
               { "@type": "Organization", "name": "Booking.com" },

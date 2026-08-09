@@ -245,6 +245,7 @@ export function webPageSchema({
   primaryImageAlt,
   mentions,
   about,
+  audienceTypes,
 }: {
   name: string;
   description: string;
@@ -253,6 +254,7 @@ export function webPageSchema({
   primaryImageAlt?: string;
   mentions?: { "@type": string; name: string }[];
   about?: Record<string, string>;
+  audienceTypes?: string[];
 }) {
   const url = `${SITE.url}${path}`;
   return {
@@ -272,6 +274,9 @@ export function webPageSchema({
       },
     }),
     ...(mentions && mentions.length > 0 && { mentions }),
+    ...(audienceTypes && audienceTypes.length > 0 && {
+      audience: audienceTypes.map((t) => ({ "@type": "Audience", audienceType: t })),
+    }),
     speakable: {
       "@type": "SpeakableSpecification",
       cssSelector: ["h1", "h2", ".answer-block"],

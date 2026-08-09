@@ -55,6 +55,7 @@ export default function ContactPage() {
             description: "Book a 30-minute coverage review or send your property details. Guest Squad responds within one business day.",
             path: "/contact",
             about: { "@type": "ProfessionalService", "@id": "https://guestsquad.com/#organization" },
+            audienceTypes: ["Independent Hotel","Boutique Hotel","Inn","Resort","Serviced Apartment","Aparthotel","Airbnb Host","Vrbo Host","Short-Term Rental Operator","Vacation Rental Operator","Vacation Rental Property Manager"],
             mentions: [
               // Accommodation types — named in body text
               { "@type": "Accommodation", "name": "Hotel" },

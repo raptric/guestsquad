@@ -67,6 +67,7 @@ export default function AboutPage() {
             description: "Guest Squad is a managed guest operations company providing 24/7 human support for hotels, boutique properties, resorts, and short-term rental operators.",
             path: "/about",
             about: { "@type": "ProfessionalService", "@id": "https://guestsquad.com/#organization" },
+            audienceTypes: ["Independent Hotel","Boutique Hotel","Inn","Resort","Serviced Apartment","Aparthotel","Airbnb Host","Vrbo Host","Short-Term Rental Operator","Vacation Rental Operator","Vacation Rental Property Manager"],
             mentions: [
               // OTAs named in FAQ answers ("Airbnb hosts, Vrbo operators")
               { "@type": "Organization", "name": "Airbnb" },

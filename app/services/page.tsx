@@ -62,6 +62,7 @@ export default function ServicesPage() {
             description: "Reservation calls, guest messaging, OTA inbox management, after-hours coverage, and back-office operations — all under one guest operations partner.",
             path: "/services",
             about: { "@type": "ProfessionalService", "@id": "https://guestsquad.com/#organization" },
+            audienceTypes: ["Independent Hotel","Boutique Hotel","Inn","Resort","Serviced Apartment","Aparthotel","Airbnb Host","Vrbo Host","Short-Term Rental Operator","Vacation Rental Operator","Vacation Rental Property Manager"],
             mentions: [
               // OTAs — named in NEED_TABLE and FAQ answers
               { "@type": "Organization", "name": "Booking.com" },

@@ -176,7 +176,7 @@ export const reservationSupportData: ServiceDetailData = {
   faqTitle: "Reservation support questions, answered.",
   relatedTitle: "Pair reservation support with call answering and after-hours coverage.",
   comparisonTitle: "Reservation support vs unanswered inquiries and OTA dependency.",
-  comparisonSlugs: ["hotel-answering-service-vs-call-center", "hotel-answering-service-vs-ai-voice"],
+  comparisonSlugs: ["hotel-answering-service-cost", "hotel-answering-service-vs-call-center"],
   faqs: [
     { q: "How much does hotel reservation support cost?", a: "Pricing is quote-based and depends on your inbound call volume, coverage hours, number of properties, and whether OTA inbox or messaging channels are included. The starting point is a 2-week pilot review at /pilot, which assesses your actual call and booking patterns before recommending a plan." },
     { q: "How does answering reservation calls directly reduce OTA commission costs?", a: "When a guest who would otherwise book through Booking.com or Expedia calls your direct number and a trained agent picks up, the booking is confirmed direct — no OTA commission. Consistent phone coverage during hours when your team cannot answer is one of the most straightforward ways to shift your booking source mix over time, since every direct booking recovered is a commission you keep." },
@@ -271,7 +271,7 @@ export const guestMessagingData: ServiceDetailData = {
   faqTitle: "Guest messaging questions, answered.",
   relatedTitle: "Pair messaging support with OTA inbox management and after-hours coverage.",
   comparisonTitle: "Human guest messaging vs auto-replies and slow response times.",
-  comparisonSlugs: ["hotel-answering-service-vs-ai-voice", "hotel-answering-service-vs-call-center"],
+  comparisonSlugs: ["hotel-guest-messaging-sop-template", "booking-com-message-support"],
   faqs: [
     { q: "How much does hotel guest messaging support cost?", a: "Pricing is quote-based based on your message volume, channels covered, and coverage hours. Guest Squad does not charge per-message rates. The starting point is a 2-week pilot review at /pilot, which maps your actual message types and volumes before recommending a plan." },
     { q: "What is the right response time target for hotel guest messages?", a: "A practical internal standard: SMS and WhatsApp within 15 minutes for pre-arrival and in-stay messages, and under 30 minutes for pre-booking inquiries. The pre-booking window is the most time-sensitive — an unanswered question at that stage regularly results in the guest choosing a competing property. Guest Squad monitors messaging channels continuously so response times stay within those targets without your team having to stay online." },
@@ -364,7 +364,7 @@ export const otaInboxData: ServiceDetailData = {
   faqTitle: "OTA inbox management questions, answered.",
   relatedTitle: "Pair OTA coverage with reservation support and guest messaging.",
   comparisonTitle: "OTA inbox management vs auto-replies and once-a-day checking.",
-  comparisonSlugs: ["hotel-answering-service-vs-call-center", "hotel-answering-service-vs-ai-voice"],
+  comparisonSlugs: ["booking-com-message-support", "hotel-guest-messaging-sop-template"],
   faqs: [
     { q: "How much does OTA inbox management cost?", a: "Pricing depends on how many OTA platforms you use, your monthly message volume, and whether review responses are included. It is quote-based rather than a flat monthly rate. The starting point is a 2-week pilot review at /pilot, which maps your actual OTA message load before recommending a plan." },
     { q: "Does Booking.com actually penalize hotels for slow message response times?", a: "Yes. Booking.com tracks response rate and speed as a factor in how properties are ranked and featured in search results. Properties with high, consistent response rates receive better placement compared to those with low rates. The impact compounds — a slow period of responses can affect listing visibility for weeks. Expedia tracks similar metrics in its own ranking algorithm." },
@@ -461,7 +461,7 @@ export const afterHoursData: ServiceDetailData = {
   faqTitle: "After-hours support questions, answered.",
   relatedTitle: "Pair after-hours coverage with call answering and OTA inbox management.",
   comparisonTitle: "After-hours support vs hiring overnight staff or going unanswered.",
-  comparisonSlugs: ["hotel-answering-service-vs-ai-voice", "hotel-answering-service-vs-call-center"],
+  comparisonSlugs: ["after-hours-hotel-support-checklist", "hotel-answering-service-vs-ai-voice"],
   faqs: [
     { q: "How much does after-hours hotel support cost?", a: "Pricing depends on your overnight call and message volume, the hours covered, and whether the plan includes just calls, messaging, or both. It is quote-based rather than a flat rate. The starting point is a 2-week pilot review at /pilot, which assesses your actual overnight gap before recommending a coverage plan." },
     { q: "What does overnight staffing typically cost compared to after-hours support?", a: "A dedicated overnight front desk position typically costs $35,000–$55,000 per year in the US when you account for salary, employer taxes, benefits, and turnover replacement. After-hours support scales to your actual overnight call and message volume — properties with moderate overnight activity usually pay a fraction of that cost and get consistent coverage without the hiring and retention problem." },
@@ -556,6 +556,7 @@ export const backOfficeData: ServiceDetailData = {
   faqTitle: "Back office operations questions, answered.",
   relatedTitle: "Pair back office coverage with reservation support and OTA inbox management.",
   comparisonTitle: "Back office outsourcing vs in-house reconciliation gaps.",
+  comparisonSlugs: ["after-hours-hotel-support-checklist", "hotel-answering-service-cost"],
   faqs: [
     { q: "What is a hotel night audit?", a: "A hotel night audit is the day-end accounting process that closes out the business day: posting room charges and taxes to guest folios, balancing the cash drawer, reconciling payments, and producing the daily revenue report. It is typically run between midnight and 6am, which is why it is called a night audit. For hotels that run PMS systems like Opera, Cloudbeds, or Mews, the night audit also triggers automated room rate posting and generates the arrival and departure reports for the next day." },
     { q: "How much does hotel back office support cost?", a: "Pricing depends on the scope of work: whether it covers night audit only, OTA reconciliation, guest billing support, or all three. It is quote-based and sized to your property's transaction volume and reporting needs. Book a coverage review at /pilot to discuss your specific back-office gaps and get a scoped recommendation." },
@@ -651,7 +652,7 @@ export const airbnbSupportData: ServiceDetailData = {
   faqTitle: "Airbnb guest support questions, answered.",
   relatedTitle: "Pair Airbnb support with vacation rental answering and OTA inbox management.",
   comparisonTitle: "Airbnb guest support vs responding to guests personally at 2am.",
-  comparisonSlugs: ["hotel-answering-service-vs-ai-voice", "hotel-answering-service-vs-call-center"],
+  comparisonSlugs: ["hotel-guest-messaging-sop-template", "hotel-answering-service-vs-ai-voice"],
   faqs: [
     { q: "How much does Airbnb guest support cost?", a: "Pricing is based on the number of listings you manage and your monthly message volume. It is quote-based rather than a flat per-host rate. The starting point is a coverage review at /pilot, which maps your listing count, message patterns, and response-time gaps before recommending a plan." },
     { q: "What response time does Airbnb require for Superhost status?", a: "Airbnb requires a 90% response rate within 24 hours to qualify and maintain Superhost status. In practice, guests expect replies faster: most Airbnb inquiries that go unanswered for more than a few hours convert at a lower rate, and slow responses show up in reviews. Consistent monitoring means replies go out within minutes rather than hours — protecting both Superhost metrics and booking conversion from inquiries." },
@@ -745,7 +746,7 @@ export const vacationRentalAnsweringData: ServiceDetailData = {
   faqTitle: "Vacation rental answering questions, answered.",
   relatedTitle: "Pair vacation rental answering with Airbnb guest support and OTA coverage.",
   comparisonTitle: "Vacation rental answering vs being the 24/7 on-call line yourself.",
-  comparisonSlugs: ["hotel-answering-service-vs-ai-voice", "hotel-answering-service-vs-call-center"],
+  comparisonSlugs: ["after-hours-hotel-support-checklist", "hotel-answering-service-vs-ai-voice"],
   faqs: [
     { q: "How much does a vacation rental answering service cost?", a: "Pricing is based on your listing count, call volume, and coverage hours. It is quote-based rather than a flat monthly rate. The starting point is a coverage review at /pilot, which maps your actual call patterns and gap hours before recommending a plan sized to your operation." },
     { q: "What is the most common reason STR operators miss guest calls?", a: "Most short-term rental operators miss calls because they are personally fielding guest communication while also managing property turnovers, maintenance, and daily tasks. Overnight calls are the biggest gap — a guest who cannot access the property at 11pm reaches a personal voicemail instead of a person. That gap shows up in guest reviews, not in a missed-call log you ever see." },

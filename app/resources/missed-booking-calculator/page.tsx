@@ -62,7 +62,9 @@ export default function CalculatorPage() {
             name: "Missed Booking Revenue Calculator | Guest Squad",
             description: "Estimate how much revenue unanswered reservation calls are costing your hotel each month. Adjust call volume, booking value, and conversion rate.",
             path: "/resources/missed-booking-calculator",
-            about: { "@type": "ProfessionalService", "@id": "https://guestsquad.com/#organization" },
+            primaryImageUrl: "https://guestsquad.com/brand-assets/og-image.jpg",
+            primaryImageAlt: "Missed booking revenue calculator for hotels",
+            about: { "@id": "https://guestsquad.com/#organization" },
             mentions: [
               // Accommodation types — named in FAQ answers and body text
               { "@type": "Accommodation", "name": "Hotel" },

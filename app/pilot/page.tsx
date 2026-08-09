@@ -169,15 +169,17 @@ export default function PilotPage() {
             name: "2-Week Guest Coverage Pilot for Hotels | Guest Squad",
             description: "Start with a 2-week pilot before monthly coverage. Guest Squad reviews your call gaps, OTA inboxes, and after-hours needs and recommends a plan that fits.",
             path: "/pilot",
-            about: { "@type": "ProfessionalService", "@id": "https://guestsquad.com/#organization" },
+            primaryImageUrl: "https://guestsquad.com/brand-assets/og-image.jpg",
+            primaryImageAlt: "Guest Squad 2-week pilot — hotel guest coverage trial",
+            about: { "@id": "https://guestsquad.com/#organization" },
             mentions: [
               // OTAs named in COVERAGE_ITEMS, PAIN_CARDS, and FAQ answers
               { "@type": "Organization", "name": "Booking.com" },
               { "@type": "Organization", "name": "Expedia" },
               { "@type": "Organization", "name": "Airbnb" },
               // PMS tools named explicitly in COVERAGE_ITEMS and FAQ answers
-              { "@type": "SoftwareApplication", "name": "Cloudbeds" },
-              { "@type": "SoftwareApplication", "name": "Akia" },
+              { "@type": "Thing", "name": "Cloudbeds" },
+              { "@type": "Thing", "name": "Akia" },
               // Accommodation types named in FAQ answers
               { "@type": "Accommodation", "name": "Hotel" },
               { "@type": "Accommodation", "name": "Boutique Hotel" },

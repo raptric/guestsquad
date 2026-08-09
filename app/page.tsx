@@ -76,7 +76,9 @@ export default function HomePage() {
             name: "Hotel Answering Service & 24/7 Guest Support | Guest Squad",
             description: "Guest Squad provides 24/7 hotel guest support, reservation calls, OTA inbox management, messaging, and after-hours front desk coverage.",
             path: "",
-            about: { "@type": "ProfessionalService", "@id": "https://guestsquad.com/#organization" },
+            primaryImageUrl: "https://guestsquad.com/brand-assets/guestsquad-favicon-official.svg",
+            primaryImageAlt: "Guest Squad logo",
+            about: { "@id": "https://guestsquad.com/#organization" },
             audienceTypes: ["Independent Hotel","Boutique Hotel","Inn","Resort","Serviced Apartment","Aparthotel","Airbnb Host","Vrbo Host","Short-Term Rental Operator","Vacation Rental Operator","Vacation Rental Property Manager"],
             mentions: [
               // OTAs — all shown in PlatformLogos component
@@ -86,10 +88,10 @@ export default function HomePage() {
               { "@type": "Organization", "name": "Vrbo" },
               { "@type": "Organization", "name": "Hotels.com" },
               // PMS — shown in PlatformLogos component
-              { "@type": "SoftwareApplication", "name": "Cloudbeds" },
-              { "@type": "SoftwareApplication", "name": "Mews" },
-              { "@type": "SoftwareApplication", "name": "Opera PMS" },
-              { "@type": "SoftwareApplication", "name": "Guesty" },
+              { "@type": "Thing", "name": "Cloudbeds" },
+              { "@type": "Thing", "name": "Mews" },
+              { "@type": "Thing", "name": "Opera PMS" },
+              { "@type": "Thing", "name": "Guesty" },
               // Accommodation types — named in body text and FAQs
               { "@type": "Accommodation", "name": "Hotel" },
               { "@type": "Accommodation", "name": "Boutique Hotel" },

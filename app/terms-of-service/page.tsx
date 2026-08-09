@@ -21,7 +21,9 @@ export default function TermsOfServicePage() {
             name: "Terms of Service | Guest Squad",
             description: "Guest Squad's Terms of Service, including billing authorization, payment dispute and chargeback handling, pilot terms, and liability terms.",
             path: "/terms-of-service",
-            about: { "@type": "ProfessionalService", "@id": "https://guestsquad.com/#organization" },
+            primaryImageUrl: "https://guestsquad.com/brand-assets/guestsquad-favicon-official.svg",
+            primaryImageAlt: "Guest Squad logo",
+            about: { "@id": "https://guestsquad.com/#organization" },
           }),
           breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Terms of Service", path: "/terms-of-service" }]),
         ]}

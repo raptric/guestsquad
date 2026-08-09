@@ -21,7 +21,9 @@ export default function PrivacyPolicyPage() {
             name: "Privacy Policy | Guest Squad",
             description: "How Guest Squad collects, uses, and protects personal data. Covers data subject rights, our role as controller and processor, and GDPR compliance.",
             path: "/privacy-policy",
-            about: { "@type": "ProfessionalService", "@id": "https://guestsquad.com/#organization" },
+            primaryImageUrl: "https://guestsquad.com/brand-assets/guestsquad-favicon-official.svg",
+            primaryImageAlt: "Guest Squad logo",
+            about: { "@id": "https://guestsquad.com/#organization" },
           }),
           breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Privacy Policy", path: "/privacy-policy" }]),
         ]}

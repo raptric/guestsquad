@@ -61,7 +61,9 @@ export default function ServicesPage() {
             name: "Hotel Guest Operations Services | Guest Squad",
             description: "Reservation calls, guest messaging, OTA inbox management, after-hours coverage, and back-office operations — all under one guest operations partner.",
             path: "/services",
-            about: { "@type": "ProfessionalService", "@id": "https://guestsquad.com/#organization" },
+            primaryImageUrl: "https://guestsquad.com/brand-assets/og-image.jpg",
+            primaryImageAlt: "Guest Squad — 24/7 hotel guest operations services",
+            about: { "@id": "https://guestsquad.com/#organization" },
             audienceTypes: ["Independent Hotel","Boutique Hotel","Inn","Resort","Serviced Apartment","Aparthotel","Airbnb Host","Vrbo Host","Short-Term Rental Operator","Vacation Rental Operator","Vacation Rental Property Manager"],
             mentions: [
               // OTAs — named in NEED_TABLE and FAQ answers

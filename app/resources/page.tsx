@@ -53,7 +53,9 @@ export default function ResourcesPage() {
             name: "Hotel Answering Service Guides & Comparisons | Guest Squad",
             description: "Guides and comparisons on hotel answering services, AI voice agents, and call centers, to help you evaluate what's actually right for your property.",
             path: "/resources",
-            about: { "@type": "ProfessionalService", "@id": "https://guestsquad.com/#organization" },
+            primaryImageUrl: "https://guestsquad.com/brand-assets/og-image.jpg",
+            primaryImageAlt: "Guest Squad resources — hotel answering service guides and comparisons",
+            about: { "@id": "https://guestsquad.com/#organization" },
             audienceTypes: ["Independent Hotel","Boutique Hotel","Inn","Resort","Serviced Apartment","Aparthotel","Airbnb Host","Vrbo Host","Short-Term Rental Operator","Vacation Rental Operator","Vacation Rental Property Manager"],
             mentions: [
               // OTAs — named in FAQ answers and checklist titles

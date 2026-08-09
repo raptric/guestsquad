@@ -139,11 +139,7 @@ export function websiteSchema() {
     "@id": `${SITE.url}/#website`,
     name: SITE.brand,
     url: SITE.url,
-    publisher: {
-      "@type": "ProfessionalService",
-      "@id": `${SITE.url}/#organization`,
-      name: SITE.brand,
-    },
+    publisher: { "@id": `${SITE.url}/#organization` },
   };
 }
 
@@ -264,7 +260,7 @@ export function webPageSchema({
     url,
     name,
     description,
-    isPartOf: { "@type": "WebSite", "@id": `${SITE.url}/#website` },
+    isPartOf: { "@id": `${SITE.url}/#website` },
     about: about ?? { "@type": "Service", "@id": `${url}#service` },
     ...(primaryImageUrl && {
       primaryImageOfPage: {

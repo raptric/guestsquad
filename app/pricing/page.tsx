@@ -97,7 +97,9 @@ export default function PricingPage() {
             name: "Hotel Guest Support Pricing | Plans & Pricing | Guest Squad",
             description: "Starter, Growth, and Custom guest operations plans for hotels, resorts, serviced apartments, and Airbnb operators. Get a quote based on your property.",
             path: "/pricing",
-            about: { "@type": "ProfessionalService", "@id": "https://guestsquad.com/#organization" },
+            primaryImageUrl: "https://guestsquad.com/brand-assets/og-image.jpg",
+            primaryImageAlt: "Guest Squad pricing — hotel guest operations coverage plans",
+            about: { "@id": "https://guestsquad.com/#organization" },
             audienceTypes: ["Independent Hotel","Boutique Hotel","Inn","Resort","Serviced Apartment","Aparthotel","Airbnb Host","Vrbo Host","Short-Term Rental Operator","Vacation Rental Operator","Vacation Rental Property Manager"],
             mentions: [
               // OTAs named in FAQ answers

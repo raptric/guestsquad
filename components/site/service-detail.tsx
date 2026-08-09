@@ -22,6 +22,7 @@ export type ServiceDetailData = {
   description: string;
   schemaAbout?: { "@type": string; name: string };
   schemaServiceOutput?: string;
+  schemaAudienceTypes?: string[];
   schemaMentions?: { "@type": string; name: string }[];
   introHeading?: string;
   answerBlock: string;
@@ -66,6 +67,7 @@ export function ServiceDetail({ data }: { data: ServiceDetailData }) {
             about: data.schemaAbout,
             serviceOutput: data.schemaServiceOutput,
             dateModified: "2026-08-10",
+            audienceTypes: data.schemaAudienceTypes,
           }),
           webPageSchema({
             name: data.title,

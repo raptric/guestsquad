@@ -193,6 +193,7 @@ export function serviceSchema({
   about,
   serviceOutput,
   dateModified,
+  audienceTypes,
 }: {
   name: string;
   description: string;
@@ -200,6 +201,7 @@ export function serviceSchema({
   about?: { "@type": string; name: string };
   serviceOutput?: string;
   dateModified?: string;
+  audienceTypes?: string[];
 }) {
   return {
     "@context": "https://schema.org",
@@ -220,11 +222,9 @@ export function serviceSchema({
     },
     hoursAvailable: ALWAYS_AVAILABLE,
     areaServed: "Worldwide",
-    audience: {
-      "@type": "Audience",
-      audienceType:
-        "Hotels, boutique properties, resorts, serviced apartments, Airbnb and short-term rental operators",
-    },
+    audience: audienceTypes
+      ? audienceTypes.map((t) => ({ "@type": "Audience", audienceType: t }))
+      : { "@type": "Audience", audienceType: "Hotels, boutique properties, resorts, serviced apartments, Airbnb and short-term rental operators" },
     offers: {
       "@type": "Offer",
       description: "2-week pilot review for qualified properties, then month-to-month coverage with no long-term contract.",

@@ -8,6 +8,14 @@ export const hotelAnsweringServiceData: ServiceDetailData = {
     "Hotel answering service for independent hotels. Every reservation call and guest question answered by a trained person — no phone tree, no voicemail.",
   schemaAbout: { "@type": "Thing", "name": "Hotel Front Desk Call Coverage" },
   schemaServiceOutput: "Inbound hotel reservation calls and guest inquiries answered by a hospitality-trained agent using property-specific rates, policies, and escalation contacts",
+  schemaAudienceTypes: [
+    "Independent Hotel",
+    "Boutique Hotel",
+    "Inn",
+    "Resort",
+    "Serviced Apartment",
+    "Aparthotel",
+  ],
   schemaMentions: [
     { "@type": "Thing", "name": "Hotel Front Desk" },
     { "@type": "Thing", "name": "Hotel Reservations" },
@@ -118,6 +126,14 @@ export const reservationSupportData: ServiceDetailData = {
     "Inbound and outbound reservation calls handled with your rates, availability, and policies, so no booking inquiry goes unanswered, day or night.",
   schemaAbout: { "@type": "Thing", "name": "Hotel Reservation Management" },
   schemaServiceOutput: "Confirmed hotel bookings, rate quotes, and reservation modifications handled by trained agents working inside the property's PMS",
+  schemaAudienceTypes: [
+    "Independent Hotel",
+    "Boutique Hotel",
+    "Inn",
+    "Resort",
+    "Serviced Apartment",
+    "Aparthotel",
+  ],
   schemaMentions: [
     { "@type": "Thing", "name": "Hotel Reservations" },
     { "@type": "Thing", "name": "Direct Hotel Bookings" },
@@ -216,6 +232,14 @@ export const guestMessagingData: ServiceDetailData = {
     "SMS, WhatsApp, email, and in-app messages monitored and answered across the full stay journey: pre-arrival, in-stay, and post-stay.",
   schemaAbout: { "@type": "Thing", "name": "Hotel Guest Messaging" },
   schemaServiceOutput: "Monitored and answered guest messages across SMS, WhatsApp, email, and in-app channels throughout the full stay journey",
+  schemaAudienceTypes: [
+    "Independent Hotel",
+    "Boutique Hotel",
+    "Serviced Apartment",
+    "Aparthotel",
+    "Airbnb Host",
+    "Short-Term Rental Operator",
+  ],
   schemaMentions: [
     { "@type": "Thing", "name": "Guest Messaging" },
     { "@type": "Thing", "name": "Pre-Arrival Guest Communication" },
@@ -309,6 +333,14 @@ export const otaInboxData: ServiceDetailData = {
     "Booking.com, Expedia, and Airbnb inboxes monitored and answered around the clock, so pre-booking questions convert instead of disappearing.",
   schemaAbout: { "@type": "Thing", "name": "OTA Message Response Management" },
   schemaServiceOutput: "Monitored and answered OTA message threads on Booking.com, Expedia, and Airbnb to improve response time, conversion, and platform ranking",
+  schemaAudienceTypes: [
+    "Independent Hotel",
+    "Boutique Hotel",
+    "Serviced Apartment",
+    "Airbnb Host",
+    "Vacation Rental Operator",
+    "Short-Term Rental Operator",
+  ],
   schemaMentions: [
     { "@type": "Organization", "name": "Booking.com" },
     { "@type": "Organization", "name": "Expedia" },
@@ -404,6 +436,16 @@ export const afterHoursData: ServiceDetailData = {
     "Overnight and weekend front-desk coverage for calls and messages your on-site team cannot take outside working hours, without hiring a night shift.",
   schemaAbout: { "@type": "Thing", "name": "Hotel After-Hours Front Desk Coverage" },
   schemaServiceOutput: "Overnight and weekend call and message coverage for hotels, handling late check-ins, guest inquiries, and emergency escalations outside front desk hours",
+  schemaAudienceTypes: [
+    "Independent Hotel",
+    "Boutique Hotel",
+    "Inn",
+    "Resort",
+    "Serviced Apartment",
+    "Aparthotel",
+    "Vacation Rental Operator",
+    "Short-Term Rental Operator",
+  ],
   schemaMentions: [
     { "@type": "Thing", "name": "After-Hours Hotel Support" },
     { "@type": "Thing", "name": "Hotel Night Shift Coverage" },
@@ -503,6 +545,13 @@ export const backOfficeData: ServiceDetailData = {
     "Daily night audit, OTA reconciliation, and guest-billing support, so revenue leakage from missed payouts, fee discrepancies, and unposted charges gets caught the day it happens, not in next month's close.",
   schemaAbout: { "@type": "Thing", "name": "Hotel Night Audit and Revenue Reconciliation" },
   schemaServiceOutput: "Daily night audit reports, OTA payout reconciliation, and guest billing exception reports delivered to the property's finance team",
+  schemaAudienceTypes: [
+    "Independent Hotel",
+    "Boutique Hotel",
+    "Resort",
+    "Serviced Apartment",
+    "Aparthotel",
+  ],
   schemaMentions: [
     { "@type": "Thing", "name": "Hotel Night Audit" },
     { "@type": "Thing", "name": "OTA Payout Reconciliation" },
@@ -599,6 +648,13 @@ export const airbnbSupportData: ServiceDetailData = {
     "Round-the-clock Airbnb message handling and guest communication for hosts and serviced apartment operators — check-in help, in-stay issues, and review management across every listing.",
   schemaAbout: { "@type": "Thing", "name": "Airbnb Guest Communication Management" },
   schemaServiceOutput: "Monitored and answered Airbnb, Vrbo, and direct-booking guest messages around the clock, protecting host response rate and Superhost status",
+  schemaAudienceTypes: [
+    "Airbnb Host",
+    "Vrbo Host",
+    "Short-Term Rental Operator",
+    "Vacation Rental Operator",
+    "Serviced Apartment Operator",
+  ],
   schemaMentions: [
     { "@type": "Organization", "name": "Airbnb" },
     { "@type": "Organization", "name": "Vrbo" },
@@ -693,6 +749,13 @@ export const vacationRentalAnsweringData: ServiceDetailData = {
     "24/7 call answering for Airbnb, Vrbo, and short-term rental operators — built for hosts and property managers who cannot be on call all night.",
   schemaAbout: { "@type": "Thing", "name": "Vacation Rental Phone Answering" },
   schemaServiceOutput: "Live call answering and guest message handling for short-term rental operators, covering check-in support, access issues, and after-hours guest inquiries",
+  schemaAudienceTypes: [
+    "Airbnb Host",
+    "Vrbo Host",
+    "Short-Term Rental Operator",
+    "Vacation Rental Property Manager",
+    "Vacation Rental Operator",
+  ],
   schemaMentions: [
     { "@type": "Organization", "name": "Airbnb" },
     { "@type": "Organization", "name": "Vrbo" },

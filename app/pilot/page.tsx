@@ -215,10 +215,17 @@ export default function PilotPage() {
               url: SITE.url,
             },
             areaServed: "Worldwide",
-            audience: {
-              "@type": "Audience",
-              audienceType: "Independent hotels, boutique properties, serviced apartments, and short-term rental operators",
-            },
+            audience: [
+              { "@type": "Audience", audienceType: "Independent Hotel" },
+              { "@type": "Audience", audienceType: "Boutique Hotel" },
+              { "@type": "Audience", audienceType: "Inn" },
+              { "@type": "Audience", audienceType: "Resort" },
+              { "@type": "Audience", audienceType: "Serviced Apartment" },
+              { "@type": "Audience", audienceType: "Aparthotel" },
+              { "@type": "Audience", audienceType: "Airbnb Host" },
+              { "@type": "Audience", audienceType: "Short-Term Rental Operator" },
+              { "@type": "Audience", audienceType: "Vacation Rental Operator" },
+            ],
             offers: {
               "@type": "Offer",
               name: "2-Week No-Obligation Pilot",

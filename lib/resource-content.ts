@@ -449,7 +449,7 @@ export const callCenterComparison: ResourceArticleData = {
     },
     {
       q: "Can a hotel call center handle OTA messages from Booking.com or Expedia?",
-      a: "Most generic call centers cover phone only. OTA inbox management — responding inside Booking.com's Message Center, Expedia's Partner Central, or Airbnb's messaging tools — requires platform access and familiarity with each OTA's workflow. It's worth confirming explicitly whether any provider you evaluate covers OTA inboxes as part of their scope. Guest Squad covers OTA inboxes within agreed scope.",
+      a: "Most generic call centers cover phone only. OTA inbox management — responding inside Booking.com's Message Center, Expedia's Partner Central, or Airbnb's messaging tools — requires platform access and familiarity with each OTA's workflow. It's worth confirming explicitly whether any provider you evaluate covers OTA inboxes as part of their scope. Guest Squad covers OTA inboxes within agreed scope. See the [Booking.com message support checklist](/resources/booking-com-message-support) for the specific standards your OTA inboxes should be meeting.",
     },
     {
       q: "How quickly can Guest Squad start hotel answering service coverage?",
@@ -575,7 +575,7 @@ export const answeringServiceCostGuide: GuideArticleData = {
     },
     {
       q: "How does the cost compare to hiring overnight staff?",
-      a: "Hiring a dedicated overnight position involves salary, benefits, and turnover costs year-round regardless of call volume. An answering service is scoped to your actual volume, so for most independent hotels it is significantly less expensive per answered call than a full overnight hire.",
+      a: "Hiring a dedicated overnight position involves salary, benefits, and turnover costs year-round regardless of call volume. An answering service is scoped to your actual volume, so for most independent hotels it is significantly less expensive per answered call than a full overnight hire. The [after-hours hotel support checklist](/resources/after-hours-hotel-support-checklist) helps you map what overnight coverage actually needs to include before you compare costs.",
     },
     {
       q: "What is included in the price — just calls, or messaging too?",

@@ -154,7 +154,7 @@ export function contactPageSchema() {
     "@type": "ContactPage",
     "@id": `${SITE.url}/contact#contactpage`,
     url: `${SITE.url}/contact`,
-    name: "Contact Guest Squad",
+    name: "Contact Guest Squad | Book a Coverage Review",
     description:
       "Contact Guest Squad to book a coverage review for hotel answering service, guest messaging, OTA inbox management, after-hours support, and managed guest operations coverage.",
     isPartOf: {

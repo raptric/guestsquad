@@ -8,7 +8,7 @@ import { Section, SectionHeading } from "@/components/site/section";
 import { Breadcrumbs } from "@/components/site/breadcrumbs";
 import { CtaSection } from "@/components/site/cta-section";
 import { JsonLd } from "@/components/site/json-ld";
-import { faqSchema, breadcrumbSchema, webPageSchema } from "@/lib/seo";
+import { faqSchema, breadcrumbSchema, webPageSchema, organizationSchema } from "@/lib/seo";
 
 const FAQS = [
   {
@@ -57,6 +57,7 @@ export default function CalculatorPage() {
     <>
       <JsonLd
         data={[
+          organizationSchema(),
           webPageSchema({
             name: "Missed Booking Revenue Calculator | Guest Squad",
             description: "Estimate how much revenue unanswered reservation calls are costing your hotel each month. Adjust call volume, booking value, and conversion rate.",

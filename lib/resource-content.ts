@@ -233,7 +233,7 @@ export const aiVoiceComparison: ResourceArticleData = {
     },
     {
       q: "How much does AI voice cost for a hotel?",
-      a: "AI voice pricing varies widely by vendor. Per-minute billing is common, and when combined with PMS integration fees, onboarding, and ongoing prompt management, the all-in monthly cost for a smaller property can exceed what a flat-rate human answering service costs. For properties with very high call volumes and simple, standardized inquiries, the economics can shift. It is worth modelling the full cost — not just the advertised per-minute rate — against your actual monthly call volume before comparing.",
+      a: "AI voice pricing varies widely by vendor. Per-minute billing is common, and when combined with PMS integration fees, onboarding, and ongoing prompt management, the all-in monthly cost for a smaller property can exceed what a flat-rate human answering service costs. For properties with very high call volumes and simple, standardized inquiries, the economics can shift. It is worth modelling the full cost — not just the advertised per-minute rate — against your actual monthly call volume before comparing. The [hotel answering service cost guide](/resources/hotel-answering-service-cost) breaks down what drives pricing across both human and AI coverage models.",
     },
     {
       q: "Can AI voice agents handle hotel reservations?",
@@ -458,6 +458,10 @@ export const callCenterComparison: ResourceArticleData = {
     {
       q: "Is Guest Squad an outsourced hotel answering service?",
       a: "Guest Squad provides external guest operations support for hotels and property operators, but we are not a generic outsourced call center. Our team is briefed on your property, channels, escalation rules, and guest communication standards before coverage begins.",
+    },
+    {
+      q: "How much does a hotel answering service cost compared to a call center?",
+      a: "Hotel answering services are typically priced on flat monthly plans scoped to your coverage hours and channels, while generic call centers often bill per minute or per seat. For an independent hotel, the all-in cost of a hospitality-specific service is often comparable once you account for call center integration fees and overage charges. The [hotel answering service cost guide](/resources/hotel-answering-service-cost) walks through the pricing models and what to watch for before you sign.",
     },
   ],
   schemaAbout: { type: "Service", name: "Hotel Answering Service", url: "https://guestsquad.com/services/hotel-answering-service", serviceType: "Hotel Answering Service", areaServed: "Worldwide" },

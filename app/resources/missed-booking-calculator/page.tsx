@@ -190,6 +190,11 @@ export default function CalculatorPage() {
               label: "After-Hours Hotel Support",
               body: "Overnight and weekend front-desk coverage for calls and messages your team cannot take outside working hours, without hiring a night shift.",
             },
+            {
+              href: "/resources/hotel-answering-service-cost",
+              label: "How Much Does a Hotel Answering Service Cost?",
+              body: "The pricing models actually used in this industry, what drives the price up or down, and the hidden costs to ask about before you sign.",
+            },
           ].map((item) => (
             <Link
               key={item.href}
@@ -208,7 +213,7 @@ export default function CalculatorPage() {
 
       <CtaSection
         title="Ready to stop leaving bookings on the table?"
-        description="Book a coverage review and we will walk through your actual call volume, coverage gaps, and what a plan would cost."
+        description="Start with a 2-week pilot. We review your call gaps, OTA inboxes, and after-hours needs — and recommend a plan before you commit to anything."
       />
     </>
   );

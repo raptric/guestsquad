@@ -74,7 +74,7 @@ export const hotelAnsweringServiceData: ServiceDetailData = {
   comparisonSlugs: ["hotel-answering-service-vs-call-center", "hotel-answering-service-vs-ai-voice"],
   faqs: [
     { q: "How much does a hotel answering service cost?", a: "Hotel answering service pricing is quote-based and depends on your call volume, coverage hours, number of properties, and the channels included. Guest Squad does not publish flat rates because properties have very different needs. For a full breakdown of what drives pricing, see the [hotel answering service cost guide](/resources/hotel-answering-service-cost). The starting point is a [2-week pilot review](/pilot), which evaluates your coverage gaps before recommending a plan." },
-    { q: "Can Guest Squad cover just overflow calls, or does it have to be full-day coverage?", a: "Both. Many clients start with peak-hour overflow during check-in and check-out rushes, or overnight-only coverage, rather than committing to full-day answering from day one. Coverage hours and call routing are agreed during setup — you only pay for the hours that actually need covering." },
+    { q: "Can Guest Squad cover just overflow calls, or does it have to be full-day coverage?", a: "Both. Many clients start with peak-hour overflow during check-in and check-out rushes, or overnight-only coverage, rather than committing to full-day answering from day one. Coverage hours and call routing are agreed during setup — you only pay for the hours that actually need covering. If you are deciding whether overflow coverage is the right starting point, the [hotel front desk overflow support guide](/resources/hotel-front-desk-overflow-support) covers when to outsource and what to keep in-house." },
     { q: "What is a hotel answering service?", a: "A hotel answering service provides live, human call coverage so reservation inquiries, guest questions, and overflow calls are answered by a trained person instead of going to voicemail or a phone tree. Guest Squad operates using your rates, policies, and property information, covering calls during peak periods, after hours, and any time your front desk cannot get to the phone." },
     { q: "How is this different from your Reservation Support service?", a: "Reservation Support focuses on bookings, quotes, and modifications. Hotel Answering Service is the broader call-answering layer, including general questions and overflow, and the two are often used together for complete phone coverage." },
     { q: "Do you use an automated phone tree or IVR?", a: "No. Calls are answered by a trained person. Automated menus are exactly what this service is built to avoid." },
@@ -102,6 +102,7 @@ export const hotelAnsweringServiceData: ServiceDetailData = {
     { label: "Hotel Answering Service vs Call Center", href: "/resources/hotel-answering-service-vs-call-center" },
     { label: "Hotel Answering Service vs. AI Voice Agent", href: "/resources/hotel-answering-service-vs-ai-voice" },
     { label: "How Much Does a Hotel Answering Service Cost?", href: "/resources/hotel-answering-service-cost" },
+    { label: "Hotel Front Desk Overflow Support Guide", href: "/resources/hotel-front-desk-overflow-support" },
     { label: "View Sample Weekly Report", href: "/resources/sample-weekly-report" },
     { label: "Download After-Hours Checklist", href: "/resources/after-hours-checklist" },
   ],
@@ -484,6 +485,8 @@ export const afterHoursData: ServiceDetailData = {
   },
   assetLinks: [
     { label: "Download After-Hours Checklist", href: "/resources/after-hours-checklist" },
+    { label: "After-Hours Hotel Support Checklist", href: "/resources/after-hours-hotel-support-checklist" },
+    { label: "Hotel Front Desk Overflow Support Guide", href: "/resources/hotel-front-desk-overflow-support" },
     { label: "Missed Booking Revenue Calculator", href: "/resources/missed-booking-calculator" },
     { label: "View Sample Weekly Report", href: "/resources/sample-weekly-report" },
     { label: "Guest Coverage Gap Assessment", href: "/resources/coverage-gap-assessment" },
@@ -769,6 +772,7 @@ export const vacationRentalAnsweringData: ServiceDetailData = {
   },
   assetLinks: [
     { label: "Download After-Hours Checklist", href: "/resources/after-hours-checklist" },
+    { label: "After-Hours Hotel Support Checklist", href: "/resources/after-hours-hotel-support-checklist" },
     { label: "Missed Booking Revenue Calculator", href: "/resources/missed-booking-calculator" },
     { label: "Guest Coverage Gap Assessment", href: "/resources/coverage-gap-assessment" },
     { label: "View Sample Weekly Report", href: "/resources/sample-weekly-report" },

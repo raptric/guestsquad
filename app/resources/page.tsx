@@ -82,9 +82,10 @@ export default function ResourcesPage() {
             url: `${SITE.url}/resources`,
             itemListElement: [
               { "@type": "ListItem", position: 1, name: "Missed Booking Revenue Calculator", url: `${SITE.url}/resources/missed-booking-calculator` },
+              { "@type": "ListItem", position: 2, name: "Insights — Hotel Operations Analysis", url: `${SITE.url}/resources/insights` },
               ...RESOURCES.map((r, i) => ({
                 "@type": "ListItem",
-                position: i + 2,
+                position: i + 3,
                 name: r.title,
                 url: `${SITE.url}/resources/${r.slug}`,
               })),
@@ -263,6 +264,42 @@ export default function ResourcesPage() {
             </div>
           </div>
         </div>
+      </Section>
+
+      {/* Insights */}
+      <Section surface>
+        <SectionHeading
+          eyebrow="Insights"
+          title="What the data says about hotel operations."
+          description="Analysis and operational insight for independent hoteliers — built around OTA rankings, guest response time, and revenue gaps."
+        />
+        <div className="mt-8 grid gap-6 sm:grid-cols-2">
+          <Link
+            href="/resources/insights/ota-ranking-response-time"
+            className="group flex flex-col justify-between rounded-lg border border-line bg-paper p-6 transition-colors hover:border-gold/50"
+          >
+            <div>
+              <div className="flex items-center justify-between">
+                <span className="text-xs font-semibold uppercase tracking-widest text-ink-muted">OTA Rankings</span>
+                <span className="text-xs text-ink-muted">8 min read</span>
+              </div>
+              <h3 className="mt-3 text-sm font-medium text-ink transition-colors group-hover:text-gold-dark">
+                What Happens to Your Hotel&apos;s OTA Ranking When You Reply Slowly
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-ink-soft">
+                Booking.com tracks your reply score as a direct ranking input. Here&apos;s exactly how slow responses move your listing down — and what recovery looks like.
+              </p>
+            </div>
+            <p className="mt-5 flex items-center gap-1.5 text-xs font-medium text-gold-dark group-hover:text-gold">
+              Read article →
+            </p>
+          </Link>
+        </div>
+        <p className="mt-6 text-sm text-ink-soft">
+          <Link href="/resources/insights" className="text-gold-dark underline underline-offset-4 hover:text-gold">
+            View all insights →
+          </Link>
+        </p>
       </Section>
 
       {/* Buying Guides */}

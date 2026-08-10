@@ -187,6 +187,7 @@ export function serviceSchema({
   serviceOutput,
   dateModified,
   audienceTypes,
+  subjectOf,
 }: {
   name: string;
   description: string;
@@ -195,6 +196,7 @@ export function serviceSchema({
   serviceOutput?: string;
   dateModified?: string;
   audienceTypes?: string[];
+  subjectOf?: { "@type": string; "@id": string }[];
 }) {
   return {
     "@context": "https://schema.org",
@@ -207,6 +209,7 @@ export function serviceSchema({
     ...(dateModified && { dateModified }),
     ...(about && { about }),
     ...(serviceOutput && { serviceOutput }),
+    ...(subjectOf && subjectOf.length > 0 && { subjectOf }),
     provider: { "@id": `${SITE.url}/#organization` },
     hoursAvailable: ALWAYS_AVAILABLE,
     areaServed: "Worldwide",

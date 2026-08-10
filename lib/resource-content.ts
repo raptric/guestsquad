@@ -130,8 +130,8 @@ export const aiVoiceComparison: ResourceArticleData = {
   metaTitle: "Hotel Answering Service vs AI Voice Agent",
   metaDescription:
     "Compare human hotel answering services with AI voice agents for guest calls, reservations, OTA inboxes, and after-hours support. A practical guide for hotel operators.",
-  datePublished: "2026-06-26",
-  dateModified: "2026-08-07",
+  datePublished: "2026-06-26T00:00:00+00:00",
+  dateModified: "2026-08-07T00:00:00+00:00",
   heroPrimaryCta: "Request Pilot Review",
   heroPrimaryHref: "/pilot",
   heroSecondaryCta: "See How It Works",
@@ -300,8 +300,8 @@ export const callCenterComparison: ResourceArticleData = {
   metaTitle: "Hotel Answering Service vs Call Center",
   metaDescription:
     "Compare hotel answering service vs call center: training, property knowledge, OTA coverage, reporting, costs, and which fits your hotel best.",
-  datePublished: "2026-06-26",
-  dateModified: "2026-08-07",
+  datePublished: "2026-06-26T00:00:00+00:00",
+  dateModified: "2026-08-07T00:00:00+00:00",
   intro: [
     "\"Call center\" and \"hotel answering service\" often get used interchangeably when hotels start shopping for outsourced phone coverage, but the underlying operating models are usually quite different, and that difference shows up on the call itself.",
     "A generic call center is typically built to handle calls for many unrelated industries from a shared agent pool. A [hotel answering service](/services/hotel-answering-service) like Guest Squad is built around one property at a time. Here's where that distinction actually matters.",
@@ -506,8 +506,8 @@ export const answeringServiceCostGuide: GuideArticleData = {
   metaTitle: "How Much Does a Hotel Answering Service Cost?",
   metaDescription:
     "How hotel answering services price their plans, what drives the cost, and the questions to ask before signing with any provider.",
-  datePublished: "2026-08-06",
-  dateModified: "2026-08-07",
+  datePublished: "2026-08-06T00:00:00+00:00",
+  dateModified: "2026-08-07T00:00:00+00:00",
   intro: [
     "\"How much does this cost?\" is usually the first question a GM asks, and the hardest one to get a straight answer to. Most providers, including Guest Squad, don't publish flat rates, because the honest answer depends on your volume, channels, and coverage hours.",
     "What most properties find when they run the numbers: a single recovered group booking or a week of captured after-hours reservations covers the monthly cost entirely. The right question is not what the service costs — it is whether it pays for itself on your volume.",
@@ -622,8 +622,8 @@ export const afterHoursChecklistGuide: GuideArticleData = {
   metaTitle: "After-Hours Hotel Front Desk Support Checklist",
   metaDescription:
     "A practical checklist for after-hours hotel front desk and night audit phone coverage, including escalation rules and morning handoff.",
-  datePublished: "2026-06-29",
-  dateModified: "2026-08-07",
+  datePublished: "2026-06-29T00:00:00+00:00",
+  dateModified: "2026-08-07T00:00:00+00:00",
   intro: [
     "\"After-hours coverage\" means different things to different properties. For some it's just making sure the phone gets answered after 11pm. For others it includes night audit calls, emergency escalation, and a morning handoff report. This checklist breaks down what a complete setup actually covers.",
   ],
@@ -733,8 +733,8 @@ export const overflowSupportGuide: GuideArticleData = {
   metaTitle: "Hotel Front Desk Overflow Support: When and How to Outsource",
   metaDescription:
     "When to add overflow phone support at your hotel, how it works in practice, and how to set it up alongside your existing front desk team.",
-  datePublished: "2026-06-29",
-  dateModified: "2026-08-07",
+  datePublished: "2026-06-29T00:00:00+00:00",
+  dateModified: "2026-08-07T00:00:00+00:00",
   intro: [
     "Overflow support isn't the same as replacing your front desk. It's coverage that only activates when your team genuinely can't get to the phone. This guide covers when it makes sense, how it actually works day to day, and what to keep in-house regardless.",
   ],
@@ -843,8 +843,8 @@ export const otaInboxChecklistGuide: GuideArticleData = {
   metaTitle: "Booking.com and Expedia Message Support: Hotel OTA Inbox Checklist",
   metaDescription:
     "A practical checklist for managing Booking.com and Expedia guest messages, including response-time targets and common message types.",
-  datePublished: "2026-06-29",
-  dateModified: "2026-08-07",
+  datePublished: "2026-06-29T00:00:00+00:00",
+  dateModified: "2026-08-07T00:00:00+00:00",
   intro: [
     "OTA inboxes are easy to under-prioritize. They're not the phone ringing in front of you, so messages can sit for hours. But response time inside Booking.com's and Expedia's own messaging tools is one of the few factors a hotel can directly control that affects both conversion and, on some platforms, search ranking.",
   ],
@@ -954,8 +954,8 @@ export const messagingSopGuide: GuideArticleData = {
   metaTitle: "Hotel Guest Messaging SOP: Free Template and Checklist",
   metaDescription:
     "What a hotel guest messaging SOP should include, plus a sample outline covering response times, escalation rules, and tone guidelines.",
-  datePublished: "2026-06-29",
-  dateModified: "2026-08-07",
+  datePublished: "2026-06-29T00:00:00+00:00",
+  dateModified: "2026-08-07T00:00:00+00:00",
   intro: [
     "Most hotels handle guest messages on instinct rather than a written standard. That works fine until a busy week, a new hire, or an outsourced team needs to step in and there's nothing to brief them on. A short, specific SOP fixes that without becoming bureaucracy nobody reads.",
   ],

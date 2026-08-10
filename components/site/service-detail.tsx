@@ -66,7 +66,7 @@ export function ServiceDetail({ data }: { data: ServiceDetailData }) {
             path,
             about: data.schemaAbout,
             serviceOutput: data.schemaServiceOutput,
-            dateModified: "2026-08-10",
+            dateModified: "2026-08-10T00:00:00+00:00",
             audienceTypes: data.schemaAudienceTypes,
           }),
           webPageSchema({

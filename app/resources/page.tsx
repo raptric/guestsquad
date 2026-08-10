@@ -8,6 +8,7 @@ import { JsonLd } from "@/components/site/json-ld";
 import { CtaSection } from "@/components/site/cta-section";
 import { DownloadGate } from "@/components/site/download-gate";
 import { buildMetadata, breadcrumbSchema, faqSchema, webPageSchema, organizationSchema } from "@/lib/seo";
+import { SITE } from "@/lib/site-data";
 import { RESOURCES } from "@/lib/resource-content";
 import { Calculator, FileText, ClipboardList, BarChart2, ArrowRight } from "lucide-react";
 
@@ -53,6 +54,7 @@ export default function ResourcesPage() {
             name: "Hotel Answering Service Guides & Comparisons | Guest Squad",
             description: "Guides and comparisons on hotel answering services, AI voice agents, and call centers, to help you evaluate what's actually right for your property.",
             path: "/resources",
+            pageType: "CollectionPage",
             primaryImageUrl: "https://guestsquad.com/brand-assets/og-image.jpg",
             primaryImageAlt: "Guest Squad resources — hotel answering service guides and comparisons",
             about: { "@id": "https://guestsquad.com/#organization" },
@@ -73,6 +75,22 @@ export default function ResourcesPage() {
               { "@type": "Thing", "name": "Hotel Front Desk Coverage" },
             ],
           }),
+          {
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "@id": `${SITE.url}/resources#itemlist`,
+            name: "Guest Squad Hotel Resources",
+            url: `${SITE.url}/resources`,
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Missed Booking Revenue Calculator", url: `${SITE.url}/resources/missed-booking-calculator` },
+              ...RESOURCES.map((r, i) => ({
+                "@type": "ListItem",
+                position: i + 2,
+                name: r.title,
+                url: `${SITE.url}/resources/${r.slug}`,
+              })),
+            ],
+          },
           breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Resources", path: "/resources" }]),
           faqSchema(RESOURCES_FAQS),
         ]}

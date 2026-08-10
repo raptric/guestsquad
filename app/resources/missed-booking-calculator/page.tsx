@@ -8,7 +8,7 @@ import { Section, SectionHeading } from "@/components/site/section";
 import { Breadcrumbs } from "@/components/site/breadcrumbs";
 import { CtaSection } from "@/components/site/cta-section";
 import { JsonLd } from "@/components/site/json-ld";
-import { faqSchema, breadcrumbSchema, webPageSchema, organizationSchema } from "@/lib/seo";
+import { faqSchema, breadcrumbSchema, webPageSchema, organizationSchema, webApplicationSchema } from "@/lib/seo";
 
 const FAQS = [
   {
@@ -75,6 +75,11 @@ export default function CalculatorPage() {
               { "@type": "Thing", "name": "After-Hours Hotel Support" },
               { "@type": "Thing", "name": "Hotel Front Desk Coverage" },
             ],
+          }),
+          webApplicationSchema({
+            name: "Missed Booking Revenue Calculator",
+            description: "Estimate how much revenue unanswered reservation calls are costing your hotel each month. Adjust call volume, booking value, and conversion rate.",
+            path: "/resources/missed-booking-calculator",
           }),
           breadcrumbSchema([
             { name: "Home", path: "/" },

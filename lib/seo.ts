@@ -229,6 +229,7 @@ export function webPageSchema({
   about,
   audienceTypes,
   mainEntityId,
+  pageType = "WebPage",
 }: {
   name: string;
   description: string;
@@ -239,11 +240,12 @@ export function webPageSchema({
   about?: Record<string, string>;
   audienceTypes?: string[];
   mainEntityId?: string;
+  pageType?: string;
 }) {
   const url = `${SITE.url}${path}`;
   return {
     "@context": "https://schema.org",
-    "@type": "WebPage",
+    "@type": pageType,
     "@id": `${url}#webpage`,
     url,
     name,
@@ -326,6 +328,35 @@ export function articleSchema({
       "@type": "SpeakableSpecification",
       cssSelector: ["h1", "h2", ".answer-block"],
     },
+  };
+}
+
+/** WebApplication schema for interactive tools. */
+export function webApplicationSchema({
+  name,
+  description,
+  path,
+}: {
+  name: string;
+  description: string;
+  path: string;
+}) {
+  const url = `${SITE.url}${path}`;
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "@id": `${url}#webapp`,
+    name,
+    description,
+    url,
+    applicationCategory: "BusinessApplication",
+    operatingSystem: "Web",
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "USD",
+    },
+    provider: { "@id": `${SITE.url}/#organization` },
   };
 }
 

@@ -61,6 +61,7 @@ export default function ServicesPage() {
             name: "Hotel Guest Operations Services | Guest Squad",
             description: "Reservation calls, guest messaging, OTA inbox management, after-hours coverage, and back-office operations — all under one guest operations partner.",
             path: "/services",
+            pageType: "CollectionPage",
             primaryImageUrl: "https://guestsquad.com/brand-assets/og-image.jpg",
             primaryImageAlt: "Guest Squad — 24/7 hotel guest operations services",
             about: { "@id": "https://guestsquad.com/#organization" },

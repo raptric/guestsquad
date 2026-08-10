@@ -94,6 +94,7 @@ export default function ServicesPage() {
           {
             "@context": "https://schema.org",
             "@type": "ItemList",
+            "@id": `${SITE.url}/services#itemlist`,
             name: "Guest Squad Hotel Guest Operations Services",
             url: `${SITE.url}/services`,
             itemListElement: SERVICES.map((s, i) => ({

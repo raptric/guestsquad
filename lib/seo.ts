@@ -317,14 +317,14 @@ export function articleSchema({
     mainEntityOfPage: url,
     datePublished,
     dateModified: dateModified ?? datePublished,
-    author: { "@type": "Organization", "@id": `${SITE.url}/#organization`, name: SITE.brand, url: SITE.url },
-    publisher: {
-      "@type": "Organization",
-      "@id": `${SITE.url}/#organization`,
-      name: SITE.brand,
-      url: SITE.url,
-      logo: { "@type": "ImageObject", url: `${SITE.url}/brand-assets/guestsquad-icon.svg` },
+    image: {
+      "@type": "ImageObject",
+      url: `${SITE.url}/brand-assets/og-image.jpg`,
+      width: 1200,
+      height: 630,
     },
+    author: { "@id": `${SITE.url}/#organization` },
+    publisher: { "@id": `${SITE.url}/#organization` },
     ...(about && { about: { "@type": about.type, name: about.name, ...(about.url && { url: about.url }), ...(about.serviceType && { serviceType: about.serviceType }), ...(about.areaServed && { areaServed: about.areaServed }) } }),
     ...(mentions && { mentions: mentions.map((m) => ({ "@type": m.type, name: m.name })) }),
     speakable: {

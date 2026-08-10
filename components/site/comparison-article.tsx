@@ -8,7 +8,7 @@ import { CtaSection } from "@/components/site/cta-section";
 import { DownloadGate } from "@/components/site/download-gate";
 import { JsonLd } from "@/components/site/json-ld";
 import { TrackedLink } from "@/components/site/tracked-link";
-import { articleSchema, breadcrumbSchema, faqSchema } from "@/lib/seo";
+import { articleSchema, breadcrumbSchema, faqSchema, organizationSchema, webPageSchema } from "@/lib/seo";
 import { RESOURCES, type ResourceArticleData } from "@/lib/resource-content";
 import { SERVICES } from "@/lib/site-data";
 
@@ -21,6 +21,20 @@ export function ComparisonArticle({ data }: { data: ResourceArticleData }) {
     <>
       <JsonLd
         data={[
+          organizationSchema(),
+          webPageSchema({
+            name: data.title,
+            description: data.description,
+            path,
+            primaryImageUrl: "https://guestsquad.com/brand-assets/og-image.jpg",
+            primaryImageAlt: data.title,
+            about: data.schemaAbout ? {
+              "@type": data.schemaAbout.type,
+              name: data.schemaAbout.name,
+              ...(data.schemaAbout.url && { url: data.schemaAbout.url }),
+            } : undefined,
+            mentions: data.schemaMentions?.map((m) => ({ "@type": m.type, name: m.name })),
+          }),
           articleSchema({
             headline: data.title,
             description: data.description,

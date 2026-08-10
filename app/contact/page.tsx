@@ -5,7 +5,7 @@ import { CalendlyInlineWidget } from "@/components/site/calendly-inline-widget";
 import { Breadcrumbs } from "@/components/site/breadcrumbs";
 import { JsonLd } from "@/components/site/json-ld";
 import { Section, SectionHeading } from "@/components/site/section";
-import { buildMetadata, breadcrumbSchema, faqSchema, contactPageSchema, webPageSchema, organizationSchema } from "@/lib/seo";
+import { buildMetadata, breadcrumbSchema, faqSchema, contactPageSchema, webPageSchema } from "@/lib/seo";
 import { AssetBlock } from "@/components/site/asset-block";
 import { BoFuTrustBlock } from "@/components/site/bofu-trust-block";
 import { PostBookingSteps } from "@/components/site/post-booking-steps";
@@ -49,7 +49,6 @@ export default function ContactPage() {
     <>
       <JsonLd
         data={[
-          organizationSchema(),
           webPageSchema({
             name: "Contact Guest Squad | Book a Coverage Review",
             description: "Book a 30-minute coverage review or send your property details. Guest Squad responds within one business day.",

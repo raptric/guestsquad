@@ -14,7 +14,7 @@ import { PlatformLogos } from "@/components/site/platform-logos";
 import { PricingCards } from "@/components/site/pricing-cards";
 import { CtaSection } from "@/components/site/cta-section";
 import { SERVICES } from "@/lib/site-data";
-import { buildMetadata, faqSchema, organizationSchema, websiteSchema, webPageSchema } from "@/lib/seo";
+import { buildMetadata, faqSchema, webPageSchema } from "@/lib/seo";
 import { JsonLd } from "@/components/site/json-ld";
 import { AssetBlock } from "@/components/site/asset-block";
 import { ClientTrustBlock } from "@/components/site/client-trust-block";
@@ -70,8 +70,6 @@ export default function HomePage() {
     <>
       <JsonLd
         data={[
-          organizationSchema(),
-          websiteSchema(),
           webPageSchema({
             name: "Hotel Answering Service & 24/7 Guest Support | Guest Squad",
             description: "Guest Squad provides 24/7 hotel guest support, reservation calls, OTA inbox management, messaging, and after-hours front desk coverage.",

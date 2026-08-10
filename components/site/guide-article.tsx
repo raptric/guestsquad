@@ -7,7 +7,7 @@ import { CtaSection } from "@/components/site/cta-section";
 import { DownloadGate } from "@/components/site/download-gate";
 import { JsonLd } from "@/components/site/json-ld";
 import { TrackedLink } from "@/components/site/tracked-link";
-import { articleSchema, breadcrumbSchema, faqSchema, organizationSchema } from "@/lib/seo";
+import { articleSchema, breadcrumbSchema, faqSchema } from "@/lib/seo";
 import { RESOURCES, type GuideArticleData } from "@/lib/resource-content";
 import { SERVICES } from "@/lib/site-data";
 
@@ -23,7 +23,6 @@ export function GuideArticle({ data }: { data: GuideArticleData }) {
     <>
       <JsonLd
         data={[
-          organizationSchema(),
           articleSchema({
             headline: data.title,
             description: data.description,

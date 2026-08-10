@@ -8,7 +8,7 @@ import { CtaSection } from "@/components/site/cta-section";
 import { Breadcrumbs } from "@/components/site/breadcrumbs";
 import { JsonLd } from "@/components/site/json-ld";
 import { SERVICES } from "@/lib/site-data";
-import { buildMetadata, breadcrumbSchema, faqSchema, webPageSchema, organizationSchema } from "@/lib/seo";
+import { buildMetadata, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/seo";
 import { SITE } from "@/lib/site-data";
 
 export const metadata: Metadata = buildMetadata({
@@ -56,7 +56,6 @@ export default function ServicesPage() {
     <>
       <JsonLd
         data={[
-          organizationSchema(),
           webPageSchema({
             name: "Hotel Guest Operations Services | Guest Squad",
             description: "Reservation calls, guest messaging, OTA inbox management, after-hours coverage, and back-office operations — all under one guest operations partner.",

@@ -2,7 +2,7 @@
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import { Check, ArrowRight, Phone, MessageSquare, Inbox, Users } from "lucide-react";
-import { buildMetadata, breadcrumbSchema, faqSchema, webPageSchema, organizationSchema } from "@/lib/seo";
+import { buildMetadata, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/seo";
 import { JsonLd } from "@/components/site/json-ld";
 import { Section, SectionHeading } from "@/components/site/section";
 import { CalendlyPopupButton } from "@/components/site/calendly-popup-button";
@@ -164,7 +164,6 @@ export default function PilotPage() {
     <>
       <JsonLd
         data={[
-          organizationSchema(),
           webPageSchema({
             name: "2-Week Guest Coverage Pilot for Hotels | Guest Squad",
             description: "Start with a 2-week pilot before monthly coverage. Guest Squad reviews your call gaps, OTA inboxes, and after-hours needs and recommends a plan that fits.",

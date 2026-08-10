@@ -8,7 +8,7 @@ import { CtaSection } from "@/components/site/cta-section";
 import { DownloadGate } from "@/components/site/download-gate";
 import { JsonLd } from "@/components/site/json-ld";
 import { TrackedLink } from "@/components/site/tracked-link";
-import { articleSchema, breadcrumbSchema, faqSchema, organizationSchema, webPageSchema } from "@/lib/seo";
+import { articleSchema, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/seo";
 import { RESOURCES, type ResourceArticleData } from "@/lib/resource-content";
 import { SERVICES } from "@/lib/site-data";
 
@@ -21,7 +21,6 @@ export function ComparisonArticle({ data }: { data: ResourceArticleData }) {
     <>
       <JsonLd
         data={[
-          organizationSchema(),
           webPageSchema({
             name: data.title,
             description: data.description,

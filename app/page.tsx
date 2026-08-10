@@ -79,6 +79,7 @@ export default function HomePage() {
             primaryImageUrl: "https://guestsquad.com/brand-assets/guestsquad-favicon-official.svg",
             primaryImageAlt: "Guest Squad logo",
             about: { "@id": "https://guestsquad.com/#organization" },
+            mainEntityId: "https://guestsquad.com/#organization",
             audienceTypes: ["Independent Hotel","Boutique Hotel","Inn","Resort","Serviced Apartment","Aparthotel","Airbnb Host","Vrbo Host","Short-Term Rental Operator","Vacation Rental Operator","Vacation Rental Property Manager"],
             mentions: [
               // OTAs — all shown in PlatformLogos component

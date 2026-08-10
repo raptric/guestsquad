@@ -153,17 +153,8 @@ export function contactPageSchema() {
     name: "Contact Guest Squad | Book a Coverage Review",
     description:
       "Contact Guest Squad to book a coverage review for hotel answering service, guest messaging, OTA inbox management, after-hours support, and managed guest operations coverage.",
-    isPartOf: {
-      "@type": "WebSite",
-      "@id": `${SITE.url}/#website`,
-      url: SITE.url,
-      name: SITE.brand,
-    },
-    about: {
-      "@type": "ProfessionalService",
-      "@id": `${SITE.url}/#organization`,
-      name: SITE.brand,
-    },
+    isPartOf: { "@id": `${SITE.url}/#website` },
+    about: { "@id": `${SITE.url}/#organization` },
     mainEntity: {
       "@type": "ContactPoint",
       contactType: "sales",
@@ -242,6 +233,7 @@ export function webPageSchema({
   mentions,
   about,
   audienceTypes,
+  mainEntityId,
 }: {
   name: string;
   description: string;
@@ -251,6 +243,7 @@ export function webPageSchema({
   mentions?: { "@type": string; name: string }[];
   about?: Record<string, string>;
   audienceTypes?: string[];
+  mainEntityId?: string;
 }) {
   const url = `${SITE.url}${path}`;
   return {
@@ -273,6 +266,7 @@ export function webPageSchema({
     ...(audienceTypes && audienceTypes.length > 0 && {
       audience: audienceTypes.map((t) => ({ "@type": "Audience", audienceType: t })),
     }),
+    ...(mainEntityId && { mainEntity: { "@id": mainEntityId } }),
     speakable: {
       "@type": "SpeakableSpecification",
       cssSelector: ["h1", "h2", ".answer-block"],

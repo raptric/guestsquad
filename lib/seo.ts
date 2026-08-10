@@ -81,6 +81,12 @@ export function organizationSchema() {
       "@type": "ImageObject",
       url: `${SITE.url}/brand-assets/guestsquad-favicon-official.svg`,
     },
+    image: {
+      "@type": "ImageObject",
+      url: `${SITE.url}/brand-assets/og-image.jpg`,
+      width: 1200,
+      height: 630,
+    },
     sameAs: [
       "https://www.linkedin.com/company/guest-squad/",
       "https://raptric.com",

@@ -7,7 +7,7 @@ import { CtaSection } from "@/components/site/cta-section";
 import { Breadcrumbs } from "@/components/site/breadcrumbs";
 import { JsonLd } from "@/components/site/json-ld";
 import { serviceSchema, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/seo";
-import { SERVICES } from "@/lib/site-data";
+import { SERVICES, SITE } from "@/lib/site-data";
 import { RESOURCES } from "@/lib/resource-content";
 import { AssetBlock } from "@/components/site/asset-block";
 import { BoFuTrustBlock } from "@/components/site/bofu-trust-block";
@@ -76,6 +76,7 @@ export function ServiceDetail({ data }: { data: ServiceDetailData }) {
             primaryImageUrl: data.image.src,
             primaryImageAlt: data.image.alt,
             mentions: data.schemaMentions,
+            mainEntityId: `${SITE.url}${path}#service`,
           }),
           breadcrumbSchema([
             { name: "Home", path: "/" },

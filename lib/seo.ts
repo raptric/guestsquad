@@ -321,7 +321,13 @@ export function articleSchema({
       height: 630,
     },
     author: { "@id": `${SITE.url}/#organization` },
-    publisher: { "@id": `${SITE.url}/#organization` },
+    publisher: {
+      "@id": `${SITE.url}/#organization`,
+      logo: {
+        "@type": "ImageObject",
+        url: `${SITE.url}/brand-assets/guestsquad-favicon-official.svg`,
+      },
+    },
     ...(about && { about: { "@type": about.type, name: about.name, ...(about.url && { url: about.url }), ...(about.serviceType && { serviceType: about.serviceType }), ...(about.areaServed && { areaServed: about.areaServed }) } }),
     ...(mentions && { mentions: mentions.map((m) => ({ "@type": m.type, name: m.name })) }),
     speakable: {

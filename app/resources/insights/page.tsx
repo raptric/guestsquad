@@ -63,7 +63,7 @@ export default function InsightsPage() {
       <PageHero
         eyebrow="Insights"
         title="What the data says about hotel operations."
-        description="Analysis and operational insight for independent hoteliers — built around the patterns we see across OTA rankings, guest response time, and revenue gaps."
+        description="Independent hotel owners and short-term rental operators are making decisions about OTA inbox coverage, after-hours call handling, guest response time, and outsourcing without much reliable data to go on. These articles are built around the operational patterns and platform requirements that actually move rankings, cancellation rates, and revenue — not general hospitality advice."
       />
 
       <Section>

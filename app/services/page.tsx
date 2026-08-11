@@ -123,7 +123,7 @@ export default function ServicesPage() {
       <div className="border-b border-line bg-surface">
         <div className="container py-8">
           <p className="mx-auto max-w-3xl text-sm leading-relaxed text-ink-soft">
-            Guest Squad covers the full range of guest-facing operations for hotels, boutique properties, resorts, serviced apartments, and short-term rental operators. Services can be combined to fill specific gaps or bundled for complete coverage. Every plan starts with a conversation about your property, not a fixed package.
+            Guest Squad covers reservation calls, OTA inbox management, guest messaging, after-hours hotel support, and back-office operations — the channels where independent hotels, boutique properties, and short-term rental operators most commonly lose bookings or fall behind on response time. Each service runs on your rates, policies, and escalation contacts. Start with the gap that is costing you most right now and add coverage as your operation grows.
           </p>
         </div>
       </div>

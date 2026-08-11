@@ -10,6 +10,7 @@ import { DownloadGate } from "@/components/site/download-gate";
 import { buildMetadata, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/seo";
 import { SITE } from "@/lib/site-data";
 import { RESOURCES } from "@/lib/resource-content";
+import { INSIGHTS } from "@/lib/insights-content";
 import { Calculator, FileText, ClipboardList, BarChart2, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = buildMetadata({
@@ -90,6 +91,27 @@ export default function ResourcesPage() {
                 url: `${SITE.url}/resources/${r.slug}`,
               })),
             ],
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "@id": `${SITE.url}/resources#insights-itemlist`,
+            name: "Guest Squad Insights — Hotel Operations Analysis",
+            description: "Analysis and operational insight for independent hoteliers — built around OTA rankings, guest response time, and revenue gaps.",
+            url: `${SITE.url}/resources/insights`,
+            numberOfItems: INSIGHTS.length,
+            itemListElement: INSIGHTS.map((insight, i) => ({
+              "@type": "ListItem",
+              position: i + 1,
+              url: `${SITE.url}/resources/insights/${insight.slug}`,
+              item: {
+                "@type": "Article",
+                "@id": `${SITE.url}/resources/insights/${insight.slug}#article`,
+                name: insight.title,
+                description: insight.description,
+                datePublished: `${insight.datePublished}T00:00:00+00:00`,
+              },
+            })),
           },
           breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Resources", path: "/resources" }]),
           faqSchema(RESOURCES_FAQS),

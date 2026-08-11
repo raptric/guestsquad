@@ -9,6 +9,7 @@ import { JsonLd } from "@/components/site/json-ld";
 import { TrackedLink } from "@/components/site/tracked-link";
 import { articleSchema, breadcrumbSchema, faqSchema } from "@/lib/seo";
 import { RESOURCES, type GuideArticleData } from "@/lib/resource-content";
+import { INSIGHTS } from "@/lib/insights-content";
 import { SERVICES } from "@/lib/site-data";
 
 export function GuideArticle({ data }: { data: GuideArticleData }) {
@@ -171,6 +172,32 @@ export function GuideArticle({ data }: { data: GuideArticleData }) {
           ))}
         </div>
       </Section>
+
+      {data.insightSlugs && data.insightSlugs.length > 0 && (
+        <Section surface>
+          <SectionHeading eyebrow="From the Insights" title="Deeper reading on this topic." />
+          <div className="mt-10 grid gap-6 sm:grid-cols-2">
+            {INSIGHTS.filter((i) => data.insightSlugs!.includes(i.slug))
+              .sort((a, b) => data.insightSlugs!.indexOf(a.slug) - data.insightSlugs!.indexOf(b.slug))
+              .map((insight) => (
+                <Link
+                  key={insight.slug}
+                  href={`/resources/insights/${insight.slug}`}
+                  className="group flex flex-col justify-between rounded-lg border border-line bg-paper p-6 transition-colors hover:border-gold/50"
+                >
+                  <div>
+                    <p className="mb-1 text-xs font-semibold uppercase tracking-[0.14em] text-ink-muted">{insight.category}</p>
+                    <h3 className="text-sm font-medium text-ink">{insight.title}</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-ink-soft">{insight.description}</p>
+                  </div>
+                  <div className="mt-4 flex items-center gap-1.5 text-xs font-medium text-ink-soft group-hover:text-gold-dark">
+                    Read insight <ArrowUpRight className="h-3.5 w-3.5" />
+                  </div>
+                </Link>
+              ))}
+          </div>
+        </Section>
+      )}
 
       {data.assetCta && (
         <Section surface>

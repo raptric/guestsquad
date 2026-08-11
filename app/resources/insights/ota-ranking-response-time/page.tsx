@@ -73,6 +73,7 @@ export default function OtaRankingResponseTimePage() {
               { type: "Thing", name: "Hotel OTA Ranking" },
               { type: "Thing", name: "Booking.com Reply Score" },
               { type: "Thing", name: "Preferred Partner Status" },
+              { type: "Article", name: "Booking.com and Expedia Message Support: An OTA Inbox Checklist", id: "https://guestsquad.com/resources/booking-com-message-support#article" },
             ],
             articleSection: "OTA Rankings",
             keywords: "OTA ranking, Booking.com reply score, hotel response time, Preferred Partner status, OTA inbox management",

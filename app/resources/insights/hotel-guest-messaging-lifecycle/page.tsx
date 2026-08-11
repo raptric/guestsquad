@@ -71,6 +71,7 @@ export default function GuestMessagingLifecyclePage() {
               { type: "Thing", name: "In-Stay Guest Messaging" },
               { type: "Thing", name: "Post-Checkout Follow-Up" },
               { type: "Thing", name: "Guest Journey Communication" },
+              { type: "Article", name: "Hotel Guest Messaging SOP Template", id: "https://guestsquad.com/resources/hotel-guest-messaging-sop-template#article" },
             ],
             articleSection: "Guest Messaging",
             keywords: "hotel guest messaging, pre-arrival messaging, in-stay guest communication, post-checkout follow-up, hotel guest journey",

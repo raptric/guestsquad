@@ -71,6 +71,8 @@ export default function FastResponsesCancellationsPage() {
               { type: "Thing", name: "Hotel Review Score" },
               { type: "Thing", name: "OTA Message Response" },
               { type: "Thing", name: "Booking.com Reply Score" },
+              { type: "Article", name: "Hotel Front Desk Overflow Support: When to Outsource and What to Keep In-House", id: "https://guestsquad.com/resources/hotel-front-desk-overflow-support#article" },
+              { type: "Article", name: "Hotel Guest Messaging SOP Template", id: "https://guestsquad.com/resources/hotel-guest-messaging-sop-template#article" },
             ],
             articleSection: "Guest Reviews",
             keywords: "guest cancellation rate, hotel review score, OTA response time, Booking.com reply score, Vrbo response requirements",

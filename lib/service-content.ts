@@ -11,7 +11,10 @@ export const hotelAnsweringServiceData: ServiceDetailData = {
   schemaSubjectOf: [
     { "@type": "Article", "@id": "https://guestsquad.com/resources/hotel-answering-service-vs-call-center#article" },
     { "@type": "Article", "@id": "https://guestsquad.com/resources/hotel-answering-service-vs-ai-voice#article" },
+    { "@type": "Article", "@id": "https://guestsquad.com/resources/insights/when-to-outsource-guest-communication#article" },
+    { "@type": "Article", "@id": "https://guestsquad.com/resources/insights/unanswered-reservation-calls-revenue#article" },
   ],
+  insightSlugs: ["when-to-outsource-guest-communication", "unanswered-reservation-calls-revenue"],
   schemaAudienceTypes: [
     "Independent Hotel",
     "Boutique Hotel",
@@ -133,7 +136,10 @@ export const reservationSupportData: ServiceDetailData = {
   schemaSubjectOf: [
     { "@type": "Article", "@id": "https://guestsquad.com/resources/hotel-answering-service-cost#article" },
     { "@type": "Article", "@id": "https://guestsquad.com/resources/hotel-answering-service-vs-call-center#article" },
+    { "@type": "Article", "@id": "https://guestsquad.com/resources/insights/unanswered-reservation-calls-revenue#article" },
+    { "@type": "Article", "@id": "https://guestsquad.com/resources/insights/why-hotels-miss-bookings-after-hours#article" },
   ],
+  insightSlugs: ["unanswered-reservation-calls-revenue", "why-hotels-miss-bookings-after-hours"],
   schemaAudienceTypes: [
     "Independent Hotel",
     "Boutique Hotel",
@@ -243,7 +249,10 @@ export const guestMessagingData: ServiceDetailData = {
   schemaSubjectOf: [
     { "@type": "Article", "@id": "https://guestsquad.com/resources/hotel-guest-messaging-sop-template#article" },
     { "@type": "Article", "@id": "https://guestsquad.com/resources/booking-com-message-support#article" },
+    { "@type": "Article", "@id": "https://guestsquad.com/resources/insights/hotel-guest-messaging-lifecycle#article" },
+    { "@type": "Article", "@id": "https://guestsquad.com/resources/insights/fast-responses-reduce-cancellations#article" },
   ],
+  insightSlugs: ["hotel-guest-messaging-lifecycle", "fast-responses-reduce-cancellations"],
   schemaAudienceTypes: [
     "Independent Hotel",
     "Boutique Hotel",
@@ -348,7 +357,10 @@ export const otaInboxData: ServiceDetailData = {
   schemaSubjectOf: [
     { "@type": "Article", "@id": "https://guestsquad.com/resources/booking-com-message-support#article" },
     { "@type": "Article", "@id": "https://guestsquad.com/resources/hotel-guest-messaging-sop-template#article" },
+    { "@type": "Article", "@id": "https://guestsquad.com/resources/insights/ota-ranking-response-time#article" },
+    { "@type": "Article", "@id": "https://guestsquad.com/resources/insights/booking-com-message-management-lean-teams#article" },
   ],
+  insightSlugs: ["ota-ranking-response-time", "booking-com-message-management-lean-teams"],
   schemaAudienceTypes: [
     "Independent Hotel",
     "Boutique Hotel",
@@ -455,7 +467,10 @@ export const afterHoursData: ServiceDetailData = {
   schemaSubjectOf: [
     { "@type": "Article", "@id": "https://guestsquad.com/resources/after-hours-hotel-support-checklist#article" },
     { "@type": "Article", "@id": "https://guestsquad.com/resources/hotel-answering-service-vs-ai-voice#article" },
+    { "@type": "Article", "@id": "https://guestsquad.com/resources/insights/why-hotels-miss-bookings-after-hours#article" },
+    { "@type": "Article", "@id": "https://guestsquad.com/resources/insights/unanswered-reservation-calls-revenue#article" },
   ],
+  insightSlugs: ["why-hotels-miss-bookings-after-hours", "unanswered-reservation-calls-revenue"],
   schemaAudienceTypes: [
     "Independent Hotel",
     "Boutique Hotel",
@@ -568,7 +583,10 @@ export const backOfficeData: ServiceDetailData = {
   schemaSubjectOf: [
     { "@type": "Article", "@id": "https://guestsquad.com/resources/after-hours-hotel-support-checklist#article" },
     { "@type": "Article", "@id": "https://guestsquad.com/resources/hotel-answering-service-cost#article" },
+    { "@type": "Article", "@id": "https://guestsquad.com/resources/insights/ota-response-back-office-reconciliation#article" },
+    { "@type": "Article", "@id": "https://guestsquad.com/resources/insights/ota-ranking-response-time#article" },
   ],
+  insightSlugs: ["ota-response-back-office-reconciliation", "ota-ranking-response-time"],
   schemaAudienceTypes: [
     "Independent Hotel",
     "Boutique Hotel",
@@ -675,7 +693,10 @@ export const airbnbSupportData: ServiceDetailData = {
   schemaSubjectOf: [
     { "@type": "Article", "@id": "https://guestsquad.com/resources/hotel-guest-messaging-sop-template#article" },
     { "@type": "Article", "@id": "https://guestsquad.com/resources/hotel-answering-service-vs-ai-voice#article" },
+    { "@type": "Article", "@id": "https://guestsquad.com/resources/insights/airbnb-response-time-visibility#article" },
+    { "@type": "Article", "@id": "https://guestsquad.com/resources/insights/vacation-rental-response-standards#article" },
   ],
+  insightSlugs: ["airbnb-response-time-visibility", "vacation-rental-response-standards"],
   schemaAudienceTypes: [
     "Airbnb Host",
     "Vrbo Host",
@@ -780,7 +801,10 @@ export const vacationRentalAnsweringData: ServiceDetailData = {
   schemaSubjectOf: [
     { "@type": "Article", "@id": "https://guestsquad.com/resources/after-hours-hotel-support-checklist#article" },
     { "@type": "Article", "@id": "https://guestsquad.com/resources/hotel-answering-service-vs-ai-voice#article" },
+    { "@type": "Article", "@id": "https://guestsquad.com/resources/insights/vacation-rental-response-standards#article" },
+    { "@type": "Article", "@id": "https://guestsquad.com/resources/insights/airbnb-response-time-visibility#article" },
   ],
+  insightSlugs: ["vacation-rental-response-standards", "airbnb-response-time-visibility"],
   schemaAudienceTypes: [
     "Airbnb Host",
     "Vrbo Host",

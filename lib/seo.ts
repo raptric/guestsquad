@@ -316,7 +316,7 @@ export function articleSchema({
   datePublished: string;
   dateModified?: string;
   about?: { type: string; name: string; url?: string; serviceType?: string; areaServed?: string };
-  mentions?: { type: string; name: string }[];
+  mentions?: { type: string; name: string; id?: string }[];
   articleSection?: string;
   keywords?: string;
   timeRequired?: string;
@@ -380,7 +380,7 @@ export function articleSchema({
     isPartOf: { "@id": `${SITE.url}/#website` },
     ...(about && { about: { "@type": about.type, name: about.name, ...(about.url && { url: about.url }), ...(about.serviceType && { serviceType: about.serviceType }), ...(about.areaServed && { areaServed: about.areaServed }) } }),
     ...(audience && audience.length > 0 && { audience: audience.map((a) => ({ "@type": "Audience", audienceType: a.audienceType })) }),
-    ...(mentions && { mentions: mentions.map((m) => ({ "@type": m.type, name: m.name })) }),
+    ...(mentions && { mentions: mentions.map((m) => ({ "@type": m.type, name: m.name, ...(m.id && { "@id": m.id }) })) }),
     ...(citation && citation.length > 0 && { citation: citation.map((c) => ({ "@type": "WebPage", name: c.name, url: c.url })) }),
     speakable: {
       "@type": "SpeakableSpecification",

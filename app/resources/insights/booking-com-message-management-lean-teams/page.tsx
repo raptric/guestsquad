@@ -70,6 +70,7 @@ export default function BookingComLeanTeamsPage() {
               { type: "Thing", name: "Preferred Partner Status" },
               { type: "Thing", name: "OTA Message Management" },
               { type: "Thing", name: "Hotel Front Desk Staffing" },
+              { type: "Article", name: "Booking.com and Expedia Message Support: An OTA Inbox Checklist", id: "https://guestsquad.com/resources/booking-com-message-support#article" },
             ],
             articleSection: "OTA Rankings",
             keywords: "Booking.com reply score, hotel inbox management, lean front desk team, Booking.com ranking, Preferred Partner status",

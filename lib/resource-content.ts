@@ -118,7 +118,8 @@ export type ResourceArticleData = {
   inlineAsset?: ArticleAssetCta;
   assetCta?: ArticleAssetCta;
   schemaAbout?: { type: string; name: string; url?: string; serviceType?: string; areaServed?: string };
-  schemaMentions?: { type: string; name: string }[];
+  schemaMentions?: { type: string; name: string; id?: string }[];
+  insightSlugs?: string[];
 };
 
 export const aiVoiceComparison: ResourceArticleData = {
@@ -288,7 +289,10 @@ export const aiVoiceComparison: ResourceArticleData = {
     { type: "Thing", name: "Hotel Phone Answering" },
     { type: "Thing", name: "After-Hours Hotel Coverage" },
     { type: "Thing", name: "Hotel Reservation Calls" },
+    { type: "Article", name: "When a Hotel or STR Should Outsource Guest Communication — and When It Shouldn't", id: "https://guestsquad.com/resources/insights/when-to-outsource-guest-communication#article" },
+    { type: "Article", name: "Why Hotels Still Miss Bookings After Hours Even When Demand Is Strong", id: "https://guestsquad.com/resources/insights/why-hotels-miss-bookings-after-hours#article" },
   ],
+  insightSlugs: ["when-to-outsource-guest-communication", "why-hotels-miss-bookings-after-hours"],
 };
 
 export const callCenterComparison: ResourceArticleData = {
@@ -470,7 +474,10 @@ export const callCenterComparison: ResourceArticleData = {
     { type: "Thing", name: "After-Hours Hotel Support" },
     { type: "Thing", name: "Answering Service vs Call Center" },
     { type: "Thing", name: "OTA Inbox Management" },
+    { type: "Article", name: "When a Hotel or STR Should Outsource Guest Communication — and When It Shouldn't", id: "https://guestsquad.com/resources/insights/when-to-outsource-guest-communication#article" },
+    { type: "Article", name: "The Hidden Revenue Impact of Unanswered Hotel Reservation Calls", id: "https://guestsquad.com/resources/insights/unanswered-reservation-calls-revenue#article" },
   ],
+  insightSlugs: ["when-to-outsource-guest-communication", "unanswered-reservation-calls-revenue"],
 };
 
 export type GuideSection = {
@@ -495,7 +502,8 @@ export type GuideArticleData = {
   inlineAsset?: ArticleAssetCta;
   assetCta?: ArticleAssetCta;
   schemaAbout?: { type: string; name: string; url?: string; serviceType?: string; areaServed?: string };
-  schemaMentions?: { type: string; name: string }[];
+  schemaMentions?: { type: string; name: string; id?: string }[];
+  insightSlugs?: string[];
 };
 
 export const answeringServiceCostGuide: GuideArticleData = {
@@ -611,7 +619,10 @@ export const answeringServiceCostGuide: GuideArticleData = {
     { type: "Thing", name: "Flat Monthly Pricing" },
     { type: "Thing", name: "Per-Minute Call Billing" },
     { type: "Thing", name: "Hotel Guest Support Coverage" },
+    { type: "Article", name: "When a Hotel or STR Should Outsource Guest Communication — and When It Shouldn't", id: "https://guestsquad.com/resources/insights/when-to-outsource-guest-communication#article" },
+    { type: "Article", name: "The Hidden Revenue Impact of Unanswered Hotel Reservation Calls", id: "https://guestsquad.com/resources/insights/unanswered-reservation-calls-revenue#article" },
   ],
+  insightSlugs: ["when-to-outsource-guest-communication", "unanswered-reservation-calls-revenue"],
 };
 
 export const afterHoursChecklistGuide: GuideArticleData = {
@@ -722,7 +733,10 @@ export const afterHoursChecklistGuide: GuideArticleData = {
     { type: "Thing", name: "Hotel Voicemail Alternative" },
     { type: "Thing", name: "Overnight Guest Calls" },
     { type: "Thing", name: "Weekend Hotel Coverage" },
+    { type: "Article", name: "Why Hotels Still Miss Bookings After Hours Even When Demand Is Strong", id: "https://guestsquad.com/resources/insights/why-hotels-miss-bookings-after-hours#article" },
+    { type: "Article", name: "The Hidden Revenue Impact of Unanswered Hotel Reservation Calls", id: "https://guestsquad.com/resources/insights/unanswered-reservation-calls-revenue#article" },
   ],
+  insightSlugs: ["why-hotels-miss-bookings-after-hours", "unanswered-reservation-calls-revenue"],
 };
 
 export const overflowSupportGuide: GuideArticleData = {
@@ -832,7 +846,10 @@ export const overflowSupportGuide: GuideArticleData = {
     { type: "Thing", name: "Missed Hotel Calls" },
     { type: "Thing", name: "Hotel Reservation Overflow" },
     { type: "Thing", name: "Hotel Voicemail Alternative" },
+    { type: "Article", name: "Why Hotels Still Miss Bookings After Hours Even When Demand Is Strong", id: "https://guestsquad.com/resources/insights/why-hotels-miss-bookings-after-hours#article" },
+    { type: "Article", name: "Why Fast Guest Responses Reduce Cancellations and Protect Your Review Score", id: "https://guestsquad.com/resources/insights/fast-responses-reduce-cancellations#article" },
   ],
+  insightSlugs: ["why-hotels-miss-bookings-after-hours", "fast-responses-reduce-cancellations"],
 };
 
 export const otaInboxChecklistGuide: GuideArticleData = {
@@ -943,7 +960,10 @@ export const otaInboxChecklistGuide: GuideArticleData = {
     { type: "Thing", name: "OTA Cancellation Handling" },
     { type: "Thing", name: "Airbnb Guest Messaging" },
     { type: "Thing", name: "Hotel Direct Booking Conversion" },
+    { type: "Article", name: "What Happens to Your Hotel's OTA Ranking When You Reply Slowly", id: "https://guestsquad.com/resources/insights/ota-ranking-response-time#article" },
+    { type: "Article", name: "Booking.com Message Management for Lean Front Desk Teams", id: "https://guestsquad.com/resources/insights/booking-com-message-management-lean-teams#article" },
   ],
+  insightSlugs: ["ota-ranking-response-time", "booking-com-message-management-lean-teams"],
 };
 
 export const messagingSopGuide: GuideArticleData = {
@@ -1060,7 +1080,10 @@ export const messagingSopGuide: GuideArticleData = {
     { type: "Thing", name: "Hotel Brand Voice Guidelines" },
     { type: "Thing", name: "Guest Escalation Rules" },
     { type: "Thing", name: "Hotel Messaging Channels" },
+    { type: "Article", name: "What Good Hotel Guest Messaging Looks Like Before Arrival, During Stay, and After Checkout", id: "https://guestsquad.com/resources/insights/hotel-guest-messaging-lifecycle#article" },
+    { type: "Article", name: "Why Fast Guest Responses Reduce Cancellations and Protect Your Review Score", id: "https://guestsquad.com/resources/insights/fast-responses-reduce-cancellations#article" },
   ],
+  insightSlugs: ["hotel-guest-messaging-lifecycle", "fast-responses-reduce-cancellations"],
 };
 
 export const RESOURCE_ARTICLES: Record<string, ResourceArticleData> = {

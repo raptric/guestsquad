@@ -73,6 +73,16 @@ export default function OtaBackOfficeReconciliationPage() {
               { type: "Thing", name: "Property Management System" },
               { type: "Thing", name: "Hotel Revenue Reporting" },
             ],
+            articleSection: "Back Office",
+            keywords: "OTA back office operations, hotel revenue reconciliation, Booking.com reply score, Vrbo acceptance rate, property management system",
+            timeRequired: "PT6M",
+            wordCount: 1400,
+            audience: [
+              { audienceType: "Independent Hotel Owner" },
+              { audienceType: "Boutique Hotel Operator" },
+              { audienceType: "Vacation Rental Manager" },
+              { audienceType: "Short-Term Rental Operator" },
+            ],
           }),
           breadcrumbSchema([
             { name: "Home", path: "/" },

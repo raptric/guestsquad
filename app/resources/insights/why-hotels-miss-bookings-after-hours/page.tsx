@@ -70,6 +70,19 @@ export default function AfterHoursMissedBookingsPage() {
               { type: "Thing", name: "Hotel Reservation Calls" },
               { type: "Thing", name: "Overnight Hotel Coverage" },
             ],
+            articleSection: "After-Hours Coverage",
+            keywords: "hotel after-hours coverage, missed booking calls, hotel front desk staffing, overnight hotel coverage, after-hours hotel support",
+            timeRequired: "PT7M",
+            wordCount: 1600,
+            audience: [
+              { audienceType: "Independent Hotel Owner" },
+              { audienceType: "Boutique Hotel Operator" },
+              { audienceType: "Vacation Rental Manager" },
+              { audienceType: "Short-Term Rental Operator" },
+            ],
+            citation: [
+              { name: "AHLA December 2024 Hotel Staffing Shortage Survey", url: "https://www.ahla.com/news/65-surveyed-hotels-report-staffing-shortages" },
+            ],
           }),
           {
             "@context": "https://schema.org",

@@ -74,6 +74,22 @@ export default function OtaRankingResponseTimePage() {
               { type: "Thing", name: "Booking.com Reply Score" },
               { type: "Thing", name: "Preferred Partner Status" },
             ],
+            articleSection: "OTA Rankings",
+            keywords: "OTA ranking, Booking.com reply score, hotel response time, Preferred Partner status, OTA inbox management",
+            timeRequired: "PT8M",
+            wordCount: 1850,
+            audience: [
+              { audienceType: "Independent Hotel Owner" },
+              { audienceType: "Boutique Hotel Operator" },
+              { audienceType: "Vacation Rental Manager" },
+              { audienceType: "Short-Term Rental Operator" },
+            ],
+            citation: [
+              { name: "D-Edge Hotel Distribution Report 2024", url: "https://www.d-edge.com/wp-content/uploads/2024/04/Hotel-Distribution-Report-2024-EN.pdf" },
+              { name: "Enso Connect: Response Times in Hospitality", url: "https://ensoconnect.com/resources/response-times-in-hospitality-a-guide-for-vacation-rental-professionals" },
+              { name: "Rentals United: Improve Booking.com Ranking", url: "https://rentalsunited.com/blog/improve-booking-com-ranking/" },
+              { name: "TravelScrape: OTA Ranking & Visibility", url: "https://www.travelscrape.com/ota-ranking-visibility.php" },
+            ],
           }),
           breadcrumbSchema([
             { name: "Home", path: "/" },

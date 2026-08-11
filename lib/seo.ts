@@ -294,7 +294,7 @@ export function breadcrumbSchema(items: { name: string; path: string }[]) {
   };
 }
 
-/** Article schema for comparison/resource pages. */
+/** Article schema for comparison/resource and insight pages. */
 export function articleSchema({
   headline,
   description,
@@ -303,6 +303,12 @@ export function articleSchema({
   dateModified,
   about,
   mentions,
+  articleSection,
+  keywords,
+  timeRequired,
+  wordCount,
+  audience,
+  citation,
 }: {
   headline: string;
   description: string;
@@ -311,6 +317,12 @@ export function articleSchema({
   dateModified?: string;
   about?: { type: string; name: string; url?: string; serviceType?: string; areaServed?: string };
   mentions?: { type: string; name: string }[];
+  articleSection?: string;
+  keywords?: string;
+  timeRequired?: string;
+  wordCount?: number;
+  audience?: { audienceType: string }[];
+  citation?: { name: string; url: string }[];
 }) {
   const url = `${SITE.url}${path}`;
   return {
@@ -323,22 +335,53 @@ export function articleSchema({
     mainEntityOfPage: url,
     datePublished,
     dateModified: dateModified ?? datePublished,
-    image: {
-      "@type": "ImageObject",
-      url: `${SITE.url}/brand-assets/og-image.jpg`,
-      width: 1200,
-      height: 630,
-    },
-    author: { "@id": `${SITE.url}/#organization` },
-    publisher: {
+    ...(articleSection && { articleSection }),
+    ...(keywords && { keywords }),
+    inLanguage: "en-US",
+    isAccessibleForFree: true,
+    ...(timeRequired && { timeRequired }),
+    ...(wordCount && { wordCount }),
+    image: [
+      {
+        "@type": "ImageObject",
+        url: `${SITE.url}/brand-assets/og-image.jpg`,
+        width: 1200,
+        height: 630,
+      },
+      {
+        "@type": "ImageObject",
+        url: `${SITE.url}/brand-assets/og-image-square.jpg`,
+        width: 1200,
+        height: 1200,
+      },
+      {
+        "@type": "ImageObject",
+        url: `${SITE.url}/brand-assets/og-image-4x3.jpg`,
+        width: 1200,
+        height: 900,
+      },
+    ],
+    author: {
+      "@type": "Organization",
       "@id": `${SITE.url}/#organization`,
+      name: SITE.brand,
+      url: SITE.url,
+    },
+    publisher: {
+      "@type": "Organization",
+      "@id": `${SITE.url}/#organization`,
+      name: SITE.brand,
+      url: SITE.url,
       logo: {
         "@type": "ImageObject",
         url: `${SITE.url}/brand-assets/guestsquad-favicon-official.svg`,
       },
     },
+    isPartOf: { "@id": `${SITE.url}/#website` },
     ...(about && { about: { "@type": about.type, name: about.name, ...(about.url && { url: about.url }), ...(about.serviceType && { serviceType: about.serviceType }), ...(about.areaServed && { areaServed: about.areaServed }) } }),
+    ...(audience && audience.length > 0 && { audience: audience.map((a) => ({ "@type": "Audience", audienceType: a.audienceType })) }),
     ...(mentions && { mentions: mentions.map((m) => ({ "@type": m.type, name: m.name })) }),
+    ...(citation && citation.length > 0 && { citation: citation.map((c) => ({ "@type": "WebPage", name: c.name, url: c.url })) }),
     speakable: {
       "@type": "SpeakableSpecification",
       cssSelector: ["h1", "h2", ".answer-block"],

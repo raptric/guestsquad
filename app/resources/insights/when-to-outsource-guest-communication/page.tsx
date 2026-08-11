@@ -73,6 +73,19 @@ export default function WhenToOutsourcePage() {
               { type: "Thing", name: "Hotel Staffing Shortage" },
               { type: "Thing", name: "Guest Operations Outsourcing" },
             ],
+            articleSection: "Operations",
+            keywords: "outsource hotel communication, hotel BPO, hotel guest operations, hotel answering service, guest communication outsourcing",
+            timeRequired: "PT8M",
+            wordCount: 1800,
+            audience: [
+              { audienceType: "Independent Hotel Owner" },
+              { audienceType: "Boutique Hotel Operator" },
+              { audienceType: "Vacation Rental Manager" },
+              { audienceType: "Short-Term Rental Operator" },
+            ],
+            citation: [
+              { name: "AHLA December 2024 Hotel Staffing Shortage Survey", url: "https://www.ahla.com/news/65-surveyed-hotels-report-staffing-shortages" },
+            ],
           }),
           breadcrumbSchema([
             { name: "Home", path: "/" },

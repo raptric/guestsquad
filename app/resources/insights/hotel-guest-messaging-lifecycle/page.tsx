@@ -72,6 +72,16 @@ export default function GuestMessagingLifecyclePage() {
               { type: "Thing", name: "Post-Checkout Follow-Up" },
               { type: "Thing", name: "Guest Journey Communication" },
             ],
+            articleSection: "Guest Messaging",
+            keywords: "hotel guest messaging, pre-arrival messaging, in-stay guest communication, post-checkout follow-up, hotel guest journey",
+            timeRequired: "PT8M",
+            wordCount: 1700,
+            audience: [
+              { audienceType: "Independent Hotel Owner" },
+              { audienceType: "Boutique Hotel Operator" },
+              { audienceType: "Vacation Rental Manager" },
+              { audienceType: "Short-Term Rental Operator" },
+            ],
           }),
           {
             "@context": "https://schema.org",

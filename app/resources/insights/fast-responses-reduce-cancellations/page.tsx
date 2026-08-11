@@ -72,6 +72,16 @@ export default function FastResponsesCancellationsPage() {
               { type: "Thing", name: "OTA Message Response" },
               { type: "Thing", name: "Booking.com Reply Score" },
             ],
+            articleSection: "Guest Reviews",
+            keywords: "guest cancellation rate, hotel review score, OTA response time, Booking.com reply score, Vrbo response requirements",
+            timeRequired: "PT7M",
+            wordCount: 1600,
+            audience: [
+              { audienceType: "Independent Hotel Owner" },
+              { audienceType: "Boutique Hotel Operator" },
+              { audienceType: "Vacation Rental Manager" },
+              { audienceType: "Short-Term Rental Operator" },
+            ],
           }),
           breadcrumbSchema([
             { name: "Home", path: "/" },

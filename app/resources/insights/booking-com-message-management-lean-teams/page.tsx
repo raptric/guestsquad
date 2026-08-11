@@ -71,6 +71,19 @@ export default function BookingComLeanTeamsPage() {
               { type: "Thing", name: "OTA Message Management" },
               { type: "Thing", name: "Hotel Front Desk Staffing" },
             ],
+            articleSection: "OTA Rankings",
+            keywords: "Booking.com reply score, hotel inbox management, lean front desk team, Booking.com ranking, Preferred Partner status",
+            timeRequired: "PT7M",
+            wordCount: 1600,
+            audience: [
+              { audienceType: "Independent Hotel Owner" },
+              { audienceType: "Boutique Hotel Operator" },
+              { audienceType: "Vacation Rental Manager" },
+              { audienceType: "Short-Term Rental Operator" },
+            ],
+            citation: [
+              { name: "AHLA December 2024 Hotel Staffing Shortage Survey", url: "https://www.ahla.com/news/65-surveyed-hotels-report-staffing-shortages" },
+            ],
           }),
           {
             "@context": "https://schema.org",

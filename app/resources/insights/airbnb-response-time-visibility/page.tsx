@@ -71,6 +71,16 @@ export default function AirbnbResponseTimeVisibilityPage() {
               { type: "Thing", name: "OTA Search Ranking" },
               { type: "Thing", name: "Vrbo Acceptance Rate" },
             ],
+            articleSection: "OTA Rankings",
+            keywords: "Airbnb response rate, Superhost status, Vrbo acceptance rate, short-term rental response time, OTA search ranking",
+            timeRequired: "PT7M",
+            wordCount: 1500,
+            audience: [
+              { audienceType: "Independent Hotel Owner" },
+              { audienceType: "Boutique Hotel Operator" },
+              { audienceType: "Vacation Rental Manager" },
+              { audienceType: "Short-Term Rental Operator" },
+            ],
           }),
           {
             "@context": "https://schema.org",

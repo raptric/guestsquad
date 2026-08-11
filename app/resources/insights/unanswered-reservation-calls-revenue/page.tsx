@@ -70,6 +70,19 @@ export default function ReservationCallsRevenuePage() {
               { type: "Thing", name: "Hotel Revenue Management" },
               { type: "Thing", name: "Hotel Answering Service" },
             ],
+            articleSection: "Revenue",
+            keywords: "hotel reservation calls, missed reservation calls, hotel front desk staffing, hotel revenue management, hotel answering service",
+            timeRequired: "PT6M",
+            wordCount: 1400,
+            audience: [
+              { audienceType: "Independent Hotel Owner" },
+              { audienceType: "Boutique Hotel Operator" },
+              { audienceType: "Vacation Rental Manager" },
+              { audienceType: "Short-Term Rental Operator" },
+            ],
+            citation: [
+              { name: "AHLA December 2024 Hotel Staffing Shortage Survey", url: "https://www.ahla.com/news/65-surveyed-hotels-report-staffing-shortages" },
+            ],
           }),
           breadcrumbSchema([
             { name: "Home", path: "/" },

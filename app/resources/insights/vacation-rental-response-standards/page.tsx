@@ -72,6 +72,16 @@ export default function VacationRentalResponseStandardsPage() {
               { type: "Thing", name: "Multi-Platform Property Management" },
               { type: "Thing", name: "Short-Term Rental Communication" },
             ],
+            articleSection: "Vacation Rentals",
+            keywords: "vacation rental response rate, Airbnb Superhost, Vrbo acceptance rate, multi-platform property management, short-term rental communication",
+            timeRequired: "PT8M",
+            wordCount: 1700,
+            audience: [
+              { audienceType: "Independent Hotel Owner" },
+              { audienceType: "Boutique Hotel Operator" },
+              { audienceType: "Vacation Rental Manager" },
+              { audienceType: "Short-Term Rental Operator" },
+            ],
           }),
           {
             "@context": "https://schema.org",

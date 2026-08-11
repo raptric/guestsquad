@@ -295,27 +295,30 @@ export default function ResourcesPage() {
           title="What the data says about hotel operations."
           description="Analysis and operational insight for independent hoteliers — built around OTA rankings, guest response time, and revenue gaps."
         />
-        <div className="mt-8 grid gap-6 sm:grid-cols-2">
-          <Link
-            href="/resources/insights/ota-ranking-response-time"
-            className="group flex flex-col justify-between rounded-lg border border-line bg-paper p-6 transition-colors hover:border-gold/50"
-          >
-            <div>
-              <div className="flex items-center justify-between">
-                <span className="text-xs font-semibold uppercase tracking-widest text-ink-muted">OTA Rankings</span>
-                <span className="text-xs text-ink-muted">8 min read</span>
+        <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {INSIGHTS.map((insight) => (
+            <Link
+              key={insight.slug}
+              href={`/resources/insights/${insight.slug}`}
+              className="group flex flex-col justify-between rounded-lg border border-line bg-paper p-6 transition-colors hover:border-gold/50"
+            >
+              <div>
+                <div className="flex items-center justify-between">
+                  <span className="text-xs font-semibold uppercase tracking-widest text-ink-muted">{insight.category}</span>
+                  <span className="text-xs text-ink-muted">{insight.readTime}</span>
+                </div>
+                <h3 className="mt-3 text-sm font-medium text-ink transition-colors group-hover:text-gold-dark">
+                  {insight.title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-ink-soft">
+                  {insight.description}
+                </p>
               </div>
-              <h3 className="mt-3 text-sm font-medium text-ink transition-colors group-hover:text-gold-dark">
-                What Happens to Your Hotel&apos;s OTA Ranking When You Reply Slowly
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-ink-soft">
-                Booking.com tracks your reply score as a direct ranking input. Here&apos;s exactly how slow responses move your listing down — and what recovery looks like.
+              <p className="mt-5 flex items-center gap-1.5 text-xs font-medium text-gold-dark group-hover:text-gold">
+                Read article →
               </p>
-            </div>
-            <p className="mt-5 flex items-center gap-1.5 text-xs font-medium text-gold-dark group-hover:text-gold">
-              Read article →
-            </p>
-          </Link>
+            </Link>
+          ))}
         </div>
         <p className="mt-6 text-sm text-ink-soft">
           <Link href="/resources/insights" className="text-gold-dark underline underline-offset-4 hover:text-gold">

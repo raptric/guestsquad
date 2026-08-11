@@ -245,7 +245,7 @@ export function webPageSchema({
   path: string;
   primaryImageUrl?: string;
   primaryImageAlt?: string;
-  mentions?: { "@type": string; name: string }[];
+  mentions?: { "@type": string; name?: string; "@id"?: string }[];
   about?: Record<string, string>;
   audienceTypes?: string[];
   mainEntityId?: string;

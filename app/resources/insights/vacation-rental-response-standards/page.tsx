@@ -39,9 +39,9 @@ const FAQS = [
 ];
 
 export const metadata: Metadata = buildMetadata({
-  title: "How Vacation Rental Managers Can Maintain Response Standards Across Airbnb, Vrbo, and Direct Messages",
+  title: "Vacation Rental Response Standards: Airbnb and Vrbo",
   description:
-    "Airbnb and Vrbo measure response compliance differently and enforce it differently. Here's what each platform requires, how the standards interact, and how managers running multiple listings keep coverage consistent.",
+    "Airbnb and Vrbo enforce response compliance differently. Here's what each platform requires and how to keep standards consistent across multiple listings.",
   path: PATH,
 });
 
@@ -301,6 +301,28 @@ export default function VacationRentalResponseStandardsPage() {
                 className="inline-flex items-center gap-1.5 text-sm font-medium text-gold-dark hover:text-gold"
               >
                 Airbnb guest support <ArrowUpRight className="h-3.5 w-3.5" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="border-t border-line">
+        <div className="container py-10">
+          <div className="mx-auto max-w-2xl">
+            <p className="text-xs font-semibold uppercase tracking-widest text-ink-muted">Related insights</p>
+            <div className="mt-4 flex flex-col gap-3">
+              <Link href="/resources/insights/airbnb-response-time-visibility" className="group flex items-start gap-2 text-sm text-gold-dark hover:text-gold">
+                <ArrowUpRight className="mt-0.5 h-4 w-4 shrink-0" />
+                <span className="leading-snug group-hover:underline">How Response Time Affects Airbnb Search Visibility</span>
+              </Link>
+              <Link href="/resources/insights/fast-responses-reduce-cancellations" className="group flex items-start gap-2 text-sm text-gold-dark hover:text-gold">
+                <ArrowUpRight className="mt-0.5 h-4 w-4 shrink-0" />
+                <span className="leading-snug group-hover:underline">How Fast Responses Reduce Hotel Cancellations</span>
+              </Link>
+              <Link href="/resources/insights/when-to-outsource-guest-communication" className="group flex items-start gap-2 text-sm text-gold-dark hover:text-gold">
+                <ArrowUpRight className="mt-0.5 h-4 w-4 shrink-0" />
+                <span className="leading-snug group-hover:underline">When to Outsource Hotel Guest Communication</span>
               </Link>
             </div>
           </div>

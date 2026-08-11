@@ -39,9 +39,9 @@ const FAQS = [
 ];
 
 export const metadata: Metadata = buildMetadata({
-  title: "Booking.com Message Management for Lean Front Desk Teams",
+  title: "Booking.com Message Management for Lean Hotel Teams",
   description:
-    "Booking.com penalises hotels with reply scores below 90% with lower search rankings. Here's exactly what that means, why it's hard to maintain with a lean team, and how to protect your score without adding headcount.",
+    "Booking.com penalises reply scores below 90% with ranking drops. Here's how lean hotel teams maintain compliance without adding headcount.",
   path: PATH,
 });
 
@@ -302,6 +302,28 @@ export default function BookingComLeanTeamsPage() {
                 className="inline-flex items-center gap-1.5 text-sm font-medium text-gold-dark hover:text-gold"
               >
                 Booking.com message guide <ArrowUpRight className="h-3.5 w-3.5" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="border-t border-line">
+        <div className="container py-10">
+          <div className="mx-auto max-w-2xl">
+            <p className="text-xs font-semibold uppercase tracking-widest text-ink-muted">Related insights</p>
+            <div className="mt-4 flex flex-col gap-3">
+              <Link href="/resources/insights/ota-ranking-response-time" className="group flex items-start gap-2 text-sm text-gold-dark hover:text-gold">
+                <ArrowUpRight className="mt-0.5 h-4 w-4 shrink-0" />
+                <span className="leading-snug group-hover:underline">How Slow Replies Hurt Your Hotel's OTA Ranking</span>
+              </Link>
+              <Link href="/resources/insights/fast-responses-reduce-cancellations" className="group flex items-start gap-2 text-sm text-gold-dark hover:text-gold">
+                <ArrowUpRight className="mt-0.5 h-4 w-4 shrink-0" />
+                <span className="leading-snug group-hover:underline">How Fast Responses Reduce Hotel Cancellations</span>
+              </Link>
+              <Link href="/resources/insights/when-to-outsource-guest-communication" className="group flex items-start gap-2 text-sm text-gold-dark hover:text-gold">
+                <ArrowUpRight className="mt-0.5 h-4 w-4 shrink-0" />
+                <span className="leading-snug group-hover:underline">When to Outsource Hotel Guest Communication</span>
               </Link>
             </div>
           </div>

@@ -39,9 +39,9 @@ const FAQS = [
 ];
 
 export const metadata: Metadata = buildMetadata({
-  title: "Why Hotels Still Miss Bookings After Hours Even When Demand Is Strong",
+  title: "Why Hotels Lose Bookings After Hours",
   description:
-    "Strong demand doesn't stop when the front desk closes. Here's why independent hotels lose bookings overnight, what the staffing data says, and how to close the gap without hiring a night shift.",
+    "Hotels lose bookings overnight despite strong demand. Here's why the coverage gap exists and how to close it without hiring a night shift.",
   path: PATH,
 });
 
@@ -314,6 +314,28 @@ export default function AfterHoursMissedBookingsPage() {
                 className="inline-flex items-center gap-1.5 text-sm font-medium text-gold-dark hover:text-gold"
               >
                 Calculate your overnight revenue gap <ArrowUpRight className="h-3.5 w-3.5" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="border-t border-line">
+        <div className="container py-10">
+          <div className="mx-auto max-w-2xl">
+            <p className="text-xs font-semibold uppercase tracking-widest text-ink-muted">Related insights</p>
+            <div className="mt-4 flex flex-col gap-3">
+              <Link href="/resources/insights/unanswered-reservation-calls-revenue" className="group flex items-start gap-2 text-sm text-gold-dark hover:text-gold">
+                <ArrowUpRight className="mt-0.5 h-4 w-4 shrink-0" />
+                <span className="leading-snug group-hover:underline">The Cost of Unanswered Hotel Reservation Calls</span>
+              </Link>
+              <Link href="/resources/insights/when-to-outsource-guest-communication" className="group flex items-start gap-2 text-sm text-gold-dark hover:text-gold">
+                <ArrowUpRight className="mt-0.5 h-4 w-4 shrink-0" />
+                <span className="leading-snug group-hover:underline">When to Outsource Hotel Guest Communication</span>
+              </Link>
+              <Link href="/resources/insights/fast-responses-reduce-cancellations" className="group flex items-start gap-2 text-sm text-gold-dark hover:text-gold">
+                <ArrowUpRight className="mt-0.5 h-4 w-4 shrink-0" />
+                <span className="leading-snug group-hover:underline">How Fast Responses Reduce Hotel Cancellations</span>
               </Link>
             </div>
           </div>

@@ -39,9 +39,9 @@ const FAQS = [
 ];
 
 export const metadata: Metadata = buildMetadata({
-  title: "How Slow Guest Response Times Hurt Airbnb Visibility and Booking Conversion",
+  title: "How Response Time Affects Airbnb Search Visibility",
   description:
-    "Airbnb uses response rate to determine search ranking and Superhost eligibility. Vrbo auto-declines booking requests after 24 hours. Here's exactly what the platforms measure and how it affects your bookings.",
+    "Slow responses hurt your Airbnb ranking and Superhost status. Vrbo auto-declines after 24 hours. Here's what both platforms measure and enforce.",
   path: PATH,
 });
 
@@ -302,6 +302,28 @@ export default function AirbnbResponseTimeVisibilityPage() {
                 className="inline-flex items-center gap-1.5 text-sm font-medium text-gold-dark hover:text-gold"
               >
                 Vacation rental answering service <ArrowUpRight className="h-3.5 w-3.5" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="border-t border-line">
+        <div className="container py-10">
+          <div className="mx-auto max-w-2xl">
+            <p className="text-xs font-semibold uppercase tracking-widest text-ink-muted">Related insights</p>
+            <div className="mt-4 flex flex-col gap-3">
+              <Link href="/resources/insights/vacation-rental-response-standards" className="group flex items-start gap-2 text-sm text-gold-dark hover:text-gold">
+                <ArrowUpRight className="mt-0.5 h-4 w-4 shrink-0" />
+                <span className="leading-snug group-hover:underline">Vacation Rental Response Standards: Airbnb and Vrbo</span>
+              </Link>
+              <Link href="/resources/insights/fast-responses-reduce-cancellations" className="group flex items-start gap-2 text-sm text-gold-dark hover:text-gold">
+                <ArrowUpRight className="mt-0.5 h-4 w-4 shrink-0" />
+                <span className="leading-snug group-hover:underline">How Fast Responses Reduce Hotel Cancellations</span>
+              </Link>
+              <Link href="/resources/insights/ota-ranking-response-time" className="group flex items-start gap-2 text-sm text-gold-dark hover:text-gold">
+                <ArrowUpRight className="mt-0.5 h-4 w-4 shrink-0" />
+                <span className="leading-snug group-hover:underline">How Slow Replies Hurt Your Hotel's OTA Ranking</span>
               </Link>
             </div>
           </div>

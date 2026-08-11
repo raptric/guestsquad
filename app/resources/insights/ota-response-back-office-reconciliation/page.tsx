@@ -39,9 +39,9 @@ const FAQS = [
 ];
 
 export const metadata: Metadata = buildMetadata({
-  title: "How Slow OTA Response Affects Back-Office Workload and Revenue Reconciliation",
+  title: "How Slow OTA Responses Create Back-Office Problems",
   description:
-    "Unanswered OTA messages don't just hurt search ranking — they create downstream back-office problems: inventory mismatches, unprocessed modifications, and revenue reporting gaps. Here's how the connection works.",
+    "Slow OTA replies create back-office problems — inventory mismatches, unprocessed changes, and revenue reporting gaps. Here's how the connection works.",
   path: PATH,
 });
 
@@ -238,6 +238,28 @@ export default function OtaBackOfficeReconciliationPage() {
                 className="inline-flex items-center gap-1.5 text-sm font-medium text-gold-dark hover:text-gold"
               >
                 OTA inbox management <ArrowUpRight className="h-3.5 w-3.5" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="border-t border-line">
+        <div className="container py-10">
+          <div className="mx-auto max-w-2xl">
+            <p className="text-xs font-semibold uppercase tracking-widest text-ink-muted">Related insights</p>
+            <div className="mt-4 flex flex-col gap-3">
+              <Link href="/resources/insights/ota-ranking-response-time" className="group flex items-start gap-2 text-sm text-gold-dark hover:text-gold">
+                <ArrowUpRight className="mt-0.5 h-4 w-4 shrink-0" />
+                <span className="leading-snug group-hover:underline">How Slow Replies Hurt Your Hotel's OTA Ranking</span>
+              </Link>
+              <Link href="/resources/insights/unanswered-reservation-calls-revenue" className="group flex items-start gap-2 text-sm text-gold-dark hover:text-gold">
+                <ArrowUpRight className="mt-0.5 h-4 w-4 shrink-0" />
+                <span className="leading-snug group-hover:underline">The Cost of Unanswered Hotel Reservation Calls</span>
+              </Link>
+              <Link href="/resources/insights/booking-com-message-management-lean-teams" className="group flex items-start gap-2 text-sm text-gold-dark hover:text-gold">
+                <ArrowUpRight className="mt-0.5 h-4 w-4 shrink-0" />
+                <span className="leading-snug group-hover:underline">Booking.com Message Management for Lean Hotel Teams</span>
               </Link>
             </div>
           </div>

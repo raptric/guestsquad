@@ -39,9 +39,9 @@ const FAQS = [
 ];
 
 export const metadata: Metadata = buildMetadata({
-  title: "What Happens to Your Hotel's OTA Ranking When You Reply Slowly | Guest Squad",
+  title: "How Slow Replies Hurt Your Hotel's OTA Ranking",
   description:
-    "Booking.com tracks your reply score as a direct ranking input. Here's exactly how slow responses move your listing down, what the Preferred Partner penalty costs you, and how to fix it.",
+    "Booking.com's reply score directly affects your search ranking. Here's how slow responses trigger ranking drops and what the Preferred Partner penalty costs your listing.",
   path: PATH,
 });
 
@@ -421,6 +421,28 @@ export default function OtaRankingResponseTimePage() {
       </div>
 
       {/* FAQ section */}
+      <div className="border-t border-line">
+        <div className="container py-10">
+          <div className="mx-auto max-w-2xl">
+            <p className="text-xs font-semibold uppercase tracking-widest text-ink-muted">Related insights</p>
+            <div className="mt-4 flex flex-col gap-3">
+              <Link href="/resources/insights/booking-com-message-management-lean-teams" className="group flex items-start gap-2 text-sm text-gold-dark hover:text-gold">
+                <ArrowUpRight className="mt-0.5 h-4 w-4 shrink-0" />
+                <span className="leading-snug group-hover:underline">Booking.com Message Management for Lean Hotel Teams</span>
+              </Link>
+              <Link href="/resources/insights/airbnb-response-time-visibility" className="group flex items-start gap-2 text-sm text-gold-dark hover:text-gold">
+                <ArrowUpRight className="mt-0.5 h-4 w-4 shrink-0" />
+                <span className="leading-snug group-hover:underline">How Response Time Affects Airbnb Search Visibility</span>
+              </Link>
+              <Link href="/resources/insights/fast-responses-reduce-cancellations" className="group flex items-start gap-2 text-sm text-gold-dark hover:text-gold">
+                <ArrowUpRight className="mt-0.5 h-4 w-4 shrink-0" />
+                <span className="leading-snug group-hover:underline">How Fast Responses Reduce Hotel Cancellations</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <Section surface>
         <div className="mx-auto max-w-2xl">
           <h2 className="text-lg font-semibold text-ink">Frequently asked questions</h2>

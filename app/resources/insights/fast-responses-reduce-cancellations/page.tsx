@@ -39,9 +39,9 @@ const FAQS = [
 ];
 
 export const metadata: Metadata = buildMetadata({
-  title: "Why Fast Guest Responses Reduce Cancellations and Protect Your Review Score",
+  title: "How Fast Responses Reduce Hotel Cancellations",
   description:
-    "Vrbo states directly that fast responses reduce cancellations and improve reviews. Booking.com penalises slow replies with ranking drops. Here's the connection between response speed, cancellation rates, and guest satisfaction.",
+    "Fast guest responses reduce cancellations and protect review scores. Here's what Vrbo and Booking.com show about response speed and its effect on cancellations and ratings.",
   path: PATH,
 });
 
@@ -251,6 +251,28 @@ export default function FastResponsesCancellationsPage() {
                 className="inline-flex items-center gap-1.5 text-sm font-medium text-gold-dark hover:text-gold"
               >
                 OTA inbox management <ArrowUpRight className="h-3.5 w-3.5" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="border-t border-line">
+        <div className="container py-10">
+          <div className="mx-auto max-w-2xl">
+            <p className="text-xs font-semibold uppercase tracking-widest text-ink-muted">Related insights</p>
+            <div className="mt-4 flex flex-col gap-3">
+              <Link href="/resources/insights/ota-ranking-response-time" className="group flex items-start gap-2 text-sm text-gold-dark hover:text-gold">
+                <ArrowUpRight className="mt-0.5 h-4 w-4 shrink-0" />
+                <span className="leading-snug group-hover:underline">How Slow Replies Hurt Your Hotel's OTA Ranking</span>
+              </Link>
+              <Link href="/resources/insights/booking-com-message-management-lean-teams" className="group flex items-start gap-2 text-sm text-gold-dark hover:text-gold">
+                <ArrowUpRight className="mt-0.5 h-4 w-4 shrink-0" />
+                <span className="leading-snug group-hover:underline">Booking.com Message Management for Lean Hotel Teams</span>
+              </Link>
+              <Link href="/resources/insights/vacation-rental-response-standards" className="group flex items-start gap-2 text-sm text-gold-dark hover:text-gold">
+                <ArrowUpRight className="mt-0.5 h-4 w-4 shrink-0" />
+                <span className="leading-snug group-hover:underline">Vacation Rental Response Standards: Airbnb and Vrbo</span>
               </Link>
             </div>
           </div>

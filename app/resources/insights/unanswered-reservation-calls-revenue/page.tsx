@@ -39,9 +39,9 @@ const FAQS = [
 ];
 
 export const metadata: Metadata = buildMetadata({
-  title: "The Hidden Revenue Impact of Unanswered Hotel Reservation Calls",
+  title: "The Cost of Unanswered Hotel Reservation Calls",
   description:
-    "Front desk staffing shortages mean reservation calls go to voicemail at exactly the wrong moment. Here's what that costs, why it's happening, and how to recover bookings that would otherwise be lost.",
+    "Unanswered reservation calls cost hotels bookings. Here's the revenue impact, why it happens during busy hours, and how to recover lost business.",
   path: PATH,
 });
 
@@ -236,6 +236,28 @@ export default function ReservationCallsRevenuePage() {
                 className="inline-flex items-center gap-1.5 text-sm font-medium text-gold-dark hover:text-gold"
               >
                 Hotel answering service <ArrowUpRight className="h-3.5 w-3.5" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="border-t border-line">
+        <div className="container py-10">
+          <div className="mx-auto max-w-2xl">
+            <p className="text-xs font-semibold uppercase tracking-widest text-ink-muted">Related insights</p>
+            <div className="mt-4 flex flex-col gap-3">
+              <Link href="/resources/insights/why-hotels-miss-bookings-after-hours" className="group flex items-start gap-2 text-sm text-gold-dark hover:text-gold">
+                <ArrowUpRight className="mt-0.5 h-4 w-4 shrink-0" />
+                <span className="leading-snug group-hover:underline">Why Hotels Lose Bookings After Hours</span>
+              </Link>
+              <Link href="/resources/insights/fast-responses-reduce-cancellations" className="group flex items-start gap-2 text-sm text-gold-dark hover:text-gold">
+                <ArrowUpRight className="mt-0.5 h-4 w-4 shrink-0" />
+                <span className="leading-snug group-hover:underline">How Fast Responses Reduce Hotel Cancellations</span>
+              </Link>
+              <Link href="/resources/insights/when-to-outsource-guest-communication" className="group flex items-start gap-2 text-sm text-gold-dark hover:text-gold">
+                <ArrowUpRight className="mt-0.5 h-4 w-4 shrink-0" />
+                <span className="leading-snug group-hover:underline">When to Outsource Hotel Guest Communication</span>
               </Link>
             </div>
           </div>

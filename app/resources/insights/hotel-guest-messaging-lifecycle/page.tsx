@@ -39,9 +39,9 @@ const FAQS = [
 ];
 
 export const metadata: Metadata = buildMetadata({
-  title: "What Good Hotel Guest Messaging Looks Like Before Arrival, During Stay, and After Checkout",
+  title: "Hotel Guest Messaging: Pre-Arrival to Post-Checkout",
   description:
-    "Guest messaging is not one function — it's three, each with different goals, urgency levels, and impact on revenue and reviews. Here's what strong messaging looks like across the full guest journey.",
+    "Hotel guest messaging spans three phases: pre-arrival, during stay, and post-checkout. Here's what strong performance looks like at each stage.",
   path: PATH,
 });
 
@@ -275,6 +275,28 @@ export default function GuestMessagingLifecyclePage() {
                 className="inline-flex items-center gap-1.5 text-sm font-medium text-gold-dark hover:text-gold"
               >
                 Download the SOP Template <ArrowUpRight className="h-3.5 w-3.5" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="border-t border-line">
+        <div className="container py-10">
+          <div className="mx-auto max-w-2xl">
+            <p className="text-xs font-semibold uppercase tracking-widest text-ink-muted">Related insights</p>
+            <div className="mt-4 flex flex-col gap-3">
+              <Link href="/resources/insights/fast-responses-reduce-cancellations" className="group flex items-start gap-2 text-sm text-gold-dark hover:text-gold">
+                <ArrowUpRight className="mt-0.5 h-4 w-4 shrink-0" />
+                <span className="leading-snug group-hover:underline">How Fast Responses Reduce Hotel Cancellations</span>
+              </Link>
+              <Link href="/resources/insights/when-to-outsource-guest-communication" className="group flex items-start gap-2 text-sm text-gold-dark hover:text-gold">
+                <ArrowUpRight className="mt-0.5 h-4 w-4 shrink-0" />
+                <span className="leading-snug group-hover:underline">When to Outsource Hotel Guest Communication</span>
+              </Link>
+              <Link href="/resources/insights/unanswered-reservation-calls-revenue" className="group flex items-start gap-2 text-sm text-gold-dark hover:text-gold">
+                <ArrowUpRight className="mt-0.5 h-4 w-4 shrink-0" />
+                <span className="leading-snug group-hover:underline">The Cost of Unanswered Hotel Reservation Calls</span>
               </Link>
             </div>
           </div>

@@ -39,9 +39,9 @@ const FAQS = [
 ];
 
 export const metadata: Metadata = buildMetadata({
-  title: "When a Hotel or STR Should Outsource Guest Communication — and When It Shouldn't",
+  title: "When to Outsource Hotel Guest Communication",
   description:
-    "Outsourcing guest communication makes financial sense under specific conditions. Here's how to evaluate whether the model fits your property, what you gain, what you give up, and when to keep it in-house.",
+    "Outsourcing guest communication has a clear ROI threshold. Here's how to evaluate the fit and when keeping it in-house is the right call.",
   path: PATH,
 });
 
@@ -277,6 +277,28 @@ export default function WhenToOutsourcePage() {
                 className="inline-flex items-center gap-1.5 text-sm font-medium text-gold-dark hover:text-gold"
               >
                 Calculate your coverage gap <ArrowUpRight className="h-3.5 w-3.5" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="border-t border-line">
+        <div className="container py-10">
+          <div className="mx-auto max-w-2xl">
+            <p className="text-xs font-semibold uppercase tracking-widest text-ink-muted">Related insights</p>
+            <div className="mt-4 flex flex-col gap-3">
+              <Link href="/resources/insights/why-hotels-miss-bookings-after-hours" className="group flex items-start gap-2 text-sm text-gold-dark hover:text-gold">
+                <ArrowUpRight className="mt-0.5 h-4 w-4 shrink-0" />
+                <span className="leading-snug group-hover:underline">Why Hotels Lose Bookings After Hours</span>
+              </Link>
+              <Link href="/resources/insights/hotel-guest-messaging-lifecycle" className="group flex items-start gap-2 text-sm text-gold-dark hover:text-gold">
+                <ArrowUpRight className="mt-0.5 h-4 w-4 shrink-0" />
+                <span className="leading-snug group-hover:underline">Hotel Guest Messaging: Pre-Arrival to Post-Checkout</span>
+              </Link>
+              <Link href="/resources/insights/unanswered-reservation-calls-revenue" className="group flex items-start gap-2 text-sm text-gold-dark hover:text-gold">
+                <ArrowUpRight className="mt-0.5 h-4 w-4 shrink-0" />
+                <span className="leading-snug group-hover:underline">The Cost of Unanswered Hotel Reservation Calls</span>
               </Link>
             </div>
           </div>

@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { SITE, SERVICES } from "@/lib/site-data";
 import { RESOURCES } from "@/lib/resource-content";
+import { INSIGHTS } from "@/lib/insights-content";
 
 const PRIORITY: Record<string, number> = {
   "": 1,
@@ -9,6 +10,7 @@ const PRIORITY: Record<string, number> = {
   "/pricing": 0.9,
   "/contact": 0.8,
   "/resources": 0.6,
+  "/resources/insights": 0.6,
   "/about": 0.6,
   "/privacy-policy": 0.2,
   "/terms-of-service": 0.2,
@@ -26,7 +28,8 @@ const LAST_MODIFIED: Record<string, string> = {
   "/services": "2026-08-08",
   "/pricing": "2026-08-08",
   "/contact": "2026-08-08",
-  "/resources": "2026-08-08",
+  "/resources": "2026-08-11",
+  "/resources/insights": "2026-08-11",
   "/about": "2026-08-08",
   "/privacy-policy": "2026-08-08",
   "/terms-of-service": "2026-08-08",
@@ -54,11 +57,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = Object.keys(PRIORITY);
   const serviceRoutes = SERVICES.map((s) => `/services/${s.slug}`);
   const resourceRoutes = RESOURCES.map((r) => `/resources/${r.slug}`);
+  const insightRoutes = INSIGHTS.map((i) => `/resources/insights/${i.slug}`);
 
-  return [...staticRoutes, ...serviceRoutes, ...resourceRoutes, ...ASSET_ROUTES].map((route) => ({
+  return [...staticRoutes, ...serviceRoutes, ...resourceRoutes, ...ASSET_ROUTES, ...insightRoutes].map((route) => ({
     url: `${SITE.url}${route}`,
-    lastModified: new Date(LAST_MODIFIED[route] ?? "2026-06-26"),
+    lastModified: new Date(LAST_MODIFIED[route] ?? "2026-08-11"),
     changeFrequency: "monthly",
-    priority: PRIORITY[route] ?? (route.startsWith("/services/") ? 0.8 : 0.5),
+    priority: PRIORITY[route] ?? (route.startsWith("/services/") ? 0.8 : route.startsWith("/resources/insights/") ? 0.6 : 0.5),
   }));
 }

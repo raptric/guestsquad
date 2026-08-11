@@ -315,7 +315,7 @@ export default function BookingComLeanTeamsPage() {
             <div className="mt-4 flex flex-col gap-3">
               <Link href="/resources/insights/ota-ranking-response-time" className="group flex items-start gap-2 text-sm text-gold-dark hover:text-gold">
                 <ArrowUpRight className="mt-0.5 h-4 w-4 shrink-0" />
-                <span className="leading-snug group-hover:underline">How Slow Replies Hurt Your Hotel's OTA Ranking</span>
+                <span className="leading-snug group-hover:underline">How Slow Replies Hurt Your Hotel&apos;s OTA Ranking</span>
               </Link>
               <Link href="/resources/insights/fast-responses-reduce-cancellations" className="group flex items-start gap-2 text-sm text-gold-dark hover:text-gold">
                 <ArrowUpRight className="mt-0.5 h-4 w-4 shrink-0" />

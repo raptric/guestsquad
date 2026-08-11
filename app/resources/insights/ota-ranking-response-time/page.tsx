@@ -91,6 +91,39 @@ export default function OtaRankingResponseTimePage() {
               { name: "TravelScrape: OTA Ranking & Visibility", url: "https://www.travelscrape.com/ota-ranking-visibility.php" },
             ],
           }),
+          {
+            "@context": "https://schema.org",
+            "@type": "HowTo",
+            "@id": `${SITE.url}${PATH}#howto`,
+            name: "How to audit your hotel's OTA reply score and close the coverage gap",
+            totalTime: "PT30M",
+            step: [
+              {
+                "@type": "HowToStep",
+                position: 1,
+                name: "Find your reply score today",
+                text: "Log into Booking.com Extranet → Inbox → Messaging Analytics. Both your reply score and average response time are displayed there. If you have not looked in the past 30 days, this is the starting point — not guessing at what might be wrong.",
+              },
+              {
+                "@type": "HowToStep",
+                position: 2,
+                name: "Map your unmonitored hours",
+                text: "Write down the hours when nobody on your team is actively watching the OTA inbox. For most independent hotels this is a ten-hour overnight block. That is your exposure window.",
+              },
+              {
+                "@type": "HowToStep",
+                position: 3,
+                name: "Set a triage rule",
+                text: "Pre-booking enquiries — any message that arrives before a reservation exists — need a response within 30 minutes during your operating hours. Post-booking operational questions can wait until morning without ranking penalty.",
+              },
+              {
+                "@type": "HowToStep",
+                position: 4,
+                name: "Check the score weekly, not monthly",
+                text: "The 30-day window punishes a run of consecutive bad nights faster than a monthly reporting cycle catches it. Set a weekly calendar reminder to check Messaging Analytics before Monday's team briefing.",
+              },
+            ],
+          },
           breadcrumbSchema([
             { name: "Home", path: "/" },
             { name: "Resources", path: "/resources" },

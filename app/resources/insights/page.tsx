@@ -11,7 +11,7 @@ import { SITE } from "@/lib/site-data";
 import { INSIGHTS } from "@/lib/insights-content";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Hotel Operations Insights | Guest Squad",
+  title: "Hotel Operations Insights",
   description:
     "Data-backed insights on hotel OTA rankings, guest response time, revenue gaps, and the operational decisions that affect how properties perform on Booking.com, Expedia, and Airbnb.",
   path: "/resources/insights",

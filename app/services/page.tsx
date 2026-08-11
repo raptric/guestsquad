@@ -8,6 +8,7 @@ import { CtaSection } from "@/components/site/cta-section";
 import { Breadcrumbs } from "@/components/site/breadcrumbs";
 import { JsonLd } from "@/components/site/json-ld";
 import { SERVICES } from "@/lib/site-data";
+import { INSIGHTS } from "@/lib/insights-content";
 import { buildMetadata, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/seo";
 import { SITE } from "@/lib/site-data";
 
@@ -83,6 +84,10 @@ export default function ServicesPage() {
               { "@type": "Thing", "name": "OTA Inbox Management" },
               { "@type": "Thing", "name": "After-Hours Hotel Support" },
               { "@type": "Thing", "name": "Hotel Front Desk Coverage" },
+              // Insight articles — featured in the "From the Insights" section below
+              { "@type": "Article", "@id": "https://guestsquad.com/resources/insights/ota-ranking-response-time#article" },
+              { "@type": "Article", "@id": "https://guestsquad.com/resources/insights/why-hotels-miss-bookings-after-hours#article" },
+              { "@type": "Article", "@id": "https://guestsquad.com/resources/insights/when-to-outsource-guest-communication#article" },
             ],
           }),
           breadcrumbSchema([
@@ -222,6 +227,34 @@ export default function ServicesPage() {
             <p className="mt-4 text-xs font-medium text-gold-dark">Read template →</p>
           </Link>
         </div>
+      </Section>
+
+      {/* Insights hub link */}
+      <Section>
+        <SectionHeading eyebrow="From the Insights" title="Research behind these services." />
+        <div className="mt-10 grid gap-6 sm:grid-cols-3">
+          {INSIGHTS.filter((i) => ["ota-ranking-response-time", "why-hotels-miss-bookings-after-hours", "when-to-outsource-guest-communication"].includes(i.slug))
+            .sort((a, b) => ["ota-ranking-response-time", "why-hotels-miss-bookings-after-hours", "when-to-outsource-guest-communication"].indexOf(a.slug) - ["ota-ranking-response-time", "why-hotels-miss-bookings-after-hours", "when-to-outsource-guest-communication"].indexOf(b.slug))
+            .map((insight) => (
+              <Link
+                key={insight.slug}
+                href={`/resources/insights/${insight.slug}`}
+                className="group flex flex-col justify-between rounded-lg border border-line bg-paper p-6 transition-colors hover:border-gold/50"
+              >
+                <div>
+                  <p className="mb-1 text-xs font-semibold uppercase tracking-[0.14em] text-ink-muted">{insight.category}</p>
+                  <h3 className="text-sm font-medium text-ink">{insight.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-ink-soft">{insight.description}</p>
+                </div>
+                <p className="mt-4 text-xs font-medium text-gold-dark group-hover:underline">Read insight →</p>
+              </Link>
+            ))}
+        </div>
+        <p className="mt-8 text-center text-sm text-ink-soft">
+          <Link href="/resources/insights" className="text-gold-dark underline underline-offset-4 hover:text-gold">
+            Browse all insights →
+          </Link>
+        </p>
       </Section>
 
       {/* Service finder FAQ */}

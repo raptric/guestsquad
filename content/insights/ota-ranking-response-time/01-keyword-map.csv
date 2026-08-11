@@ -1,0 +1,12 @@
+keyword,role,intent,est_volume,competition,notes
+hotel OTA ranking response time,primary,informational,low-medium,low,First mover opportunity — no exact-match content ranking
+booking.com reply score,secondary,informational,low,very low,Highly specific; zero competing pages with this exact phrase
+booking.com response rate ranking,secondary,informational,low,low,Informational modifier cluster
+how to improve booking.com ranking,secondary,informational,medium,high,Target H2 angle — too broad for primary
+booking.com preferred partner status,secondary,informational,low-medium,medium,Add to article — 65% more page views stat
+OTA inbox management hotel,secondary,commercial,low,low,CTA bridge keyword — points to /services/ota-inbox-management
+hotel message response time,supporting,informational,low,low,Natural in body copy
+expedia response rate hotel,supporting,informational,low,low,Platform parity mention in table
+hotel OTA visibility,supporting,informational,low,low,Semantic cluster — use in intro
+booking.com ranking algorithm,supporting,informational,medium,medium,Use in 1 H2 heading naturally
+after hours hotel inbox,supporting,informational,low,very low,Ties to /services/after-hours-support CTA

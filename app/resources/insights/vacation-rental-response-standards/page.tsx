@@ -82,6 +82,10 @@ export default function VacationRentalResponseStandardsPage() {
               { audienceType: "Vacation Rental Manager" },
               { audienceType: "Short-Term Rental Operator" },
             ],
+            citation: [
+              { name: "What's required to be a Superhost — Airbnb Help Center", url: "https://www.airbnb.com/help/article/829" },
+              { name: "Response Times in Hospitality: The Vacation Rental Guide — Enso Connect", url: "https://ensoconnect.com/resources/response-times-in-hospitality-a-guide-for-vacation-rental-professionals" },
+            ],
           }),
           {
             "@context": "https://schema.org",

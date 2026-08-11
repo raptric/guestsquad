@@ -83,6 +83,9 @@ export default function OtaBackOfficeReconciliationPage() {
               { audienceType: "Vacation Rental Manager" },
               { audienceType: "Short-Term Rental Operator" },
             ],
+            citation: [
+              { name: "Hotel Revenue Reconciliation: OTA Commission Automation — Phacet", url: "https://www.phacetlabs.com/blog/hotel-revenue-reconciliation-ota-commission-automation" },
+            ],
           }),
           breadcrumbSchema([
             { name: "Home", path: "/" },

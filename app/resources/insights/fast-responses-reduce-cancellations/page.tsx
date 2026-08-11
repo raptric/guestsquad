@@ -82,6 +82,9 @@ export default function FastResponsesCancellationsPage() {
               { audienceType: "Vacation Rental Manager" },
               { audienceType: "Short-Term Rental Operator" },
             ],
+            citation: [
+              { name: "Response Times in Hospitality: The Vacation Rental Guide — Enso Connect", url: "https://ensoconnect.com/resources/response-times-in-hospitality-a-guide-for-vacation-rental-professionals" },
+            ],
           }),
           breadcrumbSchema([
             { name: "Home", path: "/" },

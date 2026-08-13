@@ -1,5 +1,5 @@
 import { ButtonLink } from "@/components/site/button-link";
-import { CalendlyPopupButton } from "@/components/site/calendly-popup-button";
+import { CoverageReviewButton } from "@/components/site/coverage-review-button";
 
 export function PageHero({
   eyebrow,
@@ -36,9 +36,9 @@ export function PageHero({
         </p>
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
           {primaryIsPopup ? (
-            <CalendlyPopupButton variant="gold" size="lg" ctaLocation="page_hero">
+            <CoverageReviewButton variant="gold" size="lg" ctaLocation="page_hero">
               {primaryCta}
-            </CalendlyPopupButton>
+            </CoverageReviewButton>
           ) : (
             <ButtonLink href={primaryHref} variant="gold" size="lg">
               {primaryCta}

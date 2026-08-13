@@ -1,5 +1,5 @@
 ﻿import { ButtonLink } from "@/components/site/button-link";
-import { CalendlyPopupButton } from "@/components/site/calendly-popup-button";
+import { CoverageReviewButton } from "@/components/site/coverage-review-button";
 
 export function CtaSection({
   title = "Stop losing bookings to silence.",
@@ -21,9 +21,9 @@ export function CtaSection({
           Qualified properties can start with a 2-week pilot before moving into month-to-month coverage.
         </p>
         <div className="mt-6 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <CalendlyPopupButton variant="gold" size="lg" ctaLocation="cta_section">
+          <CoverageReviewButton variant="gold" size="lg" ctaLocation="cta_section">
             Book a Coverage Review
-          </CalendlyPopupButton>
+          </CoverageReviewButton>
           <ButtonLink
             href="/pilot"
             variant="outline"

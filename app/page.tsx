@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ButtonLink } from "@/components/site/button-link";
-import { CalendlyPopupButton } from "@/components/site/calendly-popup-button";
+import { CoverageReviewButton } from "@/components/site/coverage-review-button";
 import { Section, SectionHeading } from "@/components/site/section";
 import { ServiceCard } from "@/components/site/service-card";
 import { Differentiator } from "@/components/site/differentiator";
@@ -127,9 +127,9 @@ export default function HomePage() {
               desk stays focused on in-house guests.
             </p>
             <div className="mt-9 flex flex-col gap-4 sm:flex-row">
-              <CalendlyPopupButton variant="gold" size="lg" ctaLocation="homepage_hero">
+              <CoverageReviewButton variant="gold" size="lg" ctaLocation="homepage_hero">
                 Book a Coverage Review
-              </CalendlyPopupButton>
+              </CoverageReviewButton>
               <ButtonLink href="/pilot" variant="outline" size="lg">
                 Request Pilot Review
               </ButtonLink>

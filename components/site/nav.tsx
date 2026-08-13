@@ -6,7 +6,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { NAV_LINKS, SITE } from "@/lib/site-data";
 import { ButtonLink } from "@/components/site/button-link";
-import { CalendlyPopupButton } from "@/components/site/calendly-popup-button";
+import { CoverageReviewButton } from "@/components/site/coverage-review-button";
 import { cn } from "@/lib/utils";
 
 const CAMPAIGN_PATHS = ["/pilot"];
@@ -26,9 +26,9 @@ export function Nav() {
               className="h-8 w-auto"
             />
           </Link>
-          <CalendlyPopupButton variant="gold" size="sm" ctaLocation="nav_campaign">
+          <CoverageReviewButton variant="gold" size="sm" ctaLocation="nav_campaign">
             Book a Coverage Review
-          </CalendlyPopupButton>
+          </CoverageReviewButton>
         </div>
       </header>
     );
@@ -61,9 +61,9 @@ export function Nav() {
         </nav>
 
         <div className="hidden md:block">
-          <CalendlyPopupButton variant="gold" size="sm" ctaLocation="nav">
+          <CoverageReviewButton variant="gold" size="sm" ctaLocation="nav">
             Book a Coverage Review
-          </CalendlyPopupButton>
+          </CoverageReviewButton>
         </div>
 
         <button
@@ -89,9 +89,9 @@ export function Nav() {
               </Link>
             ))}
             <div className="mt-2 px-2">
-              <CalendlyPopupButton variant="gold" className="w-full" ctaLocation="nav_mobile">
+              <CoverageReviewButton variant="gold" className="w-full" ctaLocation="nav_mobile">
                 Book a Coverage Review
-              </CalendlyPopupButton>
+              </CoverageReviewButton>
             </div>
           </nav>
         </div>

@@ -5,7 +5,7 @@ import { Check, ArrowRight, Phone, MessageSquare, Inbox, Users } from "lucide-re
 import { buildMetadata, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/seo";
 import { JsonLd } from "@/components/site/json-ld";
 import { Section, SectionHeading } from "@/components/site/section";
-import { CalendlyPopupButton } from "@/components/site/calendly-popup-button";
+import { CoverageReviewButton } from "@/components/site/coverage-review-button";
 import { SITE } from "@/lib/site-data";
 
 const MissedBookingCalculator = dynamic(
@@ -597,9 +597,9 @@ export default function PilotPage() {
             </p>
           </div>
           <div className="shrink-0">
-            <CalendlyPopupButton variant="gold" size="lg" ctaLocation="pilot_talk_to_advisor">
+            <CoverageReviewButton variant="gold" size="lg" ctaLocation="pilot_talk_to_advisor">
               Book a Coverage Review
-            </CalendlyPopupButton>
+            </CoverageReviewButton>
           </div>
         </div>
       </section>
@@ -636,14 +636,14 @@ export default function PilotPage() {
             >
               Request Pilot Review
             </a>
-            <CalendlyPopupButton
+            <CoverageReviewButton
               variant="outline"
               size="lg"
               className="border-paper/25 text-paper hover:border-paper/50"
               ctaLocation="pilot_final_cta"
             >
               Book a Coverage Review
-            </CalendlyPopupButton>
+            </CoverageReviewButton>
           </div>
         </div>
       </section>

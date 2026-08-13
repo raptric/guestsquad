@@ -1,7 +1,7 @@
 ﻿import Link from "next/link";
 import { Linkedin } from "lucide-react";
 import { SERVICES, SITE } from "@/lib/site-data";
-import { CalendlyPopupButton } from "@/components/site/calendly-popup-button";
+import { CoverageReviewButton } from "@/components/site/coverage-review-button";
 
 export function Footer() {
   return (
@@ -72,9 +72,9 @@ export function Footer() {
               <li><a href={`tel:${SITE.phoneHref}`} className="hover:text-ink">{SITE.phone}</a></li>
               <li className="leading-relaxed">40 Corbin Ave<br />Bay Shore, NY 11706</li>
               <li>
-                <CalendlyPopupButton variant="link" size="sm" className="hover:text-ink p-0 h-auto" ctaLocation="footer">
+                <CoverageReviewButton variant="link" size="sm" className="hover:text-ink p-0 h-auto" ctaLocation="footer">
                   Book a Coverage Review →
-                </CalendlyPopupButton>
+                </CoverageReviewButton>
               </li>
             </ul>
           </div>

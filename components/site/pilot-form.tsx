@@ -6,7 +6,6 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Select } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
-import { CalendlyPopupButton } from "@/components/site/calendly-popup-button";
 import { PROPERTY_TYPES } from "@/lib/site-data";
 import { trackEvent } from "@/lib/analytics";
 
@@ -162,7 +161,14 @@ export function PilotForm() {
           We&rsquo;ll review your property and follow up within one business day. If you&rsquo;d like to move faster, book a coverage review now.
         </p>
         <div className="mt-7">
-          <CalendlyPopupButton variant="gold" size="lg" ctaLocation="pilot_form">Book a Coverage Review</CalendlyPopupButton>
+          <a
+            href="https://calendly.com/guestsquad-info/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-lg bg-gold-dark px-6 py-3 text-sm font-medium text-paper transition-colors hover:bg-gold"
+          >
+            Book a Coverage Review →
+          </a>
         </div>
       </div>
     );

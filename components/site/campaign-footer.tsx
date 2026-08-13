@@ -1,6 +1,6 @@
 ﻿import Link from "next/link";
 import { SITE } from "@/lib/site-data";
-import { CalendlyPopupButton } from "@/components/site/calendly-popup-button";
+import { CoverageReviewButton } from "@/components/site/coverage-review-button";
 
 export function CampaignFooter() {
   return (
@@ -20,9 +20,9 @@ export function CampaignFooter() {
             </p>
           </div>
           <div className="flex flex-col gap-4 sm:items-end">
-            <CalendlyPopupButton variant="gold" size="sm" ctaLocation="campaign_footer">
+            <CoverageReviewButton variant="gold" size="sm" ctaLocation="campaign_footer">
               Book a Coverage Review
-            </CalendlyPopupButton>
+            </CoverageReviewButton>
             <div className="flex flex-wrap gap-x-5 gap-y-1.5 text-xs text-ink-muted sm:justify-end">
               <a href={`mailto:${SITE.email}`} className="hover:text-ink">{SITE.email}</a>
               <a href={`tel:${SITE.phoneHref}`} className="hover:text-ink">{SITE.phone}</a>

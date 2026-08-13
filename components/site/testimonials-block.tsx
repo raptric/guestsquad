@@ -10,7 +10,7 @@ export function TestimonialsBlock() {
       quote:
         "Our OTA response times were hurting our ranking on Booking.com. Guest Squad took over the inbox during the pilot and we saw the response window drop significantly. The weekly report made it easy to verify.",
       attr: "Owner-operator, serviced apartment portfolio",
-      location: "UK",
+      location: "Finland",
     },
     {
       quote:

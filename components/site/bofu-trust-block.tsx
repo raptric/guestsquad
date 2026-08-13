@@ -43,6 +43,9 @@ export function BoFuTrustBlock({ handles, escalates }: BoFuTrustBlockProps = {})
 
   return (
     <div className="rounded-lg border border-line bg-surface p-8">
+      <p className="mb-3 text-xs font-semibold uppercase tracking-[0.14em] text-gold-dark">
+        How It Works
+      </p>
       <h2 className="text-xl font-medium text-ink">
         Set up once. Stay in control.
       </h2>

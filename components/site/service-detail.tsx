@@ -259,17 +259,17 @@ export function ServiceDetail({ data }: { data: ServiceDetailData }) {
       )}
 
       {/* 6 — Slim mid-page CTA */}
-      <div className="border-y border-line bg-surface">
+      <div className="bg-ink">
         <div className="container flex flex-col items-start justify-between gap-5 py-8 sm:flex-row sm:items-center">
           <div>
-            <p className="text-base font-medium text-ink">Ready to close your coverage gap?</p>
-            <p className="mt-1 text-sm text-ink-soft">Book a review or start with a 2-week no-obligation pilot.</p>
+            <p className="text-base font-medium text-paper">Ready to close your coverage gap?</p>
+            <p className="mt-1 text-sm text-paper/60">Book a review or start with a 2-week no-obligation pilot.</p>
           </div>
           <div className="flex shrink-0 flex-col gap-3 sm:flex-row">
             <CoverageReviewButton variant="gold" size="sm" ctaLocation="service_mid_cta">
               Book a Coverage Review
             </CoverageReviewButton>
-            <ButtonLink href="/pilot" variant="outline" size="sm">
+            <ButtonLink href="/pilot" variant="outline" size="sm" className="border-paper/25 text-paper hover:border-paper/60">
               Request Pilot Review
             </ButtonLink>
           </div>
@@ -289,10 +289,14 @@ export function ServiceDetail({ data }: { data: ServiceDetailData }) {
         </div>
       </Section>
 
-      {/* 7 — Compact "Keep Exploring" link cluster */}
-      <Section>
-        <SectionHeading eyebrow="Keep Exploring" title="Related services, guides, and research." />
-        <div className="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+      {/* 8 — Compact "Keep Exploring" link cluster */}
+      <div className="border-t border-line py-14">
+        <div className="mx-auto max-w-screen-xl px-6">
+        <div className="mb-8">
+          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-gold-dark">Keep Exploring</p>
+          <h2 className="mt-1.5 text-2xl font-medium text-ink">Related services, guides, and research.</h2>
+        </div>
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
 
           {/* Related services */}
           {related.length > 0 && (
@@ -380,7 +384,8 @@ export function ServiceDetail({ data }: { data: ServiceDetailData }) {
           )}
 
         </div>
-      </Section>
+        </div>
+      </div>
 
       <CtaSection title={data.ctaTitle} description={data.ctaDescription} />
     </>

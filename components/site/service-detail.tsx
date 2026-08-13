@@ -259,7 +259,10 @@ export function ServiceDetail({ data }: { data: ServiceDetailData }) {
       {/* 6 — Slim mid-page CTA */}
       <div className="bg-ink">
         <div className="container flex flex-col items-start justify-between gap-5 py-8 sm:flex-row sm:items-center">
-          <p className="text-base font-medium text-paper">Ready to close your coverage gap? Start with a 2-week no-obligation pilot.</p>
+          <div>
+            <p className="whitespace-nowrap text-base font-medium text-paper">Ready to close your coverage gap?</p>
+            <p className="mt-1 whitespace-nowrap text-sm text-paper/60">Book a review or start with a 2-week no-obligation pilot.</p>
+          </div>
           <div className="flex shrink-0 flex-col gap-3 sm:flex-row">
             <CoverageReviewButton variant="gold" size="sm" ctaLocation="service_mid_cta">
               Book a Coverage Review

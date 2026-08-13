@@ -4,6 +4,8 @@ import { Check, ArrowUpRight, ArrowRight } from "lucide-react";
 import { PageHero } from "@/components/site/page-hero";
 import { Section, SectionHeading } from "@/components/site/section";
 import { CtaSection } from "@/components/site/cta-section";
+import { CoverageReviewButton } from "@/components/site/coverage-review-button";
+import { ButtonLink } from "@/components/site/button-link";
 import { Breadcrumbs } from "@/components/site/breadcrumbs";
 import { JsonLd } from "@/components/site/json-ld";
 import { serviceSchema, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/seo";
@@ -256,7 +258,25 @@ export function ServiceDetail({ data }: { data: ServiceDetailData }) {
         </Section>
       )}
 
-      {/* 6 — FAQ */}
+      {/* 6 — Slim mid-page CTA */}
+      <div className="border-y border-line bg-surface">
+        <div className="container flex flex-col items-start justify-between gap-5 py-8 sm:flex-row sm:items-center">
+          <div>
+            <p className="text-base font-medium text-ink">Ready to close your coverage gap?</p>
+            <p className="mt-1 text-sm text-ink-soft">Book a review or start with a 2-week no-obligation pilot.</p>
+          </div>
+          <div className="flex shrink-0 flex-col gap-3 sm:flex-row">
+            <CoverageReviewButton variant="gold" size="sm" ctaLocation="service_mid_cta">
+              Book a Coverage Review
+            </CoverageReviewButton>
+            <ButtonLink href="/pilot" variant="outline" size="sm">
+              Request Pilot Review
+            </ButtonLink>
+          </div>
+        </div>
+      </div>
+
+      {/* 7 — FAQ */}
       <Section surface={!(data.handles || data.escalates)}>
         <SectionHeading eyebrow="Questions" title={data.faqTitle ?? "Common questions about this service."} />
         <div className="mt-10 grid gap-6 sm:grid-cols-2">

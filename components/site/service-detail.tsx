@@ -11,6 +11,7 @@ import { SERVICES, SITE } from "@/lib/site-data";
 import { RESOURCES } from "@/lib/resource-content";
 import { INSIGHTS } from "@/lib/insights-content";
 import { BoFuTrustBlock } from "@/components/site/bofu-trust-block";
+import { TestimonialsBlock } from "@/components/site/testimonials-block";
 import { ChannelBadges } from "@/components/site/channel-badges";
 import { ServicePageViewTracker } from "@/components/site/service-page-view-tracker";
 
@@ -208,6 +209,9 @@ export function ServiceDetail({ data }: { data: ServiceDetailData }) {
       <Section compact>
         <BoFuTrustBlock />
       </Section>
+
+      {/* 4b — Testimonials */}
+      <TestimonialsBlock />
 
       {/* 5 — How It Works (handles / escalates) */}
       {(data.handles || data.escalates) && (

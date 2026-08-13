@@ -58,18 +58,8 @@ export function PilotForm() {
         </div>
         <h3 className="text-xl font-medium text-ink">We&rsquo;ve received your details.</h3>
         <p className="mt-3 mx-auto max-w-sm text-sm leading-relaxed text-ink-soft">
-          We&rsquo;ll review your property and follow up within one business day. If you&rsquo;d like to move faster, book a coverage review now.
+          We&rsquo;ll review your property and follow up within one business day to confirm next steps.
         </p>
-        <div className="mt-7">
-          <a
-            href="https://calendly.com/guestsquad-info/30min"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-lg bg-gold-dark px-6 py-3 text-sm font-medium text-paper transition-colors hover:bg-gold"
-          >
-            Book a Coverage Review →
-          </a>
-        </div>
       </div>
     );
   }

@@ -46,9 +46,15 @@ const config: Config = {
           "0%": { opacity: "0", transform: "translateY(16px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
+        slide: {
+          "0%": { transform: "translateX(-100%)" },
+          "50%": { transform: "translateX(200%)" },
+          "100%": { transform: "translateX(200%)" },
+        },
       },
       animation: {
         "fade-up": "fade-up 0.6s ease forwards",
+        slide: "slide 1.4s ease-in-out infinite",
       },
     },
   },

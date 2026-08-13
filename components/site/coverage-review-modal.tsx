@@ -161,9 +161,16 @@ export function CoverageReviewModal({ open, onClose, ctaLocation }: CoverageRevi
         <div className="px-6 py-5">
           {status === "done" ? (
             <div className="flex flex-col gap-4">
-              <div className="flex items-center gap-3 rounded-lg bg-gold/10 px-4 py-3">
-                <Check className="h-5 w-5 shrink-0 text-gold-dark" />
-                <p className="text-sm text-ink">Details received — pick a time below and we&rsquo;ll confirm within one business day.</p>
+              <div className="rounded-lg border border-line bg-surface px-5 py-4">
+                <div className="flex items-start gap-3">
+                  <Check className="mt-0.5 h-5 w-5 shrink-0 text-gold-dark" />
+                  <div>
+                    <p className="text-sm font-medium text-ink">Your request has been received.</p>
+                    <p className="mt-1 text-xs leading-relaxed text-ink-soft">
+                      Select a time below to schedule your coverage review. One of our hospitality specialists will reach out to confirm your slot and answer any questions beforehand.
+                    </p>
+                  </div>
+                </div>
               </div>
               <CalendlyInlineWidget prefill={prefill} />
               <p className="text-center text-xs text-ink-muted">

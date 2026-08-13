@@ -250,9 +250,7 @@ export default function PricingPage() {
         <PostBookingSteps />
       </Section>
 
-      <Section surface compact>
-        <BoFuTrustBlock />
-      </Section>
+      <BoFuTrustBlock />
 
       <CtaSection
         title="Get a quote built around your property."

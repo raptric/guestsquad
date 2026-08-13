@@ -10,7 +10,7 @@ export function CtaSection({
 }) {
   return (
     <section className="bg-ink py-20 md:py-28">
-      <div className="container max-w-5xl text-center">
+      <div className="container text-center">
         <h2 className="whitespace-nowrap text-3xl font-medium leading-tight text-paper md:text-4xl">
           {title}
         </h2>

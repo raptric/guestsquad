@@ -9,9 +9,6 @@ export async function POST(req: Request) {
     companyName,
     propertySize,
     helpWith,
-    meetingDate,
-    meetingTime,
-    timezone,
     phone,
     propertyWebsite,
     website, // honeypot
@@ -62,12 +59,6 @@ export async function POST(req: Request) {
       <table style="width:100%;border-collapse:collapse;margin-top:10px">
         <tr><td style="padding:9px 0;border-bottom:1px solid #eee;font-weight:600;width:220px">Property Size</td><td style="padding:9px 0;border-bottom:1px solid #eee">${propertySize || "—"}</td></tr>
         <tr><td style="padding:9px 0;font-weight:600;vertical-align:top">Looking for help with</td><td style="padding:9px 0;white-space:pre-wrap">${helpList}</td></tr>
-      </table>
-      <h3 style="margin-top:24px;font-size:13px;color:#888;text-transform:uppercase;letter-spacing:0.08em">Preferred Meeting</h3>
-      <table style="width:100%;border-collapse:collapse;margin-top:10px">
-        <tr><td style="padding:9px 0;border-bottom:1px solid #eee;font-weight:600;width:220px">Date</td><td style="padding:9px 0;border-bottom:1px solid #eee">${meetingDate || "—"}</td></tr>
-        <tr><td style="padding:9px 0;border-bottom:1px solid #eee;font-weight:600">Time</td><td style="padding:9px 0;border-bottom:1px solid #eee">${meetingTime || "—"}</td></tr>
-        <tr><td style="padding:9px 0;font-weight:600">Timezone</td><td style="padding:9px 0">${timezone || "—"}</td></tr>
       </table>
       <h3 style="margin-top:28px;font-size:13px;color:#888;border-top:1px solid #eee;padding-top:16px;text-transform:uppercase;letter-spacing:0.08em">Attribution</h3>
       <table style="width:100%;border-collapse:collapse">

@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 import { X, Loader2, Check } from "lucide-react";
 import { trackEvent } from "@/lib/analytics";
+import { CalendlyInlineWidget } from "@/components/site/calendly-inline-widget";
 
 const PROPERTY_SIZES = [
   "Under 20 rooms",
@@ -25,48 +26,9 @@ const HELP_OPTIONS = [
   "Not sure — I'd like a recommendation",
 ];
 
-const TIME_OPTIONS = [
-  "8:00 AM", "8:30 AM", "9:00 AM", "9:30 AM",
-  "10:00 AM", "10:30 AM", "11:00 AM", "11:30 AM",
-  "12:00 PM", "12:30 PM", "1:00 PM", "1:30 PM",
-  "2:00 PM", "2:30 PM", "3:00 PM", "3:30 PM",
-  "4:00 PM", "4:30 PM", "5:00 PM",
-];
-
-const TIMEZONE_OPTIONS = [
-  { label: "Pacific Time (US & Canada)", value: "America/Los_Angeles" },
-  { label: "Mountain Time (US & Canada)", value: "America/Denver" },
-  { label: "Central Time (US & Canada)", value: "America/Chicago" },
-  { label: "Eastern Time (US & Canada)", value: "America/New_York" },
-  { label: "Atlantic Time (Canada)", value: "America/Halifax" },
-  { label: "Newfoundland Time", value: "America/St_Johns" },
-  { label: "London (GMT/BST)", value: "Europe/London" },
-  { label: "Central Europe (CET/CEST)", value: "Europe/Paris" },
-  { label: "Eastern Europe (EET/EEST)", value: "Europe/Athens" },
-  { label: "Pakistan (PKT)", value: "Asia/Karachi" },
-  { label: "Dubai (GST)", value: "Asia/Dubai" },
-  { label: "India (IST)", value: "Asia/Kolkata" },
-  { label: "Bangkok (ICT)", value: "Asia/Bangkok" },
-  { label: "Singapore (SGT)", value: "Asia/Singapore" },
-  { label: "Tokyo (JST)", value: "Asia/Tokyo" },
-  { label: "Sydney (AEST/AEDT)", value: "Australia/Sydney" },
-  { label: "Auckland (NZST/NZDT)", value: "Pacific/Auckland" },
-];
-
-const CALENDLY_URL = "https://calendly.com/guestsquad-info/30min";
-
 function getUtmParam(search: string, key: string): string {
   return new URLSearchParams(search).get(key) ?? "";
 }
-
-function detectTimezone(): string {
-  try {
-    return Intl.DateTimeFormat().resolvedOptions().timeZone;
-  } catch {
-    return "";
-  }
-}
-
 
 interface CoverageReviewModalProps {
   open: boolean;
@@ -85,7 +47,7 @@ export function CoverageReviewModal({ open, onClose, ctaLocation }: CoverageRevi
     startedRef.current = true;
     trackEvent("coverage_review_form_start", { cta_location: ctaLocation || "unknown" });
   }
-  const [timezone, setTimezone] = useState("");
+  const [prefill, setPrefill] = useState<{ name: string; email: string }>({ name: "", email: "" });
   const [tracking, setTracking] = useState({
     source_page: "",
     referrer: "",
@@ -97,9 +59,6 @@ export function CoverageReviewModal({ open, onClose, ctaLocation }: CoverageRevi
   useEffect(() => {
     if (!open) return;
     startedRef.current = false;
-    const detected = detectTimezone();
-    const match = TIMEZONE_OPTIONS.find((tz) => tz.value === detected);
-    setTimezone(match ? detected : "");
     const search = window.location.search;
     setTracking({
       source_page: window.location.pathname,
@@ -137,15 +96,15 @@ export function CoverageReviewModal({ open, onClose, ctaLocation }: CoverageRevi
     const get = (name: string) =>
       (form.elements.namedItem(name) as HTMLInputElement | HTMLSelectElement)?.value ?? "";
 
+    const name = get("name");
+    const email = get("email");
+
     const data = {
-      name: get("name"),
-      email: get("email"),
+      name,
+      email,
       companyName: get("companyName"),
       propertySize: get("propertySize"),
       helpWith,
-      meetingDate: get("meetingDate"),
-      meetingTime: get("meetingTime"),
-      timezone,
       phone: get("phone"),
       propertyWebsite: get("propertyWebsite"),
       website: get("website"),
@@ -164,6 +123,7 @@ export function CoverageReviewModal({ open, onClose, ctaLocation }: CoverageRevi
         help_with: helpWith.join(","),
         cta_location: ctaLocation || "unknown",
       });
+      setPrefill({ name, email });
       setStatus("done");
     } catch {
       setStatus("error");
@@ -200,25 +160,25 @@ export function CoverageReviewModal({ open, onClose, ctaLocation }: CoverageRevi
         {/* Body */}
         <div className="px-6 py-5">
           {status === "done" ? (
-            <div className="flex flex-col items-center py-6 text-center">
-              <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-gold/10">
-                <Check className="h-7 w-7 text-gold-dark" />
+            <div className="flex flex-col gap-4">
+              <div className="flex items-center gap-3 rounded-lg bg-gold/10 px-4 py-3">
+                <Check className="h-5 w-5 shrink-0 text-gold-dark" />
+                <p className="text-sm text-ink">Details received — pick a time below and we&rsquo;ll confirm within one business day.</p>
               </div>
-              <h3 className="text-lg font-medium text-ink">We&rsquo;ve received your request.</h3>
-              <p className="mt-3 mx-auto max-w-sm text-sm leading-relaxed text-ink-soft">
-                We&rsquo;ll confirm your preferred time within one business day. If you&rsquo;d like to skip the wait and book directly, you can use our scheduling link below.
+              <CalendlyInlineWidget prefill={prefill} />
+              <p className="text-center text-xs text-ink-muted">
+                Can&rsquo;t find a time that works?{" "}
+                <a
+                  href="mailto:info@guestsquad.com"
+                  className="text-gold-dark underline underline-offset-2 hover:text-gold"
+                >
+                  Email us directly
+                </a>{" "}
+                and we&rsquo;ll find something that fits your schedule.
               </p>
-              <a
-                href={CALENDLY_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-6 inline-flex items-center gap-2 rounded-lg bg-gold-dark px-5 py-2.5 text-sm font-medium text-paper transition-colors hover:bg-gold"
-              >
-                Schedule a time now →
-              </a>
               <button
                 onClick={resetAndClose}
-                className="mt-4 text-xs text-ink-muted underline underline-offset-2 hover:text-ink"
+                className="text-center text-xs text-ink-muted underline underline-offset-2 hover:text-ink"
               >
                 Close
               </button>
@@ -299,47 +259,7 @@ export function CoverageReviewModal({ open, onClose, ctaLocation }: CoverageRevi
                 </div>
               </div>
 
-              {/* Row 4: Date + Time + Timezone */}
-              <div className="grid gap-4 grid-cols-3">
-                <div className="flex flex-col gap-1.5">
-                  <label className="text-xs font-medium text-ink text-left">Preferred Date <span className="text-gold-dark">*</span></label>
-                  <input
-                    name="meetingDate"
-                    type="date"
-                    required
-                    min={new Date().toISOString().split("T")[0]}
-                    className="rounded-md border border-line bg-surface px-3 py-2.5 text-sm text-ink focus:border-gold-dark focus:outline-none"
-                  />
-                </div>
-                <div className="flex flex-col gap-1.5">
-                  <label className="text-xs font-medium text-ink text-left">Preferred Time <span className="text-gold-dark">*</span></label>
-                  <select
-                    name="meetingTime"
-                    required
-                    defaultValue=""
-                    className="rounded-md border border-line bg-surface px-3 py-2.5 text-sm text-ink focus:border-gold-dark focus:outline-none"
-                  >
-                    <option value="" disabled>Select time</option>
-                    {TIME_OPTIONS.map((t) => <option key={t} value={t}>{t}</option>)}
-                  </select>
-                </div>
-                <div className="flex flex-col gap-1.5">
-                  <label className="text-xs font-medium text-ink text-left">Timezone <span className="text-gold-dark">*</span></label>
-                  <select
-                    value={timezone}
-                    onChange={(e) => setTimezone(e.target.value)}
-                    required
-                    className="rounded-md border border-line bg-surface px-3 py-2.5 text-sm text-ink focus:border-gold-dark focus:outline-none"
-                  >
-                    <option value="">Select</option>
-                    {TIMEZONE_OPTIONS.map((tz) => (
-                      <option key={tz.value} value={tz.value}>{tz.label}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              {/* Row 5: What are you looking for — checkboxes, last */}
+              {/* Row 4: What are you looking for — checkboxes, last */}
               <div className="flex flex-col gap-2">
                 <label className="text-xs font-medium text-ink text-left">What are you looking for help with? <span className="text-gold-dark">*</span></label>
                 <div className="grid grid-cols-2 gap-x-6 gap-y-2">

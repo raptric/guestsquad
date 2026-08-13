@@ -3,7 +3,11 @@
 import { useEffect, useState } from "react";
 import { SITE } from "@/lib/site-data";
 
-export function CalendlyInlineWidget() {
+export function CalendlyInlineWidget({
+  prefill,
+}: {
+  prefill?: { name?: string; email?: string };
+}) {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
@@ -46,7 +50,12 @@ export function CalendlyInlineWidget() {
       )}
       <div
         className="calendly-inline-widget h-full w-full"
-        data-url={`${SITE.calendlyUrl}?hide_event_type_details=1&hide_gdpr_banner=1`}
+        data-url={(() => {
+          const params = new URLSearchParams({ hide_event_type_details: "1", hide_gdpr_banner: "1" });
+          if (prefill?.name) params.set("name", prefill.name);
+          if (prefill?.email) params.set("email", prefill.email);
+          return `${SITE.calendlyUrl}?${params.toString()}`;
+        })()}
         style={{ minWidth: "280px", height: "700px" }}
       />
     </div>

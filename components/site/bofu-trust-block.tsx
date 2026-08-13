@@ -1,4 +1,4 @@
-import { Check } from "lucide-react";
+import { Check, ArrowRight } from "lucide-react";
 
 const STEPS = [
   {
@@ -33,11 +33,18 @@ const BULLETS = [
   "Clear boundary between what Guest Squad handles and what your team approves",
 ];
 
-export function BoFuTrustBlock() {
+interface BoFuTrustBlockProps {
+  handles?: string[];
+  escalates?: string[];
+}
+
+export function BoFuTrustBlock({ handles, escalates }: BoFuTrustBlockProps = {}) {
+  const showOperations = (handles && handles.length > 0) || (escalates && escalates.length > 0);
+
   return (
     <div className="rounded-lg border border-line bg-surface p-8">
       <h2 className="text-xl font-medium text-ink">
-        Set up once. Covered correctly from day one.
+        Set up once. Stay in control.
       </h2>
       <p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink-soft">
         Before coverage goes live, Guest Squad documents your property rules,
@@ -69,6 +76,42 @@ export function BoFuTrustBlock() {
           </li>
         ))}
       </ul>
+
+      {/* Handled / escalated — only when service data provides it */}
+      {showOperations && (
+        <div className="mt-8 grid gap-8 border-t border-line pt-6 md:grid-cols-2">
+          {handles && handles.length > 0 && (
+            <div>
+              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.14em] text-gold-dark">
+                Handled directly
+              </p>
+              <ul className="flex flex-col gap-3">
+                {handles.map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-gold-dark" />
+                    <span className="text-sm leading-relaxed text-ink-soft">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+          {escalates && escalates.length > 0 && (
+            <div>
+              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.14em] text-ink-muted">
+                Escalated to your team
+              </p>
+              <ul className="flex flex-col gap-3">
+                {escalates.map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <ArrowRight className="mt-0.5 h-4 w-4 flex-shrink-0 text-ink-muted" />
+                    <span className="text-sm leading-relaxed text-ink-soft">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+      )}
     </div>
   );
 }

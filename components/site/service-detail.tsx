@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Check, ArrowUpRight, ArrowRight } from "lucide-react";
+import { Check, ArrowUpRight } from "lucide-react";
 import { PageHero } from "@/components/site/page-hero";
 import { Section, SectionHeading } from "@/components/site/section";
 import { CtaSection } from "@/components/site/cta-section";
@@ -205,56 +205,13 @@ export function ServiceDetail({ data }: { data: ServiceDetailData }) {
       {/* 3 — Channels */}
       <ChannelBadges />
 
-      {/* 4 — Trust block */}
+      {/* 4 — Merged trust + operations block */}
       <Section compact>
-        <BoFuTrustBlock />
+        <BoFuTrustBlock handles={data.handles} escalates={data.escalates} />
       </Section>
 
-      {/* 4b — Testimonials */}
+      {/* 5 — Testimonials */}
       <TestimonialsBlock />
-
-      {/* 5 — How It Works (handles / escalates) */}
-      {(data.handles || data.escalates) && (
-        <Section surface>
-          <SectionHeading
-            eyebrow="How It Works"
-            title="How Guest Squad keeps your guest operations under control."
-            description="Clear boundaries mean your team stays in charge of what matters most."
-          />
-          <div className="mt-10 grid gap-8 md:grid-cols-2">
-            {data.handles && (
-              <div>
-                <p className="mb-5 text-xs font-semibold uppercase tracking-[0.14em] text-gold-dark">
-                  Handled directly
-                </p>
-                <ul className="flex flex-col gap-3">
-                  {data.handles.map((item) => (
-                    <li key={item} className="flex items-start gap-3">
-                      <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-gold-dark" />
-                      <span className="text-sm leading-relaxed text-ink-soft">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-            {data.escalates && (
-              <div>
-                <p className="mb-5 text-xs font-semibold uppercase tracking-[0.14em] text-ink-muted">
-                  Escalated to your team
-                </p>
-                <ul className="flex flex-col gap-3">
-                  {data.escalates.map((item) => (
-                    <li key={item} className="flex items-start gap-3">
-                      <ArrowRight className="mt-0.5 h-4 w-4 flex-shrink-0 text-ink-muted" />
-                      <span className="text-sm leading-relaxed text-ink-soft">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-          </div>
-        </Section>
-      )}
 
       {/* 6 — Slim mid-page CTA */}
       <div className="bg-ink">

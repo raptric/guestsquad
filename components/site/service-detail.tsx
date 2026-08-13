@@ -259,10 +259,7 @@ export function ServiceDetail({ data }: { data: ServiceDetailData }) {
       {/* 6 — Slim mid-page CTA */}
       <div className="bg-ink">
         <div className="container flex flex-col items-start justify-between gap-5 py-8 sm:flex-row sm:items-center">
-          <div>
-            <p className="text-base font-medium text-paper">Ready to close your coverage gap?</p>
-            <p className="mt-1 text-sm text-paper/60">Book a review or start with a 2-week no-obligation pilot.</p>
-          </div>
+          <p className="text-base font-medium text-paper">Ready to close your coverage gap? Start with a 2-week no-obligation pilot.</p>
           <div className="flex shrink-0 flex-col gap-3 sm:flex-row">
             <CoverageReviewButton variant="gold" size="sm" ctaLocation="service_mid_cta">
               Book a Coverage Review
@@ -312,6 +309,11 @@ export function ServiceDetail({ data }: { data: ServiceDetailData }) {
                     </Link>
                   </li>
                 ))}
+                <li>
+                  <Link href="/services" className="mt-1 inline-flex items-center gap-1 text-xs text-gold-dark hover:underline">
+                    All services →
+                  </Link>
+                </li>
               </ul>
             </div>
           )}
@@ -357,6 +359,11 @@ export function ServiceDetail({ data }: { data: ServiceDetailData }) {
                     </Link>
                   </li>
                 ))}
+                <li>
+                  <Link href="/resources/insights" className="mt-1 inline-flex items-center gap-1 text-xs text-gold-dark hover:underline">
+                    All insights →
+                  </Link>
+                </li>
               </ul>
             </div>
           )}
@@ -377,6 +384,11 @@ export function ServiceDetail({ data }: { data: ServiceDetailData }) {
                     </Link>
                   </li>
                 ))}
+                <li>
+                  <Link href="/resources" className="mt-1 inline-flex items-center gap-1 text-xs text-gold-dark hover:underline">
+                    All resources →
+                  </Link>
+                </li>
               </ul>
             </div>
           )}

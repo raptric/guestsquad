@@ -1,4 +1,4 @@
-﻿const CHANNELS = [
+const CHANNELS = [
   "Booking.com inbox",
   "Expedia Partner Central",
   "Airbnb messages",
@@ -15,23 +15,22 @@
 
 export function ChannelBadges() {
   return (
-    <div>
-      <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-ink-muted">
-        Channels and workflows we support
-      </p>
-      <div className="flex flex-wrap gap-2">
-        {CHANNELS.map((c) => (
-          <span
-            key={c}
-            className="rounded border border-line bg-paper px-3 py-1.5 text-xs text-ink-soft"
-          >
-            {c}
-          </span>
-        ))}
+    <div className="bg-ink">
+      <div className="container flex flex-col items-start justify-between gap-6 py-8 sm:flex-row sm:items-center">
+        <p className="shrink-0 text-xs font-semibold uppercase tracking-[0.18em] text-paper/40">
+          Channels &amp; workflows we support
+        </p>
+        <div className="flex flex-wrap gap-2">
+          {CHANNELS.map((c) => (
+            <span
+              key={c}
+              className="rounded border border-paper/10 bg-paper/5 px-3 py-1.5 text-xs text-paper/70"
+            >
+              {c}
+            </span>
+          ))}
+        </div>
       </div>
-      <p className="mt-4 text-xs text-ink-muted">
-        Guest Squad works with your existing guest communication channels and documented workflows. Platform names are used descriptively only.
-      </p>
     </div>
   );
 }

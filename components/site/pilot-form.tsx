@@ -1,7 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
-import { ChevronDown, X } from "lucide-react";
+import { useState, useEffect } from "react";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Select } from "@/components/ui/select";
@@ -10,17 +9,6 @@ import { PROPERTY_TYPES } from "@/lib/site-data";
 import { trackEvent } from "@/lib/analytics";
 
 const ROOMS_OPTIONS = ["1–10", "11–30", "31–75", "76–200", "200+"];
-
-const CHANNEL_OPTIONS = [
-  "Reservation calls",
-  "Guest texts / SMS",
-  "OTA inboxes",
-  "Email",
-  "WhatsApp",
-  "Cloudbeds / channel manager",
-  "Akia",
-  "Other",
-];
 
 const PAIN_OPTIONS = [
   "Missed calls — no one answering",
@@ -37,98 +25,10 @@ function getUtmParam(search: string, key: string): string {
   return new URLSearchParams(search).get(key) ?? "";
 }
 
-function ChannelMultiSelect({
-  selected,
-  onChange,
-}: {
-  selected: string[];
-  onChange: (val: string[]) => void;
-}) {
-  const [open, setOpen] = useState(false);
-  const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    function handleClick(e: MouseEvent) {
-      if (ref.current && !ref.current.contains(e.target as Node)) {
-        setOpen(false);
-      }
-    }
-    document.addEventListener("mousedown", handleClick);
-    return () => document.removeEventListener("mousedown", handleClick);
-  }, []);
-
-  function toggle(ch: string) {
-    onChange(selected.includes(ch) ? selected.filter((c) => c !== ch) : [...selected, ch]);
-  }
-
-  function remove(ch: string) {
-    onChange(selected.filter((c) => c !== ch));
-  }
-
-  return (
-    <div ref={ref} className="relative">
-      <button
-        type="button"
-        onClick={() => setOpen((o) => !o)}
-        className="flex min-h-[42px] w-full flex-wrap items-center gap-1.5 rounded-md border border-line bg-paper px-3 py-2 text-left text-sm transition-colors hover:border-ink/30 focus:outline-none focus:ring-2 focus:ring-gold/30"
-      >
-        {selected.length === 0 ? (
-          <span className="text-ink-muted/60">Select channels…</span>
-        ) : (
-          selected.map((ch) => (
-            <span
-              key={ch}
-              className="inline-flex items-center gap-1 rounded bg-gold/10 px-2 py-0.5 text-xs font-medium text-gold-dark"
-            >
-              {ch}
-              <span
-                role="button"
-                tabIndex={0}
-                onClick={(e) => { e.stopPropagation(); remove(ch); }}
-                onKeyDown={(e) => e.key === "Enter" && (e.stopPropagation(), remove(ch))}
-                className="cursor-pointer opacity-60 hover:opacity-100"
-              >
-                <X className="h-2.5 w-2.5" />
-              </span>
-            </span>
-          ))
-        )}
-        <ChevronDown className={`ml-auto h-4 w-4 shrink-0 text-ink-muted transition-transform ${open ? "rotate-180" : ""}`} />
-      </button>
-
-      {open && (
-        <div className="absolute z-50 mt-1 w-full rounded-md border border-line bg-paper shadow-lg">
-          {CHANNEL_OPTIONS.map((ch) => {
-            const checked = selected.includes(ch);
-            return (
-              <button
-                key={ch}
-                type="button"
-                onClick={() => toggle(ch)}
-                className={`flex w-full items-center gap-2.5 px-3.5 py-2.5 text-left text-sm transition-colors hover:bg-surface ${checked ? "text-ink" : "text-ink-soft"}`}
-              >
-                <span className={`flex h-4 w-4 shrink-0 items-center justify-center rounded border transition-colors ${checked ? "border-gold-dark bg-gold-dark" : "border-line"}`}>
-                  {checked && (
-                    <svg className="h-2.5 w-2.5 text-paper" viewBox="0 0 10 10" fill="none">
-                      <path d="M1.5 5l2.5 2.5 4.5-4.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  )}
-                </span>
-                {ch}
-              </button>
-            );
-          })}
-        </div>
-      )}
-    </div>
-  );
-}
-
 export function PilotForm() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-  const [selectedChannels, setSelectedChannels] = useState<string[]>([]);
   const [tracking, setTracking] = useState({
     source_page: "",
     referrer: "",
@@ -191,7 +91,6 @@ export function PilotForm() {
       propertyWebsite: get("propertyWebsite"),
       propertyType,
       rooms,
-      channels: selectedChannels,
       pain: get("pain"),
       name: get("name"),
       email: get("email"),
@@ -210,7 +109,6 @@ export function PilotForm() {
       trackEvent("pilot_qualification_submit", {
         property_type: propertyType || "unknown",
         rooms_units_range: rooms || "unknown",
-        selected_channels: selectedChannels.join(","),
       });
       setSubmitted(true);
     } catch {
@@ -257,22 +155,14 @@ export function PilotForm() {
         </div>
       </div>
 
-      <div className="grid gap-4 sm:grid-cols-2">
-        <div>
-          <Label>Channels needing coverage *</Label>
-          <div className="mt-1.5">
-            <ChannelMultiSelect selected={selectedChannels} onChange={setSelectedChannels} />
-          </div>
-        </div>
-        <div>
-          <Label htmlFor="pain">Biggest coverage gap *</Label>
-          <Select id="pain" name="pain" defaultValue="" required>
-            <option value="" disabled>Select your challenge</option>
-            {PAIN_OPTIONS.map((opt) => (
-              <option key={opt} value={opt}>{opt}</option>
-            ))}
-          </Select>
-        </div>
+      <div>
+        <Label htmlFor="pain">Biggest coverage gap *</Label>
+        <Select id="pain" name="pain" defaultValue="" required>
+          <option value="" disabled>Select your challenge</option>
+          {PAIN_OPTIONS.map((opt) => (
+            <option key={opt} value={opt}>{opt}</option>
+          ))}
+        </Select>
       </div>
 
       <div className="grid gap-4 sm:grid-cols-2">
@@ -298,7 +188,11 @@ export function PilotForm() {
           {loading ? "Submitting…" : "Request Pilot Review"}
         </Button>
         <p className="mt-2.5 text-xs text-ink-muted">
-          Reviewed within one business day. Confidential — never shared.
+          By submitting this form you agree to our{" "}
+          <a href="/privacy-policy" className="underline underline-offset-2 hover:text-ink">Privacy Policy</a>
+          {" "}and{" "}
+          <a href="/terms-of-service" className="underline underline-offset-2 hover:text-ink">Terms of Service</a>
+          . Reviewed within one business day.
         </p>
       </div>
     </form>

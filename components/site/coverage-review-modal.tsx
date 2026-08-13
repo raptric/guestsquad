@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 import { X, Loader2, Check } from "lucide-react";
 import { trackEvent } from "@/lib/analytics";
@@ -78,6 +78,13 @@ export function CoverageReviewModal({ open, onClose, ctaLocation }: CoverageRevi
   const [mounted, setMounted] = useState(false);
   const [helpWith, setHelpWith] = useState<string[]>([]);
   const [status, setStatus] = useState<"idle" | "loading" | "done" | "error">("idle");
+  const startedRef = useRef(false);
+
+  function handleFormStart() {
+    if (startedRef.current) return;
+    startedRef.current = true;
+    trackEvent("coverage_review_form_start", { cta_location: ctaLocation || "unknown" });
+  }
   const [timezone, setTimezone] = useState("");
   const [tracking, setTracking] = useState({
     source_page: "",
@@ -89,6 +96,7 @@ export function CoverageReviewModal({ open, onClose, ctaLocation }: CoverageRevi
 
   useEffect(() => {
     if (!open) return;
+    startedRef.current = false;
     const detected = detectTimezone();
     const match = TIMEZONE_OPTIONS.find((tz) => tz.value === detected);
     setTimezone(match ? detected : "");
@@ -216,7 +224,7 @@ export function CoverageReviewModal({ open, onClose, ctaLocation }: CoverageRevi
               </button>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+            <form onSubmit={handleSubmit} onFocus={handleFormStart} className="flex flex-col gap-4">
               {/* Honeypot */}
               <input type="text" name="website" tabIndex={-1} aria-hidden="true" className="hidden" />
 

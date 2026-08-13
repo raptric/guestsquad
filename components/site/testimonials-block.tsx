@@ -21,31 +21,37 @@ export function TestimonialsBlock() {
   ];
 
   return (
-    <div className="border-t border-line bg-surface">
-      <div className="container py-10">
-        <div className="mb-6 text-center">
+    <div className="border-y border-line bg-paper">
+      <div className="container py-16">
+        {/* Header */}
+        <div className="mb-10 flex flex-col items-center gap-2 text-center">
           <a
             href="https://www.trustpilot.com/review/guestsquad.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm text-ink-soft transition-colors hover:text-ink"
+            className="inline-flex items-center gap-2.5 transition-opacity hover:opacity-80"
           >
-            <span className="text-[#00b67a]">★★★★★</span>
-            <span>Rated 5 stars on Trustpilot</span>
+            <span className="text-xl tracking-wide text-[#00b67a]">★★★★★</span>
+            <span className="text-sm font-medium text-ink">Rated 5 stars on Trustpilot</span>
           </a>
-          <p className="mt-2 text-xs font-semibold uppercase tracking-[0.18em] text-ink-muted">
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-ink-muted">
             What operators say about Guest Squad
           </p>
         </div>
-        <div className="grid gap-5 sm:grid-cols-3">
+
+        {/* Cards */}
+        <div className="grid gap-6 sm:grid-cols-3">
           {items.map((item) => (
-            <div key={item.attr} className="rounded-xl border border-line bg-paper p-6">
-              <svg className="h-5 w-5 text-gold/40" fill="currentColor" viewBox="0 0 24 24">
+            <div
+              key={item.attr}
+              className="flex flex-col rounded-xl border border-line bg-surface p-7 shadow-soft"
+            >
+              <svg className="h-6 w-6 text-gold-dark/30" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
               </svg>
-              <p className="mt-4 text-sm leading-relaxed text-ink-soft">{item.quote}</p>
-              <div className="mt-5 border-t border-line pt-4">
-                <p className="text-xs font-medium text-ink">{item.attr}</p>
+              <p className="mt-5 flex-1 text-sm leading-relaxed text-ink-soft">{item.quote}</p>
+              <div className="mt-6 border-t border-line pt-5">
+                <p className="text-xs font-semibold text-ink">{item.attr}</p>
                 <p className="mt-0.5 text-xs text-ink-muted">{item.location}</p>
               </div>
             </div>

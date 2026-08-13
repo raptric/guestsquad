@@ -10,14 +10,14 @@ export function CtaSection({
 }) {
   return (
     <section className="bg-ink py-20 md:py-28">
-      <div className="container max-w-2xl text-center">
-        <h2 className="text-3xl font-medium leading-tight text-paper md:text-4xl">
+      <div className="container max-w-5xl text-center">
+        <h2 className="whitespace-nowrap text-3xl font-medium leading-tight text-paper md:text-4xl">
           {title}
         </h2>
-        <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-paper/65">
+        <p className="mt-4 whitespace-nowrap text-base leading-relaxed text-paper/65">
           {description}
         </p>
-        <p className="mx-auto mt-6 max-w-xl text-sm leading-relaxed text-paper/50">
+        <p className="mt-6 whitespace-nowrap text-sm leading-relaxed text-paper/50">
           Qualified properties can start with a 2-week pilot before moving into month-to-month coverage.
         </p>
         <div className="mt-6 flex flex-col items-center justify-center gap-4 sm:flex-row">

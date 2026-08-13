@@ -167,7 +167,9 @@ export default function ContactPage() {
         <PostBookingSteps />
       </Section>
 
-      <BoFuTrustBlock />
+      <Section surface compact>
+        <BoFuTrustBlock />
+      </Section>
 
       <Section surface compact>
         <SectionHeading eyebrow="Not Ready to Book Yet?" title="Start with one of these." />

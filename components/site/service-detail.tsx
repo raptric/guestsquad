@@ -206,7 +206,9 @@ export function ServiceDetail({ data }: { data: ServiceDetailData }) {
       <ChannelBadges />
 
       {/* 4 — Trust block */}
-      <BoFuTrustBlock />
+      <Section compact>
+        <BoFuTrustBlock />
+      </Section>
 
       {/* 4b — Testimonials */}
       <TestimonialsBlock />

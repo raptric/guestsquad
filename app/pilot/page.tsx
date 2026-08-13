@@ -6,6 +6,7 @@ import { buildMetadata, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib
 import { JsonLd } from "@/components/site/json-ld";
 import { Section, SectionHeading } from "@/components/site/section";
 import { CoverageReviewButton } from "@/components/site/coverage-review-button";
+import { PilotFormButton } from "@/components/site/pilot-form-button";
 import { SITE } from "@/lib/site-data";
 
 const MissedBookingCalculator = dynamic(
@@ -253,12 +254,9 @@ export default function PilotPage() {
             Guest Squad handles reservation calls, guest texts, OTA inboxes, and after-hours coverage for independent hotels and property operators. We&rsquo;ll review your property, channels, and coverage gaps to determine whether a 2-week no-obligation pilot is the right starting point.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-4">
-            <a
-              href="#qualify"
-              className="inline-flex items-center justify-center rounded-lg bg-gold-dark px-7 py-3.5 text-sm font-semibold text-paper shadow-sm transition-colors hover:bg-gold"
-            >
+            <PilotFormButton variant="gold" size="lg">
               Request Pilot Review
-            </a>
+            </PilotFormButton>
             <a href="#calculator" className="text-sm font-medium text-ink-soft underline underline-offset-2 hover:text-ink">
               Estimate Missed Booking Risk
             </a>

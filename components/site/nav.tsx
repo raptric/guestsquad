@@ -7,6 +7,7 @@ import { Menu, X } from "lucide-react";
 import { NAV_LINKS, SITE } from "@/lib/site-data";
 import { ButtonLink } from "@/components/site/button-link";
 import { CoverageReviewButton } from "@/components/site/coverage-review-button";
+import { PilotFormButton } from "@/components/site/pilot-form-button";
 import { cn } from "@/lib/utils";
 
 const CAMPAIGN_PATHS = ["/pilot"];
@@ -26,9 +27,9 @@ export function Nav() {
               className="h-8 w-auto"
             />
           </Link>
-          <CoverageReviewButton variant="gold" size="sm" ctaLocation="nav_campaign">
-            Book a Coverage Review
-          </CoverageReviewButton>
+          <PilotFormButton variant="gold" size="sm">
+            Request Pilot Review
+          </PilotFormButton>
         </div>
       </header>
     );

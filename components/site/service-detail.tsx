@@ -10,10 +10,8 @@ import { serviceSchema, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib
 import { SERVICES, SITE } from "@/lib/site-data";
 import { RESOURCES } from "@/lib/resource-content";
 import { INSIGHTS } from "@/lib/insights-content";
-import { AssetBlock } from "@/components/site/asset-block";
 import { BoFuTrustBlock } from "@/components/site/bofu-trust-block";
 import { ChannelBadges } from "@/components/site/channel-badges";
-import { DownloadGate } from "@/components/site/download-gate";
 import { ServicePageViewTracker } from "@/components/site/service-page-view-tracker";
 
 export type ServiceDetailData = {
@@ -57,6 +55,14 @@ export function ServiceDetail({ data }: { data: ServiceDetailData }) {
   const path = `/services/${data.slug}`;
   const related = SERVICES.filter((s) => data.relatedSlugs.includes(s.slug))
     .sort((a, b) => data.relatedSlugs.indexOf(a.slug) - data.relatedSlugs.indexOf(b.slug));
+  const comparisons = RESOURCES.filter((r) =>
+    data.comparisonSlugs ? data.comparisonSlugs.includes(r.slug) : r.type === "comparison"
+  );
+  const insights = data.insightSlugs
+    ? INSIGHTS.filter((i) => data.insightSlugs!.includes(i.slug)).sort(
+        (a, b) => data.insightSlugs!.indexOf(a.slug) - data.insightSlugs!.indexOf(b.slug)
+      )
+    : [];
 
   return (
     <>
@@ -144,6 +150,7 @@ export function ServiceDetail({ data }: { data: ServiceDetailData }) {
         />
       </div>
 
+      {/* 1 — What's Included */}
       <Section>
         <SectionHeading
           eyebrow="What&apos;s Included"
@@ -157,24 +164,58 @@ export function ServiceDetail({ data }: { data: ServiceDetailData }) {
             </div>
           ))}
         </div>
-
         {data.examples && (
           <div className="mt-8 rounded-lg border border-line bg-paper p-7">
-            <p className="mb-2 text-xs font-semibold uppercase tracking-[0.14em] text-ink-muted">
-              In Practice
-            </p>
+            <p className="mb-2 text-xs font-semibold uppercase tracking-[0.14em] text-ink-muted">In Practice</p>
             <p className="text-sm leading-relaxed text-ink-soft">{data.examples}</p>
           </div>
         )}
       </Section>
 
+      {/* 2 — Who It's For */}
+      <Section surface>
+        <SectionHeading eyebrow="Who It&apos;s For" title={data.whoItsForTitle ?? "Built around how your property actually operates."} />
+        <ul className="mt-10 grid gap-4 sm:grid-cols-2">
+          {data.whoItsFor.map((item) => (
+            <li key={item} className="flex items-start gap-3 rounded-lg border border-line bg-paper p-5">
+              <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-gold-dark" />
+              <span className="text-sm leading-relaxed text-ink-soft">{item}</span>
+            </li>
+          ))}
+        </ul>
+        <p className="mt-10 max-w-2xl text-sm leading-relaxed text-ink-muted">{data.notes}</p>
+        {data.pairsWith && data.pairsWith.length > 0 && (
+          <p className="mt-3 max-w-2xl text-sm text-ink-muted">
+            Pairs well with:{" "}
+            {data.pairsWith.map((p, i) => (
+              <span key={p.slug}>
+                <Link href={`/services/${p.slug}`} className="text-gold-dark underline underline-offset-4 hover:text-gold">
+                  {p.label}
+                </Link>
+                {i < data.pairsWith!.length - 1 ? ", " : "."}
+              </span>
+            ))}
+          </p>
+        )}
+      </Section>
 
+      {/* 3 — Channels */}
+      <Section surface compact>
+        <ChannelBadges />
+      </Section>
+
+      {/* 4 — Trust block */}
+      <Section compact>
+        <BoFuTrustBlock />
+      </Section>
+
+      {/* 5 — How It Works (handles / escalates) */}
       {(data.handles || data.escalates) && (
         <Section surface>
           <SectionHeading
             eyebrow="How It Works"
-            title="What we handle, and what we escalate."
-            description="Clear boundaries mean your team stays in control of what matters most."
+            title="How Guest Squad keeps your guest operations under control."
+            description="Clear boundaries mean your team stays in charge of what matters most."
           />
           <div className="mt-10 grid gap-8 md:grid-cols-2">
             {data.handles && (
@@ -211,33 +252,8 @@ export function ServiceDetail({ data }: { data: ServiceDetailData }) {
         </Section>
       )}
 
+      {/* 6 — FAQ */}
       <Section surface={!(data.handles || data.escalates)}>
-        <SectionHeading eyebrow="Who It&apos;s For" title={data.whoItsForTitle ?? "Built around how your property actually operates."} />
-        <ul className="mt-10 grid gap-4 sm:grid-cols-2">
-          {data.whoItsFor.map((item) => (
-            <li key={item} className="flex items-start gap-3 rounded-lg border border-line bg-paper p-5">
-              <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-gold-dark" />
-              <span className="text-sm leading-relaxed text-ink-soft">{item}</span>
-            </li>
-          ))}
-        </ul>
-        <p className="mt-10 max-w-2xl text-sm leading-relaxed text-ink-muted">{data.notes}</p>
-        {data.pairsWith && data.pairsWith.length > 0 && (
-          <p className="mt-3 max-w-2xl text-sm text-ink-muted">
-            Pairs well with:{" "}
-            {data.pairsWith.map((p, i) => (
-              <span key={p.slug}>
-                <Link href={`/services/${p.slug}`} className="text-gold-dark underline underline-offset-4 hover:text-gold">
-                  {p.label}
-                </Link>
-                {i < data.pairsWith!.length - 1 ? ", " : "."}
-              </span>
-            ))}
-          </p>
-        )}
-      </Section>
-
-      <Section surface>
         <SectionHeading eyebrow="Questions" title={data.faqTitle ?? "Common questions about this service."} />
         <div className="mt-10 grid gap-6 sm:grid-cols-2">
           {data.faqs.map((item) => (
@@ -249,102 +265,97 @@ export function ServiceDetail({ data }: { data: ServiceDetailData }) {
         </div>
       </Section>
 
+      {/* 7 — Compact "Keep Exploring" link cluster */}
       <Section>
-        <SectionHeading eyebrow="Explore More" title={data.relatedTitle ?? "Other coverage hotels usually pair with this."} />
-        <div className="mt-10 grid gap-6 sm:grid-cols-3">
-          {related.map((s) => (
-            <Link
-              key={s.slug}
-              href={`/services/${s.slug}`}
-              className="group flex flex-col justify-between rounded-lg border border-line bg-paper p-6 transition-colors hover:border-gold/50"
-            >
-              <div>
-                <h3 className="text-sm font-medium text-ink">{s.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-ink-soft">{s.description}</p>
-              </div>
-              <div className="mt-4 flex items-center gap-1.5 text-xs font-medium text-ink-soft group-hover:text-gold-dark">
-                Learn more
-                <ArrowUpRight className="h-3.5 w-3.5" />
-              </div>
-            </Link>
-          ))}
+        <SectionHeading eyebrow="Keep Exploring" title="Related services, guides, and research." />
+        <div className="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+
+          {/* Related services */}
+          {related.length > 0 && (
+            <div>
+              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.14em] text-ink-muted">Related Services</p>
+              <ul className="flex flex-col gap-2.5">
+                {related.map((s) => (
+                  <li key={s.slug}>
+                    <Link
+                      href={`/services/${s.slug}`}
+                      className="group flex items-start gap-2 text-sm text-ink-soft transition-colors hover:text-ink"
+                    >
+                      <ArrowUpRight className="mt-0.5 h-3.5 w-3.5 shrink-0 text-ink-muted transition-colors group-hover:text-gold-dark" />
+                      {s.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {/* Guides & comparisons */}
+          {comparisons.length > 0 && (
+            <div>
+              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.14em] text-ink-muted">Guides &amp; Comparisons</p>
+              <ul className="flex flex-col gap-2.5">
+                {comparisons.map((r) => (
+                  <li key={r.slug}>
+                    <Link
+                      href={`/resources/${r.slug}`}
+                      className="group flex items-start gap-2 text-sm text-ink-soft transition-colors hover:text-ink"
+                    >
+                      <ArrowUpRight className="mt-0.5 h-3.5 w-3.5 shrink-0 text-ink-muted transition-colors group-hover:text-gold-dark" />
+                      {r.title}
+                    </Link>
+                  </li>
+                ))}
+                <li>
+                  <Link href="/resources" className="mt-1 inline-flex items-center gap-1 text-xs text-gold-dark hover:underline">
+                    All guides →
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          )}
+
+          {/* Insights */}
+          {insights.length > 0 && (
+            <div>
+              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.14em] text-ink-muted">Research &amp; Insights</p>
+              <ul className="flex flex-col gap-2.5">
+                {insights.map((i) => (
+                  <li key={i.slug}>
+                    <Link
+                      href={`/resources/insights/${i.slug}`}
+                      className="group flex items-start gap-2 text-sm text-ink-soft transition-colors hover:text-ink"
+                    >
+                      <ArrowUpRight className="mt-0.5 h-3.5 w-3.5 shrink-0 text-ink-muted transition-colors group-hover:text-gold-dark" />
+                      {i.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {/* Tools / asset links */}
+          {data.assetLinks && data.assetLinks.length > 0 && (
+            <div>
+              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.14em] text-ink-muted">Tools &amp; Resources</p>
+              <ul className="flex flex-col gap-2.5">
+                {data.assetLinks.map((a) => (
+                  <li key={a.href}>
+                    <Link
+                      href={a.href}
+                      className="group flex items-start gap-2 text-sm text-ink-soft transition-colors hover:text-ink"
+                    >
+                      <ArrowUpRight className="mt-0.5 h-3.5 w-3.5 shrink-0 text-ink-muted transition-colors group-hover:text-gold-dark" />
+                      {a.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
         </div>
-      </Section>
-
-      <Section surface>
-        <SectionHeading eyebrow="Worth Reading" title={data.comparisonTitle ?? "How this compares to the alternatives."} />
-        <div className="mt-10 grid gap-6 sm:grid-cols-2">
-          {RESOURCES.filter((r) =>
-            data.comparisonSlugs
-              ? data.comparisonSlugs.includes(r.slug)
-              : r.type === "comparison"
-          ).map((r) => (
-            <Link
-              key={r.slug}
-              href={`/resources/${r.slug}`}
-              className="group flex flex-col justify-between rounded-lg border border-line bg-paper p-6 transition-colors hover:border-gold/50"
-            >
-              <div>
-                <h3 className="text-sm font-medium text-ink">{r.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-ink-soft">{r.description}</p>
-              </div>
-              <div className="mt-4 flex items-center gap-1.5 text-xs font-medium text-ink-soft group-hover:text-gold-dark">
-                Read comparison
-                <ArrowUpRight className="h-3.5 w-3.5" />
-              </div>
-            </Link>
-          ))}
-        </div>
-        <p className="mt-8 text-center text-sm text-ink-soft">
-          <Link href="/resources" className="text-gold-dark underline underline-offset-4 hover:text-gold">
-            Browse all guides and comparisons →
-          </Link>
-        </p>
-      </Section>
-
-      {data.insightSlugs && data.insightSlugs.length > 0 && (
-        <Section>
-          <SectionHeading eyebrow="From the Insights" title="Research behind this service." />
-          <div className="mt-10 grid gap-6 sm:grid-cols-2">
-            {INSIGHTS.filter((i) => data.insightSlugs!.includes(i.slug))
-              .sort((a, b) => data.insightSlugs!.indexOf(a.slug) - data.insightSlugs!.indexOf(b.slug))
-              .map((insight) => (
-                <Link
-                  key={insight.slug}
-                  href={`/resources/insights/${insight.slug}`}
-                  className="group flex flex-col justify-between rounded-lg border border-line bg-paper p-6 transition-colors hover:border-gold/50"
-                >
-                  <div>
-                    <p className="mb-1 text-xs font-semibold uppercase tracking-[0.14em] text-ink-muted">{insight.category}</p>
-                    <h3 className="text-sm font-medium text-ink">{insight.title}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-ink-soft">{insight.description}</p>
-                  </div>
-                  <div className="mt-4 flex items-center gap-1.5 text-xs font-medium text-ink-soft group-hover:text-gold-dark">
-                    Read insight <ArrowUpRight className="h-3.5 w-3.5" />
-                  </div>
-                </Link>
-              ))}
-          </div>
-        </Section>
-      )}
-
-      {data.assetLinks && data.assetLinks.length > 0 && (
-        <Section>
-          <SectionHeading eyebrow="Tools for Your Property" title="Useful resources before you decide." />
-          <div className="mt-8 grid gap-4 sm:grid-cols-3">
-            {data.assetLinks.map((a) => (
-              <AssetBlock key={a.href} assets={[a]} />
-            ))}
-          </div>
-        </Section>
-      )}
-
-      <Section surface compact>
-        <ChannelBadges />
-      </Section>
-
-      <Section compact>
-        <BoFuTrustBlock />
       </Section>
 
       <CtaSection title={data.ctaTitle} description={data.ctaDescription} />

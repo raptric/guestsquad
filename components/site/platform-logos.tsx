@@ -16,13 +16,17 @@ const OTA_LOGOS = [
   },
   {
     name: "Expedia",
-    w: 96,
+    w: 104,
     svg: (
-      <svg width="96" height="28" viewBox="0 0 96 28" aria-label="Expedia" role="img" fill="none">
-        {/* Expedia diamond */}
-        <polygon points="12,2 22,14 12,26 2,14" fill="#FFC72C" />
-        <polygon points="12,7 18,14 12,21 6,14" fill="#00355F" />
-        <text x="28" y="20" fontFamily="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" fontSize="15" fontWeight="700" fill="#00355F" letterSpacing="-0.2">expedia</text>
+      <svg width="104" height="28" viewBox="0 0 104 28" aria-label="Expedia" role="img" fill="none">
+        {/* Yellow square with white arrow mark */}
+        <rect x="0" y="2" width="24" height="24" rx="4" fill="#FFC72C" />
+        <path d="M7 17L12 9l5 8H7z" fill="none" stroke="white" strokeWidth="0" />
+        {/* Arrow pointing upper-right */}
+        <polyline points="7,18 12,10 17,18" fill="none" stroke="white" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+        <line x1="12" y1="10" x2="17" y2="10" stroke="white" strokeWidth="2.2" strokeLinecap="round" />
+        <line x1="17" y1="10" x2="17" y2="15" stroke="white" strokeWidth="2.2" strokeLinecap="round" />
+        <text x="30" y="21" fontFamily="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" fontSize="16" fontWeight="700" fill="#1D2A4A" letterSpacing="-0.2">Expedia</text>
       </svg>
     ),
   },

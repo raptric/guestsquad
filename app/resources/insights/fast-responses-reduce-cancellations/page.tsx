@@ -236,10 +236,18 @@ export default function FastResponsesCancellationsPage() {
         </div>
       </Section>
 
-      <div className="border-y border-line bg-surface">
-        <div className="container py-10">
+      <Section className="bg-[#F7F5F2]">
+        <h2 className="mx-auto max-w-3xl text-lg font-semibold text-ink">Frequently asked questions</h2>
+        <div className="mt-8">
+          <FaqAccordion items={FAQS} />
+        </div>
+      </Section>
+
+      <div className="border-t border-line bg-paper">
+        <div className="container py-12">
           <div className="mx-auto max-w-2xl">
-            <p className="text-base font-medium text-ink">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold-dark">Next Step</p>
+            <p className="mt-3 text-base font-semibold text-ink">
               Guest Squad handles your OTA inboxes so reply scores stay above platform thresholds.
             </p>
             <p className="mt-2 text-sm leading-relaxed text-ink-soft">
@@ -259,38 +267,26 @@ export default function FastResponsesCancellationsPage() {
                 OTA inbox management <ArrowUpRight className="h-3.5 w-3.5" />
               </Link>
             </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="border-t border-line">
-        <div className="container py-10">
-          <div className="mx-auto max-w-2xl">
-            <p className="text-xs font-semibold uppercase tracking-widest text-ink-muted">Related insights</p>
-            <div className="mt-4 flex flex-col gap-3">
-              <Link href="/resources/insights/ota-ranking-response-time" className="group flex items-start gap-2 text-sm text-gold-dark hover:text-gold">
-                <ArrowUpRight className="mt-0.5 h-4 w-4 shrink-0" />
-                <span className="leading-snug group-hover:underline">How Slow Replies Hurt Your Hotel&apos;s OTA Ranking</span>
-              </Link>
-              <Link href="/resources/insights/booking-com-message-management-lean-teams" className="group flex items-start gap-2 text-sm text-gold-dark hover:text-gold">
-                <ArrowUpRight className="mt-0.5 h-4 w-4 shrink-0" />
-                <span className="leading-snug group-hover:underline">Booking.com Message Management for Lean Hotel Teams</span>
-              </Link>
-              <Link href="/resources/insights/vacation-rental-response-standards" className="group flex items-start gap-2 text-sm text-gold-dark hover:text-gold">
-                <ArrowUpRight className="mt-0.5 h-4 w-4 shrink-0" />
-                <span className="leading-snug group-hover:underline">Vacation Rental Response Standards: Airbnb and Vrbo</span>
-              </Link>
+            <div className="mt-8 border-t border-line pt-6">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-ink-muted">Related Insights</p>
+              <div className="mt-3 flex flex-col gap-2.5">
+                <Link href="/resources/insights/ota-ranking-response-time" className="group flex items-start gap-2 text-sm text-gold-dark hover:text-gold">
+                  <ArrowUpRight className="mt-0.5 h-4 w-4 shrink-0" />
+                  <span className="leading-snug group-hover:underline">How Slow Replies Hurt Your Hotel&apos;s OTA Ranking</span>
+                </Link>
+                <Link href="/resources/insights/booking-com-message-management-lean-teams" className="group flex items-start gap-2 text-sm text-gold-dark hover:text-gold">
+                  <ArrowUpRight className="mt-0.5 h-4 w-4 shrink-0" />
+                  <span className="leading-snug group-hover:underline">Booking.com Message Management for Lean Hotel Teams</span>
+                </Link>
+                <Link href="/resources/insights/vacation-rental-response-standards" className="group flex items-start gap-2 text-sm text-gold-dark hover:text-gold">
+                  <ArrowUpRight className="mt-0.5 h-4 w-4 shrink-0" />
+                  <span className="leading-snug group-hover:underline">Vacation Rental Response Standards: Airbnb and Vrbo</span>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
       </div>
-
-      <Section className="bg-[#F7F5F2]">
-        <h2 className="mx-auto max-w-3xl text-lg font-semibold text-ink">Frequently asked questions</h2>
-        <div className="mt-8">
-          <FaqAccordion items={FAQS} />
-        </div>
-      </Section>
 
       <CtaSection
         title="Protect your review score with consistent guest communication."

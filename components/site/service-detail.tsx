@@ -14,6 +14,7 @@ import { RESOURCES } from "@/lib/resource-content";
 import { INSIGHTS } from "@/lib/insights-content";
 import { BoFuTrustBlock } from "@/components/site/bofu-trust-block";
 import { TestimonialsBlock } from "@/components/site/testimonials-block";
+import { FaqAccordion } from "@/components/site/faq-accordion";
 import { ChannelBadges } from "@/components/site/channel-badges";
 import { ServicePageViewTracker } from "@/components/site/service-page-view-tracker";
 
@@ -232,15 +233,10 @@ export function ServiceDetail({ data }: { data: ServiceDetailData }) {
       </div>
 
       {/* 7 — FAQ */}
-      <Section surface={!(data.handles || data.escalates)}>
+      <Section className="bg-[#F7F5F2]">
         <SectionHeading eyebrow="Questions" title={data.faqTitle ?? "Common questions about this service."} />
-        <div className="mt-10 grid gap-6 sm:grid-cols-2">
-          {data.faqs.map((item) => (
-            <div key={item.q} className="rounded-lg border border-line bg-paper p-6">
-              <h3 className="text-sm font-medium text-ink">{item.q}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-ink-soft">{item.a}</p>
-            </div>
-          ))}
+        <div className="mt-8">
+          <FaqAccordion items={data.faqs} />
         </div>
       </Section>
 

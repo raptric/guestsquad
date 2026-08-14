@@ -485,12 +485,12 @@ export default function HomePage() {
         <div className="container py-7">
           <div className="border-l-2 border-gold/30 pl-5">
             <p className="mb-1 text-xs font-semibold uppercase tracking-[0.15em] text-gold-dark">Pricing</p>
-            <h2 className="text-xl font-medium text-ink">Need to understand how coverage is scoped?</h2>
+            <h2 className="text-2xl font-medium text-ink">Need to understand how coverage is scoped?</h2>
             <p className="mt-2 max-w-2xl text-sm leading-relaxed text-ink-soft">
               Pricing explains what every plan includes, what affects cost, and how coverage is structured around your property.
             </p>
             <div className="mt-4">
-              <ButtonLink href="/pricing" variant="default" size="default" className="text-gold-dark hover:text-gold hover:bg-ink/90">
+              <ButtonLink href="/pricing" variant="gold" size="default">
                 See Pricing
               </ButtonLink>
             </div>

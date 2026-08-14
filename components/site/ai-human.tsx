@@ -22,19 +22,19 @@ export function AiHuman() {
   return (
     <div>
     <div className="overflow-hidden rounded-lg border border-line">
-      <div className="grid grid-cols-3 border-b border-line bg-surface text-xs font-semibold uppercase tracking-wide text-ink-muted">
-        <div className="px-6 py-4">Function</div>
-        <div className="px-6 py-4">Technology handles</div>
-        <div className="px-6 py-4">Our people handle</div>
+      <div className="grid grid-cols-3 border-b border-line bg-ink/5 text-xs font-bold uppercase tracking-wide text-ink-muted">
+        <div className="px-6 py-3">Function</div>
+        <div className="px-6 py-3 text-ink-soft">Technology handles</div>
+        <div className="px-6 py-3 text-ink-soft">Our people handle</div>
       </div>
       {ROWS.map((row, i) => (
         <div
           key={row.title}
           className={`grid grid-cols-3 ${i !== ROWS.length - 1 ? "border-b border-line" : ""}`}
         >
-          <div className="px-6 py-6 text-sm font-medium text-ink">{row.title}</div>
-          <div className="px-6 py-6 text-sm leading-relaxed text-ink-soft">{row.ai}</div>
-          <div className="px-6 py-6 text-sm leading-relaxed text-ink-soft">{row.human}</div>
+          <div className="px-6 py-4 text-sm font-medium text-ink">{row.title}</div>
+          <div className="px-6 py-4 text-sm leading-relaxed text-ink-soft">{row.ai}</div>
+          <div className="px-6 py-4 text-sm leading-relaxed text-ink-soft">{row.human}</div>
         </div>
       ))}
     </div>

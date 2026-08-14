@@ -30,7 +30,7 @@ export function Guarantees() {
     <div>
       <div className="grid gap-px overflow-hidden rounded-lg border border-line bg-line sm:grid-cols-2">
         {GUARANTEES.map((g) => (
-          <div key={g.commitment} className="flex flex-col gap-3 bg-paper px-8 py-10">
+          <div key={g.commitment} className="flex flex-col gap-2.5 bg-paper px-6 py-7">
             <p className="text-lg font-medium text-ink">{g.commitment}</p>
             <p className="text-sm leading-relaxed text-ink-soft">{g.detail}</p>
             <p className="mt-auto pt-4 text-xs font-medium text-ink-muted border-t border-line">

@@ -12,7 +12,7 @@ export function PropertyTypes() {
   return (
     <div className="grid gap-px overflow-hidden rounded-lg border border-line bg-line sm:grid-cols-2 lg:grid-cols-5">
       {TYPES.map((t) => (
-        <Link key={t.title} href={t.href} className="group bg-paper p-6 transition-colors hover:bg-surface">
+        <Link key={t.title} href={t.href} className="group bg-paper p-5 transition-colors hover:bg-surface">
           <h3 className="text-sm font-medium text-ink group-hover:text-gold-dark">{t.title}</h3>
           <p className="mt-2 text-sm leading-relaxed text-ink-soft">{t.description}</p>
         </Link>

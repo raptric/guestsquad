@@ -17,11 +17,11 @@ const GUESTSQUAD = [
 export function Differentiator() {
   return (
     <div className="grid gap-6 md:grid-cols-2">
-      <div className="rounded-lg border border-line bg-surface p-8">
+      <div className="rounded-lg border border-line bg-surface p-6">
         <h3 className="text-sm font-semibold uppercase tracking-wide text-ink-muted">
           Generic call center
         </h3>
-        <ul className="mt-5 flex flex-col gap-3.5">
+        <ul className="mt-4 flex flex-col gap-3">
           {GENERIC.map((item) => (
             <li key={item} className="flex gap-3 text-sm leading-relaxed text-ink-soft">
               <span className="mt-2 h-1 w-1 flex-shrink-0 rounded-full bg-ink-muted" />
@@ -31,11 +31,11 @@ export function Differentiator() {
         </ul>
       </div>
 
-      <div className="rounded-lg border border-gold/30 bg-paper p-8 shadow-soft">
+      <div className="rounded-lg border border-gold/30 bg-paper p-6 shadow-soft">
         <h3 className="text-sm font-semibold uppercase tracking-wide text-gold-dark">
           Guest Squad
         </h3>
-        <ul className="mt-5 flex flex-col gap-3.5">
+        <ul className="mt-4 flex flex-col gap-3">
           {GUESTSQUAD.map((item) => (
             <li key={item} className="flex gap-3 text-sm leading-relaxed text-ink">
               <span className="mt-2 h-1 w-1 flex-shrink-0 rounded-full bg-gold" />

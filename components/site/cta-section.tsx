@@ -11,15 +11,15 @@ export function CtaSection({
   primaryCta?: string;
 }) {
   return (
-    <section className="bg-ink py-20 md:py-28">
+    <section className="bg-ink py-16 md:py-22">
       <div className="container text-center">
-        <h2 className="whitespace-nowrap text-3xl font-medium leading-tight text-paper md:text-4xl">
+        <h2 className="text-3xl font-medium leading-tight text-paper md:text-4xl">
           {title}
         </h2>
-        <p className="mt-4 whitespace-nowrap text-base leading-relaxed text-paper/65">
+        <p className="mt-3 text-base leading-relaxed text-paper/65">
           {description}
         </p>
-        <p className="mt-6 whitespace-nowrap text-sm leading-relaxed text-paper/50">
+        <p className="mt-5 text-sm leading-relaxed text-paper/50">
           Qualified properties can start with a 2-week pilot before moving into month-to-month coverage.
         </p>
         <div className="mt-6 flex flex-col items-center justify-center gap-4 sm:flex-row">

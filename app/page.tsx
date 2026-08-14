@@ -28,39 +28,39 @@ export const metadata: Metadata = buildMetadata({
 const HOME_FAQS = [
   {
     q: "What does Guest Squad do?",
-    a: "Guest Squad provides 24/7 human guest operations support for hotels, boutique properties, resorts, serviced apartments, and short-term rental operators. The service covers reservation calls, guest messages, OTA inboxes, after-hours front desk support, front desk overflow, and guest communication gaps, without requiring an additional full-time hire.",
+    a: "Guest Squad provides 24/7 human guest operations support — reservation calls, guest messages, OTA inboxes, after-hours coverage, and front desk overflow — without requiring a full-time hire.",
   },
   {
     q: "Is Guest Squad a hotel answering service?",
-    a: "Yes. Guest Squad provides hotel answering service coverage for reservation calls, guest questions, after-hours support, and front desk overflow. Unlike a generic call center, we also support guest messages, OTA inboxes, and property-specific escalation workflows.",
+    a: "Yes. Guest Squad covers reservation calls, guest questions, after-hours support, and front desk overflow. Unlike a generic call center, we also handle OTA inboxes and property-specific escalation workflows.",
   },
   {
     q: "Is Guest Squad a hotel call center?",
-    a: "No. Guest Squad is a guest operations service built specifically for hospitality, not a generic call center that also handles hotel calls. Agents are trained on hotel systems, OTA workflows, and the tone independent properties want their guests to experience.",
+    a: "No. Guest Squad is built specifically for hospitality. Agents are trained on hotel systems, OTA workflows, and the tone independent properties want their guests to experience.",
   },
   {
     q: "Which guest channels can Guest Squad cover?",
-    a: "Phone calls, SMS, WhatsApp, email, Booking.com, Expedia, and Airbnb inboxes, and in-app messaging from supported PMS or guest-messaging platforms. Coverage is built around your existing channels, not a new system you have to adopt.",
+    a: "Phone, SMS, WhatsApp, email, Booking.com, Expedia, and Airbnb inboxes. Coverage is built around your existing channels — no new system required.",
   },
   {
     q: "What types of properties use Guest Squad?",
-    a: "Independent hotels, boutique properties, resorts, serviced apartments, Airbnb hosts, Vrbo operators, and short-term rental property managers, typically from a single property up to a small portfolio.",
+    a: "Independent hotels, boutique properties, resorts, serviced apartments, Airbnb hosts, Vrbo operators, and short-term rental managers — typically from a single property up to a small portfolio.",
   },
   {
     q: "Does Guest Squad replace our front desk team?",
-    a: "No. Guest Squad is designed to extend your front desk, not replace it. We handle overflow, after-hours, and the channels your on-site team does not have time to monitor, so the people you have hired can focus on the guests in front of them.",
+    a: "No. Guest Squad extends your front desk. We handle overflow, after-hours, and the channels your on-site team cannot monitor — so your staff can focus on guests in the building.",
   },
   {
     q: "How quickly can Guest Squad go live?",
-    a: "Most clients are live within 5 business days of signing. Onboarding covers your rates, policies, PMS access, escalation rules, and brand voice before any agent handles a guest interaction.",
+    a: "Most clients are live within 5 business days. Onboarding covers your rates, policies, PMS access, escalation rules, and brand voice before any agent handles a guest interaction.",
   },
   {
-    q: "How does hotel answering service pricing work?",
-    a: "Pricing is scoped per property based on call and message volume, channels covered, hours of coverage, and reporting needs. There is no fixed published rate because two properties with different volumes and channels need different coverage plans. A quote is provided after a short discovery call.",
+    q: "How does pricing work?",
+    a: "Pricing is scoped per property based on call volume, channels, and hours of coverage. A quote is provided after a short discovery call — there is no fixed published rate.",
   },
   {
     q: "What is hotel guest operations?",
-    a: "Hotel guest operations covers every channel a property uses to communicate with guests: reservation calls, guest messages, OTA inboxes, after-hours support, and front desk overflow. Guest Squad manages these channels so your on-site team can focus on guests in the building.",
+    a: "Hotel guest operations covers every channel a property uses to communicate with guests: calls, messages, OTA inboxes, after-hours support, and front desk overflow. Guest Squad manages these so your team can focus on guests in the building.",
   },
 ];
 
@@ -170,8 +170,8 @@ export default function HomePage() {
 
       {/* DIRECT ANSWER */}
       <div className="border-b border-line bg-surface">
-        <div className="container py-8">
-          <p className="mx-auto max-w-3xl text-sm leading-relaxed text-ink-soft">
+        <div className="container py-5">
+          <p className="mx-auto max-w-2xl text-sm leading-loose text-ink-soft">
             Guest Squad provides 24/7 human guest operations support for hotels, boutique properties, resorts, serviced apartments, and short-term rental operators. From{" "}
             <Link href="/services/hotel-answering-service" className="text-gold-dark underline underline-offset-4 hover:text-gold">
               hotel answering service for independent hotels
@@ -183,11 +183,11 @@ export default function HomePage() {
 
       {/* WHAT WE COVER STRIP */}
       <div className="border-b border-line bg-paper">
-        <div className="container py-8">
-          <p className="mb-6 text-[11px] font-semibold uppercase tracking-[0.15em] text-ink-muted">
+        <div className="container py-5">
+          <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.15em] text-ink-muted">
             The guest communication coverage most properties cannot afford to miss
           </p>
-          <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+          <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
             {[
               { label: "Reservation calls", href: "/services/hotel-answering-service" },
               { label: "OTA guest messaging", href: "/services/ota-inbox-management" },
@@ -197,7 +197,7 @@ export default function HomePage() {
               <Link
                 key={item.label}
                 href={item.href}
-                className="rounded-lg border border-line bg-surface px-4 py-3 text-sm font-medium text-ink transition-colors hover:border-gold/40 hover:bg-gold/5"
+                className="rounded-lg border border-line bg-surface px-3 py-2.5 text-sm font-medium text-ink transition-colors hover:border-gold/40 hover:bg-gold/5"
               >
                 {item.label}
               </Link>
@@ -214,7 +214,7 @@ export default function HomePage() {
           align="center"
           className="mx-auto"
         />
-        <div className="mx-auto mt-12 grid max-w-4xl gap-6 sm:grid-cols-3">
+        <div className="mx-auto mt-8 grid max-w-4xl gap-4 sm:grid-cols-3">
           {[
             {
               title: "After hours, nobody answers",
@@ -229,7 +229,7 @@ export default function HomePage() {
               body: "Check-ins, housekeeping, and phones compete for the same two people at the desk.",
             },
           ].map((item) => (
-            <div key={item.title} className="rounded-lg border border-line bg-paper p-6">
+            <div key={item.title} className="rounded-lg border border-line bg-paper p-5">
               <h3 className="text-sm font-medium text-ink">{item.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-ink-soft">{item.body}</p>
             </div>
@@ -244,10 +244,10 @@ export default function HomePage() {
           title="Not a generic call center."
           description="Most outsourced support is built for volume, not hospitality. We built ours the other way around."
         />
-        <div className="mt-12">
+        <div className="mt-8">
           <Differentiator />
         </div>
-        <div className="mt-10 border-t border-line pt-8">
+        <div className="mt-8 border-t border-line pt-6">
           <p className="max-w-2xl text-sm leading-relaxed text-ink-soft">
             If your property needs guest-ready handling, OTA coverage, property-specific context, and after-hours judgment, a generic call center is the wrong model.
           </p>
@@ -265,17 +265,17 @@ export default function HomePage() {
           eyebrow="What We Cover"
           title="Coverage built around how hotels actually run."
         />
-        <div className="mt-12 flex flex-col gap-10">
+        <div className="mt-8 flex flex-col gap-7">
           {SERVICE_GROUPS.map((group) => {
             const groupServices = group.slugs
               .map((slug) => SERVICES.find((s) => s.slug === slug))
               .filter(Boolean) as typeof SERVICES;
             return (
               <div key={group.label}>
-                <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.15em] text-ink-muted">
+                <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.15em] text-ink-muted">
                   {group.label}
                 </p>
-                <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
                   {groupServices.map((service) => (
                     <ServiceCard key={service.slug} service={service} />
                   ))}
@@ -284,7 +284,7 @@ export default function HomePage() {
             );
           })}
         </div>
-        <div className="mt-10 border-t border-line pt-8">
+        <div className="mt-8 border-t border-line pt-6">
           <p className="text-sm text-ink-soft">
             Not sure which coverage areas matter most for your property?
           </p>
@@ -318,13 +318,13 @@ export default function HomePage() {
       </section>
 
       {/* AI + HUMAN */}
-      <Section surface>
+      <Section className="bg-[#F4F3F1]">
         <SectionHeading
           eyebrow="How It Works"
           title="Technology routes it. People handle it."
           description="We use software to make sure nothing is missed, but every guest conversation is handled by a trained person, not a bot."
         />
-        <div className="mt-12">
+        <div className="mt-8">
           <AiHuman />
         </div>
       </Section>
@@ -335,7 +335,7 @@ export default function HomePage() {
           eyebrow="Who We Work With"
           title="Built for every kind of guest operation."
         />
-        <div className="mt-12">
+        <div className="mt-8">
           <PropertyTypes />
         </div>
       </Section>
@@ -343,7 +343,7 @@ export default function HomePage() {
       {/* PROCESS */}
       <Section surface>
         <SectionHeading eyebrow="How We Work" title="Live in days, not months." />
-        <div className="mt-12 grid gap-10 lg:grid-cols-2 lg:items-center lg:gap-16">
+        <div className="mt-8 grid gap-8 lg:grid-cols-2 lg:items-center lg:gap-14">
           <div className="relative aspect-[4/5] overflow-hidden rounded-lg border border-line">
             <Image
               src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=1200&q=90"
@@ -354,9 +354,9 @@ export default function HomePage() {
               className="object-cover"
             />
           </div>
-          <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-6">
             {DEFAULT_PROCESS.map((s, i) => (
-              <div key={s.step} className="flex gap-5">
+              <div key={s.step} className="flex gap-4">
                 <span className="flex-shrink-0 text-2xl font-medium text-gold-dark">
                   {String(i + 1).padStart(2, "0")}
                 </span>
@@ -376,23 +376,23 @@ export default function HomePage() {
       {/* HOW GUEST SQUAD WORKS — replaces PricingCards, scroll target for hero */}
       <Section id="how-it-works">
         <SectionHeading eyebrow="How It Works" title="How Guest Squad works." />
-        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {[
             { n: "01", title: "We review your guest communication gaps and missed-coverage hours" },
             { n: "02", title: "We map the channels, volume, and hours your property needs covered" },
             { n: "03", title: "We brief the team on your property, policies, and escalation rules" },
             { n: "04", title: "Coverage goes live — with reporting and refinement from day one" },
           ].map((step) => (
-            <div key={step.n} className="flex flex-col gap-2">
-              <span className="text-2xl font-semibold tabular-nums text-gold-dark/30">{step.n}</span>
+            <div key={step.n} className="flex flex-col gap-2 border-t-2 border-gold/25 pt-4">
+              <span className="text-2xl font-semibold tabular-nums text-gold-dark/60">{step.n}</span>
               <p className="text-sm font-medium text-ink">{step.title}</p>
             </div>
           ))}
         </div>
-        <p className="mt-8 text-sm text-ink-muted">
+        <p className="mt-6 text-sm text-ink-muted">
           Most qualified properties can be scoped and live within 5 business days.
         </p>
-        <div className="mt-6">
+        <div className="mt-5">
           <CoverageReviewButton variant="gold" size="default" ctaLocation="homepage_how_it_works">
             Book a Coverage Review
           </CoverageReviewButton>
@@ -402,15 +402,15 @@ export default function HomePage() {
       {/* GUARANTEES */}
       <Section surface>
         <SectionHeading eyebrow="Our Commitments" title="What every client gets from day one." align="center" className="mx-auto" />
-        <div className="mt-12">
+        <div className="mt-8">
           <Guarantees />
         </div>
       </Section>
 
       {/* SOCIAL PROOF */}
       <div className="border-t border-line bg-surface">
-        <div className="container py-10">
-          <div className="mb-5 text-center">
+        <div className="container py-8">
+          <div className="mb-4 text-center">
             <a
               href="https://www.trustpilot.com/review/guestsquad.com"
               target="_blank"
@@ -424,30 +424,30 @@ export default function HomePage() {
               What early operators say about Guest Squad
             </p>
           </div>
-          <div className="grid gap-5 sm:grid-cols-3">
+          <div className="grid gap-4 sm:grid-cols-3">
             {[
               {
-                quote: "We were losing reservation calls every night after 10pm. The pilot showed us exactly what was being missed — and within the first week it was clear coverage was working. We continued month-to-month after.",
+                quote: "We were losing reservation calls every night after 10pm. Within the first week of coverage it was clear it was working.",
                 attr: "General Manager, 48-room boutique hotel",
                 location: "Southeast US",
               },
               {
-                quote: "Our OTA response times were hurting our ranking on Booking.com. Guest Squad took over the inbox during the pilot and we saw the response window drop significantly. The weekly report made it easy to verify.",
+                quote: "Our OTA response times were hurting our Booking.com ranking. Guest Squad took over the inbox and the response window dropped significantly.",
                 attr: "Owner-operator, serviced apartment portfolio",
                 location: "UK",
               },
               {
-                quote: "I didn't want to hire another front desk shift just for overflow. The pilot let us test whether a coverage service could actually follow our property's tone and escalation rules before we committed to anything.",
+                quote: "The pilot let us test whether a coverage service could actually follow our property's tone and escalation rules before we committed to anything.",
                 attr: "Operations Manager, independent resort",
                 location: "Pacific Northwest",
               },
             ].map((item) => (
-              <div key={item.attr} className="rounded-xl border border-line bg-paper p-6">
-                <svg className="h-5 w-5 text-gold/40" fill="currentColor" viewBox="0 0 24 24">
+              <div key={item.attr} className="rounded-xl border border-line bg-paper p-5">
+                <svg className="h-4 w-4 text-gold/40" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                 </svg>
-                <p className="mt-4 text-sm leading-relaxed text-ink-soft">{item.quote}</p>
-                <div className="mt-5 border-t border-line pt-4">
+                <p className="mt-3 text-sm leading-relaxed text-ink-soft">{item.quote}</p>
+                <div className="mt-4 border-t border-line pt-3">
                   <p className="text-xs font-medium text-ink">{item.attr}</p>
                   <p className="mt-0.5 text-xs text-ink-muted">{item.location}</p>
                 </div>
@@ -470,11 +470,11 @@ export default function HomePage() {
           align="center"
           className="mx-auto"
         />
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {HOME_FAQS.map((item) => (
-            <div key={item.q} className="rounded-lg border border-line bg-paper p-6">
-              <h3 className="text-sm font-medium text-ink">{item.q}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-ink-soft">{item.a}</p>
+            <div key={item.q} className="rounded-lg border border-line bg-paper p-4">
+              <h3 className="text-sm font-semibold text-ink">{item.q}</h3>
+              <p className="mt-1.5 text-sm leading-relaxed text-ink-soft">{item.a}</p>
             </div>
           ))}
         </div>
@@ -482,16 +482,18 @@ export default function HomePage() {
 
       {/* PRICING BRIDGE */}
       <div className="border-y border-line bg-surface">
-        <div className="container py-10">
-          <p className="mb-1 text-xs font-semibold uppercase tracking-[0.15em] text-gold-dark">Pricing</p>
-          <h2 className="text-xl font-medium text-ink">Need to understand how coverage is scoped?</h2>
-          <p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink-soft">
-            Once you know the model fits, pricing explains what every plan includes, what affects cost, and how coverage is structured around your property.
-          </p>
-          <div className="mt-5">
-            <ButtonLink href="/pricing" variant="outline" size="default">
-              See Pricing
-            </ButtonLink>
+        <div className="container py-7">
+          <div className="border-l-2 border-gold/30 pl-5">
+            <p className="mb-1 text-xs font-semibold uppercase tracking-[0.15em] text-gold-dark">Pricing</p>
+            <h2 className="text-xl font-medium text-ink">Need to understand how coverage is scoped?</h2>
+            <p className="mt-2 max-w-2xl text-sm leading-relaxed text-ink-soft">
+              Pricing explains what every plan includes, what affects cost, and how coverage is structured around your property.
+            </p>
+            <div className="mt-4">
+              <ButtonLink href="/pricing" variant="outline" size="default">
+                See Pricing
+              </ButtonLink>
+            </div>
           </div>
         </div>
       </div>
@@ -502,7 +504,7 @@ export default function HomePage() {
           eyebrow="Tools and Resources"
           title="Find and fix your guest coverage gaps."
         />
-        <div className="mt-8 grid gap-4 sm:grid-cols-3">
+        <div className="mt-6 grid gap-4 sm:grid-cols-3">
           <AssetBlock
             heading="Estimate missed revenue"
             assets={[{ label: "Missed Booking Revenue Calculator", href: "/resources/missed-booking-calculator" }]}

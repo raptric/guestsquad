@@ -7,10 +7,6 @@ import { CtaSection } from "@/components/site/cta-section";
 import { Breadcrumbs } from "@/components/site/breadcrumbs";
 import { JsonLd } from "@/components/site/json-ld";
 import { buildMetadata, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/seo";
-import { AssetBlock } from "@/components/site/asset-block";
-import { BoFuTrustBlock } from "@/components/site/bofu-trust-block";
-import { PostBookingSteps } from "@/components/site/post-booking-steps";
-import { DownloadGate } from "@/components/site/download-gate";
 import { CoverageReviewButton } from "@/components/site/coverage-review-button";
 
 export const metadata: Metadata = buildMetadata({
@@ -262,37 +258,6 @@ export default function PricingPage() {
         </div>
       </Section>
 
-      <Section>
-        <SectionHeading
-          eyebrow="Not Sure What Coverage You Need?"
-          title="Use these tools before requesting a quote."
-        />
-        <p className="mt-3 text-sm leading-relaxed text-ink-soft">
-          Or book a Coverage Review and we will walk through them with you.
-        </p>
-        <div className="mt-8 grid gap-4 sm:grid-cols-3">
-          <AssetBlock
-            heading="Estimate missed revenue"
-            assets={[{ label: "Missed Booking Revenue Calculator", href: "/resources/missed-booking-calculator" }]}
-          />
-          <AssetBlock
-            heading="Find your coverage gaps"
-            assets={[{ label: "Guest Coverage Gap Assessment", href: "/resources/coverage-gap-assessment" }]}
-          />
-          <AssetBlock
-            heading="See what reporting looks like"
-            assets={[{ label: "View Sample Weekly Report", href: "/resources/sample-weekly-report" }]}
-          />
-        </div>
-      </Section>
-
-      <Section compact>
-        <PostBookingSteps />
-      </Section>
-
-      <Section surface compact>
-        <BoFuTrustBlock />
-      </Section>
 
       {/* SEO link strip */}
       <div className="border-t border-line bg-surface">

@@ -2,57 +2,55 @@ export function TestimonialsBlock() {
   const items = [
     {
       quote:
-        "We were losing reservation calls every night after 10pm. The pilot showed us exactly what was being missed — and within the first week it was clear coverage was working. We continued month-to-month after.",
+        "We were losing reservation calls every night after 10pm. Within the first week of coverage it was clear it was working.",
       attr: "General Manager, 48-room boutique hotel",
       location: "Southeast US",
     },
     {
       quote:
-        "Our OTA response times were hurting our ranking on Booking.com. Guest Squad took over the inbox during the pilot and we saw the response window drop significantly. The weekly report made it easy to verify.",
+        "Our OTA response times were hurting our Booking.com ranking. Guest Squad took over the inbox and the response window dropped significantly.",
       attr: "Owner-operator, serviced apartment portfolio",
-      location: "Finland",
+      location: "UK",
     },
     {
       quote:
-        "I didn't want to hire another front desk shift just for overflow. The pilot let us test whether a coverage service could actually follow our property's tone and escalation rules before we committed to anything.",
+        "The pilot let us test whether a coverage service could actually follow our property's tone and escalation rules before we committed to anything.",
       attr: "Operations Manager, independent resort",
       location: "Pacific Northwest",
     },
   ];
 
   return (
-    <div className="border-y border-line bg-paper">
-      <div className="container py-16">
-        {/* Header */}
-        <div className="mb-10 flex flex-col items-center gap-2 text-center">
+    <div className="border-t border-line bg-paper">
+      <div className="container py-10">
+        <div className="mb-6 text-center">
           <a
             href="https://www.trustpilot.com/review/guestsquad.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2.5 transition-opacity hover:opacity-80"
+            className="inline-flex items-center gap-2 text-sm font-medium text-ink transition-colors hover:text-gold-dark"
           >
-            <span className="text-xl tracking-wide text-[#00b67a]">★★★★★</span>
-            <span className="text-sm font-medium text-ink">Rated 5 stars on Trustpilot</span>
+            <span className="font-bold text-[#00b67a]">★★★★★</span>
+            <span>Rated 5 stars on Trustpilot</span>
           </a>
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-ink-muted">
-            What operators say about Guest Squad
+          <p className="mt-2 text-xs font-semibold uppercase tracking-[0.18em] text-ink-soft">
+            What early operators say about Guest Squad
           </p>
         </div>
 
-        {/* Cards */}
-        <div className="grid gap-6 sm:grid-cols-3">
+        <div className="grid gap-4 sm:grid-cols-3">
           {items.map((item) => (
             <div
               key={item.attr}
-              className="flex flex-col rounded-xl border border-line bg-surface p-7 shadow-soft"
+              className="rounded-xl border border-[#E5E0D8] bg-[#F7F5F2] p-5 shadow-sm"
             >
-              <svg className="h-6 w-6 text-gold-dark/30" fill="currentColor" viewBox="0 0 24 24">
+              <svg className="h-5 w-5 text-gold/70" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
               </svg>
-              <p className="mt-5 flex-1 text-sm leading-relaxed text-ink-soft">{item.quote}</p>
-              <div className="mt-6 border-t border-line pt-5">
+              <p className="mt-3 text-sm leading-relaxed text-ink">{item.quote}</p>
+              <div className="mt-4 border-t border-[#E5E0D8] pt-3">
                 <p className="text-xs font-semibold text-ink">{item.attr}</p>
-                <p className="mt-0.5 text-xs text-ink-muted">{item.location}</p>
+                <p className="mt-0.5 text-xs text-ink-soft">{item.location}</p>
               </div>
             </div>
           ))}

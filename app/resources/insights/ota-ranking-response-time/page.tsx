@@ -481,9 +481,8 @@ export default function OtaRankingResponseTimePage() {
 
       {/* Related reading */}
       <Section>
-        <div className="mx-auto max-w-2xl">
-          <h2 className="text-lg font-semibold text-ink">Related reading</h2>
-          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <h2 className="text-lg font-semibold text-ink">Related reading</h2>
+        <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {[
               {
                 href: "/resources/booking-com-message-support",
@@ -525,7 +524,6 @@ export default function OtaRankingResponseTimePage() {
                 </p>
               </Link>
             ))}
-          </div>
         </div>
       </Section>
 

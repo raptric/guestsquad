@@ -112,17 +112,25 @@ export function ComparisonArticle({ data }: { data: ResourceArticleData }) {
       </Section>
 
       {data.postTableCta && (
-        <div className="container py-6">
-          <div className="mx-auto max-w-2xl rounded-lg border border-line bg-surface px-6 py-5">
-            <p className="text-sm font-medium text-ink">{data.postTableCta.heading}</p>
-            <p className="mt-1 text-sm leading-relaxed text-ink-soft">{data.postTableCta.body}</p>
-            <div className="mt-4">
+        <div className="container py-8">
+          <div className="mx-auto max-w-2xl rounded-xl border border-gold/30 bg-gold/5 px-7 py-6">
+            <p className="text-base font-semibold text-ink">{data.postTableCta.heading}</p>
+            <p className="mt-2 text-sm leading-relaxed text-ink-soft">{data.postTableCta.body}</p>
+            <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center">
               <Link
                 href={data.postTableCta.primaryHref}
-                className="inline-flex items-center justify-center rounded-md bg-ink px-4 py-2 text-sm font-medium text-paper hover:bg-ink/90"
+                className="inline-flex items-center justify-center rounded-md bg-gold px-5 py-2.5 text-sm font-semibold text-ink hover:bg-gold/90"
               >
                 {data.postTableCta.primaryLabel}
               </Link>
+              {data.postTableCta.secondaryLabel && data.postTableCta.secondaryHref && (
+                <Link
+                  href={data.postTableCta.secondaryHref}
+                  className="text-sm font-medium text-gold-dark hover:text-gold"
+                >
+                  {data.postTableCta.secondaryLabel} →
+                </Link>
+              )}
             </div>
           </div>
         </div>
@@ -196,7 +204,10 @@ export function ComparisonArticle({ data }: { data: ResourceArticleData }) {
               className="group flex flex-col justify-between rounded-lg border border-line bg-paper p-6 transition-colors hover:border-gold/50"
             >
               <div>
-                <h3 className="text-sm font-medium text-ink">{r.title}</h3>
+                <span className="text-xs font-semibold uppercase tracking-wider text-ink-muted">
+                  {r.type === "comparison" ? "Comparison" : "Resource"}
+                </span>
+                <h3 className="mt-2 text-sm font-medium text-ink">{r.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-ink-soft">{r.description}</p>
               </div>
               <div className="mt-4 flex items-center gap-1.5 text-xs font-medium text-ink-soft group-hover:text-gold-dark">
@@ -214,7 +225,8 @@ export function ComparisonArticle({ data }: { data: ResourceArticleData }) {
               className="group flex flex-col justify-between rounded-lg border border-line bg-paper p-6 transition-colors hover:border-gold/50"
             >
               <div>
-                <h3 className="text-sm font-medium text-ink">{s.title}</h3>
+                <span className="text-xs font-semibold uppercase tracking-wider text-ink-muted">Service</span>
+                <h3 className="mt-2 text-sm font-medium text-ink">{s.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-ink-soft">{s.description}</p>
               </div>
               <div className="mt-4 flex items-center gap-1.5 text-xs font-medium text-ink-soft group-hover:text-gold-dark">

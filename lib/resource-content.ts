@@ -114,6 +114,8 @@ export type ResourceArticleData = {
     body: string;
     primaryLabel: string;
     primaryHref: string;
+    secondaryLabel?: string;
+    secondaryHref?: string;
   };
   inlineAsset?: ArticleAssetCta;
   assetCta?: ArticleAssetCta;
@@ -323,10 +325,12 @@ export const callCenterComparison: ResourceArticleData = {
     secondaryHref: "/resources/coverage-gap-assessment",
   },
   postTableCta: {
-    heading: "Want to see how this would apply to your property?",
-    body: "Guest Squad can review your calls, guest messages, OTA inboxes, and after-hours coverage needs before you commit.",
+    heading: "Which one actually fits your situation",
+    body: "If your property needs consistent OTA inbox coverage, after-hours call handling, or property-specific escalation — a hospitality-trained answering service is usually the stronger fit. Guest Squad can review your gaps before you commit to anything.",
     primaryLabel: "Request Pilot Review",
     primaryHref: "/pilot",
+    secondaryLabel: "See Hotel Answering Service",
+    secondaryHref: "/services/hotel-answering-service",
   },
   columnA: "Hotel Answering Service",
   columnB: "Generic Call Center",
@@ -416,11 +420,6 @@ export const callCenterComparison: ResourceArticleData = {
     asset: "coverage-gap-assessment",
     pdfHref: "/downloads/coverage-gap-assessment.pdf",
     ctaLabel: "Download Coverage Gap Assessment",
-  },
-  assetCta: {
-    heading: "Not sure which coverage model fits your property? Review your guest communication gaps before committing to any provider.",
-    serviceHref: "/pilot",
-    serviceLabel: "Request Pilot Review",
   },
   faqs: [
     {

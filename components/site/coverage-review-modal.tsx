@@ -45,7 +45,7 @@ export function CoverageReviewModal({ open, onClose, ctaLocation }: CoverageRevi
   function handleFormStart() {
     if (startedRef.current) return;
     startedRef.current = true;
-    trackEvent("coverage_review_form_start", { cta_location: ctaLocation || "unknown" });
+    trackEvent("coverage_review_form_start", { cta_location: ctaLocation || "unknown", page_path: window.location.pathname });
   }
   const [prefill, setPrefill] = useState<{ name: string; email: string }>({ name: "", email: "" });
   const [tracking, setTracking] = useState({
@@ -122,11 +122,20 @@ export function CoverageReviewModal({ open, onClose, ctaLocation }: CoverageRevi
         property_size: data.propertySize || "unknown",
         help_with: helpWith.join(","),
         cta_location: ctaLocation || "unknown",
+        page_path: window.location.pathname,
       });
       setPrefill({ name, email });
       setStatus("done");
+      trackEvent("calendly_inline_visible", {
+        cta_location: ctaLocation || "unknown",
+        page_path: window.location.pathname,
+      });
     } catch {
       setStatus("error");
+      trackEvent("coverage_review_form_error", {
+        cta_location: ctaLocation || "unknown",
+        page_path: window.location.pathname,
+      });
     }
   }
 

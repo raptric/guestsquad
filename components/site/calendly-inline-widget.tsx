@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { SITE } from "@/lib/site-data";
+import { trackEvent } from "@/lib/analytics";
 
 export function CalendlyInlineWidget({
   prefill,
@@ -9,6 +10,17 @@ export function CalendlyInlineWidget({
   prefill?: { name?: string; email?: string };
 }) {
   const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    function handleMessage(e: MessageEvent) {
+      if (e.origin !== "https://calendly.com") return;
+      if (e.data?.event === "calendly.event_scheduled") {
+        trackEvent("meeting_booked", { page_path: window.location.pathname });
+      }
+    }
+    window.addEventListener("message", handleMessage);
+    return () => window.removeEventListener("message", handleMessage);
+  }, []);
 
   useEffect(() => {
     // Preconnect hint

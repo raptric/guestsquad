@@ -76,18 +76,6 @@ const FAQS = [
   },
 ];
 
-const PRICING_FACTORS = [
-  "Number of properties or listings",
-  "Monthly call volume",
-  "Monthly message volume across channels",
-  "Which channels are covered (calls, SMS, WhatsApp, OTA inboxes)",
-  "Hours of coverage required",
-  "PMS and OTA platform complexity",
-  "Escalation rules and on-call requirements",
-  "Reporting frequency and format",
-  "Seasonal coverage adjustments",
-];
-
 export default function PricingPage() {
   return (
     <>
@@ -219,21 +207,37 @@ export default function PricingPage() {
         </div>
       </Section>
 
-      {/* Pricing factors */}
-      <Section surface>
-        <SectionHeading eyebrow="What Goes Into a Quote" title="What pricing depends on." />
-        <p className="mt-4 max-w-2xl text-sm leading-relaxed text-ink-soft">
-          No two properties have the same volume, channels, or coverage needs. A quote reflects your actual operation. These are the factors that shape it.
-        </p>
-        <ul className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-          {PRICING_FACTORS.map((factor) => (
-            <li key={factor} className="flex items-start gap-3 rounded-lg border border-line bg-paper px-5 py-4">
-              <span className="mt-0.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-gold-dark" />
-              <span className="text-sm leading-relaxed text-ink-soft">{factor}</span>
-            </li>
-          ))}
-        </ul>
-      </Section>
+      {/* Section 3 — What Affects Pricing */}
+      <div id="what-affects-pricing">
+        <Section>
+          <SectionHeading eyebrow="Pricing Factors" title="What affects pricing most" />
+          <div className="mt-10 grid gap-6 sm:grid-cols-2">
+            {[
+              {
+                title: "Interaction volume",
+                body: "The number of calls, messages, and OTA interactions your property needs covered each month.",
+              },
+              {
+                title: "Coverage hours",
+                body: "Whether you need after-hours support, overflow during peak periods, extended daily coverage, or broader around-the-clock availability.",
+              },
+              {
+                title: "Property complexity",
+                body: "A single property with straightforward operations is scoped differently from a multi-property group or a higher-volume hotel with more coordination needs.",
+              },
+              {
+                title: "Support model fit",
+                body: "Some properties are well-served by shared coverage. Others need a more dedicated setup based on volume, continuity, or operational requirements.",
+              },
+            ].map((card) => (
+              <div key={card.title} className="rounded-lg border border-line bg-paper p-6">
+                <h3 className="text-sm font-semibold text-ink">{card.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-ink-soft">{card.body}</p>
+              </div>
+            ))}
+          </div>
+        </Section>
+      </div>
 
       <Section surface compact>
         <ClientTrustBlock />

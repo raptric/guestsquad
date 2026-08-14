@@ -7,7 +7,6 @@ import { FooterWrapper } from "@/components/site/footer-wrapper";
 import { CookieConsent } from "@/components/site/cookie-consent";
 import { JsonLd } from "@/components/site/json-ld";
 import { ScrollTracker } from "@/components/site/scroll-tracker";
-import { ClarityInit } from "@/components/site/clarity-init";
 import { SITE } from "@/lib/site-data";
 import { organizationSchema, websiteSchema } from "@/lib/seo";
 
@@ -82,8 +81,14 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://images.unsplash.com" />
       </head>
       <body className="flex min-h-screen flex-col font-sans">
-        {/* Microsoft Clarity */}
-        <ClarityInit />
+        {/* Microsoft Clarity — lazyOnload keeps it off the critical path */}
+        <Script
+          id="clarity-script"
+          strategy="lazyOnload"
+          dangerouslySetInnerHTML={{
+            __html: `(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","xugv7guajg");`,
+          }}
+        />
         {/* GTM — initialise dataLayer before GTM script loads */}
         {/* Google Tag Manager */}
         <Script

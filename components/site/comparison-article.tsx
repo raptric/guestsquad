@@ -1,13 +1,15 @@
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { ArrowUpRight } from "lucide-react";
 import { PageHero } from "@/components/site/page-hero";
 import { Section, SectionHeading } from "@/components/site/section";
 import { Breadcrumbs } from "@/components/site/breadcrumbs";
 import { ComparisonTable } from "@/components/site/comparison-table";
 import { CtaSection } from "@/components/site/cta-section";
-import { DownloadGate } from "@/components/site/download-gate";
 import { JsonLd } from "@/components/site/json-ld";
 import { TrackedLink } from "@/components/site/tracked-link";
+
+const DownloadGate = dynamic(() => import("@/components/site/download-gate").then(m => m.DownloadGate), { ssr: false });
 import { FaqAccordion } from "@/components/site/faq-accordion";
 import { articleSchema, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/seo";
 import { RESOURCES, type ResourceArticleData } from "@/lib/resource-content";

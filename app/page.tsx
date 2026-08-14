@@ -490,7 +490,7 @@ export default function HomePage() {
               Pricing explains what every plan includes, what affects cost, and how coverage is structured around your property.
             </p>
             <div className="mt-4">
-              <ButtonLink href="/pricing" variant="outline" size="default">
+              <ButtonLink href="/pricing" variant="default" size="default" className="text-gold-dark hover:text-gold hover:bg-ink/90">
                 See Pricing
               </ButtonLink>
             </div>

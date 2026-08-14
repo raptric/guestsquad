@@ -112,8 +112,8 @@ export default function AboutPage() {
       <div className="border-b border-line bg-paper">
         <div className="container py-8">
           <div className="mx-auto max-w-3xl">
-            <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.15em] text-ink-muted">Guest Squad at a glance</p>
-            <dl className="grid gap-x-8 gap-y-3 sm:grid-cols-2">
+            <p className="mb-5 text-[11px] font-semibold uppercase tracking-[0.15em] text-ink-muted">Guest Squad at a glance</p>
+            <dl className="divide-y divide-line">
               {[
                 { dt: "Company", dd: "Guest Squad" },
                 { dt: "Parent company", dd: "Raptric LLC" },
@@ -122,8 +122,8 @@ export default function AboutPage() {
                 { dt: "Serves", dd: "Hotels, boutique properties, resorts, serviced apartments, STR operators" },
                 { dt: "Coverage", dd: "24/7 human support — no bots, no automated scripts" },
               ].map(({ dt, dd }) => (
-                <div key={dt} className="flex gap-2 text-sm">
-                  <dt className="shrink-0 font-medium text-ink">{dt}:</dt>
+                <div key={dt} className="grid grid-cols-[160px_1fr] gap-4 py-3 text-sm">
+                  <dt className="font-medium text-ink">{dt}</dt>
                   <dd className="text-ink-soft">{dd}</dd>
                 </div>
               ))}

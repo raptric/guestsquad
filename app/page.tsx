@@ -343,7 +343,7 @@ export default function HomePage() {
       <Section surface>
         <SectionHeading eyebrow="How We Work" title="Live in days, not months." />
         <div className="mt-6 grid gap-8 lg:grid-cols-[2fr_3fr] lg:items-start lg:gap-14">
-          <div className="relative aspect-[4/3] overflow-hidden rounded-lg border border-line">
+          <div className="relative aspect-square overflow-hidden rounded-lg border border-line">
             <Image
               src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=1200&q=90"
               alt="Guest Squad property briefing and onboarding session before hotel answering service goes live"

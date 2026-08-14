@@ -19,7 +19,7 @@ export const metadata: Metadata = buildMetadata({
 const FAQS = [
   {
     q: "Why don't you list exact prices?",
-    a: "Pricing depends on interaction volume, coverage hours, property complexity, and support model fit. A quote takes one short review call and reflects your actual operation, not a generic tier. A scoped review call is the fastest way to get a quote that reflects your actual operation.",
+    a: "Pricing depends on interaction volume, coverage hours, property complexity, and support model fit. A scoped review call is the fastest way to get a quote that reflects your actual operation.",
   },
   {
     q: "What affects Guest Squad pricing the most?",
@@ -95,9 +95,9 @@ export default function PricingPage() {
 
       {/* Hero helper line */}
       <div className="border-b border-line bg-paper">
-        <div className="container py-5 text-center">
-          <p className="mx-auto max-w-2xl text-xs leading-relaxed text-ink-muted">
-            The goal is not just to quote a plan. It is to scope the level of coverage your property actually needs without overbuilding or under-covering it.
+        <div className="container py-4 text-center">
+          <p className="mx-auto max-w-2xl text-sm leading-relaxed text-ink-soft">
+            We scope the level of coverage your property actually needs without overbuilding or under-covering it.
           </p>
         </div>
       </div>
@@ -106,7 +106,7 @@ export default function PricingPage() {
       <div className="border-b border-line bg-surface">
         <div className="container py-8">
           <p className="mx-auto max-w-3xl text-sm leading-relaxed text-ink-soft">
-            Guest Squad pricing is scoped per property based on interaction volume, coverage hours, operational complexity, and delivery fit. Every plan starts with the core guest communication bundle, then adjusts to the way your property actually runs.
+            Guest Squad pricing is scoped per property based on interaction volume, coverage hours, operational complexity, and delivery fit.
           </p>
         </div>
       </div>
@@ -118,7 +118,7 @@ export default function PricingPage() {
           title="Every plan is built around the channels your guests actually use"
         />
         <p className="mt-4 max-w-2xl text-sm leading-relaxed text-ink-soft">
-          Every engagement is scoped around your property&rsquo;s guest communication channels — whether you operate a hotel, boutique inn, serviced apartment, or short-term rental. Coverage is built to fit how your guests reach you, not a fixed channel list.
+          Every engagement is scoped around your property&rsquo;s guest communication channels, whether you operate a hotel, boutique inn, serviced apartment, or short-term rental. Coverage is built to fit how your guests actually reach you.
         </p>
         <ul className="mt-8 grid gap-3 sm:grid-cols-2">
           {[
@@ -201,7 +201,7 @@ export default function PricingPage() {
           ))}
         </div>
         <p className="mt-6 text-sm text-ink-muted">
-          These are common coverage patterns, not fixed plan tiers. Most properties start with one pattern and adjust as their needs become clearer.
+          These are common coverage patterns, not fixed plan tiers. Most properties start with one pattern and refine coverage as needs become clearer.
         </p>
         <div className="mt-8 flex justify-center">
           <CoverageReviewButton variant="gold" size="default" ctaLocation="pricing_coverage_types">
@@ -232,7 +232,7 @@ export default function PricingPage() {
             The right question is not just what coverage costs
           </h2>
           <p className="mt-4 max-w-2xl text-sm leading-relaxed text-ink-soft">
-            It is whether missed reservation calls, slow OTA replies, and after-hours gaps are already costing more than the support required to fix them. The review call helps scope coverage around that reality.
+            It is whether missed reservation calls, slow OTA replies, and after-hours gaps are already costing more than the support required to fix them. The review call helps scope coverage around that reality before missed demand turns into lost revenue.
           </p>
         </div>
       </div>
@@ -305,9 +305,27 @@ export default function PricingPage() {
         </div>
       </div>
 
+      {/* Micro-proof strip */}
+      <div className="border-t border-line bg-surface">
+        <div className="container py-6">
+          <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
+            {[
+              "Core phone + OTA coverage",
+              "Scoped per property",
+              "2-week pilot for qualified properties",
+              "Month-to-month after pilot",
+            ].map((item) => (
+              <span key={item} className="text-xs font-medium text-ink-soft">
+                <span className="mr-2 text-gold-dark">✓</span>{item}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+
       {/* Section 10 — Reassurance line */}
       <div className="border-t border-line bg-paper py-8 text-center">
-        <p className="text-sm text-ink-muted">
+        <p className="text-sm text-ink-soft">
           You do not need to know the right plan before reaching out. Most properties do not.
         </p>
       </div>

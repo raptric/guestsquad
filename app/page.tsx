@@ -141,10 +141,6 @@ export default function HomePage() {
               <a
                 href="#how-it-works"
                 className="inline-flex items-center justify-center rounded-lg border border-line px-6 py-3 text-sm font-medium text-ink transition-colors hover:border-ink/40 hover:bg-surface"
-                onClick={(e) => {
-                  e.preventDefault();
-                  document.getElementById("how-it-works")?.scrollIntoView({ behavior: "smooth" });
-                }}
               >
                 How It Works
               </a>

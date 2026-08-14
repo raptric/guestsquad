@@ -3,7 +3,6 @@ import { Check } from "lucide-react";
 import Link from "next/link";
 import { PageHero } from "@/components/site/page-hero";
 import { Section, SectionHeading } from "@/components/site/section";
-import { PricingCards } from "@/components/site/pricing-cards";
 import { CtaSection } from "@/components/site/cta-section";
 import { Breadcrumbs } from "@/components/site/breadcrumbs";
 import { JsonLd } from "@/components/site/json-ld";
@@ -139,50 +138,6 @@ export default function PricingPage() {
         </p>
       </Section>
 
-      <Section>
-        <PricingCards />
-        <p className="mt-10 text-center text-sm text-ink-soft">
-          Not sure which plan fits?{" "}
-          <Link href="/services" className="text-gold-dark underline underline-offset-4 hover:text-gold">
-            Browse all services
-          </Link>{" "}
-          or see how we compare to{" "}
-          <Link href="/resources/hotel-answering-service-vs-ai-voice" className="text-gold-dark underline underline-offset-4 hover:text-gold">
-            hotel answering service vs AI voice agent
-          </Link>{" "}
-          and{" "}
-          <Link href="/resources/hotel-answering-service-vs-call-center" className="text-gold-dark underline underline-offset-4 hover:text-gold">
-            hotel answering service vs call center
-          </Link>
-          .
-        </p>
-
-        <p className="mt-6 text-center text-sm text-ink-soft">
-          Qualified properties can start with a 2-week pilot before moving into month-to-month coverage.{" "}
-          <Link href="/pilot" className="text-gold-dark underline underline-offset-4 hover:text-gold">
-            See if you qualify for a 2-week pilot →
-          </Link>
-        </p>
-
-        {/* Sample report — proof block directly under plans */}
-        <div className="mx-auto mt-10 max-w-2xl rounded-xl border border-line bg-surface px-8 py-6">
-          <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-            <div>
-              <p className="text-sm font-medium text-ink">See exactly what you receive each week.</p>
-              <p className="mt-1 text-sm leading-relaxed text-ink-soft">
-                Download the sample weekly report to see calls handled, OTA replies, escalations, and recommendations before committing to anything.
-              </p>
-            </div>
-            <div className="shrink-0">
-              <DownloadGate
-                asset="sample-weekly-report"
-                pdfHref="/downloads/sample-weekly-report.pdf"
-                ctaLabel="Download Sample Report"
-              />
-            </div>
-          </div>
-        </div>
-      </Section>
 
       {/* Section 3 — What Affects Pricing */}
       <div id="what-affects-pricing">

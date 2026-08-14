@@ -122,7 +122,7 @@ export default function HomePage() {
 
       {/* HERO */}
       <section className="border-b border-line bg-paper">
-        <div className="container grid items-center gap-14 py-20 md:grid-cols-2 md:py-28">
+        <div className="container grid items-center gap-10 py-16 md:grid-cols-2 md:py-22">
           <div>
             <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-gold-dark">
               Guest Operations Support
@@ -134,7 +134,7 @@ export default function HomePage() {
             <p className="mt-6 max-w-lg text-lg leading-relaxed text-ink-soft">
               Guest Squad covers the guest communication channels hotels cannot afford to miss: reservation calls, OTA guest messages, front-desk overflow, and after-hours gaps.
             </p>
-            <div className="mt-9 flex flex-col gap-4 sm:flex-row">
+            <div className="mt-7 flex flex-col gap-4 sm:flex-row">
               <CoverageReviewButton variant="gold" size="lg" ctaLocation="homepage_hero">
                 Book a Coverage Review
               </CoverageReviewButton>
@@ -145,7 +145,7 @@ export default function HomePage() {
                 How It Works
               </a>
             </div>
-            <p className="mt-6 text-xs text-ink-muted">
+            <p className="mt-3 text-xs text-ink-muted">
               Built for hotels, boutique properties, resorts, serviced apartments, and Airbnb operators.
             </p>
           </div>

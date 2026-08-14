@@ -135,10 +135,6 @@ export const aiVoiceComparison: ResourceArticleData = {
     "Compare human hotel answering services with AI voice agents for guest calls, reservations, OTA inboxes, and after-hours support. A practical guide for hotel operators.",
   datePublished: "2026-06-26T00:00:00+00:00",
   dateModified: "2026-08-07T00:00:00+00:00",
-  heroPrimaryCta: "Request Pilot Review",
-  heroPrimaryHref: "/pilot",
-  heroSecondaryCta: "See How It Works",
-  heroSecondaryHref: "/services/hotel-answering-service",
   intro: [
     "AI voice agents are now actively marketed to hotels as a way to cover every inbound call without adding staff. The pitch is compelling: 24/7 availability, no sick days, consistent tone, and a fraction of the cost of a human team. For some use cases in hospitality, that pitch holds up.",
     "Where it gets complicated is reservation calls, in-stay complaints, booking exceptions, and any situation where a guest's first or lasting impression of your property is being shaped in real time. That is where hospitality operators report the widest gap between what AI voice vendors promise and what the technology actually delivers.",
@@ -276,14 +272,6 @@ export const aiVoiceComparison: ResourceArticleData = {
     asset: "after-hours-checklist",
     pdfHref: "/downloads/after-hours-checklist.pdf",
     ctaLabel: "Download After-Hours Checklist",
-  },
-  assetCta: {
-    heading: "See what consistent human coverage looks like across calls, OTA inboxes, and guest messaging.",
-    asset: "sample-weekly-report",
-    pdfHref: "/downloads/sample-weekly-report.pdf",
-    ctaLabel: "Download Sample Weekly Report",
-    serviceHref: "/resources/hotel-answering-service-cost",
-    serviceLabel: "How Much Does a Hotel Answering Service Cost?",
   },
   schemaAbout: { type: "Service", name: "Hotel Answering Service", url: "https://guestsquad.com/services/hotel-answering-service", serviceType: "Hotel Answering Service", areaServed: "Worldwide" },
   schemaMentions: [

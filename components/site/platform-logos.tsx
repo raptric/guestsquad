@@ -35,10 +35,10 @@ const OTA = [
 ];
 
 const PMS = [
-  { src: "https://www.cloudbeds.com/wp-content/uploads/2025/08/logo-footer.svg", name: "Cloudbeds" },
+  { src: "https://www.cloudbeds.com/wp-content/themes/cloudbeds-rebrand/assets/images/favicon.svg", name: "Cloudbeds" },
   { src: "https://www.mews.com/favicon.ico",                                     name: "Mews" },
   { src: "https://www.oracle.com/favicon.ico",                                   name: "Opera PMS" },
-  { src: "https://iamg2.guesty.com/cdn/cd/9b3576f652cfa3c77e900883e5ea38a3/8bd1e0d7a6f8c629c3f7b895021ef5da/icon.jpg", name: "Guesty" },
+  { src: "https://www.guesty.com/favicon.ico",                                    name: "Guesty" },
   { src: "https://www.resnexus.com/favicon.ico",                                 name: "ResNexus" },
 ];
 

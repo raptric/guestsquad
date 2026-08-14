@@ -1,18 +1,7 @@
 const MUTED = "#A8A29E";
 const GROUP_LABEL = "text-[9px] font-semibold uppercase tracking-[0.18em]";
 
-function ClearbitLogo({ domain, name, h = 22 }: { domain: string; name: string; h?: number }) {
-  return (
-    <img
-      src={`https://logo.clearbit.com/${domain}`}
-      alt={name}
-      style={{ height: `${h}px`, width: "auto", objectFit: "contain" }}
-      loading="lazy"
-    />
-  );
-}
-
-// Icon + label — using exact brand icon URLs provided
+// Icon + label — using exact brand icon URLs
 function IconLogo({ src, name, iconSize = 20 }: { src: string; name: string; iconSize?: number }) {
   return (
     <span className="flex items-center gap-2">
@@ -46,11 +35,11 @@ const OTA = [
 ];
 
 const PMS = [
-  { domain: "cloudbeds.com",      name: "Cloudbeds",    h: 22 },
-  { domain: "mews.com",           name: "Mews",         h: 22 },
-  { domain: "oracle.com",         name: "Opera PMS",    h: 22 },
-  { domain: "guesty.com",         name: "Guesty",       h: 22 },
-  { domain: "reznexus.com",       name: "RezNexus",     h: 20 },
+  { src: "https://www.cloudbeds.com/wp-content/uploads/2025/08/logo-footer.svg", name: "Cloudbeds" },
+  { src: "https://www.mews.com/favicon.ico",                                     name: "Mews" },
+  { src: "https://www.oracle.com/favicon.ico",                                   name: "Opera PMS" },
+  { src: "https://iamg2.guesty.com/cdn/cd/9b3576f652cfa3c77e900883e5ea38a3/8bd1e0d7a6f8c629c3f7b895021ef5da/icon.jpg", name: "Guesty" },
+  { src: "https://www.resnexus.com/favicon.ico",                                 name: "ResNexus" },
 ];
 
 const CHANNELS = [
@@ -132,7 +121,7 @@ export function PlatformLogos() {
               <div className="flex flex-wrap items-center gap-x-5 gap-y-3">
                 {PMS.map((l) => (
                   <div key={l.name} className="opacity-70 transition-opacity hover:opacity-100">
-                    <ClearbitLogo domain={l.domain} name={l.name} h={l.h} />
+                    <IconLogo src={l.src} name={l.name} iconSize={20} />
                   </div>
                 ))}
               </div>

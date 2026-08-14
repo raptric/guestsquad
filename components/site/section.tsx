@@ -16,7 +16,7 @@ export function Section({
   return (
     <section
       id={id}
-      className={cn(compact ? "py-12 md:py-16" : "py-20 md:py-28", surface && "bg-surface", className)}
+      className={cn(compact ? "py-10 md:py-14" : "py-16 md:py-22", surface && "bg-surface", className)}
     >
       <div className="container">{children}</div>
     </section>

@@ -197,6 +197,11 @@ export default function PricingPage() {
         <p className="mt-6 text-sm text-ink-muted">
           These are coverage patterns, not fixed plan tiers. Most properties start with one pattern and adjust as their coverage needs become clearer.
         </p>
+        <div className="mt-8 flex justify-center">
+          <CoverageReviewButton variant="gold" size="default" ctaLocation="pricing_coverage_types">
+            Review My Coverage Needs
+          </CoverageReviewButton>
+        </div>
       </Section>
 
       {/* Section 5 — Support Model */}

@@ -72,19 +72,9 @@ export function ComparisonArticle({ data }: { data: ResourceArticleData }) {
         secondaryHref={data.heroSecondaryHref}
       />
 
-      <Section>
-        <div className="mx-auto max-w-2xl">
-          {data.intro.map((p, i) => (
-            <p key={i} className="mb-5 text-sm leading-relaxed text-ink-soft">
-              {p.split(/(\[[^\]]+\]\([^)]+\))/).map((part, j) => {
-                const m = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
-                return m ? <Link key={j} href={m[2]} className="text-gold-dark underline underline-offset-4 hover:text-gold">{m[1]}</Link> : part;
-              })}
-            </p>
-          ))}
-        </div>
-        {data.postIntroCta && (
-          <div className="mx-auto mt-8 max-w-2xl rounded-lg border border-gold/30 bg-gold/5 px-6 py-5">
+      {data.postIntroCta && (
+        <div className="container py-8">
+          <div className="mx-auto max-w-2xl rounded-lg border border-gold/30 bg-gold/5 px-6 py-5">
             <p className="text-sm font-medium text-ink">{data.postIntroCta.heading}</p>
             <p className="mt-1 text-sm leading-relaxed text-ink-soft">{data.postIntroCta.body}</p>
             <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:items-center">
@@ -104,7 +94,20 @@ export function ComparisonArticle({ data }: { data: ResourceArticleData }) {
               )}
             </div>
           </div>
-        )}
+        </div>
+      )}
+
+      <Section>
+        <div className="mx-auto max-w-2xl">
+          {data.intro.map((p, i) => (
+            <p key={i} className="mb-5 text-sm leading-relaxed text-ink-soft">
+              {p.split(/(\[[^\]]+\]\([^)]+\))/).map((part, j) => {
+                const m = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+                return m ? <Link key={j} href={m[2]} className="text-gold-dark underline underline-offset-4 hover:text-gold">{m[1]}</Link> : part;
+              })}
+            </p>
+          ))}
+        </div>
       </Section>
 
       <Section surface>

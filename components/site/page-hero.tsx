@@ -34,22 +34,24 @@ export function PageHero({
         <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-ink-soft">
           {description}
         </p>
-        <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          {primaryIsPopup ? (
-            <CoverageReviewButton variant="gold" size="lg" ctaLocation="page_hero">
-              {primaryCta}
-            </CoverageReviewButton>
-          ) : (
-            <ButtonLink href={primaryHref} variant="gold" size="lg">
-              {primaryCta}
-            </ButtonLink>
-          )}
-          {secondaryCta && secondaryHref && (
-            <ButtonLink href={secondaryHref} variant="outline" size="lg">
-              {secondaryCta}
-            </ButtonLink>
-          )}
-        </div>
+        {primaryCta && (
+          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            {primaryIsPopup ? (
+              <CoverageReviewButton variant="gold" size="lg" ctaLocation="page_hero">
+                {primaryCta}
+              </CoverageReviewButton>
+            ) : (
+              <ButtonLink href={primaryHref} variant="gold" size="lg">
+                {primaryCta}
+              </ButtonLink>
+            )}
+            {secondaryCta && secondaryHref && (
+              <ButtonLink href={secondaryHref} variant="outline" size="lg">
+                {secondaryCta}
+              </ButtonLink>
+            )}
+          </div>
+        )}
       </div>
     </section>
   );

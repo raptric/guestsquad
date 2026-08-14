@@ -13,6 +13,7 @@ import { BoFuTrustBlock } from "@/components/site/bofu-trust-block";
 import { PostBookingSteps } from "@/components/site/post-booking-steps";
 import { DownloadGate } from "@/components/site/download-gate";
 import { ClientTrustBlock } from "@/components/site/client-trust-block";
+import { CoverageReviewButton } from "@/components/site/coverage-review-button";
 
 export const metadata: Metadata = buildMetadata({
   title: "Hotel Guest Support Pricing | Plans & Pricing",
@@ -283,6 +284,32 @@ export default function PricingPage() {
           <p className="mt-4 text-sm text-ink-muted">
             The fit affects both how coverage is structured and how it is priced.
           </p>
+        </div>
+      </Section>
+
+      {/* Section 6 — How Pricing Is Scoped */}
+      <Section surface>
+        <SectionHeading eyebrow="How It Works" title="How pricing works" />
+        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            { n: "01", title: "We review your current call and OTA message flow" },
+            { n: "02", title: "We identify where coverage is needed most" },
+            { n: "03", title: "We recommend the right coverage structure" },
+            { n: "04", title: "We provide a scoped quote based on fit" },
+          ].map((step) => (
+            <div key={step.n} className="flex flex-col gap-2">
+              <span className="text-2xl font-semibold tabular-nums text-gold-dark/30">{step.n}</span>
+              <p className="text-sm font-medium text-ink">{step.title}</p>
+            </div>
+          ))}
+        </div>
+        <p className="mt-8 text-sm text-ink-muted">
+          Qualified properties can move into a 2-week pilot after review.
+        </p>
+        <div className="mt-5">
+          <CoverageReviewButton variant="gold" size="default" ctaLocation="pricing_how_it_works">
+            Review My Coverage Needs
+          </CoverageReviewButton>
         </div>
       </Section>
 

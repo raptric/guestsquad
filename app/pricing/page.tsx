@@ -24,56 +24,32 @@ export const metadata: Metadata = buildMetadata({
 
 const FAQS = [
   {
-    q: "What are guest operations coverage plans?",
-    a: "Guest operations coverage plans are the service tiers Guest Squad uses to package [hotel answering service](/services/hotel-answering-service) coverage, [guest messaging](/services/guest-messaging), [OTA inbox management](/services/ota-inbox-management), and after-hours support for a hotel or STR portfolio. Starter covers the core channels, Growth adds fuller coverage and reporting, and Custom is built around properties with higher volumes or multiple sites. All plans are priced per property based on actual volume and channels.",
-  },
-  {
-    q: "Is Guest Squad pricing based per property?",
-    a: "Yes. Guest Squad pricing is scoped per property or portfolio based on the channels covered, expected call and message volume, coverage hours, and reporting needs. A quote reflects your actual operation rather than a fixed tier.",
-  },
-  {
     q: "Why don't you list exact prices?",
-    a: "Pricing depends on call and message volume, number of properties, and which channels you need covered. A quote takes one short call and reflects your actual operation, not a generic tier.",
+    a: "Pricing depends on interaction volume, coverage hours, property complexity, and support model fit. A quote takes one short review call and reflects your actual operation, not a generic tier.",
   },
   {
     q: "What affects Guest Squad pricing the most?",
-    a: "Volume is the biggest factor: total call and message volume across your covered channels. The number of properties, hours of coverage, and PMS or OTA complexity also affect the plan. A property receiving 200 calls per month is priced differently from one receiving 2,000.",
+    a: "Interaction volume is the biggest factor — the number of calls, messages, and OTA interactions your property needs covered each month. Coverage hours, property complexity, and whether shared or dedicated support is the right fit also shape the final price.",
   },
   {
-    q: "Is there a setup fee?",
-    a: "No. There is no setup fee or onboarding fee. Property briefing, agent training, system access, and go-live testing are included as part of getting coverage started.",
+    q: "Is Guest Squad pricing based per property?",
+    a: "Yes. Guest Squad pricing is scoped per property or portfolio based on the channels covered, interaction volume, coverage hours, and operational complexity. A quote reflects your actual operation rather than a fixed tier.",
   },
   {
     q: "Can we start with a pilot before committing to monthly coverage?",
     a: "Yes. Qualified properties can start with a 2-week pilot before moving into month-to-month coverage. This gives both teams time to validate fit, guest communication workflows, escalation rules, and channel coverage before ongoing service continues.",
   },
   {
+    q: "Is there a setup fee?",
+    a: "No. There is no setup fee or onboarding fee. Property briefing, agent training, system access, and go-live testing are included as part of getting coverage started.",
+  },
+  {
     q: "Is there a contract?",
     a: "Plans are month-to-month with 30 days notice to cancel. We would rather earn your renewal through performance than lock you in.",
   },
   {
-    q: "Can pricing change if call or message volume increases?",
-    a: "Yes. Plans are reviewed when volume increases significantly. You will never be billed at a higher rate without advance notice and your agreement.",
-  },
-  {
-    q: "Do you offer seasonal coverage?",
-    a: "Yes. Properties with seasonal peaks can structure coverage to match: full coverage during high season and reduced coverage or a pause during low season. This is agreed during onboarding.",
-  },
-  {
-    q: "Is there a minimum commitment?",
-    a: "No. Plans are month-to-month from the start with 30 days notice to cancel.",
-  },
-  {
-    q: "Can we start with one service and add more later?",
-    a: "Yes. Most clients start with after-hours coverage or OTA inbox management, then add reservation support or guest messaging once they see the first service working.",
-  },
-  {
-    q: "What do we need to provide before launch?",
-    a: "Access to your PMS or booking system, OTA extranets if applicable, your rates and room types, cancellation and modification policies, brand voice guidelines, and an escalation contact list. We provide a setup checklist during onboarding.",
-  },
-  {
-    q: "Do you replace our front desk staff?",
-    a: "No. We cover overflow, after-hours, and the channels your team does not have time for. Your on-site team stays focused on in-house guests.",
+    q: "Can coverage expand later?",
+    a: "Yes. Most properties start with after-hours coverage or OTA inbox management, then add channels or extend hours once they see the first scope working.",
   },
 ];
 

@@ -76,7 +76,10 @@ export function ComparisonArticle({ data }: { data: ResourceArticleData }) {
         <div className="mx-auto max-w-2xl">
           {data.intro.map((p, i) => (
             <p key={i} className="mb-5 text-sm leading-relaxed text-ink-soft">
-              {p}
+              {p.split(/(\[[^\]]+\]\([^)]+\))/).map((part, j) => {
+                const m = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+                return m ? <Link key={j} href={m[2]} className="text-gold-dark underline underline-offset-4 hover:text-gold">{m[1]}</Link> : part;
+              })}
             </p>
           ))}
         </div>

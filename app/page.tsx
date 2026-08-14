@@ -150,7 +150,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="relative aspect-[4/5] overflow-hidden rounded-lg border border-line bg-surface md:aspect-square">
+          <div className="relative aspect-[4/5] overflow-hidden rounded-lg border border-line bg-surface md:aspect-[4/3]">
             <Image
               src="https://images.unsplash.com/photo-1560662105-57f8ad6ae2d1?w=1400&h=1750&fit=crop&crop=entropy&q=90"
               alt="Lively boutique hotel lobby and reception desk with staff at the front desk"

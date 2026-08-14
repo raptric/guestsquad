@@ -440,15 +440,6 @@ export default function ResourcesPage() {
         </div>
       </Section>
 
-      {/* 8 — Pre-CTA bridge */}
-      <div className="border-t border-line bg-paper">
-        <div className="container py-10 text-center">
-          <p className="mx-auto max-w-2xl text-sm leading-relaxed text-ink-soft">
-            If you&apos;ve identified a revenue gap, process gap, or after-hours weakness, the next step is to review your property setup with us.
-          </p>
-        </div>
-      </div>
-
       <CtaSection
         title="Ready to book a coverage review?"
         description="Tell us your volume and channels and we will walk through exactly what coverage your property needs."

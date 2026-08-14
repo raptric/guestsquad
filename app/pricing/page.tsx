@@ -343,8 +343,8 @@ export default function PricingPage() {
       </Section>
 
       <CtaSection
-        title="Get a quote built around your property."
-        description="Tell us your volume and channels, and we'll come back with a plan and a price, not a generic package."
+        title="Get pricing that fits your property, not a generic tier"
+        description="We'll review your interaction volume, coverage needs, and operational setup before recommending the right structure and quote."
       />
     </>
   );

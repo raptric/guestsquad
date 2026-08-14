@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { Check } from "lucide-react";
 import Link from "next/link";
 import { PageHero } from "@/components/site/page-hero";
@@ -19,7 +19,7 @@ export const metadata: Metadata = buildMetadata({
 const FAQS = [
   {
     q: "Why don't you list exact prices?",
-    a: "Pricing depends on interaction volume, coverage hours, property complexity, and support model fit. A quote takes one short review call and reflects your actual operation, not a generic tier.",
+    a: "Pricing depends on interaction volume, coverage hours, property complexity, and support model fit. A quote takes one short review call and reflects your actual operation, not a generic tier. A scoped review call is the fastest way to get a quote that reflects your actual operation.",
   },
   {
     q: "What affects Guest Squad pricing the most?",
@@ -53,7 +53,7 @@ export default function PricingPage() {
       <JsonLd
         data={[
           webPageSchema({
-            name: "Hotel Guest Support Pricing | Plans & Pricing | Guest Squad",
+            name: "Hotel Guest Support Pricing | Guest Squad",
             description: "Guest Squad pricing is scoped around your property's channels, interaction volume, and coverage hours. Every plan starts with the channels your guests use. Get a quote after a short review call.",
             path: "/pricing",
             primaryImageUrl: "https://guestsquad.com/brand-assets/og-image.jpg",
@@ -61,17 +61,14 @@ export default function PricingPage() {
             about: { "@id": "https://guestsquad.com/#organization" },
             audienceTypes: ["Independent Hotel","Boutique Hotel","Inn","Resort","Serviced Apartment","Aparthotel","Airbnb Host","Vrbo Host","Short-Term Rental Operator","Vacation Rental Operator","Vacation Rental Property Manager"],
             mentions: [
-              // OTAs named in FAQ answers
               { "@type": "Organization", "name": "Booking.com" },
               { "@type": "Organization", "name": "Expedia" },
               { "@type": "Organization", "name": "Airbnb" },
-              // Accommodation types named in pricing plan descriptions and body text
               { "@type": "Accommodation", "name": "Hotel" },
               { "@type": "Accommodation", "name": "Boutique Hotel" },
               { "@type": "Accommodation", "name": "Serviced Apartment" },
               { "@type": "Accommodation", "name": "Vacation Rental" },
               { "@type": "Accommodation", "name": "Resort" },
-              // Service concepts named in plan table, FAQ answers, and body text
               { "@type": "Thing", "name": "Hotel Answering Service" },
               { "@type": "Thing", "name": "Hotel Guest Operations" },
               { "@type": "Thing", "name": "OTA Inbox Management" },
@@ -85,26 +82,36 @@ export default function PricingPage() {
       />
       <Breadcrumbs items={[{ name: "Home", path: "/" }, { name: "Pricing", path: "/pricing" }]} />
 
+      {/* Section 1 — Hero */}
       <PageHero
         eyebrow="Pricing"
         title="Pricing built around your property's coverage needs"
-        description="Every Guest Squad plan is built around the guest communication channels your property actually uses. Final pricing is scoped after a short review of your interaction volume, coverage hours, property complexity, and support model fit."
+        description="Every Guest Squad plan starts with the guest communication channels most independent hotels cannot afford to miss. Final pricing is scoped after a short review of your interaction volume, coverage hours, property complexity, and support model fit."
         primaryCta="Review My Coverage Needs"
         primaryHref="/contact"
         secondaryCta="See What Affects Pricing"
         secondaryHref="#what-affects-pricing"
       />
 
-      {/* Direct answer block */}
-      <div className="border-b border-line bg-surface">
-        <div className="container py-8">
-          <p className="mx-auto max-w-3xl text-sm leading-relaxed text-ink-soft">
-            Guest Squad pricing is scoped per property based on interaction volume, coverage hours, property complexity, and support model fit. Every plan is built around the channels your guests actually use. A quote is provided after a short review call.
+      {/* Hero helper line */}
+      <div className="border-b border-line bg-paper">
+        <div className="container py-5 text-center">
+          <p className="mx-auto max-w-2xl text-xs leading-relaxed text-ink-muted">
+            The goal is not just to quote a plan. It is to scope the level of coverage your property actually needs without overbuilding or under-covering it.
           </p>
         </div>
       </div>
 
-      {/* Section 2 — Core Bundle */}
+      {/* Section 2 — Intro strip */}
+      <div className="border-b border-line bg-surface">
+        <div className="container py-8">
+          <p className="mx-auto max-w-3xl text-sm leading-relaxed text-ink-soft">
+            Guest Squad pricing is scoped per property based on interaction volume, coverage hours, operational complexity, and delivery fit. Every plan starts with the core guest communication bundle, then adjusts to the way your property actually runs.
+          </p>
+        </div>
+      </div>
+
+      {/* Section 3 — What's Included */}
       <Section surface>
         <SectionHeading
           eyebrow="What's Included"
@@ -129,12 +136,11 @@ export default function PricingPage() {
           ))}
         </ul>
         <p className="mt-6 text-sm text-ink-muted">
-          Not every channel applies to every property. Coverage scope is agreed during the review call based on how your guests actually reach you.
+          Every property starts with core guest communication coverage. Final scope is confirmed during the review call based on how your guests actually reach you.
         </p>
       </Section>
 
-
-      {/* Section 3 — What Affects Pricing */}
+      {/* Section 4 — What Affects Pricing */}
       <div id="what-affects-pricing">
         <Section>
           <SectionHeading eyebrow="Pricing Factors" title="What affects pricing most" />
@@ -142,7 +148,7 @@ export default function PricingPage() {
             {[
               {
                 title: "Interaction volume",
-                body: "The number of calls, messages, and OTA interactions your property needs covered each month.",
+                body: "The number of calls, messages, and OTA guest interactions your property needs covered each month.",
               },
               {
                 title: "Coverage hours",
@@ -150,11 +156,11 @@ export default function PricingPage() {
               },
               {
                 title: "Property complexity",
-                body: "A single property with straightforward operations is scoped differently from a multi-property group or a higher-volume hotel with more coordination needs.",
+                body: "A single-property setup with straightforward operations is scoped differently from a multi-property group or a higher-volume hotel with more coordination needs.",
               },
               {
                 title: "Support model fit",
-                body: "Some properties are well-served by shared coverage. Others need a more dedicated setup based on volume, continuity, or operational requirements.",
+                body: "Some properties are best served through shared coverage. Others need a more dedicated setup based on volume, continuity, or operational requirements.",
               },
             ].map((card) => (
               <div key={card.title} className="rounded-lg border border-line bg-paper p-6">
@@ -166,9 +172,9 @@ export default function PricingPage() {
         </Section>
       </div>
 
-      {/* Section 4 — Coverage Types */}
+      {/* Section 5 — Coverage Types */}
       <Section surface>
-        <SectionHeading eyebrow="How Properties Structure Coverage" title="How properties typically scope coverage" />
+        <SectionHeading eyebrow="How Properties Structure Coverage" title="How hotels usually structure coverage" />
         <div className="mt-10 grid gap-6 sm:grid-cols-2">
           {[
             {
@@ -195,7 +201,7 @@ export default function PricingPage() {
           ))}
         </div>
         <p className="mt-6 text-sm text-ink-muted">
-          These are coverage patterns, not fixed plan tiers. Most properties start with one pattern and adjust as their coverage needs become clearer.
+          These are common coverage patterns, not fixed plan tiers. Most properties start with one pattern and adjust as their needs become clearer.
         </p>
         <div className="mt-8 flex justify-center">
           <CoverageReviewButton variant="gold" size="default" ctaLocation="pricing_coverage_types">
@@ -204,27 +210,40 @@ export default function PricingPage() {
         </div>
       </Section>
 
-      {/* Section 5 — Support Model */}
+      {/* Section 6 — Coverage Fit */}
       <Section>
         <div className="max-w-2xl">
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.14em] text-gold-dark">Coverage Fit</p>
-          <h2 className="text-2xl font-medium text-ink">Coverage is scoped to fit the way your property operates</h2>
+          <h2 className="text-2xl font-medium text-ink">Not every property needs the same support model</h2>
           <p className="mt-4 text-sm leading-relaxed text-ink-soft">
-            Some properties are best served through efficient shared coverage. Others need a more dedicated setup because of interaction volume, operational complexity, or continuity requirements. We determine the right fit during the review call rather than applying the same model to every property.
+            Lower-volume properties are often a fit for efficient shared coverage, while busier or more operationally complex hotels may need a more dedicated setup. We determine the right fit during the review so coverage matches your volume, continuity needs, and workflow complexity.
           </p>
           <p className="mt-4 text-sm text-ink-muted">
-            The fit affects both how coverage is structured and how it is priced.
+            This affects both how coverage is structured and how it is priced.
           </p>
         </div>
       </Section>
 
-      {/* Section 6 — How Pricing Is Scoped */}
+      {/* Section 7 — ROI Bridge */}
+      <div className="border-y border-line bg-surface">
+        <div className="container py-12">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.14em] text-gold-dark">Why This Matters</p>
+          <h2 className="max-w-2xl text-xl font-medium text-ink">
+            The right question is not just what coverage costs
+          </h2>
+          <p className="mt-4 max-w-2xl text-sm leading-relaxed text-ink-soft">
+            It is whether missed reservation calls, slow OTA replies, and after-hours gaps are already costing more than the support required to fix them. The review call helps scope coverage around that reality.
+          </p>
+        </div>
+      </div>
+
+      {/* Section 8 — How Pricing Works */}
       <Section surface>
         <SectionHeading eyebrow="How It Works" title="How pricing works" />
         <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {[
             { n: "01", title: "We review your current call and OTA message flow" },
-            { n: "02", title: "We identify where coverage is needed most" },
+            { n: "02", title: "We identify where guest communication is being missed or delayed" },
             { n: "03", title: "We recommend the right coverage structure" },
             { n: "04", title: "We provide a scoped quote based on fit" },
           ].map((step) => (
@@ -250,8 +269,9 @@ export default function PricingPage() {
         </div>
       </div>
 
+      {/* Section 9 — FAQ */}
       <Section>
-        <SectionHeading eyebrow="Questions" title="Pricing, answered honestly." />
+        <SectionHeading eyebrow="Questions" title="Pricing questions, answered clearly." />
         <div className="mt-10 grid gap-6 sm:grid-cols-2">
           {FAQS.map((item) => (
             <div key={item.q} className="rounded-lg border border-line bg-paper p-6">
@@ -266,7 +286,6 @@ export default function PricingPage() {
           ))}
         </div>
       </Section>
-
 
       {/* SEO link strip */}
       <div className="border-t border-line bg-surface">
@@ -286,9 +305,18 @@ export default function PricingPage() {
         </div>
       </div>
 
+      {/* Section 10 — Reassurance line */}
+      <div className="border-t border-line bg-paper py-8 text-center">
+        <p className="text-sm text-ink-muted">
+          You do not need to know the right plan before reaching out. Most properties do not.
+        </p>
+      </div>
+
+      {/* Section 11 — Final CTA */}
       <CtaSection
         title="Get pricing that fits your property, not a generic tier"
-        description="We'll review your interaction volume, coverage needs, and operational setup before recommending the right structure and quote."
+        description="We'll review your interaction volume, coverage hours, property complexity, and operational setup before recommending the right structure and quote."
+        primaryCta="Review My Coverage Needs"
       />
     </>
   );

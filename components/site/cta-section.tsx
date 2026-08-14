@@ -4,9 +4,11 @@ import { CoverageReviewButton } from "@/components/site/coverage-review-button";
 export function CtaSection({
   title = "Stop losing bookings to silence.",
   description = "Book a coverage review and see exactly how Guest Squad would cover your reservations, guest messages, OTA inboxes, and after-hours calls.",
+  primaryCta = "Book a Coverage Review",
 }: {
   title?: string;
   description?: string;
+  primaryCta?: string;
 }) {
   return (
     <section className="bg-ink py-20 md:py-28">
@@ -22,7 +24,7 @@ export function CtaSection({
         </p>
         <div className="mt-6 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <CoverageReviewButton variant="gold" size="lg" ctaLocation="cta_section">
-            Book a Coverage Review
+            {primaryCta}
           </CoverageReviewButton>
           <ButtonLink
             href="/pilot"

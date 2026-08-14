@@ -16,7 +16,6 @@ import { SERVICES } from "@/lib/site-data";
 import { buildMetadata, faqSchema, webPageSchema } from "@/lib/seo";
 import { JsonLd } from "@/components/site/json-ld";
 import { AssetBlock } from "@/components/site/asset-block";
-import { ClientTrustBlock } from "@/components/site/client-trust-block";
 
 export const metadata: Metadata = buildMetadata({
   title: "Hotel Answering Service & 24/7 Guest Support",
@@ -456,11 +455,6 @@ export default function HomePage() {
           </div>
         </div>
       </div>
-
-      {/* TRUST BLOCK */}
-      <Section surface compact>
-        <ClientTrustBlock />
-      </Section>
 
       {/* FAQ */}
       <Section>

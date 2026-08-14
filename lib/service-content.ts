@@ -243,7 +243,7 @@ export const guestMessagingData: ServiceDetailData = {
   eyebrow: "Guest Messaging",
   title: "Hotel Guest Messaging Support for SMS, WhatsApp, Email, and OTA Channels",
   description:
-    "SMS, WhatsApp, email, and in-app messages monitored and answered across the full stay journey: pre-arrival, in-stay, and post-stay.",
+    "Guest Squad handles SMS, WhatsApp, email, and OTA messages for hotels and short-term rental operators — from pre-arrival to post-stay. Every message is answered by a trained person.",
   schemaAbout: { "@type": "Thing", "name": "Hotel Guest Messaging" },
   schemaServiceOutput: "Monitored and answered guest messages across SMS, WhatsApp, email, and in-app channels throughout the full stay journey",
   schemaSubjectOf: [
@@ -351,7 +351,7 @@ export const otaInboxData: ServiceDetailData = {
   eyebrow: "OTA Inbox Management",
   title: "OTA Inbox Management for Booking.com, Expedia, and Airbnb",
   description:
-    "Booking.com, Expedia, and Airbnb inboxes monitored and answered around the clock, so pre-booking questions convert instead of disappearing.",
+    "Guest Squad monitors and answers your Booking.com, Expedia, and Airbnb inboxes around the clock — so pre-booking questions convert and your response score stays strong.",
   schemaAbout: { "@type": "Thing", "name": "OTA Message Response Management" },
   schemaServiceOutput: "Monitored and answered OTA message threads on Booking.com, Expedia, and Airbnb to improve response time, conversion, and platform ranking",
   schemaSubjectOf: [
@@ -461,7 +461,7 @@ export const afterHoursData: ServiceDetailData = {
   eyebrow: "After-Hours Hotel Support",
   title: "After-Hours Hotel Front Desk Support for Calls and Guest Messages",
   description:
-    "Overnight and weekend front-desk coverage for calls and messages your on-site team cannot take outside working hours, without hiring a night shift.",
+    "Overnight and weekend call and message coverage for hotels — handled by a trained person without hiring a night shift. Covers late check-ins, guest inquiries, and escalations.",
   schemaAbout: { "@type": "Thing", "name": "Hotel After-Hours Front Desk Coverage" },
   schemaServiceOutput: "Overnight and weekend call and message coverage for hotels, handling late check-ins, guest inquiries, and emergency escalations outside front desk hours",
   schemaSubjectOf: [
@@ -795,7 +795,7 @@ export const vacationRentalAnsweringData: ServiceDetailData = {
   eyebrow: "Vacation Rental Answering Service",
   title: "24/7 Vacation Rental Answering Service for Airbnb, Vrbo, and STR Operators",
   description:
-    "24/7 call answering for Airbnb, Vrbo, and short-term rental operators — built for hosts and property managers who cannot be on call all night.",
+    "24/7 live call answering for Airbnb, Vrbo, and short-term rental operators. Every guest call is answered by a trained person — no voicemail, no missed bookings.",
   schemaAbout: { "@type": "Thing", "name": "Vacation Rental Phone Answering" },
   schemaServiceOutput: "Live call answering and guest message handling for short-term rental operators, covering check-in support, access issues, and after-hours guest inquiries",
   schemaSubjectOf: [

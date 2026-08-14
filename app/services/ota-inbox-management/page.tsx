@@ -4,7 +4,7 @@ import { otaInboxData } from "@/lib/service-content";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "OTA Inbox Management | Booking.com & Expedia",
+  title: "Hotel OTA Inbox Management | Booking.com, Expedia & Airbnb | Guest Squad",
   description: otaInboxData.description,
   path: `/services/${otaInboxData.slug}`,
 });

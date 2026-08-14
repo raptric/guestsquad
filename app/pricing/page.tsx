@@ -294,6 +294,24 @@ export default function PricingPage() {
         <BoFuTrustBlock />
       </Section>
 
+      {/* SEO link strip */}
+      <div className="border-t border-line bg-surface">
+        <div className="container py-8 text-center">
+          <p className="text-sm text-ink-soft">
+            Not sure where to start?{" "}
+            <Link href="/services" className="text-gold-dark underline underline-offset-4 hover:text-gold">Browse all services</Link>
+            {" "}or see how we compare to{" "}
+            <Link href="/resources/hotel-answering-service-vs-ai-voice" className="text-gold-dark underline underline-offset-4 hover:text-gold">hotel answering service vs AI voice agent</Link>
+            {" "}and{" "}
+            <Link href="/resources/hotel-answering-service-vs-call-center" className="text-gold-dark underline underline-offset-4 hover:text-gold">hotel answering service vs call center</Link>.
+          </p>
+          <p className="mt-3 text-sm text-ink-soft">
+            Qualified properties can start with a 2-week pilot before moving into month-to-month coverage.{" "}
+            <Link href="/pilot" className="text-gold-dark underline underline-offset-4 hover:text-gold">See if you qualify for a 2-week pilot →</Link>
+          </p>
+        </div>
+      </div>
+
       <CtaSection
         title="Get pricing that fits your property, not a generic tier"
         description="We'll review your interaction volume, coverage needs, and operational setup before recommending the right structure and quote."

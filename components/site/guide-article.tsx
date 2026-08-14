@@ -55,6 +55,7 @@ export function GuideArticle({ data }: { data: GuideArticleData }) {
         eyebrow="Guide"
         title={data.title}
         description={data.description}
+        primaryCta="Book a Coverage Review"
         secondaryCta="View Pricing"
         secondaryHref="/pricing"
       />

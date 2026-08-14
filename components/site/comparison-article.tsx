@@ -70,11 +70,9 @@ export function ComparisonArticle({ data }: { data: ResourceArticleData }) {
         primaryHref={data.heroPrimaryHref}
         secondaryCta={data.heroSecondaryCta}
         secondaryHref={data.heroSecondaryHref}
-      />
-
-      {data.postIntroCta && (
-        <div className="container py-8">
-          <div className="mx-auto max-w-2xl rounded-lg border border-gold/30 bg-gold/5 px-6 py-5">
+      >
+        {data.postIntroCta && (
+          <div className="mx-auto max-w-2xl rounded-lg border border-gold/30 bg-gold/5 px-6 py-5 text-left">
             <p className="text-sm font-medium text-ink">{data.postIntroCta.heading}</p>
             <p className="mt-1 text-sm leading-relaxed text-ink-soft">{data.postIntroCta.body}</p>
             <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:items-center">
@@ -94,8 +92,8 @@ export function ComparisonArticle({ data }: { data: ResourceArticleData }) {
               )}
             </div>
           </div>
-        </div>
-      )}
+        )}
+      </PageHero>
 
       <Section>
         <div className="mx-auto max-w-2xl">

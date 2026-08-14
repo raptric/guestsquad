@@ -5,10 +5,11 @@ export function PageHero({
   eyebrow,
   title,
   description,
-  primaryCta = "Book a Coverage Review",
+  primaryCta,
   primaryHref = "/contact",
   secondaryCta,
   secondaryHref,
+  children,
 }: {
   eyebrow?: string;
   title: string;
@@ -17,6 +18,7 @@ export function PageHero({
   primaryHref?: string;
   secondaryCta?: string;
   secondaryHref?: string;
+  children?: React.ReactNode;
 }) {
   const primaryIsPopup = primaryHref === "/contact";
 
@@ -52,6 +54,7 @@ export function PageHero({
             )}
           </div>
         )}
+        {children && <div className="mt-8">{children}</div>}
       </div>
     </section>
   );

@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ButtonLink } from "@/components/site/button-link";
@@ -11,7 +11,6 @@ import { PropertyTypes } from "@/components/site/property-types";
 import { DEFAULT_PROCESS } from "@/components/site/process-steps";
 import { Guarantees } from "@/components/site/guarantees";
 import { PlatformLogos } from "@/components/site/platform-logos";
-import { PricingCards } from "@/components/site/pricing-cards";
 import { CtaSection } from "@/components/site/cta-section";
 import { SERVICES } from "@/lib/site-data";
 import { buildMetadata, faqSchema, webPageSchema } from "@/lib/seo";
@@ -65,6 +64,21 @@ const HOME_FAQS = [
   },
 ];
 
+const SERVICE_GROUPS = [
+  {
+    label: "Core guest communication",
+    slugs: ["hotel-answering-service", "ota-inbox-management", "guest-messaging", "reservation-support"],
+  },
+  {
+    label: "Coverage extensions",
+    slugs: ["after-hours-support", "vacation-rental-answering-service"],
+  },
+  {
+    label: "Operational support",
+    slugs: ["back-office-operations", "airbnb-guest-support"],
+  },
+];
+
 export default function HomePage() {
   return (
     <>
@@ -80,25 +94,21 @@ export default function HomePage() {
             mainEntityId: "https://guestsquad.com/#organization",
             audienceTypes: ["Independent Hotel","Boutique Hotel","Inn","Resort","Serviced Apartment","Aparthotel","Airbnb Host","Vrbo Host","Short-Term Rental Operator","Vacation Rental Operator","Vacation Rental Property Manager"],
             mentions: [
-              // OTAs — all shown in PlatformLogos component
               { "@type": "Organization", "name": "Booking.com" },
               { "@type": "Organization", "name": "Expedia" },
               { "@type": "Organization", "name": "Airbnb" },
               { "@type": "Organization", "name": "Vrbo" },
               { "@type": "Organization", "name": "Hotels.com" },
-              // PMS — shown in PlatformLogos component
               { "@type": "Thing", "name": "Cloudbeds" },
               { "@type": "Thing", "name": "Mews" },
               { "@type": "Thing", "name": "Opera PMS" },
               { "@type": "Thing", "name": "Guesty" },
-              // Accommodation types — named in body text and FAQs
               { "@type": "Accommodation", "name": "Hotel" },
               { "@type": "Accommodation", "name": "Boutique Hotel" },
               { "@type": "Accommodation", "name": "Independent Hotel" },
               { "@type": "Accommodation", "name": "Serviced Apartment" },
               { "@type": "Accommodation", "name": "Vacation Rental" },
               { "@type": "Accommodation", "name": "Resort" },
-              // Service concepts — named in headings and body
               { "@type": "Thing", "name": "Hotel Answering Service" },
               { "@type": "Thing", "name": "Hotel Guest Operations" },
               { "@type": "Thing", "name": "OTA Inbox Management" },
@@ -109,6 +119,7 @@ export default function HomePage() {
           faqSchema(HOME_FAQS),
         ]}
       />
+
       {/* HERO */}
       <section className="border-b border-line bg-paper">
         <div className="container grid items-center gap-14 py-20 md:grid-cols-2 md:py-28">
@@ -121,21 +132,25 @@ export default function HomePage() {
               Missed Bookings
             </h1>
             <p className="mt-6 max-w-lg text-lg leading-relaxed text-ink-soft">
-              Guest Squad is a hotel answering service and guest operations
-              team that handles reservations, guest messages, OTA inquiries,
-              callbacks, upsells, and after-hours support, so your front
-              desk stays focused on in-house guests.
+              Guest Squad covers the guest communication channels hotels cannot afford to miss: reservation calls, OTA guest messages, front-desk overflow, and after-hours gaps.
             </p>
             <div className="mt-9 flex flex-col gap-4 sm:flex-row">
               <CoverageReviewButton variant="gold" size="lg" ctaLocation="homepage_hero">
                 Book a Coverage Review
               </CoverageReviewButton>
-              <ButtonLink href="/pilot" variant="outline" size="lg">
-                Request Pilot Review
-              </ButtonLink>
+              <a
+                href="#how-it-works"
+                className="inline-flex items-center justify-center rounded-lg border border-line px-6 py-3 text-sm font-medium text-ink transition-colors hover:border-ink/40 hover:bg-surface"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById("how-it-works")?.scrollIntoView({ behavior: "smooth" });
+                }}
+              >
+                How It Works
+              </a>
             </div>
             <p className="mt-6 text-xs text-ink-muted">
-              Support, overflow & after-hours coverage. Never a replacement for your team.
+              Built for hotels, boutique properties, resorts, serviced apartments, and Airbnb operators.
             </p>
           </div>
 
@@ -157,7 +172,7 @@ export default function HomePage() {
       {/* PLATFORM LOGOS */}
       <PlatformLogos />
 
-      {/* Direct answer block */}
+      {/* DIRECT ANSWER */}
       <div className="border-b border-line bg-surface">
         <div className="container py-8">
           <p className="mx-auto max-w-3xl text-sm leading-relaxed text-ink-soft">
@@ -167,13 +182,30 @@ export default function HomePage() {
             </Link>{" "}
             to OTA inbox management and after-hours coverage, the service fills guest communication gaps without requiring an additional full-time hire or a change to your existing systems.
           </p>
-          <div className="mx-auto mt-5 max-w-3xl rounded-lg border border-gold/30 bg-gold/5 px-5 py-4">
-            <p className="text-sm font-medium text-ink">Not sure what level of coverage you need?</p>
-            <div className="mt-3">
-              <ButtonLink href="/pilot" variant="gold" size="sm">
-                Request a Pilot Review
-              </ButtonLink>
-            </div>
+        </div>
+      </div>
+
+      {/* WHAT WE COVER STRIP */}
+      <div className="border-b border-line bg-paper">
+        <div className="container py-8">
+          <p className="mb-6 text-[11px] font-semibold uppercase tracking-[0.15em] text-ink-muted">
+            The guest communication coverage most properties cannot afford to miss
+          </p>
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+            {[
+              { label: "Reservation calls", href: "/services/hotel-answering-service" },
+              { label: "OTA guest messaging", href: "/services/ota-inbox-management" },
+              { label: "After-hours support", href: "/services/after-hours-support" },
+              { label: "Front-desk overflow", href: "/services/hotel-answering-service" },
+            ].map((item) => (
+              <Link
+                key={item.label}
+                href={item.href}
+                className="rounded-lg border border-line bg-surface px-4 py-3 text-sm font-medium text-ink transition-colors hover:border-gold/40 hover:bg-gold/5"
+              >
+                {item.label}
+              </Link>
+            ))}
           </div>
         </div>
       </div>
@@ -209,17 +241,62 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* SERVICES GRID */}
+      {/* NOT A GENERIC CALL CENTER — moved above services */}
       <Section surface>
         <SectionHeading
-          eyebrow="What We Cover"
-          title="Guest operations, end to end."
-          description="Pick full coverage or only the gaps your team can't currently fill."
+          eyebrow="The Difference"
+          title="Not a generic call center."
+          description="Most outsourced support is built for volume, not hospitality. We built ours the other way around."
         />
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {SERVICES.map((service) => (
-            <ServiceCard key={service.slug} service={service} />
-          ))}
+        <div className="mt-12">
+          <Differentiator />
+        </div>
+        <div className="mt-10 border-t border-line pt-8">
+          <p className="max-w-2xl text-sm leading-relaxed text-ink-soft">
+            If your property needs guest-ready handling, OTA coverage, property-specific context, and after-hours judgment, a generic call center is the wrong model.
+          </p>
+          <div className="mt-5">
+            <CoverageReviewButton variant="gold" size="default" ctaLocation="homepage_differentiator">
+              Book a Coverage Review
+            </CoverageReviewButton>
+          </div>
+        </div>
+      </Section>
+
+      {/* SERVICES GRID — reframed */}
+      <Section>
+        <SectionHeading
+          eyebrow="What We Cover"
+          title="Coverage built around how hotels actually run."
+        />
+        <div className="mt-12 flex flex-col gap-10">
+          {SERVICE_GROUPS.map((group) => {
+            const groupServices = group.slugs
+              .map((slug) => SERVICES.find((s) => s.slug === slug))
+              .filter(Boolean) as typeof SERVICES;
+            return (
+              <div key={group.label}>
+                <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.15em] text-ink-muted">
+                  {group.label}
+                </p>
+                <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                  {groupServices.map((service) => (
+                    <ServiceCard key={service.slug} service={service} />
+                  ))}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+        <div className="mt-10 border-t border-line pt-8">
+          <p className="text-sm text-ink-soft">
+            Not sure which coverage areas matter most for your property?
+          </p>
+          <div className="mt-4">
+            <CoverageReviewButton variant="gold" size="default" ctaLocation="homepage_services">
+              Book a Coverage Review
+            </CoverageReviewButton>
+          </div>
         </div>
       </Section>
 
@@ -243,18 +320,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* NOT A GENERIC CALL CENTER */}
-      <Section>
-        <SectionHeading
-          eyebrow="The Difference"
-          title="Not a generic call center."
-          description="Most outsourced support is built for volume, not hospitality. We built ours the other way around."
-        />
-        <div className="mt-12">
-          <Differentiator />
-        </div>
-      </Section>
 
       {/* AI + HUMAN */}
       <Section surface>
@@ -312,23 +377,34 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* PILOT CTA */}
-      <div className="border-t border-b border-line bg-gold/5">
-        <div className="container py-10 text-center">
-          <p className="text-base font-medium text-ink">Start with a no-obligation pilot review</p>
-          <p className="mx-auto mt-2 max-w-xl text-sm leading-relaxed text-ink-soft">
-            We&rsquo;ll review your calls, guest messages, OTA inboxes, after-hours gaps, and escalation needs, then recommend whether a 2-week pilot is the right fit.
-          </p>
-          <div className="mt-5">
-            <ButtonLink href="/pilot" variant="gold" size="lg">
-              Request Pilot Review
-            </ButtonLink>
-          </div>
+      {/* HOW GUEST SQUAD WORKS — replaces PricingCards, scroll target for hero */}
+      <Section id="how-it-works">
+        <SectionHeading eyebrow="How It Works" title="How Guest Squad works." />
+        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            { n: "01", title: "We review your guest communication gaps and missed-coverage hours" },
+            { n: "02", title: "We map the channels, volume, and hours your property needs covered" },
+            { n: "03", title: "We brief the team on your property, policies, and escalation rules" },
+            { n: "04", title: "Coverage goes live — with reporting and refinement from day one" },
+          ].map((step) => (
+            <div key={step.n} className="flex flex-col gap-2">
+              <span className="text-2xl font-semibold tabular-nums text-gold-dark/30">{step.n}</span>
+              <p className="text-sm font-medium text-ink">{step.title}</p>
+            </div>
+          ))}
         </div>
-      </div>
+        <p className="mt-8 text-sm text-ink-muted">
+          Most qualified properties can be scoped and live within 5 business days.
+        </p>
+        <div className="mt-6">
+          <CoverageReviewButton variant="gold" size="default" ctaLocation="homepage_how_it_works">
+            Book a Coverage Review
+          </CoverageReviewButton>
+        </div>
+      </Section>
 
       {/* GUARANTEES */}
-      <Section>
+      <Section surface>
         <SectionHeading eyebrow="Our Commitments" title="What every client gets from day one." align="center" className="mx-auto" />
         <div className="mt-12">
           <Guarantees />
@@ -385,31 +461,6 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* PRICING PREVIEW */}
-      <Section surface>
-        <SectionHeading
-          eyebrow="Pricing"
-          title="Three ways to get started."
-          description="Every plan starts with a conversation about your property, not a sales pitch."
-        />
-        <div className="mt-12">
-          <PricingCards />
-        </div>
-        <div className="mt-10 text-center">
-          <p className="text-sm text-ink-soft">
-            Qualified properties can start with a 2-week no-obligation pilot before moving into month-to-month coverage.
-          </p>
-          <div className="mt-4 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-            <ButtonLink href="/pilot" variant="gold" size="lg">
-              Request Pilot Review
-            </ButtonLink>
-            <ButtonLink href="/pricing" variant="link">
-              See full pricing details →
-            </ButtonLink>
-          </div>
-        </div>
-      </Section>
-
       {/* TRUST BLOCK */}
       <Section surface compact>
         <ClientTrustBlock />
@@ -433,6 +484,23 @@ export default function HomePage() {
         </div>
       </Section>
 
+      {/* PRICING BRIDGE */}
+      <div className="border-y border-line bg-surface">
+        <div className="container py-10">
+          <p className="mb-1 text-xs font-semibold uppercase tracking-[0.15em] text-gold-dark">Pricing</p>
+          <h2 className="text-xl font-medium text-ink">Need to understand how coverage is scoped?</h2>
+          <p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink-soft">
+            Once you know the model fits, pricing explains what every plan includes, what affects cost, and how coverage is structured around your property.
+          </p>
+          <div className="mt-5">
+            <ButtonLink href="/pricing" variant="outline" size="default">
+              See Pricing
+            </ButtonLink>
+          </div>
+        </div>
+      </div>
+
+      {/* TOOLS AND RESOURCES */}
       <Section>
         <SectionHeading
           eyebrow="Tools and Resources"

@@ -462,14 +462,25 @@ export default function HomePage() {
           eyebrow="Common Questions"
           title="What hotels usually ask before getting started."
           align="center"
-          className="mx-auto"
+          className="mx-auto max-w-none"
+          titleClassName="text-2xl md:text-3xl whitespace-nowrap"
         />
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {HOME_FAQS.map((item) => (
-            <div key={item.q} className="rounded-lg border border-line bg-paper p-4">
-              <h3 className="text-sm font-semibold text-ink">{item.q}</h3>
-              <p className="mt-1.5 text-sm leading-relaxed text-ink-soft">{item.a}</p>
-            </div>
+        <div className="mx-auto mt-8 max-w-3xl divide-y divide-line rounded-xl border border-line bg-paper">
+          {HOME_FAQS.map((item, i) => (
+            <details key={item.q} className="group" {...(i < 2 ? { open: true } : {})}>
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-6 py-4 [&::-webkit-details-marker]:hidden hover:bg-gold/5 transition-colors">
+                <h3 className="text-sm font-semibold text-ink group-open:text-gold-dark">{item.q}</h3>
+                <svg
+                  className="h-4 w-4 shrink-0 text-gold-dark transition-transform duration-200 group-open:rotate-180"
+                  fill="none" viewBox="0 0 16 16" stroke="currentColor" strokeWidth="2"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M4 6l4 4 4-4" />
+                </svg>
+              </summary>
+              <div className="border-l-2 border-gold-dark mx-6 mb-5 pl-4 pt-1">
+                <p className="text-sm leading-relaxed text-ink-soft">{item.a}</p>
+              </div>
+            </details>
           ))}
         </div>
       </Section>

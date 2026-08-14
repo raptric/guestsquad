@@ -1,4 +1,5 @@
 ﻿import type { Metadata } from "next";
+import { Check } from "lucide-react";
 import Link from "next/link";
 import { PageHero } from "@/components/site/page-hero";
 import { Section, SectionHeading } from "@/components/site/section";
@@ -143,6 +144,35 @@ export default function PricingPage() {
           </p>
         </div>
       </div>
+
+      {/* Section 2 — Core Bundle */}
+      <Section surface>
+        <SectionHeading
+          eyebrow="What's Included"
+          title="Every plan is built around the channels your guests actually use"
+        />
+        <p className="mt-4 max-w-2xl text-sm leading-relaxed text-ink-soft">
+          Every engagement is scoped around your property&rsquo;s guest communication channels — whether you operate a hotel, boutique inn, serviced apartment, or short-term rental. Coverage is built to fit how your guests reach you, not a fixed channel list.
+        </p>
+        <ul className="mt-8 grid gap-3 sm:grid-cols-2">
+          {[
+            "Phone answering — reservation and guest calls",
+            "OTA inbox management — Booking.com, Expedia, Airbnb",
+            "SMS and WhatsApp guest messaging",
+            "Email guest communication",
+            "After-hours and overnight coverage",
+            "Escalation handling and on-call routing",
+          ].map((item) => (
+            <li key={item} className="flex items-start gap-3 rounded-lg border border-line bg-paper p-5">
+              <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-gold-dark" />
+              <span className="text-sm leading-relaxed text-ink-soft">{item}</span>
+            </li>
+          ))}
+        </ul>
+        <p className="mt-6 text-sm text-ink-muted">
+          Not every channel applies to every property. Coverage scope is agreed during the review call based on how your guests actually reach you.
+        </p>
+      </Section>
 
       <Section>
         <PricingCards />

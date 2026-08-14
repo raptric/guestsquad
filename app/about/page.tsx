@@ -7,6 +7,7 @@ import { Guarantees } from "@/components/site/guarantees";
 import { CtaSection } from "@/components/site/cta-section";
 import { Breadcrumbs } from "@/components/site/breadcrumbs";
 import { JsonLd } from "@/components/site/json-ld";
+import { FaqAccordion } from "@/components/site/faq-accordion";
 import { buildMetadata, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
@@ -430,22 +431,12 @@ export default function AboutPage() {
       </div>
 
       {/* About FAQ */}
-      <Section surface>
+      <Section className="bg-[#F7F5F2]">
         <SectionHeading eyebrow="About Guest Squad" title="Common Questions About Guest Squad" />
-        <div className="mt-10 grid gap-6 sm:grid-cols-2">
-          {ABOUT_FAQS.map((item) => (
-            <div key={item.q} className="rounded-lg border border-line bg-paper p-6">
-              <h3 className="text-sm font-medium text-ink">{item.q}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-ink-soft">
-                {item.a.split(/(\[[^\]]+\]\([^)]+\))/).map((part, j) => {
-                  const m = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
-                  return m ? <Link key={j} href={m[2]} className="text-gold-dark underline underline-offset-4 hover:text-gold">{m[1]}</Link> : part;
-                })}
-              </p>
-            </div>
-          ))}
+        <div className="mt-8">
+          <FaqAccordion items={ABOUT_FAQS} />
         </div>
-        <p className="mt-8 text-sm text-ink-soft">
+        <p className="mt-6 text-sm text-ink-soft">
           Ready to talk?{" "}
           <Link href="/contact" className="text-gold-dark underline underline-offset-4 hover:text-gold">
             Contact us

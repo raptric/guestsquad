@@ -16,6 +16,7 @@ import { SERVICES } from "@/lib/site-data";
 import { buildMetadata, faqSchema, webPageSchema } from "@/lib/seo";
 import { JsonLd } from "@/components/site/json-ld";
 import { AssetBlock } from "@/components/site/asset-block";
+import { FaqAccordion } from "@/components/site/faq-accordion";
 
 export const metadata: Metadata = buildMetadata({
   title: "Hotel Answering Service & 24/7 Guest Support",
@@ -465,23 +466,8 @@ export default function HomePage() {
           className="mx-auto max-w-none"
           titleClassName="text-2xl md:text-3xl whitespace-nowrap"
         />
-        <div className="mx-auto mt-8 max-w-3xl divide-y divide-[#E5E0D8] rounded-xl border border-[#E5E0D8] bg-paper">
-          {HOME_FAQS.map((item, i) => (
-            <details key={item.q} className="group" {...(i < 2 ? { open: true } : {})}>
-              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-6 py-4 [&::-webkit-details-marker]:hidden hover:bg-gold/5 transition-colors">
-                <h3 className="text-sm font-semibold text-ink">{item.q}</h3>
-                <svg
-                  className="h-5 w-5 shrink-0 text-gold-dark transition-transform duration-200 group-open:rotate-180"
-                  fill="none" viewBox="0 0 16 16" stroke="currentColor" strokeWidth="2"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M4 6l4 4 4-4" />
-                </svg>
-              </summary>
-              <div className="mx-6 mb-5 border-l-2 border-gold-dark bg-gold/5 pl-4 pt-2 pb-1 rounded-r-sm">
-                <p className="text-sm leading-relaxed text-ink-soft">{item.a}</p>
-              </div>
-            </details>
-          ))}
+        <div className="mx-auto mt-8 max-w-3xl">
+          <FaqAccordion items={HOME_FAQS} defaultOpenCount={2} />
         </div>
       </Section>
 

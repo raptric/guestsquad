@@ -4,6 +4,7 @@ import { ContactForm } from "@/components/site/contact-form";
 import { CalendlyInlineWidget } from "@/components/site/calendly-inline-widget";
 import { Breadcrumbs } from "@/components/site/breadcrumbs";
 import { JsonLd } from "@/components/site/json-ld";
+import { FaqAccordion } from "@/components/site/faq-accordion";
 import { Section, SectionHeading } from "@/components/site/section";
 import { buildMetadata, breadcrumbSchema, faqSchema, contactPageSchema, webPageSchema } from "@/lib/seo";
 import { AssetBlock } from "@/components/site/asset-block";
@@ -144,17 +145,12 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <Section surface>
+      <Section className="bg-[#F7F5F2]">
         <SectionHeading eyebrow="Before You Reach Out" title="A few things people usually ask." />
-        <div className="mt-10 grid gap-6 sm:grid-cols-3">
-          {FAQS.map((item) => (
-            <div key={item.q} className="rounded-lg border border-line bg-paper p-6">
-              <h3 className="text-sm font-medium text-ink">{item.q}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-ink-soft">{item.a}</p>
-            </div>
-          ))}
+        <div className="mt-8">
+          <FaqAccordion items={FAQS} />
         </div>
-        <p className="mt-10 text-center text-sm text-ink-soft">
+        <p className="mt-8 text-center text-sm text-ink-soft">
           Still deciding?{" "}
           <Link href="/resources" className="text-gold-dark underline underline-offset-4 hover:text-gold">
             Read our comparisons

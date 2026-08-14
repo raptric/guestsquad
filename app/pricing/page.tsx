@@ -8,6 +8,7 @@ import { Breadcrumbs } from "@/components/site/breadcrumbs";
 import { JsonLd } from "@/components/site/json-ld";
 import { buildMetadata, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/seo";
 import { CoverageReviewButton } from "@/components/site/coverage-review-button";
+import { FaqAccordion } from "@/components/site/faq-accordion";
 
 export const metadata: Metadata = buildMetadata({
   title: "Hotel Guest Support Pricing | Guest Squad",
@@ -271,20 +272,10 @@ export default function PricingPage() {
       </div>
 
       {/* Section 9 — FAQ */}
-      <Section>
+      <Section className="bg-[#F7F5F2]">
         <SectionHeading eyebrow="Questions" title="Pricing questions, answered clearly." />
-        <div className="mt-10 grid gap-6 sm:grid-cols-2">
-          {FAQS.map((item) => (
-            <div key={item.q} className="rounded-lg border border-line bg-paper p-6">
-              <h3 className="text-sm font-medium text-ink">{item.q}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-ink-soft">
-                {item.a.split(/(\[[^\]]+\]\([^)]+\))/).map((part, j) => {
-                  const m = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
-                  return m ? <Link key={j} href={m[2]} className="text-gold-dark underline underline-offset-4 hover:text-gold">{m[1]}</Link> : part;
-                })}
-              </p>
-            </div>
-          ))}
+        <div className="mt-8">
+          <FaqAccordion items={FAQS} />
         </div>
       </Section>
 

@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { PageHero } from "@/components/site/page-hero";
 import { Section, SectionHeading } from "@/components/site/section";
+import { FaqAccordion } from "@/components/site/faq-accordion";
 import { ServiceCard } from "@/components/site/service-card";
 import { Breadcrumbs } from "@/components/site/breadcrumbs";
 import { JsonLd } from "@/components/site/json-ld";
@@ -356,15 +357,10 @@ export default function ResourcesPage() {
         </p>
       </Section>
 
-      <Section surface>
+      <Section className="bg-[#F7F5F2]">
         <SectionHeading eyebrow="Questions" title="Common questions about these resources." />
-        <div className="mt-10 grid gap-6 sm:grid-cols-2">
-          {RESOURCES_FAQS.map((item) => (
-            <div key={item.q} className="rounded-lg border border-line bg-paper p-6">
-              <h3 className="text-sm font-medium text-ink">{item.q}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-ink-soft">{item.a}</p>
-            </div>
-          ))}
+        <div className="mt-8">
+          <FaqAccordion items={RESOURCES_FAQS} />
         </div>
       </Section>
 

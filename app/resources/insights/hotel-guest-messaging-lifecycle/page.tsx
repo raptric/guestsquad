@@ -308,6 +308,54 @@ export default function GuestMessagingLifecyclePage() {
         </div>
       </Section>
 
+      {/* Related reading */}
+      <Section>
+        <h2 className="text-lg font-semibold text-ink">Related reading</h2>
+        <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            {
+              href: "/resources/hotel-guest-messaging-sop-template",
+              tag: "Template",
+              title: "Hotel Guest Messaging SOP Template",
+              body: "A ready-to-use SOP covering tone, response-time targets, and escalation rules across every stage of the guest journey.",
+            },
+            {
+              href: "/resources/ota-inbox-response-checklist",
+              tag: "Checklist",
+              title: "OTA Inbox Response Checklist",
+              body: "Platform-by-platform coverage standards for Booking.com, Expedia, and Airbnb inboxes.",
+            },
+            {
+              href: "/services/guest-messaging",
+              tag: "Service",
+              title: "Guest Messaging",
+              body: "SMS, WhatsApp, email, and in-app guest messages answered promptly across the full stay journey.",
+            },
+            {
+              href: "/services/ota-inbox-management",
+              tag: "Service",
+              title: "OTA Inbox Management",
+              body: "Booking.com, Expedia, and Airbnb inboxes monitored and answered so OTA leads convert before they go cold.",
+            },
+          ].map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="group flex flex-col justify-between rounded-lg border border-line bg-paper p-5 transition-colors hover:border-gold/50"
+            >
+              <div>
+                <span className="text-xs font-semibold uppercase tracking-wider text-ink-muted">{item.tag}</span>
+                <h3 className="mt-2 text-sm font-medium text-ink transition-colors group-hover:text-gold-dark">{item.title}</h3>
+                <p className="mt-1.5 text-sm leading-relaxed text-ink-soft">{item.body}</p>
+              </div>
+              <p className="mt-4 flex items-center gap-1 text-xs font-medium text-gold-dark group-hover:text-gold">
+                Read more <ArrowUpRight className="h-3 w-3" />
+              </p>
+            </Link>
+          ))}
+        </div>
+      </Section>
+
       <CtaSection
         title="Build a messaging system that works across the full guest journey."
         description="Tell us your current messaging setup and we'll show you where the gaps are and what consistent coverage would look like."

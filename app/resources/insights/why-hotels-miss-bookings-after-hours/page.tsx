@@ -349,6 +349,54 @@ export default function AfterHoursMissedBookingsPage() {
         </div>
       </Section>
 
+      {/* Related reading */}
+      <Section>
+        <h2 className="text-lg font-semibold text-ink">Related reading</h2>
+        <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            {
+              href: "/resources/missed-booking-calculator",
+              tag: "Calculator",
+              title: "Missed Booking Revenue Calculator",
+              body: "Estimate how much unanswered after-hours calls are costing your property each month.",
+            },
+            {
+              href: "/resources/after-hours-hotel-support-checklist",
+              tag: "Checklist",
+              title: "After-Hours Hotel Front Desk Support Checklist",
+              body: "A practical checklist for overnight coverage: what to handle, what to escalate, and what to track.",
+            },
+            {
+              href: "/services/after-hours-support",
+              tag: "Service",
+              title: "After-Hours Hotel Support",
+              body: "Overnight and weekend front-desk coverage for calls and messages outside your staffed hours.",
+            },
+            {
+              href: "/services/hotel-answering-service",
+              tag: "Service",
+              title: "Hotel Answering Service",
+              body: "24/7 call answering for reservation questions and guest requests, with every call answered by a trained person.",
+            },
+          ].map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="group flex flex-col justify-between rounded-lg border border-line bg-paper p-5 transition-colors hover:border-gold/50"
+            >
+              <div>
+                <span className="text-xs font-semibold uppercase tracking-wider text-ink-muted">{item.tag}</span>
+                <h3 className="mt-2 text-sm font-medium text-ink transition-colors group-hover:text-gold-dark">{item.title}</h3>
+                <p className="mt-1.5 text-sm leading-relaxed text-ink-soft">{item.body}</p>
+              </div>
+              <p className="mt-4 flex items-center gap-1 text-xs font-medium text-gold-dark group-hover:text-gold">
+                Read more <ArrowUpRight className="h-3 w-3" />
+              </p>
+            </Link>
+          ))}
+        </div>
+      </Section>
+
       <CtaSection
         title="Ready to close your overnight coverage gap?"
         description="Tell us your call volume, channels, and hours and we will walk through exactly what after-hours coverage your property needs."

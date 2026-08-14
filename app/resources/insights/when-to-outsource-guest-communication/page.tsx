@@ -312,6 +312,54 @@ export default function WhenToOutsourcePage() {
         </div>
       </Section>
 
+      {/* Related reading */}
+      <Section>
+        <h2 className="text-lg font-semibold text-ink">Related reading</h2>
+        <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            {
+              href: "/resources/coverage-gap-assessment",
+              tag: "Assessment",
+              title: "Coverage Gap Assessment",
+              body: "Map your unmonitored hours, channels, and escalation gaps before deciding what to fix first.",
+            },
+            {
+              href: "/resources/hotel-answering-service-cost",
+              tag: "Guide",
+              title: "How Much Does a Hotel Answering Service Cost?",
+              body: "Pricing models, what drives cost up or down, and what to ask before you sign.",
+            },
+            {
+              href: "/services/hotel-answering-service",
+              tag: "Service",
+              title: "Hotel Answering Service",
+              body: "24/7 call answering for reservation questions and guest requests, with every call answered by a trained person.",
+            },
+            {
+              href: "/services/guest-messaging",
+              tag: "Service",
+              title: "Guest Messaging",
+              body: "SMS, WhatsApp, email, and in-app guest messages answered promptly across the full stay journey.",
+            },
+          ].map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="group flex flex-col justify-between rounded-lg border border-line bg-paper p-5 transition-colors hover:border-gold/50"
+            >
+              <div>
+                <span className="text-xs font-semibold uppercase tracking-wider text-ink-muted">{item.tag}</span>
+                <h3 className="mt-2 text-sm font-medium text-ink transition-colors group-hover:text-gold-dark">{item.title}</h3>
+                <p className="mt-1.5 text-sm leading-relaxed text-ink-soft">{item.body}</p>
+              </div>
+              <p className="mt-4 flex items-center gap-1 text-xs font-medium text-gold-dark group-hover:text-gold">
+                Read more <ArrowUpRight className="h-3 w-3" />
+              </p>
+            </Link>
+          ))}
+        </div>
+      </Section>
+
       <CtaSection
         title="Start with a coverage review, not a contract."
         description="We assess your current gaps honestly and tell you whether outsourcing would make financial sense for your property before asking you to commit to anything."

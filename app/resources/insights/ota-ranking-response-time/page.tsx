@@ -520,7 +520,7 @@ export default function OtaRankingResponseTimePage() {
                   <p className="mt-1.5 text-sm leading-relaxed text-ink-soft">{item.body}</p>
                 </div>
                 <p className="mt-4 flex items-center gap-1 text-xs font-medium text-gold-dark group-hover:text-gold">
-                  View <ArrowUpRight className="h-3 w-3" />
+                  Read more <ArrowUpRight className="h-3 w-3" />
                 </p>
               </Link>
             ))}

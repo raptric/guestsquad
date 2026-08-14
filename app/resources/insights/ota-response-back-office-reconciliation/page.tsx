@@ -273,6 +273,54 @@ export default function OtaBackOfficeReconciliationPage() {
         </div>
       </Section>
 
+      {/* Related reading */}
+      <Section>
+        <h2 className="text-lg font-semibold text-ink">Related reading</h2>
+        <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            {
+              href: "/resources/booking-com-message-support",
+              tag: "Checklist",
+              title: "Booking.com & Expedia Message Support Checklist",
+              body: "Response-time targets, pre-booking standards, complaint handling, and escalation rules for OTA inboxes.",
+            },
+            {
+              href: "/resources/hotel-guest-messaging-sop-template",
+              tag: "Template",
+              title: "Hotel Guest Messaging SOP Template",
+              body: "A ready-to-use SOP covering tone, response-time targets, and escalation rules across every stage of the guest journey.",
+            },
+            {
+              href: "/services/ota-inbox-management",
+              tag: "Service",
+              title: "OTA Inbox Management",
+              body: "Booking.com, Expedia, and Airbnb inboxes monitored and answered so OTA leads convert before they go cold.",
+            },
+            {
+              href: "/services/back-office-operations",
+              tag: "Service",
+              title: "Back-Office Guest Operations",
+              body: "Night audit, OTA reconciliation, and guest-billing support handled daily so revenue leakage gets caught.",
+            },
+          ].map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="group flex flex-col justify-between rounded-lg border border-line bg-paper p-5 transition-colors hover:border-gold/50"
+            >
+              <div>
+                <span className="text-xs font-semibold uppercase tracking-wider text-ink-muted">{item.tag}</span>
+                <h3 className="mt-2 text-sm font-medium text-ink transition-colors group-hover:text-gold-dark">{item.title}</h3>
+                <p className="mt-1.5 text-sm leading-relaxed text-ink-soft">{item.body}</p>
+              </div>
+              <p className="mt-4 flex items-center gap-1 text-xs font-medium text-gold-dark group-hover:text-gold">
+                Read more <ArrowUpRight className="h-3 w-3" />
+              </p>
+            </Link>
+          ))}
+        </div>
+      </Section>
+
       <CtaSection
         title="Connect your OTA inbox management to your back-office operations."
         description="Tell us which OTAs you manage and how your current morning handoff works. We'll show you what a structured overnight coverage and reporting model would look like."

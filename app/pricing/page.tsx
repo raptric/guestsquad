@@ -258,9 +258,10 @@ export default function PricingPage() {
       {/* Slim dark CTA before FAQ */}
       <div className="bg-ink">
         <div className="container flex flex-col items-start justify-between gap-5 py-8 sm:flex-row sm:items-center">
-          <p className="whitespace-nowrap text-base font-medium text-paper">
-            Qualified properties can move into a 2-week pilot after review.
-          </p>
+          <div>
+            <p className="text-base font-medium text-paper">You do not need to know the right plan before reaching out. Most properties do not.</p>
+            <p className="mt-1 text-sm text-paper/60">Qualified properties can move into a 2-week pilot after review.</p>
+          </div>
           <div className="flex shrink-0 flex-col gap-3 sm:flex-row">
             <CoverageReviewButton variant="gold" size="sm" ctaLocation="pricing_pre_faq">
               Review My Coverage Needs
@@ -323,12 +324,6 @@ export default function PricingPage() {
         </div>
       </div>
 
-      {/* Section 10 — Reassurance line */}
-      <div className="border-t border-line bg-paper py-8 text-center">
-        <p className="text-sm text-ink-soft">
-          You do not need to know the right plan before reaching out. Most properties do not.
-        </p>
-      </div>
 
       {/* Section 11 — Final CTA */}
       <CtaSection

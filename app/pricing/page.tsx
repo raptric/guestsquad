@@ -272,6 +272,20 @@ export default function PricingPage() {
         </p>
       </Section>
 
+      {/* Section 5 — Support Model */}
+      <Section>
+        <div className="max-w-2xl">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.14em] text-gold-dark">Coverage Fit</p>
+          <h2 className="text-2xl font-medium text-ink">Coverage is scoped to fit the way your property operates</h2>
+          <p className="mt-4 text-sm leading-relaxed text-ink-soft">
+            Some properties are best served through efficient shared coverage. Others need a more dedicated setup because of interaction volume, operational complexity, or continuity requirements. We determine the right fit during the review call rather than applying the same model to every property.
+          </p>
+          <p className="mt-4 text-sm text-ink-muted">
+            The fit affects both how coverage is structured and how it is priced.
+          </p>
+        </div>
+      </Section>
+
       <Section surface compact>
         <ClientTrustBlock />
       </Section>

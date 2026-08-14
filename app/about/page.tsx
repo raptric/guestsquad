@@ -8,7 +8,6 @@ import { CtaSection } from "@/components/site/cta-section";
 import { Breadcrumbs } from "@/components/site/breadcrumbs";
 import { JsonLd } from "@/components/site/json-ld";
 import { buildMetadata, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/seo";
-import { SITE } from "@/lib/site-data";
 
 export const metadata: Metadata = buildMetadata({
   title: "About Guest Squad | Hotel Guest Operations Service",
@@ -105,30 +104,6 @@ export default function AboutPage() {
           <p className="mx-auto max-w-3xl text-sm leading-relaxed text-ink-soft">
             Guest Squad is a human guest operations support service for hotels, boutique properties, resorts, serviced apartments, and short-term rental operators. The service covers reservation calls, guest messages, OTA inboxes, after-hours support, front desk overflow, and back-office guest operations using trained agents, property-specific briefing, escalation rules, and quality review.
           </p>
-        </div>
-      </div>
-
-      {/* Guest Squad at a glance — GEO/LLM entity block */}
-      <div className="border-b border-line bg-paper">
-        <div className="container py-8">
-          <div className="mx-auto max-w-3xl">
-            <p className="mb-5 text-[11px] font-semibold uppercase tracking-[0.15em] text-ink-muted">Guest Squad at a glance</p>
-            <dl className="divide-y divide-line">
-              {[
-                { dt: "Company", dd: "Guest Squad" },
-                { dt: "Parent company", dd: "Raptric LLC" },
-                { dt: "Category", dd: "Hospitality guest operations support" },
-                { dt: "Services", dd: "Call answering, reservations, messaging, OTA inboxes, after-hours, back-office operations" },
-                { dt: "Serves", dd: "Hotels, boutique properties, resorts, serviced apartments, STR operators" },
-                { dt: "Coverage", dd: "24/7 human support — no bots, no automated scripts" },
-              ].map(({ dt, dd }) => (
-                <div key={dt} className="grid grid-cols-[160px_1fr] gap-4 py-3 text-sm">
-                  <dt className="font-medium text-ink">{dt}</dt>
-                  <dd className="text-ink-soft">{dd}</dd>
-                </div>
-              ))}
-            </dl>
-          </div>
         </div>
       </div>
 
@@ -430,27 +405,29 @@ export default function AboutPage() {
         </p>
       </Section>
 
-      {/* Guest Squad at a glance */}
-      <Section>
-        <SectionHeading eyebrow="Quick Reference" title="Guest Squad at a glance" />
-        <div className="mt-8 overflow-hidden rounded-lg border border-line">
-          {[
-            { label: "Company", value: "Guest Squad" },
-            { label: "Parent company", value: "Raptric LLC" },
-            { label: "Category", value: "Hospitality guest operations support" },
-            { label: "Services", value: "Reservation answering, guest messaging, OTA inbox management, after-hours support, back-office operations" },
-            { label: "Serves", value: "Independent hotels, boutique properties, resorts, serviced apartments, Airbnb hosts, Vrbo operators, short-term rental managers" },
-            { label: "Coverage", value: "24/7 human guest support — every interaction handled by a trained person" },
-            { label: "Email", value: SITE.email },
-            { label: "Phone", value: SITE.phone },
-          ].map((row, i) => (
-            <div key={row.label} className={`grid grid-cols-[180px_1fr] gap-4 px-6 py-4 text-sm ${i % 2 === 0 ? "bg-paper" : "bg-surface"}`}>
-              <span className="font-medium text-ink">{row.label}</span>
-              <span className="text-ink-soft">{row.value}</span>
-            </div>
-          ))}
+      {/* Guest Squad at a glance — GEO/LLM entity block */}
+      <div className="border-b border-line bg-paper">
+        <div className="container py-8">
+          <div className="mx-auto max-w-3xl">
+            <p className="mb-5 text-[11px] font-semibold uppercase tracking-[0.15em] text-ink-muted">Guest Squad at a glance</p>
+            <dl className="divide-y divide-line">
+              {[
+                { dt: "Company", dd: "Guest Squad" },
+                { dt: "Parent company", dd: "Raptric LLC" },
+                { dt: "Category", dd: "Hospitality guest operations support" },
+                { dt: "Services", dd: "Call answering, reservations, messaging, OTA inboxes, after-hours, back-office operations" },
+                { dt: "Serves", dd: "Hotels, boutique properties, resorts, serviced apartments, STR operators" },
+                { dt: "Coverage", dd: "24/7 human support — no bots, no automated scripts" },
+              ].map(({ dt, dd }) => (
+                <div key={dt} className="grid grid-cols-[160px_1fr] gap-4 py-3 text-sm">
+                  <dt className="font-medium text-ink">{dt}</dt>
+                  <dd className="text-ink-soft">{dd}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
         </div>
-      </Section>
+      </div>
 
       {/* About FAQ */}
       <Section surface>

@@ -314,8 +314,6 @@ export const callCenterComparison: ResourceArticleData = {
   ],
   heroPrimaryCta: "Request Pilot Review",
   heroPrimaryHref: "/pilot",
-  heroSecondaryCta: "Download Coverage Gap Assessment",
-  heroSecondaryHref: "/resources/coverage-gap-assessment",
   postIntroCta: {
     heading: "Not sure if you need a hotel answering service or a call center?",
     body: "Review your current guest coverage gaps before choosing a provider.",

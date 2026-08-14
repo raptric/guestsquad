@@ -68,8 +68,8 @@ export function ComparisonArticle({ data }: { data: ResourceArticleData }) {
         description={data.description}
         primaryCta={data.heroPrimaryCta}
         primaryHref={data.heroPrimaryHref}
-        secondaryCta={data.heroSecondaryCta ?? "View Pricing"}
-        secondaryHref={data.heroSecondaryHref ?? "/pricing"}
+        secondaryCta={data.heroSecondaryCta}
+        secondaryHref={data.heroSecondaryHref}
       />
 
       <Section>

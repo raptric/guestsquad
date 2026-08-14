@@ -578,13 +578,6 @@ export const answeringServiceCostGuide: GuideArticleData = {
     pdfHref: "/downloads/coverage-gap-assessment.pdf",
     ctaLabel: "Download Coverage Gap Assessment",
   },
-  assetCta: {
-    heading: "Estimate what unanswered calls are actually costing your property.",
-    calculatorHref: "/resources/missed-booking-calculator",
-    ctaLabel: "Open the Missed Booking Calculator",
-    serviceHref: "/pricing",
-    serviceLabel: "View Pricing",
-  },
   schemaAbout: { type: "Service", name: "Hotel Answering Service", url: "https://guestsquad.com/services/hotel-answering-service", serviceType: "Hotel Answering Service", areaServed: "Worldwide" },
   schemaMentions: [
     { type: "Thing", name: "Hotel Answering Service Cost" },

@@ -127,15 +127,19 @@ export default function PricingPage() {
 
       <PageHero
         eyebrow="Pricing"
-        title="Plans built around your property, not a generic tier."
-        description="Every engagement starts with a short conversation about your volume, channels, and current gaps, then we recommend the right level of coverage."
+        title="Pricing built around your property's coverage needs"
+        description="Every Guest Squad plan is built around the guest communication channels your property actually uses. Final pricing is scoped after a short review of your interaction volume, coverage hours, property complexity, and support model fit."
+        primaryCta="Review My Coverage Needs"
+        primaryHref="/contact"
+        secondaryCta="See What Affects Pricing"
+        secondaryHref="#what-affects-pricing"
       />
 
       {/* Direct answer block */}
       <div className="border-b border-line bg-surface">
         <div className="container py-8">
           <p className="mx-auto max-w-3xl text-sm leading-relaxed text-ink-soft">
-            Guest Squad pricing is scoped per property or portfolio based on channels covered, call and message volume, hours of coverage, and reporting needs. There is no fixed published rate because two properties with different volumes and channels need different guest operations coverage plans. A quote is provided after a short discovery call and reflects your actual operation.
+            Guest Squad pricing is scoped per property based on interaction volume, coverage hours, property complexity, and support model fit. Every plan is built around the channels your guests actually use. A quote is provided after a short review call.
           </p>
         </div>
       </div>

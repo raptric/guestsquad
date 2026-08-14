@@ -10,9 +10,9 @@ import { buildMetadata, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib
 import { CoverageReviewButton } from "@/components/site/coverage-review-button";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Hotel Guest Support Pricing | Plans & Pricing",
+  title: "Hotel Guest Support Pricing | Guest Squad",
   description:
-    "Starter, Growth, and Custom guest operations plans for hotels, resorts, serviced apartments, and Airbnb operators. Get a quote based on your property.",
+    "Guest Squad pricing is scoped around your property's channels, interaction volume, and coverage hours. Every plan starts with the channels your guests use. Get a quote after a short review call.",
   path: "/pricing",
 });
 
@@ -54,7 +54,7 @@ export default function PricingPage() {
         data={[
           webPageSchema({
             name: "Hotel Guest Support Pricing | Plans & Pricing | Guest Squad",
-            description: "Starter, Growth, and Custom guest operations plans for hotels, resorts, serviced apartments, and Airbnb operators. Get a quote based on your property.",
+            description: "Guest Squad pricing is scoped around your property's channels, interaction volume, and coverage hours. Every plan starts with the channels your guests use. Get a quote after a short review call.",
             path: "/pricing",
             primaryImageUrl: "https://guestsquad.com/brand-assets/og-image.jpg",
             primaryImageAlt: "Guest Squad pricing — hotel guest operations coverage plans",

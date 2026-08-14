@@ -4,7 +4,7 @@ import { vacationRentalAnsweringData } from "@/lib/service-content";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Vacation Rental Answering Service | Airbnb & Vrbo | Guest Squad",
+  title: "Vacation Rental Answering Service | Airbnb & Vrbo",
   description: vacationRentalAnsweringData.description,
   path: `/services/${vacationRentalAnsweringData.slug}`,
 });

@@ -509,19 +509,38 @@ export default function HomePage() {
           eyebrow="Tools and Resources"
           title="Find and fix your guest coverage gaps."
         />
-        <div className="mt-6 grid gap-4 sm:grid-cols-3">
-          <AssetBlock
-            heading="Estimate missed revenue"
-            assets={[{ label: "Missed Booking Revenue Calculator", href: "/resources/missed-booking-calculator" }]}
-          />
-          <AssetBlock
-            heading="See how reporting works"
-            assets={[{ label: "View Sample Weekly Report", href: "/resources/sample-weekly-report" }]}
-          />
-          <AssetBlock
-            heading="Identify your gaps"
-            assets={[{ label: "Guest Coverage Gap Assessment", href: "/resources/coverage-gap-assessment" }]}
-          />
+        <p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink-soft">
+          Use these tools to estimate missed revenue, review reporting, and identify where guest coverage is breaking down.
+        </p>
+        <div className="mt-6 flex flex-col gap-4">
+          {/* Calculator — primary */}
+          <Link
+            href="/resources/missed-booking-calculator"
+            className="group flex items-center justify-between gap-6 rounded-xl border border-gold/40 bg-paper px-7 py-6 shadow-sm transition-colors hover:border-gold hover:bg-gold/5"
+          >
+            <div>
+              <p className="text-[11px] font-semibold uppercase tracking-[0.15em] text-gold-dark">
+                Most useful first step
+              </p>
+              <h3 className="mt-1 text-base font-semibold text-ink">Missed Booking Revenue Calculator</h3>
+              <p className="mt-1 text-sm text-ink-soft">Estimate how much revenue your property loses to unanswered calls and messages.</p>
+            </div>
+            <span className="shrink-0 inline-flex items-center gap-1.5 rounded-lg bg-gold-dark px-4 py-2 text-sm font-medium text-paper transition-colors group-hover:bg-gold">
+              Calculate →
+            </span>
+          </Link>
+
+          {/* Secondary resources */}
+          <div className="grid gap-4 sm:grid-cols-2">
+            <AssetBlock
+              heading="See how reporting works"
+              assets={[{ label: "View Sample Weekly Report", href: "/resources/sample-weekly-report" }]}
+            />
+            <AssetBlock
+              heading="Identify your gaps"
+              assets={[{ label: "Guest Coverage Gap Assessment", href: "/resources/coverage-gap-assessment" }]}
+            />
+          </div>
         </div>
       </Section>
 

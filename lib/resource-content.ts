@@ -528,7 +528,7 @@ export const answeringServiceCostGuide: GuideArticleData = {
     {
       heading: "What We Quote Instead",
       paragraphs: [
-        "Guest Squad doesn't publish flat pricing because doing so would mean either overcharging low-volume properties or underpricing high-volume ones. Instead, every engagement starts with a short conversation about your volume and channels, and we recommend one of three plans accordingly; see the full breakdown on the Pricing page. Every plan starts with a pilot period so you see real results before committing further. If you want to understand what the [hotel answering service for independent hotels](/services/hotel-answering-service) actually covers before requesting a quote, that is a good place to start.",
+        "Guest Squad doesn't publish flat pricing because doing so would mean either overcharging low-volume properties or underpricing high-volume ones. Every plan starts with a pilot period so you see real results before committing further. If you want to understand what the [hotel answering service for independent hotels](/services/hotel-answering-service) actually covers before requesting a quote, that is a good place to start.",
       ],
     },
   ],

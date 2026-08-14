@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@microsoft/clarity": "^1.0.2",
     "@types/nodemailer": "^8.0.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",

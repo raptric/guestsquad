@@ -466,7 +466,7 @@ export default function HomePage() {
           className="mx-auto max-w-none"
           titleClassName="text-2xl md:text-3xl whitespace-nowrap"
         />
-        <div className="mx-auto mt-8 max-w-3xl">
+        <div className="mt-8">
           <FaqAccordion items={HOME_FAQS} defaultOpenCount={2} />
         </div>
       </Section>

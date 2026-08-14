@@ -5,6 +5,7 @@ import { JsonLd } from "@/components/site/json-ld";
 import { Breadcrumbs } from "@/components/site/breadcrumbs";
 import { CtaSection } from "@/components/site/cta-section";
 import { Section } from "@/components/site/section";
+import { FaqAccordion } from "@/components/site/faq-accordion";
 import { buildMetadata, articleSchema, breadcrumbSchema, faqSchema } from "@/lib/seo";
 import { SITE } from "@/lib/site-data";
 
@@ -345,17 +346,10 @@ export default function AfterHoursMissedBookingsPage() {
         </div>
       </div>
 
-      <Section surface>
-        <div className="mx-auto max-w-2xl">
-          <h2 className="text-lg font-semibold text-ink">Frequently asked questions</h2>
-          <div className="mt-8 flex flex-col gap-6">
-            {FAQS.map((item) => (
-              <div key={item.q} className="rounded-lg border border-line bg-paper p-6">
-                <h3 className="text-sm font-medium text-ink">{item.q}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-ink-soft">{item.a}</p>
-              </div>
-            ))}
-          </div>
+      <Section className="bg-[#F7F5F2]">
+        <h2 className="mx-auto max-w-3xl text-lg font-semibold text-ink">Frequently asked questions</h2>
+        <div className="mt-8">
+          <FaqAccordion items={FAQS} />
         </div>
       </Section>
 

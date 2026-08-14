@@ -27,7 +27,7 @@ export function FaqAccordion({
   defaultOpenCount?: number;
 }) {
   return (
-    <div className="divide-y divide-[#E5E0D8] rounded-xl border border-[#E5E0D8] bg-paper">
+    <div className="mx-auto max-w-3xl divide-y divide-[#E5E0D8] rounded-xl border border-[#E5E0D8] bg-paper">
       {items.map((item, i) => (
         <details key={item.q} className="group" {...(i < defaultOpenCount ? { open: true } : {})}>
           <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-6 py-4 transition-colors hover:bg-gold/5 [&::-webkit-details-marker]:hidden">

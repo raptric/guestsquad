@@ -239,6 +239,39 @@ export default function PricingPage() {
         </Section>
       </div>
 
+      {/* Section 4 — Coverage Types */}
+      <Section surface>
+        <SectionHeading eyebrow="How Properties Structure Coverage" title="How properties typically scope coverage" />
+        <div className="mt-10 grid gap-6 sm:grid-cols-2">
+          {[
+            {
+              title: "After-hours coverage",
+              body: "For properties that need support when the front desk is offline — evenings, weekends, and overnight gaps.",
+            },
+            {
+              title: "Overflow coverage",
+              body: "For properties that need backup during busy call and message periods when the team is at capacity.",
+            },
+            {
+              title: "Extended coverage",
+              body: "For properties that need broader daily support across their core guest communication channels.",
+            },
+            {
+              title: "Custom coverage",
+              body: "For properties with higher interaction volume, multiple locations, or more complex operational coordination needs.",
+            },
+          ].map((card) => (
+            <div key={card.title} className="rounded-lg border border-line bg-paper p-6">
+              <h3 className="text-sm font-semibold text-ink">{card.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-ink-soft">{card.body}</p>
+            </div>
+          ))}
+        </div>
+        <p className="mt-6 text-sm text-ink-muted">
+          These are coverage patterns, not fixed plan tiers. Most properties start with one pattern and adjust as their coverage needs become clearer.
+        </p>
+      </Section>
+
       <Section surface compact>
         <ClientTrustBlock />
       </Section>

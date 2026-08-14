@@ -1,8 +1,7 @@
 const MUTED = "#A8A29E";
 const GROUP_LABEL = "text-[9px] font-semibold uppercase tracking-[0.18em]";
 
-// Real brand logos via Clearbit CDN — exact assets, retina-ready
-function Logo({ domain, name, h = 22 }: { domain: string; name: string; h?: number }) {
+function ClearbitLogo({ domain, name, h = 22 }: { domain: string; name: string; h?: number }) {
   return (
     <img
       src={`https://logo.clearbit.com/${domain}`}
@@ -13,12 +12,37 @@ function Logo({ domain, name, h = 22 }: { domain: string; name: string; h?: numb
   );
 }
 
+// Icon + label — using exact brand icon URLs provided
+function IconLogo({ src, name, iconSize = 20 }: { src: string; name: string; iconSize?: number }) {
+  return (
+    <span className="flex items-center gap-2">
+      <img
+        src={src}
+        alt={name}
+        style={{ height: `${iconSize}px`, width: `${iconSize}px`, objectFit: "contain" }}
+        loading="lazy"
+      />
+      <span
+        style={{
+          fontFamily: "-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif",
+          fontSize: "13px",
+          fontWeight: 700,
+          color: "#1C1917",
+          letterSpacing: "-0.1px",
+        }}
+      >
+        {name}
+      </span>
+    </span>
+  );
+}
+
 const OTA = [
-  { domain: "booking.com",  name: "Booking.com",  h: 22 },
-  { domain: "expedia.com",  name: "Expedia",       h: 22 },
-  { domain: "airbnb.com",   name: "Airbnb",        h: 22 },
-  { domain: "vrbo.com",     name: "Vrbo",          h: 20 },
-  { domain: "hotels.com",   name: "Hotels.com",    h: 22 },
+  { src: "https://cf2.bstatic.com/static/img/favicon/9ca83ba2a5a3293ff07452cb24949a5843af4592.svg", name: "Booking.com" },
+  { src: "https://www.expedia.com/favicon.ico",                                                     name: "Expedia" },
+  { src: "https://a0.muscache.com/airbnb/static/icons/apple-touch-icon-152x152-7b7c6444b63d8b6ebad9dae7169e5ed6.png", name: "Airbnb" },
+  { src: "https://www.vrbo.com/favicon.ico",                                                        name: "Vrbo" },
+  { src: "https://www.hotels.com/favicon.ico",                                                      name: "Hotels.com" },
 ];
 
 const PMS = [
@@ -94,7 +118,7 @@ export function PlatformLogos() {
               <div className="flex flex-wrap items-center gap-x-5 gap-y-3">
                 {OTA.map((l) => (
                   <div key={l.name} className="opacity-70 transition-opacity hover:opacity-100">
-                    <Logo domain={l.domain} name={l.name} h={l.h} />
+                    <IconLogo src={l.src} name={l.name} iconSize={20} />
                   </div>
                 ))}
               </div>
@@ -108,7 +132,7 @@ export function PlatformLogos() {
               <div className="flex flex-wrap items-center gap-x-5 gap-y-3">
                 {PMS.map((l) => (
                   <div key={l.name} className="opacity-70 transition-opacity hover:opacity-100">
-                    <Logo domain={l.domain} name={l.name} h={l.h} />
+                    <ClearbitLogo domain={l.domain} name={l.name} h={l.h} />
                   </div>
                 ))}
               </div>

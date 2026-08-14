@@ -373,12 +373,7 @@ export const callCenterComparison: ResourceArticleData = {
       b: "Follows generic escalation rules not tailored to your operation.",
       c: "Written escalation rules agreed before go-live; urgent issues routed immediately, everything else held for the daily summary.",
     },
-    {
-      feature: "Contract structure",
-      a: "Pilot-first, then month-to-month with 30 days notice to cancel — so you see results before committing further.",
-      b: "Often requires longer lock-in contracts before you've seen real performance.",
-      c: "Pilot period first, then month-to-month with 30 days' written notice — no long-term commitment required.",
-    },
+
     {
       feature: "Speed to launch",
       a: "Typically one to two weeks depending on onboarding complexity.",
@@ -390,12 +385,6 @@ export const callCenterComparison: ResourceArticleData = {
       a: "Independent hotels, boutique properties, and operators who need personalized inbound coverage built around their property.",
       b: "Large organizations prioritizing very high call volume and standardized workflows across many unrelated industries.",
       c: "For hotels choosing a hotel answering service over a generic call center, Guest Squad covers reservations, guest calls, messages, and OTA inboxes — one property at a time.",
-    },
-    {
-      feature: "Pricing structure",
-      a: "Usually based on coverage requirements, usage, or agreed service scope — contract structures vary by provider.",
-      b: "Often based on agent capacity, call volume, seats, or longer-term commitments.",
-      c: "Pilot-first, followed by month-to-month coverage tailored to the property — no long-term contract required.",
     },
   ],
   verdictHeading: "Which fits your property: hotel answering service or call center?",

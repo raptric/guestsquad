@@ -112,28 +112,32 @@ export function ComparisonArticle({ data }: { data: ResourceArticleData }) {
       </Section>
 
       {data.postTableCta && (
-        <div className="container py-8">
-          <div className="mx-auto max-w-2xl rounded-xl border border-gold/30 bg-gold/5 px-7 py-6">
-            <p className="text-base font-semibold text-ink">{data.postTableCta.heading}</p>
-            <p className="mt-2 text-sm leading-relaxed text-ink-soft">{data.postTableCta.body}</p>
-            <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center">
+        <section className="bg-ink py-14">
+          <div className="container text-center">
+            <h2 className="text-2xl font-medium leading-tight text-paper md:text-3xl">
+              {data.postTableCta.heading}
+            </h2>
+            <p className="mt-3 text-sm leading-relaxed text-paper/65">
+              {data.postTableCta.body}
+            </p>
+            <div className="mt-6 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Link
                 href={data.postTableCta.primaryHref}
-                className="inline-flex items-center justify-center rounded-md bg-gold px-5 py-2.5 text-sm font-semibold text-ink hover:bg-gold/90"
+                className="inline-flex items-center justify-center rounded-md bg-gold px-6 py-3 text-sm font-semibold text-ink hover:bg-gold/90"
               >
                 {data.postTableCta.primaryLabel}
               </Link>
               {data.postTableCta.secondaryLabel && data.postTableCta.secondaryHref && (
                 <Link
                   href={data.postTableCta.secondaryHref}
-                  className="text-sm font-medium text-gold-dark hover:text-gold"
+                  className="inline-flex items-center justify-center rounded-md border border-paper/25 px-6 py-3 text-sm font-medium text-paper hover:border-paper/60"
                 >
-                  {data.postTableCta.secondaryLabel} →
+                  {data.postTableCta.secondaryLabel}
                 </Link>
               )}
             </div>
           </div>
-        </div>
+        </section>
       )}
 
       <Section>

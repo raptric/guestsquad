@@ -219,13 +219,6 @@ export default function ReservationCallsRevenuePage() {
         </div>
       </Section>
 
-      <Section className="bg-[#F7F5F2]">
-        <h2 className="mx-auto max-w-3xl text-lg font-semibold text-ink">Frequently asked questions</h2>
-        <div className="mt-8">
-          <FaqAccordion items={FAQS} />
-        </div>
-      </Section>
-
       <div className="border-t border-line bg-paper">
         <div className="container py-12">
           <div className="mx-auto max-w-2xl">
@@ -270,6 +263,13 @@ export default function ReservationCallsRevenuePage() {
           </div>
         </div>
       </div>
+
+      <Section className="bg-[#F7F5F2]">
+        <h2 className="mx-auto max-w-3xl text-lg font-semibold text-ink">Frequently asked questions</h2>
+        <div className="mt-8">
+          <FaqAccordion items={FAQS} />
+        </div>
+      </Section>
 
       <CtaSection
         title="Stop losing reservation calls to voicemail."

@@ -113,11 +113,11 @@ export const hotelAnsweringServiceData: ServiceDetailData = {
     description: "Not sure where your call coverage gaps are? The Coverage Gap Assessment walks through your hours, channels, and escalation readiness so you know exactly what to fix first.",
   },
   assetLinks: [
-    { label: "Missed Booking Revenue Calculator", href: "/resources/missed-booking-calculator" },
+    { label: "How Much Does a Hotel Answering Service Cost?", href: "/resources/hotel-answering-service-cost" },
     { label: "Hotel Answering Service vs Call Center", href: "/resources/hotel-answering-service-vs-call-center" },
     { label: "Hotel Answering Service vs. AI Voice Agent", href: "/resources/hotel-answering-service-vs-ai-voice" },
-    { label: "How Much Does a Hotel Answering Service Cost?", href: "/resources/hotel-answering-service-cost" },
     { label: "Hotel Front Desk Overflow Support Guide", href: "/resources/hotel-front-desk-overflow-support" },
+    { label: "Missed Booking Revenue Calculator", href: "/resources/missed-booking-calculator" },
     { label: "View Sample Weekly Report", href: "/resources/sample-weekly-report" },
     { label: "Download After-Hours Checklist", href: "/resources/after-hours-checklist" },
   ],

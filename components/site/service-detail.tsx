@@ -247,7 +247,7 @@ export function ServiceDetail({ data }: { data: ServiceDetailData }) {
             <p className="text-xs font-semibold uppercase tracking-[0.14em] text-gold-dark">Keep Exploring</p>
             <h2 className="mt-1.5 text-2xl font-medium text-ink">Explore what fits your situation.</h2>
           </div>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
 
             {/* Related services */}
             {related.length > 0 && (
@@ -282,6 +282,26 @@ export function ServiceDetail({ data }: { data: ServiceDetailData }) {
                       >
                         <ArrowUpRight className="mt-0.5 h-3.5 w-3.5 shrink-0 text-ink-muted transition-colors group-hover:text-gold-dark" />
                         {r.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {/* Research & insights */}
+            {insights.length > 0 && (
+              <div className="rounded-lg border border-line bg-paper p-6">
+                <p className="mb-4 text-xs font-semibold uppercase tracking-[0.14em] text-ink-muted">Research &amp; Insights</p>
+                <ul className="flex flex-col gap-3">
+                  {insights.slice(0, 2).map((i) => (
+                    <li key={i.slug}>
+                      <Link
+                        href={`/resources/insights/${i.slug}`}
+                        className="group flex items-start gap-2 text-sm text-ink-soft transition-colors hover:text-ink"
+                      >
+                        <ArrowUpRight className="mt-0.5 h-3.5 w-3.5 shrink-0 text-ink-muted transition-colors group-hover:text-gold-dark" />
+                        {i.title}
                       </Link>
                     </li>
                   ))}

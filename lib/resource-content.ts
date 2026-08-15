@@ -492,7 +492,7 @@ export const answeringServiceCostGuide: GuideArticleData = {
   dateModified: "2026-08-07T00:00:00+00:00",
   intro: [
     "\"How much does this cost?\" is usually the first question a GM asks, and the hardest one to get a straight answer to. Most providers, including Guest Squad, don't publish flat rates, because the honest answer depends on your volume, channels, and coverage hours.",
-    "What most properties find when they run the numbers: a single recovered group booking or a week of captured after-hours reservations covers the monthly cost entirely. The right question is not what the service costs — it is whether it pays for itself on your volume.",
+    "What most properties find when they run the numbers: a single recovered group booking or a week of captured after-hours reservations covers the monthly cost entirely. The right question is not what the service costs, but whether it pays for itself on your volume.",
     "This guide walks through the pricing models actually used in this industry, what genuinely moves the price, and the costs that tend to show up after you've already signed.",
   ],
   sections: [
@@ -530,7 +530,7 @@ export const answeringServiceCostGuide: GuideArticleData = {
     {
       heading: "What We Quote Instead",
       paragraphs: [
-        "Pricing is scoped to your property — coverage hours, channels, and call volume all affect the number. Every engagement starts with a pilot, so you see what coverage actually looks like before committing to anything further. If you want to understand what's included before requesting a quote, the [hotel answering service for independent hotels](/services/hotel-answering-service) page covers the full scope.",
+        "Pricing is scoped to your property: coverage hours, channels, and call volume all affect the number. Every engagement starts with a pilot, so you see what coverage actually looks like before committing to anything further. If you want to understand what's included before requesting a quote, the [hotel answering service for independent hotels](/services/hotel-answering-service) page covers the full scope.",
         "If your main concern is missed reservation calls, after-hours gaps, or front-desk overflow, the [hotel answering service](/services/hotel-answering-service) page explains exactly what's covered and how coverage is structured before any quote is involved.",
       ],
     },
@@ -542,7 +542,7 @@ export const answeringServiceCostGuide: GuideArticleData = {
     },
     {
       q: "What does the pilot cover?",
-      a: "The pilot scope is agreed with you before it starts — based on your property's channels, call volume, and coverage gaps. Book a coverage review to walk through what makes sense for your property.",
+      a: "The pilot scope is agreed with you before it starts, based on your property's channels, call volume, and coverage gaps. Book a coverage review to walk through what makes sense for your property.",
     },
     {
       q: "Does the price change if our call volume spikes?",
@@ -558,14 +558,14 @@ export const answeringServiceCostGuide: GuideArticleData = {
     },
     {
       q: "Is a hotel answering service worth the cost?",
-      a: "For most independent hotels and boutique properties, yes — provided your property receives a meaningful volume of inbound calls. The break-even point is usually low: one or two reservation calls captured after hours that would otherwise have gone to voicemail typically covers the monthly cost.",
+      a: "For most independent hotels and boutique properties, yes, provided your property receives a meaningful volume of inbound calls. The break-even point is usually low: one or two reservation calls captured after hours that would otherwise have gone to voicemail typically covers the monthly cost.",
     },
     {
       q: "How does the cost compare to hiring overnight staff?",
       a: "Hiring a dedicated overnight position involves salary, benefits, and turnover costs year-round regardless of call volume. An answering service is scoped to your actual volume, so for most independent hotels it is significantly less expensive per answered call than a full overnight hire. The [after-hours hotel support checklist](/resources/after-hours-hotel-support-checklist) helps you map what overnight coverage actually needs to include before you compare costs.",
     },
     {
-      q: "What is included in the price — just calls, or messaging too?",
+      q: "What is included in the price: just calls, or messaging too?",
       a: "It depends on the plan. Some plans cover phone calls only; others include OTA inbox management, SMS, WhatsApp, and email alongside call answering. Guest Squad scopes each plan to the channels you actually need coverage for.",
     },
     {

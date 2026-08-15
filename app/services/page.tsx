@@ -12,6 +12,7 @@ import { SERVICES } from "@/lib/site-data";
 import { INSIGHTS } from "@/lib/insights-content";
 import { buildMetadata, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/seo";
 import { SITE } from "@/lib/site-data";
+import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = buildMetadata({
   title: "Hotel Guest Operations Services",
@@ -148,37 +149,41 @@ export default function ServicesPage() {
         </p>
       </Section>
 
-      {/* Service finder table */}
+      {/* Service finder — decision rail */}
       <Section surface>
         <SectionHeading
           eyebrow="Where to Start"
           title="Match your gap to the right service."
         />
+        <style>{`
+          @keyframes row-in {
+            from { opacity: 0; transform: translateY(4px); }
+            to   { opacity: 1; transform: translateY(0); }
+          }
+          .need-row { animation: row-in 200ms ease both; }
+          .need-row:hover .need-connector { opacity: 1; color: var(--color-gold-dark, #b08d57); }
+          .need-row:hover .need-service   { color: var(--color-gold-dark, #b08d57); transform: translateX(2px); }
+        `}</style>
         <div className="mt-10 overflow-hidden rounded-lg border border-line">
-          <table className="w-full text-sm">
-            <thead>
-              <tr className="border-b border-line bg-surface">
-                <th className="px-6 py-4 text-left text-xs font-semibold uppercase tracking-[0.14em] text-ink-muted">
-                  Your current gap
-                </th>
-                <th className="px-6 py-4 text-left text-xs font-semibold uppercase tracking-[0.14em] text-ink-muted">
-                  Best starting service
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {NEED_TABLE.map((row, i) => (
-                <tr key={row.need} className={i < NEED_TABLE.length - 1 ? "border-b border-line" : ""}>
-                  <td className="px-6 py-4 text-ink-soft">{row.need}</td>
-                  <td className="px-6 py-4">
-                    <Link href={row.href} className="font-medium text-gold-dark underline-offset-4 hover:underline">
-                      {row.service}
-                    </Link>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+          {/* Header */}
+          <div className="grid grid-cols-[1fr_auto_1fr] items-center border-b border-line bg-surface px-6 py-3">
+            <span className="text-xs font-semibold uppercase tracking-[0.14em] text-ink-muted">Your current gap</span>
+            <span className="w-8" />
+            <span className="text-xs font-semibold uppercase tracking-[0.14em] text-ink-muted">Best starting service</span>
+          </div>
+          {/* Rows */}
+          {NEED_TABLE.map((row, i) => (
+            <Link
+              key={row.need}
+              href={row.href}
+              className={`need-row grid grid-cols-[1fr_auto_1fr] items-center gap-4 px-6 py-4 transition-colors duration-150 hover:bg-gold/5${i < NEED_TABLE.length - 1 ? " border-b border-line" : ""}`}
+              style={{ animationDelay: `${i * 40}ms` }}
+            >
+              <span className="text-sm text-ink-soft">{row.need}</span>
+              <ArrowRight className="need-connector h-3.5 w-3.5 shrink-0 text-line opacity-40 transition-all duration-150" />
+              <span className="need-service text-sm font-medium text-ink transition-all duration-150">{row.service}</span>
+            </Link>
+          ))}
         </div>
       </Section>
 

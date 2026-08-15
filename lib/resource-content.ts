@@ -531,6 +531,7 @@ export const answeringServiceCostGuide: GuideArticleData = {
       heading: "What We Quote Instead",
       paragraphs: [
         "Pricing is scoped to your property — coverage hours, channels, and call volume all affect the number. Every engagement starts with a pilot, so you see what coverage actually looks like before committing to anything further. If you want to understand what's included before requesting a quote, the [hotel answering service for independent hotels](/services/hotel-answering-service) page covers the full scope.",
+        "If your main concern is missed reservation calls, after-hours gaps, or front-desk overflow, the [hotel answering service](/services/hotel-answering-service) page explains exactly what's covered and how coverage is structured before any quote is involved.",
       ],
     },
   ],

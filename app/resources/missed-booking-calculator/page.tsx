@@ -214,8 +214,8 @@ export default function CalculatorPage() {
       </Section>
 
       <CtaSection
-        title="Ready to stop leaving bookings on the table?"
-        description="Start with a 2-week pilot. We review your call gaps, OTA inboxes, and after-hours needs — and recommend a plan before you commit to anything."
+        title="Know your number. Now close the gap."
+        description="See which service fits your coverage gap, confirm the pricing works for your volume, and book a coverage review when you're ready."
       />
     </>
   );

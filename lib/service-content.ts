@@ -462,7 +462,7 @@ export const afterHoursData: ServiceDetailData = {
   eyebrow: "After-Hours Hotel Support",
   title: "After-Hours Hotel Front Desk Support for Calls and Guest Messages",
   description:
-    "Overnight and weekend call and message coverage for hotels — handled by a trained person without hiring a night shift. Covers late check-ins, guest inquiries, and escalations.",
+    "Overnight and weekend call and message coverage for hotels, handled by a trained person without hiring a night shift. Covers late check-ins, guest inquiries, and escalations.",
   schemaAbout: { "@type": "Thing", "name": "Hotel After-Hours Front Desk Coverage" },
   schemaServiceOutput: "Overnight and weekend call and message coverage for hotels, handling late check-ins, guest inquiries, and emergency escalations outside front desk hours",
   schemaSubjectOf: [
@@ -496,7 +496,7 @@ export const afterHoursData: ServiceDetailData = {
   primaryHref: "/pilot",
   introHeading: "What is after-hours hotel front desk support?",
   answerBlock:
-    "After-hours hotel front desk support means your property has a live, trained person covering guest calls and messages through the night and on weekends — without you hiring a full overnight shift. Late check-ins, access questions, noise complaints, and routine overnight inquiries are handled directly. Genuine emergencies involving guest safety, security, or property damage are escalated immediately to your designated on-call contact, following the protocol you set during onboarding.\n\nMost independent hotels and boutique properties run their front desk until 10–11pm and then have no meaningful overnight coverage. That gap costs real bookings and real guest satisfaction scores. After-hours support fills that window without adding permanent headcount to your payroll. The [after-hours hotel support checklist](/resources/after-hours-hotel-support-checklist) walks through how to assess your overnight coverage gaps before setting up a support layer.",
+    "After-hours hotel front desk support means your property has a live, trained person covering guest calls and messages through the night and on weekends, without hiring a full overnight shift. Late check-ins, access questions, noise complaints, and routine overnight inquiries are handled directly. Genuine emergencies involving guest safety, security, or property damage are escalated immediately to your designated on-call contact, following the protocol you set during onboarding.\n\nMost independent hotels and boutique properties run their front desk until 10–11pm and then have no meaningful overnight coverage. That gap costs real bookings and real guest satisfaction scores. After-hours support fills that window without adding permanent headcount to your payroll. The [after-hours hotel support checklist](/resources/after-hours-hotel-support-checklist) walks through how to assess your overnight coverage gaps before setting up a support layer.\n\nIf you operate Airbnb, Vrbo, or a short-term rental portfolio and need broader ongoing guest support rather than hotel-style front-desk coverage, the [Vacation Rental Answering Service](/services/vacation-rental-answering-service) covers that scope separately.",
   image: {
     src: "https://images.unsplash.com/photo-1534679541758-8dc76ff8081d?w=1600&q=90",
     alt: "Modern hotel lobby and reception desk lit at night",
@@ -536,14 +536,14 @@ export const afterHoursData: ServiceDetailData = {
     { label: "Hotel Answering Service", slug: "hotel-answering-service" },
     { label: "Vacation Rental Answering Service", slug: "vacation-rental-answering-service" },
   ],
-  relatedSlugs: ["hotel-answering-service", "vacation-rental-answering-service", "back-office-operations"],
+  relatedSlugs: ["vacation-rental-answering-service", "hotel-answering-service"],
   faqTitle: "After-hours support questions, answered.",
   relatedTitle: "Pair after-hours coverage with call answering and OTA inbox management.",
   comparisonTitle: "After-hours support vs hiring overnight staff or going unanswered.",
   comparisonSlugs: ["after-hours-hotel-support-checklist", "hotel-answering-service-vs-ai-voice"],
   faqs: [
     { q: "How much does after-hours hotel support cost?", a: "Pricing depends on your overnight call and message volume, the hours covered, and whether the plan includes just calls, messaging, or both. It is quote-based rather than a flat rate. The starting point is a 2-week pilot review at /pilot, which assesses your actual overnight gap before recommending a coverage plan." },
-    { q: "What does overnight staffing typically cost compared to after-hours support?", a: "A dedicated overnight front desk position typically costs $35,000–$55,000 per year in the US when you account for salary, employer taxes, benefits, and turnover replacement. After-hours support scales to your actual overnight call and message volume — properties with moderate overnight activity usually pay a fraction of that cost and get consistent coverage without the hiring and retention problem. The [after-hours hotel support checklist](/resources/after-hours-hotel-support-checklist) can help you map your overnight gaps before deciding on the right coverage level." },
+    { q: "What does overnight staffing typically cost compared to after-hours support?", a: "A dedicated overnight front desk position typically costs $35,000–$55,000 per year in the US when you account for salary, employer taxes, benefits, and turnover replacement. After-hours support scales to your actual overnight call and message volume; properties with moderate overnight activity usually pay a fraction of that cost and get consistent coverage without the hiring and retention problem. The [after-hours hotel support checklist](/resources/after-hours-hotel-support-checklist) can help you map your overnight gaps before deciding on the right coverage level." },
     { q: "Can hotels get 24/7 coverage without hiring overnight staff?", a: "Yes. Hotels can get hotel 24/7 coverage without hiring a full night shift by using an after-hours support service. Guest Squad covers overnight calls, late check-in questions, access issues, and guest messages using your property rules and escalation contacts. Genuine emergencies are routed to your on-call person. Most properties go live within 5 business days." },
     { q: "What hours do you actually cover?", a: "Whatever gap you need filled: overnight only, weekends only, or full 24/7 coverage. Most clients start with overnight and weekend gaps before expanding." },
     { q: "What counts as a genuine emergency, and how is it handled?", a: "Anything involving guest safety, security, or property damage is routed to your on-call contact immediately, following the escalation protocol we agree on during setup." },
@@ -796,7 +796,7 @@ export const vacationRentalAnsweringData: ServiceDetailData = {
   eyebrow: "Vacation Rental Answering Service",
   title: "24/7 Vacation Rental Answering Service for Airbnb, Vrbo, and STR Operators",
   description:
-    "24/7 live call answering for Airbnb, Vrbo, and short-term rental operators. Every guest call is answered by a trained person — no voicemail, no missed bookings.",
+    "24/7 live call answering for Airbnb, Vrbo, and short-term rental operators. Every guest call is answered by a trained person, with no voicemail and no missed bookings.",
   schemaAbout: { "@type": "Thing", "name": "Vacation Rental Phone Answering" },
   schemaServiceOutput: "Live call answering and guest message handling for short-term rental operators, covering check-in support, access issues, and after-hours guest inquiries",
   schemaSubjectOf: [
@@ -825,7 +825,7 @@ export const vacationRentalAnsweringData: ServiceDetailData = {
   ],
   introHeading: "What is a vacation rental answering service?",
   answerBlock:
-    "A vacation rental answering service provides live phone coverage for short-term rental operators who cannot personally answer every guest call. When a guest calls with a check-in question, an access problem, or a pre-booking inquiry, a trained agent picks up in your property's name — using your listing-specific instructions — instead of the call hitting your personal voicemail.\n\nThis service is phone-first and built for call volume: prospective guests asking about availability, arriving guests who cannot find the lockbox, in-stay callers reporting an issue. Airbnb and Vrbo in-app messaging is handled separately under [Airbnb Guest Support](/services/airbnb-guest-support), so each service is focused on the channel that needs the most attention.",
+    "A vacation rental answering service provides live phone coverage for short-term rental operators who cannot personally answer every guest call. When a guest calls with a check-in question, an access problem, or a pre-booking inquiry, a trained agent picks up in your property's name, using your listing-specific instructions, instead of the call hitting your personal voicemail.\n\nThis service is phone-first and built for call volume: prospective guests asking about availability, arriving guests who cannot find the lockbox, in-stay callers reporting an issue. Airbnb and Vrbo in-app messaging is handled separately under [Airbnb Guest Support](/services/airbnb-guest-support), so each service is focused on the channel that needs the most attention.\n\nIf your main concern is hotel-style overnight front-desk coverage and late check-ins rather than STR guest support, the [After-Hours Support](/services/after-hours-support) page covers that scope separately.",
   image: {
     src: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1600&q=90",
     alt: "Short-term rental property where guest communication is managed remotely by a trained support team",
@@ -865,7 +865,7 @@ export const vacationRentalAnsweringData: ServiceDetailData = {
     { label: "After-Hours Support", slug: "after-hours-support" },
     { label: "Airbnb Guest Support", slug: "airbnb-guest-support" },
   ],
-  relatedSlugs: ["after-hours-support", "airbnb-guest-support", "ota-inbox-management"],
+  relatedSlugs: ["after-hours-support", "guest-messaging"],
   faqTitle: "Vacation rental answering questions, answered.",
   relatedTitle: "Pair vacation rental answering with Airbnb guest support and OTA coverage.",
   comparisonTitle: "Vacation rental answering vs being the 24/7 on-call line yourself.",

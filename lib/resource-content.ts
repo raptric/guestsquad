@@ -611,6 +611,7 @@ export const afterHoursChecklistGuide: GuideArticleData = {
       heading: "What Counts as \"After-Hours\" for Most Hotels",
       paragraphs: [
         "Most independent hotels define after-hours as the period between the last front-desk shift change and the morning team arriving, typically somewhere between 11pm and 7am, plus weekends or holidays where staffing is thin. Night audit duties often fall in this same window.",
+        "This checklist is focused on hotel front-desk and overnight desk operations. If you run Airbnb, Vrbo, or a short-term rental portfolio, the [Vacation Rental Answering Service](/services/vacation-rental-answering-service) may be the better fit for ongoing guest support across your listings.",
       ],
     },
     {
@@ -675,7 +676,7 @@ export const afterHoursChecklistGuide: GuideArticleData = {
       a: "Yes. After-hours support covers short-term rental operators, Airbnb hosts, and serviced apartment operators as well as hotels — handling check-in questions, access issues, and escalations using your listing-specific instructions.",
     },
   ],
-  relatedServiceSlugs: ["after-hours-support", "hotel-answering-service", "back-office-operations"],
+  relatedServiceSlugs: ["after-hours-support", "vacation-rental-answering-service"],
   relatedResourceSlugs: ["hotel-front-desk-overflow-support", "hotel-answering-service-vs-ai-voice"],
   inlineAsset: {
     heading: "Use this checklist to audit your overnight setup before putting any coverage in place.",

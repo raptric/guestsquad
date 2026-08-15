@@ -162,9 +162,10 @@ export default function ServicesPage() {
           }
           .need-row { animation: row-in 200ms ease both; }
           .need-row:hover .need-connector { opacity: 1; color: var(--color-gold-dark, #b08d57); }
-          .need-row:hover .need-service   { color: var(--color-gold-dark, #b08d57); transform: translateX(2px); }
+          .need-row:hover .need-service   { color: var(--color-gold-dark, #b08d57); transform: translateX(3px); }
+          .need-row:hover .need-gap       { color: var(--color-ink, #1a1a1a); }
         `}</style>
-        <div className="mt-10 overflow-hidden rounded-lg border border-line">
+        <div className="mt-10 overflow-hidden rounded-xl border border-line shadow-sm">
           {/* Header */}
           <div className="grid grid-cols-[1fr_auto_1fr] items-center border-b border-line bg-surface px-6 py-3">
             <span className="text-xs font-semibold uppercase tracking-[0.14em] text-ink-muted">Your current gap</span>
@@ -180,8 +181,8 @@ export default function ServicesPage() {
               style={{ animationDelay: `${i * 40}ms` }}
             >
               <span className="text-sm text-ink-soft">{row.need}</span>
-              <ArrowRight className="need-connector h-3.5 w-3.5 shrink-0 text-line opacity-40 transition-all duration-150" />
-              <span className="need-service text-sm font-medium text-ink transition-all duration-150">{row.service}</span>
+              <ArrowRight className="need-connector h-3.5 w-3.5 shrink-0 text-ink-muted opacity-50 transition-all duration-150" />
+              <span className="need-service text-sm font-semibold text-gold-dark transition-all duration-150">{row.service}</span>
             </Link>
           ))}
         </div>

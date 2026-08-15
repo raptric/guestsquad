@@ -287,7 +287,7 @@ export const aiVoiceComparison: ResourceArticleData = {
 
 export const callCenterComparison: ResourceArticleData = {
   slug: "hotel-answering-service-vs-call-center",
-  relatedServiceSlugs: ["hotel-answering-service", "after-hours-support", "vacation-rental-answering-service"],
+  relatedServiceSlugs: ["hotel-answering-service", "after-hours-support"],
   title: "Hotel Answering Service vs Call Center: Key Differences for Hotels",
   description:
     "Why a hospitality-trained, property-specific answering service performs differently from a generic, multi-industry call center, and what to check before you sign with either.",
@@ -303,18 +303,18 @@ export const callCenterComparison: ResourceArticleData = {
   postIntroCta: {
     heading: "Not sure if you need a hotel answering service or a call center?",
     body: "Review your current guest coverage gaps before choosing a provider.",
-    primaryLabel: "Compare My Current Coverage",
-    primaryHref: "/pilot",
+    primaryLabel: "See Hotel Answering Service",
+    primaryHref: "/services/hotel-answering-service",
     secondaryLabel: "Download Coverage Gap Assessment",
     secondaryHref: "/resources/coverage-gap-assessment",
   },
   postTableCta: {
     heading: "Which one actually fits your situation",
     body: "If your property needs consistent OTA inbox coverage, after-hours call handling, or property-specific escalation — a hospitality-trained answering service is usually the stronger fit. Guest Squad can review your gaps before you commit to anything.",
-    primaryLabel: "Request Pilot Review",
-    primaryHref: "/pilot",
-    secondaryLabel: "See Hotel Answering Service",
-    secondaryHref: "/services/hotel-answering-service",
+    primaryLabel: "See Hotel Answering Service",
+    primaryHref: "/services/hotel-answering-service",
+    secondaryLabel: "Request Pilot Review",
+    secondaryHref: "/pilot",
   },
   columnA: "Hotel Answering Service",
   columnB: "Generic Call Center",

@@ -310,7 +310,7 @@ export const callCenterComparison: ResourceArticleData = {
   },
   postTableCta: {
     heading: "Which one actually fits your situation",
-    body: "If your property needs consistent OTA inbox coverage, after-hours call handling, or property-specific escalation — a hospitality-trained answering service is usually the stronger fit. Guest Squad can review your gaps before you commit to anything.",
+    body: "If your property needs consistent OTA inbox coverage, after-hours call handling, or property-specific escalation, a hospitality-trained answering service is usually the stronger fit. Guest Squad can review your gaps before you commit to anything.",
     primaryLabel: "See Hotel Answering Service",
     primaryHref: "/services/hotel-answering-service",
     secondaryLabel: "Request Pilot Review",
@@ -325,7 +325,7 @@ export const callCenterComparison: ResourceArticleData = {
       feature: "Agent training",
       a: "Hospitality-trained, briefed specifically on your property's rates, policies, and tone before going live.",
       b: "Generalist call-handling training, often shared across industries with no hospitality-specific grounding.",
-      c: "Agents briefed on your specific property — rates, room types, escalation contacts, and brand tone — before any call is answered.",
+      c: "Agents briefed on your specific property: rates, room types, escalation contacts, and brand tone, before any call is answered.",
     },
     {
       feature: "Agent consistency",
@@ -368,7 +368,7 @@ export const callCenterComparison: ResourceArticleData = {
       feature: "Best suited for",
       a: "Independent hotels, boutique properties, and operators who need personalized inbound coverage built around their property.",
       b: "Large organizations prioritizing very high call volume and standardized workflows across many unrelated industries.",
-      c: "For hotels choosing a hotel answering service over a generic call center, Guest Squad covers reservations, guest calls, messages, and OTA inboxes — one property at a time.",
+      c: "For hotels choosing a hotel answering service over a generic call center, Guest Squad covers reservations, guest calls, messages, and OTA inboxes. One property at a time.",
     },
   ],
   verdictHeading: "Which fits your property: hotel answering service or call center?",
@@ -380,14 +380,14 @@ export const callCenterComparison: ResourceArticleData = {
   verdictChecklist: [
     "Will the same agents handle our calls over time, or are we in a shared pool?",
     "Are agents trained specifically on hospitality, or are they using a generic call-handling script?",
-    "Do you handle OTA inboxes — Booking.com, Expedia, Airbnb — or only phone calls?",
+    "Do you handle OTA inboxes (Booking.com, Expedia, Airbnb) or only phone calls?",
     "Can agents manage guest texts and WhatsApp messages, not just inbound calls?",
     "Do we receive weekly reporting with real operational insight, or just raw call logs?",
     "Is there a long-term contract, or can we start with a pilot and go month-to-month?",
     "How are urgent escalations handled, and what is the expected response time?",
   ],
   verdictClosure:
-    "Those seven questions separate a true hotel answering service from a relabeled generic call center quickly. A provider that can answer all of them directly — with specifics about your property, not generalities — is worth evaluating further. If OTA inboxes are part of your coverage gap, the [Booking.com and Expedia message support checklist](/resources/booking-com-message-support) is a practical starting point. If you are ready to see how a 24/7 hotel answering service works in practice, the [Guest Squad Hotel Answering Service](/services/hotel-answering-service) page covers what is included and how to start.",
+    "Those seven questions separate a true hotel answering service from a relabeled generic call center quickly. A provider that can answer all of them directly, with specifics about your property rather than generalities, is worth evaluating further. If OTA inboxes are part of your coverage gap, the [Booking.com and Expedia message support checklist](/resources/booking-com-message-support) is a practical starting point. If you are ready to see how a 24/7 hotel answering service works in practice, the [Guest Squad Hotel Answering Service](/services/hotel-answering-service) page covers what is included and how to start.",
   inlineAsset: {
     heading: "Not sure where your coverage gaps actually are? The Coverage Gap Assessment identifies your unprotected hours, channels, and escalation blind spots.",
     asset: "coverage-gap-assessment",
@@ -417,7 +417,7 @@ export const callCenterComparison: ResourceArticleData = {
     },
     {
       q: "Is a hotel answering service the same as a hotel call center?",
-      a: "Not usually. \"Call center\" describes the infrastructure — a shared agent pool handling calls across many industries. \"Hotel answering service\" describes the specialization — agents trained on hospitality and, ideally, your specific property. The terms are often used interchangeably in sales materials, which is why it's worth asking the questions above before you sign with either.",
+      a: "Not usually. \"Call center\" describes the infrastructure: a shared agent pool handling calls across many industries. \"Hotel answering service\" describes the specialization: agents trained on hospitality and, ideally, your specific property. The terms are often used interchangeably in sales materials, which is why it's worth asking the questions above before you sign with either.",
     },
     {
       q: "What is better for a boutique hotel — a hotel answering service or a call center?",
@@ -425,7 +425,7 @@ export const callCenterComparison: ResourceArticleData = {
     },
     {
       q: "Can a hotel call center handle OTA messages from Booking.com or Expedia?",
-      a: "Most generic call centers cover phone only. OTA inbox management — responding inside Booking.com's Message Center, Expedia's Partner Central, or Airbnb's messaging tools — requires platform access and familiarity with each OTA's workflow. It's worth confirming explicitly whether any provider you evaluate covers OTA inboxes as part of their scope. Guest Squad covers OTA inboxes within agreed scope. See the [Booking.com message support checklist](/resources/booking-com-message-support) for the specific standards your OTA inboxes should be meeting.",
+      a: "Most generic call centers cover phone only. OTA inbox management (responding inside Booking.com's Message Center, Expedia's Partner Central, or Airbnb's messaging tools) requires platform access and familiarity with each OTA's workflow. It's worth confirming explicitly whether any provider you evaluate covers OTA inboxes as part of their scope. Guest Squad covers OTA inboxes within agreed scope. See the [Booking.com message support checklist](/resources/booking-com-message-support) for the specific standards your OTA inboxes should be meeting.",
     },
     {
       q: "How quickly can Guest Squad start hotel answering service coverage?",

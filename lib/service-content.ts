@@ -273,7 +273,7 @@ export const guestMessagingData: ServiceDetailData = {
   ],
   introHeading: "What is hotel guest messaging support?",
   answerBlock:
-    "Hotel guest messaging support means every SMS, WhatsApp, email, and in-app message your property receives is monitored and answered by a trained person — across the full stay journey. Pre-arrival questions get answered before check-in, in-stay requests are handled in real time, and post-stay follow-ups go out without your team having to remember to send them.\n\nGuest Squad agents work in your property's voice using your tone guidelines, policies, and approved responses — documented in a [guest messaging SOP](/resources/hotel-guest-messaging-sop-template) we build with you during onboarding. Housekeeping, maintenance, safety issues, and compensation requests are routed to your on-site team immediately, so nothing sensitive is handled without your knowledge.",
+    "Hotel guest messaging support means every SMS, WhatsApp, email, and in-app message your property receives is monitored and answered by a trained person — across the full stay journey. Pre-arrival questions get answered before check-in, in-stay requests are handled in real time, and post-stay follow-ups go out without your team having to remember to send them.\n\nGuest Squad agents work in your property's voice using your tone guidelines, policies, and approved responses — documented in a [guest messaging SOP](/resources/hotel-guest-messaging-sop-template) we build with you during onboarding. Housekeeping, maintenance, safety issues, and compensation requests are routed to your on-site team immediately, so nothing sensitive is handled without your knowledge.\n\nIf your primary concern is Booking.com, Expedia, or Airbnb inbox speed and pre-booking reply rates, the [OTA Inbox Management](/services/ota-inbox-management) service covers that scope specifically.",
   image: {
     src: "https://images.unsplash.com/photo-1592890288564-76628a30a657?w=1600&q=90",
     alt: "Hotel guest messaging support across SMS, WhatsApp, and OTA channels",
@@ -313,7 +313,7 @@ export const guestMessagingData: ServiceDetailData = {
     { label: "OTA Inbox Management", slug: "ota-inbox-management" },
     { label: "After-Hours Support", slug: "after-hours-support" },
   ],
-  relatedSlugs: ["ota-inbox-management", "after-hours-support", "hotel-answering-service"],
+  relatedSlugs: ["ota-inbox-management", "after-hours-support"],
   faqTitle: "Guest messaging questions, answered.",
   relatedTitle: "Pair messaging support with OTA inbox management and after-hours coverage.",
   comparisonTitle: "Human guest messaging vs auto-replies and slow response times.",
@@ -381,7 +381,7 @@ export const otaInboxData: ServiceDetailData = {
   ],
   introHeading: "What is OTA inbox management for hotels?",
   answerBlock:
-    "OTA inbox management means your Booking.com, Expedia, and Airbnb message threads are monitored and answered around the clock — not checked once a day between other tasks. Pre-booking questions are answered fast enough to win the booking before the guest moves on. Post-booking messages are resolved without your team having to log into multiple extranets. Guest reviews are responded to in your brand voice on schedule.\n\nOTA response time is one of the few ranking factors hotels can directly control on Booking.com and Expedia. Slow responses push your property down in search results and conversion rankings on the platforms that drive your occupancy. Guest Squad treats every unread message as a potential booking at risk. The [Booking.com message support checklist](/resources/booking-com-message-support) covers the response standards your property should be hitting across pre-booking, in-stay, and post-stay threads.",
+    "OTA inbox management means your Booking.com, Expedia, and Airbnb message threads are monitored and answered around the clock — not checked once a day between other tasks. Pre-booking questions are answered fast enough to win the booking before the guest moves on. Post-booking messages are resolved without your team having to log into multiple extranets. Guest reviews are responded to in your brand voice on schedule.\n\nOTA response time is one of the few ranking factors hotels can directly control on Booking.com and Expedia. Slow responses push your property down in search results and conversion rankings on the platforms that drive your occupancy. Guest Squad treats every unread message as a potential booking at risk. The [Booking.com message support checklist](/resources/booking-com-message-support) covers the response standards your property should be hitting across pre-booking, in-stay, and post-stay threads.\n\nIf your issue goes beyond OTA platforms — SMS, WhatsApp, email, or in-stay guest communication — the [Guest Messaging](/services/guest-messaging) service covers that scope separately.",
   image: {
     src: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=1600&q=90",
     alt: "Team monitoring OTA inboxes across multiple screens",
@@ -421,7 +421,7 @@ export const otaInboxData: ServiceDetailData = {
     { label: "Guest Messaging", slug: "guest-messaging" },
     { label: "Reservation Support", slug: "reservation-support" },
   ],
-  relatedSlugs: ["guest-messaging", "hotel-answering-service", "reservation-support"],
+  relatedSlugs: ["guest-messaging", "after-hours-support"],
   faqTitle: "OTA inbox management questions, answered.",
   relatedTitle: "Pair OTA coverage with reservation support and guest messaging.",
   comparisonTitle: "OTA inbox management vs auto-replies and once-a-day checking.",
@@ -448,6 +448,7 @@ export const otaInboxData: ServiceDetailData = {
   },
   assetLinks: [
     { label: "Download OTA Inbox Response Checklist", href: "/resources/ota-inbox-response-checklist" },
+    { label: "OTA Ranking & Response Time", href: "/resources/insights/ota-ranking-response-time" },
     { label: "Booking.com message support checklist", href: "/resources/booking-com-message-support" },
     { label: "Guest Messaging SOP Template", href: "/resources/hotel-guest-messaging-sop-template" },
     { label: "View Sample Weekly Report", href: "/resources/sample-weekly-report" },

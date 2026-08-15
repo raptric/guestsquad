@@ -838,6 +838,7 @@ export const otaInboxChecklistGuide: GuideArticleData = {
       heading: "Why OTA Response Time Matters",
       paragraphs: [
         "A pre-booking question left unanswered for hours is a booking that often goes to a competing property instead. Post-booking, slow responses to modification requests or guest questions show up in reviews. Some OTAs also factor response metrics into how listings are ranked or featured, which compounds the cost of slow replies beyond the single missed booking. Consistent [OTA inbox management](/services/ota-inbox-management) is one of the few ranking factors hotels can directly control on these platforms.",
+        "This checklist covers Booking.com and Expedia inbox process specifically. If you need these inboxes monitored and answered on an ongoing basis, [OTA Inbox Management](/services/ota-inbox-management) handles that day-to-day without your team logging into each platform.",
       ],
     },
     {
@@ -902,7 +903,7 @@ export const otaInboxChecklistGuide: GuideArticleData = {
       a: "Yes. Guest Squad covers all three platforms from a single point of coverage, so pre-booking questions, post-booking messages, and review responses across every OTA are handled without your team logging into multiple extranets.",
     },
   ],
-  relatedServiceSlugs: ["ota-inbox-management", "guest-messaging", "vacation-rental-answering-service"],
+  relatedServiceSlugs: ["ota-inbox-management", "guest-messaging"],
   relatedResourceSlugs: ["hotel-guest-messaging-sop-template", "hotel-answering-service-vs-call-center"],
   inlineAsset: {
     heading: "Download the OTA Inbox Response Checklist to put a consistent standard in place for Booking.com, Expedia, and Airbnb.",

@@ -240,116 +240,76 @@ export function ServiceDetail({ data }: { data: ServiceDetailData }) {
         </div>
       </Section>
 
-      {/* 8 — Compact "Keep Exploring" link cluster */}
+      {/* 8 — "Keep Exploring" guided next-step section */}
       <div className="border-t border-line py-14">
         <div className="mx-auto max-w-screen-xl px-6">
-        <div className="mb-8">
-          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-gold-dark">Keep Exploring</p>
-          <h2 className="mt-1.5 text-2xl font-medium text-ink">Related services, guides, and research.</h2>
-        </div>
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mb-8">
+            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-gold-dark">Keep Exploring</p>
+            <h2 className="mt-1.5 text-2xl font-medium text-ink">Explore what fits your situation.</h2>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
 
-          {/* Related services */}
-          {related.length > 0 && (
-            <div>
-              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.14em] text-ink-muted">Related Services</p>
-              <ul className="flex flex-col gap-2.5">
-                {related.map((s) => (
-                  <li key={s.slug}>
-                    <Link
-                      href={`/services/${s.slug}`}
-                      className="group flex items-start gap-2 text-sm text-ink-soft transition-colors hover:text-ink"
-                    >
-                      <ArrowUpRight className="mt-0.5 h-3.5 w-3.5 shrink-0 text-ink-muted transition-colors group-hover:text-gold-dark" />
-                      {s.title}
-                    </Link>
-                  </li>
-                ))}
-                <li>
-                  <Link href="/services" className="mt-1 inline-flex items-center gap-1 text-xs text-gold-dark hover:underline">
-                    All services →
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          )}
+            {/* Related services */}
+            {related.length > 0 && (
+              <div className="rounded-lg border border-line bg-paper p-6">
+                <p className="mb-4 text-xs font-semibold uppercase tracking-[0.14em] text-ink-muted">Related Services</p>
+                <ul className="flex flex-col gap-3">
+                  {related.slice(0, 2).map((s) => (
+                    <li key={s.slug}>
+                      <Link
+                        href={`/services/${s.slug}`}
+                        className="group flex items-start gap-2 text-sm text-ink-soft transition-colors hover:text-ink"
+                      >
+                        <ArrowUpRight className="mt-0.5 h-3.5 w-3.5 shrink-0 text-ink-muted transition-colors group-hover:text-gold-dark" />
+                        {s.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
 
-          {/* Guides & comparisons */}
-          {comparisons.length > 0 && (
-            <div>
-              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.14em] text-ink-muted">Guides &amp; Comparisons</p>
-              <ul className="flex flex-col gap-2.5">
-                {comparisons.map((r) => (
-                  <li key={r.slug}>
-                    <Link
-                      href={`/resources/${r.slug}`}
-                      className="group flex items-start gap-2 text-sm text-ink-soft transition-colors hover:text-ink"
-                    >
-                      <ArrowUpRight className="mt-0.5 h-3.5 w-3.5 shrink-0 text-ink-muted transition-colors group-hover:text-gold-dark" />
-                      {r.title}
-                    </Link>
-                  </li>
-                ))}
-                <li>
-                  <Link href="/resources" className="mt-1 inline-flex items-center gap-1 text-xs text-gold-dark hover:underline">
-                    All guides →
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          )}
+            {/* Compare options */}
+            {comparisons.length > 0 && (
+              <div className="rounded-lg border border-line bg-paper p-6">
+                <p className="mb-4 text-xs font-semibold uppercase tracking-[0.14em] text-ink-muted">Compare Options</p>
+                <ul className="flex flex-col gap-3">
+                  {comparisons.slice(0, 2).map((r) => (
+                    <li key={r.slug}>
+                      <Link
+                        href={`/resources/${r.slug}`}
+                        className="group flex items-start gap-2 text-sm text-ink-soft transition-colors hover:text-ink"
+                      >
+                        <ArrowUpRight className="mt-0.5 h-3.5 w-3.5 shrink-0 text-ink-muted transition-colors group-hover:text-gold-dark" />
+                        {r.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
 
-          {/* Insights */}
-          {insights.length > 0 && (
-            <div>
-              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.14em] text-ink-muted">Research &amp; Insights</p>
-              <ul className="flex flex-col gap-2.5">
-                {insights.map((i) => (
-                  <li key={i.slug}>
-                    <Link
-                      href={`/resources/insights/${i.slug}`}
-                      className="group flex items-start gap-2 text-sm text-ink-soft transition-colors hover:text-ink"
-                    >
-                      <ArrowUpRight className="mt-0.5 h-3.5 w-3.5 shrink-0 text-ink-muted transition-colors group-hover:text-gold-dark" />
-                      {i.title}
-                    </Link>
-                  </li>
-                ))}
-                <li>
-                  <Link href="/resources/insights" className="mt-1 inline-flex items-center gap-1 text-xs text-gold-dark hover:underline">
-                    All insights →
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          )}
+            {/* Tools & resources */}
+            {data.assetLinks && data.assetLinks.length > 0 && (
+              <div className="rounded-lg border border-line bg-paper p-6">
+                <p className="mb-4 text-xs font-semibold uppercase tracking-[0.14em] text-ink-muted">Tools &amp; Resources</p>
+                <ul className="flex flex-col gap-3">
+                  {data.assetLinks.slice(0, 2).map((a) => (
+                    <li key={a.href}>
+                      <Link
+                        href={a.href}
+                        className="group flex items-start gap-2 text-sm text-ink-soft transition-colors hover:text-ink"
+                      >
+                        <ArrowUpRight className="mt-0.5 h-3.5 w-3.5 shrink-0 text-ink-muted transition-colors group-hover:text-gold-dark" />
+                        {a.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
 
-          {/* Tools / asset links */}
-          {data.assetLinks && data.assetLinks.length > 0 && (
-            <div>
-              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.14em] text-ink-muted">Tools &amp; Resources</p>
-              <ul className="flex flex-col gap-2.5">
-                {data.assetLinks.map((a) => (
-                  <li key={a.href}>
-                    <Link
-                      href={a.href}
-                      className="group flex items-start gap-2 text-sm text-ink-soft transition-colors hover:text-ink"
-                    >
-                      <ArrowUpRight className="mt-0.5 h-3.5 w-3.5 shrink-0 text-ink-muted transition-colors group-hover:text-gold-dark" />
-                      {a.label}
-                    </Link>
-                  </li>
-                ))}
-                <li>
-                  <Link href="/resources" className="mt-1 inline-flex items-center gap-1 text-xs text-gold-dark hover:underline">
-                    All resources →
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          )}
-
-        </div>
+          </div>
         </div>
       </div>
 

@@ -155,7 +155,6 @@ export default function HomePage() {
               src="https://images.unsplash.com/photo-1560662105-57f8ad6ae2d1?w=1400&h=1750&fit=crop&crop=entropy&q=90"
               alt="Lively boutique hotel lobby and reception desk with staff at the front desk"
               fill
-              unoptimized
               priority
               sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover"
@@ -302,7 +301,6 @@ export default function HomePage() {
           src="https://images.unsplash.com/photo-1543325042-c67825847491?w=1800&q=90"
           alt="Hotel front desk reception area representing 24/7 guest coverage for independent hotels"
           fill
-          unoptimized
           loading="lazy"
           sizes="100vw"
           className="object-cover"

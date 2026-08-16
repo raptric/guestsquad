@@ -23,15 +23,15 @@ export const metadata: Metadata = buildMetadata({
 const RESOURCES_FAQS = [
   {
     q: "What Guest Squad resources should a hotel start with?",
-    a: "Most hotels should start with the Missed Booking Revenue Calculator to estimate revenue risk, then use the Coverage Gap Assessment or After-Hours Checklist to identify which calls, messages, and OTA inboxes need coverage first.",
+    a: "Most hotels should start with the [Missed Booking Revenue Calculator](/resources/missed-booking-calculator) to estimate revenue risk, then use the Coverage Gap Assessment or [After-Hours Checklist](/resources/after-hours-hotel-support-checklist) to identify which calls, messages, and OTA inboxes need coverage first.",
   },
   {
     q: "Which resource helps compare human support with AI voice agents?",
-    a: "The Hotel Answering Service vs AI Voice guide compares human guest support with AI voice tools for reservation calls, guest questions, escalations, and after-hours situations where judgment matters.",
+    a: "The [Hotel Answering Service vs AI Voice guide](/resources/hotel-answering-service-vs-ai-voice) compares human guest support with AI voice tools for reservation calls, guest questions, escalations, and after-hours situations where judgment matters.",
   },
   {
     q: "Which resource helps with Booking.com and Expedia messages?",
-    a: "The Booking.com and Expedia Message Support Checklist helps properties define OTA response standards, common reply types, escalation rules, and inbox coverage gaps.",
+    a: "The [Booking.com and Expedia Message Support Checklist](/resources/booking-com-message-support) helps properties define OTA response standards, common reply types, escalation rules, and inbox coverage gaps.",
   },
   {
     q: "Can these resources help before booking a coverage review?",

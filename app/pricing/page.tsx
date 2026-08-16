@@ -24,7 +24,7 @@ const FAQS = [
   },
   {
     q: "What affects Guest Squad pricing the most?",
-    a: "Interaction volume is the biggest factor — the number of calls, messages, and OTA interactions your property needs covered each month. Coverage hours, property complexity, and whether shared or dedicated support is the right fit also shape the final price.",
+    a: "Interaction volume is the biggest factor: the number of calls, messages, and OTA interactions your property needs covered each month. Coverage hours, property complexity, and whether shared or dedicated support is the right fit also shape the final price.",
   },
   {
     q: "Is Guest Squad pricing based per property?",

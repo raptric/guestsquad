@@ -24,11 +24,11 @@ export const metadata: Metadata = buildMetadata({
 const SERVICE_FAQS = [
   {
     q: "Which Guest Squad service should my property start with?",
-    a: "Most properties start with whichever gap is costing them the most right now. After-hours coverage is the most common starting point for hotels that are losing overnight calls. OTA inbox management is the fastest win for properties whose response time on Booking.com or Expedia is dragging down their ranking.",
+    a: "Most properties start with whichever gap is costing them the most right now. [After-hours coverage](/services/after-hours-support) is the most common starting point for hotels that are losing overnight calls. [OTA inbox management](/services/ota-inbox-management) is the fastest win for properties whose response time on Booking.com or Expedia is dragging down their ranking.",
   },
   {
     q: "What is the difference between hotel answering, reservation support, and after-hours support?",
-    a: "Hotel Answering Service is the broadest call-answering layer: every inbound call, any hour. Reservation Support focuses specifically on booking calls, quotes, and modifications. After-Hours Support covers the overnight and weekend window when your team is not on-site. Many clients use all three together for complete coverage.",
+    a: "[Hotel Answering Service](/services/hotel-answering-service) is the broadest call-answering layer: every inbound call, any hour. [Reservation Support](/services/reservation-support) focuses specifically on booking calls, quotes, and modifications. [After-Hours Support](/services/after-hours-support) covers the overnight and weekend window when your team is not on-site. Many clients use all three together for complete coverage.",
   },
   {
     q: "Can we combine multiple services into one coverage plan?",

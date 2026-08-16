@@ -48,7 +48,7 @@ const ABOUT_FAQS = [
   },
   {
     q: "How does Guest Squad handle an escalation?",
-    a: "Escalation rules are documented and agreed before coverage begins. When a situation falls outside the agreed handling scope — a complaint requiring owner approval, a safety issue, a rate dispute — the interaction is immediately routed to your designated escalation contact using the method and priority level you specify.",
+    a: "Escalation rules are documented and agreed before coverage begins. When a situation falls outside the agreed handling scope (a complaint requiring owner approval, a safety issue, a rate dispute), the interaction is immediately routed to your designated escalation contact using the method and priority level you specify. Coverage for overnight escalations is handled under [after-hours support](/services/after-hours-support) and [back-office operations](/services/back-office-operations) depending on scope.",
   },
   {
     q: "What makes Guest Squad different from a hotel call center?",

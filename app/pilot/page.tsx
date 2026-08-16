@@ -118,7 +118,7 @@ const FAQS = [
   },
   {
     q: "Is the pilot no-obligation?",
-    a: "Yes. The 2-week pilot carries no commitment to continue. After the pilot, you decide whether to move to month-to-month coverage. There is no long-term contract — ongoing coverage runs 30 days' written notice unless otherwise agreed.",
+    a: "Yes. The 2-week pilot carries no commitment to continue. After the pilot, you decide whether to move to month-to-month coverage. There is no long-term contract; ongoing coverage runs on 30 days' written notice unless otherwise agreed.",
   },
   {
     q: "What happens after the pilot?",
@@ -126,11 +126,11 @@ const FAQS = [
   },
   {
     q: "Which channels can Guest Squad cover?",
-    a: "Guest Squad can support reservation calls, guest texts, OTA inboxes (Booking.com, Expedia, Airbnb), email, WhatsApp/SMS, Cloudbeds or channel manager messages, Akia, and other approved guest communication tools. Final channels are agreed before the pilot begins.",
+    a: "Guest Squad can support [reservation calls](/services/reservation-support), guest texts, [OTA inboxes](/services/ota-inbox-management) (Booking.com, Expedia, Airbnb), email, WhatsApp/SMS, Cloudbeds or channel manager messages, Akia, and other approved guest communication tools. Final channels are agreed before the pilot begins.",
   },
   {
     q: "Do we need to change our PMS or phone system?",
-    a: "No. Guest Squad works with your existing setup. The property briefing documents your current systems — rates, room types, escalation contacts, channel access — and coverage begins without requiring changes to your PMS, phone system, or booking engine.",
+    a: "No. Guest Squad works with your existing setup. The property briefing documents your current systems (rates, room types, escalation contacts, channel access), and coverage begins without requiring changes to your PMS, phone system, or booking engine.",
   },
   {
     q: "How much does the 2-week pilot cost?",

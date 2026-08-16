@@ -87,7 +87,7 @@ export default function PricingPage() {
       <PageHero
         eyebrow="Pricing"
         title="Pricing built around your property's coverage needs"
-        description="Every Guest Squad plan starts with the guest communication channels most independent hotels cannot afford to miss. Final pricing is scoped after a short review of your interaction volume, coverage hours, property complexity, and support model fit."
+        description="Guest Squad pricing is scoped around your actual guest communication load: call volume, OTA message volume, coverage hours, and how your operation is set up. No fixed tiers. No guessing at a plan before we know your property."
         primaryCta="Review My Coverage Needs"
         primaryHref="/contact"
         secondaryCta="See What Affects Pricing"
@@ -180,19 +180,19 @@ export default function PricingPage() {
           {[
             {
               title: "After-hours coverage",
-              body: "For properties that need support when the front desk is offline — evenings, weekends, and overnight gaps.",
+              body: "Evenings, weekends, and overnight. Covers the hours when missed calls cost the most.",
             },
             {
               title: "Overflow coverage",
-              body: "For properties that need backup during busy call and message periods when the team is at capacity.",
+              body: "Backup during check-in peaks and high-volume periods when your team is at capacity.",
             },
             {
               title: "Extended coverage",
-              body: "For properties that need broader daily support across their core guest communication channels.",
+              body: "Broader daily coverage across calls, OTA inboxes, and guest messaging channels.",
             },
             {
               title: "Custom coverage",
-              body: "For properties with higher interaction volume, multiple locations, or more complex operational coordination needs.",
+              body: "For multi-property operators, higher-volume hotels, or operations with more complex coordination requirements.",
             },
           ].map((card) => (
             <div key={card.title} className="rounded-lg border border-line bg-paper p-6">
@@ -233,7 +233,7 @@ export default function PricingPage() {
             The right question is not just what coverage costs
           </h2>
           <p className="mt-4 max-w-2xl text-sm leading-relaxed text-ink-soft">
-            It is whether missed reservation calls, slow OTA replies, and after-hours gaps are already costing more than the support required to fix them. The review call helps scope coverage around that reality before missed demand turns into lost revenue.
+            Missed reservation calls, slow OTA replies, and uncovered overnight hours have a cost. The review call maps that gap against the coverage scope before you commit to anything.
           </p>
         </div>
       </div>

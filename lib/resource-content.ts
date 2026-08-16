@@ -491,7 +491,7 @@ export const answeringServiceCostGuide: GuideArticleData = {
   datePublished: "2026-08-06T00:00:00+00:00",
   dateModified: "2026-08-07T00:00:00+00:00",
   intro: [
-    "\"How much does this cost?\" is usually the first question a GM asks, and the hardest one to get a straight answer to. Most providers, including Guest Squad, don't publish flat rates, because the honest answer depends on your volume, channels, and coverage hours.",
+    "Most hotels ask about price before they ask about fit. That is understandable. The problem is that a flat rate without knowing your call volume, channels, and coverage hours is not a useful number, it is a placeholder. This guide explains what actually drives the cost, what tends to get buried in a quote, and what the right question is before you compare providers.",
     "What most properties find when they run the numbers: a single recovered group booking or a week of captured after-hours reservations covers the monthly cost entirely. The right question is not what the service costs, but whether it pays for itself on your volume.",
     "This guide walks through the pricing models actually used in this industry, what genuinely moves the price, and the costs that tend to show up after you've already signed.",
   ],
@@ -530,8 +530,8 @@ export const answeringServiceCostGuide: GuideArticleData = {
     {
       heading: "What We Quote Instead",
       paragraphs: [
-        "Pricing is scoped to your property: coverage hours, channels, and call volume all affect the number. Every engagement starts with a pilot, so you see what coverage actually looks like before committing to anything further. If you want to understand what's included before requesting a quote, the [hotel answering service for independent hotels](/services/hotel-answering-service) page covers the full scope.",
-        "If your main concern is missed reservation calls, after-hours gaps, or front-desk overflow, the [hotel answering service](/services/hotel-answering-service) page explains exactly what's covered and how coverage is structured before any quote is involved.",
+        "Guest Squad pricing is scoped per property: coverage hours, channels, and call volume all affect the number. There is no flat published rate because two properties with different overnight gaps and OTA inbox volume need different plans. Every engagement starts with a pilot, so you see coverage working before committing to anything ongoing.",
+        "If you want to understand scope before requesting a quote, the [hotel answering service](/services/hotel-answering-service) page covers what is included. If your main concern is how the cost compares to hiring staff, or to other providers, the [vs call center guide](/resources/hotel-answering-service-vs-call-center) covers that directly.",
       ],
     },
   ],
@@ -558,7 +558,7 @@ export const answeringServiceCostGuide: GuideArticleData = {
     },
     {
       q: "Is a hotel answering service worth the cost?",
-      a: "For most independent hotels and boutique properties, yes, provided your property receives a meaningful volume of inbound calls. The break-even point is usually low: one or two reservation calls captured after hours that would otherwise have gone to voicemail typically covers the monthly cost.",
+      a: "For most independent hotels: yes. The break-even point is low. One or two reservation calls captured after hours that would have gone to voicemail typically covers the monthly cost. The question is not whether the service pays for itself, it is whether your current missed-call rate is high enough that it already is paying for itself and you have not noticed.",
     },
     {
       q: "How does the cost compare to hiring overnight staff?",
@@ -570,7 +570,7 @@ export const answeringServiceCostGuide: GuideArticleData = {
     },
     {
       q: "Can we start small and expand later?",
-      a: "Yes. Most clients start with after-hours or overflow-only coverage and expand to full-day or multi-channel coverage once they see the results.",
+      a: "Yes. Most clients start with after-hours or overflow coverage, confirm it is working during the pilot, and expand from there. No commitment to full-day or multi-channel coverage before you have seen the first scope perform.",
     },
   ],
   relatedServiceSlugs: ["hotel-answering-service", "after-hours-support"],

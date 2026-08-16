@@ -165,7 +165,7 @@ export default function ServicesPage() {
           .need-row:hover .need-service   { color: var(--color-gold-dark, #b08d57); transform: translateX(3px); }
           .need-row:hover .need-gap       { color: var(--color-ink, #1a1a1a); }
         `}</style>
-        <div className="mt-10 overflow-hidden rounded-xl border border-line shadow-sm">
+        <div className="mt-10 mx-auto max-w-2xl overflow-hidden rounded-xl border border-line shadow-sm">
           {/* Header */}
           <div className="grid grid-cols-[1fr_auto_1fr] items-center border-b border-line bg-surface px-6 py-3">
             <span className="text-xs font-semibold uppercase tracking-[0.14em] text-ink-muted">Your current gap</span>

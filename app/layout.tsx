@@ -114,9 +114,9 @@ export default function RootLayout({
         </noscript>
         <JsonLd data={[organizationSchema(), websiteSchema()]} />
         <ScrollTracker />
-        <div className="no-print"><Nav /></div>
+        <Nav />
         <main className="flex-1">{children}</main>
-        <div className="no-print"><FooterWrapper /></div>
+        <FooterWrapper />
         <CookieConsent />
       </body>
     </html>

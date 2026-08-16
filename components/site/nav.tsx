@@ -18,7 +18,7 @@ export function Nav() {
 
   if (CAMPAIGN_PATHS.includes(pathname)) {
     return (
-      <header className="sticky top-0 z-50 border-b border-line bg-paper/95 backdrop-blur">
+      <header className="no-print sticky top-0 z-50 border-b border-line bg-paper/95 backdrop-blur">
         <div className="container flex h-16 items-center justify-between">
           <Link href="/">
             <img

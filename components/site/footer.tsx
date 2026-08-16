@@ -5,7 +5,7 @@ import { CoverageReviewButton } from "@/components/site/coverage-review-button";
 
 export function Footer() {
   return (
-    <footer className="border-t border-line bg-surface">
+    <footer className="no-print border-t border-line bg-surface">
       <div className="container py-16">
         <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>

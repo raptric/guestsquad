@@ -138,7 +138,7 @@ export const aiVoiceComparison: ResourceArticleData = {
   intro: [
     "AI voice agents are now actively marketed to hotels as a way to cover every inbound call without adding staff. The pitch is compelling: 24/7 availability, no sick days, consistent tone, and a fraction of the cost of a human team. For some use cases in hospitality, that pitch holds up.",
     "Where it gets complicated is reservation calls, in-stay complaints, booking exceptions, and any situation where a guest's first or lasting impression of your property is being shaped in real time. That is where hospitality operators report the widest gap between what AI voice vendors promise and what the technology actually delivers.",
-    "This comparison is not a case against AI. It is an honest look at which call types and property situations each option handles well — and where a [hotel answering service](/services/hotel-answering-service) holds an edge on the calls that matter most — so you can make the decision based on your actual call mix rather than a vendor's best-case demo.",
+    "This comparison is not a case against AI. It is an honest look at which call types each option handles reliably, and which ones a vendor's best-case demo does not show you. The goal is a decision based on your actual call mix, not a scripted demo scenario.",
   ],
   postIntroCta: {
     heading: "Not sure what your actual call mix looks like?",
@@ -163,13 +163,13 @@ export const aiVoiceComparison: ResourceArticleData = {
       feature: "Reservation calls with exceptions",
       a: "Applies your policies with judgment — what to flex on, what to hold firm, when a situation warrants calling you directly.",
       b: "Handles reservation scenarios as far as they were explicitly programmed. Rate exceptions, package customization, or multi-room group inquiries often stall or route to voicemail.",
-      c: "A reservation call where a guest is choosing between your property and a competitor is the single highest-value call a hotel answers. How it gets handled often determines whether the booking happens.",
+      c: "A reservation call is the moment a guest decides whether to book with you or move on. When that call involves a rate exception, a special request, or a group modification, scripted handling loses bookings. The question is how many of your calls fall into that category.",
     },
     {
       feature: "Guest tone and emotional register",
       a: "Reads the caller's mood and adjusts — slows down for a confused guest, acknowledges frustration before explaining a policy, takes a different tone with a repeat guest.",
       b: "Delivers consistent tone regardless of what the caller says. In situations that call for empathy, consistent tone can register as dismissive or robotic.",
-      c: "In-stay complaint calls are where tone matters most. A guest who feels heard before a problem is resolved is less likely to post a negative review. A guest who feels processed is more likely.",
+      c: "A guest calling mid-stay with a problem is making a decision about their review before the call ends. Consistent tone when a caller is frustrated does not read as professional, it reads as dismissive. That is when the review gets written.",
     },
     {
       feature: "OTA inboxes and messaging channels",
@@ -181,7 +181,7 @@ export const aiVoiceComparison: ResourceArticleData = {
       feature: "Escalation judgment",
       a: "Decides what genuinely needs your attention right now versus what belongs in the morning summary — based on your specific escalation rules, not a generic threshold.",
       b: "Escalation rules tend to be binary: escalate anything outside the scripted path, or escalate almost nothing. Real hospitality situations rarely fit cleanly into either.",
-      c: "Over-escalation (waking an owner at 2am for a non-urgent question) and under-escalation (missing a genuine emergency) both have real costs. Judgment between the two is what written escalation rules are designed to capture.",
+      c: "The failure mode is not dramatic. It is binary: escalate everything and interrupt your owner at 2am for questions that did not need to be, or escalate nothing and miss the one that did. Written escalation rules with a trained person applying judgment is what sits between those two outcomes.",
     },
     {
       feature: "Setup and go-live time",
@@ -193,7 +193,7 @@ export const aiVoiceComparison: ResourceArticleData = {
       feature: "Cost at lower call volumes",
       a: "Flat monthly rate scoped to your coverage hours and channels. Predictable regardless of how many calls come in.",
       b: "Per-minute billing is common. Add PMS integration fees, onboarding costs, and ongoing prompt management. At lower volumes, the per-interaction cost can exceed flat-rate human coverage.",
-      c: "For a boutique hotel with 200–400 monthly calls, the all-in cost of AI voice — including setup, integration, and per-minute billing — is worth modelling against a flat-rate human coverage plan before assuming AI is the cheaper option.",
+      c: "AI voice is often presented as the lower-cost option. For a boutique hotel with 200–400 monthly calls, the all-in cost including PMS integration, per-minute billing, and ongoing prompt management is worth calculating before assuming that is true.",
     },
     {
       feature: "Best suited for",
@@ -212,9 +212,9 @@ export const aiVoiceComparison: ResourceArticleData = {
   },
   verdictHeading: "How to make the right call for your property",
   verdictParagraphs: [
-    "AI voice agents are a genuine improvement over voicemail and phone trees. For high-volume, simple call scenarios — directions, hours, basic FAQ queries — they reduce the burden on your team and ensure calls do not go entirely unanswered. For properties with very high call volumes and standardized guest inquiries, AI voice can deflect a meaningful share of inbound traffic.",
-    "The risk zone is narrower but more consequential: reservation calls where a guest is comparing your property against alternatives, in-stay complaints where tone determines whether a problem becomes a review, and any call requiring your specific policies applied with judgment rather than a script. These are not edge cases in hospitality — they represent a significant share of the calls that move the needle on revenue and guest satisfaction.",
-    "The most important input is your actual call mix. If you do not have clear data on what types of calls your property receives and when, that is what is worth finding out before committing to any coverage model. Properties that regret AI voice deployments most often did not realize their off-script call volume was higher than a vendor demo suggested.",
+    "AI voice handles repetitive, low-judgment calls reliably. Directions, check-in times, hours of operation, where the cost of an occasional wrong answer is low and the call volume is high. For those scenarios it is a genuine improvement over voicemail.",
+    "The risk zone is where it matters most: reservation calls where a guest is actively comparing properties, in-stay complaints where tone shapes the review they write, and any call requiring your specific policies applied with judgment. These are not rare edge cases in hospitality. They represent a meaningful share of the calls that move revenue and guest satisfaction scores.",
+    "The most important input before any decision is your actual call mix. Properties that regret AI voice deployments typically discovered their off-script call volume was higher than a vendor demo suggested. If you do not have that data, finding it out is the first step.",
     "Before signing with any AI voice provider, ask these questions directly:",
   ],
   verdictChecklist: [

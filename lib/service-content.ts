@@ -37,17 +37,17 @@ export const hotelAnsweringServiceData: ServiceDetailData = {
   primaryHref: "/pilot",
   introHeading: "What is a hotel answering service?",
   answerBlock:
-    "A hotel answering service provides live, human call coverage so reservation inquiries, guest questions, and overflow calls are answered by a trained person instead of going to voicemail or a phone tree. Guest Squad operates using your rates, policies, and property information — covering calls during peak periods, after hours, and any time your front desk cannot get to the phone.\n\nUnlike a generic call center, a hospitality answering service is briefed specifically on your property: room types, rates, local knowledge, and escalation contacts. The result is a guest experience that feels like an extension of your front desk, not an outsourced script. If you want to estimate how much missed calls are costing your property, the [missed booking revenue calculator](/resources/missed-booking-calculator) can put a number on it before you book a review.",
+    "Every reservation call your front desk misses is a guest who reached out and got nothing back. A hotel answering service puts a trained person on every inbound call: reservation inquiries, guest questions, overflow during check-in peaks, and after-hours calls when your desk is off-site, using your live rates, policies, and escalation contacts.\n\nA generic call center runs a shared agent pool with no property knowledge. Guest Squad operates using a brief built around your property specifically: room types, local area, your tone, and the escalation rules your team sets. The experience feels like an extension of your front desk, not an outsourced script. If you want to estimate what missed calls are costing before booking a review, the [missed booking revenue calculator](/resources/missed-booking-calculator) puts a number on it.",
   image: {
     src: "https://images.unsplash.com/photo-1525182008055-f88b95ff7980?w=1600&q=90",
     alt: "Hospitality-trained agent handling inbound hotel reservation calls and guest inquiries",
   },
   includesTitle: "Calls your front desk should never lose to voicemail.",
   includes: [
-    { title: "Live call answering", description: "Every inbound call answered by a person, not an automated menu or voicemail, during the hours you choose." },
-    { title: "Reservation and general inquiries", description: "Booking questions, rate quotes, and general property questions handled directly using your information." },
-    { title: "Call overflow during peak periods", description: "When your front desk is slammed at check-in or check-out, overflow calls are picked up instead of going unanswered." },
-    { title: "Message taking and routing", description: "Anything that needs your team's direct attention is logged and routed immediately, with full call context." },
+    { title: "Live call answering", description: "Every call answered by a person. No phone tree, no voicemail, no unanswered ring during the hours you set." },
+    { title: "Reservation and general inquiries", description: "Booking questions, rate quotes, and policy questions handled and resolved directly, not taken as a message and forwarded." },
+    { title: "Call overflow during peak periods", description: "Check-in peaks and busy weekends are when overflow calls are highest. Every call picked up instead of ringing out means fewer missed reservations." },
+    { title: "Message taking and routing", description: "Anything requiring management discretion is logged with the full call context and routed immediately, so your team follows up with what they need, not just a name and number." },
   ],
   examples:
     "A guest calls at 10pm asking about availability for next weekend. The agent pulls live rates, answers the question, and confirms the booking in your system without waking your team. On a busy Saturday check-in, four calls arrive while your desk handles a queue: three are answered and completed directly, one rate-exception request is logged and routed to the manager with full context.",
@@ -77,7 +77,7 @@ export const hotelAnsweringServiceData: ServiceDetailData = {
     "Multi-property groups who want consistent call handling across every site",
   ],
   notes:
-    "This is a true call-answering layer. Every call reaches a hospitality-trained person, not an automated system.",
+    "Every call reaches a trained person. Not a menu. Not a voicemail. A hospitality-trained agent who knows your property.",
   pairsWith: [
     { label: "After-Hours Support", slug: "after-hours-support" },
     { label: "Reservation Support", slug: "reservation-support" },

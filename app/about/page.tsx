@@ -51,7 +51,7 @@ const ABOUT_FAQS = [
     a: "Escalation rules are documented and agreed before coverage begins. When a situation falls outside the agreed handling scope (a complaint requiring owner approval, a safety issue, a rate dispute), the interaction is immediately routed to your designated escalation contact using the method and priority level you specify. Coverage for overnight escalations is handled under [after-hours support](/services/after-hours-support) and [back-office operations](/services/back-office-operations) depending on scope.",
   },
   {
-    q: "What makes Guest Squad different from a hotel call center?",
+    q: "Why do independent hotels choose Guest Squad over a generic call center?",
     a: "Generic call centers handle volume across many industries. Guest Squad is built exclusively for hospitality: agents are trained on OTA platforms, PMS workflows, hotel escalation protocols, and the tone independent properties expect in guest-facing communication. See how we compare in our [hotel answering service vs call center](/resources/hotel-answering-service-vs-call-center) guide.",
   },
 ];

@@ -35,10 +35,6 @@ const HOME_FAQS = [
     a: "Yes. Guest Squad provides [hotel answering service](/services/hotel-answering-service) coverage for reservation calls, guest questions, after-hours support, and front desk overflow. Unlike a generic call center, we also support guest messages, OTA inboxes, and property-specific escalation workflows.",
   },
   {
-    q: "Is Guest Squad a hotel call center?",
-    a: "No. Guest Squad is a guest operations service built specifically for hospitality, not a generic call center that also handles hotel calls. Agents are trained on hotel systems, OTA workflows, and the tone independent properties want their guests to experience.",
-  },
-  {
     q: "Which guest channels can Guest Squad cover?",
     a: "Phone calls, SMS, WhatsApp, email, Booking.com, Expedia, and Airbnb inboxes, and in-app messaging from supported PMS or guest-messaging platforms. [OTA inboxes](/services/ota-inbox-management) are covered as a dedicated service. Coverage is built around your existing channels, not a new system you have to adopt.",
   },

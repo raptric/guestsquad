@@ -485,9 +485,9 @@ export const answeringServiceCostGuide: GuideArticleData = {
   title: "How Much Does a Hotel Answering Service Cost?",
   description:
     "The pricing models hotel answering services actually use, what drives the price up or down, and the hidden costs worth asking about before you sign.",
-  metaTitle: "How Much Does a Hotel Answering Service Cost?",
+  metaTitle: "Hotel Answering Service Cost & Pricing Guide",
   metaDescription:
-    "How hotel answering services price their plans, what drives the cost, and the questions to ask before signing with any provider.",
+    "See how hotel answering service pricing works, including per-call rates, shared coverage, dedicated agents, after-hours support, and what affects your quote.",
   datePublished: "2026-08-06T00:00:00+00:00",
   dateModified: "2026-08-07T00:00:00+00:00",
   intro: [

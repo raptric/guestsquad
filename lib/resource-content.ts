@@ -441,6 +441,14 @@ export const callCenterComparison: ResourceArticleData = {
       q: "How much does a hotel answering service cost compared to a call center?",
       a: "Hotel answering services are typically priced on flat monthly plans scoped to your coverage hours and channels, while generic call centers often bill per minute or per seat. For an independent hotel, the all-in cost of a hospitality-specific service is often comparable once you account for call center integration fees and overage charges. The [hotel answering service cost guide](/resources/hotel-answering-service-cost) walks through the pricing models and what to watch for before you sign.",
     },
+    {
+      q: "Is a hospitality call center the same as a hotel answering service?",
+      a: "They're often used interchangeably, but a hospitality call center usually means a larger, multi-property or multi-brand operation, while a hotel answering service like Guest Squad is built around one property's rates, policies, and escalation rules specifically. If you're comparing options, the real question isn't the label -- it's whether the team knows your property or is working from a generic script.",
+    },
+    {
+      q: "What should I look for in a hospitality call center for a single hotel?",
+      a: "Property-specific training, not just industry-general call handling. Ask whether agents know your actual rates and room types, whether they can access your PMS, and whether escalations reach the right person on your team -- not just a shared inbox.",
+    },
   ],
   schemaAbout: { type: "Service", name: "Hotel Answering Service", url: "https://guestsquad.com/services/hotel-answering-service", serviceType: "Hotel Answering Service", areaServed: "Worldwide" },
   schemaMentions: [

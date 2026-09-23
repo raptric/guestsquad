@@ -688,7 +688,7 @@ export const airbnbSupportData: ServiceDetailData = {
   eyebrow: "Airbnb Guest Support",
   title: "24/7 Airbnb Guest Support for Hosts and Short-Term Rental Operators",
   description:
-    "Round-the-clock Airbnb message handling and guest communication for hosts and serviced apartment operators — check-in help, in-stay issues, and review management across every listing.",
+    "Round-the-clock Airbnb guest services and message handling for hosts and serviced apartment operators -- check-in help, in-stay issues, and review management across every listing.",
   schemaAbout: { "@type": "Thing", "name": "Airbnb Guest Communication Management" },
   schemaServiceOutput: "Monitored and answered Airbnb, Vrbo, and direct-booking guest messages around the clock, protecting host response rate and Superhost status",
   schemaSubjectOf: [
@@ -794,9 +794,9 @@ export const airbnbSupportData: ServiceDetailData = {
 export const vacationRentalAnsweringData: ServiceDetailData = {
   slug: "vacation-rental-answering-service",
   eyebrow: "Vacation Rental Answering Service",
-  title: "24/7 Vacation Rental Answering Service for Airbnb, Vrbo, and STR Operators",
+  title: "Vacation Rental Answering Service -- After-Hours & 24/7 for Airbnb, Vrbo, and STR Operators",
   description:
-    "24/7 live call answering for Airbnb, Vrbo, and short-term rental operators. Every guest call is answered by a trained person, with no voicemail and no missed bookings.",
+    "24/7 live call answering for Airbnb, Vrbo, and short-term rental operators, including after-hours and overnight coverage. Every guest call is answered by a trained person -- no voicemail, no missed bookings.",
   schemaAbout: { "@type": "Thing", "name": "Vacation Rental Phone Answering" },
   schemaServiceOutput: "Live call answering and guest message handling for short-term rental operators, covering check-in support, access issues, and after-hours guest inquiries",
   schemaSubjectOf: [

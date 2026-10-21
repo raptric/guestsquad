@@ -67,6 +67,20 @@ export const PRIVACY_SECTIONS: LegalSection[] = [
     ],
   },
   {
+    heading: "SMS & Text Message Communications",
+    paragraphs: [
+      "Guest Squad may send SMS text messages to hotel operators and prospective clients who have provided a mobile phone number and expressly opted in to receive such communications through a contact form, demo request, or other registration form on this Site.",
+      "Program description. Messages may include appointment confirmations, demo scheduling, follow-up communications, and service-related updates. Consent to receive SMS is not a condition of purchasing or receiving any service.",
+      "How to opt in. You opt in by providing your mobile number and checking an unchecked SMS consent checkbox on a form on this Site. Submitting your number with the box checked constitutes express written consent.",
+      "How to opt out. Reply STOP to any message at any time. You will receive one confirmation message and no further messages will be sent unless you re-subscribe.",
+      `Help. Reply HELP to any message for assistance, or contact us at ${SITE.email}.`,
+      "Message frequency. Message frequency varies based on your activity and interactions with Guest Squad.",
+      "Message and data rates. Standard message and data rates may apply. Check with your mobile carrier for details.",
+      "Data sharing. We do not share, sell, rent, or otherwise disclose your mobile phone number to third parties for their own marketing purposes. Your number is used solely to send the communications you have consented to receive.",
+      "Carrier disclaimer. Carriers are not liable for delayed or undelivered messages. Delivery is subject to your carrier's terms and network availability.",
+    ],
+  },
+  {
     heading: "Cookies & Tracking Technologies",
     paragraphs: [
       "The Site may use cookies and similar technologies for essential site functionality, analytics, and (where applicable) marketing measurement. Where required by applicable law (including the GDPR's ePrivacy-derived consent requirements and similar laws in the UK and other jurisdictions), we will request your consent before placing non-essential cookies, and you may withdraw that consent at any time through your browser settings or any cookie-preference tool made available on the Site.",

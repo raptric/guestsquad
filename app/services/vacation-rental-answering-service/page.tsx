@@ -4,7 +4,7 @@ import { vacationRentalAnsweringData } from "@/lib/service-content";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Vacation Rental Answering Service -- After-Hours & 24/7",
+  title: "Vacation Rental Answering Service | 24/7 After-Hours Support",
   description: vacationRentalAnsweringData.description,
   path: `/services/${vacationRentalAnsweringData.slug}`,
 });

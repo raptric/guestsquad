@@ -13,7 +13,7 @@ import { FaqAccordion } from "@/components/site/faq-accordion";
 export const metadata: Metadata = buildMetadata({
   title: "Hotel Guest Support Pricing",
   description:
-    "Guest Squad pricing is scoped around your property's channels, interaction volume, and coverage hours. Every plan starts with the channels your guests use. Get a quote after a short review call.",
+    "Guest Squad pricing is scoped to your channels, interaction volume and coverage hours. Start with a short review call and get a custom quote.",
   path: "/pricing",
 });
 
@@ -55,7 +55,7 @@ export default function PricingPage() {
         data={[
           webPageSchema({
             name: "Hotel Guest Support Pricing",
-            description: "Guest Squad pricing is scoped around your property's channels, interaction volume, and coverage hours. Every plan starts with the channels your guests use. Get a quote after a short review call.",
+            description: "Guest Squad pricing is scoped to your channels, interaction volume and coverage hours. Start with a short review call and get a custom quote.",
             path: "/pricing",
             primaryImageUrl: "https://guestsquad.com/brand-assets/og-image.jpg",
             primaryImageAlt: "Guest Squad pricing — hotel guest operations coverage plans",

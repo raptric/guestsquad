@@ -151,7 +151,7 @@ export default function HomePage() {
                 Remote reception for hotels and serviced properties.
               </Link>
             </h2>
-            <p className="mt-3 text-sm leading-relaxed text-ink-soft">
+            <p className="mt-3 grow text-sm leading-relaxed text-ink-soft">
               For independent hotels, boutique properties, serviced apartments, and contactless properties. We answer guest questions, help with arrivals, handle access issues, and take care of day-to-day requests through your existing systems, the way your front desk would.
             </p>
             <div className="mt-6">
@@ -183,7 +183,7 @@ export default function HomePage() {
                 A coordinated reservations operation for hotel groups and portfolios.
               </Link>
             </h2>
-            <p className="mt-3 text-sm leading-relaxed text-ink-soft">
+            <p className="mt-3 grow text-sm leading-relaxed text-ink-soft">
               For hotel groups, property management companies, and hospitality portfolios. We handle reservation inquiries, approved bookings, modifications, and cancellations across your properties. Each property keeps its own rates, policies, and systems. Your team stays in control of decisions.
             </p>
             <div className="mt-6">
@@ -215,7 +215,7 @@ export default function HomePage() {
                 Listing-specific guest operations for professional STR portfolios.
               </Link>
             </h2>
-            <p className="mt-3 text-sm leading-relaxed text-ink-soft">
+            <p className="mt-3 grow text-sm leading-relaxed text-ink-soft">
               For professional vacation rental companies and STR managers on Airbnb, Vrbo, and direct-booking channels. We handle guest messages, arrivals, and access issues for each listing, and coordinate with your housekeeping and maintenance contacts across your whole portfolio.
             </p>
             <div className="mt-6">

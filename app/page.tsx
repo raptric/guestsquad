@@ -201,7 +201,11 @@ export default function HomePage() {
           {/* Vacation Rental Guest Operations */}
           <div className="flex flex-col rounded-lg border border-line bg-paper p-7">
             <p className="text-[11px] font-semibold uppercase tracking-[0.15em] text-gold-dark">Vacation Rental Guest Operations</p>
-            <h2 className="mt-2 text-lg font-medium text-ink">Listing-specific guest operations for professional STR portfolios.</h2>
+            <h2 className="mt-2 text-lg font-medium text-ink">
+              <Link href="/services/vacation-rental-guest-operations" className="hover:text-gold transition-colors">
+                Listing-specific guest operations for professional STR portfolios.
+              </Link>
+            </h2>
             <p className="mt-3 text-sm leading-relaxed text-ink-soft">
               For professional vacation rental companies and STR managers on Airbnb, Vrbo, and direct-booking channels. We handle guest messages, arrivals, and access issues for each listing, and coordinate with your housekeeping and maintenance contacts across your whole portfolio.
             </p>
@@ -218,10 +222,13 @@ export default function HomePage() {
                 ))}
               </div>
             </div>
-            <div className="mt-6">
+            <div className="mt-6 flex flex-col gap-3">
               <CoverageReviewButton variant="gold" size="default" ctaLocation="homepage_vacation_rental">
                 Discuss Your Rental Portfolio
               </CoverageReviewButton>
+              <Link href="/services/vacation-rental-guest-operations" className="text-center text-xs text-gold-dark underline underline-offset-4 hover:text-gold transition-colors">
+                Explore Vacation Rental Guest Operations →
+              </Link>
             </div>
           </div>
 

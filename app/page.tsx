@@ -6,6 +6,7 @@ import { CoverageReviewButton } from "@/components/site/coverage-review-button";
 import { Section, SectionHeading } from "@/components/site/section";
 import { AiHuman } from "@/components/site/ai-human";
 import { PropertyTypes } from "@/components/site/property-types";
+import { PlatformLogos } from "@/components/site/platform-logos";
 import { DEFAULT_PROCESS } from "@/components/site/process-steps";
 import { Guarantees } from "@/components/site/guarantees";
 import { CtaSection } from "@/components/site/cta-section";
@@ -367,7 +368,7 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* PROCESS */}
+      {/* HOW WE WORK */}
       <Section surface>
         <SectionHeading eyebrow="How We Work" title="Live in days, not months." />
         <div className="mt-6 grid gap-8 lg:grid-cols-[2fr_3fr] lg:items-start lg:gap-14">
@@ -396,35 +397,15 @@ export default function HomePage() {
                 </div>
               </div>
             ))}
+            <p className="text-sm text-ink-muted">
+              Most qualified properties can be scoped and live within 5 business days.
+            </p>
           </div>
         </div>
       </Section>
 
-      {/* HOW GUEST SQUAD WORKS — replaces PricingCards, scroll target for hero */}
-      <Section id="how-it-works">
-        <SectionHeading eyebrow="How It Works" title="How Guest Squad works." />
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {[
-            { n: "01", title: "We review your guest communication gaps and missed-coverage hours" },
-            { n: "02", title: "We map the channels, volume, and hours your property needs covered" },
-            { n: "03", title: "We brief the team on your property, policies, and escalation rules" },
-            { n: "04", title: "Coverage goes live — with reporting and refinement from day one" },
-          ].map((step) => (
-            <div key={step.n} className="flex flex-col gap-2 border-t-2 border-gold/25 pt-4">
-              <span className="text-2xl font-semibold tabular-nums text-gold-dark/60">{step.n}</span>
-              <p className="text-sm font-medium text-ink">{step.title}</p>
-            </div>
-          ))}
-        </div>
-        <p className="mt-6 text-sm text-ink-muted">
-          Most qualified properties can be scoped and live within 5 business days.
-        </p>
-        <div className="mt-5">
-          <CoverageReviewButton variant="gold" size="default" ctaLocation="homepage_how_it_works">
-            Book a Coverage Review
-          </CoverageReviewButton>
-        </div>
-      </Section>
+      {/* PLATFORM LOGOS */}
+      <PlatformLogos />
 
       {/* GUARANTEES */}
       <Section surface>

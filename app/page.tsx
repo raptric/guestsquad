@@ -24,36 +24,28 @@ export const metadata: Metadata = buildMetadata({
 
 const HOME_FAQS = [
   {
-    q: "What does Guest Squad do?",
-    a: "Guest Squad provides 24/7 human guest operations support for hotels, boutique properties, resorts, serviced apartments, and short-term rental operators. The service covers reservation calls, guest messages, OTA inboxes, after-hours front desk support, front desk overflow, and guest communication gaps, without requiring an additional full-time hire.",
+    q: "How does Guest Squad learn our property's procedures and tone?",
+    a: "Before any agent handles a guest interaction, we run a structured property briefing that covers your rates, policies, escalation rules, PMS access, and how you communicate with guests. Agents follow your procedures, not a generic script. Most properties complete briefing and go live within 5 business days.",
   },
   {
-    q: "Is Guest Squad a hotel answering service?",
-    a: "Yes. Guest Squad provides [hotel answering service](/services/hotel-answering-service) coverage for reservation calls, guest questions, after-hours support, and front desk overflow. Unlike a generic call center, we also support guest messages, OTA inboxes, and property-specific escalation workflows.",
+    q: "What happens if a guest issue needs someone on-site?",
+    a: "Every property brief includes a clear escalation path. If a situation requires on-site action — a maintenance issue, a noise complaint, a guest who needs a manager — the agent follows your escalation rules: contacting the right person at your property by the method you specify. We do not make on-site decisions; we make sure the right person at your end is reached immediately.",
   },
   {
-    q: "Which guest channels can Guest Squad cover?",
-    a: "Phone calls, SMS, WhatsApp, email, Booking.com, Expedia, and Airbnb inboxes, and in-app messaging from supported PMS or guest-messaging platforms. [OTA inboxes](/services/ota-inbox-management) are covered as a dedicated service. Coverage is built around your existing channels, not a new system you have to adopt.",
+    q: "Can we start with one channel and expand later?",
+    a: "Yes. Most properties start with after-hours phone coverage or OTA inbox management, then add channels or extend hours once the first scope is running well. There is no requirement to cover everything from day one. Coverage expands on your schedule.",
   },
   {
-    q: "What types of properties use Guest Squad?",
-    a: "Independent hotels, boutique properties, resorts, serviced apartments, Airbnb hosts, Vrbo operators, and short-term rental property managers, typically from a single property up to a small portfolio.",
+    q: "Is there a contract or minimum commitment?",
+    a: "Plans are month-to-month after the initial pilot period, with 30 days notice to cancel. Qualified properties can start with a 2-week pilot before moving into ongoing coverage. There is no setup fee and no lock-in.",
   },
   {
-    q: "Does Guest Squad replace our front desk team?",
-    a: "No. Guest Squad is designed to extend your front desk, not replace it. We handle overflow, after-hours, and the channels your on-site team does not have time to monitor, so the people you have hired can focus on the guests in front of them.",
+    q: "How do we know coverage is actually working?",
+    a: "Every client receives weekly reporting covering call and message volume, response times, interaction outcomes, and any escalations. You can see exactly what was handled, how it was handled, and where gaps remain. Reporting is included from day one, not an add-on.",
   },
   {
     q: "How quickly can Guest Squad go live?",
     a: "Most clients are live within 5 business days of signing. Onboarding covers your rates, policies, PMS access, escalation rules, and brand voice before any agent handles a guest interaction.",
-  },
-  {
-    q: "How does hotel answering service pricing work?",
-    a: "Pricing is scoped per property based on call and message volume, channels covered, hours of coverage, and reporting needs. There is no fixed published rate because two properties with different volumes and channels need different coverage plans. See [what affects pricing](/pricing) before your first call.",
-  },
-  {
-    q: "What is hotel guest operations?",
-    a: "Hotel guest operations covers every channel a property uses to communicate with guests: [reservation calls](/services/reservation-support), guest messages, OTA inboxes, after-hours support, and front desk overflow. Guest Squad manages these channels so your on-site team can focus on guests in the building.",
   },
 ];
 

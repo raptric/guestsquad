@@ -21,27 +21,27 @@ export const metadata: Metadata = buildMetadata({
 const HOME_FAQS = [
   {
     q: "How does Guest Squad learn our property's procedures and tone?",
-    a: "Before any agent handles a guest interaction, we run a structured property briefing that covers your rates, policies, escalation rules, PMS access, and how you communicate with guests. Agents follow your procedures, not a generic script. Most properties complete briefing and go live within 5 business days.",
+    a: "Before any agent handles a guest interaction, we run a property briefing that covers your rates, policies, escalation rules, PMS access, and how you talk to guests. Agents follow your procedures, not a generic script. Most properties finish onboarding and go live within 5 business days.",
   },
   {
     q: "What happens if a guest issue needs someone on-site?",
-    a: "Every property brief includes a clear escalation path. If a situation requires on-site action — a maintenance issue, a noise complaint, a guest who needs a manager — the agent follows your escalation rules: contacting the right person at your property by the method you specify. We do not make on-site decisions; we make sure the right person at your end is reached immediately.",
+    a: "Every property brief includes a clear escalation path. If something needs hands-on attention, the agent contacts the right person at your property the way you've specified. We don't make on-site calls. We make sure your team gets reached right away.",
   },
   {
     q: "Can we start with one channel and expand later?",
-    a: "Yes. Most properties start with after-hours phone coverage or OTA inbox management, then add channels or extend hours once the first scope is running well. There is no requirement to cover everything from day one. Coverage expands on your schedule.",
+    a: "Yes. Most properties start with after-hours phone coverage or OTA inbox management, then add channels or extend hours once things are running smoothly. You don't have to cover everything on day one. Coverage grows on your timeline.",
   },
   {
     q: "Is there a contract or minimum commitment?",
-    a: "Plans are month-to-month after the initial pilot period, with 30 days notice to cancel. Qualified properties can start with a 2-week pilot before moving into ongoing coverage. There is no setup fee and no lock-in.",
+    a: "Plans are month-to-month after the pilot, with 30 days notice to cancel. Qualified properties can start with a 2-week pilot before committing to ongoing coverage. No setup fee. No lock-in.",
   },
   {
     q: "How do we know coverage is actually working?",
-    a: "Every client receives weekly reporting covering call and message volume, response times, interaction outcomes, and any escalations. You can see exactly what was handled, how it was handled, and where gaps remain. Reporting is included from day one, not an add-on.",
+    a: "Every client gets weekly reporting with call and message volume, response times, interaction outcomes, and any escalations. You can see exactly what was handled, how it was handled, and where gaps still exist. Reporting is included from day one, not an add-on.",
   },
   {
     q: "How quickly can Guest Squad go live?",
-    a: "Most clients are live within 5 business days of signing. Onboarding covers your rates, policies, PMS access, escalation rules, and brand voice before any agent handles a guest interaction.",
+    a: "Most clients are live within 5 business days of signing. We cover your rates, policies, PMS access, escalation rules, and brand voice during onboarding before any agent takes a guest interaction.",
   },
 ];
 
@@ -98,7 +98,7 @@ export default function HomePage() {
               Digital Front Desk &amp; Central Reservations for Hotels and Property Portfolios
             </h1>
             <p className="mt-6 max-w-lg text-lg leading-relaxed text-ink-soft">
-              Hospitality-trained remote teams for independent hotels, property management companies and vacation-rental operators. We handle reservation enquiries, guest reception and day-to-day guest requests through your existing systems, following your property procedures and coordinating with your teams.
+              Hospitality-trained remote teams for independent hotels, property management companies, and vacation rental operators. We handle reservation calls, guest questions, and day-to-day requests through your existing systems, following your property's procedures the way your own staff would.
             </p>
             <div className="mt-7 flex flex-col gap-4 sm:flex-row">
               <CoverageReviewButton variant="gold" size="lg" ctaLocation="homepage_hero">
@@ -147,7 +147,7 @@ export default function HomePage() {
             <p className="text-[11px] font-semibold uppercase tracking-[0.15em] text-gold-dark">Digital Front Desk</p>
             <h2 className="mt-2 text-lg font-medium text-ink">Remote reception for hotels and serviced properties.</h2>
             <p className="mt-3 text-sm leading-relaxed text-ink-soft">
-              For independent hotels, boutique properties, serviced apartments and contactless properties. We handle guest enquiries, arrival assistance, access support and day-to-day guest requests through your existing systems, following your property&rsquo;s own procedures.
+              For independent hotels, boutique properties, serviced apartments, and contactless properties. We answer guest questions, help with arrivals, handle access issues, and take care of day-to-day requests through your existing systems, the way your front desk would.
             </p>
             <div className="mt-5 border-t border-line pt-4">
               <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.12em] text-ink-muted">Relevant services</p>
@@ -175,7 +175,7 @@ export default function HomePage() {
             <p className="text-[11px] font-semibold uppercase tracking-[0.15em] text-gold-dark">Central Reservations Desk</p>
             <h2 className="mt-2 text-lg font-medium text-ink">A coordinated reservations operation for hotel groups and portfolios.</h2>
             <p className="mt-3 text-sm leading-relaxed text-ink-soft">
-              For hotel groups, property management companies and hospitality portfolios. We manage reservation enquiries, approved bookings, modifications and cancellations across your participating properties — each following its own rates, policies and systems, with management oversight retained by your team.
+              For hotel groups, property management companies, and hospitality portfolios. We handle reservation inquiries, approved bookings, modifications, and cancellations across your properties. Each property keeps its own rates, policies, and systems. Your team stays in control of decisions.
             </p>
             <div className="mt-5 border-t border-line pt-4">
               <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.12em] text-ink-muted">Relevant services</p>
@@ -203,7 +203,7 @@ export default function HomePage() {
             <p className="text-[11px] font-semibold uppercase tracking-[0.15em] text-gold-dark">Vacation Rental Guest Operations</p>
             <h2 className="mt-2 text-lg font-medium text-ink">Listing-specific guest operations for professional STR portfolios.</h2>
             <p className="mt-3 text-sm leading-relaxed text-ink-soft">
-              For professional vacation-rental companies and STR managers on Airbnb, Vrbo and direct-booking channels. We handle listing-specific guest communication, arrival assistance, access support and coordination with your approved housekeeping and maintenance contacts across your full portfolio.
+              For professional vacation rental companies and STR managers on Airbnb, Vrbo, and direct-booking channels. We handle guest messages, arrivals, and access issues for each listing, and coordinate with your housekeeping and maintenance contacts across your whole portfolio.
             </p>
             <div className="mt-5 border-t border-line pt-4">
               <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.12em] text-ink-muted">Relevant services</p>
@@ -267,7 +267,7 @@ export default function HomePage() {
             <p className="text-[11px] font-semibold uppercase tracking-[0.15em] text-gold-dark">Overflow &amp; Staff Absence</p>
             <h2 className="mt-2 text-lg font-medium text-ink">Backup when your team is at capacity or short-staffed.</h2>
             <p className="mt-3 text-sm leading-relaxed text-ink-soft">
-              Check-in peaks, high-occupancy periods, staff holidays and unplanned absence. We step in when your on-site team cannot cover the volume, so no call or message falls through.
+              Check-in peaks, high-occupancy periods, staff time off, and unplanned absences. We step in when your on-site team can't cover the volume, so no call or message falls through.
             </p>
             <div className="mt-5 border-t border-line pt-4">
               <div className="flex flex-wrap gap-2">
@@ -328,7 +328,7 @@ export default function HomePage() {
         <div className="absolute inset-0 flex items-center">
           <div className="container">
             <p className="max-w-md text-2xl font-medium leading-snug text-paper md:text-3xl">
-              The same standard of care your front desk gives in person, extended to every channel, every hour.
+              Every channel. Every hour. The same care your front desk gives in person.
             </p>
           </div>
         </div>

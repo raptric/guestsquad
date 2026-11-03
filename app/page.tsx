@@ -154,13 +154,10 @@ export default function HomePage() {
             <p className="mt-3 text-sm leading-relaxed text-ink-soft">
               For independent hotels, boutique properties, serviced apartments, and contactless properties. We answer guest questions, help with arrivals, handle access issues, and take care of day-to-day requests through your existing systems, the way your front desk would.
             </p>
-            <div className="mt-6 flex flex-col gap-3">
+            <div className="mt-6">
               <ButtonLink href="/services/digital-front-desk" variant="gold">
                 Explore Digital Front Desk Services
               </ButtonLink>
-              <CoverageReviewButton variant="outline" size="default" ctaLocation="homepage_digital_front_desk">
-                Discuss Front Desk Coverage
-              </CoverageReviewButton>
             </div>
             <div className="mt-5 border-t border-line pt-4">
               <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.12em] text-ink-muted">Relevant services</p>
@@ -189,13 +186,10 @@ export default function HomePage() {
             <p className="mt-3 text-sm leading-relaxed text-ink-soft">
               For hotel groups, property management companies, and hospitality portfolios. We handle reservation inquiries, approved bookings, modifications, and cancellations across your properties. Each property keeps its own rates, policies, and systems. Your team stays in control of decisions.
             </p>
-            <div className="mt-6 flex flex-col gap-3">
+            <div className="mt-6">
               <ButtonLink href="/services/central-reservations" variant="gold">
                 Explore Central Reservations Services
               </ButtonLink>
-              <CoverageReviewButton variant="outline" size="default" ctaLocation="homepage_central_reservations">
-                Discuss Your Reservations Operation
-              </CoverageReviewButton>
             </div>
             <div className="mt-5 border-t border-line pt-4">
               <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.12em] text-ink-muted">Relevant services</p>
@@ -224,13 +218,10 @@ export default function HomePage() {
             <p className="mt-3 text-sm leading-relaxed text-ink-soft">
               For professional vacation rental companies and STR managers on Airbnb, Vrbo, and direct-booking channels. We handle guest messages, arrivals, and access issues for each listing, and coordinate with your housekeeping and maintenance contacts across your whole portfolio.
             </p>
-            <div className="mt-6 flex flex-col gap-3">
+            <div className="mt-6">
               <ButtonLink href="/services/vacation-rental-guest-operations" variant="gold">
                 Explore Vacation Rental Guest Operations
               </ButtonLink>
-              <CoverageReviewButton variant="outline" size="default" ctaLocation="homepage_vacation_rental">
-                Discuss Your Rental Portfolio
-              </CoverageReviewButton>
             </div>
             <div className="mt-5 border-t border-line pt-4">
               <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.12em] text-ink-muted">Relevant services</p>

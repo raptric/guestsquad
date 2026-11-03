@@ -1,7 +1,8 @@
 /**
- * Digital Front Desk — structural draft
- * Status: PRIVATE PREVIEW. noindex. Not in public nav or sitemap.
- * Copy, keywords, final CTAs and schema are all pending.
+ * Digital Front Desk — private preview
+ * Status: noindex. Not in production nav, sitemap or SERVICES array.
+ * Route: /services/digital-front-desk
+ * Canonical will be set to the public URL at launch.
  */
 
 import type { Metadata } from "next";
@@ -11,214 +12,221 @@ import { Section, SectionHeading } from "@/components/site/section";
 import { Breadcrumbs } from "@/components/site/breadcrumbs";
 import { FaqAccordion } from "@/components/site/faq-accordion";
 import { CoverageReviewButton } from "@/components/site/coverage-review-button";
-import { buildMetadata } from "@/lib/seo";
+import { ButtonLink } from "@/components/site/button-link";
+import { JsonLd } from "@/components/site/json-ld";
+import { buildMetadata, breadcrumbSchema, faqSchema } from "@/lib/seo";
+import { SITE } from "@/lib/site-data";
 
+// ---------------------------------------------------------------------------
+// Metadata — noindex until launch
+// ---------------------------------------------------------------------------
 export const metadata: Metadata = {
   ...buildMetadata({
-    title: "Digital Front Desk — structural draft",
-    description: "Private structural draft. Not for public indexing.",
+    title: "Digital Front Desk for Hotels | Guest Squad",
+    description:
+      "Human remote reception for hotels and serviced apartments. Guest calls, messages, arrival assistance and local-team coordination around your procedures.",
     path: "/services/digital-front-desk",
   }),
   robots: { index: false, follow: false },
 };
 
 // ---------------------------------------------------------------------------
-// Content data object — all copy slots pending final keyword and intent mapping
+// FAQ data
 // ---------------------------------------------------------------------------
-const DRAFT = {
-  // Section 1 — Hero
-  hero: {
-    categoryLabel: "Digital Front Desk",
-    h1: "[H1: service name and operational outcome — copy pending]",
-    intro:
-      "[Intro: 2–3 sentences. Human remote reception. Supported systems. Approved property procedures. Not generic call-center framing.]",
-    primaryCta: "[Primary CTA label — pending]",
-    secondaryAnchor: "#scope",
-    secondaryLabel: "See what's covered",
-    fitLine:
-      "Independent and boutique hotels · Serviced apartments · Aparthotels · Contactless properties",
+const FAQS = [
+  {
+    q: "What is a digital front desk for hotels?",
+    a: "A digital front desk, also called a virtual front desk, gives hotel guests access to reception support delivered remotely. Guest Squad provides a human team for agreed calls, messages, arrival assistance and guest requests, using your property information and supported systems. The operating scope includes clear responsibilities for both the remote team and your local contacts.",
   },
+  {
+    q: "How does this differ from a hotel answering service?",
+    a: "A hotel answering service focuses on incoming calls and the actions agreed for those calls. Digital Front Desk can bring together calls, messaging, arrival assistance and guest-request coordination in one reception arrangement. The right choice depends on which parts of your guest journey need support.",
+  },
+  {
+    q: "Can you help guests check in and access the property?",
+    a: "Yes. We can provide arrival and access guidance and carry out approved check-in or access actions where your systems and permissions support them. Requests requiring physical attendance or authority outside the agreed scope follow your escalation plan.",
+  },
+  {
+    q: "Can remote reception work alongside our existing staff?",
+    a: "Yes. You can use Guest Squad for agreed overflow, staff-absence or out-of-hours coverage while your team continues its on-site work. We define routing and handover rules so responsibilities are clear.",
+  },
+  {
+    q: "What happens when housekeeping or maintenance needs to attend?",
+    a: "We contact your approved local team, share the request and follow up within your procedures. Your local responders carry out the physical work. We keep the guest informed and record the status, including any action or approval still outstanding.",
+  },
+  {
+    q: "Do we need to change our PMS or install a kiosk?",
+    a: "We start by reviewing your existing systems and guest-contact channels. The service is scoped around supported access and workflows; a kiosk is not a standard requirement. Compatibility and any setup requirements are confirmed before coverage begins.",
+  },
+  {
+    q: "Can we arrange 24/7 guest support?",
+    a: "Coverage can be scoped for after-hours, overflow or broader needs, including round-the-clock support where agreed. Tell us the hours, channels and guest tasks you need covered so we can confirm a suitable operating arrangement and proposal.",
+  },
+  {
+    q: "How is Digital Front Desk pricing determined?",
+    a: "Pricing depends on coverage hours, interaction volume, channels, property complexity and the actions required. We review your operation before recommending a scope. You can begin the conversation with your current coverage gap; exact volumes can be discussed during scoping.",
+  },
+];
 
-  // Section 2 — Coverage arrangements
-  arrangements: [
-    {
-      title: "After-Hours and Weekends",
-      situation:
-        "[Operating situation: evenings, overnight, early mornings, weekends — when front desk is closed or reduced.]",
-      howReached:
-        "[How interactions reach Guest Squad: call forwarding, messaging redirect, OTA routing — details pending property setup.]",
-      retained:
-        "[Retained property responsibilities: on-site physical presence, emergency decisions, access system control.]",
-      link: "/services/after-hours-support",
-      linkLabel: "After-Hours Support",
-    },
-    {
-      title: "Overflow and Staff Absence",
-      situation:
-        "[Operating situation: check-in peaks, high-occupancy periods, staff time off, unplanned absences.]",
-      howReached:
-        "[How interactions reach Guest Squad: overflow routing when on-site team is at capacity — configuration pending.]",
-      retained:
-        "[Retained property responsibilities: primary front-desk staffing, on-site decisions, physical guest handling.]",
-      link: null,
-      linkLabel: null,
-    },
-    {
-      title: "Broader Agreed Coverage",
-      situation:
-        "[Operating situation: extended daily hours or fuller front-desk coverage by agreement — scope defined per property.]",
-      howReached:
-        "[How interactions reach Guest Squad: agreed channel routing across phone, messaging, OTA — pending coverage definition.]",
-      retained:
-        "[Retained property responsibilities: physical attendance, emergency response, owner/management decisions.]",
-      link: null,
-      linkLabel: null,
-    },
-  ],
+// ---------------------------------------------------------------------------
+// Scope table rows
+// ---------------------------------------------------------------------------
+const SCOPE_ROWS = [
+  {
+    need: "Calls and property questions",
+    howHelps: "Answer questions about your property, amenities, policies and guest requests using the information you provide.",
+    control: "Exceptions and decisions outside the brief go to the appropriate property contact.",
+    link: { label: "Hotel Answering Service", href: "/services/hotel-answering-service" },
+  },
+  {
+    need: "Guest messages",
+    howHelps: "Handle conversations through agreed messaging channels, including supported OTA inboxes.",
+    control: "Your channel access, tone and response procedures guide the handling.",
+    link: { label: "Guest Messaging", href: "/services/guest-messaging" },
+  },
+  {
+    need: "Arrivals and departures",
+    howHelps: "Explain arrival instructions, help with check-in or checkout questions and complete supported actions where authorized.",
+    control: "Your systems and permissions determine which actions we can take.",
+    link: null,
+  },
+  {
+    need: "Access assistance",
+    howHelps: "Help guests follow entry instructions, troubleshoot supported access issues and perform approved actions.",
+    control: "Physical attendance, repairs and access exceptions follow your local response plan.",
+    link: null,
+  },
+  {
+    need: "Housekeeping and maintenance requests",
+    howHelps: "Contact your approved team, pass on the relevant context, follow up and keep the guest informed.",
+    control: "Your local contacts carry out the work; approvals stay with the people you designate.",
+    link: null,
+  },
+  {
+    need: "Reservation enquiries",
+    howHelps: "Answer booking questions and handle approved reservation tasks where included.",
+    control: "Your rates, availability, policies and booking authority set the boundaries.",
+    link: { label: "Reservation Support", href: "/services/reservation-support" },
+  },
+];
 
-  // Section 3 — Scope table rows
-  scopeRows: [
-    {
-      capability: "Calls and property enquiries",
-      remoteHandling:
-        "Answer calls, respond to enquiries, provide property information per approved brief",
-      permissionNote: "Per property brief. No physical action.",
-      link: "/services/hotel-answering-service",
-      linkLabel: "Hotel Answering Service",
-    },
-    {
-      capability: "Guest messaging (agreed channels)",
-      remoteHandling:
-        "Respond via SMS, WhatsApp, email or OTA inbox per agreed channel scope",
-      permissionNote: "Channel access confirmed in setup.",
-      link: "/services/guest-messaging",
-      linkLabel: "Guest Messaging",
-    },
-    {
-      capability: "Arrival and departure assistance",
-      remoteHandling:
-        "Provide arrival instructions, answer access questions, guide check-in/check-out steps",
-      permissionNote:
-        "Guidance only. Approved digital actions where system permits. No physical attendance.",
-      link: null,
-      linkLabel: null,
-    },
-    {
-      capability: "Access guidance and troubleshooting",
-      remoteHandling:
-        "Troubleshoot access issues per approved instructions; initiate permitted actions where system allows",
-      permissionNote:
-        "[Owner confirmation: which systems and permitted actions are in scope.]",
-      link: null,
-      linkLabel: null,
-    },
-    {
-      capability: "Housekeeping / maintenance coordination",
-      remoteHandling:
-        "Log requests, contact approved local responders, follow up per procedures",
-      permissionNote:
-        "Coordination only. Resolution is on-site. Local contacts defined in brief.",
-      link: null,
-      linkLabel: null,
-    },
-    {
-      capability: "Reservation enquiries and approved tasks",
-      remoteHandling:
-        "Handle enquiries and approved booking tasks where included in scope",
-      permissionNote:
-        "Included by agreement. Portfolio reservations operations belong to Central Reservations Desk.",
-      link: "/services/reservation-support",
-      linkLabel: "Reservation Support",
-    },
-  ],
+// ---------------------------------------------------------------------------
+// Schema
+// ---------------------------------------------------------------------------
+const PAGE_URL = `${SITE.url}/services/digital-front-desk`;
+const SERVICE_ID = `${SITE.url}/#service-digital-front-desk`;
 
-  // Section 5 — Setup steps
-  setupSteps: [
-    {
-      n: "01",
-      title: "Define coverage",
-      body: "[Hours, channels, interaction types, responsibilities — confirmed per property.]",
-    },
-    {
-      n: "02",
-      title: "Build property brief",
-      body: "[Policies, arrival instructions, escalation contacts, approved actions — supplied by property owner/manager.]",
-    },
-    {
-      n: "03",
-      title: "Configure access and routing",
-      body: "[Channel routing, access permissions, communication workflows — [Owner confirmation: compatible systems and setup requirements.]]",
-    },
-    {
-      n: "04",
-      title: "Review readiness",
-      body: "[Sample situations, handover arrangements, activation criteria — sign-off before go-live.]",
-    },
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": SERVICE_ID,
+  name: "Digital Front Desk for Hotels",
+  serviceType: "Digital Front Desk",
+  description:
+    "Human remote reception for hotels and serviced apartments. Guest calls, messages, arrival assistance and local-team coordination around your procedures.",
+  url: PAGE_URL,
+  provider: { "@id": `${SITE.url}/#organization` },
+  areaServed: "Worldwide",
+  hoursAvailable: {
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    opens: "00:00",
+    closes: "23:59",
+  },
+  audience: [
+    { "@type": "Audience", audienceType: "Independent Hotel" },
+    { "@type": "Audience", audienceType: "Boutique Hotel" },
+    { "@type": "Audience", audienceType: "Serviced Apartment" },
+    { "@type": "Audience", audienceType: "Aparthotel" },
+    { "@type": "Audience", audienceType: "Contactless Property" },
   ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Digital Front Desk — Available Scope",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          "@id": `${SITE.url}/services/hotel-answering-service#service`,
+          name: "Hotel Answering Service",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          "@id": `${SITE.url}/services/guest-messaging#service`,
+          name: "Guest Messaging",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          "@id": `${SITE.url}/services/after-hours-support#service`,
+          name: "After-Hours Hotel Support",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          "@id": `${SITE.url}/services/ota-inbox-management#service`,
+          name: "OTA Inbox Management",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          "@id": `${SITE.url}/services/reservation-support#service`,
+          name: "Reservation Support",
+        },
+      },
+    ],
+  },
+  offers: {
+    "@type": "Offer",
+    description: "Coverage scoped to your property hours, channels and interaction volume. Begins with a coverage review.",
+    url: `${SITE.url}/contact`,
+    availability: "https://schema.org/InStock",
+    areaServed: "Worldwide",
+    seller: { "@id": `${SITE.url}/#organization` },
+  },
+};
 
-  setupChecklist: [
-    "Who owns updates to property instructions",
-    "How changes reach the remote team",
-    "Primary and backup local contacts",
-    "[Owner confirmation: compatibility review — systems and integrations]",
-    "Handover process between property and remote staff",
-  ],
-
-  // Section 6 — Visibility record fields
-  recordFields: [
-    { label: "Property", placeholder: "[Property name — redacted]" },
-    { label: "Channel", placeholder: "Phone / SMS / OTA" },
-    { label: "Guest enquiry / request", placeholder: "[Guest request description — illustrative]" },
-    { label: "Action taken", placeholder: "[Remote action or escalation — illustrative]" },
-    { label: "Responsible", placeholder: "Remote agent / [Local contact — redacted]" },
-    { label: "Status", placeholder: "Resolved / Escalated / Pending" },
-    { label: "Required next action", placeholder: "[Owner confirmation: field name and values]" },
-  ],
-
-  reportingConfirmations: [
-    "[Owner confirmation: reporting fields and format]",
-    "[Owner confirmation: delivery cadence — weekly / on-demand]",
-    "[Owner confirmation: delivery method — email / portal / other]",
-    "[Owner confirmation: supervisor or review contact]",
-  ],
-
-  relatedResources: [
-    { label: "After-Hours Hotel Support Checklist", href: "/resources/after-hours-hotel-support-checklist" },
-    { label: "Hotel Front Desk Overflow Support", href: "/resources/hotel-front-desk-overflow-support" },
-    { label: "Hotel Guest Messaging SOP Template", href: "/resources/hotel-guest-messaging-sop-template" },
-  ],
-
-  // Section 7 — FAQ topics (answers pending)
-  faqTopics: [
-    { q: "What stays on-site and what does Guest Squad handle remotely?", a: "[Answer pending — copy and owner confirmation required.]" },
-    { q: "What check-in or access actions can be performed remotely?", a: "[Answer pending — depends on property systems and agreed scope.]" },
-    { q: "What happens if a local contact is unavailable?", a: "[Answer pending — escalation path defined per property brief.]" },
-    { q: "Can coverage work alongside our current reception staff?", a: "[Answer pending.]" },
-    { q: "Which systems and channels can be supported?", a: "[Answer pending — compatibility review required per property.]" },
-    { q: "Can we start with a limited scope and expand later?", a: "[Answer pending.]" },
-    { q: "What determines pricing?", a: "[Answer pending — owner confirmation required. No rates at this stage.]" },
-  ],
-
-  // Discovery panel slots
-  discoverySlots: [
-    "Property type and size",
-    "Coverage gaps, hours, and time zone",
-    "Channels and systems in use",
-    "Required handling scope",
-    "Local response arrangement",
-  ],
+const webPageSchemaData = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": `${PAGE_URL}#webpage`,
+  url: PAGE_URL,
+  name: "Digital Front Desk for Hotels | Guest Squad",
+  description:
+    "Human remote reception for hotels and serviced apartments. Guest calls, messages, arrival assistance and local-team coordination around your procedures.",
+  isPartOf: { "@id": `${SITE.url}/#website` },
+  about: { "@id": `${SITE.url}/#organization` },
+  mainEntity: { "@id": SERVICE_ID },
 };
 
 // ---------------------------------------------------------------------------
 // Page
 // ---------------------------------------------------------------------------
-export default function DigitalFrontDeskDraftPage() {
+export default function DigitalFrontDeskPage() {
   return (
     <>
-      {/* Draft banner */}
-      <div className="bg-amber-100 border-b border-amber-300 text-amber-900 text-xs font-semibold text-center py-2 tracking-wide uppercase">
-        Structural Draft — Private Preview · noindex · Not in public nav or sitemap
-      </div>
+      <JsonLd
+        data={[
+          webPageSchemaData,
+          serviceSchema,
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Services", path: "/services" },
+            { name: "Digital Front Desk", path: "/services/digital-front-desk" },
+          ]),
+          faqSchema(FAQS),
+        ]}
+      />
 
       <Breadcrumbs
         items={[
@@ -228,40 +236,49 @@ export default function DigitalFrontDeskDraftPage() {
         ]}
       />
 
-      {/* ── SECTION 1: HERO ─────────────────────────────────────────── */}
+      {/* ── SECTION 1: HERO ──────────────────────────────────────────── */}
       <section className="border-b border-line bg-paper">
-        <div className="container grid items-center gap-10 py-16 md:grid-cols-2 md:py-20">
+        <div className="container grid items-center gap-10 py-16 md:grid-cols-2 md:py-22">
           <div>
-            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-gold-dark">
-              {DRAFT.hero.categoryLabel}
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-gold-dark">
+              Human Remote Reception
             </p>
             <h1 className="text-4xl font-medium leading-[1.08] tracking-tight text-ink md:text-5xl">
-              {DRAFT.hero.h1}
+              Digital Front Desk for Hotels and Serviced Properties
             </h1>
-            <p className="mt-5 max-w-lg text-lg leading-relaxed text-ink-soft">
-              {DRAFT.hero.intro}
+            <p className="mt-6 max-w-lg text-lg leading-relaxed text-ink-soft">
+              Give guests a person to turn to when your reception team is busy or off duty. Guest Squad handles calls, messages, arrival questions and guest requests through your supported systems, following your property procedures and coordinating with your on-site contacts.
+            </p>
+            <p className="mt-3 text-sm text-ink-muted">
+              For independent hotels, boutique properties, serviced apartments, aparthotels and contactless stays.
             </p>
             <div className="mt-7 flex flex-col gap-4 sm:flex-row">
-              <CoverageReviewButton variant="gold" size="lg" ctaLocation="dfd_draft_hero">
-                {DRAFT.hero.primaryCta}
+              <CoverageReviewButton variant="gold" size="lg" ctaLocation="dfd_hero">
+                Discuss Front Desk Coverage
               </CoverageReviewButton>
               <a
-                href={DRAFT.hero.secondaryAnchor}
+                href="#scope"
                 className="inline-flex items-center justify-center rounded-lg border border-line px-6 py-3 text-sm font-medium text-ink transition-colors hover:border-ink/40 hover:bg-surface"
               >
-                {DRAFT.hero.secondaryLabel}
+                See What We Handle
               </a>
             </div>
-            <p className="mt-3 text-xs text-ink-muted">{DRAFT.hero.fitLine}</p>
+            <p className="mt-3 text-xs text-ink-muted">
+              After-hours, overflow and broader coverage, scoped to your operation.
+            </p>
           </div>
+
           <div className="relative aspect-[4/3] overflow-hidden rounded-lg border border-line bg-surface">
-            {/* Photographic asset TBD — use existing site image or placeholder */}
-            <div className="absolute inset-0 flex items-center justify-center bg-surface">
-              <p className="text-center text-sm text-ink-muted px-6">
-                [Image placeholder: hotel front desk or remote-team context.<br />
-                Use existing site photo asset. No AI-generated imagery.]
-              </p>
-            </div>
+            <Image
+              src="https://images.unsplash.com/photo-1560662105-57f8ad6ae2d1?w=750&h=563&fit=crop&crop=entropy&q=75&auto=format"
+              alt="Hotel front desk reception area"
+              fill
+              unoptimized
+              priority
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-ink/10 via-transparent to-transparent" />
           </div>
         </div>
       </section>
@@ -270,80 +287,76 @@ export default function DigitalFrontDeskDraftPage() {
       <Section>
         <SectionHeading
           eyebrow="Coverage Arrangements"
-          title="[H2: When this fits your operation — copy pending]"
+          title="Front desk support for the hours and situations you need"
+          description="Extend reception around your existing team, opening hours and guest journey. We agree which interactions come to us, what we can handle and when your property team takes over."
         />
-        <p className="mt-2 max-w-2xl text-sm text-ink-muted">
-          These are coverage arrangements, not price tiers or guaranteed inclusions. Scope is confirmed per property.
-        </p>
-        <div className="mt-8 grid gap-6 lg:grid-cols-3">
-          {DRAFT.arrangements.map((a) => (
-            <div key={a.title} className="flex flex-col rounded-lg border border-line bg-paper p-6">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.15em] text-gold-dark">{a.title}</p>
-              <div className="mt-4 flex flex-col gap-3 text-sm leading-relaxed text-ink-soft">
-                <div>
-                  <span className="block text-[10px] font-semibold uppercase tracking-wider text-ink-muted mb-1">Operating situation</span>
-                  {a.situation}
-                </div>
-                <div>
-                  <span className="block text-[10px] font-semibold uppercase tracking-wider text-ink-muted mb-1">How interactions reach Guest Squad</span>
-                  {a.howReached}
-                </div>
-                <div>
-                  <span className="block text-[10px] font-semibold uppercase tracking-wider text-ink-muted mb-1">Retained property responsibilities</span>
-                  {a.retained}
-                </div>
-              </div>
-              {a.link && (
-                <div className="mt-4 pt-4 border-t border-line">
-                  <Link href={a.link} className="text-xs text-gold-dark underline underline-offset-4 hover:text-gold">
-                    {a.linkLabel}
-                  </Link>
-                </div>
-              )}
+        <div className="mt-10 grid gap-6 lg:grid-cols-3">
+
+          <div className="flex flex-col rounded-lg border border-line bg-paper p-7">
+            <h3 className="text-base font-semibold text-ink">After-hours and weekends</h3>
+            <p className="mt-3 text-sm leading-relaxed text-ink-soft">
+              Give late arrivals and in-stay guests a clear contact when reception is closed or operating with fewer staff. We handle agreed calls and messages, assist with supported arrival procedures and follow your escalation plan when local action is needed.
+            </p>
+            <div className="mt-auto pt-5">
+              <Link href="/services/after-hours-support" className="text-xs text-gold-dark underline underline-offset-4 hover:text-gold">
+                Explore after-hours hotel support
+              </Link>
             </div>
-          ))}
+          </div>
+
+          <div className="flex flex-col rounded-lg border border-gold/40 bg-paper p-7 shadow-sm">
+            <h3 className="text-base font-semibold text-ink">Overflow and staff absence</h3>
+            <p className="mt-3 text-sm leading-relaxed text-ink-soft">
+              Keep guest conversations moving while your team handles check-ins, in-person requests or a staffing gap. Route agreed calls and messages to Guest Squad, with clear rules for what we complete and what returns to your team.
+            </p>
+          </div>
+
+          <div className="flex flex-col rounded-lg border border-line bg-paper p-7">
+            <h3 className="text-base font-semibold text-ink">Broader reception coverage</h3>
+            <p className="mt-3 text-sm leading-relaxed text-ink-soft">
+              Build a wider remote reception arrangement across agreed hours and channels. Define the guest tasks, system access and local response responsibilities before coverage begins.
+            </p>
+          </div>
+
         </div>
+        <p className="mt-5 text-xs text-ink-muted">
+          These are coverage arrangements, not fixed packages or automatic inclusions.
+        </p>
       </Section>
 
-      {/* ── SECTION 3: SCOPE AND RESPONSIBILITIES ───────────────────── */}
+      {/* ── SECTION 3: SERVICE SCOPE ─────────────────────────────────── */}
       <Section id="scope" surface>
         <SectionHeading
-          eyebrow="Scope and Responsibilities"
-          title="[H2: What Guest Squad handles remotely — copy pending]"
+          eyebrow="Service Scope"
+          title="What your digital front desk can handle"
+          description="Your guests need useful answers and a clear next step. We work from your property information and approved procedures, with the scope and authority agreed before launch."
         />
-        <p className="mt-2 max-w-2xl text-sm text-ink-muted">
-          Available work is not automatically included in every engagement. Scope is agreed per property before go-live.
-        </p>
 
         {/* Desktop table */}
         <div className="mt-8 hidden overflow-x-auto md:block">
           <table className="w-full text-sm border-collapse">
             <thead>
-              <tr className="border-b border-line">
-                <th className="py-3 pr-6 text-left text-xs font-semibold uppercase tracking-wider text-ink-muted w-[22%]">Capability</th>
-                <th className="py-3 pr-6 text-left text-xs font-semibold uppercase tracking-wider text-ink-muted w-[45%]">Remote handling</th>
-                <th className="py-3 text-left text-xs font-semibold uppercase tracking-wider text-ink-muted">Permission or on-site requirement</th>
+              <tr className="border-b-2 border-line">
+                <th className="pb-3 pr-6 text-left text-xs font-semibold uppercase tracking-wider text-ink-muted w-[22%]">Guest need</th>
+                <th className="pb-3 pr-6 text-left text-xs font-semibold uppercase tracking-wider text-ink-muted w-[42%]">How Guest Squad helps</th>
+                <th className="pb-3 text-left text-xs font-semibold uppercase tracking-wider text-ink-muted">How your property stays in control</th>
               </tr>
             </thead>
             <tbody>
-              {DRAFT.scopeRows.map((row, i) => (
-                <tr key={row.capability} className={`border-b border-line/60 ${i % 2 === 0 ? "bg-paper" : "bg-surface/40"}`}>
-                  <td className="py-4 pr-6 font-medium text-ink align-top">
-                    {row.capability}
+              {SCOPE_ROWS.map((row, i) => (
+                <tr key={row.need} className={`border-b border-line/60 ${i % 2 === 0 ? "" : "bg-surface/40"}`}>
+                  <td className="py-4 pr-6 align-top">
+                    <span className="font-medium text-ink">{row.need}</span>
                     {row.link && (
-                      <div className="mt-1">
-                        <Link href={row.link} className="text-xs text-gold-dark underline underline-offset-4 hover:text-gold">
-                          {row.linkLabel}
+                      <div className="mt-1.5">
+                        <Link href={row.link.href} className="text-xs text-gold-dark underline underline-offset-4 hover:text-gold">
+                          {row.link.label}
                         </Link>
                       </div>
                     )}
                   </td>
-                  <td className="py-4 pr-6 text-ink-soft align-top">{row.remoteHandling}</td>
-                  <td className="py-4 text-ink-soft align-top">
-                    <span className={row.permissionNote.startsWith("[Owner") ? "text-amber-700 font-medium" : ""}>
-                      {row.permissionNote}
-                    </span>
-                  </td>
+                  <td className="py-4 pr-6 text-ink-soft align-top">{row.howHelps}</td>
+                  <td className="py-4 text-ink-soft align-top">{row.control}</td>
                 </tr>
               ))}
             </tbody>
@@ -352,104 +365,120 @@ export default function DigitalFrontDeskDraftPage() {
 
         {/* Mobile stacked cards */}
         <div className="mt-6 flex flex-col gap-4 md:hidden">
-          {DRAFT.scopeRows.map((row) => (
-            <div key={row.capability} className="rounded-lg border border-line bg-paper p-5">
-              <p className="font-semibold text-ink text-sm">{row.capability}</p>
+          {SCOPE_ROWS.map((row) => (
+            <div key={row.need} className="rounded-lg border border-line bg-paper p-5">
+              <p className="font-semibold text-ink text-sm">{row.need}</p>
               {row.link && (
-                <Link href={row.link} className="text-xs text-gold-dark underline underline-offset-4 hover:text-gold">
-                  {row.linkLabel}
+                <Link href={row.link.href} className="mt-0.5 block text-xs text-gold-dark underline underline-offset-4 hover:text-gold">
+                  {row.link.label}
                 </Link>
               )}
-              <div className="mt-3 flex flex-col gap-2 text-xs text-ink-soft">
+              <div className="mt-3 space-y-2 text-xs text-ink-soft">
                 <div>
-                  <span className="font-semibold text-ink-muted uppercase tracking-wider">Remote handling: </span>
-                  {row.remoteHandling}
+                  <span className="font-semibold text-ink-muted">How we help: </span>
+                  {row.howHelps}
                 </div>
                 <div>
-                  <span className="font-semibold text-ink-muted uppercase tracking-wider">Permission / on-site: </span>
-                  <span className={row.permissionNote.startsWith("[Owner") ? "text-amber-700 font-medium" : ""}>
-                    {row.permissionNote}
-                  </span>
+                  <span className="font-semibold text-ink-muted">Your control: </span>
+                  {row.control}
                 </div>
               </div>
             </div>
           ))}
         </div>
+
+        <p className="mt-6 text-sm leading-relaxed text-ink-soft">
+          Need a specific part of reception covered? Explore our{" "}
+          <Link href="/services/hotel-answering-service" className="text-gold-dark underline underline-offset-4 hover:text-gold">hotel answering service</Link>
+          {", "}
+          <Link href="/services/guest-messaging" className="text-gold-dark underline underline-offset-4 hover:text-gold">guest messaging support</Link>
+          {" and "}
+          <Link href="/services/ota-inbox-management" className="text-gold-dark underline underline-offset-4 hover:text-gold">OTA inbox management</Link>.
+        </p>
       </Section>
 
-      {/* ── SECTION 4: WORKED INTERACTION / PROCESS DIAGRAM ─────────── */}
+      {/* ── SECTION 4: WORKED GUEST INTERACTION ──────────────────────── */}
       <Section>
         <SectionHeading
           eyebrow="How It Works"
-          title="[H2: How a late-arrival access issue gets handled — copy pending]"
+          title="When a late arrival needs more than directions"
+          description="A guest reaches the property after reception closes and cannot get inside. Here is how an agreed remote-support workflow can operate."
         />
-        <p className="mt-2 text-sm text-ink-muted italic">
-          Illustrative workflow — not a customer result or guaranteed outcome.
-        </p>
 
-        <div className="mt-8 max-w-3xl">
-          {/* Main flow */}
+        <div className="mt-10 max-w-2xl">
+          {/* Steps */}
           {[
-            { step: "01", label: "Guest contacts support", owner: "Remote", note: "Call, SMS, OTA message or other agreed channel" },
-            { step: "02", label: "Confirm guest and property context", owner: "Remote", note: "Identity, property, relevant booking or access details" },
-            { step: "03", label: "Check approved instructions", owner: "Remote", note: "Property brief — approved actions and escalation path" },
-            { step: "04", label: "Provide guidance or take permitted action", owner: "Remote", note: "Remote guidance or approved digital action where system allows" },
-          ].map((s, i) => (
-            <div key={s.step} className="flex gap-4 mb-0">
+            {
+              n: "01",
+              title: "Establish the context",
+              body: "Confirm the guest and property details according to your procedure, then review the relevant arrival instructions.",
+              owner: "Remote",
+            },
+            {
+              n: "02",
+              title: "Take the permitted next step",
+              body: "Guide the guest through the entry process or complete a supported action within the access you have authorized.",
+              owner: "Remote",
+            },
+            {
+              n: "03",
+              title: "Bring in local help when needed",
+              body: "If remote assistance cannot resolve the problem, contact the approved local responder. Follow the backup escalation route if the first contact is unavailable.",
+              owner: "Remote → On-site",
+            },
+            {
+              n: "04",
+              title: "Keep the guest and property informed",
+              body: "Explain the next step to the guest and record the action, current status and outstanding follow-up. A pending local response remains visible as pending.",
+              owner: "Remote",
+            },
+          ].map((step, i, arr) => (
+            <div key={step.n} className="flex gap-5">
               <div className="flex flex-col items-center">
-                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border-2 border-gold/40 bg-paper text-xs font-bold text-gold-dark">
-                  {s.step}
+                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border-2 border-gold/50 bg-paper text-xs font-bold text-gold-dark">
+                  {step.n}
                 </div>
-                {i < 3 && <div className="w-px flex-1 bg-line mt-1 mb-1 min-h-[24px]" />}
+                {i < arr.length - 1 && (
+                  <div className="w-px flex-1 bg-line my-1 min-h-[28px]" />
+                )}
               </div>
-              <div className="pb-5">
-                <div className="flex items-center gap-2">
-                  <p className="text-sm font-semibold text-ink">{s.label}</p>
+              <div className={i < arr.length - 1 ? "pb-6" : "pb-0"}>
+                <div className="flex flex-wrap items-center gap-2">
+                  <h3 className="text-sm font-semibold text-ink">{step.title}</h3>
                   <span className="text-[10px] font-bold uppercase tracking-wider rounded px-1.5 py-0.5 bg-gold/10 text-gold-dark border border-gold/20">
-                    {s.owner}
+                    {step.owner}
                   </span>
                 </div>
-                <p className="mt-0.5 text-xs text-ink-soft">{s.note}</p>
+                <p className="mt-1 text-sm leading-relaxed text-ink-soft">{step.body}</p>
               </div>
             </div>
           ))}
 
           {/* Decision branch */}
-          <div className="ml-12 mt-2 rounded-lg border border-line bg-surface p-5">
-            <p className="text-xs font-semibold uppercase tracking-wider text-ink-muted mb-3">Decision: Resolved remotely?</p>
+          <div className="ml-14 mt-4 rounded-lg border border-line bg-surface p-5">
+            <p className="text-[10px] font-bold uppercase tracking-wider text-ink-muted mb-3">Resolved?</p>
             <div className="grid gap-4 sm:grid-cols-2">
               <div className="rounded border border-green-200 bg-green-50 p-4">
-                <p className="text-xs font-bold text-green-800 uppercase tracking-wider mb-2">Yes</p>
+                <p className="text-xs font-bold uppercase tracking-wider text-green-800 mb-2">Yes</p>
                 <ul className="text-xs text-green-900 space-y-1 list-disc list-inside">
-                  <li>Confirm with guest</li>
-                  <li>Record outcome</li>
+                  <li>Confirm outcome with guest</li>
+                  <li>Record action and status</li>
                 </ul>
               </div>
               <div className="rounded border border-amber-200 bg-amber-50 p-4">
-                <p className="text-xs font-bold text-amber-800 uppercase tracking-wider mb-2">No — escalate</p>
+                <p className="text-xs font-bold uppercase tracking-wider text-amber-800 mb-2">No — escalate</p>
                 <ul className="text-xs text-amber-900 space-y-1 list-disc list-inside">
-                  <li>
-                    Contact approved local responder
-                    <span className="ml-1 font-bold text-amber-700">[On-site]</span>
-                  </li>
-                  <li>Backup escalation if primary unavailable</li>
+                  <li>Contact approved local responder <span className="font-bold">[On-site]</span></li>
+                  <li>Follow backup escalation if needed</li>
                   <li>Update guest on status</li>
                   <li>Record resolved or pending</li>
                 </ul>
               </div>
             </div>
-            {/* Fallback */}
-            <div className="mt-4 rounded border border-line bg-paper p-3">
-              <p className="text-xs font-semibold text-ink-muted mb-1">System unavailable or approval required</p>
-              <p className="text-xs text-ink-soft">
-                Inform guest of delay. Follow approved fallback procedure. Contact local contact immediately.
-                [Owner confirmation: fallback steps and approval routing.]
-              </p>
-            </div>
           </div>
 
-          <p className="mt-4 text-xs text-ink-muted ml-12">
-            Remote and on-site ownership are distinguished by label, not color alone.
+          <p className="mt-4 ml-14 text-xs text-ink-muted italic">
+            Illustrative workflow. Actual actions depend on your systems, permissions and agreed escalation procedures.
           </p>
         </div>
       </Section>
@@ -458,33 +487,60 @@ export default function DigitalFrontDeskDraftPage() {
       <Section surface>
         <SectionHeading
           eyebrow="Setup and Handover"
-          title="[H2: What implementation involves — copy pending]"
+          title="Set up around your property, systems and team"
+          description="Property knowledge and clear handovers make remote reception useful. Before coverage starts, we agree how the service will operate with your staff and local contacts."
         />
-        <div className="mt-8 grid gap-6 lg:grid-cols-2 lg:gap-12">
-          {/* Four steps */}
-          <div className="flex flex-col gap-6">
-            {DRAFT.setupSteps.map((s) => (
-              <div key={s.n} className="flex gap-4">
-                <span className="shrink-0 text-2xl font-semibold tabular-nums text-gold-dark/50">{s.n}</span>
+
+        <div className="mt-10 grid gap-10 lg:grid-cols-2 lg:gap-16">
+          <div className="flex flex-col gap-8">
+            {[
+              {
+                n: "01",
+                title: "Define the coverage",
+                body: "Identify your guest-contact gaps, required hours, channels and tasks. Decide what comes to Guest Squad and what stays with your team.",
+              },
+              {
+                n: "02",
+                title: "Build the property brief",
+                body: "Document your policies, arrival instructions, guest information, tone and escalation contacts so handling reflects how your property operates.",
+              },
+              {
+                n: "03",
+                title: "Confirm access and routing",
+                body: "Review the systems and permissions needed for the agreed work. Set up the supported communication paths and clarify who can approve exceptions.",
+              },
+              {
+                n: "04",
+                title: "Review the handover",
+                body: "Walk through representative guest situations, confirm primary and backup contacts, and agree how updates and unresolved requests move between teams.",
+              },
+            ].map((s) => (
+              <div key={s.n} className="flex gap-5">
+                <span className="shrink-0 text-2xl font-semibold tabular-nums text-gold-dark/40">{s.n}</span>
                 <div>
                   <h3 className="text-sm font-semibold text-ink">{s.title}</h3>
-                  <p className="mt-1 text-sm leading-relaxed text-ink-soft">{s.body}</p>
+                  <p className="mt-1.5 text-sm leading-relaxed text-ink-soft">{s.body}</p>
                 </div>
               </div>
             ))}
-            <p className="text-xs text-ink-muted pl-10">
-              [Owner confirmation: exact staffing, continuity, security and launch-time claims.]<br />
-              No promise of every PMS or lock integration. Duration not guaranteed.
+            <p className="text-xs text-ink-muted pl-11">
+              We confirm supported workflows during scoping. System compatibility, access and the availability of local responders determine what can be handled remotely.
             </p>
           </div>
-          {/* Checklist */}
-          <div className="rounded-lg border border-line bg-paper p-6">
-            <p className="text-xs font-semibold uppercase tracking-wider text-ink-muted mb-4">Before go-live checklist</p>
-            <ul className="flex flex-col gap-3">
-              {DRAFT.setupChecklist.map((item) => (
+
+          <div className="rounded-lg border border-line bg-paper p-7">
+            <p className="text-xs font-semibold uppercase tracking-wider text-ink-muted mb-5">Before coverage starts</p>
+            <ul className="flex flex-col gap-4">
+              {[
+                "Who owns updates to property instructions",
+                "How changes reach the remote team",
+                "Primary and backup local contacts confirmed",
+                "Compatibility and system access reviewed",
+                "Handover process agreed between property and remote staff",
+              ].map((item) => (
                 <li key={item} className="flex items-start gap-3 text-sm text-ink-soft">
-                  <span className={`mt-0.5 h-4 w-4 shrink-0 rounded border-2 ${item.startsWith("[Owner") ? "border-amber-400 bg-amber-50" : "border-line"}`} aria-hidden="true" />
-                  <span className={item.startsWith("[Owner") ? "text-amber-700 font-medium" : ""}>{item}</span>
+                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold-dark/50" aria-hidden="true" />
+                  {item}
                 </li>
               ))}
             </ul>
@@ -496,96 +552,98 @@ export default function DigitalFrontDeskDraftPage() {
       <Section>
         <SectionHeading
           eyebrow="Visibility and Accountability"
-          title="[H2: What the operator sees after every interaction — copy pending]"
+          title="Know what was handled and what still needs attention"
         />
+        <div className="mt-6 max-w-2xl text-sm leading-relaxed text-ink-soft space-y-4">
+          <p>
+            Your property needs context when a request passes between teams. Guest interactions and escalations are documented so the next person can understand the request, the action taken and the current status.
+          </p>
+          <p>
+            The reporting format and review process are agreed around your coverage. We define the information your team needs to see, including outstanding requests, escalation ownership and required follow-up.
+          </p>
+          <p>
+            For housekeeping, maintenance or management issues, we coordinate with your approved contacts and follow the issue within the agreed procedures. Work awaiting local action stays distinguishable from work completed.
+          </p>
+        </div>
 
-        {/* Illustrative interaction record */}
-        <div className="mt-8 max-w-2xl rounded-lg border border-line bg-paper overflow-hidden">
-          <div className="bg-surface px-5 py-3 border-b border-line">
-            <p className="text-xs font-semibold text-ink-muted uppercase tracking-wider">
+        {/* Illustrative record */}
+        <div className="mt-8 max-w-2xl overflow-hidden rounded-lg border border-line bg-paper">
+          <div className="border-b border-line bg-surface px-5 py-3">
+            <p className="text-xs font-semibold uppercase tracking-wider text-ink-muted">
               Illustrative interaction record — not actual guest data
             </p>
           </div>
           <div className="divide-y divide-line/60">
-            {DRAFT.recordFields.map((f) => (
+            {[
+              { label: "Property", value: "— [redacted]" },
+              { label: "Interaction channel", value: "Phone" },
+              { label: "Guest enquiry or request", value: "Late arrival — unable to access room" },
+              { label: "Action taken", value: "Provided entry instructions; confirmed access via supported system" },
+              { label: "Responsible contact", value: "Remote agent / [local contact if escalated]" },
+              { label: "Current status", value: "Resolved" },
+              { label: "Required next action", value: "None — issue closed" },
+            ].map((f) => (
               <div key={f.label} className="grid grid-cols-[160px_1fr] gap-4 px-5 py-3 text-sm">
                 <span className="font-semibold text-ink shrink-0">{f.label}</span>
-                <span className={f.placeholder.startsWith("[Owner") ? "text-amber-700 font-medium" : "text-ink-soft"}>
-                  {f.placeholder}
-                </span>
+                <span className="text-ink-soft">{f.value}</span>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Reporting confirmations */}
-        <div className="mt-6 max-w-2xl rounded-lg border border-amber-200 bg-amber-50 p-5">
-          <p className="text-xs font-semibold uppercase tracking-wider text-amber-800 mb-3">Owner confirmations required</p>
-          <ul className="flex flex-col gap-2">
-            {DRAFT.reportingConfirmations.map((item) => (
-              <li key={item} className="text-sm text-amber-900">{item}</li>
-            ))}
-          </ul>
-        </div>
-
         {/* Related resources */}
-        <div className="mt-8">
-          <p className="text-xs font-semibold uppercase tracking-wider text-ink-muted mb-3">Related reading</p>
-          <div className="flex flex-col gap-2">
-            {DRAFT.relatedResources.map((r) => (
-              <Link key={r.href} href={r.href} className="text-sm text-gold-dark underline underline-offset-4 hover:text-gold">
-                {r.label}
-              </Link>
-            ))}
+        <div className="mt-10">
+          <h3 className="text-base font-semibold text-ink mb-4">Prepare your property for remote coverage</h3>
+          <div className="flex flex-col gap-3">
+            <Link href="/resources/after-hours-hotel-support-checklist" className="text-sm text-gold-dark underline underline-offset-4 hover:text-gold">
+              Review your after-hours support requirements
+            </Link>
+            <Link href="/resources/hotel-front-desk-overflow-support" className="text-sm text-gold-dark underline underline-offset-4 hover:text-gold">
+              Plan front desk overflow support
+            </Link>
+            <Link href="/resources/hotel-guest-messaging-sop-template" className="text-sm text-gold-dark underline underline-offset-4 hover:text-gold">
+              Build a guest messaging SOP
+            </Link>
           </div>
         </div>
       </Section>
 
-      {/* ── SECTION 7: BUYER QUESTIONS AND NEXT STEP ────────────────── */}
+      {/* ── SECTION 7: FAQ AND NEXT STEP ─────────────────────────────── */}
       <Section surface>
-        <div className="grid gap-10 lg:grid-cols-[3fr_2fr] lg:gap-16">
+        <div className="grid gap-12 lg:grid-cols-[3fr_2fr] lg:gap-16">
 
           {/* FAQ */}
           <div>
             <SectionHeading
               eyebrow="Common Questions"
-              title="[H2: What operators ask before starting — copy pending]"
+              title="Questions about remote hotel reception"
             />
-            <p className="mt-2 text-sm text-ink-muted">
-              Answers pending final copy and owner confirmation. Pricing and contract facts need confirmation before publishing.
-            </p>
-            <div className="mt-6">
-              <FaqAccordion items={DRAFT.faqTopics} defaultOpenCount={0} />
+            <div className="mt-8">
+              <FaqAccordion items={FAQS} defaultOpenCount={2} />
             </div>
           </div>
 
           {/* Discovery panel */}
-          <div className="rounded-lg border border-line bg-paper p-6 h-fit">
-            <p className="text-xs font-semibold uppercase tracking-wider text-gold-dark mb-1">Next Step</p>
-            <h3 className="text-lg font-medium text-ink mb-3">
-              [H3: Discovery panel headline — copy pending]
-            </h3>
-            <p className="text-sm text-ink-soft mb-4">
-              [Short intro: what the review call covers. No invented rates or pilot promises.]
+          <div className="rounded-lg border border-line bg-paper p-7 h-fit lg:sticky lg:top-8">
+            <p className="text-xs font-semibold uppercase tracking-[0.15em] text-gold-dark mb-2">
+              Next Step
             </p>
-            <div className="mb-5">
-              <p className="text-xs font-semibold uppercase tracking-wider text-ink-muted mb-2">
-                We&apos;ll ask about:
-              </p>
-              <ul className="flex flex-col gap-2">
-                {DRAFT.discoverySlots.map((slot) => (
-                  <li key={slot} className="flex items-start gap-2 text-sm text-ink-soft">
-                    <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-gold-dark/50" aria-hidden="true" />
-                    {slot}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <CoverageReviewButton variant="gold" size="default" ctaLocation="dfd_draft_next_step">
-              [CTA label — pending]
+            <h3 className="text-xl font-medium text-ink mb-3">
+              Discuss your front desk coverage
+            </h3>
+            <p className="text-sm leading-relaxed text-ink-soft mb-5">
+              Tell us where your reception team needs support: overnight arrivals, busy check-in periods, guest messages or a broader coverage requirement. We will review your hours, systems and guest-handling needs, then discuss the responsibilities and setup for a suitable arrangement.
+            </p>
+            <CoverageReviewButton variant="gold" size="default" ctaLocation="dfd_next_step">
+              Discuss Front Desk Coverage
             </CoverageReviewButton>
-            <p className="mt-3 text-xs text-ink-muted">
-              [Owner confirmation: pricing/pilot/contract facts before publishing.]
+            <div className="mt-4">
+              <ButtonLink href="/pricing" variant="outline" size="sm" ctaLocation="dfd_pricing_link">
+                How pricing is scoped
+              </ButtonLink>
+            </div>
+            <p className="mt-5 text-xs text-ink-muted">
+              Helpful for the conversation: property type and size, current reception hours, main guest-contact channels and the systems your team uses.
             </p>
           </div>
 

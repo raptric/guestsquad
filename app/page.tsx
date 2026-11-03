@@ -377,10 +377,7 @@ export default function HomePage() {
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-wide text-ink-muted">
-                    {s.step}
-                  </p>
-                  <h3 className="mt-1 text-base font-medium text-ink">{s.title}</h3>
+                  <h3 className="text-base font-medium text-ink">{s.title}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-ink-soft">{s.description}</p>
                 </div>
               </div>

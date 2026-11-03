@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { CoverageReviewButton } from "@/components/site/coverage-review-button";
+import { ButtonLink } from "@/components/site/button-link";
 import { Section, SectionHeading } from "@/components/site/section";
 import { PlatformLogos } from "@/components/site/platform-logos";
 import { DEFAULT_PROCESS } from "@/components/site/process-steps";
@@ -153,6 +154,14 @@ export default function HomePage() {
             <p className="mt-3 text-sm leading-relaxed text-ink-soft">
               For independent hotels, boutique properties, serviced apartments, and contactless properties. We answer guest questions, help with arrivals, handle access issues, and take care of day-to-day requests through your existing systems, the way your front desk would.
             </p>
+            <div className="mt-6 flex flex-col gap-3">
+              <ButtonLink href="/services/digital-front-desk" variant="gold">
+                Explore Digital Front Desk Services
+              </ButtonLink>
+              <CoverageReviewButton variant="outline" size="default" ctaLocation="homepage_digital_front_desk">
+                Discuss Front Desk Coverage
+              </CoverageReviewButton>
+            </div>
             <div className="mt-5 border-t border-line pt-4">
               <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.12em] text-ink-muted">Relevant services</p>
               <div className="flex flex-wrap gap-2">
@@ -167,14 +176,6 @@ export default function HomePage() {
                 ))}
               </div>
             </div>
-            <div className="mt-6 flex flex-col gap-3">
-              <CoverageReviewButton variant="gold" size="default" ctaLocation="homepage_digital_front_desk">
-                Discuss Front Desk Coverage
-              </CoverageReviewButton>
-              <Link href="/services/digital-front-desk" className="text-center text-xs text-gold-dark underline underline-offset-4 hover:text-gold transition-colors">
-                Explore Digital Front Desk Services →
-              </Link>
-            </div>
           </div>
 
           {/* Central Reservations Desk */}
@@ -188,6 +189,14 @@ export default function HomePage() {
             <p className="mt-3 text-sm leading-relaxed text-ink-soft">
               For hotel groups, property management companies, and hospitality portfolios. We handle reservation inquiries, approved bookings, modifications, and cancellations across your properties. Each property keeps its own rates, policies, and systems. Your team stays in control of decisions.
             </p>
+            <div className="mt-6 flex flex-col gap-3">
+              <ButtonLink href="/services/central-reservations" variant="gold">
+                Explore Central Reservations Services
+              </ButtonLink>
+              <CoverageReviewButton variant="outline" size="default" ctaLocation="homepage_central_reservations">
+                Discuss Your Reservations Operation
+              </CoverageReviewButton>
+            </div>
             <div className="mt-5 border-t border-line pt-4">
               <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.12em] text-ink-muted">Relevant services</p>
               <div className="flex flex-wrap gap-2">
@@ -202,14 +211,6 @@ export default function HomePage() {
                 ))}
               </div>
             </div>
-            <div className="mt-6 flex flex-col gap-3">
-              <CoverageReviewButton variant="gold" size="default" ctaLocation="homepage_central_reservations">
-                Discuss Your Reservations Operation
-              </CoverageReviewButton>
-              <Link href="/services/central-reservations" className="text-center text-xs text-gold-dark underline underline-offset-4 hover:text-gold transition-colors">
-                Explore Central Reservations Services →
-              </Link>
-            </div>
           </div>
 
           {/* Vacation Rental Guest Operations */}
@@ -223,6 +224,14 @@ export default function HomePage() {
             <p className="mt-3 text-sm leading-relaxed text-ink-soft">
               For professional vacation rental companies and STR managers on Airbnb, Vrbo, and direct-booking channels. We handle guest messages, arrivals, and access issues for each listing, and coordinate with your housekeeping and maintenance contacts across your whole portfolio.
             </p>
+            <div className="mt-6 flex flex-col gap-3">
+              <ButtonLink href="/services/vacation-rental-guest-operations" variant="gold">
+                Explore Vacation Rental Guest Operations
+              </ButtonLink>
+              <CoverageReviewButton variant="outline" size="default" ctaLocation="homepage_vacation_rental">
+                Discuss Your Rental Portfolio
+              </CoverageReviewButton>
+            </div>
             <div className="mt-5 border-t border-line pt-4">
               <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.12em] text-ink-muted">Relevant services</p>
               <div className="flex flex-wrap gap-2">
@@ -235,14 +244,6 @@ export default function HomePage() {
                   </Link>
                 ))}
               </div>
-            </div>
-            <div className="mt-6 flex flex-col gap-3">
-              <CoverageReviewButton variant="gold" size="default" ctaLocation="homepage_vacation_rental">
-                Discuss Your Rental Portfolio
-              </CoverageReviewButton>
-              <Link href="/services/vacation-rental-guest-operations" className="text-center text-xs text-gold-dark underline underline-offset-4 hover:text-gold transition-colors">
-                Explore Vacation Rental Guest Operations →
-              </Link>
             </div>
           </div>
 

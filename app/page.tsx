@@ -138,6 +138,7 @@ export default function HomePage() {
           title="A guest team for your property or portfolio."
           align="center"
           className="mx-auto"
+          titleClassName="md:whitespace-nowrap"
         />
         <div className="mt-10 grid gap-6 lg:grid-cols-3">
 

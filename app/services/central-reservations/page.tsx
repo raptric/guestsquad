@@ -218,7 +218,7 @@ export default function CentralReservationsPage() {
             <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-gold-dark">
               Human Reservations Support
             </p>
-            <h1 className="text-4xl font-medium leading-[1.08] tracking-tight text-ink md:text-5xl">
+            <h1 className="text-4xl font-medium leading-[1.08] tracking-tight text-ink md:text-4xl lg:text-5xl">
               Central Reservations Desk for Hotel Groups and Portfolios
             </h1>
             <p className="mt-6 max-w-lg text-lg leading-relaxed text-ink-soft">
@@ -243,48 +243,69 @@ export default function CentralReservationsPage() {
             </p>
           </div>
 
-          {/* Portfolio diagram visual */}
-          <div className="flex items-center justify-center rounded-lg border border-line bg-surface p-8 lg:p-10">
-            <div className="w-full max-w-sm">
-              <p className="mb-6 text-[10px] font-bold uppercase tracking-[0.15em] text-ink-muted text-center">
+          {/* Portfolio diagram — SVG */}
+          <div className="flex items-center justify-center rounded-lg border border-line bg-surface p-6 lg:p-8">
+            <div className="w-full max-w-xs">
+              <p className="mb-4 text-center text-[10px] font-bold uppercase tracking-[0.15em] text-ink-muted">
                 Portfolio operating model
               </p>
-              {/* Central team node */}
-              <div className="flex justify-center mb-2">
-                <div className="rounded-lg border-2 border-gold/50 bg-paper px-5 py-3 text-center shadow-sm">
-                  <p className="text-xs font-bold text-ink">Guest Squad</p>
-                  <p className="text-[10px] text-ink-muted mt-0.5">Reservations team</p>
-                </div>
-              </div>
-              {/* Connector down */}
-              <div className="flex justify-center">
-                <div className="w-px h-6 bg-line" />
-              </div>
-              {/* Horizontal bar */}
-              <div className="relative flex justify-center">
-                <div className="h-px w-4/5 bg-line" />
-              </div>
-              {/* Three property connectors */}
-              <div className="grid grid-cols-3 gap-3 mt-0">
-                {["Property A", "Property B", "Property C"].map((prop, i) => (
-                  <div key={prop} className="flex flex-col items-center">
-                    <div className="w-px h-5 bg-line" />
-                    <div className="w-full rounded border border-line bg-paper p-2.5 text-center">
-                      <p className="text-[10px] font-semibold text-ink">{prop}</p>
-                      <p className="text-[9px] text-ink-muted mt-1 leading-tight">
-                        {i === 0 ? "Rates · policies · permissions" : i === 1 ? "Rates · policies · permissions" : "Rates · policies · permissions"}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              {/* Escalation note */}
-              <div className="mt-5 rounded border border-gold/20 bg-gold/5 px-4 py-2.5 text-center">
-                <p className="text-[10px] text-ink-soft">Approval and escalation routes defined per property</p>
-              </div>
-              <p className="mt-3 text-center text-[9px] text-ink-muted">
-                Conceptual illustration — not actual software
-              </p>
+              <svg
+                viewBox="0 0 260 300"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-label="One Guest Squad reservations team connected to Property A, B and C, each with their own rates, policies and permissions. Escalation routes defined per property."
+                className="w-full"
+              >
+                {/* Guest Squad node */}
+                <rect x="60" y="10" width="140" height="44" rx="8" className="fill-[var(--color-gold,#B8923A)]/10" stroke="currentColor" strokeWidth="1.5" strokeOpacity="0.5"/>
+                <text x="130" y="29" textAnchor="middle" fontSize="10" fontWeight="700" className="fill-current text-ink">Guest Squad</text>
+                <text x="130" y="44" textAnchor="middle" fontSize="8.5" className="fill-current text-ink-muted">Reservations team</text>
+
+                {/* Down from GS to horizontal bar */}
+                <line x1="130" y1="54" x2="130" y2="78" stroke="currentColor" strokeWidth="1.5" className="text-line" strokeDasharray="3 2"/>
+
+                {/* Horizontal bar */}
+                <line x1="44" y1="78" x2="216" y2="78" stroke="currentColor" strokeWidth="1.5" className="text-line"/>
+
+                {/* Down to each property */}
+                <line x1="44" y1="78" x2="44" y2="102" stroke="currentColor" strokeWidth="1.5" className="text-line"/>
+                <line x1="130" y1="78" x2="130" y2="102" stroke="currentColor" strokeWidth="1.5" className="text-line"/>
+                <line x1="216" y1="78" x2="216" y2="102" stroke="currentColor" strokeWidth="1.5" className="text-line"/>
+
+                {/* Property A */}
+                <rect x="4" y="102" width="80" height="62" rx="6" fill="none" stroke="currentColor" strokeWidth="1" className="text-line"/>
+                <text x="44" y="120" textAnchor="middle" fontSize="9" fontWeight="700" className="fill-current text-ink">Property A</text>
+                <text x="44" y="134" textAnchor="middle" fontSize="7.5" className="fill-current text-ink-muted">Rates</text>
+                <text x="44" y="145" textAnchor="middle" fontSize="7.5" className="fill-current text-ink-muted">Policies</text>
+                <text x="44" y="156" textAnchor="middle" fontSize="7.5" className="fill-current text-ink-muted">Permissions</text>
+
+                {/* Property B */}
+                <rect x="90" y="102" width="80" height="62" rx="6" fill="none" stroke="currentColor" strokeWidth="1" className="text-line"/>
+                <text x="130" y="120" textAnchor="middle" fontSize="9" fontWeight="700" className="fill-current text-ink">Property B</text>
+                <text x="130" y="134" textAnchor="middle" fontSize="7.5" className="fill-current text-ink-muted">Rates</text>
+                <text x="130" y="145" textAnchor="middle" fontSize="7.5" className="fill-current text-ink-muted">Policies</text>
+                <text x="130" y="156" textAnchor="middle" fontSize="7.5" className="fill-current text-ink-muted">Permissions</text>
+
+                {/* Property C */}
+                <rect x="176" y="102" width="80" height="62" rx="6" fill="none" stroke="currentColor" strokeWidth="1" className="text-line"/>
+                <text x="216" y="120" textAnchor="middle" fontSize="9" fontWeight="700" className="fill-current text-ink">Property C</text>
+                <text x="216" y="134" textAnchor="middle" fontSize="7.5" className="fill-current text-ink-muted">Rates</text>
+                <text x="216" y="145" textAnchor="middle" fontSize="7.5" className="fill-current text-ink-muted">Policies</text>
+                <text x="216" y="156" textAnchor="middle" fontSize="7.5" className="fill-current text-ink-muted">Permissions</text>
+
+                {/* Escalation bar below properties */}
+                <line x1="44" y1="164" x2="44" y2="188" stroke="currentColor" strokeWidth="1" className="text-line" strokeDasharray="3 2"/>
+                <line x1="130" y1="164" x2="130" y2="188" stroke="currentColor" strokeWidth="1" className="text-line" strokeDasharray="3 2"/>
+                <line x1="216" y1="164" x2="216" y2="188" stroke="currentColor" strokeWidth="1" className="text-line" strokeDasharray="3 2"/>
+                <line x1="44" y1="188" x2="216" y2="188" stroke="currentColor" strokeWidth="1" className="text-line" strokeDasharray="3 2"/>
+
+                {/* Escalation node */}
+                <rect x="30" y="196" width="200" height="36" rx="6" className="fill-[var(--color-gold,#B8923A)]/5" stroke="currentColor" strokeWidth="1" strokeOpacity="0.3"/>
+                <text x="130" y="210" textAnchor="middle" fontSize="8.5" className="fill-current text-ink-soft">Escalation and approval routes</text>
+                <text x="130" y="223" textAnchor="middle" fontSize="8.5" className="fill-current text-ink-soft">defined per property</text>
+
+                {/* Caption */}
+                <text x="130" y="260" textAnchor="middle" fontSize="7.5" className="fill-current text-ink-muted">Conceptual illustration — not actual software</text>
+              </svg>
             </div>
           </div>
         </div>
@@ -349,7 +370,7 @@ export default function CentralReservationsPage() {
               {SCOPE_ROWS.map((row, i) => (
                 <tr key={row.need} className={`border-b border-line/60 ${i % 2 === 0 ? "" : "bg-surface/40"}`}>
                   <td className="py-4 pr-8 align-top font-medium text-ink">{row.need}</td>
-                  <td className="py-4 text-ink-soft align-top">{row.help}</td>
+                  <td className="py-4 pr-4 text-ink-soft align-top">{row.help}</td>
                 </tr>
               ))}
             </tbody>
@@ -573,7 +594,7 @@ export default function CentralReservationsPage() {
                   { label: "Escalation owner", value: "None required" },
                   { label: "Outstanding next step", value: "None — outcome recorded" },
                 ].map((f) => (
-                  <div key={f.label} className="grid grid-cols-[168px_1fr] gap-3 px-5 py-3 text-sm">
+                  <div key={f.label} className="grid grid-cols-[140px_1fr] gap-3 px-5 py-3 text-sm">
                     <span className="font-semibold text-ink shrink-0">{f.label}</span>
                     <span className="text-ink-soft">{f.value}</span>
                   </div>

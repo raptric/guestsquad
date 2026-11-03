@@ -1,18 +1,14 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ButtonLink } from "@/components/site/button-link";
 import { CoverageReviewButton } from "@/components/site/coverage-review-button";
 import { Section, SectionHeading } from "@/components/site/section";
-import { AiHuman } from "@/components/site/ai-human";
-import { PropertyTypes } from "@/components/site/property-types";
 import { PlatformLogos } from "@/components/site/platform-logos";
 import { DEFAULT_PROCESS } from "@/components/site/process-steps";
 import { Guarantees } from "@/components/site/guarantees";
 import { CtaSection } from "@/components/site/cta-section";
 import { buildMetadata, faqSchema, webPageSchema } from "@/lib/seo";
 import { JsonLd } from "@/components/site/json-ld";
-import { AssetBlock } from "@/components/site/asset-block";
 import { FaqAccordion } from "@/components/site/faq-accordion";
 
 export const metadata: Metadata = buildMetadata({
@@ -337,29 +333,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* AI + HUMAN */}
-      <Section className="bg-[#F4F3F1]">
-        <SectionHeading
-          eyebrow="How It Works"
-          title="Technology routes it. People handle it."
-          description="We use software to make sure nothing is missed, but every guest conversation is handled by a trained person, not a bot."
-        />
-        <div className="mt-8">
-          <AiHuman />
-        </div>
-      </Section>
-
-      {/* PROPERTY TYPES */}
-      <Section>
-        <SectionHeading
-          eyebrow="Who We Work With"
-          title="Built for every kind of guest operation."
-        />
-        <div className="mt-8">
-          <PropertyTypes />
-        </div>
-      </Section>
-
       {/* HOW WE WORK */}
       <Section surface>
         <SectionHeading eyebrow="How We Work" title="Live in days, not months." />
@@ -459,65 +432,6 @@ export default function HomePage() {
         />
         <div className="mt-8">
           <FaqAccordion items={HOME_FAQS} defaultOpenCount={2} />
-        </div>
-      </Section>
-
-      {/* PRICING BRIDGE */}
-      <div className="border-y border-line bg-surface">
-        <div className="container py-7">
-          <div className="border-l-2 border-gold/30 pl-5">
-            <p className="mb-1 text-xs font-semibold uppercase tracking-[0.15em] text-gold-dark">Pricing</p>
-            <h2 className="text-2xl font-medium text-ink">Need to understand how coverage is scoped?</h2>
-            <p className="mt-2 max-w-2xl text-sm leading-relaxed text-ink-soft">
-              Pricing explains what every plan includes, what affects cost, and how coverage is structured around your property.
-            </p>
-            <div className="mt-4">
-              <ButtonLink href="/pricing" variant="gold" size="default">
-                See Pricing
-              </ButtonLink>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* TOOLS AND RESOURCES */}
-      <Section>
-        <SectionHeading
-          eyebrow="Tools and Resources"
-          title="Find and fix your guest coverage gaps."
-        />
-        <p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink-soft">
-          Use these tools to estimate missed revenue, review reporting, and identify where guest coverage is breaking down.
-        </p>
-        <div className="mt-6 flex flex-col gap-4">
-          {/* Calculator — primary */}
-          <Link
-            href="/resources/missed-booking-calculator"
-            className="group flex items-center justify-between gap-6 rounded-xl border border-gold/40 bg-paper px-7 py-6 shadow-sm transition-colors hover:border-gold hover:bg-gold/5"
-          >
-            <div>
-              <p className="text-[11px] font-semibold uppercase tracking-[0.15em] text-gold-dark">
-                Most useful first step
-              </p>
-              <h3 className="mt-1 text-base font-semibold text-ink">Missed Booking Revenue Calculator</h3>
-              <p className="mt-1 text-sm text-ink-soft">Estimate how much revenue your property loses to unanswered calls and messages.</p>
-            </div>
-            <span className="shrink-0 inline-flex items-center gap-1.5 rounded-lg bg-gold-dark px-4 py-2 text-sm font-medium text-paper transition-colors group-hover:bg-gold">
-              Calculate →
-            </span>
-          </Link>
-
-          {/* Secondary resources */}
-          <div className="grid gap-4 sm:grid-cols-2">
-            <AssetBlock
-              heading="See how reporting works"
-              assets={[{ label: "View Sample Weekly Report", href: "/resources/sample-weekly-report" }]}
-            />
-            <AssetBlock
-              heading="Identify your gaps"
-              assets={[{ label: "Guest Coverage Gap Assessment", href: "/resources/coverage-gap-assessment" }]}
-            />
-          </div>
         </div>
       </Section>
 

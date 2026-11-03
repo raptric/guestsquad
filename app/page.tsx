@@ -145,7 +145,11 @@ export default function HomePage() {
           {/* Digital Front Desk */}
           <div className="flex flex-col rounded-lg border border-line bg-paper p-7">
             <p className="text-[11px] font-semibold uppercase tracking-[0.15em] text-gold-dark">Digital Front Desk</p>
-            <h2 className="mt-2 text-lg font-medium text-ink">Remote reception for hotels and serviced properties.</h2>
+            <h2 className="mt-2 text-lg font-medium text-ink">
+              <Link href="/services/digital-front-desk" className="hover:text-gold transition-colors">
+                Remote reception for hotels and serviced properties.
+              </Link>
+            </h2>
             <p className="mt-3 text-sm leading-relaxed text-ink-soft">
               For independent hotels, boutique properties, serviced apartments, and contactless properties. We answer guest questions, help with arrivals, handle access issues, and take care of day-to-day requests through your existing systems, the way your front desk would.
             </p>
@@ -163,17 +167,24 @@ export default function HomePage() {
                 ))}
               </div>
             </div>
-            <div className="mt-6">
+            <div className="mt-6 flex flex-col gap-3">
               <CoverageReviewButton variant="gold" size="default" ctaLocation="homepage_digital_front_desk">
                 Discuss Front Desk Coverage
               </CoverageReviewButton>
+              <Link href="/services/digital-front-desk" className="text-center text-xs text-gold-dark underline underline-offset-4 hover:text-gold transition-colors">
+                Explore Digital Front Desk Services →
+              </Link>
             </div>
           </div>
 
           {/* Central Reservations Desk */}
           <div className="flex flex-col rounded-lg border border-gold/40 bg-paper p-7 shadow-sm">
             <p className="text-[11px] font-semibold uppercase tracking-[0.15em] text-gold-dark">Central Reservations Desk</p>
-            <h2 className="mt-2 text-lg font-medium text-ink">A coordinated reservations operation for hotel groups and portfolios.</h2>
+            <h2 className="mt-2 text-lg font-medium text-ink">
+              <Link href="/services/central-reservations" className="hover:text-gold transition-colors">
+                A coordinated reservations operation for hotel groups and portfolios.
+              </Link>
+            </h2>
             <p className="mt-3 text-sm leading-relaxed text-ink-soft">
               For hotel groups, property management companies, and hospitality portfolios. We handle reservation inquiries, approved bookings, modifications, and cancellations across your properties. Each property keeps its own rates, policies, and systems. Your team stays in control of decisions.
             </p>
@@ -191,10 +202,13 @@ export default function HomePage() {
                 ))}
               </div>
             </div>
-            <div className="mt-6">
+            <div className="mt-6 flex flex-col gap-3">
               <CoverageReviewButton variant="gold" size="default" ctaLocation="homepage_central_reservations">
                 Discuss Your Reservations Operation
               </CoverageReviewButton>
+              <Link href="/services/central-reservations" className="text-center text-xs text-gold-dark underline underline-offset-4 hover:text-gold transition-colors">
+                Explore Central Reservations Services →
+              </Link>
             </div>
           </div>
 

@@ -19,9 +19,9 @@ import { AssetBlock } from "@/components/site/asset-block";
 import { FaqAccordion } from "@/components/site/faq-accordion";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Guest Squad: Hotel Answering Service & 24/7 Guest Support",
+  title: "Guest Squad: Digital Front Desk & Central Reservations for Hotels",
   description:
-    "Guest Squad provides 24/7 hotel guest support, reservation calls, OTA inbox management, messaging, and after-hours front desk coverage.",
+    "Hospitality-trained remote teams for hotels, property management companies and vacation-rental operators. Guest reception, reservation enquiries and guest requests handled through your existing systems.",
   path: "",
 });
 
@@ -81,8 +81,8 @@ export default function HomePage() {
       <JsonLd
         data={[
           webPageSchema({
-            name: "Hotel Answering Service & 24/7 Guest Support | Guest Squad",
-            description: "Guest Squad provides 24/7 hotel guest support, reservation calls, OTA inbox management, messaging, and after-hours front desk coverage.",
+            name: "Digital Front Desk & Central Reservations for Hotels | Guest Squad",
+            description: "Hospitality-trained remote teams for hotels, property management companies and vacation-rental operators. Guest reception, reservation enquiries and guest requests handled through your existing systems.",
             path: "",
             primaryImageUrl: "https://guestsquad.com/brand-assets/guestsquad-favicon-official.svg",
             primaryImageAlt: "Guest Squad logo",
@@ -121,28 +121,27 @@ export default function HomePage() {
         <div className="container grid items-center gap-10 py-16 md:grid-cols-2 md:py-22">
           <div>
             <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-gold-dark">
-              Guest Operations Support
+              Your Dedicated Guest Team
             </p>
             <h1 className="text-4xl font-medium leading-[1.08] tracking-tight text-ink md:text-5xl">
-              24/7 Hotel Answering Service & Guest Support for Properties That Can&rsquo;t Afford
-              Missed Bookings
+              Digital Front Desk &amp; Central Reservations for Hotels and Property Portfolios
             </h1>
             <p className="mt-6 max-w-lg text-lg leading-relaxed text-ink-soft">
-              Guest Squad covers the guest communication channels hotels cannot afford to miss: reservation calls, OTA guest messages, front-desk overflow, and after-hours gaps.
+              Hospitality-trained remote teams for independent hotels, property management companies and vacation-rental operators. We handle reservation enquiries, guest reception and day-to-day guest requests through your existing systems, following your property procedures and coordinating with your teams.
             </p>
             <div className="mt-7 flex flex-col gap-4 sm:flex-row">
               <CoverageReviewButton variant="gold" size="lg" ctaLocation="homepage_hero">
-                Book a Coverage Review
+                Discuss Your Requirements
               </CoverageReviewButton>
               <a
-                href="#how-it-works"
+                href="#flagship-offers"
                 className="inline-flex items-center justify-center rounded-lg border border-line px-6 py-3 text-sm font-medium text-ink transition-colors hover:border-ink/40 hover:bg-surface"
               >
-                How It Works
+                Explore Our Services
               </a>
             </div>
             <p className="mt-3 text-xs text-ink-muted">
-              Built for hotels, boutique properties, resorts, serviced apartments, and Airbnb operators.
+              After-hours, overflow and broader coverage for individual properties and portfolios.
             </p>
           </div>
 

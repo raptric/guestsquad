@@ -405,81 +405,129 @@ export default function DigitalFrontDeskPage() {
           description="A guest reaches the property after reception closes and cannot get inside. Here is how an agreed remote-support workflow can operate."
         />
 
-        <div className="mt-10 max-w-2xl">
+        <div className="mt-10 grid gap-12 lg:grid-cols-2 lg:gap-16 lg:items-start">
           {/* Steps */}
-          {[
-            {
-              n: "01",
-              title: "Establish the context",
-              body: "Confirm the guest and property details according to your procedure, then review the relevant arrival instructions.",
-              owner: "Remote",
-            },
-            {
-              n: "02",
-              title: "Take the permitted next step",
-              body: "Guide the guest through the entry process or complete a supported action within the access you have authorized.",
-              owner: "Remote",
-            },
-            {
-              n: "03",
-              title: "Bring in local help when needed",
-              body: "If remote assistance cannot resolve the problem, contact the approved local responder. Follow the backup escalation route if the first contact is unavailable.",
-              owner: "Remote → On-site",
-            },
-            {
-              n: "04",
-              title: "Keep the guest and property informed",
-              body: "Explain the next step to the guest and record the action, current status and outstanding follow-up. A pending local response remains visible as pending.",
-              owner: "Remote",
-            },
-          ].map((step, i, arr) => (
-            <div key={step.n} className="flex gap-5">
-              <div className="flex flex-col items-center">
-                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border-2 border-gold/50 bg-paper text-xs font-bold text-gold-dark">
-                  {step.n}
+          <div>
+            {[
+              {
+                n: "01",
+                title: "Establish the context",
+                body: "Confirm the guest and property details according to your procedure, then review the relevant arrival instructions.",
+                owner: "Remote",
+              },
+              {
+                n: "02",
+                title: "Take the permitted next step",
+                body: "Guide the guest through the entry process or complete a supported action within the access you have authorized.",
+                owner: "Remote",
+              },
+              {
+                n: "03",
+                title: "Bring in local help when needed",
+                body: "If remote assistance cannot resolve the problem, contact the approved local responder. Follow the backup escalation route if the first contact is unavailable.",
+                owner: "Remote → On-site",
+              },
+              {
+                n: "04",
+                title: "Keep the guest and property informed",
+                body: "Explain the next step to the guest and record the action, current status and outstanding follow-up. A pending local response remains visible as pending.",
+                owner: "Remote",
+              },
+            ].map((step, i, arr) => (
+              <div key={step.n} className="flex gap-5">
+                <div className="flex flex-col items-center">
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border-2 border-gold/50 bg-paper text-xs font-bold text-gold-dark">
+                    {step.n}
+                  </div>
+                  {i < arr.length - 1 && (
+                    <div className="w-px flex-1 bg-line my-1 min-h-[28px]" />
+                  )}
                 </div>
-                {i < arr.length - 1 && (
-                  <div className="w-px flex-1 bg-line my-1 min-h-[28px]" />
-                )}
-              </div>
-              <div className={i < arr.length - 1 ? "pb-6" : "pb-0"}>
-                <div className="flex flex-wrap items-center gap-2">
-                  <h3 className="text-sm font-semibold text-ink">{step.title}</h3>
-                  <span className="text-[10px] font-bold uppercase tracking-wider rounded px-1.5 py-0.5 bg-gold/10 text-gold-dark border border-gold/20">
-                    {step.owner}
-                  </span>
+                <div className={i < arr.length - 1 ? "pb-6" : "pb-0"}>
+                  <div className="flex flex-wrap items-center gap-2">
+                    <h3 className="text-sm font-semibold text-ink">{step.title}</h3>
+                    <span className="text-[10px] font-bold uppercase tracking-wider rounded px-1.5 py-0.5 bg-gold/10 text-gold-dark border border-gold/20">
+                      {step.owner}
+                    </span>
+                  </div>
+                  <p className="mt-1 text-sm leading-relaxed text-ink-soft">{step.body}</p>
                 </div>
-                <p className="mt-1 text-sm leading-relaxed text-ink-soft">{step.body}</p>
               </div>
-            </div>
-          ))}
-
-          {/* Decision branch */}
-          <div className="ml-14 mt-4 rounded-lg border border-line bg-surface p-5">
-            <p className="text-[10px] font-bold uppercase tracking-wider text-ink-muted mb-3">Resolved?</p>
-            <div className="grid gap-4 sm:grid-cols-2">
-              <div className="rounded border border-green-200 bg-green-50 p-4">
-                <p className="text-xs font-bold uppercase tracking-wider text-green-800 mb-2">Yes</p>
-                <ul className="text-xs text-green-900 space-y-1 list-disc list-inside">
-                  <li>Confirm outcome with guest</li>
-                  <li>Record action and status</li>
-                </ul>
-              </div>
-              <div className="rounded border border-amber-200 bg-amber-50 p-4">
-                <p className="text-xs font-bold uppercase tracking-wider text-amber-800 mb-2">No — escalate</p>
-                <ul className="text-xs text-amber-900 space-y-1 list-disc list-inside">
-                  <li>Contact approved local responder <span className="font-bold">[On-site]</span></li>
-                  <li>Follow backup escalation if needed</li>
-                  <li>Update guest on status</li>
-                  <li>Record resolved or pending</li>
-                </ul>
-              </div>
-            </div>
+            ))}
+            <p className="mt-4 ml-14 text-xs text-ink-muted italic">
+              Illustrative workflow. Actual actions depend on your systems, permissions and agreed escalation procedures.
+            </p>
           </div>
 
-          <p className="mt-4 ml-14 text-xs text-ink-muted italic">
-            Illustrative workflow. Actual actions depend on your systems, permissions and agreed escalation procedures.
-          </p>
+          {/* SVG flow diagram */}
+          <div className="rounded-lg border border-line bg-surface p-6 lg:p-8">
+            <p className="text-[10px] font-bold uppercase tracking-[0.15em] text-ink-muted mb-5">Decision flow</p>
+            <svg
+              viewBox="0 0 280 420"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-label="Flowchart showing how a guest interaction is handled: guest contacts support, context is confirmed, instructions checked, guidance given, then resolved or escalated to local responder"
+              className="w-full max-w-sm mx-auto"
+            >
+              {/* Connector lines */}
+              <line x1="140" y1="46" x2="140" y2="70" stroke="currentColor" strokeWidth="1.5" className="text-line" strokeDasharray="3 2"/>
+              <line x1="140" y1="110" x2="140" y2="134" stroke="currentColor" strokeWidth="1.5" className="text-line" strokeDasharray="3 2"/>
+              <line x1="140" y1="174" x2="140" y2="198" stroke="currentColor" strokeWidth="1.5" className="text-line" strokeDasharray="3 2"/>
+              <line x1="140" y1="238" x2="140" y2="262" stroke="currentColor" strokeWidth="1.5" className="text-line" strokeDasharray="3 2"/>
+              {/* Resolved? branch lines */}
+              <line x1="80" y1="292" x2="80" y2="316" stroke="currentColor" strokeWidth="1.5" className="text-line"/>
+              <line x1="200" y1="292" x2="200" y2="316" stroke="currentColor" strokeWidth="1.5" className="text-line"/>
+              <line x1="80" y1="282" x2="200" y2="282" stroke="currentColor" strokeWidth="1.5" className="text-line"/>
+              <line x1="140" y1="272" x2="140" y2="282" stroke="currentColor" strokeWidth="1.5" className="text-line" strokeDasharray="3 2"/>
+
+              {/* Node: Guest contacts support */}
+              <rect x="55" y="14" width="170" height="32" rx="6" className="fill-[var(--color-gold,#B8923A)]/10" stroke="currentColor" strokeWidth="1" strokeOpacity="0.3"/>
+              <text x="140" y="34" textAnchor="middle" className="fill-current text-ink" fontSize="10" fontWeight="600">Guest contacts support</text>
+
+              {/* Node: Confirm context */}
+              <rect x="40" y="70" width="200" height="40" rx="6" fill="none" stroke="currentColor" strokeWidth="1" className="text-line"/>
+              <text x="140" y="86" textAnchor="middle" className="fill-current text-ink-soft" fontSize="9.5">Confirm guest &amp; property context</text>
+              <text x="140" y="101" textAnchor="middle" className="fill-current text-ink-soft" fontSize="9.5">Review arrival instructions</text>
+
+              {/* Node: Check instructions */}
+              <rect x="40" y="134" width="200" height="40" rx="6" fill="none" stroke="currentColor" strokeWidth="1" className="text-line"/>
+              <text x="140" y="150" textAnchor="middle" className="fill-current text-ink-soft" fontSize="9.5">Check approved instructions</text>
+              <text x="140" y="165" textAnchor="middle" className="fill-current text-ink-soft" fontSize="9.5">and permitted scope</text>
+
+              {/* Node: Provide guidance */}
+              <rect x="40" y="198" width="200" height="40" rx="6" fill="none" stroke="currentColor" strokeWidth="1" className="text-line"/>
+              <text x="140" y="214" textAnchor="middle" className="fill-current text-ink-soft" fontSize="9.5">Provide guidance or</text>
+              <text x="140" y="229" textAnchor="middle" className="fill-current text-ink-soft" fontSize="9.5">take a permitted action</text>
+
+              {/* Diamond: Resolved? */}
+              <polygon points="140,262 178,282 140,302 102,282" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-gold-dark/60"/>
+              <text x="140" y="286" textAnchor="middle" className="fill-current text-ink" fontSize="9" fontWeight="700">Resolved?</text>
+
+              {/* Yes branch label */}
+              <text x="56" y="310" textAnchor="middle" className="fill-current text-ink-muted" fontSize="8.5" fontWeight="600">YES</text>
+              {/* No branch label */}
+              <text x="224" y="310" textAnchor="middle" className="fill-current text-ink-muted" fontSize="8.5" fontWeight="600">NO</text>
+
+              {/* Yes outcome box */}
+              <rect x="18" y="316" width="124" height="50" rx="6" fill="none" stroke="#16a34a" strokeWidth="1" strokeOpacity="0.5"/>
+              <text x="80" y="334" textAnchor="middle" fontSize="8.5" fontWeight="600" fill="#15803d">Confirm with guest</text>
+              <text x="80" y="348" textAnchor="middle" fontSize="8.5" fill="#166534">Record outcome</text>
+              <text x="80" y="362" textAnchor="middle" fontSize="8.5" fill="#166534">Status: Resolved</text>
+
+              {/* No escalate box */}
+              <rect x="138" y="316" width="124" height="50" rx="6" fill="none" stroke="#d97706" strokeWidth="1" strokeOpacity="0.5"/>
+              <text x="200" y="334" textAnchor="middle" fontSize="8.5" fontWeight="600" fill="#b45309">Contact local responder</text>
+              <text x="200" y="348" textAnchor="middle" fontSize="8.5" fill="#92400e">Follow escalation path</text>
+              <text x="200" y="362" textAnchor="middle" fontSize="8.5" fill="#92400e">Update guest + record</text>
+
+              {/* Legend */}
+              <rect x="18" y="386" width="10" height="10" rx="2" className="fill-[var(--color-gold,#B8923A)]/10" stroke="currentColor" strokeWidth="0.8" strokeOpacity="0.3"/>
+              <text x="32" y="395" fontSize="8" className="fill-current text-ink-muted">Remote team</text>
+              <rect x="110" y="386" width="10" height="10" rx="2" fill="none" stroke="#d97706" strokeWidth="0.8" strokeOpacity="0.5"/>
+              <text x="124" y="395" fontSize="8" className="fill-current text-ink-muted">Escalate on-site</text>
+              <rect x="202" y="386" width="10" height="10" rx="2" fill="none" stroke="#16a34a" strokeWidth="0.8" strokeOpacity="0.5"/>
+              <text x="216" y="395" fontSize="8" className="fill-current text-ink-muted">Resolved</text>
+            </svg>
+          </div>
         </div>
       </Section>
 
@@ -554,57 +602,96 @@ export default function DigitalFrontDeskPage() {
           eyebrow="Visibility and Accountability"
           title="Know what was handled and what still needs attention"
         />
-        <div className="mt-6 max-w-2xl text-sm leading-relaxed text-ink-soft space-y-4">
-          <p>
-            Your property needs context when a request passes between teams. Guest interactions and escalations are documented so the next person can understand the request, the action taken and the current status.
-          </p>
-          <p>
-            The reporting format and review process are agreed around your coverage. We define the information your team needs to see, including outstanding requests, escalation ownership and required follow-up.
-          </p>
-          <p>
-            For housekeeping, maintenance or management issues, we coordinate with your approved contacts and follow the issue within the agreed procedures. Work awaiting local action stays distinguishable from work completed.
-          </p>
-        </div>
 
-        {/* Illustrative record */}
-        <div className="mt-8 max-w-2xl overflow-hidden rounded-lg border border-line bg-paper">
-          <div className="border-b border-line bg-surface px-5 py-3">
-            <p className="text-xs font-semibold uppercase tracking-wider text-ink-muted">
-              Illustrative interaction record — not actual guest data
-            </p>
-          </div>
-          <div className="divide-y divide-line/60">
-            {[
-              { label: "Property", value: "— [redacted]" },
-              { label: "Interaction channel", value: "Phone" },
-              { label: "Guest enquiry or request", value: "Late arrival — unable to access room" },
-              { label: "Action taken", value: "Provided entry instructions; confirmed access via supported system" },
-              { label: "Responsible contact", value: "Remote agent / [local contact if escalated]" },
-              { label: "Current status", value: "Resolved" },
-              { label: "Required next action", value: "None — issue closed" },
-            ].map((f) => (
-              <div key={f.label} className="grid grid-cols-[160px_1fr] gap-4 px-5 py-3 text-sm">
-                <span className="font-semibold text-ink shrink-0">{f.label}</span>
-                <span className="text-ink-soft">{f.value}</span>
+        <div className="mt-8 grid gap-12 lg:grid-cols-2 lg:gap-16 lg:items-start">
+
+          {/* Left — text + illustrative record */}
+          <div>
+            <div className="text-sm leading-relaxed text-ink-soft space-y-4">
+              <p>
+                Your property needs context when a request passes between teams. Guest interactions and escalations are documented so the next person can understand the request, the action taken and the current status.
+              </p>
+              <p>
+                The reporting format and review process are agreed around your coverage. We define the information your team needs to see, including outstanding requests, escalation ownership and required follow-up.
+              </p>
+              <p>
+                For housekeeping, maintenance or management issues, we coordinate with your approved contacts and follow the issue within the agreed procedures. Work awaiting local action stays distinguishable from work completed.
+              </p>
+            </div>
+
+            {/* Illustrative record */}
+            <div className="mt-7 overflow-hidden rounded-lg border border-line bg-paper">
+              <div className="border-b border-line bg-surface px-5 py-3">
+                <p className="text-xs font-semibold uppercase tracking-wider text-ink-muted">
+                  Illustrative interaction record — not actual guest data
+                </p>
               </div>
-            ))}
+              <div className="divide-y divide-line/60">
+                {[
+                  { label: "Interaction channel", value: "Phone" },
+                  { label: "Guest request", value: "Late arrival — unable to access room" },
+                  { label: "Action taken", value: "Provided entry instructions; confirmed access" },
+                  { label: "Responsible contact", value: "Remote agent" },
+                  { label: "Current status", value: "Resolved" },
+                  { label: "Required next action", value: "None — issue closed" },
+                ].map((f) => (
+                  <div key={f.label} className="grid grid-cols-[148px_1fr] gap-3 px-5 py-3 text-sm">
+                    <span className="font-semibold text-ink shrink-0">{f.label}</span>
+                    <span className="text-ink-soft">{f.value}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
-        </div>
 
-        {/* Related resources */}
-        <div className="mt-10">
-          <h3 className="text-base font-semibold text-ink mb-4">Prepare your property for remote coverage</h3>
-          <div className="flex flex-col gap-3">
-            <Link href="/resources/after-hours-hotel-support-checklist" className="text-sm text-gold-dark underline underline-offset-4 hover:text-gold">
-              Review your after-hours support requirements
-            </Link>
-            <Link href="/resources/hotel-front-desk-overflow-support" className="text-sm text-gold-dark underline underline-offset-4 hover:text-gold">
-              Plan front desk overflow support
-            </Link>
-            <Link href="/resources/hotel-guest-messaging-sop-template" className="text-sm text-gold-dark underline underline-offset-4 hover:text-gold">
-              Build a guest messaging SOP
-            </Link>
+          {/* Right — coverage status visual + resources */}
+          <div className="flex flex-col gap-8">
+
+            {/* Coverage status panel */}
+            <div className="rounded-lg border border-line bg-surface p-6">
+              <p className="text-[10px] font-bold uppercase tracking-[0.15em] text-ink-muted mb-5">What stays visible across teams</p>
+              <div className="flex flex-col gap-3">
+                {[
+                  { channel: "Phone call", status: "Resolved", badge: "green" },
+                  { channel: "Guest message", status: "Resolved", badge: "green" },
+                  { channel: "Access request", status: "Resolved", badge: "green" },
+                  { channel: "Maintenance — room 214", status: "Pending local", badge: "amber" },
+                  { channel: "Housekeeping — early check-out", status: "Escalated", badge: "amber" },
+                ].map((row) => (
+                  <div key={row.channel} className="flex items-center justify-between gap-4 rounded border border-line bg-paper px-4 py-2.5">
+                    <span className="text-xs text-ink-soft">{row.channel}</span>
+                    <span className={`shrink-0 rounded px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide ${
+                      row.badge === "green"
+                        ? "bg-green-50 text-green-700 border border-green-200"
+                        : "bg-amber-50 text-amber-700 border border-amber-200"
+                    }`}>
+                      {row.status}
+                    </span>
+                  </div>
+                ))}
+              </div>
+              <p className="mt-4 text-[10px] text-ink-muted">
+                Illustrative only. Pending and escalated items remain visible until resolved or handed off.
+              </p>
+            </div>
+
+            {/* Related resources */}
+            <div>
+              <h3 className="text-base font-semibold text-ink mb-4">Prepare your property for remote coverage</h3>
+              <div className="flex flex-col gap-3">
+                <Link href="/resources/after-hours-hotel-support-checklist" className="text-sm text-gold-dark underline underline-offset-4 hover:text-gold">
+                  Review your after-hours support requirements
+                </Link>
+                <Link href="/resources/hotel-front-desk-overflow-support" className="text-sm text-gold-dark underline underline-offset-4 hover:text-gold">
+                  Plan front desk overflow support
+                </Link>
+                <Link href="/resources/hotel-guest-messaging-sop-template" className="text-sm text-gold-dark underline underline-offset-4 hover:text-gold">
+                  Build a guest messaging SOP
+                </Link>
+              </div>
+            </div>
           </div>
+
         </div>
       </Section>
 

@@ -22,7 +22,7 @@ import { SITE } from "@/lib/site-data";
 // ---------------------------------------------------------------------------
 export const metadata: Metadata = {
   ...buildMetadata({
-    title: "Digital Front Desk for Hotels | Guest Squad",
+    title: "Digital Front Desk for Hotels",
     description:
       "Human remote reception for hotels and serviced apartments. Guest calls, messages, arrival assistance and local-team coordination around your procedures.",
     path: "/services/digital-front-desk",

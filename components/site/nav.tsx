@@ -109,14 +109,6 @@ export function Nav() {
                           <p className="mt-0.5 text-xs text-ink-muted">{fl.description}</p>
                         </Link>
                       ))}
-                      <div className="mx-3 my-2 border-t border-line" />
-                      <Link
-                        href="/services"
-                        onClick={() => setServicesOpen(false)}
-                        className="block rounded-lg px-3 py-2 text-sm text-gold-dark hover:bg-surface hover:text-gold"
-                      >
-                        All services →
-                      </Link>
                     </div>
                   </div>
                 )}
@@ -170,13 +162,6 @@ export function Nav() {
                       {fl.label}
                     </Link>
                   ))}
-                  <Link
-                    href="/services"
-                    onClick={() => setOpen(false)}
-                    className="block rounded px-3 py-2 text-xs text-gold-dark hover:bg-surface hover:text-gold"
-                  >
-                    All services →
-                  </Link>
                 </div>
               ) : (
                 <Link

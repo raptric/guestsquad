@@ -238,6 +238,91 @@ export default function HomePage() {
         </div>
       </Section>
 
+      {/* COVERAGE AROUND YOUR OPERATION */}
+      <Section id="coverage-types" surface>
+        <SectionHeading
+          eyebrow="Coverage Options"
+          title="Coverage built around your operation."
+          align="center"
+          className="mx-auto"
+        />
+        <p className="mx-auto mt-3 max-w-2xl text-center text-sm leading-relaxed text-ink-soft">
+          Most properties start with one coverage type and expand as the need becomes clear.
+        </p>
+        <div className="mt-10 grid gap-6 lg:grid-cols-3">
+
+          {/* After-Hours & Weekend */}
+          <div className="flex flex-col rounded-lg border border-line bg-paper p-7">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.15em] text-gold-dark">After-Hours &amp; Weekends</p>
+            <h2 className="mt-2 text-lg font-medium text-ink">Coverage when your front desk is closed or reduced.</h2>
+            <p className="mt-3 text-sm leading-relaxed text-ink-soft">
+              Evenings, overnight, early mornings and weekends. Reservation calls, guest messages and OTA inboxes answered by a trained person, not a voicemail or a bot. Most common entry point for independent hotels.
+            </p>
+            <div className="mt-5 border-t border-line pt-4">
+              <div className="flex flex-wrap gap-2">
+                {[
+                  { label: "After-Hours Support", href: "/services/after-hours-support" },
+                  { label: "Hotel Answering Service", href: "/services/hotel-answering-service" },
+                ].map((l) => (
+                  <Link key={l.href} href={l.href} className="text-xs text-gold-dark underline underline-offset-4 hover:text-gold">
+                    {l.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Overflow & Staff Absence */}
+          <div className="flex flex-col rounded-lg border border-line bg-paper p-7">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.15em] text-gold-dark">Overflow &amp; Staff Absence</p>
+            <h2 className="mt-2 text-lg font-medium text-ink">Backup when your team is at capacity or short-staffed.</h2>
+            <p className="mt-3 text-sm leading-relaxed text-ink-soft">
+              Check-in peaks, high-occupancy periods, staff holidays and unplanned absence. We step in when your on-site team cannot cover the volume, so no call or message falls through.
+            </p>
+            <div className="mt-5 border-t border-line pt-4">
+              <div className="flex flex-wrap gap-2">
+                {[
+                  { label: "Hotel Answering Service", href: "/services/hotel-answering-service" },
+                  { label: "Guest Messaging", href: "/services/guest-messaging" },
+                ].map((l) => (
+                  <Link key={l.href} href={l.href} className="text-xs text-gold-dark underline underline-offset-4 hover:text-gold">
+                    {l.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Extended & Portfolio Coverage */}
+          <div className="flex flex-col rounded-lg border border-line bg-paper p-7">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.15em] text-gold-dark">Extended &amp; Portfolio Coverage</p>
+            <h2 className="mt-2 text-lg font-medium text-ink">Broader coverage across more hours, channels or properties.</h2>
+            <p className="mt-3 text-sm leading-relaxed text-ink-soft">
+              For properties that need coverage across the full day, multiple channels, or a portfolio of properties and listings. Scoped around your actual operation, not a generic tier.
+            </p>
+            <div className="mt-5 border-t border-line pt-4">
+              <div className="flex flex-wrap gap-2">
+                {[
+                  { label: "Reservation Support", href: "/services/reservation-support" },
+                  { label: "OTA Inbox Management", href: "/services/ota-inbox-management" },
+                  { label: "Vacation Rental Answering Service", href: "/services/vacation-rental-answering-service" },
+                ].map((l) => (
+                  <Link key={l.href} href={l.href} className="text-xs text-gold-dark underline underline-offset-4 hover:text-gold">
+                    {l.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div className="mt-10 flex justify-center">
+          <CoverageReviewButton variant="gold" size="default" ctaLocation="homepage_coverage_types">
+            Discuss Your Coverage Needs
+          </CoverageReviewButton>
+        </div>
+      </Section>
+
       {/* IMAGE BREAK */}
       <section className="relative h-[320px] overflow-hidden border-b border-line md:h-[420px]">
         <Image

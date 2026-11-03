@@ -4,6 +4,8 @@ import Link from "next/link";
 import { ButtonLink } from "@/components/site/button-link";
 import { CoverageReviewButton } from "@/components/site/coverage-review-button";
 import { Section, SectionHeading } from "@/components/site/section";
+import { AiHuman } from "@/components/site/ai-human";
+import { PropertyTypes } from "@/components/site/property-types";
 import { DEFAULT_PROCESS } from "@/components/site/process-steps";
 import { Guarantees } from "@/components/site/guarantees";
 import { CtaSection } from "@/components/site/cta-section";

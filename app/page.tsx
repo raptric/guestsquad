@@ -98,7 +98,7 @@ export default function HomePage() {
               Digital Front Desk &amp; Central Reservations for Hotels and Property Portfolios
             </h1>
             <p className="mt-6 max-w-lg text-lg leading-relaxed text-ink-soft">
-              Hospitality-trained remote teams for independent hotels, property management companies, and vacation rental operators. We handle reservation calls, guest questions, and day-to-day requests through your existing systems, following your property's procedures the way your own staff would.
+              Hospitality-trained remote teams for independent hotels, property management companies, and vacation rental operators. We handle reservation calls, guest questions, and day-to-day requests through your existing systems, following your property&apos;s procedures the way your own staff would.
             </p>
             <div className="mt-7 flex flex-col gap-4 sm:flex-row">
               <CoverageReviewButton variant="gold" size="lg" ctaLocation="homepage_hero">
@@ -267,7 +267,7 @@ export default function HomePage() {
             <p className="text-[11px] font-semibold uppercase tracking-[0.15em] text-gold-dark">Overflow &amp; Staff Absence</p>
             <h2 className="mt-2 text-lg font-medium text-ink">Backup when your team is at capacity or short-staffed.</h2>
             <p className="mt-3 text-sm leading-relaxed text-ink-soft">
-              Check-in peaks, high-occupancy periods, staff time off, and unplanned absences. We step in when your on-site team can't cover the volume, so no call or message falls through.
+              Check-in peaks, high-occupancy periods, staff time off, and unplanned absences. We step in when your on-site team can&apos;t cover the volume, so no call or message falls through.
             </p>
             <div className="mt-5 border-t border-line pt-4">
               <div className="flex flex-wrap gap-2">

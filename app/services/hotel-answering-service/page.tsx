@@ -210,7 +210,7 @@ export default function HotelAnsweringServicePage() {
           <div className="rounded-lg border border-line bg-paper p-7">
             <h3 className="text-base font-medium text-ink">Your greeting and property instructions</h3>
             <p className="mt-2 text-sm leading-relaxed text-ink-soft">
-              Once connected, agents answer using your hotel's approved greeting and work from your property brief. They assist with the call, take a permitted action or explain the next step when your team's involvement is required.
+              Once connected, agents answer using your hotel&apos;s approved greeting and work from your property brief. They assist with the call, take a permitted action or explain the next step when your team&apos;s involvement is required.
             </p>
           </div>
           <div className="rounded-lg border border-line bg-paper p-7">
@@ -287,7 +287,7 @@ export default function HotelAnsweringServicePage() {
         <div className="mt-8 rounded-lg border border-line bg-paper p-7">
           <p className="mb-2 text-xs font-semibold uppercase tracking-[0.14em] text-ink-muted">On-site responsibility</p>
           <p className="text-sm leading-relaxed text-ink-soft">
-            Urgent safety or security concerns follow the property's approved emergency and escalation procedures. Remote call coverage does not replace emergency services or required on-site responsibilities.
+            Urgent safety or security concerns follow the property&apos;s approved emergency and escalation procedures. Remote call coverage does not replace emergency services or required on-site responsibilities.
           </p>
         </div>
       </Section>

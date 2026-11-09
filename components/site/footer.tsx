@@ -56,10 +56,7 @@ export function Footer() {
             <ul className="flex flex-col gap-2.5">
               <li><Link href="/about" className="text-sm text-ink-soft hover:text-ink">About</Link></li>
               <li><Link href="/resources" className="text-sm text-ink-soft hover:text-ink">Resources</Link></li>
-              <li><Link href="/pricing" className="text-sm text-ink-soft hover:text-ink">Pricing</Link></li>
               <li><Link href="/contact" className="text-sm text-ink-soft hover:text-ink">Contact</Link></li>
-              <li><Link href="/privacy-policy" className="text-sm text-ink-soft hover:text-ink">Privacy Policy</Link></li>
-              <li><Link href="/terms-of-service" className="text-sm text-ink-soft hover:text-ink">Terms of Service</Link></li>
             </ul>
           </div>
 
@@ -93,15 +90,11 @@ export function Footer() {
             </a>
             . All rights reserved.
           </p>
-          <a
-            href="https://www.trustpilot.com/review/guestsquad.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-1.5 text-ink-muted transition-colors hover:text-ink"
-          >
-            <span className="text-[#00b67a] tracking-tight">★★★★★</span>
-            <span>Rated 5 stars on Trustpilot</span>
-          </a>
+          <div className="flex items-center gap-4">
+            <Link href="/privacy-policy" className="hover:text-ink">Privacy Policy</Link>
+            <span>|</span>
+            <Link href="/terms-of-service" className="hover:text-ink">Terms of Service</Link>
+          </div>
         </div>
       </div>
     </footer>

@@ -2,11 +2,10 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { CoverageReviewButton } from "@/components/site/coverage-review-button";
+import { CoverageTypesBlock } from "@/components/site/coverage-types-block";
 import { ButtonLink } from "@/components/site/button-link";
 import { Section, SectionHeading } from "@/components/site/section";
 import { PlatformLogos } from "@/components/site/platform-logos";
-import { DEFAULT_PROCESS } from "@/components/site/process-steps";
-import { Guarantees } from "@/components/site/guarantees";
 import { CtaSection } from "@/components/site/cta-section";
 import { buildMetadata, faqSchema, webPageSchema } from "@/lib/seo";
 import { JsonLd } from "@/components/site/json-ld";
@@ -96,10 +95,10 @@ export default function HomePage() {
               Your Dedicated Guest Team
             </p>
             <h1 className="text-4xl font-medium leading-[1.08] tracking-tight text-ink md:text-5xl">
-              Digital Front Desk &amp; Central Reservations for Hotels and Property Portfolios
+              Digital Front Desk Services for Hotels and Vacation Rentals
             </h1>
             <p className="mt-6 max-w-lg text-lg leading-relaxed text-ink-soft">
-              Hospitality-trained remote teams for independent hotels, property management companies, and vacation rental operators. We handle reservation calls, guest questions, and day-to-day requests through your existing systems, following your property&apos;s procedures the way your own staff would.
+              Hospitality-trained remote teams handling guest calls, reservations, messages, and operational coordination through your existing systems and approved procedures.
             </p>
             <div className="mt-7 flex flex-col gap-4 sm:flex-row">
               <CoverageReviewButton variant="gold" size="lg" ctaLocation="homepage_hero">
@@ -112,9 +111,6 @@ export default function HomePage() {
                 Explore Our Services
               </a>
             </div>
-            <p className="mt-3 text-xs text-ink-muted">
-              After-hours, overflow and broader coverage for individual properties and portfolios.
-            </p>
           </div>
 
           <div className="relative aspect-[4/5] overflow-hidden rounded-lg border border-line bg-surface md:aspect-[4/3]">
@@ -143,35 +139,33 @@ export default function HomePage() {
         />
         <div className="mt-10 grid gap-6 lg:grid-cols-3">
 
-          {/* Digital Front Desk */}
+          {/* Hotel Answering Service */}
           <div className="flex flex-col rounded-lg border border-line bg-paper p-7">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.15em] text-gold-dark">Digital Front Desk</p>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.15em] text-gold-dark">Hotel Answering Service</p>
             <h2 className="mt-2 text-lg font-medium text-ink">
-              <Link href="/services/digital-front-desk" className="hover:text-gold transition-colors">
-                Remote reception for hotels and serviced properties.
+              <Link href="/services/hotel-answering-service" className="hover:text-gold transition-colors">
+                Live phone coverage for independent hotels and boutique properties.
               </Link>
             </h2>
-            <p className="mt-3 grow text-sm leading-relaxed text-ink-soft">
-              For independent hotels, boutique properties, serviced apartments, and contactless properties. We answer guest questions, help with arrivals, handle access issues, and take care of day-to-day requests through your existing systems, the way your front desk would.
-            </p>
+            <ul className="mt-4 grow flex flex-col gap-2">
+              {[
+                "Front-Desk Overflow",
+                "Room & Stay Inquiries",
+                "Late-Arrival Assistance",
+                "Housekeeping Request Coordination",
+                "Hotel Maintenance Escalation",
+                "Reception Shift Handovers",
+              ].map((item) => (
+                <li key={item} className="flex items-center gap-2 text-sm text-ink-soft">
+                  <span className="h-1 w-1 shrink-0 rounded-full bg-gold-dark" />
+                  {item}
+                </li>
+              ))}
+            </ul>
             <div className="mt-6">
-              <ButtonLink href="/services/digital-front-desk" variant="gold">
-                Explore Digital Front Desk Services
+              <ButtonLink href="/services/hotel-answering-service" variant="gold">
+                Explore Hotel Answering Service
               </ButtonLink>
-            </div>
-            <div className="mt-5 border-t border-line pt-4">
-              <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.12em] text-ink-muted">Relevant services</p>
-              <div className="flex flex-wrap gap-2">
-                {[
-                  { label: "Hotel Answering Service", href: "/services/hotel-answering-service" },
-                  { label: "After-Hours Support", href: "/services/after-hours-support" },
-                  { label: "Guest Messaging", href: "/services/guest-messaging" },
-                ].map((l) => (
-                  <Link key={l.href} href={l.href} className="text-xs text-gold-dark underline underline-offset-4 hover:text-gold">
-                    {l.label}
-                  </Link>
-                ))}
-              </div>
             </div>
           </div>
 
@@ -183,144 +177,88 @@ export default function HomePage() {
                 A coordinated reservations operation for hotel groups and portfolios.
               </Link>
             </h2>
-            <p className="mt-3 grow text-sm leading-relaxed text-ink-soft">
-              For hotel groups, property management companies, and hospitality portfolios. We handle reservation inquiries, approved bookings, modifications, and cancellations across your properties. Each property keeps its own rates, policies, and systems. Your team stays in control of decisions.
-            </p>
+            <ul className="mt-4 grow flex flex-col gap-2">
+              {[
+                "Multi-Property Reservation Handling",
+                "Property Selection & Availability",
+                "Approved Quotes & Booking Changes",
+                "Reservation Follow-Up",
+                "Property-Specific Booking Rules",
+                "Property-Level Handover & Reporting",
+              ].map((item) => (
+                <li key={item} className="flex items-center gap-2 text-sm text-ink-soft">
+                  <span className="h-1 w-1 shrink-0 rounded-full bg-gold-dark" />
+                  {item}
+                </li>
+              ))}
+            </ul>
             <div className="mt-6">
               <ButtonLink href="/services/central-reservations" variant="gold">
                 Explore Central Reservations Services
               </ButtonLink>
             </div>
-            <div className="mt-5 border-t border-line pt-4">
-              <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.12em] text-ink-muted">Relevant services</p>
-              <div className="flex flex-wrap gap-2">
-                {[
-                  { label: "Reservation Support", href: "/services/reservation-support" },
-                  { label: "OTA Inbox Management", href: "/services/ota-inbox-management" },
-                  { label: "Back-Office Operations", href: "/services/back-office-operations" },
-                ].map((l) => (
-                  <Link key={l.href} href={l.href} className="text-xs text-gold-dark underline underline-offset-4 hover:text-gold">
-                    {l.label}
-                  </Link>
-                ))}
-              </div>
-            </div>
           </div>
 
-          {/* Vacation Rental Guest Operations */}
+          {/* Vacation Rental Answering Service */}
           <div className="flex flex-col rounded-lg border border-line bg-paper p-7">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.15em] text-gold-dark">Vacation Rental Guest Operations</p>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.15em] text-gold-dark">Vacation Rental Answering Service</p>
             <h2 className="mt-2 text-lg font-medium text-ink">
-              <Link href="/services/vacation-rental-guest-operations" className="hover:text-gold transition-colors">
+              <Link href="/services/vacation-rental-answering-service" className="hover:text-gold transition-colors">
                 Listing-specific guest operations for professional STR portfolios.
               </Link>
             </h2>
-            <p className="mt-3 grow text-sm leading-relaxed text-ink-soft">
-              For professional vacation rental companies and STR managers on Airbnb, Vrbo, and direct-booking channels. We handle guest messages, arrivals, and access issues for each listing, and coordinate with your housekeeping and maintenance contacts across your whole portfolio.
-            </p>
+            <ul className="mt-4 grow flex flex-col gap-2">
+              {[
+                "Airbnb & Vrbo Guest Communication",
+                "Listing & House-Rule Questions",
+                "Self Check-In & Access Assistance",
+                "Cleaner & Turnover Coordination",
+                "Local Maintenance Coordination",
+                "Listing-Level Issue Tracking",
+              ].map((item) => (
+                <li key={item} className="flex items-center gap-2 text-sm text-ink-soft">
+                  <span className="h-1 w-1 shrink-0 rounded-full bg-gold-dark" />
+                  {item}
+                </li>
+              ))}
+            </ul>
             <div className="mt-6">
-              <ButtonLink href="/services/vacation-rental-guest-operations" variant="gold">
-                Explore Vacation Rental Guest Operations
+              <ButtonLink href="/services/vacation-rental-answering-service" variant="gold">
+                Explore Vacation Rental Answering Service
               </ButtonLink>
-            </div>
-            <div className="mt-5 border-t border-line pt-4">
-              <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.12em] text-ink-muted">Relevant services</p>
-              <div className="flex flex-wrap gap-2">
-                {[
-                  { label: "Vacation Rental Answering Service", href: "/services/vacation-rental-answering-service" },
-                  { label: "Airbnb Guest Support", href: "/services/airbnb-guest-support" },
-                ].map((l) => (
-                  <Link key={l.href} href={l.href} className="text-xs text-gold-dark underline underline-offset-4 hover:text-gold">
-                    {l.label}
-                  </Link>
-                ))}
-              </div>
             </div>
           </div>
 
         </div>
       </Section>
 
-      {/* COVERAGE AROUND YOUR OPERATION */}
+      {/* COVERAGE TYPES */}
       <Section id="coverage-types" surface>
         <SectionHeading
           eyebrow="Coverage Options"
-          title="Coverage built around your operation."
+          title="Choose the coverage that fits your operation."
           align="center"
           className="mx-auto"
+          titleClassName="md:whitespace-nowrap"
         />
-        <p className="mx-auto mt-3 max-w-2xl text-center text-sm leading-relaxed text-ink-soft">
-          Most properties start with one coverage type and expand as the need becomes clear.
-        </p>
-        <div className="mt-10 grid gap-6 lg:grid-cols-3">
-
-          {/* After-Hours & Weekend */}
-          <div className="flex flex-col rounded-lg border border-line bg-paper p-7">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.15em] text-gold-dark">After-Hours &amp; Weekends</p>
-            <h2 className="mt-2 text-lg font-medium text-ink">Coverage when your front desk is closed or reduced.</h2>
-            <p className="mt-3 text-sm leading-relaxed text-ink-soft">
-              Evenings, overnight, early mornings and weekends. Reservation calls, guest messages and OTA inboxes answered by a trained person, not a voicemail or a bot. Most common entry point for independent hotels.
-            </p>
-            <div className="mt-5 border-t border-line pt-4">
-              <div className="flex flex-wrap gap-2">
-                {[
-                  { label: "After-Hours Support", href: "/services/after-hours-support" },
-                  { label: "Hotel Answering Service", href: "/services/hotel-answering-service" },
-                ].map((l) => (
-                  <Link key={l.href} href={l.href} className="text-xs text-gold-dark underline underline-offset-4 hover:text-gold">
-                    {l.label}
-                  </Link>
-                ))}
-              </div>
+        <div className="mt-10 grid gap-px border border-line bg-line sm:grid-cols-2 lg:grid-cols-4 rounded-lg overflow-hidden">
+          {[
+            { label: "After-Hours", line: "Evenings and overnight when your desk is closed." },
+            { label: "Weekends",    line: "Saturday and Sunday with reduced or no front-desk staffing." },
+            { label: "Overflow",    line: "When your team is at capacity or the line is busy." },
+            { label: "24 / 7",      line: "Continuous coverage with agreed scope across all hours." },
+          ].map((item) => (
+            <div key={item.label} className="flex flex-col gap-2 bg-paper px-6 py-7">
+              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-gold-dark">{item.label}</p>
+              <p className="text-sm leading-relaxed text-ink-soft">{item.line}</p>
             </div>
-          </div>
-
-          {/* Overflow & Staff Absence */}
-          <div className="flex flex-col rounded-lg border border-line bg-paper p-7">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.15em] text-gold-dark">Overflow &amp; Staff Absence</p>
-            <h2 className="mt-2 text-lg font-medium text-ink">Backup when your team is at capacity or short-staffed.</h2>
-            <p className="mt-3 text-sm leading-relaxed text-ink-soft">
-              Check-in peaks, high-occupancy periods, staff time off, and unplanned absences. We step in when your on-site team can&apos;t cover the volume, so no call or message falls through.
-            </p>
-            <div className="mt-5 border-t border-line pt-4">
-              <div className="flex flex-wrap gap-2">
-                {[
-                  { label: "Hotel Answering Service", href: "/services/hotel-answering-service" },
-                  { label: "Guest Messaging", href: "/services/guest-messaging" },
-                ].map((l) => (
-                  <Link key={l.href} href={l.href} className="text-xs text-gold-dark underline underline-offset-4 hover:text-gold">
-                    {l.label}
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Extended & Portfolio Coverage */}
-          <div className="flex flex-col rounded-lg border border-line bg-paper p-7">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.15em] text-gold-dark">Extended &amp; Portfolio Coverage</p>
-            <h2 className="mt-2 text-lg font-medium text-ink">Broader coverage across more hours, channels or properties.</h2>
-            <p className="mt-3 text-sm leading-relaxed text-ink-soft">
-              For properties that need coverage across the full day, multiple channels, or a portfolio of properties and listings. Scoped around your actual operation, not a generic tier.
-            </p>
-            <div className="mt-5 border-t border-line pt-4">
-              <div className="flex flex-wrap gap-2">
-                {[
-                  { label: "Reservation Support", href: "/services/reservation-support" },
-                  { label: "OTA Inbox Management", href: "/services/ota-inbox-management" },
-                  { label: "Vacation Rental Answering Service", href: "/services/vacation-rental-answering-service" },
-                ].map((l) => (
-                  <Link key={l.href} href={l.href} className="text-xs text-gold-dark underline underline-offset-4 hover:text-gold">
-                    {l.label}
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </div>
-
+          ))}
         </div>
-        <div className="mt-10 flex justify-center">
-          <CoverageReviewButton variant="gold" size="default" ctaLocation="homepage_coverage_types">
+        <p className="mt-5 text-center text-xs text-ink-muted">
+          Coverage does not automatically include every capability. Hours, channels, and permitted actions are agreed during setup.
+        </p>
+        <div className="mt-7 flex justify-center">
+          <CoverageReviewButton variant="gold" ctaLocation="homepage_coverage_types">
             Discuss Your Coverage Needs
           </CoverageReviewButton>
         </div>
@@ -347,45 +285,71 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* HOW WE WORK */}
-      <Section surface>
-        <SectionHeading eyebrow="How We Work" title="Live in days, not months." />
-        <div className="mt-6 grid gap-8 lg:grid-cols-[2fr_3fr] lg:items-start lg:gap-14">
-          <div className="relative aspect-square overflow-hidden rounded-lg border border-line">
+      {/* DIFFERENTIATORS */}
+      <Section>
+        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+
+          {/* Image */}
+          <div className="relative hidden aspect-[4/5] overflow-hidden rounded-2xl shadow-md lg:block">
             <Image
-              src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=1200&q=90"
-              alt="Guest Squad property briefing and onboarding session before hotel answering service goes live"
+              src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=900&q=85"
+              alt="Hotel front desk team managing guest reservations and calls"
               fill
               loading="lazy"
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover"
+              sizes="50vw"
+              unoptimized
+              className="object-cover object-center"
             />
           </div>
-          <div className="flex flex-col gap-6">
-            {DEFAULT_PROCESS.map((s, i) => (
-              <div key={s.step} className="flex gap-4">
-                <span className="flex-shrink-0 text-2xl font-medium text-gold-dark">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <div>
-                  <h3 className="text-base font-medium text-ink">{s.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-ink-soft">{s.description}</p>
-                </div>
-              </div>
-            ))}
-            <p className="text-sm text-ink-muted">
-              Most qualified properties can be scoped and live within 5 business days.
+
+          {/* Content */}
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold-dark">
+              What Makes Guest Squad Different
             </p>
+            <h2 className="mt-3 text-3xl font-medium leading-tight tracking-tight text-ink md:text-4xl">
+              Your dedicated guest team. Not a repurposed call centre.
+            </h2>
+
+            <div className="mt-10 flex flex-col divide-y divide-line">
+              {[
+                {
+                  label: "Your systems, not ours",
+                  body: "Agents work inside your PMS, inbox, and booking tools. No parallel platform, no duplicate data entry, no handoff friction.",
+                },
+                {
+                  label: "Your procedures, not a script",
+                  body: "Every property is briefed before coverage starts. Agents follow your greeting, your policies, and your escalation rules. No generic call flows.",
+                },
+                {
+                  label: "Scope agreed before go-live",
+                  body: "You define which calls are handled, which actions are permitted, and when your team needs to be reached. Nothing is assumed.",
+                },
+                {
+                  label: "Hospitality-trained, not general support",
+                  body: "Teams are briefed on hotel and STR operations: rate structures, check-in procedures, and OTA conventions. Not repurposed from a general helpdesk.",
+                },
+              ].map((item) => (
+                <div key={item.label} className="flex items-start gap-5 py-5">
+                  <span className="mt-2 h-3.5 w-0.5 shrink-0 rounded-full bg-gold-dark" />
+                  <div>
+                    <h3 className="text-sm font-semibold text-ink">{item.label}</h3>
+                    <p className="mt-1.5 text-sm leading-relaxed text-ink-soft">{item.body}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
+
         </div>
       </Section>
 
       {/* PLATFORM LOGOS */}
       <PlatformLogos />
 
-      {/* EVIDENCE — Guarantees + Social Proof */}
+      {/* SOCIAL PROOF */}
       <Section surface>
-        <div className="flex flex-col items-center text-center">
+        <div className="flex justify-center">
           <a
             href="https://www.trustpilot.com/review/guestsquad.com"
             target="_blank"
@@ -395,12 +359,8 @@ export default function HomePage() {
             <span className="font-bold text-[#00b67a]">★★★★★</span>
             <span>Rated 5 stars on Trustpilot</span>
           </a>
-          <SectionHeading eyebrow="Our Commitments" title="What every client gets from day one." align="center" className="mx-auto mt-3" />
         </div>
-        <div className="mt-8">
-          <Guarantees />
-        </div>
-        <div className="mt-12 grid gap-4 sm:grid-cols-3">
+        <div className="mt-8 grid gap-4 sm:grid-cols-3">
           {[
             {
               quote: "We were losing reservation calls every night after 10pm. Within the first week of coverage it was clear it was working.",

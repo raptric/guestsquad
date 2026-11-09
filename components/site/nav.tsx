@@ -12,9 +12,9 @@ import { cn } from "@/lib/utils";
 
 const FLAGSHIP_LINKS = [
   {
-    label: "Digital Front Desk",
-    href: "/services/digital-front-desk",
-    description: "Remote reception for hotels and serviced properties",
+    label: "Hotel Answering Service",
+    href: "/services/hotel-answering-service",
+    description: "Live phone coverage for hotels and serviced properties",
   },
   {
     label: "Central Reservations Desk",
@@ -22,8 +22,8 @@ const FLAGSHIP_LINKS = [
     description: "Coordinated reservations for hotel groups and portfolios",
   },
   {
-    label: "Vacation Rental Guest Operations",
-    href: "/services/vacation-rental-guest-operations",
+    label: "Vacation Rental Answering Service",
+    href: "/services/vacation-rental-answering-service",
     description: "Guest communication and coordination for STR portfolios",
   },
 ];

@@ -5,9 +5,9 @@ export const hotelAnsweringServiceData: ServiceDetailData = {
   eyebrow: "Hotel Answering Service",
   title: "Hotel Answering Service for Independent Hotels and Boutique Properties",
   description:
-    "Hotel answering service for independent hotels. Every reservation call and guest question answered by a trained person, with no phone tree and no voicemail.",
+    "Live hotel call answering for reservations, overflow and after-hours inquiries. Your greeting, approved procedures and clear escalation to your team.",
   schemaAbout: { "@type": "Thing", "name": "Hotel Front Desk Call Coverage" },
-  schemaServiceOutput: "Inbound hotel reservation calls and guest inquiries answered by a hospitality-trained agent using property-specific rates, policies, and escalation contacts",
+  schemaServiceOutput: "Inbound hotel calls answered by a hospitality-trained agent using the property's greeting, approved procedures and escalation contacts",
   schemaSubjectOf: [
     { "@type": "Article", "@id": "https://guestsquad.com/resources/hotel-answering-service-vs-call-center#article" },
     { "@type": "Article", "@id": "https://guestsquad.com/resources/hotel-answering-service-vs-ai-voice#article" },
@@ -28,44 +28,55 @@ export const hotelAnsweringServiceData: ServiceDetailData = {
     { "@type": "Thing", "name": "Hotel Reservations" },
     { "@type": "Thing", "name": "After-Hours Call Coverage" },
     { "@type": "Thing", "name": "Call Overflow Management" },
-    { "@type": "Organization", "name": "Booking.com" },
-    { "@type": "Organization", "name": "Expedia" },
+    { "@type": "Thing", "name": "Hotel Telephone Routing" },
     { "@type": "Thing", "name": "Property Management System" },
     { "@type": "Thing", "name": "Direct Hotel Bookings" },
   ],
-  primaryCta: "Request Pilot Review",
-  primaryHref: "/pilot",
+  primaryCta: "Book a Coverage Review",
+  primaryHref: undefined,
   introHeading: "What is a hotel answering service?",
   answerBlock:
-    "Every reservation call your front desk misses is a guest who reached out and got nothing back. A hotel answering service puts a trained person on every inbound call: reservation inquiries, guest questions, overflow during check-in peaks, and after-hours calls when your desk is off-site, using your live rates, policies, and escalation contacts.\n\nA generic call center runs a shared agent pool with no property knowledge. Guest Squad operates using a brief built around your property specifically: room types, local area, your tone, and the escalation rules your team sets. The experience feels like an extension of your front desk, not an outsourced script. If you want to estimate what missed calls are costing before booking a review, the [missed booking revenue calculator](/resources/missed-booking-calculator) puts a number on it.",
+    "A hotel answering service provides remote phone coverage using the property's greeting, information and handling procedures. Guest Squad answers agreed incoming calls, assists callers within the approved scope and passes requests requiring local action or management approval to the right contact.\n\nFor independent hotels and boutique properties with lean front-desk staffing, it means reservation inquiries, guest questions and overflow calls reach a trained person instead of going to voicemail. Coverage hours, call routing and what agents can handle are agreed before any call goes live.",
   image: {
     src: "https://images.unsplash.com/photo-1525182008055-f88b95ff7980?w=1600&q=90",
     alt: "Hospitality-trained agent handling inbound hotel reservation calls and guest inquiries",
   },
-  includesTitle: "Calls your front desk should never lose to voicemail.",
+  includesTitle: "Hotel calls we can handle for your property",
   includes: [
-    { title: "Live call answering", description: "Every call answered by a person. No phone tree, no voicemail, no unanswered ring during the hours you set." },
-    { title: "Reservation and general inquiries", description: "Booking questions, rate quotes, and policy questions handled and resolved directly, not taken as a message and forwarded." },
-    { title: "Call overflow during peak periods", description: "Check-in peaks and busy weekends are when overflow calls are highest. Every call picked up instead of ringing out means fewer missed reservations." },
-    { title: "Message taking and routing", description: "Anything requiring management discretion is logged with the full call context and routed immediately, so your team follows up with what they need, not just a name and number." },
+    {
+      title: "Live hotel call answering",
+      description: "Give callers a person who can explain your property information, amenities and policies. Agents use your approved greeting and instructions, with exceptions routed according to your procedures.",
+    },
+    {
+      title: "Reservation inquiries and approved bookings",
+      description: "Help prospective guests understand room options, rates and booking conditions. Where supported access and authority are provided, agents can complete agreed reservation actions. Otherwise, we capture the inquiry and follow your handover process.",
+    },
+    {
+      title: "Front desk call overflow",
+      description: "Let your staff concentrate on guests at the property while eligible unanswered calls route to Guest Squad. Agree the busy-line or no-answer behavior available through your telephone setup.",
+    },
+    {
+      title: "After-hours hotel calls",
+      description: "Provide phone support during agreed evening, overnight and weekend hours. Handle routine inquiries and supported arrival questions, with local assistance requested when a call needs someone at the property.",
+    },
   ],
   examples:
-    "A guest calls at 10pm asking about availability for next weekend. The agent pulls live rates, answers the question, and confirms the booking in your system without waking your team. On a busy Saturday check-in, four calls arrive while your desk handles a queue: three are answered and completed directly, one rate-exception request is logged and routed to the manager with full context.",
+    "A guest calls at 10pm asking about availability for next weekend. The agent checks the agreed rate and room information, answers the question and follows the booking handover process you set during setup. On a busy Saturday check-in, four calls arrive while your desk handles a queue: three are answered and assisted directly, one rate-exception request is logged and routed to the manager with the caller's details and full context.",
   handles: [
-    "Inbound reservation inquiries using your live rates and availability",
-    "General guest questions about amenities, policies, and the local area",
+    "Inbound reservation inquiries within the agreed scope and access",
+    "General guest questions about amenities, policies and the local area",
     "Overflow calls during check-in and check-out peaks",
     "Late check-in and early-arrival requests using your property procedures",
     "Direct booking calls from your website or Google Business profile",
-    "Call-back scheduling for inquiries that need a follow-up",
-    "After-hours and overnight calls when your front desk is off-site",
-    "Calls from guests who booked via OTAs asking about check-in, parking, or early arrival",
+    "Message recording and routing to your designated contacts",
+    "After-hours and overnight calls during agreed coverage hours",
+    "Calls from OTA guests asking about check-in, parking or early arrival",
   ],
   escalates: [
-    "Complaints, disputes, or compensation requests requiring management discretion",
+    "Complaints, disputes or compensation requests requiring management discretion",
     "Rate exceptions or special approvals outside your pre-set policy",
     "Anything involving guest safety or a security concern",
-    "High-value group or corporate inquiries that warrant a direct sales conversation",
+    "High-value group or corporate inquiries that warrant a direct conversation with your team",
   ],
   whoItsForTitle: "Set up around your call routing and front-desk hours.",
   whoItsFor: [
@@ -77,7 +88,7 @@ export const hotelAnsweringServiceData: ServiceDetailData = {
     "Multi-property groups who want consistent call handling across every site",
   ],
   notes:
-    "Every call reaches a trained person. Not a menu. Not a voicemail. A hospitality-trained agent who knows your property.",
+    "Coverage hours, handling scope and escalation rules are agreed before calls go live. We handle what falls within the approved scope and route the rest.",
   pairsWith: [
     { label: "After-Hours Support", slug: "after-hours-support" },
     { label: "Reservation Support", slug: "reservation-support" },
@@ -88,23 +99,46 @@ export const hotelAnsweringServiceData: ServiceDetailData = {
   comparisonTitle: "Hotel answering vs voicemail, IVR, and generic call centers.",
   comparisonSlugs: ["hotel-answering-service-vs-call-center", "hotel-answering-service-vs-ai-voice"],
   faqs: [
-    { q: "How much does a hotel answering service cost?", a: "Hotel answering service pricing is quote-based and depends on your call volume, coverage hours, number of properties, and the channels included. Guest Squad does not publish flat rates because properties have very different needs. For a full breakdown of what drives pricing, see the [hotel answering service cost guide](/resources/hotel-answering-service-cost). The starting point is a [2-week pilot review](/pilot), which evaluates your coverage gaps before recommending a plan." },
-    { q: "Can Guest Squad cover just overflow calls, or does it have to be full-day coverage?", a: "Both. Many clients start with peak-hour overflow during check-in and check-out rushes, or overnight-only coverage, rather than committing to full-day answering from day one. Coverage hours and call routing are agreed during setup; you only pay for the hours that actually need covering. If you are deciding whether overflow coverage is the right starting point, the [hotel front desk overflow support guide](/resources/hotel-front-desk-overflow-support) covers when to outsource and what to keep in-house." },
-    { q: "What is a hotel answering service?", a: "A hotel answering service provides live, human call coverage so reservation inquiries, guest questions, and overflow calls are answered by a trained person instead of going to voicemail or a phone tree. Guest Squad operates using your rates, policies, and property information, covering calls during peak periods, after hours, and any time your front desk cannot get to the phone." },
-    { q: "How is this different from your Reservation Support service?", a: "[Reservation Support](/services/reservation-support) focuses on bookings, quotes, and modifications. Hotel Answering Service is the broader call-answering layer, including general questions and overflow, and the two are often used together for complete phone coverage." },
-    { q: "Do you use an automated phone tree or IVR?", a: "No. Calls are answered by a trained person. Automated menus are exactly what this service is built to avoid." },
-    { q: "Can you cover just our busiest hours, not all day?", a: "Yes. Many clients start with peak-hour overflow coverage during check-in and check-out rushes rather than committing to full-day coverage. For overnight gaps, [after-hours support](/services/after-hours-support) covers that window separately." },
-    { q: "What happens with a call that needs management attention?", a: "It is logged with full context and routed to the right person immediately, so nothing sits in a generic voicemail box." },
-    { q: "Is this only for hotels, or does it work for smaller properties too?", a: "It works for any property type with a phone line: independent hotels, boutique properties, and small groups alike." },
-    { q: "Can Guest Squad answer calls using our hotel name?", a: "Yes. Agents answer in your hotel's name using your preferred greeting, so the experience is seamless for the guest." },
-    { q: "Can Guest Squad handle direct booking calls from our website or Google profile?", a: "Yes. Calls from any channel, whether your website, Google Business profile, or a direct number, are answered the same way: by a trained person with your property information." },
-    { q: "What happens if a caller asks for something outside our policy?", a: "The caller is informed politely that the request needs your team's direct approval, and the inquiry is logged and routed with full context so your team can follow up promptly." },
-    { q: "Can calls be transferred to our team when needed?", a: "Yes. Live transfer to your designated number is available for situations that require your team's direct involvement, following the escalation rules we agree on during setup." },
-    { q: "How does a hotel answering service work without adding staff?", a: "A hotel answering service gives your property live call coverage without hiring another front desk shift. Guest Squad answers reservation calls, guest questions, overflow calls, and after-hours inquiries using your property rules, escalation contacts, and approved guest-handling instructions. It pairs naturally with after-hours support for full overnight coverage." },
-    { q: "What should hotels look for in a call center alternative?", a: "A hotel call center typically uses a shared agent pool trained for volume, not hospitality. Guest Squad agents are briefed on your specific property: your room types, rates, local area, and escalation contacts. The experience for the guest is indistinguishable from your own front desk. For a full side-by-side, see [hotel answering service vs call center](/resources/hotel-answering-service-vs-call-center)." },
-    { q: "Can Guest Squad answer reservation calls after hours?", a: "Yes. Overnight and after-hours reservation calls are a core part of what the hotel answering service covers. When your desk is off-site, calls still reach a trained person who can answer questions, quote rates, and confirm bookings in your system, so no inquiry goes to voicemail. For dedicated overnight coverage, see [after-hours support](/services/after-hours-support)." },
-    { q: "Is this suitable for independent hotels and small boutique properties?", a: "Yes. Independent hotels and boutique properties are Guest Squad's primary clients. The service is sized to your call volume: a 20-room boutique has a very different plan from a 200-room independent, and pricing reflects that." },
-    { q: "How do we start? Is there a trial period?", a: "Qualified properties start with a 2-week pilot review before moving to month-to-month coverage. The pilot gives both teams time to validate call flows, escalation rules, and property briefing before committing to ongoing service." },
+    {
+      q: "Can you answer using our hotel's name?",
+      a: "Yes. Agents use your approved greeting and property information. We agree the tone, call-handling instructions and situations that require your team's involvement during setup.",
+    },
+    {
+      q: "Can we cover only busy periods or after-hours calls?",
+      a: "Yes. Coverage can be scoped for agreed overflow periods, evenings, overnight or weekends. Routing depends on your telephone provider and configuration; it is reviewed before coverage starts. For dedicated overnight coverage, [after-hours support](/services/after-hours-support) covers that window separately.",
+    },
+    {
+      q: "Can agents take reservations?",
+      a: "Where supported system access and booking authority are provided, agents can complete the agreed actions. Without that access, we agree an inquiry-capture and handover process rather than promise an immediate booking confirmation.",
+    },
+    {
+      q: "What happens if a call needs to be transferred and nobody answers?",
+      a: "The agreed escalation plan defines the next contact or message-delivery route. We document the caller's request and current status so your team has the context for follow-up.",
+    },
+    {
+      q: "How are urgent guest situations handled?",
+      a: "We follow your approved procedures and contact routes for urgent concerns. Situations requiring physical attendance or management decisions remain with your local responders or designated team.",
+    },
+    {
+      q: "How does this differ from Reservation Support?",
+      a: "Hotel Answering Service covers incoming hotel calls, general inquiries, routing and agreed telephone tasks. [Reservation Support](/services/reservation-support) focuses on booking inquiries and approved reservation actions. The appropriate scope depends on what you need completed during the call.",
+    },
+    {
+      q: "Can you also handle guest messages and OTA inboxes?",
+      a: "Those channels can be discussed as additional scope. [Guest messaging](/services/guest-messaging) and [OTA inbox management](/services/ota-inbox-management) have their own workflows and permissions; they are not automatically included in a telephone-coverage arrangement.",
+    },
+    {
+      q: "How do we get started?",
+      a: "Start with a coverage review to discuss your calls, hours, telephone setup and required actions. A scoped pilot can be discussed where appropriate, with the handling requirements and commercial terms confirmed before it begins.",
+    },
+    {
+      q: "Do you use an automated phone tree or IVR?",
+      a: "No. Calls are answered by a trained person. Automated menus are exactly what this service is built to avoid.",
+    },
+    {
+      q: "Can Guest Squad handle direct booking calls from our website or Google profile?",
+      a: "Yes. Calls from any channel — your website, Google Business profile or a direct number — are answered the same way: by a trained person with your property information.",
+    },
   ],
   downloadAsset: {
     asset: "coverage-gap-assessment",
@@ -113,16 +147,16 @@ export const hotelAnsweringServiceData: ServiceDetailData = {
     description: "Not sure where your call coverage gaps are? The Coverage Gap Assessment walks through your hours, channels, and escalation readiness so you know exactly what to fix first.",
   },
   assetLinks: [
+    { label: "Hotel Front Desk Overflow Support Guide", href: "/resources/hotel-front-desk-overflow-support" },
+    { label: "Missed Booking Revenue Calculator", href: "/resources/missed-booking-calculator" },
     { label: "How Much Does a Hotel Answering Service Cost?", href: "/resources/hotel-answering-service-cost" },
     { label: "Hotel Answering Service vs Call Center", href: "/resources/hotel-answering-service-vs-call-center" },
     { label: "Hotel Answering Service vs. AI Voice Agent", href: "/resources/hotel-answering-service-vs-ai-voice" },
-    { label: "Hotel Front Desk Overflow Support Guide", href: "/resources/hotel-front-desk-overflow-support" },
-    { label: "Missed Booking Revenue Calculator", href: "/resources/missed-booking-calculator" },
     { label: "View Sample Weekly Report", href: "/resources/sample-weekly-report" },
     { label: "Download After-Hours Checklist", href: "/resources/after-hours-checklist" },
   ],
-  ctaTitle: "Turn missed calls into handled guest conversations.",
-  ctaDescription: "Book a coverage review and see exactly how Guest Squad would cover your reservation calls, guest inquiries, and after-hours lines.",
+  ctaTitle: "Discuss the calls your hotel needs covered.",
+  ctaDescription: "Tell us when calls go unanswered, what guests usually ask and which requests your staff need help handling. We will review the coverage, routing and property information needed for a suitable arrangement.",
 };
 
 export const reservationSupportData: ServiceDetailData = {

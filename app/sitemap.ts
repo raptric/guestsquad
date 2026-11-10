@@ -25,7 +25,7 @@ const LAST_MODIFIED: Record<string, string> = {
   // Static pages
   "": "2026-10-26",
   "/pilot": "2026-08-08",
-  "/services": "2026-08-11",
+  "/services": "2026-11-10",
   "/pricing": "2026-10-26",
   "/contact": "2026-08-08",
   "/resources": "2026-08-11",
@@ -37,11 +37,12 @@ const LAST_MODIFIED: Record<string, string> = {
   "/services/hotel-answering-service": "2026-10-26",
   "/services/reservation-support": "2026-08-11",
   "/services/guest-messaging": "2026-10-26",
-  "/services/ota-inbox-management": "2026-10-26",
+  "/services/central-reservations": "2026-11-10",
+  "/services/ota-inbox-management": "2026-11-10",
   "/services/after-hours-support": "2026-10-26",
   "/services/back-office-operations": "2026-08-11",
   "/services/airbnb-guest-support": "2026-10-26",
-  "/services/vacation-rental-answering-service": "2026-10-26",
+  "/services/vacation-rental-answering-service": "2026-11-10",
   // Resource articles — updated with insight links and schema today
   "/resources/hotel-answering-service-vs-ai-voice": "2026-10-26",
   "/resources/hotel-answering-service-vs-call-center": "2026-10-26",

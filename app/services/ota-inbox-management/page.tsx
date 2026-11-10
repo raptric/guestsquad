@@ -66,15 +66,15 @@ const SERVICES = [
 const FAQS = [
   {
     q: "Which Guest Squad services include OTA inbox management?",
-    a: "OTA inbox management can be included within Hotel Answering Service for individual hotels, Central Reservations for hotel groups, or Vacation Rental Answering Service for listing portfolios. The right arrangement depends on your property types, platforms and coverage needs.",
+    a: "OTA inbox management can be included within your agreed service scope across Hotel Answering Service for individual hotels, Central Reservations for hotel groups, or Vacation Rental Answering Service for listing portfolios. The right arrangement depends on your property types, platforms and coverage needs.",
   },
   {
     q: "Which OTA platforms do you cover?",
     a: "Booking.com, Expedia, Airbnb and Vrbo are covered as standard. Hotels.com and other platforms can be added depending on your setup. Platforms, permitted actions and access method are confirmed before your arrangement starts.",
   },
   {
-    q: "Does slow OTA response time affect hotel ranking?",
-    a: "Booking.com and Expedia both track response rate and speed as factors in how properties appear in search results. We focus on consistent coverage — monitored inboxes, fast replies, fewer unanswered threads — which keeps your response metrics strong across active platforms.",
+    q: "Why does timely OTA messaging matter for my property?",
+    a: "Pre-booking questions that go unanswered typically result in the guest booking elsewhere. Post-booking messages left unread create arrival friction and complaint risk. Consistent inbox coverage keeps conversations moving, reduces no-shows, and means guests arrive informed — which is the operational case for handling these threads properly, independent of any platform metrics.",
   },
   {
     q: "Can you answer pre-booking questions, or only post-booking messages?",
@@ -139,6 +139,8 @@ export default function OtaInboxManagementPage() {
       {/* HERO */}
       <section className="border-b border-line bg-paper">
         <div className="container py-14 md:py-18">
+          <div className="grid gap-10 lg:grid-cols-[1fr_auto] lg:items-center lg:gap-16">
+          <div>
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-gold-dark">
             Capability
           </p>
@@ -148,7 +150,7 @@ export default function OtaInboxManagementPage() {
           <p className="mt-5 max-w-2xl text-lg leading-relaxed text-ink-soft">
             Guest Squad monitors and responds to guest messages through supported OTA platforms using
             your property information, booking policies and escalation procedures. OTA inbox
-            management is included within{" "}
+            management can be included within your agreed service scope across{" "}
             <Link href="/services/hotel-answering-service" className="text-ink underline underline-offset-2 hover:text-gold-dark">
               Hotel Answering Service
             </Link>
@@ -160,7 +162,7 @@ export default function OtaInboxManagementPage() {
             <Link href="/services/vacation-rental-answering-service" className="text-ink underline underline-offset-2 hover:text-gold-dark">
               Vacation Rental Answering Service
             </Link>
-            , depending on the channels and responsibilities agreed for your operation.
+            .
           </p>
 
           {/* Platform pills */}
@@ -176,6 +178,18 @@ export default function OtaInboxManagementPage() {
             <span className="rounded-full border border-line bg-surface px-3 py-1 text-xs font-medium text-ink-muted">
               + others on request
             </span>
+          </div>
+          </div>
+          {/* Hero illustration */}
+          <div className="hidden lg:block">
+            <img
+              src="/brand-assets/ota-inbox-hero.svg"
+              alt="OTA inbox management dashboard showing guest messages from Booking.com, Airbnb, Expedia and Vrbo"
+              width={520}
+              height={380}
+              className="w-[420px] xl:w-[480px]"
+            />
+          </div>
           </div>
         </div>
       </section>
@@ -267,6 +281,104 @@ export default function OtaInboxManagementPage() {
         <p className="mt-6 text-xs text-ink-muted">
           Platforms, coverage hours and permitted actions are confirmed for each arrangement.
         </p>
+      </Section>
+
+      {/* EVIDENCE — Sample handover card */}
+      <Section>
+        <div className="grid gap-10 md:grid-cols-2 md:items-center md:gap-16">
+          <div>
+            <SectionHeading
+              eyebrow="How it works in practice"
+              title="Every message thread logged and handed over."
+            />
+            <p className="mt-4 text-sm leading-relaxed text-ink-soft">
+              At the end of each shift, threads handled during that period are summarised and
+              passed to your team. Each entry notes the platform, the topic, the action taken,
+              and any escalations raised. Nothing drops between teams.
+            </p>
+            <p className="mt-3 text-sm leading-relaxed text-ink-soft">
+              You have visibility into what was handled, what was escalated, and what was held
+              pending your input — without monitoring the inboxes yourself.
+            </p>
+          </div>
+          {/* Handover card visual */}
+          <div className="rounded-xl border border-line bg-surface p-6">
+            <div className="mb-4 flex items-center justify-between">
+              <p className="text-xs font-semibold uppercase tracking-[0.15em] text-ink-muted">
+                Shift handover — OTA inboxes
+              </p>
+              <span className="rounded-full bg-paper px-2.5 py-0.5 text-xs text-ink-muted border border-line">
+                Sample
+              </span>
+            </div>
+            <div className="space-y-3">
+              {[
+                { platform: "Booking.com", topic: "Pre-booking: twin room rates", action: "Replied", status: "done" },
+                { platform: "Airbnb", topic: "In-stay: WiFi access", action: "Replied", status: "done" },
+                { platform: "Expedia", topic: "Date change request", action: "Replied — within policy", status: "done" },
+                { platform: "Vrbo", topic: "Cancellation dispute", action: "Escalated to manager", status: "escalated" },
+              ].map((row) => (
+                <div key={row.topic} className="flex items-start justify-between gap-3 rounded-lg bg-paper px-4 py-3 border border-line">
+                  <div>
+                    <p className="text-xs font-medium text-ink">{row.platform}</p>
+                    <p className="text-xs text-ink-soft mt-0.5">{row.topic}</p>
+                  </div>
+                  <span className={`shrink-0 rounded-full px-2.5 py-0.5 text-xs font-medium ${row.status === "done" ? "bg-green-50 text-green-700" : "bg-amber-50 text-amber-700"}`}>
+                    {row.action}
+                  </span>
+                </div>
+              ))}
+            </div>
+            <p className="mt-4 text-xs text-ink-muted">
+              Full thread logs, response times and escalation notes available on request.
+            </p>
+          </div>
+        </div>
+      </Section>
+
+      {/* RESOURCE LINKS */}
+      <Section surface>
+        <SectionHeading
+          eyebrow="Guides &amp; checklists"
+          title="Useful reading on OTA inbox management."
+        />
+        <div className="mt-8 grid gap-4 sm:grid-cols-3">
+          {[
+            {
+              label: "Platform guide",
+              title: "Booking.com messaging best practices",
+              body: "How Booking.com structures property-guest messaging, what actions are available, and what the platform expects from property teams.",
+              href: "/resources",
+            },
+            {
+              label: "Checklist",
+              title: "OTA inbox setup checklist",
+              body: "What to confirm before handing over OTA inbox access: access method, permitted actions, escalation contacts and response expectations.",
+              href: "/resources",
+            },
+            {
+              label: "Operations",
+              title: "Managing guest messages on a lean team",
+              body: "How smaller properties and short-term rental portfolios handle multi-platform inbox volume without a dedicated reservations team.",
+              href: "/resources",
+            },
+          ].map((item) => (
+            <div key={item.title} className="rounded-lg border border-line bg-paper p-5">
+              <p className="text-xs font-semibold uppercase tracking-[0.15em] text-gold-dark">
+                {item.label}
+              </p>
+              <p className="mt-2 text-sm font-medium text-ink leading-snug">{item.title}</p>
+              <p className="mt-2 text-sm leading-relaxed text-ink-soft">{item.body}</p>
+              <Link
+                href={item.href}
+                className="mt-4 inline-flex items-center gap-1 text-xs font-medium text-gold-dark hover:text-gold"
+              >
+                Read guide
+                <ArrowRight className="h-3 w-3" />
+              </Link>
+            </div>
+          ))}
+        </div>
       </Section>
 
       {/* FAQ + STICKY CTA */}

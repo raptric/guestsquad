@@ -97,8 +97,11 @@ export default function HomePage() {
             <h1 className="text-4xl font-medium leading-[1.08] tracking-tight text-ink md:text-5xl">
               Digital Front Desk Services for Hotels and Vacation Rentals
             </h1>
-            <p className="mt-6 max-w-lg text-lg leading-relaxed text-ink-soft">
-              Hospitality-trained remote teams handling guest calls, reservations, messages, and operational coordination through your existing systems and approved procedures.
+            <p className="mt-5 text-xl font-medium leading-snug text-ink">
+              Your Remote Guest Operations Team — Built Around Your Property.
+            </p>
+            <p className="mt-4 max-w-lg text-lg leading-relaxed text-ink-soft">
+              Human support for hotel calls, reservations, and vacation rental communication — handled inside your existing systems, following your procedures. Available when your on-site team isn&apos;t.
             </p>
             <div className="mt-7 flex flex-col gap-4 sm:flex-row">
               <CoverageReviewButton variant="gold" size="lg" ctaLocation="homepage_hero">

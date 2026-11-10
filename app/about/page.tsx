@@ -24,7 +24,7 @@ const TEAM = [
   { name: "Khadija Khalid", title: "Co-Founder", bio: null, photo: "/team/khadija-khalid.jpg" },
   { name: "Mary", title: "Operations Lead", bio: null, photo: "/team/mary-avatar.jpg" },
   { name: "Imran Khalid", title: "Guest Service Officer", bio: null, photo: "/team/imran-khalid.jpg" },
-  { name: "Azadar", title: "Business Development & Sales", bio: null, photo: null },
+  { name: "Azadar", title: "Business Development & Sales", bio: null, photo: "/team/azadar.jpg" },
   { name: "Maaz", title: "Hospitality Specialist", bio: null, photo: null },
 ];
 

@@ -165,36 +165,33 @@ export default function AboutPage() {
           <p className="mt-3 max-w-xl text-sm leading-relaxed text-ink-soft">
             Guest Squad is operated by Raptric LLC.
           </p>
-          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {TEAM.map((member) => (
               <div
                 key={member.name}
-                className="flex flex-col rounded-lg border border-line bg-paper overflow-hidden"
+                className="flex items-center gap-4 rounded-lg border border-line bg-paper px-4 py-3"
               >
-                <div className="relative aspect-[3/4] w-full bg-surface">
+                <div className="relative h-14 w-14 flex-shrink-0 overflow-hidden rounded-full bg-surface">
                   {member.photo ? (
                     <Image
                       src={member.photo}
                       alt={member.name}
                       fill
                       className="object-cover object-[center_15%]"
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      sizes="56px"
                     />
                   ) : (
-                    <div className="absolute inset-0 flex items-center justify-center bg-surface">
-                      <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="32" cy="24" r="14" fill="#C7A24A" fillOpacity="0.25"/>
-                        <path d="M8 56c0-13.255 10.745-24 24-24s24 10.745 24 24" stroke="#C7A24A" strokeOpacity="0.4" strokeWidth="2" fill="none"/>
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <svg width="28" height="28" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="32" cy="24" r="14" fill="#C7A24A" fillOpacity="0.3"/>
+                        <path d="M8 56c0-13.255 10.745-24 24-24s24 10.745 24 24" stroke="#C7A24A" strokeOpacity="0.5" strokeWidth="2" fill="none"/>
                       </svg>
                     </div>
                   )}
                 </div>
-                <div className="p-5">
+                <div className="min-w-0">
                   <p className="text-sm font-medium text-ink">{member.name}</p>
                   <p className="mt-0.5 text-xs text-gold-dark">{member.title}</p>
-                  {member.bio && (
-                    <p className="mt-2 text-xs leading-relaxed text-ink-soft">{member.bio}</p>
-                  )}
                 </div>
               </div>
             ))}

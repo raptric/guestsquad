@@ -3,7 +3,6 @@ import Link from "next/link";
 import { CheckCircle2, ArrowRight, XCircle } from "lucide-react";
 import { Section, SectionHeading } from "@/components/site/section";
 import { CoverageReviewButton } from "@/components/site/coverage-review-button";
-import { ButtonLink } from "@/components/site/button-link";
 import { Breadcrumbs } from "@/components/site/breadcrumbs";
 import { JsonLd } from "@/components/site/json-ld";
 import { FaqAccordion } from "@/components/site/faq-accordion";
@@ -410,18 +409,7 @@ export default function OtaInboxManagementPage() {
                 Book a Coverage Review
               </CoverageReviewButton>
             </div>
-            <div className="mt-4 flex flex-col gap-2">
-              <ButtonLink href="/services/hotel-answering-service" variant="outline" size="sm">
-                Hotel Answering Service
-              </ButtonLink>
-              <ButtonLink href="/services/central-reservations" variant="outline" size="sm">
-                Central Reservations
-              </ButtonLink>
-              <ButtonLink href="/services/vacation-rental-answering-service" variant="outline" size="sm">
-                Vacation Rental Answering Service
-              </ButtonLink>
-            </div>
-            <p className="mt-5 text-xs text-ink-muted">
+            <p className="mt-4 text-xs text-ink-muted">
               Useful for the conversation: your OTA platforms, approximate monthly message volume,
               and whether review responses are needed.
             </p>

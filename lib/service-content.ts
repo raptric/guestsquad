@@ -18,6 +18,7 @@ export const hotelAnsweringServiceData: ServiceDetailData = {
   schemaAudienceTypes: [
     "Independent Hotel",
     "Boutique Hotel",
+    "Bed and Breakfast",
     "Inn",
     "Resort",
     "Serviced Apartment",
@@ -80,7 +81,7 @@ export const hotelAnsweringServiceData: ServiceDetailData = {
   ],
   whoItsForTitle: "Set up around your call routing and front-desk hours.",
   whoItsFor: [
-    "Independent hotels and boutique properties with lean front-desk staffing",
+    "Independent hotels, boutique properties and B&Bs with lean front-desk staffing",
     "Properties losing booking calls to voicemail during peak check-in and check-out",
     "Hotels without a dedicated reservations line or after-hours call coverage",
     "Serviced apartments and lodge operators who need professional call handling without adding headcount",

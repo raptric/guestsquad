@@ -1,0 +1,161 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 420" role="img" aria-label="Multiple hotel properties with reservation enquiries flowing into a central reservations desk">
+
+  <!-- Background -->
+  <rect width="560" height="420" fill="#F8F7F4" rx="12"/>
+
+  <!-- ─────────────────────────────────────────
+       GRID LINES (subtle)
+  ───────────────────────────────────────── -->
+  <defs>
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M 28 0 L 0 0 0 28" fill="none" stroke="#E8E4DD" stroke-width="0.5"/>
+    </pattern>
+    <marker id="arrow-gold" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#C89B3C" opacity="0.7"/>
+    </marker>
+    <marker id="arrow-slate" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#94A3B8" opacity="0.5"/>
+    </marker>
+  </defs>
+  <rect width="560" height="420" fill="url(#grid)" rx="12"/>
+
+  <!-- ─────────────────────────────────────────
+       PROPERTY CARDS (left column)
+  ───────────────────────────────────────── -->
+
+  <!-- Property A -->
+  <rect x="28" y="58" width="148" height="82" rx="8" fill="#FFFFFF" stroke="#DDD8CE" stroke-width="1"/>
+  <rect x="28" y="58" width="148" height="4" rx="8" fill="#C89B3C"/>
+  <rect x="28" y="62" width="148" height="0" fill="#C89B3C"/>
+  <!-- Building icon -->
+  <rect x="44" y="78" width="22" height="20" rx="2" fill="#F1EDE4" stroke="#DDD8CE" stroke-width="1"/>
+  <rect x="48" y="82" width="4" height="4" rx="0.5" fill="#C89B3C"/>
+  <rect x="55" y="82" width="4" height="4" rx="0.5" fill="#C89B3C"/>
+  <rect x="48" y="90" width="6" height="8" rx="1" fill="#94A3B8"/>
+  <rect x="56" y="90" width="6" height="8" rx="1" fill="#94A3B8"/>
+  <!-- Property label -->
+  <text x="74" y="88" font-family="'Inter', system-ui, sans-serif" font-size="10" font-weight="600" fill="#0F172A">The Meridian</text>
+  <text x="74" y="101" font-family="'Inter', system-ui, sans-serif" font-size="8.5" fill="#64748B">Edinburgh · 48 rooms</text>
+  <!-- Enquiry pill -->
+  <rect x="38" y="116" width="80" height="16" rx="8" fill="#FEF3C7"/>
+  <circle cx="49" cy="124" r="3" fill="#C89B3C"/>
+  <text x="56" y="128" font-family="'Inter', system-ui, sans-serif" font-size="8" fill="#92400E">3 enquiries</text>
+  <!-- Status dot -->
+  <circle cx="162" cy="99" r="4" fill="#10B981"/>
+
+  <!-- Property B -->
+  <rect x="28" y="168" width="148" height="82" rx="8" fill="#FFFFFF" stroke="#DDD8CE" stroke-width="1"/>
+  <rect x="28" y="168" width="148" height="4" rx="8" fill="#0F172A"/>
+  <!-- Building icon -->
+  <rect x="44" y="188" width="22" height="20" rx="2" fill="#F1EDE4" stroke="#DDD8CE" stroke-width="1"/>
+  <rect x="48" y="192" width="4" height="4" rx="0.5" fill="#0F172A" opacity="0.4"/>
+  <rect x="55" y="192" width="4" height="4" rx="0.5" fill="#0F172A" opacity="0.4"/>
+  <rect x="48" y="200" width="6" height="8" rx="1" fill="#94A3B8"/>
+  <text x="74" y="198" font-family="'Inter', system-ui, sans-serif" font-size="10" font-weight="600" fill="#0F172A">Harbour House</text>
+  <text x="74" y="211" font-family="'Inter', system-ui, sans-serif" font-size="8.5" fill="#64748B">Bristol · 24 rooms</text>
+  <rect x="38" y="226" width="72" height="16" rx="8" fill="#F0FDF4"/>
+  <circle cx="49" cy="234" r="3" fill="#10B981"/>
+  <text x="56" y="238" font-family="'Inter', system-ui, sans-serif" font-size="8" fill="#065F46">1 enquiry</text>
+  <circle cx="162" cy="209" r="4" fill="#10B981"/>
+
+  <!-- Property C -->
+  <rect x="28" y="278" width="148" height="82" rx="8" fill="#FFFFFF" stroke="#DDD8CE" stroke-width="1"/>
+  <rect x="28" y="278" width="148" height="4" rx="8" fill="#64748B"/>
+  <rect x="44" y="298" width="22" height="20" rx="2" fill="#F1EDE4" stroke="#DDD8CE" stroke-width="1"/>
+  <rect x="48" y="302" width="4" height="4" rx="0.5" fill="#64748B" opacity="0.5"/>
+  <rect x="55" y="302" width="4" height="4" rx="0.5" fill="#64748B" opacity="0.5"/>
+  <rect x="48" y="310" width="6" height="8" rx="1" fill="#94A3B8"/>
+  <text x="74" y="308" font-family="'Inter', system-ui, sans-serif" font-size="10" font-weight="600" fill="#0F172A">The Old Rectory</text>
+  <text x="74" y="321" font-family="'Inter', system-ui, sans-serif" font-size="8.5" fill="#64748B">Bath · 12 rooms</text>
+  <rect x="38" y="336" width="80" height="16" rx="8" fill="#FEF3C7"/>
+  <circle cx="49" cy="344" r="3" fill="#C89B3C"/>
+  <text x="56" y="348" font-family="'Inter', system-ui, sans-serif" font-size="8" fill="#92400E">2 enquiries</text>
+  <circle cx="162" cy="319" r="4" fill="#F59E0B"/>
+
+  <!-- ─────────────────────────────────────────
+       CONNECTING LINES (properties → central desk)
+  ───────────────────────────────────────── -->
+  <!-- Property A → desk -->
+  <path d="M 176 99 C 220 99, 230 180, 272 180" stroke="#C89B3C" stroke-width="1.5" fill="none" stroke-dasharray="4,3" opacity="0.6" marker-end="url(#arrow-gold)"/>
+  <!-- Property B → desk -->
+  <path d="M 176 209 C 224 209, 240 196, 272 188" stroke="#C89B3C" stroke-width="1.5" fill="none" opacity="0.5" marker-end="url(#arrow-gold)"/>
+  <!-- Property C → desk -->
+  <path d="M 176 319 C 220 319, 232 220, 272 200" stroke="#94A3B8" stroke-width="1.5" fill="none" stroke-dasharray="4,3" opacity="0.5" marker-end="url(#arrow-slate)"/>
+
+  <!-- ─────────────────────────────────────────
+       CENTRAL RESERVATIONS DESK (centre)
+  ───────────────────────────────────────── -->
+  <!-- Outer glow ring -->
+  <circle cx="310" cy="192" r="68" fill="#C89B3C" opacity="0.06"/>
+  <circle cx="310" cy="192" r="56" fill="#C89B3C" opacity="0.06"/>
+
+  <!-- Main card -->
+  <rect x="274" y="136" width="136" height="112" rx="12" fill="#FFFFFF" stroke="#C89B3C" stroke-width="1.5"/>
+
+  <!-- Header bar -->
+  <rect x="274" y="136" width="136" height="32" rx="12" fill="#0F172A"/>
+  <rect x="274" y="152" width="136" height="16" fill="#0F172A"/>
+  <text x="310" y="156" font-family="'Inter', system-ui, sans-serif" font-size="8" font-weight="600" fill="#C89B3C" text-anchor="middle" letter-spacing="0.08em">CENTRAL DESK</text>
+
+  <!-- Agent avatar -->
+  <circle cx="310" cy="186" r="14" fill="#F1EDE4" stroke="#DDD8CE" stroke-width="1"/>
+  <circle cx="310" cy="181" r="6" fill="#94A3B8"/>
+  <path d="M 298 196 Q 310 202 322 196" fill="#94A3B8"/>
+
+  <!-- Status label -->
+  <rect x="289" y="204" width="42" height="14" rx="7" fill="#F0FDF4"/>
+  <circle cx="296" cy="211" r="3" fill="#10B981"/>
+  <text x="302" y="214.5" font-family="'Inter', system-ui, sans-serif" font-size="7.5" fill="#065F46">Live</text>
+
+  <!-- Enquiry count -->
+  <rect x="339" y="204" width="58" height="14" rx="7" fill="#FEF3C7"/>
+  <text x="368" y="214.5" font-family="'Inter', system-ui, sans-serif" font-size="7.5" fill="#92400E" text-anchor="middle">6 handled</text>
+
+  <!-- ─────────────────────────────────────────
+       OUTPUT PANEL (right column)
+  ───────────────────────────────────────── -->
+
+  <!-- Output header -->
+  <text x="432" y="76" font-family="'Inter', system-ui, sans-serif" font-size="8.5" font-weight="600" letter-spacing="0.1em" fill="#64748B" text-anchor="middle">TODAY'S ACTIVITY</text>
+
+  <!-- Confirmed reservation -->
+  <rect x="384" y="86" width="148" height="58" rx="8" fill="#FFFFFF" stroke="#DDD8CE" stroke-width="1"/>
+  <rect x="384" y="86" width="148" height="4" rx="8" fill="#10B981"/>
+  <text x="396" y="104" font-family="'Inter', system-ui, sans-serif" font-size="9" font-weight="600" fill="#0F172A">Reservation confirmed</text>
+  <text x="396" y="115.5" font-family="'Inter', system-ui, sans-serif" font-size="8" fill="#64748B">Meridian · 2 nights · Rm 204</text>
+  <text x="396" y="127" font-family="'Inter', system-ui, sans-serif" font-size="8" fill="#94A3B8">Rate per brief · Logged to PMS</text>
+
+  <!-- Enquiry in progress -->
+  <rect x="384" y="156" width="148" height="58" rx="8" fill="#FFFFFF" stroke="#DDD8CE" stroke-width="1"/>
+  <rect x="384" y="156" width="148" height="4" rx="8" fill="#C89B3C"/>
+  <text x="396" y="174" font-family="'Inter', system-ui, sans-serif" font-size="9" font-weight="600" fill="#0F172A">Enquiry handled</text>
+  <text x="396" y="185.5" font-family="'Inter', system-ui, sans-serif" font-size="8" fill="#64748B">Harbour House · Group of 8</text>
+  <text x="396" y="197" font-family="'Inter', system-ui, sans-serif" font-size="8" fill="#94A3B8">Quote sent · Follow-up logged</text>
+
+  <!-- Escalation -->
+  <rect x="384" y="226" width="148" height="58" rx="8" fill="#FFFFFF" stroke="#DDD8CE" stroke-width="1"/>
+  <rect x="384" y="226" width="148" height="4" rx="8" fill="#64748B"/>
+  <text x="396" y="244" font-family="'Inter', system-ui, sans-serif" font-size="9" font-weight="600" fill="#0F172A">Escalated to GM</text>
+  <text x="396" y="255.5" font-family="'Inter', system-ui, sans-serif" font-size="8" fill="#64748B">Old Rectory · Rate exception</text>
+  <text x="396" y="267" font-family="'Inter', system-ui, sans-serif" font-size="8" fill="#94A3B8">Outside scope · GM notified</text>
+
+  <!-- Handover summary -->
+  <rect x="384" y="296" width="148" height="52" rx="8" fill="#0F172A"/>
+  <text x="396" y="316" font-family="'Inter', system-ui, sans-serif" font-size="8.5" font-weight="600" fill="#C89B3C">Daily handover</text>
+  <text x="396" y="327.5" font-family="'Inter', system-ui, sans-serif" font-size="8" fill="#94A3B8">3 properties · 6 interactions</text>
+  <text x="396" y="339" font-family="'Inter', system-ui, sans-serif" font-size="8" fill="#64748B">Sent to GMs at 23:00</text>
+
+  <!-- ─────────────────────────────────────────
+       CONNECTING LINES (desk → output)
+  ───────────────────────────────────────── -->
+  <path d="M 346 162 C 362 148, 374 115, 384 115" stroke="#10B981" stroke-width="1.5" fill="none" opacity="0.5" marker-end="url(#arrow-gold)"/>
+  <path d="M 346 192 C 362 192, 372 185, 384 185" stroke="#C89B3C" stroke-width="1.5" fill="none" opacity="0.5" marker-end="url(#arrow-gold)"/>
+  <path d="M 346 212 C 362 230, 374 251, 384 255" stroke="#94A3B8" stroke-width="1.5" fill="none" stroke-dasharray="4,3" opacity="0.4" marker-end="url(#arrow-slate)"/>
+
+  <!-- ─────────────────────────────────────────
+       FOOTER LABEL
+  ───────────────────────────────────────── -->
+  <rect x="186" y="376" width="188" height="26" rx="13" fill="#0F172A" opacity="0.06"/>
+  <text x="280" y="393" font-family="'Inter', system-ui, sans-serif" font-size="8.5" font-weight="500" fill="#64748B" text-anchor="middle" letter-spacing="0.06em">Every property. One coordinated desk.</text>
+
+</svg>

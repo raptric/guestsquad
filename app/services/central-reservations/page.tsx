@@ -1,44 +1,97 @@
-/**
- * Central Reservations Desk — private draft
- * Status: noindex. Not in SERVICES array, sitemap or production nav.
- * Route: /services/central-reservations
- */
-
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Section, SectionHeading } from "@/components/site/section";
-import { Breadcrumbs } from "@/components/site/breadcrumbs";
-import { FaqAccordion } from "@/components/site/faq-accordion";
+import { CtaSection } from "@/components/site/cta-section";
 import { CoverageReviewButton } from "@/components/site/coverage-review-button";
 import { ButtonLink } from "@/components/site/button-link";
+import { Breadcrumbs } from "@/components/site/breadcrumbs";
 import { JsonLd } from "@/components/site/json-ld";
+import { SharedCapabilitiesBlock } from "@/components/site/shared-capabilities-block";
+import { TestimonialsBlock } from "@/components/site/testimonials-block";
+import { FaqAccordion } from "@/components/site/faq-accordion";
 import { buildMetadata, breadcrumbSchema, faqSchema } from "@/lib/seo";
 import { SITE } from "@/lib/site-data";
 
-// ---------------------------------------------------------------------------
-// Metadata — noindex until launch
-// ---------------------------------------------------------------------------
-export const metadata: Metadata = {
-  ...buildMetadata({
-    title: "Central Reservations for Hotel Groups",
-    description:
-      "Human reservations support for hotel groups and portfolios. Handle enquiries, approved bookings and changes using each property's rates, policies and systems.",
-    path: "/services/central-reservations",
-  }),
-  robots: { index: false, follow: false },
-};
+export const metadata: Metadata = buildMetadata({
+  title: "Central Reservations Desk for Hotel Groups",
+  description:
+    "Coordinated reservation handling for hotel groups and portfolios. Enquiries, approved bookings and changes managed across your properties using each hotel's rates, policies and systems.",
+  path: "/services/central-reservations",
+});
+
+const PATH = "/services/central-reservations";
 
 // ---------------------------------------------------------------------------
-// FAQ data
+// Workflow cards
+// ---------------------------------------------------------------------------
+const WORKFLOWS = [
+  {
+    label: "Multi-Property Reservation Handling",
+    trigger: "Caller asks about availability across properties in the portfolio",
+    does: "Identifies the best-fit property by dates, size, location and brief. Presents approved options from each property's information.",
+    boundary: "Cannot determine fit: routes to the group reservations contact with caller details.",
+  },
+  {
+    label: "Property Selection & Availability",
+    trigger: "Caller needs specific dates checked at a named or suggested property",
+    does: "Checks availability in the PMS for the relevant property. Presents approved options and quotes the correct rate.",
+    boundary: "Property unavailable: offers alternatives within the portfolio or takes the enquiry for follow-up.",
+  },
+  {
+    label: "Approved Quotes & Booking Changes",
+    trigger: "Caller wants a rate confirmed, a reservation made, or an existing booking changed or cancelled",
+    does: "Sends the approved quote, processes the booking or change within the permitted PMS scope. Confirms the outcome to the caller and records it.",
+    boundary: "Outside permitted scope: logs the request and routes to the reservations manager with full context.",
+  },
+  {
+    label: "Reservation Follow-Up",
+    trigger: "A pending enquiry, unanswered quote or incomplete booking requires a follow-up contact",
+    does: "Contacts the enquirer per the agreed follow-up procedure and timeline. Updates the record with the outcome.",
+    boundary: "No response after agreed attempts: logged and handed to the reservations manager.",
+  },
+  {
+    label: "Property-Specific Booking Rules",
+    trigger: "Caller asks about minimum stays, deposits, cancellation conditions or rate restrictions at a specific property",
+    does: "Applies the correct rules from that property&apos;s brief. Explains conditions clearly and accurately.",
+    boundary: "Exception requested: routes to the designated approver for that property with the caller&apos;s request documented.",
+  },
+  {
+    label: "Property-Level Handover & Reporting",
+    trigger: "End of the agreed coverage window or daily close",
+    does: "Produces a per-property summary: enquiries handled, bookings made, changes processed, open items and escalations. Delivers to the relevant GM or reservations lead.",
+    boundary: "Unresolved items flagged clearly; GM or reservations lead notified before the next operational period.",
+  },
+];
+
+// ---------------------------------------------------------------------------
+// Situations
+// ---------------------------------------------------------------------------
+const SITUATIONS = [
+  {
+    heading: "Enquiries arrive across multiple properties with no central point",
+    body: "Calls, messages and OTA threads land at individual hotels. Some get answered quickly, others are missed. There is no consistent record of what was handled or what is still open.",
+  },
+  {
+    heading: "Each property has different rates, policies and permissions",
+    body: "A group-level team cannot operate on a single script. The agent needs to know which property the caller is asking about and apply that property's specific instructions.",
+  },
+  {
+    heading: "Reservation enquiries go unanswered outside office hours",
+    body: "Prospective guests calling in the evening, on weekends or during peak periods reach voicemail. Those enquiries often go to OTA channels where you pay commission.",
+  },
+  {
+    heading: "Your team handles reservations alongside operations and management",
+    body: "In smaller groups, the same person manages reservations, escalations and property oversight. Demand for one interrupts the others. A dedicated handling layer separates the work.",
+  },
+];
+
+// ---------------------------------------------------------------------------
+// FAQs
 // ---------------------------------------------------------------------------
 const FAQS = [
   {
     q: "What is a central reservations desk for a hotel group?",
     a: "A central reservations desk coordinates enquiry and booking handling across participating properties. Guest Squad provides the human operating team for the agreed work, using each property's information, supported systems and booking permissions.",
-  },
-  {
-    q: "How is this different from reservation support?",
-    a: "Reservation Support explains individual tasks such as booking enquiries, quotes and approved reservation changes. Central Reservations Desk brings those tasks into a wider portfolio arrangement, including property-specific procedures, enquiry routing, coverage and management oversight.",
   },
   {
     q: "Can each property keep its own rates and policies?",
@@ -62,7 +115,7 @@ const FAQS = [
   },
   {
     q: "Can we start with a small part of the portfolio?",
-    a: "An initial scope can focus on selected properties, channels or coverage periods. We agree the requirements and review process before handling begins, then discuss expansion based on operational readiness and the results available.",
+    a: "An initial scope can focus on selected properties, channels or coverage periods. We agree the requirements before handling begins, then discuss expansion based on operational readiness.",
   },
   {
     q: "How is the service priced?",
@@ -71,133 +124,48 @@ const FAQS = [
 ];
 
 // ---------------------------------------------------------------------------
-// Scope table
-// ---------------------------------------------------------------------------
-const SCOPE_ROWS = [
-  {
-    need: "Booking enquiries",
-    help: "Respond to questions about participating properties, accommodation options and booking conditions through agreed channels.",
-  },
-  {
-    need: "Rates and availability",
-    help: "Consult approved systems or information sources to explain available options and authorized rates.",
-  },
-  {
-    need: "New reservations",
-    help: "Complete supported booking actions within the permissions and procedures you provide.",
-  },
-  {
-    need: "Modifications and cancellations",
-    help: "Handle permitted changes, explain applicable conditions and route exceptions for approval.",
-  },
-  {
-    need: "Property selection",
-    help: "Help guests understand relevant options within your participating portfolio where that handling is included.",
-  },
-  {
-    need: "Exceptions and handoffs",
-    help: "Pass the enquiry, action taken and outstanding decision to the appropriate property or management contact.",
-  },
-];
-
-// ---------------------------------------------------------------------------
 // Schema
 // ---------------------------------------------------------------------------
-const PAGE_URL = `${SITE.url}/services/central-reservations`;
-const SERVICE_ID = `${SITE.url}/#service-central-reservations`;
+const PAGE_URL = `${SITE.url}${PATH}`;
 
-const centralReservationsSchema = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "@id": SERVICE_ID,
-  name: "Central Reservations Desk for Hotel Groups",
-  serviceType: "Central Reservations",
-  description:
-    "Human reservations support for hotel groups and portfolios. Handle enquiries, approved bookings and changes using each property's rates, policies and systems.",
-  url: PAGE_URL,
-  provider: { "@id": `${SITE.url}/#organization` },
-  areaServed: "Worldwide",
-  audience: [
-    { "@type": "Audience", audienceType: "Hotel Group" },
-    { "@type": "Audience", audienceType: "Hospitality Management Company" },
-    { "@type": "Audience", audienceType: "Multi-Property Operator" },
-  ],
-  hasOfferCatalog: {
-    "@type": "OfferCatalog",
-    name: "Central Reservations — Available Scope",
-    itemListElement: [
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          "@id": `${SITE.url}/services/reservation-support#service`,
-          name: "Reservation Support",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          "@id": `${SITE.url}/services/hotel-answering-service#service`,
-          name: "Hotel Answering Service",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          "@id": `${SITE.url}/services/ota-inbox-management#service`,
-          name: "OTA Inbox Management",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          "@id": `${SITE.url}/services/after-hours-support#service`,
-          name: "After-Hours Hotel Support",
-        },
-      },
-    ],
-  },
-  offers: {
-    "@type": "Offer",
-    description:
-      "Scoped to participating properties, enquiry volume, coverage hours and required booking actions. Begins with a portfolio review.",
-    url: `${SITE.url}/contact`,
-    availability: "https://schema.org/InStock",
-    areaServed: "Worldwide",
-    seller: { "@id": `${SITE.url}/#organization` },
-  },
-};
-
-const webPageSchemaData = {
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "@id": `${PAGE_URL}#webpage`,
-  url: PAGE_URL,
-  name: "Central Reservations for Hotel Groups | Guest Squad",
-  description:
-    "Human reservations support for hotel groups and portfolios. Handle enquiries, approved bookings and changes using each property's rates, policies and systems.",
-  isPartOf: { "@id": `${SITE.url}/#website` },
-  about: { "@id": `${SITE.url}/#organization` },
-  mainEntity: { "@id": SERVICE_ID },
-};
-
-// ---------------------------------------------------------------------------
-// Page
-// ---------------------------------------------------------------------------
 export default function CentralReservationsPage() {
   return (
     <>
       <JsonLd
         data={[
-          webPageSchemaData,
-          centralReservationsSchema,
+          {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "@id": `${PAGE_URL}#service`,
+            name: "Central Reservations Desk for Hotel Groups",
+            serviceType: "Central Reservations",
+            description:
+              "Coordinated reservation handling for hotel groups and portfolios. Enquiries, approved bookings and changes managed across your properties.",
+            url: PAGE_URL,
+            provider: { "@id": `${SITE.url}/#organization` },
+            areaServed: "Worldwide",
+            audience: [
+              { "@type": "Audience", audienceType: "Hotel Group" },
+              { "@type": "Audience", audienceType: "Multi-Property Hotel Operator" },
+              { "@type": "Audience", audienceType: "Hospitality Management Company" },
+            ],
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "@id": `${PAGE_URL}#webpage`,
+            url: PAGE_URL,
+            name: "Central Reservations Desk for Hotel Groups | Guest Squad",
+            description:
+              "Coordinated reservation handling for hotel groups and portfolios.",
+            inLanguage: "en",
+            isPartOf: { "@id": `${SITE.url}/#website` },
+            mainEntity: { "@id": `${PAGE_URL}#service` },
+          },
           breadcrumbSchema([
             { name: "Home", path: "/" },
             { name: "Services", path: "/services" },
-            { name: "Central Reservations Desk", path: "/services/central-reservations" },
+            { name: "Central Reservations Desk", path: PATH },
           ]),
           faqSchema(FAQS),
         ]}
@@ -207,499 +175,298 @@ export default function CentralReservationsPage() {
         items={[
           { name: "Home", path: "/" },
           { name: "Services", path: "/services" },
-          { name: "Central Reservations Desk", path: "/services/central-reservations" },
+          { name: "Central Reservations Desk", path: PATH },
         ]}
       />
 
-      {/* ── SECTION 1: HERO ───────────────────────────────────────────── */}
+      {/* 1. HERO */}
       <section className="border-b border-line bg-paper">
-        <div className="container grid items-center gap-10 py-16 md:grid-cols-2 md:py-22">
+        <div className="container grid items-center gap-10 py-16 md:grid-cols-2 md:py-20">
           <div>
             <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-gold-dark">
-              Human Reservations Support
+              Hotel Group Reservations
             </p>
-            <h1 className="text-4xl font-medium leading-[1.08] tracking-tight text-ink md:text-4xl lg:text-5xl">
-              Central Reservations Desk for Hotel Groups and Portfolios
+            <h1 className="text-4xl font-medium leading-[1.08] tracking-tight text-ink md:text-5xl">
+              Central Reservations Desk for Hotel Groups
             </h1>
-            <p className="mt-6 max-w-lg text-lg leading-relaxed text-ink-soft">
-              Bring reservation enquiries, approved bookings and changes across your properties into a coordinated operation. Guest Squad&apos;s hospitality-trained remote team works through your supported systems, using each property&apos;s rates, policies and booking permissions.
+            <p className="mt-5 max-w-lg text-lg leading-relaxed text-ink-soft">
+              Give reservation enquiries across your hotels a coordinated point of contact. Guest Squad handles approved quotes, bookings, changes and follow-up using each property&apos;s rates, availability and policies.
             </p>
             <p className="mt-3 text-sm text-ink-muted">
               For hotel groups, hospitality management companies and multi-property operators.
             </p>
-            <div className="mt-7 flex flex-col gap-4 sm:flex-row">
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
               <CoverageReviewButton variant="gold" size="lg" ctaLocation="crd_hero">
                 Discuss Your Reservations Operation
               </CoverageReviewButton>
               <a
-                href="#operating-model"
+                href="#how-it-works"
                 className="inline-flex items-center justify-center rounded-lg border border-line px-6 py-3 text-sm font-medium text-ink transition-colors hover:border-ink/40 hover:bg-surface"
               >
-                Explore the Operating Model
+                See How It Works
               </a>
             </div>
-            <p className="mt-3 text-xs text-ink-muted">
-              Property-specific handling. Agreed booking authority. Coverage built around your team.
-            </p>
           </div>
-
-          {/* Portfolio diagram — SVG */}
-          <div className="flex items-center justify-center rounded-lg border border-line bg-surface p-6 lg:p-8">
-            <div className="w-full max-w-xs">
-              <p className="mb-4 text-center text-[10px] font-bold uppercase tracking-[0.15em] text-ink-muted">
-                Portfolio operating model
-              </p>
-              <svg
-                viewBox="0 0 260 300"
-                xmlns="http://www.w3.org/2000/svg"
-                aria-label="One Guest Squad reservations team connected to Property A, B and C, each with their own rates, policies and permissions. Escalation routes defined per property."
-                className="w-full"
-              >
-                {/* Guest Squad node */}
-                <rect x="60" y="10" width="140" height="44" rx="8" className="fill-[var(--color-gold,#B8923A)]/10" stroke="currentColor" strokeWidth="1.5" strokeOpacity="0.5"/>
-                <text x="130" y="29" textAnchor="middle" fontSize="10" fontWeight="700" className="fill-current text-ink">Guest Squad</text>
-                <text x="130" y="44" textAnchor="middle" fontSize="8.5" className="fill-current text-ink-muted">Reservations team</text>
-
-                {/* Down from GS to horizontal bar */}
-                <line x1="130" y1="54" x2="130" y2="78" stroke="currentColor" strokeWidth="1.5" className="text-line" strokeDasharray="3 2"/>
-
-                {/* Horizontal bar */}
-                <line x1="44" y1="78" x2="216" y2="78" stroke="currentColor" strokeWidth="1.5" className="text-line"/>
-
-                {/* Down to each property */}
-                <line x1="44" y1="78" x2="44" y2="102" stroke="currentColor" strokeWidth="1.5" className="text-line"/>
-                <line x1="130" y1="78" x2="130" y2="102" stroke="currentColor" strokeWidth="1.5" className="text-line"/>
-                <line x1="216" y1="78" x2="216" y2="102" stroke="currentColor" strokeWidth="1.5" className="text-line"/>
-
-                {/* Property A */}
-                <rect x="4" y="102" width="80" height="62" rx="6" fill="none" stroke="currentColor" strokeWidth="1" className="text-line"/>
-                <text x="44" y="120" textAnchor="middle" fontSize="9" fontWeight="700" className="fill-current text-ink">Property A</text>
-                <text x="44" y="134" textAnchor="middle" fontSize="7.5" className="fill-current text-ink-muted">Rates</text>
-                <text x="44" y="145" textAnchor="middle" fontSize="7.5" className="fill-current text-ink-muted">Policies</text>
-                <text x="44" y="156" textAnchor="middle" fontSize="7.5" className="fill-current text-ink-muted">Permissions</text>
-
-                {/* Property B */}
-                <rect x="90" y="102" width="80" height="62" rx="6" fill="none" stroke="currentColor" strokeWidth="1" className="text-line"/>
-                <text x="130" y="120" textAnchor="middle" fontSize="9" fontWeight="700" className="fill-current text-ink">Property B</text>
-                <text x="130" y="134" textAnchor="middle" fontSize="7.5" className="fill-current text-ink-muted">Rates</text>
-                <text x="130" y="145" textAnchor="middle" fontSize="7.5" className="fill-current text-ink-muted">Policies</text>
-                <text x="130" y="156" textAnchor="middle" fontSize="7.5" className="fill-current text-ink-muted">Permissions</text>
-
-                {/* Property C */}
-                <rect x="176" y="102" width="80" height="62" rx="6" fill="none" stroke="currentColor" strokeWidth="1" className="text-line"/>
-                <text x="216" y="120" textAnchor="middle" fontSize="9" fontWeight="700" className="fill-current text-ink">Property C</text>
-                <text x="216" y="134" textAnchor="middle" fontSize="7.5" className="fill-current text-ink-muted">Rates</text>
-                <text x="216" y="145" textAnchor="middle" fontSize="7.5" className="fill-current text-ink-muted">Policies</text>
-                <text x="216" y="156" textAnchor="middle" fontSize="7.5" className="fill-current text-ink-muted">Permissions</text>
-
-                {/* Escalation bar below properties */}
-                <line x1="44" y1="164" x2="44" y2="188" stroke="currentColor" strokeWidth="1" className="text-line" strokeDasharray="3 2"/>
-                <line x1="130" y1="164" x2="130" y2="188" stroke="currentColor" strokeWidth="1" className="text-line" strokeDasharray="3 2"/>
-                <line x1="216" y1="164" x2="216" y2="188" stroke="currentColor" strokeWidth="1" className="text-line" strokeDasharray="3 2"/>
-                <line x1="44" y1="188" x2="216" y2="188" stroke="currentColor" strokeWidth="1" className="text-line" strokeDasharray="3 2"/>
-
-                {/* Escalation node */}
-                <rect x="30" y="196" width="200" height="36" rx="6" className="fill-[var(--color-gold,#B8923A)]/5" stroke="currentColor" strokeWidth="1" strokeOpacity="0.3"/>
-                <text x="130" y="210" textAnchor="middle" fontSize="8.5" className="fill-current text-ink-soft">Escalation and approval routes</text>
-                <text x="130" y="223" textAnchor="middle" fontSize="8.5" className="fill-current text-ink-soft">defined per property</text>
-
-                {/* Caption */}
-                <text x="130" y="260" textAnchor="middle" fontSize="7.5" className="fill-current text-ink-muted">Conceptual illustration — not actual software</text>
-              </svg>
-            </div>
+          <div className="overflow-hidden rounded-xl border border-line bg-surface">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/brand-assets/central-reservations-hero.svg"
+              alt="Three hotel properties routing reservation enquiries to a central Guest Squad reservations desk, with confirmed bookings, quotes and handovers flowing back to each GM"
+              width={560}
+              height={420}
+              className="h-auto w-full"
+              loading="eager"
+            />
           </div>
         </div>
       </section>
 
-      {/* ── SECTION 2: PORTFOLIO OPERATING MODEL ─────────────────────── */}
-      <Section id="operating-model">
+      {/* 2. SITUATIONS */}
+      <Section surface>
         <SectionHeading
-          eyebrow="Portfolio Operating Model"
-          title="One reservations operation, with each property's rules intact"
-          description="Your properties may share management while offering different rooms, packages and booking conditions. We organize handling around those differences, so the team follows the correct instructions for the property and enquiry."
+          eyebrow="When You Need This"
+          title="Keep reservation enquiries organized across your hotels."
         />
+        <div className="mt-10 grid gap-5 sm:grid-cols-2">
+          {SITUATIONS.map((s) => (
+            <div key={s.heading} className="rounded-lg border border-line bg-paper p-6">
+              <h3 className="text-sm font-semibold text-ink">{s.heading}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-ink-soft">{s.body}</p>
+            </div>
+          ))}
+        </div>
+      </Section>
 
-        <div className="mt-10 grid gap-6 lg:grid-cols-3">
-          <div className="rounded-lg border border-line bg-paper p-7">
-            <h3 className="text-base font-semibold text-ink">Shared handling standards</h3>
-            <p className="mt-3 text-sm leading-relaxed text-ink-soft">
-              Agree how enquiries are received, what information is captured, how guests are assisted and how work passes between Guest Squad and your teams.
-            </p>
-          </div>
-          <div className="rounded-lg border border-gold/40 bg-paper p-7 shadow-sm">
-            <h3 className="text-base font-semibold text-ink">Property-specific knowledge</h3>
-            <p className="mt-3 text-sm leading-relaxed text-ink-soft">
-              Maintain the relevant room information, rate instructions, booking conditions and guest policies for each participating property.
-            </p>
-          </div>
-          <div className="rounded-lg border border-line bg-paper p-7">
-            <h3 className="text-base font-semibold text-ink">Clear decision ownership</h3>
-            <p className="mt-3 text-sm leading-relaxed text-ink-soft">
-              Define which actions we can complete and which require approval. Rate exceptions, discretionary changes and other decisions follow the escalation routes you set.
-            </p>
+      {/* 3a. SHARED CAPABILITIES */}
+      <Section>
+        <SectionHeading
+          eyebrow="What Guest Squad Handles"
+          title="Five capabilities, applied across your portfolio."
+          description="Each capability is scoped to your properties' systems, approved information and agreed procedures. The arrangement can include some or all depending on your group's requirements."
+        />
+        <div className="mt-10">
+          <SharedCapabilitiesBlock variant="group" />
+        </div>
+      </Section>
+
+      {/* 3b. WORKFLOWS */}
+      <Section surface>
+        <SectionHeading
+          eyebrow="Portfolio Workflows"
+          title="Six workflows built around how a hotel group's reservations operation actually runs."
+          description="Each workflow has a defined trigger, a clear set of actions and an agreed boundary per property."
+        />
+        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {WORKFLOWS.map((w) => (
+            <div key={w.label} className="flex flex-col rounded-lg border border-line bg-paper p-6">
+              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-gold-dark">{w.label}</p>
+              <div className="mt-4 flex flex-col gap-3 grow">
+                <div>
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.1em] text-ink-muted mb-1">Trigger</p>
+                  <p className="text-sm leading-relaxed text-ink-soft">{w.trigger}</p>
+                </div>
+                <div>
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.1em] text-ink-muted mb-1">Agent does</p>
+                  <p className="text-sm leading-relaxed text-ink-soft" dangerouslySetInnerHTML={{ __html: w.does }} />
+                </div>
+              </div>
+              <div className="mt-4 border-t border-line pt-4">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.1em] text-ink-muted mb-1">Escalated when</p>
+                <p className="text-sm leading-relaxed text-ink-soft" dangerouslySetInnerHTML={{ __html: w.boundary }} />
+              </div>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      {/* 4. COVERAGE OPTIONS */}
+      <Section id="coverage">
+        <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold-dark">Coverage Options</p>
+            <h2 className="mt-2 text-2xl font-medium leading-snug tracking-tight text-ink md:text-3xl">
+              After-hours, overflow, or a broader window.
+            </h2>
           </div>
         </div>
-
-        <p className="mt-6 text-sm text-ink-muted">
-          You retain control of commercial policy. We handle the agreed reservations work within it.
+        <div className="mt-7 grid gap-4 sm:grid-cols-3">
+          {[
+            {
+              label: "After-Hours",
+              body: "Reservation enquiries handled outside your team's agreed hours. Prospective guests reach a live person instead of voicemail.",
+            },
+            {
+              label: "Overflow",
+              body: "Your reservations team answers first. Unanswered or busy-line calls and messages route to Guest Squad automatically.",
+            },
+            {
+              label: "Broader Window",
+              body: "Extend coverage across evenings, weekends and peak periods to match the demand pattern across your portfolio.",
+            },
+          ].map((opt) => (
+            <div key={opt.label} className="rounded-lg border border-line bg-paper px-5 py-5">
+              <p className="text-sm font-semibold text-ink">{opt.label}</p>
+              <p className="mt-2 text-sm leading-relaxed text-ink-soft">{opt.body}</p>
+            </div>
+          ))}
+        </div>
+        <p className="mt-5 text-sm text-ink-soft">
+          Coverage windows, channels and participating properties are agreed during scoping.{" "}
+          <Link href="/pricing" className="text-gold-dark underline-offset-4 hover:underline">
+            See how coverage is scoped →
+          </Link>
         </p>
       </Section>
 
-      {/* ── SECTION 3: SCOPE AND WORKFLOW ────────────────────────────── */}
-      <Section surface>
+      {/* 5. HOW IT WORKS */}
+      <Section surface id="how-it-works">
         <SectionHeading
-          eyebrow="Reservation Scope"
-          title="From the first enquiry to the approved booking action"
-          description="Give prospective guests informed help with room options, booking conditions and next steps. The work can include the following, according to your systems, permissions and agreed scope."
+          eyebrow="How It Works"
+          title="From portfolio review to live reservations handling."
         />
-
-        {/* Desktop table */}
-        <div className="mt-8 hidden overflow-x-auto md:block">
-          <table className="w-full border-collapse text-sm">
-            <thead>
-              <tr className="border-b-2 border-line">
-                <th className="pb-3 pr-8 text-left text-xs font-semibold uppercase tracking-wider text-ink-muted w-[30%]">
-                  Reservation need
-                </th>
-                <th className="pb-3 text-left text-xs font-semibold uppercase tracking-wider text-ink-muted">
-                  How Guest Squad helps
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {SCOPE_ROWS.map((row, i) => (
-                <tr key={row.need} className={`border-b border-line/60 ${i % 2 === 0 ? "" : "bg-surface/40"}`}>
-                  <td className="py-4 pr-8 align-top font-medium text-ink">{row.need}</td>
-                  <td className="py-4 pr-4 text-ink-soft align-top">{row.help}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-
-        {/* Mobile cards */}
-        <div className="mt-6 flex flex-col gap-4 md:hidden">
-          {SCOPE_ROWS.map((row) => (
-            <div key={row.need} className="rounded-lg border border-line bg-paper p-5">
-              <p className="text-sm font-semibold text-ink">{row.need}</p>
-              <p className="mt-2 text-xs leading-relaxed text-ink-soft">{row.help}</p>
+        <div className="mt-10 grid gap-5 md:grid-cols-3">
+          {[
+            {
+              step: "01",
+              title: "Portfolio review",
+              body: "We document participating properties, enquiry sources, current handling gaps, required booking actions and the approval boundaries for each hotel.",
+            },
+            {
+              step: "02",
+              title: "System access and permissions",
+              body: "We confirm PMS and booking tool access per property, agree what agents can complete and define escalation routes for decisions outside that scope.",
+            },
+            {
+              step: "03",
+              title: "Routing and go-live",
+              body: "We test enquiry routing, property identification, transfers and handover procedures. Most groups are live within 7 business days of signing.",
+            },
+          ].map((s) => (
+            <div key={s.step} className="rounded-lg border border-line bg-paper p-6">
+              <p className="text-2xl font-light text-ink-muted">{s.step}</p>
+              <h3 className="mt-3 text-sm font-semibold text-ink">{s.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-ink-soft">{s.body}</p>
             </div>
           ))}
         </div>
 
-        {/* Workflow */}
-        <div className="mt-12 grid gap-10 lg:grid-cols-2 lg:gap-16 lg:items-start">
-          <div>
-            <h3 className="text-base font-semibold text-ink mb-6">A clear path for each reservation enquiry</h3>
-            <div className="flex flex-col">
-              {[
-                "Identify the property and guest requirement",
-                "Check approved availability, rates and conditions",
-                "Explain the relevant options",
-                "Complete an authorized action or request approval",
-                "Confirm the next step and record the outcome",
-              ].map((step, i, arr) => (
-                <div key={step} className="flex gap-4">
-                  <div className="flex flex-col items-center">
-                    <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border-2 border-gold/40 bg-paper text-[10px] font-bold text-gold-dark">
-                      {i + 1}
-                    </div>
-                    {i < arr.length - 1 && <div className="w-px flex-1 bg-line my-1 min-h-[20px]" />}
-                  </div>
-                  <p className={`text-sm text-ink-soft ${i < arr.length - 1 ? "pb-5" : "pb-0"} pt-1`}>{step}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Links */}
-          <div className="rounded-lg border border-line bg-paper p-7">
-            <p className="text-[10px] font-bold uppercase tracking-[0.15em] text-ink-muted mb-5">Related capability pages</p>
-            <div className="flex flex-col gap-5">
-              <div>
-                <Link href="/services/reservation-support" className="text-sm font-medium text-gold-dark underline underline-offset-4 hover:text-gold">
-                  Hotel Reservation Support
-                </Link>
-                <p className="mt-1 text-xs text-ink-muted">A closer look at individual booking-handling tasks.</p>
-              </div>
-              <div>
-                <Link href="/services/hotel-answering-service" className="text-sm font-medium text-gold-dark underline underline-offset-4 hover:text-gold">
-                  Hotel Answering Service
-                </Link>
-                <p className="mt-1 text-xs text-ink-muted">Reservation calls and phone enquiries handled around your operation.</p>
-              </div>
-              <div>
-                <Link href="/services/ota-inbox-management" className="text-sm font-medium text-gold-dark underline underline-offset-4 hover:text-gold">
-                  OTA Inbox Management
-                </Link>
-                <p className="mt-1 text-xs text-ink-muted">Platform enquiries across Booking.com, Expedia and Airbnb inboxes.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </Section>
-
-      {/* ── SECTION 4: COVERAGE ARRANGEMENTS ─────────────────────────── */}
-      <Section>
-        <SectionHeading
-          eyebrow="Coverage Arrangements"
-          title="Reservations coverage that works with your existing operation"
-          description="Keep your current team at the center of the arrangement. Add support for a specific gap or define a broader reservations scope across participating properties."
-        />
-
-        <div className="mt-10 grid gap-6 lg:grid-cols-3">
-          <div className="flex flex-col rounded-lg border border-line bg-paper p-7">
-            <h3 className="text-base font-semibold text-ink">Overflow and peak demand</h3>
-            <p className="mt-3 text-sm leading-relaxed text-ink-soft">
-              Add capacity when reservation enquiries exceed what your property or central team can handle. Agree the routing, channels and tasks that move to Guest Squad during busy periods.
-            </p>
-          </div>
-          <div className="flex flex-col rounded-lg border border-gold/40 bg-paper p-7 shadow-sm">
-            <h3 className="text-base font-semibold text-ink">After-hours and weekends</h3>
-            <p className="mt-3 text-sm leading-relaxed text-ink-soft">
-              Extend reservation handling beyond your team&apos;s usual hours. Give prospective guests access to informed assistance during agreed evening, overnight or weekend coverage.
-            </p>
-            <div className="mt-auto pt-5">
-              <Link href="/services/after-hours-support" className="text-xs text-gold-dark underline underline-offset-4 hover:text-gold">
-                Explore after-hours hotel support
-              </Link>
-            </div>
-          </div>
-          <div className="flex flex-col rounded-lg border border-line bg-paper p-7">
-            <h3 className="text-base font-semibold text-ink">A broader reservations operation</h3>
-            <p className="mt-3 text-sm leading-relaxed text-ink-soft">
-              Bring more of the agreed enquiry and booking workflow into one managed arrangement. Define the participating properties, coverage windows and responsibilities, with a rollout suited to your portfolio.
-            </p>
-          </div>
-        </div>
-
-        <p className="mt-6 text-sm text-ink-muted">
-          You can scope an initial arrangement around selected properties, channels or hours, then review what is appropriate to expand.
-        </p>
-      </Section>
-
-      {/* ── SECTION 5: SYSTEMS AND ROLLOUT ───────────────────────────── */}
-      <Section surface>
-        <SectionHeading
-          eyebrow="Systems and Rollout"
-          title="Built around your systems and property procedures"
-          description="A portfolio reservations service needs a consistent operating method and accurate property-level detail. Before handling begins, we review the work, access and handoffs required for each participating property."
-        />
-
-        <div className="mt-10 grid gap-10 lg:grid-cols-2 lg:gap-16">
-          <div className="flex flex-col gap-8">
-            {[
-              {
-                n: "01",
-                title: "Map the reservations workflow",
-                body: "Review enquiry sources, current handling, coverage gaps and the actions required. Identify how Guest Squad will work alongside property teams, reservations leaders and other decision-makers.",
-              },
-              {
-                n: "02",
-                title: "Document property rules",
-                body: "Build the operating information for each property, including room details, rate instructions, booking conditions, approval limits and escalation contacts.",
-              },
-              {
-                n: "03",
-                title: "Confirm supported access",
-                body: "Review the PMS, CRS, booking tools and communication channels involved. Agree permissions and routing for the workflows we can support.",
-              },
-              {
-                n: "04",
-                title: "Review and introduce coverage",
-                body: "Walk through representative enquiries and exceptions before launch. Where appropriate, begin with a defined part of the portfolio and review handling before expanding the arrangement.",
-              },
-            ].map((s) => (
-              <div key={s.n} className="flex gap-5">
-                <span className="shrink-0 text-2xl font-semibold tabular-nums text-gold-dark/40">{s.n}</span>
-                <div>
-                  <h3 className="text-sm font-semibold text-ink">{s.title}</h3>
-                  <p className="mt-1.5 text-sm leading-relaxed text-ink-soft">{s.body}</p>
-                </div>
-              </div>
+        {/* Systems */}
+        <div className="mt-8 rounded-lg border border-line bg-paper px-6 py-5">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.12em] text-ink-muted">Systems we work in</p>
+          <div className="flex flex-wrap gap-2">
+            {["Cloudbeds", "Mews", "Opera PMS", "Little Hotelier", "Booking.com Extranet", "Guesty", "Hostaway"].map((sys) => (
+              <span key={sys} className="rounded border border-line bg-surface px-3 py-1 text-xs font-medium text-ink-soft">
+                {sys}
+              </span>
             ))}
-            <p className="text-xs text-ink-muted pl-11">
-              Compatibility and booking authority are confirmed during scoping. Changes to rates, policies and permissions need an agreed update process so the team works from current instructions.
-            </p>
+            <span className="rounded border border-dashed border-line px-3 py-1 text-xs text-ink-muted">+ others on request</span>
           </div>
+          <p className="mt-3 text-xs text-ink-muted">System access and permitted actions are confirmed per property during setup. Rate changes and payment processing stay with your team.</p>
+        </div>
 
-          {/* Property setup checklist */}
-          <div className="rounded-lg border border-line bg-paper p-7">
-            <p className="text-xs font-semibold uppercase tracking-wider text-ink-muted mb-5">Per property, before handling begins</p>
-            <div className="flex flex-col gap-5">
-              {[
-                { label: "Room types and packages", detail: "Current accommodation options, descriptions and booking conditions." },
-                { label: "Rate structure and authority", detail: "Which rates can be quoted, modified or matched, and who approves exceptions." },
-                { label: "Booking tools and access", detail: "PMS, CRS or booking system access required for the agreed workflow." },
-                { label: "Escalation contacts", detail: "Primary and backup contacts for decisions outside the agreed scope." },
-                { label: "Update and review process", detail: "How rate, policy and instruction changes reach the team." },
-              ].map((item) => (
-                <div key={item.label} className="flex gap-3">
-                  <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-gold-dark/50" aria-hidden="true" />
-                  <div>
-                    <p className="text-sm font-semibold text-ink">{item.label}</p>
-                    <p className="mt-0.5 text-xs text-ink-muted">{item.detail}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+        <div className="mt-4 rounded-lg border border-line bg-surface px-6 py-4">
+          <p className="text-sm text-ink-soft">
+            <span className="font-medium text-ink">Commercial decisions stay with your properties.</span>{" "}
+            Rate exceptions, refunds and discretionary approvals follow the escalation routes agreed for each hotel.
+          </p>
         </div>
       </Section>
 
-      {/* ── SECTION 6: OVERSIGHT AND ACCOUNTABILITY ──────────────────── */}
+      {/* 6. REPORTING */}
       <Section>
         <SectionHeading
-          eyebrow="Oversight and Accountability"
-          title="Visibility into reservation handling across your properties"
+          eyebrow="Reporting"
+          title="Every reservation tracked. Your properties briefed before each shift."
         />
-
-        <div className="mt-8 grid gap-12 lg:grid-cols-2 lg:gap-16 lg:items-start">
-
-          {/* Left — copy + illustrative record */}
-          <div>
-            <div className="text-sm leading-relaxed text-ink-soft space-y-4">
-              <p>
-                Give management a clear view of the work being handled and the decisions still awaiting attention. We agree the records, reporting format and review process around your participating properties and coverage.
-              </p>
-              <p>
-                The information can cover enquiries received, authorized booking actions, requests passed back to your teams and outstanding follow-up. Available fields and reporting detail are confirmed during setup.
-              </p>
-              <p>
-                Property-specific context stays with the handoff, helping the next person understand what the guest requested, what has already happened and what needs approval.
-              </p>
+        <div className="mt-10 grid gap-0 divide-y divide-line rounded-lg border border-line bg-paper md:grid-cols-4 md:divide-x md:divide-y-0">
+          {[
+            {
+              step: "01",
+              title: "Enquiry handled",
+              body: "Agent handles the call or message using the correct property brief and agreed permissions.",
+            },
+            {
+              step: "02",
+              title: "Interaction logged",
+              body: "Property, action taken, booking outcome, escalation contact and next steps recorded.",
+            },
+            {
+              step: "03",
+              title: "Handover delivered",
+              body: "Per-property shift notes sent to the relevant GM or reservations lead at the agreed time.",
+            },
+            {
+              step: "04",
+              title: "Weekly summary",
+              body: "Enquiries handled, bookings made, open items and escalations per property — from day one.",
+            },
+          ].map((s) => (
+            <div key={s.step} className="flex flex-col gap-2 p-6">
+              <p className="text-xs font-light text-ink-muted">{s.step}</p>
+              <p className="text-sm font-semibold text-ink">{s.title}</p>
+              <p className="text-sm leading-relaxed text-ink-soft">{s.body}</p>
             </div>
-
-            <div className="mt-6">
-              <h3 className="text-sm font-semibold text-ink mb-2">Define the measures before judging the results</h3>
-              <p className="text-sm text-ink-soft">
-                If booking outcomes or conversion are part of your review, we first agree what is being measured and which records support it. A handled enquiry, a confirmed reservation and a completed stay represent different outcomes.
-              </p>
-            </div>
-
-            {/* Illustrative record */}
-            <div className="mt-7 overflow-hidden rounded-lg border border-line bg-paper">
-              <div className="border-b border-line bg-surface px-5 py-3">
-                <p className="text-xs font-semibold uppercase tracking-wider text-ink-muted">
-                  Illustrative reservation record — not actual guest data
-                </p>
-              </div>
-              <div className="divide-y divide-line/60">
-                {[
-                  { label: "Participating property", value: "— [redacted]" },
-                  { label: "Enquiry channel", value: "Phone" },
-                  { label: "Guest requirement", value: "Superior room, 3 nights, flexible rate" },
-                  { label: "Action taken", value: "Quoted available rate; reservation completed in system" },
-                  { label: "Booking status", value: "Confirmed" },
-                  { label: "Escalation owner", value: "None required" },
-                  { label: "Outstanding next step", value: "None — outcome recorded" },
-                ].map((f) => (
-                  <div key={f.label} className="grid grid-cols-[140px_1fr] gap-3 px-5 py-3 text-sm">
-                    <span className="font-semibold text-ink shrink-0">{f.label}</span>
-                    <span className="text-ink-soft">{f.value}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Right — status panel + resource links */}
-          <div className="flex flex-col gap-8">
-
-            {/* Enquiry status visual */}
-            <div className="rounded-lg border border-line bg-surface p-6">
-              <p className="text-[10px] font-bold uppercase tracking-[0.15em] text-ink-muted mb-5">Portfolio enquiry status — illustrative</p>
-              <div className="flex flex-col gap-3">
-                {[
-                  { property: "Property A — direct call", status: "Confirmed", badge: "green" },
-                  { property: "Property A — web enquiry", status: "Confirmed", badge: "green" },
-                  { property: "Property B — OTA message", status: "Confirmed", badge: "green" },
-                  { property: "Property B — rate exception", status: "Pending approval", badge: "amber" },
-                  { property: "Property C — cancellation", status: "Escalated", badge: "amber" },
-                ].map((row) => (
-                  <div
-                    key={row.property}
-                    className="flex items-center justify-between gap-4 rounded border border-line bg-paper px-4 py-2.5"
-                  >
-                    <span className="text-xs text-ink-soft">{row.property}</span>
-                    <span
-                      className={`shrink-0 rounded px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide ${
-                        row.badge === "green"
-                          ? "border border-green-200 bg-green-50 text-green-700"
-                          : "border border-amber-200 bg-amber-50 text-amber-700"
-                      }`}
-                    >
-                      {row.status}
-                    </span>
-                  </div>
-                ))}
-              </div>
-              <p className="mt-4 text-[10px] text-ink-muted">
-                Pending approvals and escalations remain visible until resolved or handed off.
-              </p>
-            </div>
-
-            {/* Resource links */}
-            <div>
-              <h3 className="text-base font-semibold text-ink mb-4">Explore the work behind reservations coverage</h3>
-              <div className="flex flex-col gap-3">
-                <Link href="/services/reservation-support" className="text-sm text-gold-dark underline underline-offset-4 hover:text-gold">
-                  Hotel reservation support
-                </Link>
-                <Link href="/resources/insights/unanswered-reservation-calls-revenue" className="text-sm text-gold-dark underline underline-offset-4 hover:text-gold">
-                  The impact of unanswered reservation calls
-                </Link>
-                <Link href="/pricing" className="text-sm text-gold-dark underline underline-offset-4 hover:text-gold">
-                  How Guest Squad scopes pricing
-                </Link>
-              </div>
-            </div>
-          </div>
-
+          ))}
         </div>
       </Section>
 
-      {/* ── SECTION 7: FAQ AND NEXT STEP ─────────────────────────────── */}
+      {/* TESTIMONIALS */}
+      <TestimonialsBlock />
+
+      {/* MID-PAGE CTA */}
+      <div className="bg-ink">
+        <div className="container flex flex-col items-start justify-between gap-5 py-8 sm:flex-row sm:items-center">
+          <div>
+            <p className="text-base font-medium text-paper">Ready to coordinate reservations across your portfolio?</p>
+            <p className="mt-1 text-sm text-paper/60">Book a review or start with a selected group of properties.</p>
+          </div>
+          <div className="flex shrink-0 flex-col gap-3 sm:flex-row">
+            <CoverageReviewButton variant="gold" size="sm" ctaLocation="crd_mid_cta">
+              Discuss Your Operation
+            </CoverageReviewButton>
+          </div>
+        </div>
+      </div>
+
+      {/* 7. FAQ + CTA */}
       <Section surface>
         <div className="grid gap-12 lg:grid-cols-[3fr_2fr] lg:gap-16">
-
-          {/* FAQ */}
           <div>
             <SectionHeading
-              eyebrow="Common Questions"
-              title="Questions about outsourced central reservations"
+              eyebrow="Questions"
+              title="Central reservations questions, answered."
             />
             <div className="mt-8">
-              <FaqAccordion items={FAQS} defaultOpenCount={2} />
+              <FaqAccordion items={FAQS} />
             </div>
           </div>
-
-          {/* CTA panel */}
           <div className="rounded-lg border border-line bg-paper p-7 h-fit lg:sticky lg:top-8">
-            <p className="text-xs font-semibold uppercase tracking-[0.15em] text-gold-dark mb-2">
-              Next Step
-            </p>
+            <p className="text-xs font-semibold uppercase tracking-[0.15em] text-gold-dark mb-2">Next Step</p>
             <h3 className="text-xl font-medium text-ink mb-3">
               Discuss a reservations operation for your portfolio
             </h3>
             <p className="text-sm leading-relaxed text-ink-soft mb-5">
-              Tell us which properties you manage, how reservation enquiries reach your team and where coverage needs to improve. We will review your systems, booking workflows and required hours, then discuss a suitable scope and rollout.
+              Tell us which properties you manage, how reservation enquiries currently reach your team and where coverage needs to improve. We will review your systems, booking workflows and required hours, then discuss a suitable scope.
             </p>
-            <CoverageReviewButton variant="gold" size="default" ctaLocation="crd_next_step">
+            <CoverageReviewButton variant="gold" size="default" ctaLocation="crd_faq_cta">
               Discuss Your Reservations Operation
             </CoverageReviewButton>
             <div className="mt-4">
-              <ButtonLink href="/pricing" variant="outline" size="sm" ctaLocation="crd_pricing_link">
+              <ButtonLink href="/pricing" variant="outline" size="sm">
                 How pricing is scoped
               </ButtonLink>
             </div>
             <p className="mt-5 text-xs text-ink-muted">
-              Helpful for the conversation: participating properties, current systems, enquiry channels, coverage hours and the booking actions you want handled.
+              Useful for the conversation: participating properties, current systems, enquiry channels, coverage hours and the booking actions you want handled.
             </p>
           </div>
-
         </div>
       </Section>
+
+      <CtaSection
+        title="Ready to give your hotel group a coordinated reservations operation?"
+        description="Book a review and we will map out the participating properties, coverage requirements and a suitable scope for your portfolio."
+      />
     </>
   );
 }

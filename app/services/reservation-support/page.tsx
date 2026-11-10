@@ -328,19 +328,19 @@ export default function ReservationSupportPage() {
               label: "Setup guide",
               title: "What to include in a reservation brief",
               body: "The information agents need before handling reservations: approved rates, availability access method, permitted actions, escalation contacts and what requires a callback.",
-              href: "/resources",
+              href: "/resources/hotel-guest-messaging-sop-template",
             },
             {
               label: "Checklist",
               title: "Reservation handover checklist",
               body: "What to confirm before an agent handles bookings on your behalf — PMS access, rate permissions, cancellation policy and emergency escalation paths.",
-              href: "/resources",
+              href: "/resources/after-hours-hotel-support-checklist",
             },
             {
               label: "Operations",
               title: "Managing reservation volume on a lean team",
               body: "How independent hotels and rental operators handle booking enquiries across multiple channels without a dedicated reservations desk.",
-              href: "/resources",
+              href: "/resources/hotel-front-desk-overflow-support",
             },
           ].map((item) => (
             <div key={item.title} className="rounded-lg border border-line bg-paper p-5">

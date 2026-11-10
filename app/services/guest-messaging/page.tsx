@@ -332,19 +332,19 @@ export default function GuestMessagingPage() {
               label: "Setup guide",
               title: "What to include in a guest messaging brief",
               body: "The property information agents need to handle guest messages well: check-in procedures, access codes, local contacts, amenity hours and your escalation paths.",
-              href: "/resources",
+              href: "/resources/hotel-guest-messaging-sop-template",
             },
             {
               label: "Checklist",
               title: "Guest messaging channel setup checklist",
               body: "What to confirm before handing over guest messaging: channel access, response expectations, out-of-hours coverage and how escalations are routed.",
-              href: "/resources",
+              href: "/resources/after-hours-hotel-support-checklist",
             },
             {
               label: "Operations",
               title: "Handling in-stay guest requests at scale",
               body: "How hotels and rental operators manage guest communication across SMS, WhatsApp and email without a dedicated guest services team on call.",
-              href: "/resources",
+              href: "/resources/hotel-front-desk-overflow-support",
             },
           ].map((item) => (
             <div key={item.title} className="rounded-lg border border-line bg-paper p-5">

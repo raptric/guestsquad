@@ -347,19 +347,19 @@ export default function OtaInboxManagementPage() {
               label: "Platform guide",
               title: "Booking.com messaging best practices",
               body: "How Booking.com structures property-guest messaging, what actions are available, and what the platform expects from property teams.",
-              href: "/resources",
+              href: "/resources/booking-com-message-support",
             },
             {
               label: "Checklist",
               title: "OTA inbox setup checklist",
               body: "What to confirm before handing over OTA inbox access: access method, permitted actions, escalation contacts and response expectations.",
-              href: "/resources",
+              href: "/resources/hotel-guest-messaging-sop-template",
             },
             {
               label: "Operations",
               title: "Managing guest messages on a lean team",
               body: "How smaller properties and short-term rental portfolios handle multi-platform inbox volume without a dedicated reservations team.",
-              href: "/resources",
+              href: "/resources/booking-com-message-support",
             },
           ].map((item) => (
             <div key={item.title} className="rounded-lg border border-line bg-paper p-5">

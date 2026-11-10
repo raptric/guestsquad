@@ -46,7 +46,7 @@ const SERVICES = [
     eyebrow: "For hotel groups",
     name: "Central Reservations",
     slug: "central-reservations",
-    body: "Each property&apos;s guests are handled to that property&apos;s own brief, local contacts and procedures. A guest at one hotel gets answers specific to that property — not a group-wide generic response.",
+    body: "Each property's guests are handled to that property's own brief, local contacts and procedures. A guest at one hotel gets answers specific to that property — not a group-wide generic response.",
   },
   {
     eyebrow: "For vacation rental operators",

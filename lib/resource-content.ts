@@ -840,7 +840,7 @@ export const otaInboxChecklistGuide: GuideArticleData = {
   datePublished: "2026-06-29T00:00:00+00:00",
   dateModified: "2026-08-07T00:00:00+00:00",
   intro: [
-    "OTA inboxes are easy to under-prioritize. They're not the phone ringing in front of you, so messages can sit for hours. But response time inside Booking.com's and Expedia's own messaging tools is one of the few factors a hotel can directly control that affects both conversion and, on some platforms, search ranking.",
+    "OTA inboxes are easy to under-prioritize. They're not the phone ringing in front of you, so messages can sit for hours. But response time inside Booking.com's and Expedia's own messaging tools directly affects conversion — and on some platforms, it is a factor in how listings are ranked and featured.",
   ],
   sections: [
     {

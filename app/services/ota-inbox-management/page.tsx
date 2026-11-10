@@ -254,7 +254,7 @@ export default function OtaInboxManagementPage() {
         <SectionHeading
           eyebrow="OTA inbox management within your service"
           title="Same capability. Different operating context."
-          description="The platforms and permissions are the same. What changes is the property structure, the brief each agent works from, and how OTA coverage fits alongside other responsibilities."
+          description="The platforms supported may vary by arrangement. What changes is the property structure, the brief each agent works from, and how OTA coverage fits alongside other responsibilities."
         />
         <div className="mt-10 grid gap-5 md:grid-cols-3">
           {SERVICES.map((svc) => (
@@ -350,16 +350,16 @@ export default function OtaInboxManagementPage() {
               href: "/resources/booking-com-message-support",
             },
             {
-              label: "Checklist",
-              title: "OTA inbox setup checklist",
-              body: "What to confirm before handing over OTA inbox access: access method, permitted actions, escalation contacts and response expectations.",
+              label: "Template",
+              title: "Guest messaging SOP template",
+              body: "A structured template for documenting how guest messages are handled: channel coverage, response standards, escalation paths and handover procedures.",
               href: "/resources/hotel-guest-messaging-sop-template",
             },
             {
               label: "Operations",
-              title: "Managing guest messages on a lean team",
-              body: "How smaller properties and short-term rental portfolios handle multi-platform inbox volume without a dedicated reservations team.",
-              href: "/resources/booking-com-message-support",
+              title: "Managing Booking.com messages with a lean team",
+              body: "How smaller properties maintain reply scores and inbox coverage without a dedicated reservations team on the inbox full-time.",
+              href: "/resources/insights/booking-com-message-management-lean-teams",
             },
           ].map((item) => (
             <div key={item.title} className="rounded-lg border border-line bg-paper p-5">

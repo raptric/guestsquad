@@ -43,7 +43,7 @@ export const INSIGHTS = [
     slug: "fast-responses-reduce-cancellations",
     title: "Why Fast Guest Responses Reduce Cancellations and Protect Your Review Score",
     description:
-      "Vrbo states directly that fast responses reduce cancellations and improve reviews. Booking.com penalises slow replies with ranking drops. Here's the connection between response speed, cancellation rates, and guest satisfaction.",
+      "Vrbo states directly that fast responses reduce cancellations and improve reviews. Booking.com tracks reply scores as a ranking input. Here's the connection between response speed, cancellation rates, and guest satisfaction.",
     category: "Guest Reviews",
     datePublished: "2026-08-11",
     readTime: "7 min read",
@@ -63,7 +63,7 @@ export const INSIGHTS = [
     slug: "booking-com-message-management-lean-teams",
     title: "Booking.com Message Management for Lean Front Desk Teams",
     description:
-      "Booking.com penalises hotels with reply scores below 90% with lower search rankings. Here's exactly what that means, why it's hard to maintain with a lean team, and how to protect your score without adding headcount.",
+      "Booking.com tracks reply scores and properties below 90% can see ranking impact. Here's exactly what that means, why it's hard to maintain with a lean team, and how to protect your score without adding headcount.",
     category: "OTA Rankings",
     datePublished: "2026-08-11",
     readTime: "7 min read",

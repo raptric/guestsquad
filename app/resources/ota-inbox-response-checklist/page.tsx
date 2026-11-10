@@ -39,7 +39,7 @@ export default function OtaInboxChecklistPage() {
       downloadHref="/downloads/ota-inbox-response-checklist.pdf"
     >
       <p className="text-sm leading-relaxed text-ink-soft">
-        Use this checklist to standardise how your team or external support partners manage OTA inboxes. Consistent, fast, policy-aligned responses improve your OTA ranking, reduce booking friction, and prevent complaints from surfacing in reviews.
+        Use this checklist to standardise how your team or external support partners manage OTA inboxes. Consistent, fast, policy-aligned responses reduce booking friction, support your platform standing, and prevent complaints from surfacing in reviews.
       </p>
 
       <div className="mt-6 grid gap-3 sm:grid-cols-3">

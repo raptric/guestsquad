@@ -5,7 +5,7 @@ import { Breadcrumbs } from "@/components/site/breadcrumbs";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Services | Guest Squad",
+  title: "Services",
   description:
     "Live hospitality coverage for hotels, hotel groups and vacation rental operators. Reservation calls, OTA inboxes and guest communication handled by trained people.",
   path: "/services",

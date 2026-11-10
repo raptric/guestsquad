@@ -42,7 +42,7 @@ const FAQS = [
 export const metadata: Metadata = buildMetadata({
   title: "Booking.com Message Management for Lean Hotel Teams",
   description:
-    "Booking.com penalises reply scores below 90% with ranking drops. Here's how lean hotel teams maintain compliance without adding headcount.",
+    "Booking.com tracks reply scores, and properties below 90% can see ranking impact. Here's how lean hotel teams maintain strong scores without adding headcount.",
   path: PATH,
 });
 
@@ -54,7 +54,7 @@ export default function BookingComLeanTeamsPage() {
           articleSchema({
             headline: "Booking.com Message Management for Lean Front Desk Teams",
             description:
-              "Booking.com penalises hotels with reply scores below 90% with lower search rankings. Here's exactly what that means, why it's hard to maintain with a lean team, and how to protect your score without adding headcount.",
+              "Booking.com tracks reply scores and properties below 90% can see ranking impact. Here's exactly what that means, why it's hard to maintain with a lean team, and how to protect your score without adding headcount.",
             path: PATH,
             datePublished: DATE_PUBLISHED,
             dateModified: DATE_PUBLISHED,
@@ -153,7 +153,7 @@ export default function BookingComLeanTeamsPage() {
               Booking.com Message Management for Lean Front Desk Teams
             </h1>
             <p className="mt-4 text-base leading-relaxed text-ink-soft">
-              Booking.com penalises hotels with reply scores below 90% with lower search rankings. Here&apos;s exactly what that means, why it&apos;s hard to maintain with a lean team, and how to protect your score without adding headcount.
+              Booking.com tracks reply scores and properties below 90% can see ranking impact. Here&apos;s exactly what that means, why it&apos;s hard to maintain with a lean team, and how to protect your score without adding headcount.
             </p>
             <p className="mt-4 text-xs text-ink-muted">
               By <span className="font-medium text-ink">Guest Squad</span>

@@ -1,0 +1,74 @@
+<svg viewBox="0 0 520 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="520" height="380" fill="#F7F5F0" rx="12"/>
+  <line x1="0" y1="80" x2="520" y2="80" stroke="#E8E4DC" stroke-width="1"/>
+
+  <!-- Channel: Phone -->
+  <rect x="24" y="40" width="130" height="52" rx="8" fill="white" stroke="#E8E4DC" stroke-width="1.5"/>
+  <rect x="36" y="52" width="20" height="20" rx="10" fill="#B8A060" fill-opacity="0.15"/>
+  <text x="46" y="66" font-family="system-ui, sans-serif" font-size="10" fill="#8A6A20" text-anchor="middle">☎</text>
+  <text x="64" y="60" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#1A1814">Phone</text>
+  <text x="64" y="74" font-family="system-ui, sans-serif" font-size="9" fill="#8C8780">Inbound call</text>
+
+  <!-- Channel: Booking.com -->
+  <rect x="24" y="164" width="130" height="52" rx="8" fill="white" stroke="#E8E4DC" stroke-width="1.5"/>
+  <rect x="36" y="176" width="20" height="20" rx="10" fill="#003580" fill-opacity="0.1"/>
+  <text x="46" y="190" font-family="system-ui, sans-serif" font-size="9" font-weight="700" fill="#003580" text-anchor="middle">B.</text>
+  <text x="64" y="184" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#1A1814">Booking.com</text>
+  <text x="64" y="198" font-family="system-ui, sans-serif" font-size="9" fill="#8C8780">OTA message</text>
+
+  <!-- Channel: Email -->
+  <rect x="24" y="288" width="130" height="52" rx="8" fill="white" stroke="#E8E4DC" stroke-width="1.5"/>
+  <rect x="36" y="300" width="20" height="20" rx="10" fill="#B8A060" fill-opacity="0.1"/>
+  <text x="46" y="314" font-family="system-ui, sans-serif" font-size="10" fill="#8A6A20" text-anchor="middle">✉</text>
+  <text x="64" y="308" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#1A1814">Email</text>
+  <text x="64" y="322" font-family="system-ui, sans-serif" font-size="9" fill="#8C8780">Direct enquiry</text>
+
+  <!-- Arrows -->
+  <line x1="156" y1="66" x2="192" y2="140" stroke="#E8E4DC" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <line x1="156" y1="190" x2="192" y2="190" stroke="#E8E4DC" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <line x1="156" y1="314" x2="192" y2="240" stroke="#E8E4DC" stroke-width="1.5" stroke-dasharray="4 3"/>
+
+  <!-- Central booking card -->
+  <rect x="192" y="104" width="168" height="172" rx="10" fill="white" stroke="#B8A060" stroke-width="1.5" stroke-opacity="0.5"/>
+  <rect x="204" y="116" width="80" height="18" rx="9" fill="#16a34a" fill-opacity="0.1"/>
+  <text x="244" y="128" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#16a34a" text-anchor="middle">✓ Confirmed</text>
+  <text x="210" y="152" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#1A1814">The Harbour Hotel</text>
+  <text x="210" y="167" font-family="system-ui, sans-serif" font-size="9.5" fill="#8C8780">Aug 14 → Aug 17 · 3 nights</text>
+  <line x1="210" y1="178" x2="348" y2="178" stroke="#E8E4DC" stroke-width="1"/>
+  <text x="210" y="194" font-family="system-ui, sans-serif" font-size="9" fill="#8C8780">Rate</text>
+  <text x="210" y="208" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#1A1814">£149 / night</text>
+  <text x="295" y="194" font-family="system-ui, sans-serif" font-size="9" fill="#8C8780">Room</text>
+  <text x="295" y="208" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#1A1814">Twin Deluxe</text>
+  <text x="210" y="232" font-family="system-ui, sans-serif" font-size="8.5" fill="#B0ABA4">via Booking.com · ref #HH-2814</text>
+  <text x="210" y="250" font-family="system-ui, sans-serif" font-size="8.5" fill="#B0ABA4">Handled within policy</text>
+
+  <!-- Action log card -->
+  <rect x="376" y="104" width="120" height="172" rx="10" fill="white" stroke="#E8E4DC" stroke-width="1.5"/>
+  <text x="388" y="124" font-family="system-ui, sans-serif" font-size="8.5" font-weight="600" fill="#8C8780" letter-spacing="0.05em">ACTION LOG</text>
+  <line x1="388" y1="130" x2="484" y2="130" stroke="#E8E4DC" stroke-width="1"/>
+  <text x="388" y="148" font-family="system-ui, sans-serif" font-size="8.5" fill="#1A1814">Availability</text>
+  <text x="388" y="159" font-family="system-ui, sans-serif" font-size="8" fill="#8C8780">Quoted</text>
+  <rect x="388" y="168" width="40" height="12" rx="6" fill="#16a34a" fill-opacity="0.1"/>
+  <text x="408" y="177" font-family="system-ui, sans-serif" font-size="7.5" fill="#16a34a" text-anchor="middle">Done</text>
+  <line x1="388" y1="185" x2="484" y2="185" stroke="#F0EDE8" stroke-width="1"/>
+  <text x="388" y="200" font-family="system-ui, sans-serif" font-size="8.5" fill="#1A1814">Date change</text>
+  <text x="388" y="211" font-family="system-ui, sans-serif" font-size="8" fill="#8C8780">Processed</text>
+  <rect x="388" y="220" width="40" height="12" rx="6" fill="#16a34a" fill-opacity="0.1"/>
+  <text x="408" y="229" font-family="system-ui, sans-serif" font-size="7.5" fill="#16a34a" text-anchor="middle">Done</text>
+  <line x1="388" y1="237" x2="484" y2="237" stroke="#F0EDE8" stroke-width="1"/>
+  <text x="388" y="252" font-family="system-ui, sans-serif" font-size="8.5" fill="#1A1814">Group enquiry</text>
+  <text x="388" y="263" font-family="system-ui, sans-serif" font-size="8" fill="#8C8780">Escalated</text>
+  <rect x="388" y="268" width="48" height="12" rx="6" fill="#B45309" fill-opacity="0.1"/>
+  <text x="412" y="277" font-family="system-ui, sans-serif" font-size="7.5" fill="#B45309" text-anchor="middle">Escalated</text>
+
+  <!-- Stats row -->
+  <rect x="24" y="316" width="472" height="48" rx="8" fill="white" stroke="#E8E4DC" stroke-width="1.5"/>
+  <text x="80" y="336" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#1A1814" text-anchor="middle">24/7</text>
+  <text x="80" y="352" font-family="system-ui, sans-serif" font-size="8.5" fill="#8C8780" text-anchor="middle">Coverage</text>
+  <line x1="160" y1="324" x2="160" y2="356" stroke="#E8E4DC" stroke-width="1"/>
+  <text x="240" y="336" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#1A1814" text-anchor="middle">Phone · OTA · Email</text>
+  <text x="240" y="352" font-family="system-ui, sans-serif" font-size="8.5" fill="#8C8780" text-anchor="middle">Channels handled</text>
+  <line x1="360" y1="324" x2="360" y2="356" stroke="#E8E4DC" stroke-width="1"/>
+  <text x="430" y="336" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#B8A060" text-anchor="middle">Your brief</text>
+  <text x="430" y="352" font-family="system-ui, sans-serif" font-size="8.5" fill="#8C8780" text-anchor="middle">Every action within policy</text>
+</svg>

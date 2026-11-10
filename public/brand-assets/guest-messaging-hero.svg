@@ -1,0 +1,67 @@
+<svg viewBox="0 0 520 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="520" height="380" fill="#F7F5F0" rx="12"/>
+
+  <!-- SMS card -->
+  <rect x="24" y="28" width="220" height="72" rx="8" fill="white" stroke="#E8E4DC" stroke-width="1.5"/>
+  <rect x="36" y="40" width="36" height="16" rx="8" fill="#16a34a" fill-opacity="0.1"/>
+  <text x="54" y="51" font-family="system-ui, sans-serif" font-size="8.5" font-weight="600" fill="#16a34a" text-anchor="middle">SMS</text>
+  <text x="234" y="51" font-family="system-ui, sans-serif" font-size="8.5" fill="#B0ABA4" text-anchor="end">3 min ago</text>
+  <text x="36" y="68" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#1A1814">Can I check in at 11am?</text>
+  <text x="36" y="83" font-family="system-ui, sans-serif" font-size="9.5" fill="#8C8780">Arriving early — room ready?</text>
+  <rect x="166" y="78" width="68" height="14" rx="7" fill="#16a34a" fill-opacity="0.1"/>
+  <text x="200" y="88" font-family="system-ui, sans-serif" font-size="8" font-weight="600" fill="#16a34a" text-anchor="middle">✓ Confirmed</text>
+
+  <!-- WhatsApp card -->
+  <rect x="276" y="28" width="220" height="72" rx="8" fill="white" stroke="#E8E4DC" stroke-width="1.5"/>
+  <rect x="288" y="40" width="52" height="16" rx="8" fill="#25D366" fill-opacity="0.1"/>
+  <text x="314" y="51" font-family="system-ui, sans-serif" font-size="8.5" font-weight="600" fill="#128C7E" text-anchor="middle">WhatsApp</text>
+  <text x="486" y="51" font-family="system-ui, sans-serif" font-size="8.5" fill="#B0ABA4" text-anchor="end">9 min ago</text>
+  <text x="288" y="68" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#1A1814">Where is the parking?</text>
+  <text x="288" y="83" font-family="system-ui, sans-serif" font-size="9.5" fill="#8C8780">Arriving by car this evening</text>
+  <rect x="418" y="78" width="68" height="14" rx="7" fill="#16a34a" fill-opacity="0.1"/>
+  <text x="452" y="88" font-family="system-ui, sans-serif" font-size="8" font-weight="600" fill="#16a34a" text-anchor="middle">✓ Replied</text>
+
+  <!-- Email card -->
+  <rect x="24" y="148" width="220" height="72" rx="8" fill="white" stroke="#E8E4DC" stroke-width="1.5"/>
+  <rect x="36" y="160" width="36" height="16" rx="8" fill="#B8A060" fill-opacity="0.12"/>
+  <text x="54" y="171" font-family="system-ui, sans-serif" font-size="8.5" font-weight="600" fill="#8A6A20" text-anchor="middle">Email</text>
+  <text x="234" y="171" font-family="system-ui, sans-serif" font-size="8.5" fill="#B0ABA4" text-anchor="end">22 min ago</text>
+  <text x="36" y="188" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#1A1814">Late check-out — 1pm possible?</text>
+  <text x="36" y="203" font-family="system-ui, sans-serif" font-size="9.5" fill="#8C8780">Checking out Sunday morning</text>
+  <rect x="166" y="198" width="68" height="14" rx="7" fill="#16a34a" fill-opacity="0.1"/>
+  <text x="200" y="208" font-family="system-ui, sans-serif" font-size="8" font-weight="600" fill="#16a34a" text-anchor="middle">✓ Confirmed</text>
+
+  <!-- Direct message card -->
+  <rect x="276" y="148" width="220" height="72" rx="8" fill="white" stroke="#E8E4DC" stroke-width="1.5"/>
+  <rect x="288" y="160" width="44" height="16" rx="8" fill="#6366f1" fill-opacity="0.08"/>
+  <text x="310" y="171" font-family="system-ui, sans-serif" font-size="8.5" font-weight="600" fill="#4338ca" text-anchor="middle">Direct</text>
+  <text x="486" y="171" font-family="system-ui, sans-serif" font-size="8.5" fill="#B0ABA4" text-anchor="end">35 min ago</text>
+  <text x="288" y="188" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#1A1814">AC not working in room 14</text>
+  <text x="288" y="203" font-family="system-ui, sans-serif" font-size="9.5" fill="#8C8780">Could someone check please?</text>
+  <rect x="398" y="198" width="78" height="14" rx="7" fill="#B45309" fill-opacity="0.08"/>
+  <text x="437" y="208" font-family="system-ui, sans-serif" font-size="8" font-weight="600" fill="#B45309" text-anchor="middle">↑ Escalated</text>
+
+  <!-- Divider -->
+  <line x1="24" y1="244" x2="496" y2="244" stroke="#E8E4DC" stroke-width="1"/>
+
+  <!-- Property brief card -->
+  <rect x="24" y="260" width="224" height="96" rx="8" fill="white" stroke="#E8E4DC" stroke-width="1.5"/>
+  <text x="36" y="278" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#8C8780" letter-spacing="0.05em">PROPERTY BRIEF</text>
+  <text x="36" y="296" font-family="system-ui, sans-serif" font-size="9.5" fill="#1A1814">Check-in: 3pm · Check-out: 11am</text>
+  <text x="36" y="311" font-family="system-ui, sans-serif" font-size="9.5" fill="#1A1814">Late C/O: 1pm on request</text>
+  <text x="36" y="326" font-family="system-ui, sans-serif" font-size="9.5" fill="#1A1814">Parking: rear car park, code 4421</text>
+  <text x="36" y="341" font-family="system-ui, sans-serif" font-size="9.5" fill="#1A1814">Maintenance: call +44 7700 900 123</text>
+
+  <!-- Stats -->
+  <rect x="264" y="260" width="108" height="44" rx="8" fill="white" stroke="#E8E4DC" stroke-width="1.5"/>
+  <text x="318" y="284" font-family="system-ui, sans-serif" font-size="20" font-weight="700" fill="#1A1814" text-anchor="middle">5</text>
+  <text x="318" y="298" font-family="system-ui, sans-serif" font-size="8.5" fill="#8C8780" text-anchor="middle">Channels covered</text>
+
+  <rect x="384" y="260" width="108" height="44" rx="8" fill="#B8A060" fill-opacity="0.08" stroke="#B8A060" stroke-width="1.5" stroke-opacity="0.3"/>
+  <text x="438" y="284" font-family="system-ui, sans-serif" font-size="20" font-weight="700" fill="#8A6A20" text-anchor="middle">24/7</text>
+  <text x="438" y="298" font-family="system-ui, sans-serif" font-size="8.5" fill="#8A6A20" text-anchor="middle">Guest coverage</text>
+
+  <rect x="264" y="312" width="228" height="44" rx="8" fill="white" stroke="#E8E4DC" stroke-width="1.5"/>
+  <text x="378" y="332" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#1A1814" text-anchor="middle">Every reply uses your property brief</text>
+  <text x="378" y="348" font-family="system-ui, sans-serif" font-size="9" fill="#8C8780" text-anchor="middle">Not templates. Real answers.</text>
+</svg>

@@ -401,7 +401,7 @@ export default function OtaInboxManagementPage() {
               Find the right coverage for your OTA inboxes
             </h3>
             <p className="mt-3 text-sm leading-relaxed text-ink-soft">
-              Tell us which properties, platforms and message volume you manage. We'll recommend the
+              Tell us which properties, platforms and message volume you manage. We&apos;ll recommend the
               right service arrangement and confirm what access and permissions are needed.
             </p>
             <div className="mt-5">

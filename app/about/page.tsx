@@ -163,7 +163,7 @@ export default function AboutPage() {
           </p>
           <h2 className="text-2xl font-medium text-ink">Meet the team.</h2>
           <p className="mt-3 max-w-xl text-sm leading-relaxed text-ink-soft">
-            Guest Squad is operated by Raptric LLC. Photographs will be added here shortly.
+            Guest Squad is operated by Raptric LLC.
           </p>
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {TEAM.map((member) => (
@@ -171,13 +171,13 @@ export default function AboutPage() {
                 key={member.name}
                 className="flex flex-col rounded-lg border border-line bg-paper overflow-hidden"
               >
-                <div className="relative aspect-[4/3] w-full bg-surface">
+                <div className="relative aspect-[3/4] w-full bg-surface">
                   {member.photo ? (
                     <Image
                       src={member.photo}
                       alt={member.name}
                       fill
-                      className="object-cover object-top"
+                      className="object-cover object-[center_15%]"
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     />
                   ) : (

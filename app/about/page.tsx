@@ -1,4 +1,5 @@
 ﻿import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/site/breadcrumbs";
 import { JsonLd } from "@/components/site/json-ld";
@@ -18,12 +19,13 @@ const TEAM = [
     name: "Usman Khalid",
     title: "Founder",
     bio: "A seasoned BPO and technology leader.",
+    photo: "/team/usman-khalid.jpg",
   },
-  { name: "Khadija Khalid", title: "Co-Founder", bio: null },
-  { name: "Mary", title: "Operations Lead", bio: null },
-  { name: "Imran Khalid", title: "Guest Service Officer", bio: null },
-  { name: "Azadar", title: "Business Development & Sales", bio: null },
-  { name: "Maaz", title: "Hospitality Specialist", bio: null },
+  { name: "Khadija Khalid", title: "Co-Founder", bio: null, photo: "/team/khadija-khalid.jpg" },
+  { name: "Mary", title: "Operations Lead", bio: null, photo: "/team/mary-avatar.jpg" },
+  { name: "Imran Khalid", title: "Guest Service Officer", bio: null, photo: "/team/imran-khalid.jpg" },
+  { name: "Azadar", title: "Business Development & Sales", bio: null, photo: null },
+  { name: "Maaz", title: "Hospitality Specialist", bio: null, photo: null },
 ];
 
 const HOW_WE_WORK = [
@@ -167,10 +169,26 @@ export default function AboutPage() {
             {TEAM.map((member) => (
               <div
                 key={member.name}
-                className="flex flex-col rounded-lg border border-line bg-paper"
+                className="flex flex-col rounded-lg border border-line bg-paper overflow-hidden"
               >
-                {/* photo placeholder */}
-                <div className="aspect-[4/3] w-full rounded-t-lg bg-surface" />
+                <div className="relative aspect-[4/3] w-full bg-surface">
+                  {member.photo ? (
+                    <Image
+                      src={member.photo}
+                      alt={member.name}
+                      fill
+                      className="object-cover object-top"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 flex items-center justify-center bg-surface">
+                      <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="32" cy="24" r="14" fill="#C7A24A" fillOpacity="0.25"/>
+                        <path d="M8 56c0-13.255 10.745-24 24-24s24 10.745 24 24" stroke="#C7A24A" strokeOpacity="0.4" strokeWidth="2" fill="none"/>
+                      </svg>
+                    </div>
+                  )}
+                </div>
                 <div className="p-5">
                   <p className="text-sm font-medium text-ink">{member.name}</p>
                   <p className="mt-0.5 text-xs text-gold-dark">{member.title}</p>

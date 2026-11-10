@@ -241,7 +241,7 @@ export default function OtaInboxManagementPage() {
         <SectionHeading
           eyebrow="OTA inbox management within your service"
           title="Same capability. Different operating context."
-          body="The platforms and permissions are the same. What changes is the property structure, the brief each agent works from, and how OTA coverage fits alongside other responsibilities."
+          description="The platforms and permissions are the same. What changes is the property structure, the brief each agent works from, and how OTA coverage fits alongside other responsibilities."
         />
         <div className="mt-10 grid gap-5 md:grid-cols-3">
           {SERVICES.map((svc) => (

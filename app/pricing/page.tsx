@@ -1,50 +1,178 @@
 import type { Metadata } from "next";
-import { Check } from "lucide-react";
 import Link from "next/link";
-import { PageHero } from "@/components/site/page-hero";
-import { Section, SectionHeading } from "@/components/site/section";
-import { CtaSection } from "@/components/site/cta-section";
 import { Breadcrumbs } from "@/components/site/breadcrumbs";
 import { JsonLd } from "@/components/site/json-ld";
-import { buildMetadata, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/seo";
 import { CoverageReviewButton } from "@/components/site/coverage-review-button";
 import { FaqAccordion } from "@/components/site/faq-accordion";
+import { buildMetadata, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/seo";
+import { SITE } from "@/lib/site-data";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Hotel Guest Support Pricing",
+  title: "Hotel & Vacation Rental Support Pricing",
   description:
-    "Guest Squad pricing is scoped to your channels, interaction volume and coverage hours. Start with a short review call and get a custom quote.",
+    "Explore starting prices for Guest Squad hotel answering, central reservations, and vacation rental answering. Compare service scope and request a tailored quote.",
   path: "/pricing",
 });
 
+// ─── Pricing data ────────────────────────────────────────────────────────────
+// NOTE: Included scope marked [PLACEHOLDER] requires confirmation from the
+// approved pricing matrix before this page is published publicly.
+
+const SERVICES = [
+  {
+    id: "hotel-answering-service",
+    name: "Hotel Answering Service",
+    href: "/services/hotel-answering-service",
+    price: "From US$149",
+    period: "/month",
+    description:
+      "Human phone answering for independent hotels, with guest inquiries handled using your property's approved information and escalation procedures.",
+    included: [
+      "Live phone answering during agreed coverage hours",
+      "Calls handled using your approved property information",
+      "Reservation inquiries",
+      "Late-arrival and access assistance",
+      "Guest-request routing",
+      "After-hours or overflow coverage",
+      "Guest messaging and OTA inbox support",
+      "Escalation to your designated contact per agreed procedure",
+      "Call logging and handover notes",
+      "Monthly activity summary",
+    ],
+    cta: "Request Your Hotel Quote",
+    ctaHref: "/contact?service=hotel-answering-service",
+  },
+  {
+    id: "central-reservations",
+    name: "Central Reservations Desk",
+    href: "/services/central-reservations",
+    price: "From US$299",
+    period: "/month",
+    description:
+      "Coordinated reservation support across your properties, following each location's approved availability, rates, booking rules, and permissions.",
+    included: [
+      "Reservation inquiry handling across two properties",
+      "Rate and availability information using your approved data",
+      "Direct booking assistance",
+      "Approved changes and cancellations",
+      "Booking-related email handling",
+      "PMS workflows",
+      "Reservation follow-up",
+      "Routing of bookings and modifications per agreed permissions",
+      "Booking-related escalation and handover",
+      "Activity reporting across properties",
+    ],
+    cta: "Request Your Reservations Quote",
+    ctaHref: "/contact?service=central-reservations",
+    featured: true,
+  },
+  {
+    id: "vacation-rental-answering-service",
+    name: "Vacation Rental Answering Service",
+    href: "/services/vacation-rental-answering-service",
+    price: "From US$99",
+    period: "/month",
+    description:
+      "Guest communication support for vacation rentals, following each listing's approved instructions, house rules, and escalation contacts.",
+    included: [
+      "OTA message handling for one listing",
+      "Airbnb, Vrbo, and other agreed messaging channels",
+      "Guest inquiry responses using your approved house rules",
+      "Arrival and access assistance",
+      "Guest inquiries",
+      "Cleaner and maintenance communication",
+      "After-hours coverage",
+      "Live phone answering",
+      "Escalation to your designated contact",
+      "Activity summary",
+    ],
+    cta: "Request Your Vacation Rental Quote",
+    ctaHref: "/contact?service=vacation-rental-answering-service",
+  },
+];
+
+const PRICING_FACTORS = [
+  {
+    title: "Properties and portfolio",
+    body: "Property count and approximate room or listing count help establish the operating requirements.",
+  },
+  {
+    title: "Coverage hours",
+    body: "Overflow, after-hours, extended-hour, and round-the-clock coverage require different arrangements.",
+  },
+  {
+    title: "Interaction volume",
+    body: "Calls, conversations, reservation inquiries, and follow-up contribute to workload under the agreed counting rules.",
+  },
+  {
+    title: "Channels and handling requirements",
+    body: "Phone, email, OTA messaging, approved booking actions, and coordination affect the required support.",
+  },
+];
+
+const ENGAGEMENT_STEPS = [
+  {
+    n: "01",
+    title: "Share your requirements",
+    body: "Tell us your properties, channels, coverage hours, and estimated workload.",
+  },
+  {
+    n: "02",
+    title: "Receive a scoped proposal",
+    body: "We provide inclusions, allowances, permissions, reporting, and pricing specific to your operation.",
+  },
+  {
+    n: "03",
+    title: "Prepare for coverage",
+    body: "Agree property instructions, system access, and escalation contacts before coverage begins.",
+  },
+  {
+    n: "04",
+    title: "Review delivery",
+    body: "Monitor activity and adjust scope when your requirements change.",
+  },
+];
+
 const FAQS = [
   {
-    q: "Why don't you list exact prices?",
-    a: "Pricing depends on interaction volume, coverage hours, property complexity, and support model fit. A scoped review call is the fastest way to get a quote that reflects your actual operation.",
+    q: "What is included in the starting price?",
+    a: "Each starting price covers the inclusions listed on the card above for the reference configuration shown. Final inclusions, allowances, and any conditions are confirmed in the scoped proposal for your property.",
   },
   {
-    q: "What affects Guest Squad pricing the most?",
-    a: "Interaction volume is the biggest factor: the number of calls, messages, and OTA interactions your property needs covered each month. Coverage hours, property complexity, and whether shared or dedicated support is the right fit also shape the final price.",
+    q: "How are calls, conversations, and messages counted?",
+    a: "The counting rules for your workload allowance are set out in your proposal. What counts varies by service and handling type. We confirm this clearly before coverage begins.",
   },
   {
-    q: "Is Guest Squad pricing based per property?",
-    a: "Yes. Guest Squad pricing is scoped per property or portfolio based on the channels covered, interaction volume, coverage hours, and operational complexity. A quote reflects your actual operation rather than a fixed tier.",
+    q: "What happens if we exceed the agreed allowance?",
+    a: "Additional work is handled according to the charges or scope-review process stated in your proposal. We do not apply unexpected charges without advance notice.",
   },
   {
-    q: "Can we start with a pilot before committing to monthly coverage?",
-    a: "Yes. Qualified properties can start with a 2-week pilot before moving into month-to-month coverage. This gives both teams time to validate fit, guest communication workflows, escalation rules, and channel coverage before ongoing service continues.",
+    q: "Can one vacation rental listing use the service?",
+    a: "The Vacation Rental Answering Service shows a starting configuration of one listing. Whether a single-listing engagement is available for your property is confirmed during the quotation process.",
   },
   {
-    q: "Is there a setup fee?",
-    a: "No. There is no setup fee or onboarding fee. Property briefing, agent training, system access, and go-live testing are included as part of getting coverage started.",
+    q: "Does hotel pricing depend on room count?",
+    a: "Room count is one input into the operating requirements, but it is not the sole factor. Interaction volume, coverage hours, and handling complexity also shape the quote.",
   },
   {
-    q: "Is there a contract?",
-    a: "Plans are month-to-month with 30 days notice to cancel. We would rather earn your renewal through performance than lock you in.",
+    q: "Can one hotel request dedicated reservation support?",
+    a: "Yes. If your volume or operational requirements suggest dedicated rather than shared support, that is discussed as part of the scoped proposal.",
   },
   {
-    q: "Can coverage expand later?",
-    a: "Yes. Most properties start with after-hours coverage or OTA inbox management, then add channels or extend hours once they see the first scope working.",
+    q: "Can we include additional properties?",
+    a: "Yes. Additional properties beyond the reference configuration are priced as part of the quotation based on the added workload and coverage requirements.",
+  },
+  {
+    q: "Is 24/7 coverage included or quoted separately?",
+    a: "The starting prices apply to defined coverage hours. Round-the-clock coverage is available and priced separately based on your volume and handling requirements.",
+  },
+  {
+    q: "Are there onboarding fees?",
+    a: "No. Property briefing, agent preparation, and go-live testing are included as part of getting coverage started.",
+  },
+  {
+    q: "What are the cancellation terms?",
+    a: "Plans are month-to-month with 30 days' notice to cancel.",
   },
 ];
 
@@ -54,274 +182,255 @@ export default function PricingPage() {
       <JsonLd
         data={[
           webPageSchema({
-            name: "Hotel Guest Support Pricing",
-            description: "Guest Squad pricing is scoped to your channels, interaction volume and coverage hours. Start with a short review call and get a custom quote.",
+            name: "Hotel & Vacation Rental Support Pricing | Guest Squad",
+            description:
+              "Explore starting prices for Guest Squad hotel answering, central reservations, and vacation rental answering. Compare service scope and request a tailored quote.",
             path: "/pricing",
-            primaryImageUrl: "https://guestsquad.com/brand-assets/og-image.jpg",
-            primaryImageAlt: "Guest Squad pricing — hotel guest operations coverage plans",
-            about: { "@id": "https://guestsquad.com/#organization" },
-            audienceTypes: ["Independent Hotel","Boutique Hotel","Inn","Resort","Serviced Apartment","Aparthotel","Airbnb Host","Vrbo Host","Short-Term Rental Operator","Vacation Rental Operator","Vacation Rental Property Manager"],
+            primaryImageUrl: `${SITE.url}/brand-assets/guestsquad-favicon-official.svg`,
+            primaryImageAlt: "Guest Squad pricing — hotel and vacation rental support",
+            about: { "@id": `${SITE.url}/#organization` },
+            audienceTypes: [
+              "Independent Hotel",
+              "Boutique Hotel",
+              "Vacation Rental Operator",
+              "Short-Term Rental Operator",
+              "Serviced Apartment",
+            ],
             mentions: [
-              { "@type": "Organization", "name": "Booking.com" },
-              { "@type": "Organization", "name": "Expedia" },
-              { "@type": "Organization", "name": "Airbnb" },
-              { "@type": "Accommodation", "name": "Hotel" },
-              { "@type": "Accommodation", "name": "Boutique Hotel" },
-              { "@type": "Accommodation", "name": "Serviced Apartment" },
-              { "@type": "Accommodation", "name": "Vacation Rental" },
-              { "@type": "Accommodation", "name": "Resort" },
-              { "@type": "Thing", "name": "Hotel Answering Service" },
-              { "@type": "Thing", "name": "Hotel Guest Operations" },
-              { "@type": "Thing", "name": "OTA Inbox Management" },
-              { "@type": "Thing", "name": "After-Hours Hotel Support" },
-              { "@type": "Thing", "name": "Hotel Front Desk Coverage" },
+              { "@type": "Thing", name: "Hotel Answering Service" },
+              { "@type": "Thing", name: "Central Reservations Desk" },
+              { "@type": "Thing", name: "Vacation Rental Answering Service" },
             ],
           }),
-          breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Pricing", path: "/pricing" }]),
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Pricing", path: "/pricing" },
+          ]),
           faqSchema(FAQS),
         ]}
       />
-      <Breadcrumbs items={[{ name: "Home", path: "/" }, { name: "Pricing", path: "/pricing" }]} />
 
-      {/* Section 1 — Hero */}
-      <PageHero
-        eyebrow="Pricing"
-        title="Pricing built around your property's coverage needs"
-        description="Guest Squad pricing is scoped around your actual guest communication load: call volume, OTA message volume, coverage hours, and how your operation is set up. No fixed tiers. No guessing at a plan before we know your property."
-        primaryCta="Review My Coverage Needs"
-        primaryHref="/contact"
-        secondaryCta="See What Affects Pricing"
-        secondaryHref="#what-affects-pricing"
+      <Breadcrumbs
+        items={[
+          { name: "Home", path: "/" },
+          { name: "Pricing", path: "/pricing" },
+        ]}
       />
 
-      {/* Hero helper line */}
-      <div className="border-b border-line bg-paper">
-        <div className="container py-4 text-center">
-          <p className="mx-auto max-w-2xl text-sm leading-relaxed text-ink-soft">
-            We scope the level of coverage your property actually needs without overbuilding or under-covering it.
+      {/* ── 1. HERO ─────────────────────────────────────────────────────────── */}
+      <section className="border-b border-line bg-paper">
+        <div className="container py-16 md:py-20">
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-gold-dark">
+            Pricing
           </p>
-        </div>
-      </div>
-
-      {/* Section 2 — Intro strip */}
-      <div className="border-b border-line bg-surface">
-        <div className="container py-8">
-          <p className="mx-auto max-w-3xl text-sm leading-relaxed text-ink-soft">
-            Guest Squad pricing is scoped per property based on interaction volume, coverage hours, operational complexity, and delivery fit.
+          <h1 className="max-w-2xl text-4xl font-medium leading-[1.08] tracking-tight text-ink md:text-5xl">
+            Guest Support Pricing for Hotels &amp; Vacation Rentals
+          </h1>
+          <p className="mt-5 max-w-2xl text-lg leading-relaxed text-ink-soft">
+            Explore starting prices for hotel answering, central reservations, and vacation rental
+            answering. Choose the support your operation needs, then request a quotation based on
+            your coverage hours, channels, and workload.
           </p>
-        </div>
-      </div>
-
-      {/* Section 3 — What's Included */}
-      <Section surface>
-        <SectionHeading
-          eyebrow="What's Included"
-          title="Every plan is built around the channels your guests actually use"
-        />
-        <p className="mt-4 max-w-2xl text-sm leading-relaxed text-ink-soft">
-          Every engagement is scoped around your property&rsquo;s guest communication channels, whether you operate a hotel, boutique inn, serviced apartment, or short-term rental. Coverage is built to fit how your guests actually reach you.
-        </p>
-        <ul className="mt-8 grid gap-3 sm:grid-cols-2">
-          {[
-            "Phone answering — reservation and guest calls",
-            "OTA inbox management — Booking.com, Expedia, Airbnb",
-            "SMS and WhatsApp guest messaging",
-            "Email guest communication",
-            "After-hours and overnight coverage",
-            "Escalation handling and on-call routing",
-          ].map((item) => (
-            <li key={item} className="flex items-start gap-3 rounded-lg border border-line bg-paper p-5">
-              <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-gold-dark" />
-              <span className="text-sm leading-relaxed text-ink-soft">{item}</span>
-            </li>
-          ))}
-        </ul>
-        <p className="mt-6 text-sm text-ink-muted">
-          Every property starts with core guest communication coverage. Final scope is confirmed during the review call based on how your guests actually reach you.
-        </p>
-      </Section>
-
-      {/* Section 4 — What Affects Pricing */}
-      <div id="what-affects-pricing">
-        <Section>
-          <SectionHeading eyebrow="Pricing Factors" title="What affects pricing most" />
-          <div className="mt-10 grid gap-6 sm:grid-cols-2">
-            {[
-              {
-                title: "Interaction volume",
-                body: "The number of calls, messages, and OTA guest interactions your property needs covered each month.",
-              },
-              {
-                title: "Coverage hours",
-                body: "Whether you need after-hours support, overflow during peak periods, extended daily coverage, or broader around-the-clock availability.",
-              },
-              {
-                title: "Property complexity",
-                body: "A single-property setup with straightforward operations is scoped differently from a multi-property group or a higher-volume hotel with more coordination needs.",
-              },
-              {
-                title: "Support model fit",
-                body: "Some properties are best served through shared coverage. Others need a more dedicated setup based on volume, continuity, or operational requirements.",
-              },
-            ].map((card) => (
-              <div key={card.title} className="rounded-lg border border-line bg-paper p-6">
-                <h3 className="text-sm font-semibold text-ink">{card.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-ink-soft">{card.body}</p>
-              </div>
-            ))}
-          </div>
-        </Section>
-      </div>
-
-      {/* Section 5 — Coverage Types */}
-      <Section surface>
-        <SectionHeading eyebrow="How Properties Structure Coverage" title="How hotels usually structure coverage" />
-        <div className="mt-10 grid gap-6 sm:grid-cols-2">
-          {[
-            {
-              title: "After-hours coverage",
-              body: "Evenings, weekends, and overnight. Covers the hours when missed calls cost the most.",
-            },
-            {
-              title: "Overflow coverage",
-              body: "Backup during check-in peaks and high-volume periods when your team is at capacity.",
-            },
-            {
-              title: "Extended coverage",
-              body: "Broader daily coverage across calls, OTA inboxes, and guest messaging channels.",
-            },
-            {
-              title: "Custom coverage",
-              body: "For multi-property operators, higher-volume hotels, or operations with more complex coordination requirements.",
-            },
-          ].map((card) => (
-            <div key={card.title} className="rounded-lg border border-line bg-paper p-6">
-              <h3 className="text-sm font-semibold text-ink">{card.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-ink-soft">{card.body}</p>
-            </div>
-          ))}
-        </div>
-        <p className="mt-6 text-sm text-ink-muted">
-          These are common coverage patterns, not fixed plan tiers. Most properties start with one pattern and refine coverage as needs become clearer.
-        </p>
-        <div className="mt-8 flex justify-center">
-          <CoverageReviewButton variant="gold" size="default" ctaLocation="pricing_coverage_types">
-            Review My Coverage Needs
-          </CoverageReviewButton>
-        </div>
-      </Section>
-
-      {/* Section 6 — Coverage Fit */}
-      <Section>
-        <div className="max-w-2xl">
-          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.14em] text-gold-dark">Coverage Fit</p>
-          <h2 className="text-2xl font-medium text-ink">Not every property needs the same support model</h2>
-          <p className="mt-4 text-sm leading-relaxed text-ink-soft">
-            Lower-volume properties are often a fit for efficient shared coverage, while busier or more operationally complex hotels may need a more dedicated setup. We determine the right fit during the review so coverage matches your volume, continuity needs, and workflow complexity.
-          </p>
-          <p className="mt-4 text-sm text-ink-muted">
-            This affects both how coverage is structured and how it is priced.
-          </p>
-        </div>
-      </Section>
-
-      {/* Section 7 — ROI Bridge */}
-      <div className="border-y border-line bg-surface">
-        <div className="container py-12">
-          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.14em] text-gold-dark">Why This Matters</p>
-          <h2 className="max-w-2xl text-xl font-medium text-ink">
-            The right question is not just what coverage costs
-          </h2>
-          <p className="mt-4 max-w-2xl text-sm leading-relaxed text-ink-soft">
-            Missed reservation calls, slow OTA replies, and uncovered overnight hours have a cost. The review call maps that gap against the coverage scope before you commit to anything.
-          </p>
-        </div>
-      </div>
-
-      {/* Section 8 — How Pricing Works */}
-      <Section surface>
-        <SectionHeading eyebrow="How It Works" title="How pricing works" />
-        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {[
-            { n: "01", title: "We review your current call and OTA message flow" },
-            { n: "02", title: "We identify where guest communication is being missed or delayed" },
-            { n: "03", title: "We recommend the right coverage structure" },
-            { n: "04", title: "We provide a scoped quote based on fit" },
-          ].map((step) => (
-            <div key={step.n} className="flex flex-col gap-2">
-              <span className="text-2xl font-semibold tabular-nums text-gold-dark/30">{step.n}</span>
-              <p className="text-sm font-medium text-ink">{step.title}</p>
-            </div>
-          ))}
-        </div>
-      </Section>
-
-      {/* Slim dark CTA before FAQ */}
-      <div className="bg-ink">
-        <div className="container flex flex-col items-start justify-between gap-5 py-8 sm:flex-row sm:items-center">
-          <div>
-            <p className="text-base font-medium text-paper">You do not need to know the right plan before reaching out. Most properties do not.</p>
-            <p className="mt-1 text-sm text-paper/60">Qualified properties can move into a 2-week pilot after review.</p>
-          </div>
-          <div className="flex shrink-0 flex-col gap-3 sm:flex-row">
-            <CoverageReviewButton variant="gold" size="sm" ctaLocation="pricing_pre_faq">
-              Review My Coverage Needs
+          <div className="mt-8 flex flex-wrap gap-3">
+            <a
+              href="#pricing-cards"
+              className="inline-flex items-center rounded-md bg-ink px-5 py-2.5 text-sm font-medium text-paper transition hover:bg-ink/90"
+            >
+              View Starting Prices
+            </a>
+            <CoverageReviewButton variant="outline" size="default" ctaLocation="pricing_hero">
+              Discuss Your Requirements
             </CoverageReviewButton>
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Section 9 — FAQ */}
-      <Section className="bg-[#F7F5F2]">
-        <SectionHeading eyebrow="Questions" title="Pricing questions, answered clearly." />
-        <div className="mt-8">
-          <FaqAccordion items={FAQS} />
+      {/* ── 2. PRICING CARDS ────────────────────────────────────────────────── */}
+      <section id="pricing-cards" className="border-b border-line bg-surface">
+        <div className="container py-14">
+          <div className="grid gap-6 lg:grid-cols-3">
+            {SERVICES.map((svc) => (
+              <div
+                key={svc.id}
+                className={`flex flex-col rounded-lg border bg-paper ${
+                  svc.featured ? "border-gold/40 shadow-sm" : "border-line"
+                }`}
+              >
+                <div className="p-7">
+                  {/* Service name */}
+                  <Link
+                    href={svc.href}
+                    className="text-base font-semibold text-ink hover:text-gold-dark hover:underline underline-offset-4"
+                  >
+                    {svc.name}
+                  </Link>
+
+                  {/* Price */}
+                  <div className="mt-4 flex items-baseline gap-1">
+                    <span className="text-3xl font-semibold tracking-tight text-ink">
+                      {svc.price}*
+                    </span>
+                    <span className="text-sm text-ink-muted">{svc.period}</span>
+                  </div>
+                  <p className="mt-1 text-xs text-ink-muted italic">*Subject to scope confirmation</p>
+
+                  {/* Description */}
+                  <p className="mt-4 text-sm leading-relaxed text-ink-soft">{svc.description}</p>
+
+                  {/* Included */}
+                  <div className="mt-6">
+                    <p className="text-xs font-semibold uppercase tracking-[0.14em] text-ink">
+                      Included at this starting price
+                    </p>
+                    <ul className="mt-3 space-y-2">
+                      {svc.included.map((item) => (
+                        <li key={item} className="flex items-start gap-2 text-sm text-ink-soft">
+                          <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-gold-dark" />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                </div>
+
+                {/* CTA */}
+                <div className="mt-auto border-t border-line p-5">
+                  <Link
+                    href={svc.ctaHref}
+                    className={`block w-full rounded-md px-4 py-2.5 text-center text-sm font-medium transition ${
+                      svc.featured
+                        ? "bg-gold text-white hover:bg-gold-dark"
+                        : "bg-ink text-paper hover:bg-ink/90"
+                    }`}
+                  >
+                    {svc.cta}
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Footnote */}
+          <div className="mt-8 rounded-lg border border-line bg-paper px-6 py-4">
+            <p className="text-xs leading-relaxed text-ink-muted">
+              <span className="font-medium text-ink">* Starting prices</span> apply to the
+              shared-support configurations shown above. Your final monthly fee is confirmed in the
+              scoped proposal and depends on agreed coverage hours, channels, workload allowance,
+              and handling requirements. Work outside the agreed allowance is charged at the rate
+              stated in your proposal.
+            </p>
+          </div>
         </div>
-      </Section>
+      </section>
 
-      {/* SEO link strip */}
-      <div className="border-t border-line bg-surface">
-        <div className="container py-8 text-center">
-          <p className="text-sm text-ink-soft">
-            Not sure where to start?{" "}
-            <Link href="/services" className="text-gold-dark underline underline-offset-4 hover:text-gold">Browse all services</Link>
-            {" "}or see how we compare to{" "}
-            <Link href="/resources/hotel-answering-service-vs-ai-voice" className="text-gold-dark underline underline-offset-4 hover:text-gold">hotel answering service vs AI voice agent</Link>
-            {" "}and{" "}
-            <Link href="/resources/hotel-answering-service-vs-call-center" className="text-gold-dark underline underline-offset-4 hover:text-gold">hotel answering service vs call center</Link>.
+      {/* ── 3. WHAT DETERMINES YOUR PRICE ───────────────────────────────────── */}
+      <section className="border-b border-line bg-paper">
+        <div className="container py-14">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-gold-dark">
+            Pricing factors
           </p>
-          <p className="mt-3 text-sm text-ink-soft">
-            Qualified properties can start with a 2-week pilot before moving into month-to-month coverage.{" "}
-            <Link href="/pilot" className="text-gold-dark underline underline-offset-4 hover:text-gold">See if you qualify for a 2-week pilot →</Link>
-          </p>
-        </div>
-      </div>
-
-      {/* Micro-proof strip */}
-      <div className="border-t border-line bg-surface">
-        <div className="container py-6">
-          <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
-            {[
-              "Core phone + OTA coverage",
-              "Scoped per property",
-              "2-week pilot for qualified properties",
-              "Month-to-month after pilot",
-            ].map((item) => (
-              <span key={item} className="text-xs font-medium text-ink-soft">
-                <span className="mr-2 text-gold-dark">✓</span>{item}
-              </span>
+          <h2 className="max-w-xl text-2xl font-medium text-ink">
+            What determines your monthly price?
+          </h2>
+          <div className="mt-10 grid gap-5 sm:grid-cols-2">
+            {PRICING_FACTORS.map((f) => (
+              <div key={f.title} className="rounded-lg border border-line bg-surface p-6">
+                <p className="text-sm font-semibold text-ink">{f.title}</p>
+                <p className="mt-2 text-sm leading-relaxed text-ink-soft">{f.body}</p>
+              </div>
             ))}
           </div>
         </div>
-      </div>
+      </section>
 
+      {/* ── 4. HOW THE ENGAGEMENT WORKS ─────────────────────────────────────── */}
+      <section className="border-b border-line bg-surface">
+        <div className="container py-14">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-gold-dark">
+            How it works
+          </p>
+          <h2 className="max-w-xl text-2xl font-medium text-ink">How the engagement works.</h2>
+          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {ENGAGEMENT_STEPS.map((step) => (
+              <div key={step.n} className="rounded-lg border border-line bg-paper p-6">
+                <span className="block text-2xl font-semibold tabular-nums text-gold-dark/30">
+                  {step.n}
+                </span>
+                <p className="mt-3 text-sm font-medium text-ink">{step.title}</p>
+                <p className="mt-1.5 text-sm leading-relaxed text-ink-soft">{step.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-      {/* Section 11 — Final CTA */}
-      <CtaSection
-        title="Get pricing that fits your property, not a generic tier"
-        description="We'll review your interaction volume, coverage hours, property complexity, and operational setup before recommending the right structure and quote."
-        primaryCta="Review My Coverage Needs"
-      />
+      {/* ── 5. FAQS + STICKY CTA ────────────────────────────────────────────── */}
+      <section className="border-b border-line bg-paper">
+        <div className="container py-14">
+          <div className="grid gap-10 lg:grid-cols-[1fr_320px]">
+            <div>
+              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-gold-dark">
+                Questions
+              </p>
+              <h2 className="text-2xl font-medium text-ink">Pricing questions, answered clearly.</h2>
+              <div className="mt-8">
+                <FaqAccordion items={FAQS} />
+              </div>
+            </div>
+
+            {/* Sticky review card */}
+            <div className="rounded-lg border border-line bg-paper p-7 h-fit lg:sticky lg:top-8">
+              <p className="text-xs font-semibold uppercase tracking-[0.15em] text-gold-dark mb-2">
+                Get a quote
+              </p>
+              <h3 className="text-xl font-medium text-ink mb-3">
+                Discuss your requirements
+              </h3>
+              <p className="text-sm leading-relaxed text-ink-soft mb-5">
+                Tell us your property type, required channels, coverage hours, and estimated
+                workload. We will scope the right service and send a detailed proposal.
+              </p>
+              <CoverageReviewButton variant="gold" size="default" ctaLocation="pricing_sticky_cta">
+                Book a Coverage Review
+              </CoverageReviewButton>
+              <p className="mt-5 text-xs text-ink-muted">
+                Useful for the conversation: property type, current coverage hours, typical
+                interaction volume, and any systems your team uses.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── 6. FINAL CTA ────────────────────────────────────────────────────── */}
+      <section className="border-b border-line bg-surface">
+        <div className="container py-14">
+          <div className="mx-auto max-w-xl text-center">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-gold-dark">
+              Get started
+            </p>
+            <h2 className="text-2xl font-medium text-ink">
+              Get a quotation scoped to your property.
+            </h2>
+            <p className="mt-4 text-sm leading-relaxed text-ink-soft">
+              Tell us your property type, required channels, coverage hours, and estimated workload.
+              We will scope the right service and send a detailed proposal.
+            </p>
+            <div className="mt-7 flex flex-wrap justify-center gap-3">
+              <CoverageReviewButton variant="gold" size="default" ctaLocation="pricing_footer_cta">
+                Discuss Your Requirements
+              </CoverageReviewButton>
+              <Link
+                href="/services"
+                className="inline-flex items-center rounded-md border border-line bg-paper px-5 py-2.5 text-sm font-medium text-ink transition hover:border-gold-dark hover:text-gold-dark"
+              >
+                Browse All Services
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

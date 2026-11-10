@@ -8,7 +8,8 @@ export async function POST(req: Request) {
     email,
     companyName,
     propertySize,
-    helpWith,
+    propertyType,
+    coverageOption,
     phone,
     propertyWebsite,
     website, // honeypot
@@ -40,7 +41,6 @@ export async function POST(req: Request) {
     auth: { user: gmailUser, pass: gmailPass },
   });
 
-  const helpList = Array.isArray(helpWith) ? helpWith.join(", ") : (helpWith || "—");
 
   const html = `
     <div style="font-family:sans-serif;max-width:600px;margin:0 auto;color:#1a1a1a">
@@ -58,7 +58,8 @@ export async function POST(req: Request) {
       <h3 style="margin-top:24px;font-size:13px;color:#888;text-transform:uppercase;letter-spacing:0.08em">Property Details</h3>
       <table style="width:100%;border-collapse:collapse;margin-top:10px">
         <tr><td style="padding:9px 0;border-bottom:1px solid #eee;font-weight:600;width:220px">Property Size</td><td style="padding:9px 0;border-bottom:1px solid #eee">${propertySize || "—"}</td></tr>
-        <tr><td style="padding:9px 0;font-weight:600;vertical-align:top">Looking for help with</td><td style="padding:9px 0;white-space:pre-wrap">${helpList}</td></tr>
+        <tr><td style="padding:9px 0;border-bottom:1px solid #eee;font-weight:600">Property Type</td><td style="padding:9px 0;border-bottom:1px solid #eee">${propertyType || "—"}</td></tr>
+        <tr><td style="padding:9px 0;font-weight:600">Coverage Needed</td><td style="padding:9px 0">${coverageOption || "—"}</td></tr>
       </table>
       <h3 style="margin-top:28px;font-size:13px;color:#888;border-top:1px solid #eee;padding-top:16px;text-transform:uppercase;letter-spacing:0.08em">Attribution</h3>
       <table style="width:100%;border-collapse:collapse">

@@ -14,15 +14,23 @@ const PROPERTY_SIZES = [
   "Multiple properties",
 ];
 
-const HELP_OPTIONS = [
-  "After-hours guest support",
-  "Missed / unanswered calls",
-  "Reservation calls",
-  "Front desk overflow",
-  "OTA / guest messaging",
-  "Late check-in & access support",
-  "24/7 guest support",
-  "Reduce front desk workload",
+const PROPERTY_TYPES = [
+  "Independent hotel",
+  "Boutique property",
+  "Resort",
+  "Serviced apartments",
+  "Vacation rental / STR",
+  "Property management company",
+  "Other",
+];
+
+const COVERAGE_OPTIONS = [
+  "After-hours coverage",
+  "Overflow / peak-hour coverage",
+  "Full daily coverage",
+  "24/7 coverage",
+  "OTA inbox management",
+  "Central reservations",
   "Not sure — I'd like a recommendation",
 ];
 
@@ -38,7 +46,6 @@ interface CoverageReviewModalProps {
 
 export function CoverageReviewModal({ open, onClose, ctaLocation }: CoverageReviewModalProps) {
   const [mounted, setMounted] = useState(false);
-  const [helpWith, setHelpWith] = useState<string[]>([]);
   const [status, setStatus] = useState<"idle" | "loading" | "done" | "error">("idle");
   const startedRef = useRef(false);
 
@@ -84,7 +91,6 @@ export function CoverageReviewModal({ open, onClose, ctaLocation }: CoverageRevi
 
   function resetAndClose() {
     setStatus("idle");
-    setHelpWith([]);
     onClose();
   }
 
@@ -104,7 +110,8 @@ export function CoverageReviewModal({ open, onClose, ctaLocation }: CoverageRevi
       email,
       companyName: get("companyName"),
       propertySize: get("propertySize"),
-      helpWith,
+      propertyType: get("propertyType"),
+      coverageOption: get("coverageOption"),
       phone: get("phone"),
       propertyWebsite: get("propertyWebsite"),
       website: get("website"),
@@ -120,7 +127,8 @@ export function CoverageReviewModal({ open, onClose, ctaLocation }: CoverageRevi
       if (!res.ok) throw new Error("Server error");
       trackEvent("coverage_review_submit", {
         property_size: data.propertySize || "unknown",
-        help_with: helpWith.join(","),
+        property_type: data.propertyType || "unknown",
+        coverage_option: data.coverageOption || "unknown",
         cta_location: ctaLocation || "unknown",
         page_path: window.location.pathname,
       });
@@ -275,29 +283,31 @@ export function CoverageReviewModal({ open, onClose, ctaLocation }: CoverageRevi
                 </div>
               </div>
 
-              {/* Row 4: What are you looking for — checkboxes, last */}
-              <div className="flex flex-col gap-2">
-                <label className="text-xs font-medium text-ink text-left">What are you looking for help with? <span className="text-gold-dark">*</span></label>
-                <div className="grid grid-cols-2 gap-x-6 gap-y-2">
-                  {HELP_OPTIONS.map((opt) => (
-                    <label key={opt} className="flex items-center gap-2.5 cursor-pointer">
-                      <span
-                        role="checkbox"
-                        aria-checked={helpWith.includes(opt)}
-                        tabIndex={0}
-                        onClick={() => setHelpWith(helpWith.includes(opt) ? helpWith.filter((h) => h !== opt) : [...helpWith, opt])}
-                        onKeyDown={(e) => e.key === " " && (e.preventDefault(), setHelpWith(helpWith.includes(opt) ? helpWith.filter((h) => h !== opt) : [...helpWith, opt]))}
-                        className={`flex h-4 w-4 shrink-0 items-center justify-center rounded border transition-colors cursor-pointer ${helpWith.includes(opt) ? "border-gold-dark bg-gold-dark" : "border-line bg-surface hover:border-ink/30"}`}
-                      >
-                        {helpWith.includes(opt) && (
-                          <svg className="h-2.5 w-2.5 text-paper" viewBox="0 0 10 10" fill="none">
-                            <path d="M1.5 5l2.5 2.5 4.5-4.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                          </svg>
-                        )}
-                      </span>
-                      <span className="text-xs text-ink-soft">{opt}</span>
-                    </label>
-                  ))}
+              {/* Row 4: Property Type + Coverage Option */}
+              <div className="grid gap-4 grid-cols-2">
+                <div className="flex flex-col gap-1.5">
+                  <label className="text-xs font-medium text-ink text-left">Property Type <span className="text-gold-dark">*</span></label>
+                  <select
+                    name="propertyType"
+                    required
+                    defaultValue=""
+                    className="rounded-md border border-line bg-surface px-3 py-2.5 text-sm text-ink focus:border-gold-dark focus:outline-none"
+                  >
+                    <option value="" disabled>Select type</option>
+                    {PROPERTY_TYPES.map((t) => <option key={t} value={t}>{t}</option>)}
+                  </select>
+                </div>
+                <div className="flex flex-col gap-1.5">
+                  <label className="text-xs font-medium text-ink text-left">Coverage Needed <span className="text-gold-dark">*</span></label>
+                  <select
+                    name="coverageOption"
+                    required
+                    defaultValue=""
+                    className="rounded-md border border-line bg-surface px-3 py-2.5 text-sm text-ink focus:border-gold-dark focus:outline-none"
+                  >
+                    <option value="" disabled>Select coverage</option>
+                    {COVERAGE_OPTIONS.map((c) => <option key={c} value={c}>{c}</option>)}
+                  </select>
                 </div>
               </div>
 
@@ -309,7 +319,7 @@ export function CoverageReviewModal({ open, onClose, ctaLocation }: CoverageRevi
 
               <button
                 type="submit"
-                disabled={status === "loading" || helpWith.length === 0}
+                disabled={status === "loading"}
                 className="inline-flex items-center justify-center gap-2 rounded-lg bg-gold-dark px-4 py-3 text-sm font-medium text-paper transition-colors hover:bg-gold disabled:opacity-60"
               >
                 {status === "loading" ? (

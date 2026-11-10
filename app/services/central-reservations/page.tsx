@@ -241,7 +241,7 @@ export default function CentralReservationsPage() {
       <Section>
         <SectionHeading
           eyebrow="What Guest Squad Handles"
-          title="Five capabilities, applied across your portfolio."
+          title="Reservations, OTA inboxes and guest communication — coordinated across your portfolio."
           description="Each capability is scoped to your properties' systems, approved information and agreed procedures. The arrangement can include some or all depending on your group's requirements."
         />
         <div className="mt-10">

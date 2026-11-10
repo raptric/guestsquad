@@ -12,11 +12,6 @@ interface Capability {
 const CAPABILITIES: Record<Variant, Capability[]> = {
   hotel: [
     {
-      name: "Phone Answering",
-      body: "Reception overflow handled with your hotel greeting. Room inquiries, availability questions and guest requests answered from your property brief.",
-      slug: null,
-    },
-    {
       name: "Reservation Support",
       body: "Room availability, approved rates and booking actions within your agreed permissions. Changes and cancellations handled per your policies.",
       slug: "reservation-support",
@@ -27,22 +22,12 @@ const CAPABILITIES: Record<Variant, Capability[]> = {
       slug: "ota-inbox-management",
     },
     {
-      name: "Guest Messaging",
-      body: "Arrival information, in-stay questions and guest requests handled through your agreed messaging channels.",
+      name: "Guest Messaging & Support",
+      body: "Arrival information, in-stay questions and guest requests handled through your agreed channels. Housekeeping requests and maintenance escalation using your property procedures and contacts.",
       slug: "guest-messaging",
-    },
-    {
-      name: "Guest Support",
-      body: "Stay questions, housekeeping requests and maintenance escalation using your property procedures and contacts.",
-      slug: null,
     },
   ],
   group: [
-    {
-      name: "Phone Answering",
-      body: "Callers identified to the right property and handled per that property's brief. Reservation calls and general inquiries routed appropriately.",
-      slug: null,
-    },
     {
       name: "Reservation Support",
       body: "Property selection, availability, approved bookings, changes and follow-up across your participating hotels.",
@@ -54,22 +39,12 @@ const CAPABILITIES: Record<Variant, Capability[]> = {
       slug: "ota-inbox-management",
     },
     {
-      name: "Guest Messaging",
-      body: "Property-specific pre-arrival and in-stay communication. Handovers and open items passed to the relevant property team.",
+      name: "Guest Messaging & Support",
+      body: "Property-specific pre-arrival and in-stay communication. Guest requests routed to the correct property team, with coordination and escalation following each property's agreed procedures.",
       slug: "guest-messaging",
-    },
-    {
-      name: "Guest Support",
-      body: "Guest requests routed to the correct property team. Coordination and escalation follow each property's agreed procedures.",
-      slug: null,
     },
   ],
   rental: [
-    {
-      name: "Phone Answering",
-      body: "Calls identified to the right listing and handled per that listing's brief. Booking inquiries, arrival questions and guest calls answered directly.",
-      slug: null,
-    },
     {
       name: "Reservation Support",
       body: "Listing availability, booking questions and approved reservation changes within your agreed permissions.",
@@ -81,14 +56,9 @@ const CAPABILITIES: Record<Variant, Capability[]> = {
       slug: "ota-inbox-management",
     },
     {
-      name: "Guest Messaging",
-      body: "Arrival instructions, house rules and listing-specific conversations handled through agreed channels.",
+      name: "Guest Messaging & Support",
+      body: "Arrival instructions, house rules and listing-specific conversations handled through agreed channels. Access assistance, in-stay questions and local contact coordination using each listing's approved procedures.",
       slug: "guest-messaging",
-    },
-    {
-      name: "Guest Support",
-      body: "Access assistance, in-stay questions and local contact coordination using each listing's approved procedures.",
-      slug: null,
     },
   ],
 };
@@ -101,7 +71,7 @@ export function SharedCapabilitiesBlock({ variant }: SharedCapabilitiesBlockProp
   const caps = CAPABILITIES[variant];
 
   return (
-    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    <div className="grid gap-4 sm:grid-cols-3">
       {caps.map((cap) => (
         <div
           key={cap.name}

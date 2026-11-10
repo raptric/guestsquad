@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
 import { Section, SectionHeading } from "@/components/site/section";
 import { CtaSection } from "@/components/site/cta-section";
 import { CoverageReviewButton } from "@/components/site/coverage-review-button";
@@ -12,8 +11,6 @@ import { CoverageTypesBlock } from "@/components/site/coverage-types-block";
 import { SharedCapabilitiesBlock } from "@/components/site/shared-capabilities-block";
 import { serviceSchema, breadcrumbSchema, faqSchema, buildMetadata } from "@/lib/seo";
 import { SITE } from "@/lib/site-data";
-import { RESOURCES } from "@/lib/resource-content";
-import { INSIGHTS } from "@/lib/insights-content";
 import { TestimonialsBlock } from "@/components/site/testimonials-block";
 import { FaqAccordion } from "@/components/site/faq-accordion";
 import { ServicePageViewTracker } from "@/components/site/service-page-view-tracker";
@@ -86,15 +83,6 @@ const SITUATIONS = [
 ];
 
 export default function HotelAnsweringServicePage() {
-  const comparisons = RESOURCES.filter((r) =>
-    d.comparisonSlugs ? d.comparisonSlugs.includes(r.slug) : false
-  );
-  const insights = INSIGHTS.filter((i) =>
-    d.insightSlugs ? d.insightSlugs.includes(i.slug) : false
-  ).sort((a, b) =>
-    d.insightSlugs!.indexOf(a.slug) - d.insightSlugs!.indexOf(b.slug)
-  );
-
   return (
     <>
       <ServicePageViewTracker serviceName={d.slug} />
@@ -201,7 +189,7 @@ export default function HotelAnsweringServicePage() {
       <Section>
         <SectionHeading
           eyebrow="What Guest Squad Handles"
-          title="Five capabilities, applied to your hotel."
+          title="Reservations, messaging, OTA inboxes and guest support — handled for your hotel."
           description="Each capability is scoped to your property's systems, approved information and agreed procedures. Coverage can include some or all of these depending on your arrangement."
         />
         <div className="mt-10">
@@ -423,71 +411,6 @@ export default function HotelAnsweringServicePage() {
           </div>
         </div>
       </Section>
-
-      {/* KEEP EXPLORING */}
-      <div className="border-t border-line py-14">
-        <div className="container">
-          <div className="mb-8">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-gold-dark">Keep Exploring</p>
-            <h2 className="mt-1.5 text-2xl font-medium text-ink">Explore what fits your situation.</h2>
-          </div>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {comparisons.length > 0 && (
-              <div className="rounded-lg border border-line bg-paper p-6">
-                <p className="mb-4 text-xs font-semibold uppercase tracking-[0.14em] text-ink-muted">Compare Options</p>
-                <ul className="flex flex-col gap-3">
-                  {comparisons.slice(0, 2).map((r) => (
-                    <li key={r.slug}>
-                      <Link
-                        href={`/resources/${r.slug}`}
-                        className="group flex items-start gap-2 text-sm text-ink-soft transition-colors hover:text-ink"
-                      >
-                        <ArrowRight className="mt-0.5 h-3.5 w-3.5 shrink-0 text-ink-muted transition-colors group-hover:text-gold-dark" />
-                        {r.title}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-            {insights.length > 0 && (
-              <div className="rounded-lg border border-line bg-paper p-6">
-                <p className="mb-4 text-xs font-semibold uppercase tracking-[0.14em] text-ink-muted">Research &amp; Insights</p>
-                <ul className="flex flex-col gap-3">
-                  {insights.slice(0, 2).map((i) => (
-                    <li key={i.slug}>
-                      <Link
-                        href={`/resources/insights/${i.slug}`}
-                        className="group flex items-start gap-2 text-sm text-ink-soft transition-colors hover:text-ink"
-                      >
-                        <ArrowRight className="mt-0.5 h-3.5 w-3.5 shrink-0 text-ink-muted transition-colors group-hover:text-gold-dark" />
-                        {i.title}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-            <div className="rounded-lg border border-line bg-paper p-6">
-              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.14em] text-ink-muted">Other Services</p>
-              <ul className="flex flex-col gap-3">
-                <li>
-                  <Link href="/services/central-reservations" className="group flex items-start gap-2 text-sm text-ink-soft transition-colors hover:text-ink">
-                    <ArrowRight className="mt-0.5 h-3.5 w-3.5 shrink-0 text-ink-muted transition-colors group-hover:text-gold-dark" />
-                    Central Reservations Desk
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/vacation-rental-answering-service" className="group flex items-start gap-2 text-sm text-ink-soft transition-colors hover:text-ink">
-                    <ArrowRight className="mt-0.5 h-3.5 w-3.5 shrink-0 text-ink-muted transition-colors group-hover:text-gold-dark" />
-                    Vacation Rental Answering Service
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
 
       {/* FINAL CTA */}
       <CtaSection title={d.ctaTitle} description={d.ctaDescription} />

@@ -18,14 +18,14 @@ const TEAM = [
   {
     name: "Usman Khalid",
     title: "Founder",
-    bio: "A seasoned BPO and technology leader.",
+    bio: "Leads service standards and client relationships.",
     photo: "/team/usman-khalid.jpg",
   },
-  { name: "Khadija Khalid", title: "Co-Founder", bio: null, photo: "/team/khadija-khalid.jpg" },
-  { name: "Mary", title: "Operations Lead", bio: null, photo: "/team/mary-avatar.jpg" },
-  { name: "Imran Khalid", title: "Guest Service Officer", bio: null, photo: "/team/imran-khalid.jpg" },
-  { name: "Azadar", title: "Business Development & Sales", bio: null, photo: "/team/azadar.jpg" },
-  { name: "Maaz", title: "Hospitality Specialist", bio: null, photo: null },
+  { name: "Khadija Khalid", title: "Co-Founder", bio: "Shapes operational direction and growth.", photo: "/team/khadija-khalid.jpg" },
+  { name: "Mary", title: "Operations Lead", bio: "Oversees day-to-day delivery across client accounts.", photo: "/team/mary-avatar.jpg" },
+  { name: "Imran Khalid", title: "Guest Service Officer", bio: "Handles guest calls and reservation communication.", photo: "/team/imran-khalid.jpg" },
+  { name: "Azadar", title: "Business Development & Sales", bio: "Helps prospective clients find the right coverage model.", photo: "/team/azadar.jpg" },
+  { name: "Maaz", title: "Hospitality Specialist", bio: "Supports guest communication and service delivery.", photo: null },
 ];
 
 const HOW_WE_WORK = [
@@ -192,6 +192,9 @@ export default function AboutPage() {
                 <div className="min-w-0">
                   <p className="text-sm font-medium text-ink">{member.name}</p>
                   <p className="mt-0.5 text-xs text-gold-dark">{member.title}</p>
+                  {member.bio && (
+                    <p className="mt-1 text-xs leading-relaxed text-ink-muted">{member.bio}</p>
+                  )}
                 </div>
               </div>
             ))}

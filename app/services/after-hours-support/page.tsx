@@ -63,7 +63,7 @@ const FAQS = [
   },
   {
     q: "Do we still need a night auditor?",
-    a: "We cover guest-facing calls and messages. The financial night audit is a separate function that stays with your team or accounting provider.",
+    a: "We cover guest-facing calls and messages. The financial night audit is a separate function that stays with your team or accounting provider. If you want the accounting close covered too, see our hotel night audit support and back office operations page.",
   },
   {
     q: "Do you cover vacation rentals after hours?",
@@ -560,6 +560,9 @@ export default function AfterHoursSupportPage() {
                 </Link>
                 <Link href="/services/vacation-rental-answering-service" className="text-sm text-gold-dark underline underline-offset-2 hover:text-gold">
                   Vacation rental answering service
+                </Link>
+                <Link href="/services/back-office-operations" className="text-sm text-gold-dark underline underline-offset-2 hover:text-gold">
+                  Hotel night audit support
                 </Link>
               </div>
             </div>

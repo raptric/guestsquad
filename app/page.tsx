@@ -429,7 +429,7 @@ export default function HomePage() {
           <div>
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-gold-dark">Guides</p>
             <h2 className="text-2xl font-medium text-ink">Guides for comparing your options.</h2>
-            <div className="mt-6 flex flex-col gap-3">
+            <div className="mt-6 rounded-lg border border-line bg-paper px-5 divide-y divide-line">
               {[
                 { label: "Answering service cost", detail: "What coverage costs and what drives the price.", href: "/resources/hotel-answering-service-cost" },
                 { label: "Human vs AI answering", detail: "Where each one fits.", href: "/resources/hotel-answering-service-vs-ai-voice" },
@@ -438,7 +438,7 @@ export default function HomePage() {
                 <Link
                   key={guide.href}
                   href={guide.href}
-                  className="flex items-start gap-4 rounded-lg border border-line bg-paper px-5 py-4 hover:border-gold/40 transition-colors"
+                  className="flex items-start gap-4 py-4 hover:opacity-80 transition-opacity"
                 >
                   <span className="mt-0.5 h-3.5 w-0.5 shrink-0 rounded-full bg-gold-dark" />
                   <div>

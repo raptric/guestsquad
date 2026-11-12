@@ -10,7 +10,7 @@ import { SITE } from "@/lib/site-data";
 export const metadata: Metadata = buildMetadata({
   title: "Hotel & Vacation Rental Support Pricing",
   description:
-    "Explore starting prices for Guest Squad hotel answering, central reservations, and vacation rental answering. Compare service scope and request a tailored quote.",
+    "Starting prices for Guest Squad hotel answering, central reservations, and vacation rental support. Compare scope and request a tailored quote.",
   path: "/pricing",
 });
 
@@ -37,7 +37,7 @@ const SERVICES = [
       "Guest messaging and OTA inbox support",
       "Escalation to your designated contact per agreed procedure",
       "Call logging and handover notes",
-      "Monthly activity summary",
+      "Activity summary",
     ],
     cta: "Request Your Hotel Quote",
     ctaHref: "/contact?service=hotel-answering-service",
@@ -52,6 +52,7 @@ const SERVICES = [
       "Coordinated reservation support across your properties, following each location's approved availability, rates, booking rules, and permissions.",
     included: [
       "Reservation inquiry handling across two properties",
+      "After-hours coverage",
       "Rate and availability information using your approved data",
       "Direct booking assistance",
       "Approved changes and cancellations",
@@ -81,7 +82,7 @@ const SERVICES = [
       "Arrival and access assistance",
       "Guest inquiries",
       "Cleaner and maintenance communication",
-      "After-hours coverage",
+      "24/7 coverage",
       "Live phone answering",
       "Escalation to your designated contact",
       "Activity summary",
@@ -164,7 +165,7 @@ const FAQS = [
   },
   {
     q: "Is 24/7 coverage included or quoted separately?",
-    a: "The starting prices apply to defined coverage hours. Round-the-clock coverage is available and priced separately based on your volume and handling requirements.",
+    a: "It depends on the service. The Vacation Rental Answering Service starting price includes 24/7 coverage for one listing. The Hotel Answering Service and Central Reservations Desk starting prices cover after-hours coverage (and, for hotels, overflow coverage). 24/7 is available for both and quoted to your volume and handling requirements.",
   },
   {
     q: "Are there onboarding fees?",
@@ -184,7 +185,7 @@ export default function PricingPage() {
           webPageSchema({
             name: "Hotel & Vacation Rental Support Pricing | Guest Squad",
             description:
-              "Explore starting prices for Guest Squad hotel answering, central reservations, and vacation rental answering. Compare service scope and request a tailored quote.",
+              "Starting prices for Guest Squad hotel answering, central reservations, and vacation rental support. Compare scope and request a tailored quote.",
             path: "/pricing",
             primaryImageUrl: `${SITE.url}/brand-assets/guestsquad-favicon-official.svg`,
             primaryImageAlt: "Guest Squad pricing — hotel and vacation rental support",

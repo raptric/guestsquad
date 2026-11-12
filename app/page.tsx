@@ -424,9 +424,9 @@ export default function HomePage() {
 
       {/* FAQ + STICKY */}
       <Section id="guides" surface>
-        <div className="grid gap-10 lg:grid-cols-[1fr_320px]">
+        <div className="grid gap-10 lg:grid-cols-[1fr_320px] lg:items-start">
           {/* Left column: FAQ only */}
-          <div id="faq">
+          <div id="faq" className="rounded-lg border border-line bg-paper p-7">
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-gold-dark">Common Questions</p>
             <h2 className="text-2xl font-medium text-ink">Questions hotels and rental operators ask.</h2>
             <div className="mt-6">

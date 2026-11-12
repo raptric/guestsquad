@@ -227,7 +227,7 @@ export default function VacationRentalAnsweringServicePage() {
       </section>
 
       {/* 3. AFTER-HOURS CALLS */}
-      <Section surface id="after-hours-calls">
+      <Section id="after-hours-calls">
         <SectionHeading
           eyebrow="After-Hours Support"
           title="After-hours calls that can't wait until morning."

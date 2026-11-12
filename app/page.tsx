@@ -36,7 +36,7 @@ const HOME_FAQS = [
   },
   {
     q: "Is there a contract or minimum commitment?",
-    a: "Plans are month-to-month with 30 days' notice to cancel. No onboarding fee.",
+    a: "Plans are month-to-month with 30 days' notice to cancel. Setup fees depend on the property and are confirmed in the scoped proposal.",
   },
   {
     q: "How do we know coverage is working?",
@@ -327,7 +327,7 @@ export default function HomePage() {
           {[
             { n: "01", title: "Property brief", body: "We cover your rates, policies, escalation rules and how you talk to guests." },
             { n: "02", title: "System access", body: "You give us access to your PMS, inbox and booking tools." },
-            { n: "03", title: "Go-live", body: "Coverage starts once your brief, system access and escalation contacts are agreed. There are no onboarding fees." },
+            { n: "03", title: "Go-live", body: "Coverage starts once your brief, system access and escalation contacts are agreed." },
           ].map((step) => (
             <div key={step.n} className="flex gap-4 rounded-lg border border-line bg-paper p-6">
               <span className="mt-0.5 text-xs font-semibold tabular-nums text-ink-muted">{step.n}</span>

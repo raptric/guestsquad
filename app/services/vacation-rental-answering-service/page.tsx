@@ -452,7 +452,7 @@ export default function VacationRentalAnsweringServicePage() {
               </ul>
             </div>
             <div className="mt-5 border-t border-line pt-4">
-              <p className="text-xs text-ink-muted">Month-to-month · 30 days&apos; notice · No setup fee</p>
+              <p className="text-xs text-ink-muted">Month-to-month · 30 days&apos; notice</p>
             </div>
           </div>
 

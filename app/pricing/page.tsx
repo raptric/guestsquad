@@ -169,7 +169,7 @@ const FAQS = [
   },
   {
     q: "Are there onboarding fees?",
-    a: "No. Property briefing, agent preparation, and go-live testing are included as part of getting coverage started.",
+    a: "Setup fees depend on the property and scope. We confirm any onboarding cost in the scoped proposal before coverage begins.",
   },
   {
     q: "What are the cancellation terms?",

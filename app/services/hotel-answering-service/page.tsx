@@ -381,35 +381,72 @@ export default function HotelAnsweringServicePage() {
 
       {/* PRICE */}
       <Section id="price">
-        <SectionHeading
-          eyebrow="Pricing"
-          title="Hotel answering service from US$149 a month."
-          description="The US$149/month starting price is for one hotel with after-hours or overflow coverage, subject to scope confirmation. It includes live phone answering during agreed hours, reservation inquiries, late-arrival and access assistance, guest-request routing, guest messaging and OTA inbox support, escalation, call logging, handover notes and an activity summary."
-        />
-        <div className="mt-8 rounded-lg border border-line bg-paper p-6">
-          <p className="text-sm font-medium text-ink mb-3">Your final fee is set in the scoped proposal. It depends on:</p>
-          <ul className="flex flex-col gap-2">
-            {[
-              "Coverage hours (24/7 is quoted), number of properties and call volume",
-              "The workload allowance, booking actions in your PMS and channels covered",
-            ].map((item) => (
-              <li key={item} className="flex items-start gap-3 text-sm text-ink-soft">
-                <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-gold-dark" />
-                {item}
-              </li>
-            ))}
-          </ul>
-          <p className="mt-4 text-sm text-ink-soft">
-            Work outside the agreed allowance is charged at the rate in your proposal. Month-to-month, 30 days&apos; notice, no setup fee.{" "}
-            <Link href="/pricing" className="text-gold-dark underline underline-offset-2 hover:text-gold">See guest support pricing</Link>{" "}
-            or our breakdown of{" "}
-            <Link href="/resources/hotel-answering-service-cost" className="text-gold-dark underline underline-offset-2 hover:text-gold">hotel answering service cost</Link>.
-          </p>
-        </div>
-        <div className="mt-5">
-          <CoverageReviewButton variant="gold" ctaLocation="hotel_price_cta">
-            Get a Quote for Your Hotel
-          </CoverageReviewButton>
+        <div className="grid gap-8 lg:grid-cols-2 lg:items-start">
+          {/* Left: price card */}
+          <div className="rounded-lg border border-line bg-paper p-7">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold-dark">Pricing</p>
+            <p className="mt-3 text-3xl font-semibold tracking-tight text-ink">From US$149<span className="text-base font-normal text-ink-muted">/month</span></p>
+            <p className="mt-1 text-xs text-ink-muted italic">Subject to scope confirmation</p>
+            <p className="mt-4 text-sm leading-relaxed text-ink-soft">
+              One hotel, after-hours or overflow coverage. Shared-support starting configuration.
+            </p>
+            <div className="mt-5 border-t border-line pt-5">
+              <p className="text-xs font-semibold uppercase tracking-[0.12em] text-ink-muted mb-3">Included at this starting price</p>
+              <ul className="flex flex-col gap-2">
+                {[
+                  "Live phone answering during agreed coverage hours",
+                  "Reservation inquiries",
+                  "Late-arrival and access assistance",
+                  "Guest-request routing",
+                  "After-hours or overflow coverage",
+                  "Guest messaging and OTA inbox support",
+                  "Escalation, call logging and handover notes",
+                  "Activity summary",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-2.5 text-sm text-ink-soft">
+                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold-dark" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="mt-5 border-t border-line pt-4">
+              <p className="text-xs text-ink-muted">Month-to-month · 30 days&apos; notice · No setup fee</p>
+            </div>
+          </div>
+
+          {/* Right: what determines price + CTA */}
+          <div className="flex flex-col gap-6">
+            <div className="rounded-lg border border-line bg-surface p-7">
+              <p className="text-sm font-semibold text-ink mb-3">Your final fee depends on:</p>
+              <ul className="flex flex-col gap-2.5">
+                {[
+                  "Coverage hours — 24/7 is quoted separately",
+                  "Number of properties and call volume",
+                  "Workload allowance and channels covered",
+                  "Booking actions required in your PMS",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-2.5 text-sm text-ink-soft">
+                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-ink-muted/50" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-4 text-sm text-ink-soft">
+                Work outside the agreed allowance is charged at the rate in your proposal.{" "}
+                <Link href="/pricing" className="text-gold-dark underline underline-offset-2 hover:text-gold">See full pricing</Link>{" "}
+                or our{" "}
+                <Link href="/resources/hotel-answering-service-cost" className="text-gold-dark underline underline-offset-2 hover:text-gold">cost breakdown</Link>.
+              </p>
+            </div>
+            <div className="rounded-lg border border-line bg-paper p-7">
+              <p className="text-sm font-semibold text-ink mb-2">Ready to get a quote?</p>
+              <p className="text-sm text-ink-soft mb-5">Tell us your property, coverage hours and estimated call volume. We will scope the right configuration and send a written proposal.</p>
+              <CoverageReviewButton variant="gold" ctaLocation="hotel_price_cta" className="w-full justify-center">
+                Get a Quote for Your Hotel
+              </CoverageReviewButton>
+            </div>
+          </div>
         </div>
       </Section>
 

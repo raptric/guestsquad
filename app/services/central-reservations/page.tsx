@@ -468,42 +468,71 @@ export default function CentralReservationsPage() {
 
       {/* PRICING */}
       <Section id="pricing">
-        <SectionHeading
-          eyebrow="Pricing"
-          title="From US$299/month for two properties, after hours."
-        />
-        <div className="mt-8 rounded-lg border border-line bg-paper p-6 max-w-2xl">
-          <p className="text-base font-medium text-ink">
-            Central Reservations Desk starts from US$299/month for a two-property reference configuration with after-hours coverage, subject to scope confirmation.
-          </p>
-          <p className="mt-3 text-sm leading-relaxed text-ink-soft">
-            It is a shared-support configuration, and the final fee is set in your scoped proposal. 24/7 coverage, overflow and additional properties are quoted to your portfolio.
-          </p>
-          <p className="mt-3 text-sm font-medium text-ink">Your price depends on:</p>
-          <ul className="mt-2 flex flex-col gap-1.5">
-            {[
-              "Enquiry volume",
-              "Coverage hours",
-              "Number of participating properties",
-              "Channels (phone, email, OTA, messaging)",
-              "System complexity",
-              "The actions agents must complete",
-            ].map((item) => (
-              <li key={item} className="flex items-start gap-3 text-sm text-ink-soft">
-                <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-gold-dark" />
-                {item}
-              </li>
-            ))}
-          </ul>
-          <p className="mt-4 text-sm text-ink-soft">
-            Work outside the agreed allowance is charged at the rate in your proposal. There are no onboarding fees. The service is month-to-month with 30 days&apos; notice.{" "}
-            <Link href="/pricing" className="text-gold-dark underline underline-offset-2 hover:text-gold">See pricing</Link>.
-          </p>
-        </div>
-        <div className="mt-5">
-          <CoverageReviewButton variant="gold" ctaLocation="crd_price_cta">
-            Book a Portfolio Review
-          </CoverageReviewButton>
+        <div className="grid gap-8 lg:grid-cols-2 lg:items-start">
+          {/* Left: price card */}
+          <div className="rounded-lg border border-line bg-paper p-7">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold-dark">Pricing</p>
+            <p className="mt-3 text-3xl font-semibold tracking-tight text-ink">From US$299<span className="text-base font-normal text-ink-muted">/month</span></p>
+            <p className="mt-1 text-xs text-ink-muted italic">Subject to scope confirmation</p>
+            <p className="mt-4 text-sm leading-relaxed text-ink-soft">
+              Two properties, after-hours coverage. Shared-support starting configuration.
+            </p>
+            <div className="mt-5 border-t border-line pt-5">
+              <p className="text-xs font-semibold uppercase tracking-[0.12em] text-ink-muted mb-3">Included at this starting price</p>
+              <ul className="flex flex-col gap-2">
+                {[
+                  "Reservation inquiry handling across two properties",
+                  "After-hours coverage",
+                  "Rate and availability information using your approved data",
+                  "Direct booking assistance",
+                  "Approved changes and cancellations",
+                  "Booking-related email handling",
+                  "PMS workflows",
+                  "Escalation, handover notes and activity reporting",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-2.5 text-sm text-ink-soft">
+                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold-dark" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="mt-5 border-t border-line pt-4">
+              <p className="text-xs text-ink-muted">Month-to-month · 30 days&apos; notice · No setup fee</p>
+            </div>
+          </div>
+
+          {/* Right: what determines price + CTA */}
+          <div className="flex flex-col gap-6">
+            <div className="rounded-lg border border-line bg-surface p-7">
+              <p className="text-sm font-semibold text-ink mb-3">Your final fee depends on:</p>
+              <ul className="flex flex-col gap-2.5">
+                {[
+                  "Enquiry volume",
+                  "Coverage hours — 24/7 and overflow are quoted",
+                  "Number of participating properties",
+                  "Channels: phone, email, OTA, messaging",
+                  "System complexity and actions agents must complete",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-2.5 text-sm text-ink-soft">
+                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-ink-muted/50" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-4 text-sm text-ink-soft">
+                Work outside the agreed allowance is charged at the rate in your proposal.{" "}
+                <Link href="/pricing" className="text-gold-dark underline underline-offset-2 hover:text-gold">See full pricing</Link>.
+              </p>
+            </div>
+            <div className="rounded-lg border border-line bg-paper p-7">
+              <p className="text-sm font-semibold text-ink mb-2">Ready to discuss your portfolio?</p>
+              <p className="text-sm text-ink-soft mb-5">Tell us your properties, channels and coverage requirements. We will scope the right configuration and send a written proposal.</p>
+              <CoverageReviewButton variant="gold" ctaLocation="crd_price_cta" className="w-full justify-center">
+                Book a Portfolio Review
+              </CoverageReviewButton>
+            </div>
+          </div>
         </div>
       </Section>
 

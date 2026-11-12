@@ -423,26 +423,69 @@ export default function VacationRentalAnsweringServicePage() {
 
       {/* 7. PRICING */}
       <Section id="pricing">
-        <SectionHeading
-          eyebrow="Pricing"
-          title="What a vacation rental answering service costs."
-        />
-        <div className="mt-8 rounded-lg border border-line bg-paper p-6 max-w-2xl">
-          <p className="text-base font-medium text-ink">
-            From US$99/month for one listing, with 24/7 coverage included, subject to scope confirmation.
-          </p>
-          <p className="mt-3 text-sm leading-relaxed text-ink-soft">
-            This is a shared-support starting configuration. Live phone answering and Airbnb, Vrbo and agreed messaging channels are part of it. No onboarding fees. Month-to-month with 30 days&apos; notice.
-          </p>
-          <p className="mt-3 text-sm leading-relaxed text-ink-soft">
-            Your final fee is set in the scoped proposal and depends on the number of listings, channels, call and message volume and the tasks included. Additional listings are quoted. Work outside the agreed allowance is charged at the proposal rate.{" "}
-            <Link href="/pricing" className="text-gold-dark underline underline-offset-2 hover:text-gold">See guest support pricing</Link>.
-          </p>
-        </div>
-        <div className="mt-5">
-          <CoverageReviewButton variant="gold" ctaLocation="vras_price_cta">
-            Book a Coverage Review
-          </CoverageReviewButton>
+        <div className="grid gap-8 lg:grid-cols-2 lg:items-start">
+          {/* Left: price card */}
+          <div className="rounded-lg border border-line bg-paper p-7">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold-dark">Pricing</p>
+            <p className="mt-3 text-3xl font-semibold tracking-tight text-ink">From US$99<span className="text-base font-normal text-ink-muted">/month</span></p>
+            <p className="mt-1 text-xs text-ink-muted italic">Subject to scope confirmation</p>
+            <p className="mt-4 text-sm leading-relaxed text-ink-soft">
+              One listing, 24/7 coverage included. Shared-support starting configuration.
+            </p>
+            <div className="mt-5 border-t border-line pt-5">
+              <p className="text-xs font-semibold uppercase tracking-[0.12em] text-ink-muted mb-3">Included at this starting price</p>
+              <ul className="flex flex-col gap-2">
+                {[
+                  "Live phone answering, 24/7",
+                  "OTA message handling (Airbnb, Vrbo and agreed channels)",
+                  "Guest inquiry responses using your house rules",
+                  "Arrival and access assistance",
+                  "Cleaner and maintenance communication",
+                  "Escalation to your designated contact",
+                  "Activity summary",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-2.5 text-sm text-ink-soft">
+                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold-dark" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="mt-5 border-t border-line pt-4">
+              <p className="text-xs text-ink-muted">Month-to-month · 30 days&apos; notice · No setup fee</p>
+            </div>
+          </div>
+
+          {/* Right: what determines price + CTA */}
+          <div className="flex flex-col gap-6">
+            <div className="rounded-lg border border-line bg-surface p-7">
+              <p className="text-sm font-semibold text-ink mb-3">Your final fee depends on:</p>
+              <ul className="flex flex-col gap-2.5">
+                {[
+                  "Number of listings",
+                  "Channels covered (phone, Airbnb, Vrbo, other)",
+                  "Call and message volume",
+                  "Tasks included in the agreed scope",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-2.5 text-sm text-ink-soft">
+                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-ink-muted/50" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-4 text-sm text-ink-soft">
+                Additional listings are quoted. Work outside the agreed allowance is charged at the proposal rate.{" "}
+                <Link href="/pricing" className="text-gold-dark underline underline-offset-2 hover:text-gold">See guest support pricing</Link>.
+              </p>
+            </div>
+            <div className="rounded-lg border border-line bg-paper p-7">
+              <p className="text-sm font-semibold text-ink mb-2">Ready to stop being on call?</p>
+              <p className="text-sm text-ink-soft mb-5">Tell us your listings, channels and coverage requirements. We will scope the right configuration and send a written proposal.</p>
+              <CoverageReviewButton variant="gold" ctaLocation="vras_price_cta" className="w-full justify-center">
+                Book a Coverage Review
+              </CoverageReviewButton>
+            </div>
+          </div>
         </div>
       </Section>
 

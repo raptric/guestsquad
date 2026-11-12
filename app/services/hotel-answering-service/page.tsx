@@ -191,7 +191,7 @@ export default function HotelAnsweringServicePage() {
               Guest Support Operations: your calls answered live, after hours, on overflow or 24/7, in your hotel&apos;s name, by people trained on your property.
             </p>
             <p className="mt-4 max-w-lg text-base leading-relaxed text-ink-soft">
-              Hospitality-trained people answer your guest and booking calls using your approved property information, and pass anything that needs your team to the right contact. Coverage runs on your existing number. After-hours and overflow coverage for one hotel starts from US$149/month, subject to scope confirmation. 24/7 coverage is quoted to your property.
+              Hospitality-trained people answer your guest and booking calls using your approved property information, and pass anything that needs your team to the right contact. Coverage runs on your existing number.
             </p>
             <p className="mt-3 text-sm text-ink-muted">
               For independent hotels, boutique properties, B&amp;Bs, inns, lodges and serviced apartments.

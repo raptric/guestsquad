@@ -192,7 +192,7 @@ export default function VacationRentalAnsweringServicePage() {
               Guest Support Operations for STR operators: live guest calls and agreed messaging channels covered 24/7, listing by listing.
             </p>
             <p className="mt-4 max-w-lg text-base leading-relaxed text-ink-soft">
-              Guest Squad is a vacation rental answering service. Trained people answer your guests&apos; phone calls and your Airbnb, Vrbo and other agreed messages, including after hours and overnight, using a brief written for each listing. Plans start from US$99/month for one listing, with 24/7 coverage included (subject to scope confirmation).
+              Guest Squad is a vacation rental answering service. Trained people answer your guests&apos; phone calls and your Airbnb, Vrbo and other agreed messages, including after hours and overnight, using a brief written for each listing.
             </p>
             <p className="mt-3 max-w-lg text-sm leading-relaxed text-ink-soft">
               Late check-ins, lockouts, failed keypad codes, Wi-Fi problems and noise complaints are the calls we are set up for. Anything that needs you goes to your designated contact through the escalation process we agree.
@@ -238,7 +238,7 @@ export default function VacationRentalAnsweringServicePage() {
             Agents work through the approved troubleshooting steps with the guest. When an issue needs someone on site, they contact your designated person. Booking disputes, refunds and OTA resolutions stay with you.
           </p>
           <p className="mt-3 text-sm leading-relaxed text-ink-soft">
-            Pricing starts at US$99/month for one listing, with 24/7 coverage included. See <Link href="/pricing" className="text-gold-dark underline underline-offset-2 hover:text-gold">guest support pricing</Link>.
+            See <Link href="/pricing" className="text-gold-dark underline underline-offset-2 hover:text-gold">guest support pricing</Link>.
           </p>
         </div>
       </Section>
@@ -318,7 +318,7 @@ export default function VacationRentalAnsweringServicePage() {
             },
             {
               label: "24/7 coverage",
-              body: "Coverage runs across all hours and days for the listings and channels in scope. Included in the US$99/month starting plan, subject to scope confirmation.",
+              body: "Coverage runs across all hours and days for the listings and channels in scope. Included in the starting plan, subject to scope confirmation.",
             },
           ].map((opt) => (
             <div key={opt.label} className="rounded-lg border border-line bg-paper px-5 py-5">
@@ -602,7 +602,7 @@ export default function VacationRentalAnsweringServicePage() {
               Ready to stop being on call?
             </h3>
             <p className="text-sm leading-relaxed text-ink-soft mb-5">
-              Book a Coverage Review. We will map your listings, your guests&apos; time zones and your escalation contacts, and quote your coverage. From US$99/month for one listing, 24/7 included.
+              Book a Coverage Review. We will map your listings, your guests&apos; time zones and your escalation contacts, and quote your coverage.
             </p>
             <CoverageReviewButton variant="gold" ctaLocation="vras_faq_cta" className="w-full justify-center">
               Book a Coverage Review

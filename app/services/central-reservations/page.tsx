@@ -199,7 +199,7 @@ export default function CentralReservationsPage() {
               Guest Squad is a hotel reservation call center for hotel groups and management companies. One reservations team answers booking calls and messages for the properties you choose, after hours or around the clock. Agents quote, book and change reservations in each hotel&apos;s own PMS, using that hotel&apos;s rates and policies. Your team keeps control of rates, refunds and exceptions.
             </p>
             <p className="mt-3 max-w-lg text-sm leading-relaxed text-ink-soft">
-              After-hours coverage starts from US$299/month for a two-property reference configuration, subject to scope confirmation. Additional properties and 24/7 coverage are quoted.
+              Additional properties and 24/7 coverage are quoted to your portfolio.
             </p>
             <p className="mt-3 text-sm text-ink-muted">
               For hotel groups, hospitality management companies and multi-property operators.
@@ -374,7 +374,7 @@ export default function CentralReservationsPage() {
           {[
             {
               label: "After-hours",
-              body: "We handle reservation enquiries outside your team's agreed hours, so prospective guests reach a live agent instead of voicemail. Coverage starts from US$299/month for a two-property reference configuration, subject to scope confirmation.",
+              body: "We handle reservation enquiries outside your team's agreed hours, so prospective guests reach a live agent instead of voicemail.",
             },
             {
               label: "Overflow",

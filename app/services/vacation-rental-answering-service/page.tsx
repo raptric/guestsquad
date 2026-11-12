@@ -44,7 +44,7 @@ const FAQS = [
   },
   {
     q: "What property management systems do you work in?",
-    a: "Guesty, Hostaway, Lodgify, Hostfully, Hospitable, OwnerRez and iGMS. For other systems, we review access and workflow options during setup and confirm what can be supported.",
+    a: "Guesty, Hostaway, Lodgify, Hostfully, Hospitable, OwnerRez and iGMS. For other systems, we review access and workflow options during setup.",
   },
   {
     q: "Can you coordinate with our cleaner or turnover team?",
@@ -96,29 +96,6 @@ const WORKFLOWS = [
     trigger: "An unresolved item, repeated question or complaint during a stay.",
     does: "Records it against the listing and includes it in the handover notes with status and actions taken.",
     boundary: "The same issue recurs or passes an agreed threshold. You get a summary directly.",
-  },
-];
-
-const SITUATIONS = [
-  {
-    heading: "Late check-ins and lockouts happen when you are unavailable",
-    body: "A lockbox that will not open at 11pm or a keypad code that fails on arrival needs an immediate, calm response — not a voicemail and a callback in the morning.",
-    link: null,
-  },
-  {
-    heading: "Slow Airbnb replies affect your response rate and ranking",
-    body: "A message left overnight can miss a booking. Guests expect fast replies regardless of when they send them.",
-    link: { label: "Airbnb response time and visibility", href: "/resources/insights/airbnb-response-time-visibility" },
-  },
-  {
-    heading: "Each listing has different house rules and access instructions",
-    body: "One script does not cover all listings. Agents need the right brief per property: check-in method, house rules, Wi-Fi, emergency contacts and cleaner procedures.",
-    link: null,
-  },
-  {
-    heading: "Turnover coordination breaks down during back-to-back stays",
-    body: "A late checkout, an early check-in request and an unacknowledged cleaner can stack up quickly without a central contact point.",
-    link: null,
   },
 ];
 
@@ -201,7 +178,7 @@ export default function VacationRentalAnsweringServicePage() {
         ]}
       />
 
-      {/* HERO */}
+      {/* 1. HERO */}
       <section className="border-b border-line bg-paper">
         <div className="container grid items-center gap-10 py-16 md:grid-cols-2 md:py-20">
           <div>
@@ -215,7 +192,7 @@ export default function VacationRentalAnsweringServicePage() {
               Guest Support Operations for STR operators: live guest calls and agreed messaging channels covered 24/7, listing by listing.
             </p>
             <p className="mt-4 max-w-lg text-base leading-relaxed text-ink-soft">
-              Trained people answer your guests&apos; phone calls and your Airbnb, Vrbo and other agreed messages, including after hours and overnight, using a brief written for each listing. Plans start from US$99/month for one listing, with 24/7 coverage included, subject to scope confirmation.
+              Guest Squad is a vacation rental answering service. Trained people answer your guests&apos; phone calls and your Airbnb, Vrbo and other agreed messages, including after hours and overnight, using a brief written for each listing. Plans start from US$99/month for one listing, with 24/7 coverage included (subject to scope confirmation).
             </p>
             <p className="mt-3 max-w-lg text-sm leading-relaxed text-ink-soft">
               Late check-ins, lockouts, failed keypad codes, Wi-Fi problems and noise complaints are the calls we are set up for. Anything that needs you goes to your designated contact through the escalation process we agree.
@@ -249,7 +226,7 @@ export default function VacationRentalAnsweringServicePage() {
         </div>
       </section>
 
-      {/* WHAT IT IS */}
+      {/* 2. WHAT IT IS */}
       <Section surface id="what-it-is">
         <div className="max-w-2xl">
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-gold-dark">What It Is</p>
@@ -266,50 +243,64 @@ export default function VacationRentalAnsweringServicePage() {
         </div>
       </Section>
 
-      {/* AFTER-HOURS CALLS */}
+      {/* 3. AFTER-HOURS CALLS */}
       <Section id="after-hours-calls">
         <SectionHeading
-          eyebrow="When You Need This"
+          eyebrow="After-Hours Support"
           title="After-hours calls that can't wait until morning."
         />
-        <div className="mt-10 grid gap-5 sm:grid-cols-2">
-          {SITUATIONS.map((s) => (
-            <div key={s.heading} className="rounded-lg border border-line bg-paper p-6">
-              <h3 className="text-sm font-semibold text-ink">{s.heading}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-ink-soft">{s.body}</p>
-              {s.link && (
-                <Link href={s.link.href} className="mt-3 inline-block text-xs text-gold-dark underline underline-offset-2 hover:text-gold">
-                  {s.link.label} →
-                </Link>
-              )}
+        <p className="mt-4 max-w-2xl text-sm leading-relaxed text-ink-soft">
+          Guests call when they are locked out or running late. A voicemail and a morning callback can turn into a bad review, and slow Airbnb replies can affect your{" "}
+          <Link href="/resources/insights/airbnb-response-time-visibility" className="text-gold-dark underline underline-offset-2 hover:text-gold">response rate and ranking</Link>.
+          {" "}This is how vacation rental after-hours support works for common situations.
+        </p>
+        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {[
+            {
+              label: "Late check-in",
+              body: "The agent confirms the new arrival time, checks the check-in method for that listing and tells the cleaner or you if timing affects the stay.",
+            },
+            {
+              label: "Lockout",
+              body: "The agent walks the guest through the access steps for that listing and the alternatives you approved. If it is not resolved, they contact your local contact.",
+            },
+            {
+              label: "Wi-Fi and access details",
+              body: "Router reset steps, door codes, gate and parking details, answered from the listing brief.",
+            },
+            {
+              label: "Noise complaints",
+              body: "The agent logs the complaint and follows your house rules. If it repeats, they alert you.",
+            },
+            {
+              label: "Emergencies",
+              body: "Water leaks, no heat, smoke alarms and safety concerns are escalated to you and, where needed, to emergency services. The guest is updated through the agreed process.",
+            },
+            {
+              label: "Turnover pressure",
+              body: "Late checkouts and early check-in requests go to the cleaner or turnover team per your procedure.",
+            },
+          ].map((item) => (
+            <div key={item.label} className="rounded-lg border border-line bg-paper p-5">
+              <p className="text-sm font-semibold text-ink">{item.label}</p>
+              <p className="mt-2 text-sm leading-relaxed text-ink-soft">{item.body}</p>
             </div>
           ))}
         </div>
-        <div className="mt-8 rounded-lg border border-line bg-paper p-6">
-          <p className="text-sm font-semibold text-ink mb-3">Common scenarios handled</p>
-          <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
-            {[
-              { label: "Late check-in", body: "Confirms new arrival time, checks the check-in method and notifies the cleaner or you if timing affects the stay." },
-              { label: "Lockout", body: "Walks the guest through the access steps and approved alternatives. Contacts your local contact if unresolved." },
-              { label: "Wi-Fi and access details", body: "Router reset steps, door codes, gate and parking details answered from the listing brief." },
-              { label: "Noise complaints", body: "Logs the complaint and follows your house rules. Alerts you if it repeats." },
-              { label: "Emergencies", body: "Water leaks, no heat, smoke alarms and safety concerns escalated to you and, where needed, to emergency services." },
-              { label: "Turnover pressure", body: "Late checkouts and early check-in requests go to the cleaner or turnover team per your procedure." },
-            ].map((item) => (
-              <div key={item.label} className="rounded-md border border-line bg-surface p-4">
-                <p className="text-xs font-semibold text-ink">{item.label}</p>
-                <p className="mt-1 text-xs leading-relaxed text-ink-soft">{item.body}</p>
-              </div>
-            ))}
-          </div>
-          <p className="mt-4 text-sm text-ink-soft">
+        <div className="mt-6 rounded-lg border border-line bg-surface px-6 py-4">
+          <p className="text-sm text-ink-soft">
             <span className="font-medium text-ink">How escalation works.</span>{" "}
-            Agents guide guests through approved access and troubleshooting steps. When an issue needs local action, they contact your designated person and update the guest. For each listing we agree who is called first, who is called second and how long we wait before moving on. Each call is logged and appears in your handover notes.
+            Agents guide guests through approved access and troubleshooting steps. When an issue needs local action, they contact your designated person and update the guest through the agreed escalation process. For each listing we agree who is called first, who is called second and how long we wait before moving on. Each call we handle is logged and appears in your handover notes.
           </p>
+        </div>
+        <div className="mt-6">
+          <CoverageReviewButton variant="gold" ctaLocation="vras_afterhours_cta">
+            Book a Coverage Review
+          </CoverageReviewButton>
         </div>
       </Section>
 
-      {/* COVERAGE OPTIONS */}
+      {/* 4. COVERAGE */}
       <Section surface id="coverage">
         <SectionHeading
           eyebrow="Coverage Options"
@@ -342,14 +333,14 @@ export default function VacationRentalAnsweringServicePage() {
         </div>
         <p className="mt-5 text-sm text-ink-soft">
           <span className="font-medium text-ink">Phone calls and inboxes work differently.</span>{" "}
-          For calls, you set up forwarding from your listing number to ours. For messages, we get access to the inboxes you agree — Airbnb, Vrbo or your PMS — and monitor and reply there. Forwarding and inbox access are set up and tested separately for each listing.
+          For calls, you set up forwarding from your listing number to ours: always, outside set hours, or when you do not answer. For messages, we get access to the inboxes you agree, such as Airbnb, Vrbo or your PMS, and monitor and reply there. Forwarding and inbox access are set up and tested separately for each listing.
         </p>
         <p className="mt-3 text-sm text-ink-soft">
           24/7 availability does not mean unlimited handling. Coverage hours, channels, listings and workload allowances are confirmed during scoping.
         </p>
       </Section>
 
-      {/* CAPABILITIES */}
+      {/* 5. CAPABILITIES */}
       <Section id="capabilities">
         <SectionHeading
           eyebrow="What We Handle"
@@ -362,6 +353,7 @@ export default function VacationRentalAnsweringServicePage() {
               label: "Guest calls",
               body: "Live phone answering for arrivals, access, in-stay problems and emergencies. If you need an Airbnb answering service for guest calls, this is it.",
               href: null,
+              linkLabel: null,
             },
             {
               label: "Airbnb and Vrbo threads",
@@ -394,12 +386,13 @@ export default function VacationRentalAnsweringServicePage() {
           ))}
         </div>
         <p className="mt-4 text-sm text-ink-soft">
-          Every listing has its own rules, so agents work from the brief for the listing the guest is staying in. For benchmarks, read <Link href="/resources/insights/vacation-rental-response-standards" className="text-gold-dark underline underline-offset-2 hover:text-gold">vacation rental response standards</Link>.
+          Every listing has its own rules, so agents work from the brief for the listing the guest is staying in. For benchmarks, read{" "}
+          <Link href="/resources/insights/vacation-rental-response-standards" className="text-gold-dark underline underline-offset-2 hover:text-gold">vacation rental response standards</Link>.
         </p>
       </Section>
 
-      {/* WORKFLOWS */}
-      <Section surface>
+      {/* 6. WORKFLOWS */}
+      <Section surface id="workflows">
         <SectionHeading
           eyebrow="STR Workflows"
           title="Six workflows built around how a short-term rental runs."
@@ -428,14 +421,16 @@ export default function VacationRentalAnsweringServicePage() {
         </div>
       </Section>
 
-      {/* PRICING */}
+      {/* 7. PRICING */}
       <Section id="pricing">
         <SectionHeading
           eyebrow="Pricing"
           title="What a vacation rental answering service costs."
         />
         <div className="mt-8 rounded-lg border border-line bg-paper p-6 max-w-2xl">
-          <p className="text-base font-medium text-ink">From US$99/month for one listing, with 24/7 coverage included, subject to scope confirmation.</p>
+          <p className="text-base font-medium text-ink">
+            From US$99/month for one listing, with 24/7 coverage included, subject to scope confirmation.
+          </p>
           <p className="mt-3 text-sm leading-relaxed text-ink-soft">
             This is a shared-support starting configuration. Live phone answering and Airbnb, Vrbo and agreed messaging channels are part of it. No onboarding fees. Month-to-month with 30 days&apos; notice.
           </p>
@@ -451,18 +446,19 @@ export default function VacationRentalAnsweringServicePage() {
         </div>
       </Section>
 
-      {/* HUMAN JUDGEMENT */}
-      <Section surface>
+      {/* 8. TRAINED PEOPLE */}
+      <Section surface id="human-judgement">
         <div className="max-w-2xl">
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-gold-dark">Trained People</p>
           <h2 className="text-2xl font-medium text-ink">Trained people using your brief.</h2>
           <p className="mt-4 text-sm leading-relaxed text-ink-soft">
-            Guest Squad agents are trained people who follow your brief and use judgement within it — such as when a noise complaint needs your attention or when to contact you overnight. If you are comparing AI voice tools, check how they handle upset guests, access problems and escalation. Read more in <Link href="/resources/hotel-answering-service-vs-ai-voice" className="text-gold-dark underline underline-offset-2 hover:text-gold">human vs AI answering</Link>.
+            Guest Squad agents are trained people who follow your brief and use judgement within it — such as when a noise complaint needs your attention or when to contact you overnight. If you are comparing AI voice tools, check how they handle upset guests, access problems and escalation. Read more in{" "}
+            <Link href="/resources/hotel-answering-service-vs-ai-voice" className="text-gold-dark underline underline-offset-2 hover:text-gold">human vs AI answering</Link>.
           </p>
         </div>
       </Section>
 
-      {/* HOW IT WORKS */}
+      {/* 9. HOW IT WORKS */}
       <Section id="how-it-works">
         <SectionHeading
           eyebrow="How It Works"
@@ -507,8 +503,8 @@ export default function VacationRentalAnsweringServicePage() {
         </div>
       </Section>
 
-      {/* REPORTING */}
-      <Section surface>
+      {/* 10. REPORTING */}
+      <Section surface id="reporting">
         <SectionHeading
           eyebrow="Reporting"
           title="What you get back."
@@ -538,7 +534,7 @@ export default function VacationRentalAnsweringServicePage() {
       {/* TESTIMONIALS */}
       <TestimonialsBlock />
 
-      {/* MID-PAGE CTA */}
+      {/* MID-PAGE DARK CTA */}
       <div className="bg-ink">
         <div className="container flex flex-col items-start justify-between gap-5 py-8 sm:flex-row sm:items-center">
           <div>
@@ -551,7 +547,7 @@ export default function VacationRentalAnsweringServicePage() {
         </div>
       </div>
 
-      {/* FAQ + STICKY */}
+      {/* 11. FAQ + STICKY */}
       <Section surface>
         <div className="grid gap-10 lg:grid-cols-[1fr_320px] lg:items-start">
           {/* FAQ */}
@@ -603,7 +599,7 @@ export default function VacationRentalAnsweringServicePage() {
         </div>
       </Section>
 
-      {/* FINAL CTA */}
+      {/* 12. FINAL CTA */}
       <CtaSection
         title="Ready to stop being on call for your vacation rentals?"
         description="Book a coverage review and we will map your listings, channels and escalation contacts, and quote your coverage."

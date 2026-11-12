@@ -438,13 +438,10 @@ export default function HomePage() {
                 <Link
                   key={guide.href}
                   href={guide.href}
-                  className="flex items-start gap-4 py-4 hover:opacity-80 transition-opacity"
+                  className="flex flex-col py-4 hover:opacity-80 transition-opacity"
                 >
-                  <span className="mt-0.5 h-3.5 w-0.5 shrink-0 rounded-full bg-gold-dark" />
-                  <div>
-                    <p className="text-sm font-medium text-ink">{guide.label}</p>
-                    <p className="mt-0.5 text-xs text-ink-soft">{guide.detail}</p>
-                  </div>
+                  <p className="text-sm font-medium text-gold-dark underline underline-offset-2">{guide.label}</p>
+                  <p className="mt-0.5 text-xs text-ink-soft">{guide.detail}</p>
                 </Link>
               ))}
             </div>

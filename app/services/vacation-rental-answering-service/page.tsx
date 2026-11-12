@@ -13,7 +13,7 @@ import { buildMetadata, breadcrumbSchema, faqSchema } from "@/lib/seo";
 import { SITE } from "@/lib/site-data";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Vacation Rental Answering Service | 24/7 Guest Calls",
+  title: "Vacation Rental Answering Service with 24/7 Guest Support",
   description:
     "Vacation rental answering service: trained people answer guest calls and Airbnb and Vrbo messages 24/7, from late check-ins to lockouts. From US$99/month.",
   path: "/services/vacation-rental-answering-service",
@@ -186,7 +186,7 @@ export default function VacationRentalAnsweringServicePage() {
               Premium Vacation Rental Call Center
             </p>
             <h1 className="text-4xl font-medium leading-[1.08] tracking-tight text-ink md:text-5xl">
-              Vacation Rental Answering Service: 24/7 After-Hours Support
+              Vacation Rental Answering Service with 24/7 Guest Support
             </h1>
             <p className="mt-5 max-w-lg text-base font-medium leading-snug text-ink">
               Guest Support Operations for STR operators: live guest calls and agreed messaging channels covered 24/7, listing by listing.

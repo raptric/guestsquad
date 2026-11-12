@@ -5,6 +5,7 @@ import { CoverageReviewButton } from "@/components/site/coverage-review-button";
 import { ButtonLink } from "@/components/site/button-link";
 import { Section, SectionHeading } from "@/components/site/section";
 import { PlatformLogos } from "@/components/site/platform-logos";
+import { CtaSection } from "@/components/site/cta-section";
 import { buildMetadata, faqSchema, webPageSchema } from "@/lib/seo";
 import { JsonLd } from "@/components/site/json-ld";
 import { FaqAccordion } from "@/components/site/faq-accordion";
@@ -421,10 +422,10 @@ export default function HomePage() {
         </p>
       </Section>
 
-      {/* GUIDES */}
+      {/* GUIDES + FAQ + STICKY */}
       <Section id="guides" surface>
         <div className="grid gap-10 lg:grid-cols-[1fr_320px]">
-          {/* Guides list */}
+          {/* Left column: Guides then FAQ */}
           <div>
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-gold-dark">Guides</p>
             <h2 className="text-2xl font-medium text-ink">Guides for comparing your options.</h2>
@@ -446,6 +447,15 @@ export default function HomePage() {
                   </div>
                 </Link>
               ))}
+            </div>
+
+            {/* FAQ */}
+            <div id="faq" className="mt-10">
+              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-gold-dark">Common Questions</p>
+              <h2 className="text-2xl font-medium text-ink">Questions hotels and rental operators ask.</h2>
+              <div className="mt-6">
+                <FaqAccordion items={HOME_FAQS} defaultOpenCount={2} />
+              </div>
             </div>
           </div>
 
@@ -474,34 +484,7 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* FAQ */}
-      <Section id="faq" className="bg-[#F7F5F2]">
-        <SectionHeading
-          eyebrow="Common Questions"
-          title="Questions hotels and rental operators ask."
-          align="center"
-          className="mx-auto max-w-none"
-          titleClassName="text-2xl md:text-3xl"
-        />
-        <div className="mt-8">
-          <FaqAccordion items={HOME_FAQS} defaultOpenCount={2} />
-        </div>
-      </Section>
-
-      {/* FINAL CTA */}
-      <section className="border-t border-line bg-paper">
-        <div className="container py-16 text-center">
-          <h2 className="text-2xl font-medium text-ink md:text-3xl">Stop losing bookings to silence.</h2>
-          <p className="mt-4 mx-auto max-w-md text-sm leading-relaxed text-ink-soft">
-            Book a coverage review and see how Guest Squad would cover your reservations, guest messages, OTA inboxes and after-hours calls.
-          </p>
-          <div className="mt-7">
-            <CoverageReviewButton variant="gold" size="lg" ctaLocation="homepage_final_cta">
-              Book a Coverage Review
-            </CoverageReviewButton>
-          </div>
-        </div>
-      </section>
+      <CtaSection />
     </>
   );
 }

@@ -1,113 +1,87 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { CheckCircle2, ArrowRight, XCircle } from "lucide-react";
 import { Section, SectionHeading } from "@/components/site/section";
+import { CtaSection } from "@/components/site/cta-section";
 import { CoverageReviewButton } from "@/components/site/coverage-review-button";
 import { Breadcrumbs } from "@/components/site/breadcrumbs";
 import { JsonLd } from "@/components/site/json-ld";
 import { FaqAccordion } from "@/components/site/faq-accordion";
-import { serviceSchema, breadcrumbSchema, faqSchema, buildMetadata } from "@/lib/seo";
+import { ServicePageViewTracker } from "@/components/site/service-page-view-tracker";
+import { buildMetadata, breadcrumbSchema, faqSchema } from "@/lib/seo";
 import { SITE } from "@/lib/site-data";
 
-export const metadata: Metadata = buildMetadata({
-  title: "Guest Messaging and Support for Hotels and Vacation Rentals",
-  description:
-    "Guest Squad handles guest messages, in-stay requests and arrival coordination across SMS, WhatsApp, email and direct channels using your property information and procedures.",
-  path: "/services/guest-messaging",
-});
+const PAGE_TITLE = "Hotel Guest Messaging: SMS, WhatsApp and Email | Guest Squad";
+
+export const metadata: Metadata = {
+  ...buildMetadata({
+    title: PAGE_TITLE,
+    description:
+      "Hotel guest messaging by trained people: pre-arrival, in-stay and late-night guest texts, WhatsApp and email answered from your property brief and rules.",
+    path: "/services/guest-messaging",
+  }),
+  title: { absolute: PAGE_TITLE },
+};
 
 const PATH = "/services/guest-messaging";
 
-const CHANNELS = ["SMS", "WhatsApp", "Email", "Live Chat", "Direct Messages"];
-
-const HANDLES = [
-  "Pre-arrival messages: check-in time, parking, access and directions",
-  "In-stay requests: housekeeping, maintenance reports and local recommendations",
-  "Special requests and room preference confirmations before arrival",
-  "Late check-out or early check-in requests within your agreed policy",
-  "General guest questions about the property, amenities and surrounding area",
-];
-
-const ESCALATES = [
-  "Maintenance or safety issues requiring immediate on-site action",
-  "Complaints, compensation requests or negative situation management",
-  "Requests outside your agreed property brief or permissions",
-  "Situations where a guest needs to speak with the property directly",
-];
-
-const SERVICES = [
-  {
-    eyebrow: "For individual hotels",
-    name: "Hotel Answering Service",
-    slug: "hotel-answering-service",
-    body: "Guest messaging sits alongside phone and OTA inbox coverage. Pre-arrival questions, in-stay requests and local recommendations are handled using the same property brief — consistent answers whether a guest texts, emails or calls.",
-  },
-  {
-    eyebrow: "For hotel groups",
-    name: "Central Reservations",
-    slug: "central-reservations",
-    body: "Each property's guests are handled to that property's own brief, local contacts and procedures. A guest at one hotel gets answers specific to that property — not a group-wide generic response.",
-  },
-  {
-    eyebrow: "For vacation rental operators",
-    name: "Vacation Rental Answering Service",
-    slug: "vacation-rental-answering-service",
-    body: "Guest messaging handles the full listing communication flow: pre-arrival access instructions, house rules, check-in details, in-stay questions and cleaner coordination. Each listing has its own brief.",
-  },
-];
-
 const FAQS = [
   {
-    q: "Which Guest Squad services include guest messaging?",
-    a: "Guest messaging and support can be included within your agreed service scope across Hotel Answering Service for individual hotels, Central Reservations for hotel groups, or Vacation Rental Answering Service for listing portfolios. The channels covered and response hours are confirmed in your arrangement.",
-  },
-  {
-    q: "Which channels do you cover for guest messaging?",
-    a: "SMS, WhatsApp, email and direct messaging are covered. Live chat can be included where your platform supports it. The specific channels in scope are confirmed before your arrangement starts, based on what your guests actually use and what access is available.",
+    q: "Which channels do you cover?",
+    a: "SMS, WhatsApp, email and direct messaging. Live chat can be included where your platform supports it. The channels in scope are confirmed before coverage starts, based on what your guests use and what access is available.",
   },
   {
     q: "How are in-stay maintenance issues handled?",
-    a: "Minor requests — extra towels, thermostat questions, local directions — are handled directly using your property brief. Issues requiring on-site action, such as a maintenance fault or safety concern, are escalated immediately to your designated contact and the guest is kept informed while that happens.",
+    a: "Minor requests are handled directly from your property brief. Issues that need on-site action, such as a fault or a safety concern, go to your designated contact, and the guest is kept informed.",
   },
   {
     q: "Can you handle messages in languages other than English?",
-    a: "English is the primary language for all arrangements. Where guests message in another language, we handle in English where the guest is likely to understand it, or escalate where a language barrier would affect the quality of the response. This is confirmed in your brief.",
+    a: "English is the primary language. If a guest writes in another language, we reply in English where the guest is likely to understand it, or pass the message to your team where a language barrier would affect the answer. This is agreed in your brief.",
   },
   {
     q: "What is the difference between guest messaging and OTA inbox management?",
-    a: "OTA inbox management covers guest threads inside OTA platforms — Booking.com, Airbnb, Expedia. Guest messaging covers direct channels: SMS, WhatsApp, email, live chat. The two can run alongside each other within the same arrangement, covering the full communication picture.",
+    a: "OTA inbox management covers threads inside Booking.com, Airbnb, Expedia and similar platforms. Guest messaging covers direct channels: SMS, WhatsApp, email and live chat. The two can run together.",
   },
 ];
 
 export default function GuestMessagingPage() {
   return (
     <>
+      <ServicePageViewTracker serviceName="guest-messaging" />
       <JsonLd
         data={[
-          serviceSchema({
-            name: "Guest Messaging and Support",
+          {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "@id": `${SITE.url}${PATH}#service`,
+            name: "Hotel Guest Messaging",
+            serviceType: "Hotel Guest Messaging Service",
             description:
-              "Guest Squad handles guest messages, in-stay requests and arrival coordination across SMS, WhatsApp, email and direct channels using your property information and procedures.",
-            path: PATH,
-            serviceOutput:
-              "Handled guest messages across SMS, WhatsApp, email and direct channels with property-specific responses, in-stay request coordination and escalation management.",
-            audienceTypes: [
-              "Independent Hotel",
-              "Boutique Hotel",
-              "Hotel Group",
-              "Vacation Rental Operator",
-              "Short-Term Rental Operator",
-              "Airbnb Host",
+              "Hotel guest messaging by trained people: pre-arrival, in-stay and late-night guest texts, WhatsApp and email answered from your property brief and rules.",
+            url: `${SITE.url}${PATH}`,
+            provider: { "@id": `${SITE.url}/#organization` },
+            areaServed: [
+              { "@type": "Country", name: "US" },
+              { "@type": "Country", name: "GB" },
+              { "@type": "Country", name: "CA" },
+              { "@type": "Country", name: "IE" },
+              { "@type": "Country", name: "AU" },
+              { "@type": "Country", name: "NZ" },
             ],
-          }),
+            audience: [
+              { "@type": "Audience", audienceType: "Independent Hotel" },
+              { "@type": "Audience", audienceType: "Hotel Group" },
+              { "@type": "Audience", audienceType: "Vacation Rental Operator" },
+              { "@type": "Audience", audienceType: "Serviced Apartment Operator" },
+            ],
+          },
           {
             "@context": "https://schema.org",
             "@type": "WebPage",
             "@id": `${SITE.url}${PATH}#webpage`,
             url: `${SITE.url}${PATH}`,
-            name: "Guest Messaging and Support for Hotels and Vacation Rentals",
+            name: PAGE_TITLE,
             description:
-              "Guest Squad handles guest messages, in-stay requests and arrival coordination across SMS, WhatsApp, email and direct channels using your property information and procedures.",
+              "Hotel guest messaging by trained people: pre-arrival, in-stay and late-night guest texts, WhatsApp and email answered from your property brief and rules.",
             inLanguage: "en",
             isPartOf: { "@id": `${SITE.url}/#website` },
             mainEntity: { "@id": `${SITE.url}${PATH}#service` },
@@ -115,7 +89,7 @@ export default function GuestMessagingPage() {
           breadcrumbSchema([
             { name: "Home", path: "/" },
             { name: "Services", path: "/services" },
-            { name: "Guest Messaging & Support", path: PATH },
+            { name: "Hotel Guest Messaging", path: PATH },
           ]),
           faqSchema(FAQS),
         ]}
@@ -125,281 +99,368 @@ export default function GuestMessagingPage() {
         items={[
           { name: "Home", path: "/" },
           { name: "Services", path: "/services" },
-          { name: "Guest Messaging & Support", path: PATH },
+          { name: "Hotel Guest Messaging", path: PATH },
         ]}
       />
 
       {/* HERO */}
       <section className="border-b border-line bg-paper">
-        <div className="container py-14 md:py-18">
-          <div className="grid gap-10 lg:grid-cols-[1fr_auto] lg:items-center lg:gap-16">
-            <div>
-              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-gold-dark">
-                Capability
-              </p>
-              <h1 className="max-w-2xl text-4xl font-medium leading-[1.08] tracking-tight text-ink md:text-5xl">
-                Guest Messaging and Support for Hotels and Vacation Rentals
-              </h1>
-              <p className="mt-5 max-w-2xl text-lg leading-relaxed text-ink-soft">
-                Guest Squad handles guest messages, in-stay requests and arrival coordination using
-                your property information and procedures. Guest messaging can be included within
-                your agreed service scope across{" "}
-                <Link href="/services/hotel-answering-service" className="text-ink underline underline-offset-2 hover:text-gold-dark">
-                  Hotel Answering Service
-                </Link>
-                ,{" "}
-                <Link href="/services/central-reservations" className="text-ink underline underline-offset-2 hover:text-gold-dark">
-                  Central Reservations
-                </Link>{" "}
-                and{" "}
-                <Link href="/services/vacation-rental-answering-service" className="text-ink underline underline-offset-2 hover:text-gold-dark">
-                  Vacation Rental Answering Service
-                </Link>
-                .
-              </p>
-              <div className="mt-7 flex flex-wrap gap-2">
-                {CHANNELS.map((c) => (
-                  <span
-                    key={c}
-                    className="rounded-full border border-line bg-surface px-3 py-1 text-xs font-medium text-ink-soft"
-                  >
-                    {c}
-                  </span>
-                ))}
-              </div>
-            </div>
-            <div className="hidden lg:block">
-              <img
-                src="/brand-assets/guest-messaging-hero.svg"
-                alt="Guest messaging dashboard showing SMS, WhatsApp, email and direct messages handled across channels"
-                width={520}
-                height={380}
-                className="w-[420px] xl:w-[480px]"
-              />
-            </div>
+        <div className="container py-16 md:py-20">
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-gold-dark">
+            Capability
+          </p>
+          <h1 className="max-w-3xl text-4xl font-medium leading-[1.08] tracking-tight text-ink md:text-5xl">
+            Hotel Guest Messaging by SMS, WhatsApp and Email
+          </h1>
+          <p className="mt-5 max-w-2xl text-base font-medium leading-snug text-ink">
+            Guest Support Operations for direct guest channels: trained hospitality agents answer texts, WhatsApp and email from your property brief, for hotels, serviced apartments and vacation rentals.
+          </p>
+          <p className="mt-4 max-w-2xl text-base leading-relaxed text-ink-soft">
+            Hotel guest messaging is the texts, WhatsApp messages and emails guests send before arrival and during their stay: check-in times, parking, access codes, late check-out, an air conditioner that stops working at midnight. Guest Squad answers them from your property brief during the hours you agree, passes anything that needs someone on site to your team, and sends a summary at shift end. Guest messaging is included in our{" "}
+            <Link href="/services/hotel-answering-service" className="text-gold-dark underline underline-offset-2 hover:text-gold">
+              hotel answering service
+            </Link>{" "}
+            from US$149/month, subject to scope confirmation, and can be scoped into vacation rental and multi-property plans.
+          </p>
+          <div className="mt-5 flex flex-wrap gap-2">
+            {["SMS", "WhatsApp", "Email", "Live chat", "Direct messages"].map((c) => (
+              <span
+                key={c}
+                className="rounded-full border border-line bg-surface px-3 py-1 text-xs font-medium text-ink-soft"
+              >
+                {c}
+              </span>
+            ))}
+          </div>
+          <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+            <CoverageReviewButton variant="gold" size="lg" ctaLocation="guest_messaging_hero">
+              Book a Coverage Review
+            </CoverageReviewButton>
+            <Link
+              href="/pricing"
+              className="inline-flex items-center justify-center rounded-lg border border-line px-6 py-3 text-sm font-medium text-ink transition-colors hover:border-ink/40 hover:bg-surface"
+            >
+              See pricing
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* WHAT'S COVERED */}
-      <Section>
-        <div className="grid gap-10 md:grid-cols-2 md:gap-16">
+      {/* SCOPE */}
+      <Section id="scope">
+        <SectionHeading
+          eyebrow="Scope"
+          title="What hotel guest messaging covers (and what it doesn&apos;t)."
+        />
+        <div className="mt-5 max-w-2xl space-y-4 text-sm leading-relaxed text-ink-soft">
+          <p>
+            Guest messaging covers direct channels: SMS, WhatsApp, email and live chat where your setup supports it. Agents reply using your property brief: check-in procedures, parking, access codes, amenity hours, local contacts and escalation paths.
+          </p>
+          <p>
+            It does not cover message threads inside OTA platforms such as Booking.com, Airbnb and Expedia. Those fall under{" "}
+            <Link href="/services/ota-inbox-management" className="text-gold-dark underline underline-offset-2 hover:text-gold">
+              OTA inbox management
+            </Link>
+            , which can run alongside guest messaging in the same arrangement.
+          </p>
+        </div>
+      </Section>
+
+      {/* WE ANSWER / WE ESCALATE */}
+      <Section surface id="we-answer">
+        <SectionHeading
+          eyebrow="What we handle"
+          title="Pre-arrival, in-stay and late-night messages we answer."
+        />
+        <div className="mt-8 grid gap-8 md:grid-cols-2">
           <div>
-            <SectionHeading
-              eyebrow="Scope"
-              title="What guest messaging covers"
-            />
-            <p className="mt-4 text-sm leading-relaxed text-ink-soft">
-              Guest messaging covers direct communication channels — SMS, WhatsApp, email and live
-              chat where available. Agents respond using your property brief: check-in procedures,
-              parking, access codes, local contacts and your escalation paths.
-            </p>
-            <p className="mt-3 text-sm leading-relaxed text-ink-soft">
-              It does not cover OTA platform message threads (Booking.com, Airbnb, Expedia). Those
-              fall under{" "}
-              <Link href="/services/ota-inbox-management" className="text-gold-dark underline underline-offset-2 hover:text-gold">
-                OTA Inbox Management
-              </Link>
-              , which can run alongside guest messaging within the same arrangement.
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.15em] text-ink-muted">We answer</p>
+            <ul className="space-y-2.5">
+              {[
+                "Pre-arrival: check-in time, parking, access and directions",
+                "Special requests: room preferences and arrival notes confirmed before the stay",
+                "Timing changes: late check-out or early check-in within your agreed policy",
+                "In-stay: housekeeping requests, maintenance reports and local recommendations",
+                "General questions about the property, amenities and surrounding area",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-2.5 text-sm text-ink-soft">
+                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold-dark" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <p className="mt-4 text-sm text-ink-soft">
+              Guests get answers that fit their stay, not a generic template, because agents work from your property&apos;s own information.
             </p>
           </div>
-          <div className="grid gap-6 sm:grid-cols-2">
-            <div>
-              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.15em] text-ink-muted">
-                We handle
-              </p>
-              <ul className="space-y-2">
-                {HANDLES.map((item) => (
-                  <li key={item} className="flex items-start gap-2">
-                    <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-green-600" />
-                    <span className="text-sm text-ink-soft">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.15em] text-ink-muted">
-                We escalate
-              </p>
-              <ul className="space-y-2">
-                {ESCALATES.map((item) => (
-                  <li key={item} className="flex items-start gap-2">
-                    <XCircle className="mt-0.5 h-4 w-4 shrink-0 text-ink-muted" />
-                    <span className="text-sm text-ink-soft">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+          <div id="we-escalate">
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.15em] text-ink-muted">We escalate</p>
+            <ul className="space-y-2.5">
+              {[
+                "Maintenance or safety issues that need someone on site",
+                "Complaints and compensation requests",
+                "Requests outside your property brief or permissions",
+                "Situations where the guest needs to speak to the property directly",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-2.5 text-sm text-ink-soft">
+                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-ink-muted/50" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <p className="mt-4 text-sm text-ink-soft">
+              Minor requests (extra towels, thermostat questions, directions) are handled directly. When something needs on-site action, it goes to your designated contact and the guest is kept updated.
+            </p>
           </div>
         </div>
       </Section>
 
-      {/* HOW CONTEXT DIFFERS BY SERVICE */}
-      <Section surface>
+      {/* BY PROPERTY TYPE */}
+      <Section id="by-property-type">
         <SectionHeading
-          eyebrow="Guest messaging within your service"
-          title="Same capability. Different operating context."
-          description="The channels and response scope are agreed per arrangement. What changes is the property structure, the brief each agent works from, and how guest messaging fits alongside other responsibilities."
+          eyebrow="By property type"
+          title="Guest messaging service for hotels, groups and vacation rentals."
+          description="Channels, coverage hours and escalation paths are confirmed for each arrangement."
         />
-        <div className="mt-10 grid gap-5 md:grid-cols-3">
-          {SERVICES.map((svc) => (
-            <div
-              key={svc.slug}
-              className="flex flex-col rounded-lg border border-line bg-paper p-6"
-            >
-              <p className="text-xs font-semibold uppercase tracking-[0.15em] text-gold-dark">
-                {svc.eyebrow}
-              </p>
-              <h3 className="mt-2 text-base font-medium text-ink">{svc.name}</h3>
-              <p className="mt-3 grow text-sm leading-relaxed text-ink-soft">{svc.body}</p>
-              <Link
-                href={`/services/${svc.slug}`}
-                className="mt-5 inline-flex items-center gap-1 text-xs font-medium text-gold-dark hover:text-gold"
-              >
-                Explore {svc.name}
-                <ArrowRight className="h-3 w-3" />
-              </Link>
+        <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+          {[
+            {
+              eyebrow: "Independent hotels",
+              body: "Guest messaging sits alongside phone and OTA inbox coverage, using one property brief, so guests get the same answer whether they text, email or call. For one hotel, it's part of our hotel answering service.",
+              href: "/services/hotel-answering-service",
+              linkLabel: "Hotel answering service",
+            },
+            {
+              eyebrow: "Hotel groups",
+              body: "Each property's guests are answered from that property's own brief, contacts and procedures. See our hotel reservation call center for multi-property coverage.",
+              href: "/services/central-reservations",
+              linkLabel: "Central Reservations Desk",
+            },
+            {
+              eyebrow: "Serviced apartments and extended stays",
+              body: "Longer stays bring a steady flow of messages: maintenance, housekeeping schedules, parcels and access changes. We handle these within your procedures and pass on anything that needs your team.",
+              href: null,
+              linkLabel: null,
+            },
+            {
+              eyebrow: "Vacation rentals",
+              body: "For listings, guest messaging covers access instructions, house rules, check-in details and cleaner coordination. For messages inside the Airbnb app, see our Airbnb guest services.",
+              href: "/services/vacation-rental-answering-service",
+              linkLabel: "Vacation rental answering service",
+            },
+          ].map((item) => (
+            <div key={item.eyebrow} className="flex flex-col rounded-lg border border-line bg-paper p-5">
+              <p className="text-xs font-semibold uppercase tracking-[0.15em] text-gold-dark">{item.eyebrow}</p>
+              <p className="mt-2 grow text-sm leading-relaxed text-ink-soft">{item.body}</p>
+              {item.href && (
+                <Link
+                  href={item.href}
+                  className="mt-4 inline-block text-xs text-gold-dark underline underline-offset-2 hover:text-gold"
+                >
+                  {item.linkLabel} →
+                </Link>
+              )}
             </div>
           ))}
         </div>
-        <p className="mt-6 text-xs text-ink-muted">
-          Channels, coverage hours and escalation paths are confirmed for each arrangement.
-        </p>
       </Section>
 
-      {/* EVIDENCE */}
-      <Section>
-        <div className="grid gap-10 md:grid-cols-2 md:items-center md:gap-16">
+      {/* HANDOVER + SAMPLE LOG */}
+      <Section surface id="handover">
+        <div className="grid gap-10 md:grid-cols-2 md:items-start">
           <div>
             <SectionHeading
-              eyebrow="How it works in practice"
-              title="Every guest conversation handled to your property brief."
+              eyebrow="Logging and handover"
+              title="Conversations logged and handed over."
             />
             <p className="mt-4 text-sm leading-relaxed text-ink-soft">
-              Messages are handled using your property-specific information: check-in procedures,
-              parking details, amenity hours, local contacts and escalation paths. Guests get real
-              answers relevant to their specific stay — not generic replies copied from a template.
+              At the end of each shift, the messages handled, actions taken and escalations raised are summarised for your team. You can see what happened without monitoring the channels yourself.
             </p>
-            <p className="mt-3 text-sm leading-relaxed text-ink-soft">
-              At the end of each shift, messages handled, actions taken and escalations raised are
-              summarised and passed to your team. You have full visibility without monitoring
-              channels yourself.
+            <p className="mt-3 text-sm text-ink-soft">
+              Message logs and escalation notes are available on request.
             </p>
           </div>
-          <div className="rounded-xl border border-line bg-surface p-6">
+          <div className="rounded-lg border border-line bg-paper p-6">
             <div className="mb-4 flex items-center justify-between">
-              <p className="text-xs font-semibold uppercase tracking-[0.15em] text-ink-muted">
-                Guest message log
-              </p>
-              <span className="rounded-full bg-paper px-2.5 py-0.5 text-xs text-ink-muted border border-line">
-                Sample
-              </span>
+              <p className="text-xs font-semibold uppercase tracking-[0.15em] text-ink-muted">Guest message log</p>
+              <span className="rounded-full border border-line bg-surface px-2.5 py-0.5 text-xs text-ink-muted">Sample</span>
             </div>
-            <div className="space-y-3">
+            <div className="space-y-2">
               {[
-                { channel: "SMS", action: "Early check-in — 11am arrival", result: "Confirmed — room available", status: "done" },
-                { channel: "WhatsApp", action: "Parking instructions query", result: "Replied with directions", status: "done" },
-                { channel: "Email", action: "Maintenance — AC not working", result: "Escalated to property", status: "escalated" },
-                { channel: "SMS", action: "Late check-out — 1pm requested", result: "Confirmed — within policy", status: "done" },
+                { channel: "SMS", message: "Early check-in, 11am arrival", outcome: "Confirmed, room available", escalated: false },
+                { channel: "WhatsApp", message: "Parking instructions", outcome: "Replied with directions", escalated: false },
+                { channel: "Email", message: "Maintenance: AC not working", outcome: "Escalated to property", escalated: true },
+                { channel: "SMS", message: "Late check-out, 1pm requested", outcome: "Confirmed, within policy", escalated: false },
               ].map((row) => (
-                <div key={row.action} className="flex items-start justify-between gap-3 rounded-lg bg-paper px-4 py-3 border border-line">
+                <div key={row.message} className="flex items-start justify-between gap-3 rounded-lg border border-line bg-surface px-4 py-3">
                   <div>
                     <p className="text-xs font-medium text-ink">{row.channel}</p>
-                    <p className="text-xs text-ink-soft mt-0.5">{row.action}</p>
+                    <p className="mt-0.5 text-xs text-ink-soft">{row.message}</p>
                   </div>
-                  <span className={`shrink-0 rounded-full px-2.5 py-0.5 text-xs font-medium ${row.status === "done" ? "bg-green-50 text-green-700" : "bg-amber-50 text-amber-700"}`}>
-                    {row.result}
+                  <span className={`shrink-0 rounded-full px-2.5 py-0.5 text-xs font-medium ${row.escalated ? "bg-amber-50 text-amber-700" : "bg-green-50 text-green-700"}`}>
+                    {row.outcome}
                   </span>
                 </div>
               ))}
             </div>
-            <p className="mt-4 text-xs text-ink-muted">
-              Full message logs and escalation notes available on request.
-            </p>
           </div>
         </div>
       </Section>
 
-      {/* RESOURCE LINKS */}
-      <Section surface>
+      {/* PRICING */}
+      <Section id="pricing">
+        <div className="grid gap-8 lg:grid-cols-2 lg:items-start">
+          <div className="rounded-lg border border-line bg-paper p-7">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold-dark">Pricing</p>
+            <p className="mt-3 text-sm font-medium text-ink mb-4">What guest messaging costs</p>
+            <ul className="flex flex-col gap-4">
+              {[
+                {
+                  who: "One hotel",
+                  detail: "Included in the hotel answering service, from US$149/month, subject to scope confirmation. The starting price covers after-hours or overflow coverage, with guest messaging and OTA inbox support included within an agreed workload allowance.",
+                },
+                {
+                  who: "Vacation rentals",
+                  detail: "Can be scoped into the vacation rental answering service, from US$99/month for one listing with 24/7 coverage.",
+                },
+                {
+                  who: "Hotel groups",
+                  detail: "Can be scoped into a Central Reservations Desk, from US$299/month for two properties with after-hours coverage.",
+                },
+              ].map((item) => (
+                <li key={item.who} className="border-b border-line pb-4 last:border-b-0 last:pb-0">
+                  <p className="text-sm font-semibold text-ink">{item.who}</p>
+                  <p className="mt-1 text-sm leading-relaxed text-ink-soft">{item.detail}</p>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-5 text-sm text-ink-soft">
+              24/7 coverage is available for hotels and hotel groups and is quoted to your volume.{" "}
+              <Link href="/pricing" className="text-gold-dark underline underline-offset-2 hover:text-gold">
+                See pricing
+              </Link>
+              .
+            </p>
+            <p className="mt-2 text-xs text-ink-muted">
+              We work with properties in the US, UK, Canada, Ireland, Australia and New Zealand.
+            </p>
+          </div>
+
+          <div className="flex flex-col gap-6">
+            <div className="rounded-lg border border-line bg-surface p-7">
+              <p className="mb-2 text-sm font-semibold text-ink">Find the right guest messaging coverage.</p>
+              <p className="mb-5 text-sm text-ink-soft">
+                Tell us your property type, the channels your guests use and your typical message volume. We&apos;ll confirm the arrangement, the access needed and the price in writing.
+              </p>
+              <CoverageReviewButton variant="gold" ctaLocation="guest_messaging_pricing_cta" className="w-full justify-center">
+                Book a Coverage Review
+              </CoverageReviewButton>
+              <p className="mt-4 text-xs text-ink-muted">
+                Useful for the conversation: your guest channels, approximate daily message volume, and whether OTA inbox coverage is also needed.
+              </p>
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      {/* GUIDES */}
+      <Section surface id="guides">
         <SectionHeading
-          eyebrow="Guides &amp; checklists"
-          title="Useful reading on guest messaging."
+          eyebrow="Guides and templates"
+          title="Guest messaging guides and templates."
         />
-        <div className="mt-8 grid gap-4 sm:grid-cols-3">
+        <div className="mt-6 grid gap-4 sm:grid-cols-2">
           {[
             {
-              label: "Setup guide",
-              title: "What to include in a guest messaging brief",
-              body: "The property information agents need to handle guest messages well: check-in procedures, access codes, local contacts, amenity hours and your escalation paths.",
+              label: "Template",
+              title: "Hotel guest messaging SOP template",
+              body: "What to include in a guest messaging brief, from check-in procedures to escalation paths.",
               href: "/resources/hotel-guest-messaging-sop-template",
             },
             {
-              label: "Checklist",
-              title: "Guest messaging channel setup checklist",
-              body: "What to confirm before handing over guest messaging: channel access, response expectations, out-of-hours coverage and how escalations are routed.",
-              href: "/resources/after-hours-hotel-support-checklist",
-            },
-            {
-              label: "Operations",
-              title: "Handling in-stay guest requests at scale",
-              body: "How hotels and rental operators manage guest communication across SMS, WhatsApp and email without a dedicated guest services team on call.",
-              href: "/resources/hotel-front-desk-overflow-support",
+              label: "Insight",
+              title: "Hotel guest messaging from pre-arrival to post-checkout",
+              body: "Which messages guests send at each stage of a stay.",
+              href: "/resources/insights/hotel-guest-messaging-lifecycle",
             },
           ].map((item) => (
             <div key={item.title} className="rounded-lg border border-line bg-paper p-5">
-              <p className="text-xs font-semibold uppercase tracking-[0.15em] text-gold-dark">
-                {item.label}
-              </p>
-              <p className="mt-2 text-sm font-medium text-ink leading-snug">{item.title}</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.15em] text-gold-dark">{item.label}</p>
+              <p className="mt-2 text-sm font-medium leading-snug text-ink">{item.title}</p>
               <p className="mt-2 text-sm leading-relaxed text-ink-soft">{item.body}</p>
               <Link
                 href={item.href}
-                className="mt-4 inline-flex items-center gap-1 text-xs font-medium text-gold-dark hover:text-gold"
+                className="mt-4 inline-block text-xs text-gold-dark underline underline-offset-2 hover:text-gold"
               >
-                Read guide
-                <ArrowRight className="h-3 w-3" />
+                Read →
               </Link>
             </div>
           ))}
         </div>
       </Section>
 
-      {/* FAQ + STICKY CTA */}
-      <Section>
-        <div className="grid gap-12 lg:grid-cols-[3fr_2fr] lg:gap-16">
+      {/* MID-PAGE DARK CTA */}
+      <div className="bg-ink">
+        <div className="container flex flex-col items-start justify-between gap-5 py-8 sm:flex-row sm:items-center">
           <div>
-            <SectionHeading
-              eyebrow="Questions"
-              title="Guest messaging and support, explained."
-            />
-            <div className="mt-8">
-              <FaqAccordion items={FAQS} />
+            <p className="text-base font-medium text-paper">Find the right guest messaging coverage.</p>
+            <p className="mt-1 text-sm text-paper/60">
+              Tell us your property type, the channels your guests use and your message volume.
+            </p>
+          </div>
+          <CoverageReviewButton variant="gold" size="sm" ctaLocation="guest_messaging_mid_cta">
+            Book a Coverage Review
+          </CoverageReviewButton>
+        </div>
+      </div>
+
+      {/* FAQ + STICKY */}
+      <Section surface>
+        <div className="grid gap-10 lg:grid-cols-[1fr_320px] lg:items-start">
+          <div className="rounded-lg border border-line bg-paper p-7">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-gold-dark">Questions</p>
+            <h2 className="text-2xl font-medium text-ink">Hotel guest messaging questions.</h2>
+            <div className="mt-6">
+              <FaqAccordion items={FAQS} defaultOpenCount={2} />
             </div>
           </div>
+
           <div className="h-fit rounded-lg border border-line bg-paper p-7 lg:sticky lg:top-8">
-            <p className="text-xs font-semibold uppercase tracking-[0.15em] text-gold-dark">
-              Next step
-            </p>
-            <h3 className="mt-2 text-xl font-medium text-ink">
-              Find the right guest messaging coverage
+            <p className="mb-2 text-xs font-semibold uppercase tracking-[0.15em] text-gold-dark">Next Step</p>
+            <h3 className="mb-3 text-xl font-medium text-ink">
+              Find the right guest messaging coverage.
             </h3>
-            <p className="mt-3 text-sm leading-relaxed text-ink-soft">
-              Tell us your property type, the channels your guests use and your typical message
-              volume. We&apos;ll confirm the right arrangement and what access is needed.
+            <p className="mb-5 text-sm leading-relaxed text-ink-soft">
+              Tell us your property type, the channels your guests use and your typical message volume. We&apos;ll confirm the arrangement, the access needed and the price in writing.
             </p>
-            <div className="mt-5">
-              <CoverageReviewButton variant="gold" size="default" ctaLocation="guest_messaging_faq_cta">
-                Book a Coverage Review
-              </CoverageReviewButton>
+            <CoverageReviewButton variant="gold" ctaLocation="guest_messaging_faq_cta" className="w-full justify-center">
+              Book a Coverage Review
+            </CoverageReviewButton>
+            <div className="mt-6 border-t border-line pt-5">
+              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.14em] text-ink-muted">Related services</p>
+              <div className="flex flex-col gap-2">
+                <Link href="/services/hotel-answering-service" className="text-sm text-gold-dark underline underline-offset-2 hover:text-gold">
+                  Hotel answering service
+                </Link>
+                <Link href="/services/ota-inbox-management" className="text-sm text-gold-dark underline underline-offset-2 hover:text-gold">
+                  OTA inbox management
+                </Link>
+                <Link href="/services/vacation-rental-answering-service" className="text-sm text-gold-dark underline underline-offset-2 hover:text-gold">
+                  Vacation rental answering service
+                </Link>
+                <Link href="/services/airbnb-guest-support" className="text-sm text-gold-dark underline underline-offset-2 hover:text-gold">
+                  Airbnb guest services
+                </Link>
+              </div>
             </div>
-            <p className="mt-4 text-xs text-ink-muted">
-              Useful for the conversation: your guest channels, approximate daily message volume,
-              and whether OTA inbox coverage is also needed.
-            </p>
           </div>
         </div>
       </Section>
+
+      <CtaSection
+        title="Find the right guest messaging coverage for your property."
+        description="Tell us your property type, the channels your guests use and your typical message volume. We will confirm the arrangement, the access needed and the price in writing."
+      />
     </>
   );
 }

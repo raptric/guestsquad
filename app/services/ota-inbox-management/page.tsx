@@ -1,119 +1,91 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { CheckCircle2, ArrowRight, XCircle } from "lucide-react";
 import { Section, SectionHeading } from "@/components/site/section";
+import { CtaSection } from "@/components/site/cta-section";
 import { CoverageReviewButton } from "@/components/site/coverage-review-button";
 import { Breadcrumbs } from "@/components/site/breadcrumbs";
 import { JsonLd } from "@/components/site/json-ld";
 import { FaqAccordion } from "@/components/site/faq-accordion";
-import { serviceSchema, breadcrumbSchema, faqSchema, buildMetadata } from "@/lib/seo";
+import { ServicePageViewTracker } from "@/components/site/service-page-view-tracker";
+import { buildMetadata, breadcrumbSchema, faqSchema } from "@/lib/seo";
 import { SITE } from "@/lib/site-data";
 
-export const metadata: Metadata = buildMetadata({
-  title: "OTA Inbox Management for Hotels and Vacation Rentals",
-  description:
-    "Guest Squad monitors and responds to OTA guest messages on Booking.com, Expedia, Airbnb and Vrbo using your property information, booking policies and escalation procedures.",
-  path: "/services/ota-inbox-management",
-});
+const PAGE_TITLE = "OTA Inbox Management for Hotels and Rentals | Guest Squad";
+
+export const metadata: Metadata = {
+  ...buildMetadata({
+    title: PAGE_TITLE,
+    description:
+      "OTA inbox management for hotels and vacation rentals: Booking.com, Expedia, Airbnb and Vrbo guest messages answered from your property brief and policies.",
+    path: "/services/ota-inbox-management",
+  }),
+  title: { absolute: PAGE_TITLE },
+};
 
 const PATH = "/services/ota-inbox-management";
 
-const PLATFORMS = [
-  "Booking.com",
-  "Expedia",
-  "Airbnb",
-  "Vrbo",
-  "Hotels.com",
-];
-
-const HANDLES = [
-  "Pre-booking questions about availability, rates and policies",
-  "Post-booking questions about check-in, parking and special requests",
-  "Date changes, cancellations and modifications within your agreed policy",
-  "Arrival coordination and in-stay message threads",
-  "Review responses in your brand voice (where included in your arrangement)",
-];
-
-const ESCALATES = [
-  "Cancellation disputes, refund requests or chargeback situations",
-  "Compensation offers or exceptions requiring your approval",
-  "OTA policy violations or listing integrity issues",
-  "Availability conflicts or PMS sync errors",
-];
-
-const SERVICES = [
-  {
-    eyebrow: "For individual hotels",
-    name: "Hotel Answering Service",
-    slug: "hotel-answering-service",
-    body: "OTA inbox management sits alongside phone coverage, so booking questions on Booking.com or Expedia are handled with the same property brief as your front-desk calls. One arrangement, consistent answers.",
-  },
-  {
-    eyebrow: "For hotel groups",
-    name: "Central Reservations",
-    slug: "central-reservations",
-    body: "Each property's OTA inbox is handled to its own rates, policies and escalation contacts. A guest messaging a specific hotel gets answers from that hotel's brief — not a generic group response.",
-  },
-  {
-    eyebrow: "For vacation rental operators",
-    name: "Vacation Rental Answering Service",
-    slug: "vacation-rental-answering-service",
-    body: "Airbnb and Vrbo threads are handled listing by listing, using each property's house rules, arrival instructions and local contacts. Multi-listing portfolios stay responsive without manual monitoring.",
-  },
-];
-
 const FAQS = [
   {
-    q: "Which Guest Squad services include OTA inbox management?",
-    a: "OTA inbox management can be included within your agreed service scope across Hotel Answering Service for individual hotels, Central Reservations for hotel groups, or Vacation Rental Answering Service for listing portfolios. The right arrangement depends on your property types, platforms and coverage needs.",
-  },
-  {
     q: "Which OTA platforms do you cover?",
-    a: "Booking.com, Expedia, Airbnb and Vrbo are covered as standard. Hotels.com and other platforms can be added depending on your setup. Platforms, permitted actions and access method are confirmed before your arrangement starts.",
-  },
-  {
-    q: "Why does timely OTA messaging matter for my property?",
-    a: "Pre-booking questions that go unanswered typically result in the guest booking elsewhere. Post-booking messages left unread create arrival friction and complaint risk. Consistent inbox coverage keeps conversations moving, reduces no-shows, and means guests arrive informed — which is the operational case for handling these threads properly, independent of any platform metrics.",
+    a: "Booking.com, Expedia, Airbnb and Vrbo as standard. Hotels.com and other platforms can be added depending on your setup. Platforms, permitted actions and access method are confirmed before coverage starts.",
   },
   {
     q: "Can you answer pre-booking questions, or only post-booking messages?",
-    a: "Both. Pre-booking questions are typically the highest-value messages to answer quickly — an unanswered question at that stage often means the guest books elsewhere. Post-booking messages, arrival coordination and in-stay threads are also handled.",
+    a: "Both. Pre-booking questions about rates, rooms and policies are answered from your brief, and post-booking, arrival and in-stay threads are handled too.",
   },
   {
-    q: "How is this different from using an OTA's built-in auto-reply tools?",
-    a: "Auto-replies handle static templates. OTA inbox management handles the actual conversation: rate questions, modification requests, special arrangements, anything that requires real property knowledge and a judgment call. Auto-replies are complementary, not a replacement.",
+    q: "How is this different from an OTA's auto-reply tools?",
+    a: "Auto-replies send fixed templates. OTA inbox management handles the conversation itself: rate questions, change requests, special arrangements and anything that needs property knowledge. The two work together.",
+  },
+  {
+    q: "Do you reply to guest reviews?",
+    a: "Review responses can be included in your scope. Tell us which platforms you want covered during the coverage review.",
+  },
+  {
+    q: "Do you cover WhatsApp, SMS or email too?",
+    a: "Those are covered by guest messaging, which can run alongside OTA inbox management in the same arrangement.",
   },
 ];
 
 export default function OtaInboxManagementPage() {
   return (
     <>
+      <ServicePageViewTracker serviceName="ota-inbox-management" />
       <JsonLd
         data={[
-          serviceSchema({
+          {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "@id": `${SITE.url}${PATH}#service`,
             name: "OTA Inbox Management",
+            serviceType: "OTA Inbox Management Service",
             description:
-              "Guest Squad monitors and responds to OTA guest messages on Booking.com, Expedia, Airbnb and Vrbo using your property information, booking policies and escalation procedures.",
-            path: PATH,
-            serviceOutput:
-              "Monitored and answered OTA message threads across Booking.com, Expedia, Airbnb and Vrbo with consistent response times and property-specific handling.",
-            audienceTypes: [
-              "Independent Hotel",
-              "Boutique Hotel",
-              "Hotel Group",
-              "Vacation Rental Operator",
-              "Airbnb Host",
-              "Short-Term Rental Operator",
+              "OTA inbox management for hotels and vacation rentals: Booking.com, Expedia, Airbnb and Vrbo guest messages answered from your property brief and policies.",
+            url: `${SITE.url}${PATH}`,
+            provider: { "@id": `${SITE.url}/#organization` },
+            areaServed: [
+              { "@type": "Country", name: "US" },
+              { "@type": "Country", name: "GB" },
+              { "@type": "Country", name: "CA" },
+              { "@type": "Country", name: "IE" },
+              { "@type": "Country", name: "AU" },
+              { "@type": "Country", name: "NZ" },
             ],
-          }),
+            audience: [
+              { "@type": "Audience", audienceType: "Independent Hotel" },
+              { "@type": "Audience", audienceType: "Hotel Group" },
+              { "@type": "Audience", audienceType: "Vacation Rental Operator" },
+              { "@type": "Audience", audienceType: "Airbnb Host" },
+            ],
+          },
           {
             "@context": "https://schema.org",
             "@type": "WebPage",
             "@id": `${SITE.url}${PATH}#webpage`,
             url: `${SITE.url}${PATH}`,
-            name: "OTA Inbox Management for Hotels and Vacation Rentals",
+            name: PAGE_TITLE,
             description:
-              "Guest Squad monitors and responds to OTA guest messages on Booking.com, Expedia, Airbnb and Vrbo using your property information, booking policies and escalation procedures.",
+              "OTA inbox management for hotels and vacation rentals: Booking.com, Expedia, Airbnb and Vrbo guest messages answered from your property brief and policies.",
             inLanguage: "en",
             isPartOf: { "@id": `${SITE.url}/#website` },
             mainEntity: { "@id": `${SITE.url}${PATH}#service` },
@@ -137,36 +109,29 @@ export default function OtaInboxManagementPage() {
 
       {/* HERO */}
       <section className="border-b border-line bg-paper">
-        <div className="container py-14 md:py-18">
-          <div className="grid gap-10 lg:grid-cols-[1fr_auto] lg:items-center lg:gap-16">
-          <div>
+        <div className="container py-16 md:py-20">
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-gold-dark">
             Capability
           </p>
-          <h1 className="max-w-2xl text-4xl font-medium leading-[1.08] tracking-tight text-ink md:text-5xl">
+          <h1 className="max-w-3xl text-4xl font-medium leading-[1.08] tracking-tight text-ink md:text-5xl">
             OTA Inbox Management for Hotels and Vacation Rentals
           </h1>
-          <p className="mt-5 max-w-2xl text-lg leading-relaxed text-ink-soft">
-            Guest Squad monitors and responds to guest messages through supported OTA platforms using
-            your property information, booking policies and escalation procedures. OTA inbox
-            management can be included within your agreed service scope across{" "}
-            <Link href="/services/hotel-answering-service" className="text-ink underline underline-offset-2 hover:text-gold-dark">
-              Hotel Answering Service
-            </Link>
-            ,{" "}
-            <Link href="/services/central-reservations" className="text-ink underline underline-offset-2 hover:text-gold-dark">
-              Central Reservations
-            </Link>{" "}
-            and{" "}
-            <Link href="/services/vacation-rental-answering-service" className="text-ink underline underline-offset-2 hover:text-gold-dark">
-              Vacation Rental Answering Service
-            </Link>
-            .
+          <p className="mt-5 max-w-2xl text-base font-medium leading-snug text-ink">
+            Guest Support Operations for your OTA inboxes: trained hospitality agents answer Booking.com, Expedia, Airbnb and Vrbo threads from your property brief, and escalate what your team must decide.
           </p>
-
-          {/* Platform pills */}
-          <div className="mt-7 flex flex-wrap gap-2">
-            {PLATFORMS.map((p) => (
+          <p className="mt-4 max-w-2xl text-base leading-relaxed text-ink-soft">
+            OTA inbox management means a trained team reads and answers the guest messages that arrive in your Booking.com, Expedia, Airbnb and Vrbo inboxes, using your rates, policies and escalation rules. Guest Squad covers pre-booking questions, modification requests and arrival threads during the hours you agree, including overnight, and hands threads over at shift end. It is included in the{" "}
+            <Link href="/services/hotel-answering-service" className="text-gold-dark underline underline-offset-2 hover:text-gold">
+              hotel answering service
+            </Link>{" "}
+            from US$149/month and the{" "}
+            <Link href="/services/vacation-rental-answering-service" className="text-gold-dark underline underline-offset-2 hover:text-gold">
+              vacation rental answering service
+            </Link>{" "}
+            from US$99/month (one listing), subject to scope confirmation.
+          </p>
+          <div className="mt-5 flex flex-wrap gap-2">
+            {["Booking.com", "Expedia", "Airbnb", "Vrbo", "Hotels.com"].map((p) => (
               <span
                 key={p}
                 className="rounded-full border border-line bg-surface px-3 py-1 text-xs font-medium text-ink-soft"
@@ -174,248 +139,343 @@ export default function OtaInboxManagementPage() {
                 {p}
               </span>
             ))}
-            <span className="rounded-full border border-line bg-surface px-3 py-1 text-xs font-medium text-ink-muted">
+            <span className="rounded-full border border-dashed border-line px-3 py-1 text-xs text-ink-muted">
               + others on request
             </span>
           </div>
-          </div>
-          {/* Hero illustration */}
-          <div className="hidden lg:block">
-            <img
-              src="/brand-assets/ota-inbox-hero.svg"
-              alt="OTA inbox management dashboard showing guest messages from Booking.com, Airbnb, Expedia and Vrbo"
-              width={520}
-              height={380}
-              className="w-[420px] xl:w-[480px]"
-            />
-          </div>
+          <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+            <CoverageReviewButton variant="gold" size="lg" ctaLocation="ota_inbox_hero">
+              Book a Coverage Review
+            </CoverageReviewButton>
+            <Link
+              href="/pricing"
+              className="inline-flex items-center justify-center rounded-lg border border-line px-6 py-3 text-sm font-medium text-ink transition-colors hover:border-ink/40 hover:bg-surface"
+            >
+              See pricing
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* WHAT'S COVERED */}
-      <Section>
-        <div className="grid gap-10 md:grid-cols-2 md:gap-16">
-          <div>
-            <SectionHeading
-              eyebrow="Scope"
-              title="What OTA inbox management covers"
-            />
-            <p className="mt-4 text-sm leading-relaxed text-ink-soft">
-              OTA inbox management covers private guest message threads on supported platforms —
-              pre-booking inquiries, post-booking questions, modification requests and arrival
-              coordination. Review responses can be included as optional scope within your
-              arrangement.
-            </p>
-            <p className="mt-3 text-sm leading-relaxed text-ink-soft">
-              It does not cover SMS, WhatsApp, email or direct website enquiries. Those channels
-              fall under{" "}
-              <Link href="/services/guest-messaging" className="text-gold-dark underline underline-offset-2 hover:text-gold">
-                Guest Messaging
-              </Link>
-              , which can be scoped alongside OTA inbox management where needed.
-            </p>
-          </div>
-
-          {/* Handle / escalate */}
-          <div className="grid gap-6 sm:grid-cols-2">
-            <div>
-              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.15em] text-ink-muted">
-                We handle
-              </p>
-              <ul className="space-y-2">
-                {HANDLES.map((item) => (
-                  <li key={item} className="flex items-start gap-2">
-                    <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-green-600" />
-                    <span className="text-sm text-ink-soft">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.15em] text-ink-muted">
-                We escalate
-              </p>
-              <ul className="space-y-2">
-                {ESCALATES.map((item) => (
-                  <li key={item} className="flex items-start gap-2">
-                    <XCircle className="mt-0.5 h-4 w-4 shrink-0 text-ink-muted" />
-                    <span className="text-sm text-ink-soft">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
+      {/* SCOPE */}
+      <Section id="scope">
+        <SectionHeading
+          eyebrow="Scope"
+          title="What OTA inbox management covers (and what it doesn&apos;t)."
+        />
+        <div className="mt-5 max-w-2xl space-y-4 text-sm leading-relaxed text-ink-soft">
+          <p>
+            OTA inbox management covers private guest message threads on the platforms you agree: pre-booking enquiries, post-booking questions, modification requests and arrival coordination. Review responses can be added to your scope if you want them.
+          </p>
+          <p>
+            It does not cover SMS, WhatsApp, email or direct website enquiries. Those channels fall under{" "}
+            <Link href="/services/guest-messaging" className="text-gold-dark underline underline-offset-2 hover:text-gold">
+              hotel guest messaging
+            </Link>
+            , which can run alongside OTA inbox management in the same arrangement.
+          </p>
         </div>
       </Section>
 
-      {/* HOW CONTEXT DIFFERS BY SERVICE */}
-      <Section surface>
+      {/* HANDLE / ESCALATE */}
+      <Section surface id="handle-escalate">
         <SectionHeading
-          eyebrow="OTA inbox management within your service"
-          title="Same capability. Different operating context."
-          description="The platforms supported may vary by arrangement. What changes is the property structure, the brief each agent works from, and how OTA coverage fits alongside other responsibilities."
+          eyebrow="What we answer and escalate"
+          title="Hotel OTA messaging: what we answer and what we escalate."
         />
-        <div className="mt-10 grid gap-5 md:grid-cols-3">
-          {SERVICES.map((svc) => (
-            <div
-              key={svc.slug}
-              className="flex flex-col rounded-lg border border-line bg-paper p-6"
-            >
-              <p className="text-xs font-semibold uppercase tracking-[0.15em] text-gold-dark">
-                {svc.eyebrow}
-              </p>
-              <h3 className="mt-2 text-base font-medium text-ink">{svc.name}</h3>
-              <p className="mt-3 grow text-sm leading-relaxed text-ink-soft">{svc.body}</p>
+        <div className="mt-8 grid gap-8 md:grid-cols-2">
+          <div>
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.15em] text-ink-muted">We answer</p>
+            <ul className="space-y-2.5">
+              {[
+                "Pre-booking questions about availability, rates and policies",
+                "Post-booking questions about check-in, parking and special requests",
+                "Date changes, cancellations and modifications within your agreed policy",
+                "Arrival coordination and in-stay threads",
+                "Review responses in your tone of voice, where included in your scope",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-2.5 text-sm text-ink-soft">
+                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold-dark" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.15em] text-ink-muted">We escalate</p>
+            <ul className="space-y-2.5">
+              {[
+                "Cancellation disputes, refund requests or chargebacks",
+                "Compensation offers or exceptions that need your approval",
+                "OTA policy or listing issues",
+                "Availability conflicts or PMS sync errors",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-2.5 text-sm text-ink-soft">
+                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-ink-muted/50" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+        <p className="mt-6 text-sm text-ink-soft">
+          Pre-booking questions are often the most valuable messages to answer quickly, because a guest who waits may book somewhere else. Post-booking threads matter too: unanswered arrival questions create friction at check-in.
+        </p>
+      </Section>
+
+      {/* BY PROPERTY TYPE */}
+      <Section id="by-property-type">
+        <SectionHeading
+          eyebrow="By property type"
+          title="Inbox management services by property type."
+          description="Platforms, coverage hours and permitted actions are confirmed for each arrangement."
+        />
+        <div className="mt-8 grid gap-5 md:grid-cols-3">
+          {[
+            {
+              eyebrow: "Independent hotels",
+              body: "OTA replies sit alongside phone coverage, so booking questions on Booking.com or Expedia get the same answers as your front-desk calls. For one hotel, this is part of our hotel answering service.",
+              href: "/services/hotel-answering-service",
+              linkLabel: "Hotel answering service",
+            },
+            {
+              eyebrow: "Hotel groups",
+              body: "Each property's inbox is handled to its own rates, policies and escalation contacts, so a guest messaging one hotel gets that hotel's answers. See our hotel reservation call center for multi-property coverage.",
+              href: "/services/central-reservations",
+              linkLabel: "Central Reservations Desk",
+            },
+            {
+              eyebrow: "Vacation rental operators",
+              body: "Airbnb and Vrbo threads are handled listing by listing, using each property's house rules, arrival instructions and local contacts. If you host mainly on Airbnb and care about response rate and Superhost status, see our Airbnb guest services.",
+              href: "/services/vacation-rental-answering-service",
+              linkLabel: "Vacation rental answering service",
+            },
+          ].map((item) => (
+            <div key={item.eyebrow} className="flex flex-col rounded-lg border border-line bg-paper p-5">
+              <p className="text-xs font-semibold uppercase tracking-[0.15em] text-gold-dark">{item.eyebrow}</p>
+              <p className="mt-2 grow text-sm leading-relaxed text-ink-soft">{item.body}</p>
               <Link
-                href={`/services/${svc.slug}`}
-                className="mt-5 inline-flex items-center gap-1 text-xs font-medium text-gold-dark hover:text-gold"
+                href={item.href}
+                className="mt-4 inline-block text-xs text-gold-dark underline underline-offset-2 hover:text-gold"
               >
-                Explore {svc.name}
-                <ArrowRight className="h-3 w-3" />
+                {item.linkLabel} →
               </Link>
             </div>
           ))}
         </div>
-        <p className="mt-6 text-xs text-ink-muted">
-          Platforms, coverage hours and permitted actions are confirmed for each arrangement.
-        </p>
       </Section>
 
-      {/* EVIDENCE — Sample handover card */}
-      <Section>
-        <div className="grid gap-10 md:grid-cols-2 md:items-center md:gap-16">
+      {/* RESPONSE TIMES */}
+      <Section surface id="response-times">
+        <div className="grid gap-10 md:grid-cols-2 md:items-start">
           <div>
             <SectionHeading
-              eyebrow="How it works in practice"
-              title="Every message thread logged and handed over."
+              eyebrow="Response times"
+              title="Response times and your OTA reply score."
             />
             <p className="mt-4 text-sm leading-relaxed text-ink-soft">
-              At the end of each shift, threads handled during that period are summarised and
-              passed to your team. Each entry notes the platform, the topic, the action taken,
-              and any escalations raised. Nothing drops between teams.
+              Each platform sets its own expectations for how quickly properties reply, and guests notice when a question sits unanswered overnight. We agree a response window for each platform during setup and cover the hours your team can&apos;t, including evenings, nights and weekends.
             </p>
             <p className="mt-3 text-sm leading-relaxed text-ink-soft">
-              You have visibility into what was handled, what was escalated, and what was held
-              pending your input — without monitoring the inboxes yourself.
+              How reply speed affects visibility differs by platform; our article on{" "}
+              <Link href="/resources/insights/ota-ranking-response-time" className="text-gold-dark underline underline-offset-2 hover:text-gold">
+                OTA response time and ranking
+              </Link>{" "}
+              explains what each platform says. Automated replies help with fixed answers such as directions or check-in times, but they can&apos;t handle a rate question, a change request or anything that needs judgement. OTA inbox management handles the actual conversation, and works alongside your auto-replies.
             </p>
           </div>
-          {/* Handover card visual */}
-          <div className="rounded-xl border border-line bg-surface p-6">
+
+          {/* Handover sample */}
+          <div className="rounded-lg border border-line bg-paper p-6">
             <div className="mb-4 flex items-center justify-between">
               <p className="text-xs font-semibold uppercase tracking-[0.15em] text-ink-muted">
-                Shift handover — OTA inboxes
+                Shift handover: OTA inboxes
               </p>
-              <span className="rounded-full bg-paper px-2.5 py-0.5 text-xs text-ink-muted border border-line">
-                Sample
-              </span>
+              <span className="rounded-full border border-line bg-surface px-2.5 py-0.5 text-xs text-ink-muted">Sample</span>
             </div>
-            <div className="space-y-3">
+            <div className="space-y-2" id="handover">
               {[
-                { platform: "Booking.com", topic: "Pre-booking: twin room rates", action: "Replied", status: "done" },
-                { platform: "Airbnb", topic: "In-stay: WiFi access", action: "Replied", status: "done" },
-                { platform: "Expedia", topic: "Date change request", action: "Replied — within policy", status: "done" },
-                { platform: "Vrbo", topic: "Cancellation dispute", action: "Escalated to manager", status: "escalated" },
+                { platform: "Booking.com", thread: "Pre-booking: twin room rates", outcome: "Replied", escalated: false },
+                { platform: "Airbnb", thread: "In-stay: Wi-Fi access", outcome: "Replied", escalated: false },
+                { platform: "Expedia", thread: "Date change request", outcome: "Replied, within policy", escalated: false },
+                { platform: "Vrbo", thread: "Cancellation dispute", outcome: "Escalated to manager", escalated: true },
               ].map((row) => (
-                <div key={row.topic} className="flex items-start justify-between gap-3 rounded-lg bg-paper px-4 py-3 border border-line">
+                <div key={row.thread} className="flex items-start justify-between gap-3 rounded-lg border border-line bg-surface px-4 py-3">
                   <div>
                     <p className="text-xs font-medium text-ink">{row.platform}</p>
-                    <p className="text-xs text-ink-soft mt-0.5">{row.topic}</p>
+                    <p className="mt-0.5 text-xs text-ink-soft">{row.thread}</p>
                   </div>
-                  <span className={`shrink-0 rounded-full px-2.5 py-0.5 text-xs font-medium ${row.status === "done" ? "bg-green-50 text-green-700" : "bg-amber-50 text-amber-700"}`}>
-                    {row.action}
+                  <span className={`shrink-0 rounded-full px-2.5 py-0.5 text-xs font-medium ${row.escalated ? "bg-amber-50 text-amber-700" : "bg-green-50 text-green-700"}`}>
+                    {row.outcome}
                   </span>
                 </div>
               ))}
             </div>
-            <p className="mt-4 text-xs text-ink-muted">
-              Full thread logs, response times and escalation notes available on request.
-            </p>
+            <p className="mt-4 text-xs text-ink-muted">Thread logs and escalation notes available on request.</p>
           </div>
         </div>
       </Section>
 
-      {/* RESOURCE LINKS */}
-      <Section surface>
+      {/* PRICING */}
+      <Section id="pricing">
+        <div className="grid gap-8 lg:grid-cols-2 lg:items-start">
+          <div className="rounded-lg border border-line bg-paper p-7">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold-dark">Pricing</p>
+            <p className="mt-3 text-sm font-medium text-ink mb-4">What OTA inbox management costs</p>
+            <ul className="flex flex-col gap-4">
+              {[
+                {
+                  who: "One hotel",
+                  detail: "Included in the hotel answering service, from US$149/month, subject to scope confirmation. The starting price covers after-hours or overflow coverage, with guest messaging and OTA inbox support included within an agreed workload allowance.",
+                },
+                {
+                  who: "Vacation rentals",
+                  detail: "Included in the vacation rental answering service, from US$99/month for one listing with 24/7 coverage, subject to scope confirmation.",
+                },
+                {
+                  who: "Hotel groups",
+                  detail: "Can be added to a Central Reservations Desk, from US$299/month for two properties with after-hours coverage, subject to scope confirmation.",
+                },
+              ].map((item) => (
+                <li key={item.who} className="border-b border-line pb-4 last:border-b-0 last:pb-0">
+                  <p className="text-sm font-semibold text-ink">{item.who}</p>
+                  <p className="mt-1 text-sm leading-relaxed text-ink-soft">{item.detail}</p>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-5 text-sm text-ink-soft">
+              24/7 coverage is available for hotels and hotel groups and is quoted to your volume.{" "}
+              <Link href="/pricing" className="text-gold-dark underline underline-offset-2 hover:text-gold">
+                See pricing
+              </Link>
+              .
+            </p>
+            <p className="mt-2 text-xs text-ink-muted">
+              We work with properties in the US, UK, Canada, Ireland, Australia and New Zealand.
+            </p>
+          </div>
+
+          <div className="flex flex-col gap-6">
+            <div className="rounded-lg border border-line bg-surface p-7">
+              <p className="mb-2 text-sm font-semibold text-ink">Find the right coverage for your OTA inboxes.</p>
+              <p className="mb-5 text-sm text-ink-soft">
+                Tell us which properties, platforms and message volume you manage. We&apos;ll recommend the right arrangement and confirm the access and permissions needed.
+              </p>
+              <CoverageReviewButton variant="gold" ctaLocation="ota_inbox_pricing_cta" className="w-full justify-center">
+                Book a Coverage Review
+              </CoverageReviewButton>
+              <p className="mt-4 text-xs text-ink-muted">
+                Useful for the conversation: your OTA platforms, approximate monthly message volume, and whether review responses are needed.
+              </p>
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      {/* GUIDES */}
+      <Section surface id="guides">
         <SectionHeading
-          eyebrow="Guides &amp; checklists"
-          title="Useful reading on OTA inbox management."
+          eyebrow="Guides"
+          title="Guides for Booking.com and Expedia inboxes."
         />
-        <div className="mt-8 grid gap-4 sm:grid-cols-3">
+        <div className="mt-6 grid gap-4 sm:grid-cols-3">
           {[
             {
               label: "Platform guide",
-              title: "Booking.com messaging best practices",
-              body: "How Booking.com structures property-guest messaging, what actions are available, and what the platform expects from property teams.",
+              title: "Booking.com and Expedia message checklist",
+              body: "How Booking.com structures property-guest messaging and what the platform expects from property teams.",
               href: "/resources/booking-com-message-support",
             },
             {
               label: "Template",
-              title: "Guest messaging SOP template",
-              body: "A structured template for documenting how guest messages are handled: channel coverage, response standards, escalation paths and handover procedures.",
+              title: "Hotel guest messaging SOP template",
+              body: "A template for documenting channels, response standards, escalation paths and handovers.",
               href: "/resources/hotel-guest-messaging-sop-template",
             },
             {
               label: "Operations",
               title: "Managing Booking.com messages with a lean team",
-              body: "How smaller properties maintain reply scores and inbox coverage without a dedicated reservations team on the inbox full-time.",
+              body: "How smaller properties keep inboxes covered without someone on them full-time.",
               href: "/resources/insights/booking-com-message-management-lean-teams",
             },
           ].map((item) => (
             <div key={item.title} className="rounded-lg border border-line bg-paper p-5">
-              <p className="text-xs font-semibold uppercase tracking-[0.15em] text-gold-dark">
-                {item.label}
-              </p>
-              <p className="mt-2 text-sm font-medium text-ink leading-snug">{item.title}</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.15em] text-gold-dark">{item.label}</p>
+              <p className="mt-2 text-sm font-medium leading-snug text-ink">{item.title}</p>
               <p className="mt-2 text-sm leading-relaxed text-ink-soft">{item.body}</p>
               <Link
                 href={item.href}
-                className="mt-4 inline-flex items-center gap-1 text-xs font-medium text-gold-dark hover:text-gold"
+                className="mt-4 inline-block text-xs text-gold-dark underline underline-offset-2 hover:text-gold"
               >
-                Read guide
-                <ArrowRight className="h-3 w-3" />
+                Read →
               </Link>
             </div>
           ))}
         </div>
       </Section>
 
-      {/* FAQ + STICKY CTA */}
-      <Section>
-        <div className="grid gap-12 lg:grid-cols-[3fr_2fr] lg:gap-16">
+      {/* MID-PAGE DARK CTA */}
+      <div className="bg-ink">
+        <div className="container flex flex-col items-start justify-between gap-5 py-8 sm:flex-row sm:items-center">
           <div>
-            <SectionHeading
-              eyebrow="Questions"
-              title="OTA inbox management, explained."
-            />
-            <div className="mt-8">
-              <FaqAccordion items={FAQS} />
+            <p className="text-base font-medium text-paper">Find the right coverage for your OTA inboxes.</p>
+            <p className="mt-1 text-sm text-paper/60">
+              Tell us which properties, platforms and message volume you manage.
+            </p>
+          </div>
+          <CoverageReviewButton variant="gold" size="sm" ctaLocation="ota_inbox_mid_cta">
+            Book a Coverage Review
+          </CoverageReviewButton>
+        </div>
+      </div>
+
+      {/* FAQ + STICKY */}
+      <Section surface>
+        <div className="grid gap-10 lg:grid-cols-[1fr_320px] lg:items-start">
+          <div className="rounded-lg border border-line bg-paper p-7">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-gold-dark">Questions</p>
+            <h2 className="text-2xl font-medium text-ink">OTA inbox management questions.</h2>
+            <div className="mt-6">
+              <FaqAccordion items={FAQS} defaultOpenCount={2} />
             </div>
           </div>
 
           <div className="h-fit rounded-lg border border-line bg-paper p-7 lg:sticky lg:top-8">
-            <p className="text-xs font-semibold uppercase tracking-[0.15em] text-gold-dark">
-              Next step
-            </p>
-            <h3 className="mt-2 text-xl font-medium text-ink">
-              Find the right coverage for your OTA inboxes
+            <p className="mb-2 text-xs font-semibold uppercase tracking-[0.15em] text-gold-dark">Next Step</p>
+            <h3 className="mb-3 text-xl font-medium text-ink">
+              Find the right coverage for your OTA inboxes.
             </h3>
-            <p className="mt-3 text-sm leading-relaxed text-ink-soft">
-              Tell us which properties, platforms and message volume you manage. We&apos;ll recommend the
-              right service arrangement and confirm what access and permissions are needed.
+            <p className="mb-5 text-sm leading-relaxed text-ink-soft">
+              Tell us which properties, platforms and message volume you manage. We&apos;ll recommend the right arrangement and confirm the access and permissions needed.
             </p>
-            <div className="mt-5">
-              <CoverageReviewButton variant="gold" size="default" ctaLocation="ota_inbox_faq_cta">
-                Book a Coverage Review
-              </CoverageReviewButton>
+            <CoverageReviewButton variant="gold" ctaLocation="ota_inbox_faq_cta" className="w-full justify-center">
+              Book a Coverage Review
+            </CoverageReviewButton>
+            <div className="mt-6 border-t border-line pt-5">
+              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.14em] text-ink-muted">Related services</p>
+              <div className="flex flex-col gap-2">
+                <Link href="/services/hotel-answering-service" className="text-sm text-gold-dark underline underline-offset-2 hover:text-gold">
+                  Hotel answering service
+                </Link>
+                <Link href="/services/vacation-rental-answering-service" className="text-sm text-gold-dark underline underline-offset-2 hover:text-gold">
+                  Vacation rental answering service
+                </Link>
+                <Link href="/services/guest-messaging" className="text-sm text-gold-dark underline underline-offset-2 hover:text-gold">
+                  Hotel guest messaging
+                </Link>
+                <Link href="/services/airbnb-guest-support" className="text-sm text-gold-dark underline underline-offset-2 hover:text-gold">
+                  Airbnb guest services
+                </Link>
+              </div>
             </div>
-            <p className="mt-4 text-xs text-ink-muted">
-              Useful for the conversation: your OTA platforms, approximate monthly message volume,
-              and whether review responses are needed.
-            </p>
           </div>
         </div>
       </Section>
+
+      <CtaSection
+        title="Find the right coverage for your OTA inboxes."
+        description="Tell us which properties, platforms and message volume you manage. We will recommend the right arrangement and confirm the access and permissions needed."
+      />
     </>
   );
 }

@@ -23,6 +23,10 @@ const PATH = "/services/vacation-rental-answering-service";
 
 const FAQS = [
   {
+    q: "What is a vacation rental answering service?",
+    a: "A vacation rental answering service takes your guests' calls and messages so you are not the one picking up at 11pm. Guest Squad's team works from a brief for each listing: check-in method, house rules, access steps, local contacts and who to call when something breaks. Agents work through the approved troubleshooting steps with the guest. When an issue needs someone on site, they contact your designated person. Booking disputes, refunds and OTA resolutions stay with you.",
+  },
+  {
     q: "Do you answer guest phone calls 24/7?",
     a: "Yes. The US$99/month plan for one listing includes live phone answering with 24/7 coverage, subject to scope confirmation. You can also choose after-hours or overflow coverage. Additional listings are quoted.",
   },

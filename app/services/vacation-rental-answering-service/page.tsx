@@ -218,7 +218,7 @@ export default function VacationRentalAnsweringServicePage() {
               Trained people answer your guests&apos; phone calls and your Airbnb, Vrbo and other agreed messages, including after hours and overnight, using a brief written for each listing. Plans start from US$99/month for one listing, with 24/7 coverage included, subject to scope confirmation.
             </p>
             <p className="mt-3 max-w-lg text-sm leading-relaxed text-ink-soft">
-              Late check-ins, lockouts, failed keypad codes, Wi-Fi problems and noise complaints are the calls we are set up for. Anything that needs you goes to your designated contact through the escalation process we agree. We work with operators in the US, UK, Canada, Ireland, Australia and New Zealand.
+              Late check-ins, lockouts, failed keypad codes, Wi-Fi problems and noise complaints are the calls we are set up for. Anything that needs you goes to your designated contact through the escalation process we agree.
             </p>
             <p className="mt-3 text-sm text-ink-muted">
               For Airbnb hosts, Vrbo hosts, short-term rental operators and vacation rental property managers.
@@ -345,7 +345,7 @@ export default function VacationRentalAnsweringServicePage() {
           For calls, you set up forwarding from your listing number to ours. For messages, we get access to the inboxes you agree — Airbnb, Vrbo or your PMS — and monitor and reply there. Forwarding and inbox access are set up and tested separately for each listing.
         </p>
         <p className="mt-3 text-sm text-ink-soft">
-          We cover the US, UK, Canada, Ireland, Australia and New Zealand, so overnight coverage can follow your guests&apos; time zone. 24/7 availability does not mean unlimited handling. Coverage hours, channels, listings and workload allowances are confirmed during scoping.
+          24/7 availability does not mean unlimited handling. Coverage hours, channels, listings and workload allowances are confirmed during scoping.
         </p>
       </Section>
 

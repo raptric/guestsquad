@@ -12,12 +12,17 @@ import { ServicePageViewTracker } from "@/components/site/service-page-view-trac
 import { buildMetadata, breadcrumbSchema, faqSchema } from "@/lib/seo";
 import { SITE } from "@/lib/site-data";
 
-export const metadata: Metadata = buildMetadata({
-  title: "Vacation Rental Answering Service with 24/7 Guest Support",
-  description:
-    "Vacation rental answering service: trained people answer guest calls and Airbnb and Vrbo messages 24/7, from late check-ins to lockouts. From US$99/month.",
-  path: "/services/vacation-rental-answering-service",
-});
+const PAGE_TITLE = "Vacation Rental Answering Service | 24/7 Guest Calls";
+
+export const metadata: Metadata = {
+  ...buildMetadata({
+    title: PAGE_TITLE,
+    description:
+      "Vacation rental answering service: trained people answer guest calls and Airbnb and Vrbo messages 24/7, from late check-ins to lockouts. From US$99/month.",
+    path: "/services/vacation-rental-answering-service",
+  }),
+  title: { absolute: PAGE_TITLE },
+};
 
 const PATH = "/services/vacation-rental-answering-service";
 

@@ -260,7 +260,21 @@ export default function HomePage() {
 
       {/* HOW THE TEAM WORKS */}
       <Section id="how-we-work">
-        <div className="grid items-start gap-12 lg:grid-cols-2 lg:gap-16">
+        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+          {/* Image */}
+          <div className="relative hidden aspect-[4/5] overflow-hidden rounded-2xl shadow-md lg:block">
+            <Image
+              src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=900&q=85"
+              alt="Hotel front desk team managing guest reservations and calls"
+              fill
+              loading="lazy"
+              sizes="50vw"
+              unoptimized
+              className="object-cover object-center"
+            />
+          </div>
+
+          {/* Content */}
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold-dark">
               How the team works inside your operation
@@ -295,24 +309,6 @@ export default function HomePage() {
                   </div>
                 </div>
               ))}
-            </div>
-          </div>
-
-          <div className="flex flex-col gap-6">
-            <div className="rounded-lg border border-line bg-surface p-6">
-              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-ink-muted">OTA inboxes</p>
-              <p className="mt-2 text-sm text-ink-soft">Booking.com · Expedia · Airbnb · Vrbo · Hotels.com</p>
-              <p className="mt-4 text-xs font-semibold uppercase tracking-[0.14em] text-ink-muted">PMS and hotel systems</p>
-              <p className="mt-2 text-sm text-ink-soft">Cloudbeds · Mews · Opera PMS · Guesty · ResNexus</p>
-              <p className="mt-4 text-xs font-semibold uppercase tracking-[0.14em] text-ink-muted">Guest channels</p>
-              <p className="mt-2 text-sm text-ink-soft">Phone · SMS · Email · WhatsApp</p>
-            </div>
-            <div className="flex flex-col gap-2 text-sm">
-              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-ink-muted">Related services</p>
-              <Link href="/services/after-hours-support" className="text-gold-dark underline underline-offset-2 hover:text-gold">After-hours hotel front desk support</Link>
-              <Link href="/services/ota-inbox-management" className="text-gold-dark underline underline-offset-2 hover:text-gold">OTA inbox management</Link>
-              <Link href="/services/guest-messaging" className="text-gold-dark underline underline-offset-2 hover:text-gold">Hotel guest messaging</Link>
-              <Link href="/services/airbnb-guest-support" className="text-gold-dark underline underline-offset-2 hover:text-gold">Airbnb guest services</Link>
             </div>
           </div>
         </div>
@@ -465,6 +461,15 @@ export default function HomePage() {
             <CoverageReviewButton variant="gold" ctaLocation="homepage_guides_sticky" className="w-full justify-center">
               Book a Coverage Review
             </CoverageReviewButton>
+            <div className="mt-6 border-t border-line pt-5">
+              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-ink-muted mb-3">Related services</p>
+              <div className="flex flex-col gap-2">
+                <Link href="/services/after-hours-support" className="text-sm text-gold-dark underline underline-offset-2 hover:text-gold">After-hours hotel front desk support</Link>
+                <Link href="/services/ota-inbox-management" className="text-sm text-gold-dark underline underline-offset-2 hover:text-gold">OTA inbox management</Link>
+                <Link href="/services/guest-messaging" className="text-sm text-gold-dark underline underline-offset-2 hover:text-gold">Hotel guest messaging</Link>
+                <Link href="/services/airbnb-guest-support" className="text-sm text-gold-dark underline underline-offset-2 hover:text-gold">Airbnb guest services</Link>
+              </div>
+            </div>
           </div>
         </div>
       </Section>

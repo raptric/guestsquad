@@ -304,39 +304,32 @@ export default function VacationRentalAnsweringServicePage() {
       <Section surface id="coverage">
         <SectionHeading
           eyebrow="Coverage Options"
-          title="Vacation rental call center coverage: after-hours, overflow or 24/7."
-          description="Guest Squad is a vacation rental call center built for hospitality, not a general phone line. Choose how much of the day we cover. The US$99/month starting plan includes 24/7."
+          title="After-hours, overflow or 24/7."
         />
-        <div className="mt-8 overflow-x-auto rounded-lg border border-line">
-          <table className="w-full text-sm">
-            <thead>
-              <tr className="border-b border-line bg-surface">
-                <th className="px-5 py-3 text-left text-xs font-semibold uppercase tracking-[0.1em] text-ink-muted">Option</th>
-                <th className="px-5 py-3 text-left text-xs font-semibold uppercase tracking-[0.1em] text-ink-muted">How it works</th>
-                <th className="px-5 py-3 text-left text-xs font-semibold uppercase tracking-[0.1em] text-ink-muted">Best for</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-line bg-paper">
-              {[
-                { opt: "After-hours", how: "We answer calls and agreed messages outside the hours you are available.", best: "Hosts who work days but cannot be on call at night." },
-                { opt: "Overflow", how: "You answer first. Calls you do not pick up are forwarded to Guest Squad, and agreed inboxes are monitored by us.", best: "Operators who like to stay close to guests but want a safety net." },
-                { opt: "24/7", how: "Coverage runs across all hours and days for the listings and channels in scope.", best: "Operators who want to stop being on call." },
-              ].map((row) => (
-                <tr key={row.opt}>
-                  <td className="px-5 py-4 font-medium text-ink align-top">{row.opt}</td>
-                  <td className="px-5 py-4 text-ink-soft">{row.how}</td>
-                  <td className="px-5 py-4 text-ink-soft">{row.best}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+        <div className="mt-8 grid gap-4 sm:grid-cols-3">
+          {[
+            {
+              label: "After-hours",
+              body: "We answer calls and agreed messages outside the hours you are available. For hosts who work days but cannot be on call at night.",
+            },
+            {
+              label: "Overflow",
+              body: "You answer first. Calls you do not pick up are forwarded to Guest Squad, and agreed inboxes are monitored by us.",
+            },
+            {
+              label: "24/7 coverage",
+              body: "Coverage runs across all hours and days for the listings and channels in scope. Included in the US$99/month starting plan, subject to scope confirmation.",
+            },
+          ].map((opt) => (
+            <div key={opt.label} className="rounded-lg border border-line bg-paper px-5 py-5">
+              <p className="text-sm font-semibold text-ink">{opt.label}</p>
+              <p className="mt-2 text-sm leading-relaxed text-ink-soft">{opt.body}</p>
+            </div>
+          ))}
         </div>
         <p className="mt-5 text-sm text-ink-soft">
           <span className="font-medium text-ink">Phone calls and inboxes work differently.</span>{" "}
-          For calls, you set up forwarding from your listing number to ours: always, outside set hours, or when you do not answer. For messages, we get access to the inboxes you agree, such as Airbnb, Vrbo or your PMS, and monitor and reply there. Forwarding and inbox access are set up and tested separately for each listing.
-        </p>
-        <p className="mt-3 text-sm text-ink-soft">
-          24/7 availability does not mean unlimited handling. Coverage hours, channels, listings and workload allowances are confirmed during scoping.
+          For calls, you set up forwarding from your listing number to ours. For messages, we get access to the inboxes you agree — Airbnb, Vrbo or your PMS — and monitor and reply there. Forwarding and inbox access are set up and tested separately for each listing. 24/7 availability does not mean unlimited handling; coverage hours, channels and workload allowances are confirmed during scoping.
         </p>
       </Section>
 

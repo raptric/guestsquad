@@ -186,7 +186,7 @@ export default function VacationRentalAnsweringServicePage() {
               Premium Vacation Rental Call Center
             </p>
             <h1 className="text-4xl font-medium leading-[1.08] tracking-tight text-ink md:text-5xl">
-              Vacation Rental Answering Service with 24/7 Guest Support
+              Vacation Rental Answering Service: 24/7 Guest Support
             </h1>
             <p className="mt-5 max-w-lg text-base font-medium leading-snug text-ink">
               Guest Support Operations for STR operators: live guest calls and agreed messaging channels covered 24/7, listing by listing.
@@ -226,31 +226,14 @@ export default function VacationRentalAnsweringServicePage() {
         </div>
       </section>
 
-      {/* 2. WHAT IT IS */}
-      <Section surface id="what-it-is">
-        <div className="max-w-2xl">
-          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-gold-dark">What It Is</p>
-          <h2 className="text-2xl font-medium text-ink">What is a vacation rental answering service?</h2>
-          <p className="mt-4 text-sm leading-relaxed text-ink-soft">
-            A vacation rental answering service takes your guests&apos; calls and messages so you are not the one picking up at 11pm. Guest Squad&apos;s team works from a brief for each listing: check-in method, house rules, access steps, local contacts and who to call when something breaks.
-          </p>
-          <p className="mt-3 text-sm leading-relaxed text-ink-soft">
-            Agents work through the approved troubleshooting steps with the guest. When an issue needs someone on site, they contact your designated person. Booking disputes, refunds and OTA resolutions stay with you.
-          </p>
-          <p className="mt-3 text-sm leading-relaxed text-ink-soft">
-            See <Link href="/pricing" className="text-gold-dark underline underline-offset-2 hover:text-gold">guest support pricing</Link>.
-          </p>
-        </div>
-      </Section>
-
       {/* 3. AFTER-HOURS CALLS */}
-      <Section id="after-hours-calls">
+      <Section surface id="after-hours-calls">
         <SectionHeading
           eyebrow="After-Hours Support"
           title="After-hours calls that can't wait until morning."
         />
         <p className="mt-4 max-w-2xl text-sm leading-relaxed text-ink-soft">
-          Guests call when they are locked out or running late. A voicemail and a morning callback can turn into a bad review, and slow Airbnb replies can affect your{" "}
+          Guests call when they are locked out or running late, and you shouldn&apos;t have to be the one picking up at 11pm. A voicemail and a morning callback can turn into a bad review, and slow Airbnb replies can affect your{" "}
           <Link href="/resources/insights/airbnb-response-time-visibility" className="text-gold-dark underline underline-offset-2 hover:text-gold">response rate and ranking</Link>.
           {" "}This is how vacation rental after-hours support works for common situations.
         </p>

@@ -422,37 +422,15 @@ export default function HomePage() {
         </p>
       </Section>
 
-      {/* GUIDES + FAQ + STICKY */}
+      {/* FAQ + STICKY */}
       <Section id="guides" surface>
         <div className="grid gap-10 lg:grid-cols-[1fr_320px]">
-          {/* Left column: Guides then FAQ */}
-          <div>
-            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-gold-dark">Guides</p>
-            <h2 className="text-2xl font-medium text-ink">Guides for comparing your options.</h2>
-            <div className="mt-6 rounded-lg border border-line bg-paper px-5 divide-y divide-line">
-              {[
-                { label: "Answering service cost", detail: "What coverage costs and what drives the price.", href: "/resources/hotel-answering-service-cost" },
-                { label: "Human vs AI answering", detail: "Where each one fits.", href: "/resources/hotel-answering-service-vs-ai-voice" },
-                { label: "Hotel missed call revenue calculator", detail: "Estimate what unanswered calls cost you.", href: "/resources/missed-booking-calculator" },
-              ].map((guide) => (
-                <Link
-                  key={guide.href}
-                  href={guide.href}
-                  className="flex flex-col py-4 hover:opacity-80 transition-opacity"
-                >
-                  <p className="text-sm font-medium text-gold-dark underline underline-offset-2">{guide.label}</p>
-                  <p className="mt-0.5 text-xs text-ink-soft">{guide.detail}</p>
-                </Link>
-              ))}
-            </div>
-
-            {/* FAQ */}
-            <div id="faq" className="mt-10">
-              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-gold-dark">Common Questions</p>
-              <h2 className="text-2xl font-medium text-ink">Questions hotels and rental operators ask.</h2>
-              <div className="mt-6">
-                <FaqAccordion items={HOME_FAQS} defaultOpenCount={2} />
-              </div>
+          {/* Left column: FAQ only */}
+          <div id="faq">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-gold-dark">Common Questions</p>
+            <h2 className="text-2xl font-medium text-ink">Questions hotels and rental operators ask.</h2>
+            <div className="mt-6">
+              <FaqAccordion items={HOME_FAQS} defaultOpenCount={2} />
             </div>
           </div>
 
@@ -468,6 +446,21 @@ export default function HomePage() {
             <CoverageReviewButton variant="gold" ctaLocation="homepage_guides_sticky" className="w-full justify-center">
               Book a Coverage Review
             </CoverageReviewButton>
+            <div className="mt-6 border-t border-line pt-5">
+              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-ink-muted mb-3">Guides</p>
+              <div className="flex flex-col divide-y divide-line">
+                {[
+                  { label: "Answering service cost", detail: "What coverage costs and what drives the price.", href: "/resources/hotel-answering-service-cost" },
+                  { label: "Human vs AI answering", detail: "Where each one fits.", href: "/resources/hotel-answering-service-vs-ai-voice" },
+                  { label: "Hotel missed call revenue calculator", detail: "Estimate what unanswered calls cost you.", href: "/resources/missed-booking-calculator" },
+                ].map((guide) => (
+                  <Link key={guide.href} href={guide.href} className="flex flex-col py-3 hover:opacity-80 transition-opacity">
+                    <p className="text-sm text-gold-dark underline underline-offset-2">{guide.label}</p>
+                    <p className="mt-0.5 text-xs text-ink-soft">{guide.detail}</p>
+                  </Link>
+                ))}
+              </div>
+            </div>
             <div className="mt-6 border-t border-line pt-5">
               <p className="text-xs font-semibold uppercase tracking-[0.14em] text-ink-muted mb-3">Related services</p>
               <div className="flex flex-col gap-2">

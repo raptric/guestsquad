@@ -559,12 +559,6 @@ export default function VacationRentalAnsweringServicePage() {
             </div>
           ))}
         </div>
-        <p className="mt-5 text-sm text-ink-soft">
-          Read our reviews on{" "}
-          <a href="https://www.trustpilot.com/review/guestsquad.com" className="text-gold-dark underline underline-offset-2 hover:text-gold" target="_blank" rel="noopener noreferrer">
-            Trustpilot
-          </a>.
-        </p>
       </Section>
 
       {/* TESTIMONIALS */}

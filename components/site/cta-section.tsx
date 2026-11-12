@@ -1,5 +1,4 @@
-﻿import { ButtonLink } from "@/components/site/button-link";
-import { CoverageReviewButton } from "@/components/site/coverage-review-button";
+﻿import { CoverageReviewButton } from "@/components/site/coverage-review-button";
 
 export function CtaSection({
   title = "Stop losing bookings to silence.",
@@ -19,21 +18,10 @@ export function CtaSection({
         <p className="mt-3 text-base leading-relaxed text-paper/65">
           {description}
         </p>
-        <p className="mt-5 text-sm leading-relaxed text-paper/50">
-          Qualified properties can start with a 2-week pilot before moving into month-to-month coverage.
-        </p>
         <div className="mt-6 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <CoverageReviewButton variant="gold" size="lg" ctaLocation="cta_section">
             {primaryCta}
           </CoverageReviewButton>
-          <ButtonLink
-            href="/pilot"
-            variant="outline"
-            size="lg"
-            className="border-paper/25 text-paper hover:border-paper/60"
-          >
-            Request Pilot Review
-          </ButtonLink>
         </div>
       </div>
     </section>

@@ -12,12 +12,6 @@ export function TestimonialsBlock() {
       attr: "Owner-operator, serviced apartment portfolio",
       location: "UK",
     },
-    {
-      quote:
-        "The pilot let us test whether a coverage service could actually follow our property's tone and escalation rules before we committed to anything.",
-      attr: "Operations Manager, independent resort",
-      location: "Pacific Northwest",
-    },
   ];
 
   return (
@@ -30,15 +24,15 @@ export function TestimonialsBlock() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-sm font-medium text-ink transition-colors hover:text-gold-dark"
           >
-            <span className="font-bold text-[#00b67a]">★★★★★</span>
-            <span>Rated 5 stars on Trustpilot</span>
+            <span className="text-sm text-ink-soft">Read our reviews on</span>
+            <span className="font-semibold text-gold-dark underline underline-offset-2">Trustpilot</span>
           </a>
           <p className="mt-2 text-xs font-semibold uppercase tracking-[0.18em] text-ink-soft">
-            What early operators say about Guest Squad
+            What operators say about Guest Squad
           </p>
         </div>
 
-        <div className="grid gap-4 sm:grid-cols-3">
+        <div className="grid gap-4 sm:grid-cols-2 max-w-2xl mx-auto">
           {items.map((item) => (
             <div
               key={item.attr}

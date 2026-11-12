@@ -141,9 +141,6 @@ export default function HomePage() {
             <p className="mt-4 text-sm leading-relaxed text-ink-soft">
               Our hospitality contact center provides guest communication services through your existing phone, messaging and booking systems. Guest Squad covers the guest calls, reservation enquiries and messages your team cannot take, at any hour you choose. Coverage runs under your brand, to your procedures, and escalates to your people the way you set.
             </p>
-            <p className="mt-3 text-sm text-ink-muted">
-              We serve hotels and vacation rentals in the US, UK, Canada, Ireland, Australia and New Zealand, with coverage set to your time zone.
-            </p>
           </div>
         </div>
       </section>
@@ -430,30 +427,45 @@ export default function HomePage() {
 
       {/* GUIDES */}
       <Section id="guides" surface>
-        <SectionHeading
-          eyebrow="Guides"
-          title="Guides for comparing your options."
-          align="center"
-          className="mx-auto"
-        />
-        <div className="mt-8 mx-auto max-w-xl flex flex-col gap-3">
-          {[
-            { label: "Answering service cost", detail: "What coverage costs and what drives the price.", href: "/resources/hotel-answering-service-cost" },
-            { label: "Human vs AI answering", detail: "Where each one fits.", href: "/resources/hotel-answering-service-vs-ai-voice" },
-            { label: "Hotel missed call revenue calculator", detail: "Estimate what unanswered calls cost you.", href: "/resources/missed-booking-calculator" },
-          ].map((guide) => (
-            <Link
-              key={guide.href}
-              href={guide.href}
-              className="flex items-start gap-4 rounded-lg border border-line bg-paper px-5 py-4 hover:border-gold/40 transition-colors"
-            >
-              <span className="mt-0.5 h-3.5 w-0.5 shrink-0 rounded-full bg-gold-dark" />
-              <div>
-                <p className="text-sm font-medium text-ink">{guide.label}</p>
-                <p className="mt-0.5 text-xs text-ink-soft">{guide.detail}</p>
-              </div>
-            </Link>
-          ))}
+        <div className="grid gap-10 lg:grid-cols-[1fr_320px]">
+          {/* Guides list */}
+          <div>
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-gold-dark">Guides</p>
+            <h2 className="text-2xl font-medium text-ink">Guides for comparing your options.</h2>
+            <div className="mt-6 flex flex-col gap-3">
+              {[
+                { label: "Answering service cost", detail: "What coverage costs and what drives the price.", href: "/resources/hotel-answering-service-cost" },
+                { label: "Human vs AI answering", detail: "Where each one fits.", href: "/resources/hotel-answering-service-vs-ai-voice" },
+                { label: "Hotel missed call revenue calculator", detail: "Estimate what unanswered calls cost you.", href: "/resources/missed-booking-calculator" },
+              ].map((guide) => (
+                <Link
+                  key={guide.href}
+                  href={guide.href}
+                  className="flex items-start gap-4 rounded-lg border border-line bg-paper px-5 py-4 hover:border-gold/40 transition-colors"
+                >
+                  <span className="mt-0.5 h-3.5 w-0.5 shrink-0 rounded-full bg-gold-dark" />
+                  <div>
+                    <p className="text-sm font-medium text-ink">{guide.label}</p>
+                    <p className="mt-0.5 text-xs text-ink-soft">{guide.detail}</p>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Sticky card */}
+          <div className="rounded-lg border border-line bg-paper p-7 h-fit lg:sticky lg:top-8">
+            <p className="text-xs font-semibold uppercase tracking-[0.15em] text-gold-dark mb-2">Next Step</p>
+            <h3 className="text-xl font-medium text-ink mb-3">
+              Not sure which service fits?
+            </h3>
+            <p className="text-sm leading-relaxed text-ink-soft mb-5">
+              Tell us about your property and coverage gaps. We&apos;ll identify the right service and coverage hours for your operation.
+            </p>
+            <CoverageReviewButton variant="gold" ctaLocation="homepage_guides_sticky" className="w-full justify-center">
+              Book a Coverage Review
+            </CoverageReviewButton>
+          </div>
         </div>
       </Section>
 

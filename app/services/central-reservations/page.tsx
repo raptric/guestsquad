@@ -393,7 +393,6 @@ export default function CentralReservationsPage() {
         </div>
         <p className="mt-5 text-sm text-ink-soft">
           Coverage windows, channels and participating properties are agreed during scoping.{" "}
-          <Link href="/pricing" className="text-gold-dark underline underline-offset-2 hover:text-gold">How pricing works →</Link>
         </p>
       </Section>
 
@@ -518,9 +517,6 @@ export default function CentralReservationsPage() {
                   </li>
                 ))}
               </ul>
-              <p className="mt-4 text-sm text-ink-soft">
-                <Link href="/pricing" className="text-gold-dark underline underline-offset-2 hover:text-gold">How pricing works →</Link>
-              </p>
             </div>
             <div className="rounded-lg border border-line bg-paper p-7">
               <p className="text-sm font-semibold text-ink mb-2">Start With a Pilot.</p>
@@ -580,7 +576,6 @@ export default function CentralReservationsPage() {
                 {[
                   { label: "Cost of unanswered reservation calls", detail: "What missed enquiries cost a hotel group.", href: "/resources/insights/unanswered-reservation-calls-revenue" },
                   { label: "Hotel missed call revenue calculator", detail: "Estimate what unanswered calls cost you.", href: "/resources/missed-booking-calculator" },
-                  { label: "Guest support pricing", detail: "How coverage is scoped and priced.", href: "/pricing" },
                 ].map((guide) => (
                   <Link key={guide.href} href={guide.href} className="flex flex-col py-3 hover:opacity-80 transition-opacity">
                     <p className="text-sm text-gold-dark underline underline-offset-2">{guide.label}</p>

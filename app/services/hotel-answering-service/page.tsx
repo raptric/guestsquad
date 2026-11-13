@@ -429,9 +429,6 @@ export default function HotelAnsweringServicePage() {
                   </li>
                 ))}
               </ul>
-              <p className="mt-4 text-sm text-ink-soft">
-                <Link href="/pricing" className="text-gold-dark underline underline-offset-2 hover:text-gold">How pricing works →</Link>
-              </p>
             </div>
             <div className="rounded-lg border border-line bg-paper p-7">
               <p className="text-sm font-semibold text-ink mb-2">Start With a Pilot.</p>

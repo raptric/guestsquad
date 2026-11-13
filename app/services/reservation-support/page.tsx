@@ -156,12 +156,6 @@ export default function ReservationSupportPage() {
             <CoverageReviewButton variant="gold" size="lg" ctaLocation="reservation_hero">
               Book a Coverage Review
             </CoverageReviewButton>
-            <Link
-              href="/pricing"
-              className="inline-flex items-center justify-center rounded-lg border border-line px-6 py-3 text-sm font-medium text-ink transition-colors hover:border-ink/40 hover:bg-surface"
-            >
-              How pricing works
-            </Link>
           </div>
         </div>
       </section>
@@ -360,9 +354,6 @@ export default function ReservationSupportPage() {
                   hotel missed call revenue calculator
                 </Link>{" "}
                 estimates what unanswered booking calls may be costing you.
-              </p>
-              <p className="mt-3 text-sm text-ink-soft">
-                <Link href="/pricing" className="text-gold-dark underline underline-offset-2 hover:text-gold">How pricing works →</Link>
               </p>
             </div>
             <div className="rounded-lg border border-line bg-paper p-7">

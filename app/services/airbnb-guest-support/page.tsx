@@ -152,12 +152,6 @@ export default function AirbnbGuestSupportPage() {
             <CoverageReviewButton variant="gold" size="lg" ctaLocation="airbnb_hero">
               Book a Coverage Review
             </CoverageReviewButton>
-            <Link
-              href="/pricing"
-              className="inline-flex items-center justify-center rounded-lg border border-line px-6 py-3 text-sm font-medium text-ink transition-colors hover:border-ink/40 hover:bg-surface"
-            >
-              How pricing works
-            </Link>
           </div>
         </div>
       </section>
@@ -451,9 +445,6 @@ export default function AirbnbGuestSupportPage() {
                   </li>
                 ))}
               </ul>
-              <p className="mt-4 text-sm text-ink-soft">
-                <Link href="/pricing" className="text-gold-dark underline underline-offset-2 hover:text-gold">How pricing works →</Link>
-              </p>
             </div>
             <div className="rounded-lg border border-line bg-paper p-7">
               <p className="mb-2 text-sm font-semibold text-ink">Start With a Pilot.</p>

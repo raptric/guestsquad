@@ -105,6 +105,12 @@ export function organizationSchema() {
     founder: [
       {
         "@type": "Person",
+        "@id": `${SITE.url}/about#usman-khalid`,
+        name: "Usman Khalid",
+        jobTitle: "Founder",
+      },
+      {
+        "@type": "Person",
         "@id": `${SITE.url}/about#khadija-khalid`,
         name: "Khadija Khalid",
         jobTitle: "Co-founder",

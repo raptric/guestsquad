@@ -14,7 +14,7 @@ import { SITE } from "@/lib/site-data";
 export const metadata: Metadata = buildMetadata({
   title: "Hotel Reservation Call Center for Hotel Groups",
   description:
-    "Hotel reservation call center for hotel groups: one team handles quotes, bookings and changes. After-hours coverage for two properties from US$299/month.",
+    "Hotel reservation call center for hotel groups: one team handles quotes, bookings and changes across your properties. Coverage scoped to your portfolio, enquiry volume and channels.",
   path: "/services/central-reservations",
 });
 
@@ -47,7 +47,7 @@ const FAQS = [
   },
   {
     q: "How much does a hotel reservation call center cost?",
-    a: "From US$299/month for a two-property reference configuration with after-hours coverage, subject to scope confirmation. 24/7 coverage, overflow and additional properties are quoted. Price depends on enquiry volume, coverage hours, number of properties, channels, system complexity and the actions required. See pricing at /pricing.",
+    a: "Your price depends on enquiry volume, coverage hours, number of properties, channels, system complexity and the actions required. Everything is set out in a written proposal before coverage begins.",
   },
 ];
 
@@ -123,7 +123,7 @@ export default function CentralReservationsPage() {
             serviceType: "Hotel reservation call center",
             alternateName: "Central reservations",
             description:
-              "Hotel reservation call center for hotel groups: one team handles quotes, bookings and changes. After-hours coverage for two properties from US$299/month.",
+              "Hotel reservation call center for hotel groups: one team handles quotes, bookings and changes across your properties. Coverage scoped to your portfolio, enquiry volume and channels.",
             url: `${SITE.url}${PATH}`,
             provider: { "@id": `${SITE.url}/#organization` },
             areaServed: [
@@ -160,7 +160,7 @@ export default function CentralReservationsPage() {
             url: `${SITE.url}${PATH}`,
             name: "Hotel Reservation Call Center for Hotel Groups",
             description:
-              "Hotel reservation call center for hotel groups: one team handles quotes, bookings and changes. After-hours coverage for two properties from US$299/month.",
+              "Hotel reservation call center for hotel groups: one team handles quotes, bookings and changes across your properties. Coverage scoped to your portfolio, enquiry volume and channels.",
             inLanguage: "en",
             isPartOf: { "@id": `${SITE.url}/#website` },
             mainEntity: { "@id": `${SITE.url}${PATH}#service` },
@@ -393,8 +393,7 @@ export default function CentralReservationsPage() {
         </div>
         <p className="mt-5 text-sm text-ink-soft">
           Coverage windows, channels and participating properties are agreed during scoping.{" "}
-          <Link href="/pricing" className="text-gold-dark underline underline-offset-2 hover:text-gold">See pricing</Link>{" "}
-          for how coverage is scoped.
+          <Link href="/pricing" className="text-gold-dark underline underline-offset-2 hover:text-gold">How pricing works →</Link>
         </p>
       </Section>
 
@@ -472,13 +471,12 @@ export default function CentralReservationsPage() {
           {/* Left: price card */}
           <div className="rounded-lg border border-line bg-paper p-7">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold-dark">Pricing</p>
-            <p className="mt-3 text-3xl font-semibold tracking-tight text-ink">From US$299<span className="text-base font-normal text-ink-muted">/month</span></p>
-            <p className="mt-1 text-xs text-ink-muted italic">Subject to scope confirmation</p>
+            <h2 className="mt-3 text-2xl font-medium text-ink">Reservation Coverage Built Around Your Portfolio.</h2>
             <p className="mt-4 text-sm leading-relaxed text-ink-soft">
-              Two properties, after-hours coverage. Shared-support starting configuration.
+              Every hotel group has different enquiry volumes, booking rules and channel complexity. Your Central Reservations Desk is scoped around your properties, their systems and your expected reservation workload.
             </p>
             <div className="mt-5 border-t border-line pt-5">
-              <p className="text-xs font-semibold uppercase tracking-[0.12em] text-ink-muted mb-3">Included at this starting price</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.12em] text-ink-muted mb-3">What&apos;s included</p>
               <ul className="flex flex-col gap-2">
                 {[
                   "Reservation inquiry handling across two properties",
@@ -505,13 +503,13 @@ export default function CentralReservationsPage() {
           {/* Right: what determines price + CTA */}
           <div className="flex flex-col gap-6">
             <div className="rounded-lg border border-line bg-surface p-7">
-              <p className="text-sm font-semibold text-ink mb-3">Your final fee depends on:</p>
+              <p className="text-sm font-semibold text-ink mb-3">What shapes your pricing:</p>
               <ul className="flex flex-col gap-2.5">
                 {[
                   "Enquiry volume",
-                  "Coverage hours — 24/7 and overflow are quoted",
+                  "Coverage hours — after-hours, overflow or 24/7",
                   "Number of participating properties",
-                  "Channels: phone, email, OTA, messaging",
+                  "Channels — phone, email, OTA, messaging",
                   "System complexity and actions agents must complete",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-2.5 text-sm text-ink-soft">
@@ -521,16 +519,16 @@ export default function CentralReservationsPage() {
                 ))}
               </ul>
               <p className="mt-4 text-sm text-ink-soft">
-                Work outside the agreed allowance is charged at the rate in your proposal.{" "}
-                <Link href="/pricing" className="text-gold-dark underline underline-offset-2 hover:text-gold">See full pricing</Link>.
+                <Link href="/pricing" className="text-gold-dark underline underline-offset-2 hover:text-gold">How pricing works →</Link>
               </p>
             </div>
             <div className="rounded-lg border border-line bg-paper p-7">
-              <p className="text-sm font-semibold text-ink mb-2">Ready to discuss your portfolio?</p>
-              <p className="text-sm text-ink-soft mb-5">Tell us your properties, channels and coverage requirements. We will scope the right configuration and send a written proposal.</p>
+              <p className="text-sm font-semibold text-ink mb-2">Start With a Pilot.</p>
+              <p className="text-sm text-ink-soft mb-5">Tell us your property, coverage hours and what you need managed. We&apos;ll agree the scope and send a written proposal before anything begins.</p>
               <CoverageReviewButton variant="gold" ctaLocation="crd_price_cta" className="w-full justify-center">
-                Book a Portfolio Review
+                Explore a Reservations Pilot
               </CoverageReviewButton>
+              <p className="mt-4 text-xs text-ink-muted">✓ Written proposal before onboarding · ✓ Month-to-month · ✓ No obligation to continue</p>
             </div>
           </div>
         </div>

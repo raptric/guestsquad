@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   ...buildMetadata({
     title: PAGE_TITLE,
     description:
-      "Vacation rental answering service: trained people answer guest calls and Airbnb and Vrbo messages 24/7, from late check-ins to lockouts. From US$99/month.",
+      "Vacation rental answering service: trained people answer guest calls and Airbnb and Vrbo messages 24/7, from late check-ins to lockouts. Coverage scoped to your listings, channels and guest volume.",
     path: "/services/vacation-rental-answering-service",
   }),
   title: { absolute: PAGE_TITLE },
@@ -33,7 +33,7 @@ const FAQS = [
   },
   {
     q: "Do you answer guest phone calls 24/7?",
-    a: "Yes. The US$99/month plan for one listing includes live phone answering with 24/7 coverage, subject to scope confirmation. You can also choose after-hours or overflow coverage. Additional listings are quoted.",
+    a: "Yes. Live phone answering with 24/7 coverage is available, with after-hours or overflow as alternatives. Coverage hours and listing count are confirmed during scoping, with everything set out in a written proposal.",
   },
   {
     q: "What should I look for in a phone answering service for vacation rentals?",
@@ -121,7 +121,7 @@ export default function VacationRentalAnsweringServicePage() {
             name: "Vacation Rental Answering Service",
             serviceType: "Vacation Rental Answering Service",
             description:
-              "Vacation rental answering service: trained people answer guest calls and Airbnb and Vrbo messages 24/7, from late check-ins to lockouts. From US$99/month.",
+              "Vacation rental answering service: trained people answer guest calls and Airbnb and Vrbo messages 24/7, from late check-ins to lockouts. Coverage scoped to your listings, channels and guest volume.",
             url: `${SITE.url}${PATH}`,
             provider: { "@id": `${SITE.url}/#organization` },
             areaServed: [
@@ -165,7 +165,7 @@ export default function VacationRentalAnsweringServicePage() {
             url: `${SITE.url}${PATH}`,
             name: "Vacation Rental Answering Service | 24/7 Guest Calls",
             description:
-              "Vacation rental answering service: trained people answer guest calls and Airbnb and Vrbo messages 24/7, from late check-ins to lockouts. From US$99/month.",
+              "Vacation rental answering service: trained people answer guest calls and Airbnb and Vrbo messages 24/7, from late check-ins to lockouts. Coverage scoped to your listings, channels and guest volume.",
             inLanguage: "en",
             isPartOf: { "@id": `${SITE.url}/#website` },
             mainEntity: { "@id": `${SITE.url}${PATH}#service` },
@@ -412,13 +412,12 @@ export default function VacationRentalAnsweringServicePage() {
           {/* Left: price card */}
           <div className="rounded-lg border border-line bg-paper p-7">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold-dark">Pricing</p>
-            <p className="mt-3 text-3xl font-semibold tracking-tight text-ink">From US$99<span className="text-base font-normal text-ink-muted">/month</span></p>
-            <p className="mt-1 text-xs text-ink-muted italic">Subject to scope confirmation</p>
+            <h2 className="mt-3 text-2xl font-medium text-ink">Guest Support Priced to Your Listings and Volume.</h2>
             <p className="mt-4 text-sm leading-relaxed text-ink-soft">
-              One listing, 24/7 coverage included. Shared-support starting configuration.
+              Coverage for short-term rental operators is built around your listing count, the platforms your guests use and the communication volume your team currently handles.
             </p>
             <div className="mt-5 border-t border-line pt-5">
-              <p className="text-xs font-semibold uppercase tracking-[0.12em] text-ink-muted mb-3">Included at this starting price</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.12em] text-ink-muted mb-3">What&apos;s included</p>
               <ul className="flex flex-col gap-2">
                 {[
                   "Live phone answering, 24/7",
@@ -444,11 +443,11 @@ export default function VacationRentalAnsweringServicePage() {
           {/* Right: what determines price + CTA */}
           <div className="flex flex-col gap-6">
             <div className="rounded-lg border border-line bg-surface p-7">
-              <p className="text-sm font-semibold text-ink mb-3">Your final fee depends on:</p>
+              <p className="text-sm font-semibold text-ink mb-3">What shapes your pricing:</p>
               <ul className="flex flex-col gap-2.5">
                 {[
                   "Number of listings",
-                  "Channels covered (phone, Airbnb, Vrbo, other)",
+                  "Channels covered — phone, Airbnb, Vrbo, other",
                   "Call and message volume",
                   "Tasks included in the agreed scope",
                 ].map((item) => (
@@ -459,16 +458,16 @@ export default function VacationRentalAnsweringServicePage() {
                 ))}
               </ul>
               <p className="mt-4 text-sm text-ink-soft">
-                Additional listings are quoted. Work outside the agreed allowance is charged at the proposal rate.{" "}
-                <Link href="/pricing" className="text-gold-dark underline underline-offset-2 hover:text-gold">See guest support pricing</Link>.
+                <Link href="/pricing" className="text-gold-dark underline underline-offset-2 hover:text-gold">How pricing works →</Link>
               </p>
             </div>
             <div className="rounded-lg border border-line bg-paper p-7">
-              <p className="text-sm font-semibold text-ink mb-2">Ready to stop being on call?</p>
-              <p className="text-sm text-ink-soft mb-5">Tell us your listings, channels and coverage requirements. We will scope the right configuration and send a written proposal.</p>
+              <p className="text-sm font-semibold text-ink mb-2">Start With a Pilot.</p>
+              <p className="text-sm text-ink-soft mb-5">Tell us your property, coverage hours and what you need managed. We&apos;ll agree the scope and send a written proposal before anything begins.</p>
               <CoverageReviewButton variant="gold" ctaLocation="vras_price_cta" className="w-full justify-center">
-                Book a Coverage Review
+                Pilot Guest Support
               </CoverageReviewButton>
+              <p className="mt-4 text-xs text-ink-muted">✓ Written proposal before onboarding · ✓ Month-to-month · ✓ No obligation to continue</p>
             </div>
           </div>
         </div>

@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   ...buildMetadata({
     title: PAGE_TITLE,
     description:
-      "Hotel reservation support for one property: availability checks, quotes, bookings and changes handled live to your rates and policies. From US$149/month.",
+      "Hotel reservation support for one property: availability checks, quotes, bookings and changes handled live to your rates and policies. Coverage scoped to your booking volume, channels and PMS access.",
     path: "/services/reservation-support",
   }),
   title: { absolute: PAGE_TITLE },
@@ -27,7 +27,7 @@ const PATH = "/services/reservation-support";
 const FAQS = [
   {
     q: "Is reservation support included in the hotel answering service?",
-    a: "Yes. For a single hotel, reservation support is part of the hotel answering service, from US$149/month, subject to scope confirmation. What agents may do is agreed in your brief.",
+    a: "Yes. For a single hotel, reservation support is part of the hotel answering service. What agents may do is agreed in your brief, with everything set out in a written proposal before coverage begins.",
   },
   {
     q: "Can your agents make bookings?",
@@ -64,7 +64,7 @@ export default function ReservationSupportPage() {
             name: "Hotel Reservation Support",
             serviceType: "Hotel Reservation Support Service",
             description:
-              "Hotel reservation support for one property: availability checks, quotes, bookings and changes handled live to your rates and policies. From US$149/month.",
+              "Hotel reservation support for one property: availability checks, quotes, bookings and changes handled live to your rates and policies. Coverage scoped to your booking volume, channels and PMS access.",
             url: `${SITE.url}${PATH}`,
             provider: { "@id": `${SITE.url}/#organization` },
             areaServed: [
@@ -101,7 +101,7 @@ export default function ReservationSupportPage() {
             url: `${SITE.url}${PATH}`,
             name: PAGE_TITLE,
             description:
-              "Hotel reservation support for one property: availability checks, quotes, bookings and changes handled live to your rates and policies. From US$149/month.",
+              "Hotel reservation support for one property: availability checks, quotes, bookings and changes handled live to your rates and policies. Coverage scoped to your booking volume, channels and PMS access.",
             inLanguage: "en",
             isPartOf: { "@id": `${SITE.url}/#website` },
             mainEntity: { "@id": `${SITE.url}${PATH}#service` },
@@ -140,7 +140,7 @@ export default function ReservationSupportPage() {
             <Link href="/services/hotel-answering-service" className="text-gold-dark underline underline-offset-2 hover:text-gold">
               hotel answering service
             </Link>
-            , with plans from US$149/month, subject to scope confirmation.
+            . Coverage is scoped to your booking volume, channels and the PMS access you can provide.
           </p>
           <div className="mt-5 flex flex-wrap gap-2">
             {["Phone", "Email", "PMS", "OTA channels", "Direct booking"].map((c) => (
@@ -160,7 +160,7 @@ export default function ReservationSupportPage() {
               href="/pricing"
               className="inline-flex items-center justify-center rounded-lg border border-line px-6 py-3 text-sm font-medium text-ink transition-colors hover:border-ink/40 hover:bg-surface"
             >
-              See pricing
+              How pricing works
             </Link>
           </div>
         </div>
@@ -310,16 +310,13 @@ export default function ReservationSupportPage() {
         <div className="grid gap-8 lg:grid-cols-2 lg:items-start">
           <div className="rounded-lg border border-line bg-paper p-7">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold-dark">Pricing</p>
-            <p className="mt-3 text-3xl font-semibold tracking-tight text-ink">
-              From US$149<span className="text-base font-normal text-ink-muted">/month</span>
-            </p>
-            <p className="mt-1 text-xs italic text-ink-muted">Subject to scope confirmation</p>
+            <h2 className="mt-3 text-2xl font-medium text-ink">Reservation Support Scoped to Your Property.</h2>
             <p className="mt-4 text-sm leading-relaxed text-ink-soft">
-              Hotel reservation support is included in our hotel answering service, for one hotel. The starting price covers after-hours or overflow coverage within an agreed workload allowance.
+              What your reservation team handles — and how they handle it — is agreed before coverage begins. Your plan is built around the actions, channels and booking rules specific to your property.
             </p>
             <div className="mt-5 border-t border-line pt-5">
               <p className="mb-3 text-xs font-semibold uppercase tracking-[0.12em] text-ink-muted">
-                Included at this starting price
+                What&apos;s included
               </p>
               <ul className="flex flex-col gap-2">
                 {[
@@ -342,12 +339,12 @@ export default function ReservationSupportPage() {
           </div>
 
           <div className="flex flex-col gap-6">
-            <div className="rounded-lg border border-line bg-paper p-7">
-              <p className="mb-3 text-sm font-semibold text-ink">Your final fee depends on:</p>
+            <div className="rounded-lg border border-line bg-surface p-7">
+              <p className="mb-3 text-sm font-semibold text-ink">What shapes your pricing:</p>
               <ul className="flex flex-col gap-2.5">
                 {[
-                  "Coverage hours (overflow, after hours or full time)",
-                  "Channels covered (phone, email, OTA)",
+                  "Coverage hours — overflow, after-hours or full time",
+                  "Channels covered — phone, email, OTA",
                   "Call and enquiry volume",
                   "Actions included in the agreed scope",
                 ].map((item) => (
@@ -358,28 +355,25 @@ export default function ReservationSupportPage() {
                 ))}
               </ul>
               <p className="mt-4 text-sm text-ink-soft">
-                24/7 coverage is available and quoted to your volume.{" "}
-                <Link href="/pricing" className="text-gold-dark underline underline-offset-2 hover:text-gold">
-                  See pricing
-                </Link>
-                .
-              </p>
-              <p className="mt-3 text-sm text-ink-soft">
                 Want to size the problem first? The{" "}
                 <Link href="/resources/missed-booking-calculator" className="text-gold-dark underline underline-offset-2 hover:text-gold">
                   hotel missed call revenue calculator
                 </Link>{" "}
                 estimates what unanswered booking calls may be costing you.
               </p>
+              <p className="mt-3 text-sm text-ink-soft">
+                <Link href="/pricing" className="text-gold-dark underline underline-offset-2 hover:text-gold">How pricing works →</Link>
+              </p>
             </div>
-            <div className="rounded-lg border border-line bg-surface p-7">
-              <p className="mb-2 text-sm font-semibold text-ink">Find the right reservation coverage.</p>
+            <div className="rounded-lg border border-line bg-paper p-7">
+              <p className="mb-2 text-sm font-semibold text-ink">Start With a Pilot.</p>
               <p className="mb-5 text-sm text-ink-soft">
-                Tell us your booking channels and what you want agents to handle. We will confirm the scope, the access needed and the price in writing.
+                Tell us your property, coverage hours and what you need managed. We&apos;ll agree the scope and send a written proposal before anything begins.
               </p>
               <CoverageReviewButton variant="gold" ctaLocation="reservation_pricing_cta" className="w-full justify-center">
-                Book a Coverage Review
+                Pilot Hotel Reservation Support
               </CoverageReviewButton>
+              <p className="mt-4 text-xs text-ink-muted">✓ Written proposal before onboarding · ✓ Month-to-month · ✓ No obligation to continue</p>
             </div>
           </div>
         </div>

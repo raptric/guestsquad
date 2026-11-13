@@ -381,41 +381,67 @@ export default function HotelAnsweringServicePage() {
 
       {/* PRICING */}
       <Section id="price">
-        <div className="mx-auto max-w-2xl rounded-xl border border-line bg-paper p-8">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold-dark">Pricing</p>
-          <h2 className="mt-3 text-2xl font-medium text-ink">
-            Hotel Call Coverage That Fits Your Operation.
-          </h2>
-          <p className="mt-4 text-sm leading-relaxed text-ink-soft">
-            Every hotel has different call volumes, reception hours and guest needs. Your monthly coverage is based on the hours you need, the calls and messages we handle, and the responsibilities you want our team to manage.
-          </p>
-          <p className="mt-3 text-sm leading-relaxed text-ink-soft">
-            Start with a pilot and we&apos;ll recommend the right coverage structure for your property — with a written proposal before anything begins.
-          </p>
-          <div className="mt-6 grid gap-2 sm:grid-cols-2">
-            {[
-              "Coverage hours — after-hours, overflow or 24/7",
-              "Expected call and message volume",
-              "Channels covered — phone, OTAs, guest messaging",
-              "Booking actions required in your PMS",
-            ].map((factor) => (
-              <div key={factor} className="flex items-start gap-2.5 text-sm text-ink-soft">
-                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold-dark" />
-                {factor}
-              </div>
-            ))}
+        <div className="grid gap-8 lg:grid-cols-2 lg:items-start">
+          <div className="rounded-lg border border-line bg-paper p-7">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold-dark">Pricing</p>
+            <h2 className="mt-3 text-2xl font-medium text-ink">Hotel Call Coverage That Fits Your Operation.</h2>
+            <p className="mt-4 text-sm leading-relaxed text-ink-soft">
+              Every hotel has different call volumes, reception hours and guest needs. Your plan is built around the hours you need covered and the responsibilities you want our team to manage.
+            </p>
+            <div className="mt-5 border-t border-line pt-5">
+              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.12em] text-ink-muted">What&apos;s included</p>
+              <ul className="flex flex-col gap-2">
+                {[
+                  "Live phone answering during agreed coverage hours",
+                  "Reservation inquiries",
+                  "Late-arrival and access assistance",
+                  "Guest-request routing",
+                  "After-hours or overflow coverage",
+                  "Guest messaging and OTA inbox support",
+                  "Escalation, call logging and handover notes",
+                  "Activity summary",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-2.5 text-sm text-ink-soft">
+                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold-dark" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="mt-5 border-t border-line pt-4">
+              <p className="text-xs text-ink-muted">Month-to-month · 30 days&apos; notice</p>
+            </div>
           </div>
-          <div className="mt-7 flex flex-wrap items-center gap-4">
-            <CoverageReviewButton variant="gold" ctaLocation="hotel_price_cta">
-              Pilot Hotel Call Coverage
-            </CoverageReviewButton>
-            <Link href="/pricing" className="text-sm text-gold-dark underline underline-offset-2 hover:text-gold">
-              How pricing works →
-            </Link>
+
+          <div className="flex flex-col gap-6">
+            <div className="rounded-lg border border-line bg-surface p-7">
+              <p className="text-sm font-semibold text-ink mb-3">What shapes your pricing:</p>
+              <ul className="flex flex-col gap-2.5">
+                {[
+                  "Coverage hours — after-hours, overflow or 24/7",
+                  "Number of properties and call volume",
+                  "Workload allowance and channels covered",
+                  "Booking actions required in your PMS",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-2.5 text-sm text-ink-soft">
+                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-ink-muted/50" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-4 text-sm text-ink-soft">
+                <Link href="/pricing" className="text-gold-dark underline underline-offset-2 hover:text-gold">How pricing works →</Link>
+              </p>
+            </div>
+            <div className="rounded-lg border border-line bg-paper p-7">
+              <p className="text-sm font-semibold text-ink mb-2">Start With a Pilot.</p>
+              <p className="text-sm text-ink-soft mb-5">Tell us your property, coverage hours and what you need managed. We&apos;ll agree the scope and send a written proposal before anything begins.</p>
+              <CoverageReviewButton variant="gold" ctaLocation="hotel_price_cta" className="w-full justify-center">
+                Pilot Hotel Call Coverage
+              </CoverageReviewButton>
+              <p className="mt-4 text-xs text-ink-muted">✓ Written proposal before onboarding · ✓ Month-to-month · ✓ No obligation to continue</p>
+            </div>
           </div>
-          <p className="mt-4 text-xs text-ink-muted">
-            ✓ Written proposal before onboarding &nbsp;·&nbsp; ✓ Month-to-month &nbsp;·&nbsp; ✓ No obligation to continue
-          </p>
         </div>
       </Section>
 

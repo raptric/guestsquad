@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   ...buildMetadata({
     title: PAGE_TITLE,
     description:
-      "After-hours hotel front desk support: hotel after hours calls, late check-ins and guest messages answered live, emergencies escalated. From US$149/month.",
+      "After-hours hotel front desk support: hotel after hours calls, late check-ins and guest messages answered live, emergencies escalated. Coverage scoped to your overnight hours and call volume.",
     path: "/services/after-hours-support",
   }),
   title: { absolute: PAGE_TITLE },
@@ -27,7 +27,7 @@ const PATH = "/services/after-hours-support";
 const FAQS = [
   {
     q: "How much does after-hours hotel support cost?",
-    a: "From US$149/month as part of the hotel answering service, for one hotel with after-hours or overflow coverage, subject to scope confirmation. Your final price depends on your hours, channels and overnight volume, and is set out in your proposal.",
+    a: "Your price depends on your overnight hours, call volume, channels covered and the escalation responsibilities you want managed. Everything is set out in a written proposal before coverage begins.",
   },
   {
     q: "Is this cheaper than hiring overnight staff?",
@@ -84,7 +84,7 @@ export default function AfterHoursSupportPage() {
             name: "After-Hours Hotel Front Desk Support",
             serviceType: "After-Hours Hotel Answering Service",
             description:
-              "After-hours hotel front desk support: overnight and weekend calls and messages answered live, emergencies escalated to your on-call manager. From US$149/month.",
+              "After-hours hotel front desk support: overnight and weekend calls and messages answered live, emergencies escalated to your on-call manager. Coverage scoped to your overnight hours and volume.",
             url: `${SITE.url}${PATH}`,
             provider: { "@id": `${SITE.url}/#organization` },
             areaServed: [
@@ -97,16 +97,7 @@ export default function AfterHoursSupportPage() {
             ],
             offers: {
               "@type": "Offer",
-              price: "149",
-              priceCurrency: "USD",
-              priceSpecification: {
-                "@type": "UnitPriceSpecification",
-                price: "149",
-                priceCurrency: "USD",
-                unitCode: "MON",
-                description:
-                  "Part of the hotel answering service: one hotel, after-hours or overflow coverage, subject to scope confirmation",
-              },
+              description: "Coverage scoped to your overnight hours, call volume and channels. Written proposal provided before onboarding.",
               availability: "https://schema.org/InStock",
             },
             audience: [
@@ -122,7 +113,7 @@ export default function AfterHoursSupportPage() {
             url: `${SITE.url}${PATH}`,
             name: PAGE_TITLE,
             description:
-              "After-hours hotel front desk support: hotel after hours calls, late check-ins and guest messages answered live, emergencies escalated. From US$149/month.",
+              "After-hours hotel front desk support: hotel after hours calls, late check-ins and guest messages answered live, emergencies escalated. Coverage scoped to your overnight hours and call volume.",
             inLanguage: "en",
             isPartOf: { "@id": `${SITE.url}/#website` },
             mainEntity: { "@id": `${SITE.url}${PATH}#service` },
@@ -161,7 +152,7 @@ export default function AfterHoursSupportPage() {
             <Link href="/services/hotel-answering-service" className="text-gold-dark underline underline-offset-2 hover:text-gold">
               hotel answering service
             </Link>
-            , with plans from US$149/month, subject to scope confirmation.
+            . Coverage is scoped to your overnight hours and call volume, with a written proposal before anything begins.
           </p>
           <div className="mt-7 flex flex-col gap-3 sm:flex-row">
             <CoverageReviewButton variant="gold" size="lg" ctaLocation="afterhours_hero">
@@ -171,7 +162,7 @@ export default function AfterHoursSupportPage() {
               href="/pricing"
               className="inline-flex items-center justify-center rounded-lg border border-line px-6 py-3 text-sm font-medium text-ink transition-colors hover:border-ink/40 hover:bg-surface"
             >
-              See pricing
+              How pricing works
             </Link>
           </div>
         </div>
@@ -393,16 +384,13 @@ export default function AfterHoursSupportPage() {
         <div className="grid gap-8 lg:grid-cols-2 lg:items-start">
           <div className="rounded-lg border border-line bg-paper p-7">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold-dark">Pricing</p>
-            <p className="mt-3 text-3xl font-semibold tracking-tight text-ink">
-              From US$149<span className="text-base font-normal text-ink-muted">/month</span>
-            </p>
-            <p className="mt-1 text-xs italic text-ink-muted">Subject to scope confirmation</p>
+            <h2 className="mt-3 text-2xl font-medium text-ink">After-Hours Coverage Scoped to Your Overnight Needs.</h2>
             <p className="mt-4 text-sm leading-relaxed text-ink-soft">
-              After-hours coverage is part of our hotel answering service, for one hotel. The starting price covers after-hours or overflow coverage within an agreed workload allowance.
+              Every hotel&apos;s overnight window is different. Your plan is scoped around the hours your desk is closed, your expected call volume and the escalation responsibilities you want managed.
             </p>
             <div className="mt-5 border-t border-line pt-5">
               <p className="mb-3 text-xs font-semibold uppercase tracking-[0.12em] text-ink-muted">
-                Included at this starting price
+                What&apos;s included
               </p>
               <ul className="flex flex-col gap-2">
                 {[
@@ -425,12 +413,12 @@ export default function AfterHoursSupportPage() {
           </div>
 
           <div className="flex flex-col gap-6">
-            <div className="rounded-lg border border-line bg-paper p-7">
-              <p className="mb-3 text-sm font-semibold text-ink">Your final fee depends on:</p>
+            <div className="rounded-lg border border-line bg-surface p-7">
+              <p className="mb-3 text-sm font-semibold text-ink">What shapes your pricing:</p>
               <ul className="flex flex-col gap-2.5">
                 {[
-                  "Coverage hours (overnight, weekends, or 24/7)",
-                  "Channels covered (phone, OTA, messaging)",
+                  "Coverage hours — overnight, weekends or 24/7",
+                  "Channels covered — phone, OTA, messaging",
                   "Your overnight call and message volume",
                   "Tasks included in the agreed scope",
                 ].map((item) => (
@@ -441,21 +429,18 @@ export default function AfterHoursSupportPage() {
                 ))}
               </ul>
               <p className="mt-4 text-sm text-ink-soft">
-                24/7 coverage is available and quoted to your volume.{" "}
-                <Link href="/pricing" className="text-gold-dark underline underline-offset-2 hover:text-gold">
-                  See pricing
-                </Link>
-                .
+                <Link href="/pricing" className="text-gold-dark underline underline-offset-2 hover:text-gold">How pricing works →</Link>
               </p>
             </div>
-            <div className="rounded-lg border border-line bg-surface p-7">
-              <p className="mb-2 text-sm font-semibold text-ink">Ready to cover your overnight gap?</p>
+            <div className="rounded-lg border border-line bg-paper p-7">
+              <p className="mb-2 text-sm font-semibold text-ink">Start With a Pilot.</p>
               <p className="mb-5 text-sm text-ink-soft">
-                Tell us your overnight call patterns, channels and escalation needs. We will scope coverage and send a written proposal.
+                Tell us your property, coverage hours and what you need managed. We&apos;ll agree the scope and send a written proposal before anything begins.
               </p>
               <CoverageReviewButton variant="gold" ctaLocation="afterhours_pricing_cta" className="w-full justify-center">
-                Book a Coverage Review
+                Pilot After-Hours Coverage
               </CoverageReviewButton>
+              <p className="mt-4 text-xs text-ink-muted">✓ Written proposal before onboarding · ✓ Month-to-month · ✓ No obligation to continue</p>
             </div>
           </div>
         </div>

@@ -120,7 +120,7 @@ export default function GuestMessagingPage() {
             <Link href="/services/hotel-answering-service" className="text-gold-dark underline underline-offset-2 hover:text-gold">
               hotel answering service
             </Link>{" "}
-            from US$149/month, subject to scope confirmation, and can be scoped into vacation rental and multi-property plans.
+            and can be scoped into vacation rental and multi-property plans.
           </p>
           <div className="mt-5 flex flex-wrap gap-2">
             {["SMS", "WhatsApp", "Email", "Live chat", "Direct messages"].map((c) => (
@@ -140,7 +140,7 @@ export default function GuestMessagingPage() {
               href="/pricing"
               className="inline-flex items-center justify-center rounded-lg border border-line px-6 py-3 text-sm font-medium text-ink transition-colors hover:border-ink/40 hover:bg-surface"
             >
-              See pricing
+              How pricing works
             </Link>
           </div>
         </div>
@@ -312,52 +312,54 @@ export default function GuestMessagingPage() {
         <div className="grid gap-8 lg:grid-cols-2 lg:items-start">
           <div className="rounded-lg border border-line bg-paper p-7">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold-dark">Pricing</p>
-            <p className="mt-3 text-sm font-medium text-ink mb-4">What guest messaging costs</p>
-            <ul className="flex flex-col gap-4">
+            <h2 className="mt-3 text-2xl font-medium text-ink">Guest Messaging Coverage Priced to Your Channels.</h2>
+            <p className="mt-4 text-sm leading-relaxed text-ink-soft">Message volume, response time requirements and the platforms you use all shape what your plan covers. Messaging is included within your agreed service scope and workload allowance.</p>
+            <div className="my-5 border-t border-line" />
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-ink-muted">What&apos;s included</p>
+            <ul className="flex flex-col gap-2">
               {[
-                {
-                  who: "One hotel",
-                  detail: "Included in the hotel answering service, from US$149/month, subject to scope confirmation. The starting price covers after-hours or overflow coverage, with guest messaging and OTA inbox support included within an agreed workload allowance.",
-                },
-                {
-                  who: "Vacation rentals",
-                  detail: "Can be scoped into the vacation rental answering service, from US$99/month for one listing with 24/7 coverage.",
-                },
-                {
-                  who: "Hotel groups",
-                  detail: "Can be scoped into a Central Reservations Desk, from US$299/month for two properties with after-hours coverage.",
-                },
+                "SMS, WhatsApp and email message replies",
+                "OTA inbox handling (Airbnb, Vrbo, Booking.com)",
+                "Pre-arrival, in-stay and post-stay messages",
+                "Escalation and handover notes",
+                "Activity summaries",
               ].map((item) => (
-                <li key={item.who} className="border-b border-line pb-4 last:border-b-0 last:pb-0">
-                  <p className="text-sm font-semibold text-ink">{item.who}</p>
-                  <p className="mt-1 text-sm leading-relaxed text-ink-soft">{item.detail}</p>
+                <li key={item} className="flex items-start gap-2 text-sm text-ink-soft">
+                  <span className="mt-0.5 text-gold-dark">✓</span>
+                  <span>{item}</span>
                 </li>
               ))}
             </ul>
-            <p className="mt-5 text-sm text-ink-soft">
-              24/7 coverage is available for hotels and hotel groups and is quoted to your volume.{" "}
-              <Link href="/pricing" className="text-gold-dark underline underline-offset-2 hover:text-gold">
-                See pricing
-              </Link>
-              .
-            </p>
-            <p className="mt-2 text-xs text-ink-muted">
-              We work with properties in the US, UK, Canada, Ireland, Australia and New Zealand.
-            </p>
+            <p className="mt-5 text-xs text-ink-muted">Month-to-month · Written proposal before onboarding · No lock-in</p>
           </div>
 
           <div className="flex flex-col gap-6">
             <div className="rounded-lg border border-line bg-surface p-7">
-              <p className="mb-2 text-sm font-semibold text-ink">Find the right guest messaging coverage.</p>
-              <p className="mb-5 text-sm text-ink-soft">
-                Tell us your property type, the channels your guests use and your typical message volume. We&apos;ll confirm the arrangement, the access needed and the price in writing.
+              <p className="mb-3 text-sm font-semibold text-ink">What shapes your pricing:</p>
+              <ul className="flex flex-col gap-2">
+                {[
+                  "Guest channels in scope (SMS, WhatsApp, email, OTA inbox)",
+                  "Daily message volume and response time requirements",
+                  "Coverage hours (after-hours, 24/7, overflow)",
+                  "Number of properties or listings",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-2 text-sm text-ink-soft">
+                    <span className="mt-0.5 shrink-0 text-gold-dark">·</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-4 text-sm text-ink-soft">
+                <Link href="/pricing" className="text-gold-dark underline underline-offset-2 hover:text-gold">How pricing works →</Link>
               </p>
+            </div>
+            <div className="rounded-lg border border-line bg-paper p-7">
+              <p className="mb-2 text-sm font-semibold text-ink">Start With a Pilot.</p>
+              <p className="mb-5 text-sm text-ink-soft">Tell us your property, the channels your guests use and what you need managed. We&apos;ll agree the scope and send a written proposal before anything begins.</p>
               <CoverageReviewButton variant="gold" ctaLocation="guest_messaging_pricing_cta" className="w-full justify-center">
-                Book a Coverage Review
+                Explore a Pilot
               </CoverageReviewButton>
-              <p className="mt-4 text-xs text-ink-muted">
-                Useful for the conversation: your guest channels, approximate daily message volume, and whether OTA inbox coverage is also needed.
-              </p>
+              <p className="mt-4 text-xs text-ink-muted">✓ Written proposal before onboarding · ✓ Month-to-month · ✓ No obligation to continue</p>
             </div>
           </div>
         </div>

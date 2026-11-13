@@ -27,7 +27,7 @@ const PATH = "/services/airbnb-guest-support";
 const FAQS = [
   {
     q: "How much do Airbnb guest services cost?",
-    a: "From US$99/month for one listing with 24/7 coverage, as part of the vacation rental answering service, subject to scope confirmation. Additional listings are priced to your message volume.",
+    a: "Your price depends on your listing count, the platforms covered and your message volume. Everything is set out in a written proposal before coverage begins.",
   },
   {
     q: "Will this help my response rate and Superhost status?",
@@ -146,7 +146,7 @@ export default function AirbnbGuestSupportPage() {
             <Link href="/services/vacation-rental-answering-service" className="text-gold-dark underline underline-offset-2 hover:text-gold">
               vacation rental answering service
             </Link>
-            , from US$99/month for one listing with 24/7 coverage, subject to scope confirmation. If your guests also phone you, that page covers live call answering.
+            . Coverage is scoped to your listings, channels and message volume. If your guests also phone you, that page covers live call answering.
           </p>
           <div className="mt-7 flex flex-col gap-3 sm:flex-row">
             <CoverageReviewButton variant="gold" size="lg" ctaLocation="airbnb_hero">
@@ -156,7 +156,7 @@ export default function AirbnbGuestSupportPage() {
               href="/pricing"
               className="inline-flex items-center justify-center rounded-lg border border-line px-6 py-3 text-sm font-medium text-ink transition-colors hover:border-ink/40 hover:bg-surface"
             >
-              See pricing
+              How pricing works
             </Link>
           </div>
         </div>
@@ -406,16 +406,13 @@ export default function AirbnbGuestSupportPage() {
         <div className="grid gap-8 lg:grid-cols-2 lg:items-start">
           <div className="rounded-lg border border-line bg-paper p-7">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold-dark">Pricing</p>
-            <p className="mt-3 text-3xl font-semibold tracking-tight text-ink">
-              From US$99<span className="text-base font-normal text-ink-muted">/month</span>
-            </p>
-            <p className="mt-1 text-xs italic text-ink-muted">Subject to scope confirmation</p>
+            <h2 className="mt-3 text-2xl font-medium text-ink">Airbnb Guest Support Scoped to Your Listings.</h2>
             <p className="mt-4 text-sm leading-relaxed text-ink-soft">
-              Airbnb messaging is included in our vacation rental answering service, for one listing with 24/7 coverage.
+              Coverage for Airbnb hosts is scoped around your listing count, the channels guests use and the response standards your platform requires.
             </p>
             <div className="mt-5 border-t border-line pt-5">
               <p className="mb-3 text-xs font-semibold uppercase tracking-[0.12em] text-ink-muted">
-                Included at this starting price
+                What&apos;s included
               </p>
               <ul className="flex flex-col gap-2">
                 {[
@@ -439,12 +436,12 @@ export default function AirbnbGuestSupportPage() {
           </div>
 
           <div className="flex flex-col gap-6">
-            <div className="rounded-lg border border-line bg-paper p-7">
-              <p className="mb-3 text-sm font-semibold text-ink">Your final fee depends on:</p>
+            <div className="rounded-lg border border-line bg-surface p-7">
+              <p className="mb-3 text-sm font-semibold text-ink">What shapes your pricing:</p>
               <ul className="flex flex-col gap-2.5">
                 {[
                   "Number of listings",
-                  "Platforms covered (Airbnb, Vrbo, direct)",
+                  "Platforms covered — Airbnb, Vrbo, direct",
                   "Message volume and coverage hours",
                   "Whether review responses are in scope",
                 ].map((item) => (
@@ -455,21 +452,18 @@ export default function AirbnbGuestSupportPage() {
                 ))}
               </ul>
               <p className="mt-4 text-sm text-ink-soft">
-                Extra listings are quoted to your message volume.{" "}
-                <Link href="/pricing" className="text-gold-dark underline underline-offset-2 hover:text-gold">
-                  See guest support pricing
-                </Link>
-                .
+                <Link href="/pricing" className="text-gold-dark underline underline-offset-2 hover:text-gold">How pricing works →</Link>
               </p>
             </div>
-            <div className="rounded-lg border border-line bg-surface p-7">
-              <p className="mb-2 text-sm font-semibold text-ink">Keep guest replies moving without being on call all night.</p>
+            <div className="rounded-lg border border-line bg-paper p-7">
+              <p className="mb-2 text-sm font-semibold text-ink">Start With a Pilot.</p>
               <p className="mb-5 text-sm text-ink-soft">
-                Tell us your listings, message patterns and escalation needs. We will set out the coverage, scope and price in writing.
+                Tell us your property, coverage hours and what you need managed. We&apos;ll agree the scope and send a written proposal before anything begins.
               </p>
               <CoverageReviewButton variant="gold" ctaLocation="airbnb_pricing_cta" className="w-full justify-center">
-                Book a Coverage Review
+                Pilot Airbnb Guest Support
               </CoverageReviewButton>
+              <p className="mt-4 text-xs text-ink-muted">✓ Written proposal before onboarding · ✓ Month-to-month · ✓ No obligation to continue</p>
             </div>
           </div>
         </div>

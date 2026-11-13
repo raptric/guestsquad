@@ -440,55 +440,55 @@ export default function BackOfficeOperationsPage() {
         <div className="grid gap-8 lg:grid-cols-2 lg:items-start">
           <div className="rounded-lg border border-line bg-paper p-7">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold-dark">Pricing</p>
-            <p className="mt-3 text-xl font-semibold tracking-tight text-ink">
-              Quoted to scope
-            </p>
-            <p className="mt-3 text-sm leading-relaxed text-ink-soft">
-              Night audit support and back office operations are quoted to your scope; there&apos;s no public starting price for this service.
-            </p>
-            <div className="mt-5 border-t border-line pt-5">
-              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.12em] text-ink-muted">
-                Your quote depends on:
-              </p>
-              <ul className="flex flex-col gap-2">
-                {[
-                  "Number of properties and PMS instances",
-                  "Nights covered each week",
-                  "Your OTA booking volume",
-                  "Which back office tasks you want (reconciliation, billing queries, rate parity checks)",
-                  "How often you want reports",
-                ].map((item) => (
-                  <li key={item} className="flex items-start gap-2.5 text-sm text-ink-soft">
-                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-ink-muted/50" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="mt-5 border-t border-line pt-4 space-y-1">
-              <p className="text-xs text-ink-muted">Month-to-month · 30 days&apos; notice</p>
-              <p className="text-xs text-ink-muted">
-                Guest-facing services have public starting prices on our{" "}
-                <Link href="/pricing" className="text-gold-dark underline underline-offset-2 hover:text-gold">
-                  guest support pricing
-                </Link>{" "}
-                page.
-              </p>
-            </div>
+            <h2 className="mt-3 text-2xl font-medium text-ink">Back Office Support Scoped to Your Operation.</h2>
+            <p className="mt-4 text-sm leading-relaxed text-ink-soft">Night audit support and back office operations are built around your property count, PMS and the tasks you want covered. Every engagement starts with a written scope before anything begins.</p>
+            <div className="my-5 border-t border-line" />
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-ink-muted">What&apos;s included</p>
+            <ul className="flex flex-col gap-2">
+              {[
+                "Night audit close and PMS reconciliation",
+                "Folio, payment and no-show review",
+                "OTA payout matching and billing error checks",
+                "Rate parity monitoring",
+                "Morning exception report",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-2 text-sm text-ink-soft">
+                  <span className="mt-0.5 text-gold-dark">✓</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-5 text-xs text-ink-muted">Month-to-month · Written proposal before onboarding · No lock-in</p>
           </div>
 
           <div className="flex flex-col gap-6">
             <div className="rounded-lg border border-line bg-surface p-7">
-              <p className="mb-2 text-sm font-semibold text-ink">Catch billing errors and payout gaps before month-end.</p>
-              <p className="mb-5 text-sm text-ink-soft">
-                Tell us your PMS, properties and OTA mix, and we&apos;ll set out the scope, access needed and a quote in writing.
+              <p className="mb-3 text-sm font-semibold text-ink">What shapes your pricing:</p>
+              <ul className="flex flex-col gap-2">
+                {[
+                  "Number of properties and PMS instances",
+                  "Nights covered each week",
+                  "OTA booking volume",
+                  "Back office tasks in scope",
+                  "Reporting frequency",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-2 text-sm text-ink-soft">
+                    <span className="mt-0.5 shrink-0 text-gold-dark">·</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-4 text-sm text-ink-soft">
+                <Link href="/pricing" className="text-gold-dark underline underline-offset-2 hover:text-gold">How pricing works →</Link>
               </p>
+            </div>
+            <div className="rounded-lg border border-line bg-paper p-7">
+              <p className="mb-2 text-sm font-semibold text-ink">Start With a Pilot.</p>
+              <p className="mb-5 text-sm text-ink-soft">Tell us your PMS, properties and what you need covered overnight. We&apos;ll agree the scope and send a written proposal before anything begins.</p>
               <CoverageReviewButton variant="gold" ctaLocation="backoffice_pricing_cta" className="w-full justify-center">
                 Book a Back Office Review
               </CoverageReviewButton>
-              <p className="mt-4 text-xs text-ink-muted">
-                Useful for the conversation: your PMS, number of properties, monthly OTA booking volume and who currently runs your night audit.
-              </p>
+              <p className="mt-4 text-xs text-ink-muted">✓ Written proposal before onboarding · ✓ Month-to-month · ✓ No obligation to continue</p>
             </div>
           </div>
         </div>

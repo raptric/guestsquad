@@ -142,7 +142,7 @@ export default function CalculatorPage() {
             ))}
           </div>
           <p className="mt-6 text-xs leading-relaxed text-ink-muted">
-            The recovery estimate uses a 70% capture rate as a starting assumption. Adjust both inputs to match your property's own data for a more accurate picture. Actual results depend on call type, time of day, and how inquiries are handled. This calculator is for estimation purposes only.{" "}
+            The recovery estimate uses a 70% capture rate as a starting assumption. Adjust both inputs to match your property&apos;s own data for a more accurate picture. Actual results depend on call type, time of day, and how inquiries are handled. This calculator is for estimation purposes only.{" "}
             <Link href="/contact" className="text-gold-dark underline underline-offset-4 hover:text-gold">
               Talk to us for a property-specific assessment.
             </Link>
@@ -160,7 +160,7 @@ export default function CalculatorPage() {
             For properties running lean front desk operations, overnight gaps, or peak-period overflow, the cumulative effect across a month adds up quickly. The calculator above makes that number visible so it can be weighed against the cost of coverage.
           </p>
           <p className="mt-4 text-sm leading-relaxed text-ink-soft">
-            Guest Squad is a hospitality call center for hotels and vacation rentals: we answer those calls in your property's name during the hours you choose.
+            Guest Squad is a hospitality call center for hotels and vacation rentals: we answer those calls in your property&apos;s name during the hours you choose.
           </p>
           <p className="mt-4 text-sm leading-relaxed text-ink-soft">
             If you want to see where your specific gaps are before requesting a quote, the{" "}

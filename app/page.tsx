@@ -169,8 +169,6 @@ export default function HomePage() {
               <Link href="/services/hotel-answering-service" className="text-gold-dark underline underline-offset-2 hover:text-gold">hotel answering service</Link>{" "}
               handles front-desk overflow, room and stay enquiries, late arrivals, guest requests, maintenance escalations and shift handovers. Guest messaging and OTA inbox support are included.
             </p>
-            <p className="mt-4 text-sm font-medium text-ink">From US$149/month</p>
-            <p className="text-xs text-ink-muted">One hotel · after-hours or overflow coverage · 24/7 quoted</p>
             <div className="mt-5">
               <CoverageReviewButton variant="gold" size="sm" ctaLocation="homepage_hotel_card">
                 Book a Coverage Review
@@ -191,8 +189,6 @@ export default function HomePage() {
               <Link href="/services/central-reservations" className="text-gold-dark underline underline-offset-2 hover:text-gold">hotel reservation call center</Link>{" "}
               handles reservation enquiries, property selection and availability, approved quotes and booking changes, with property-specific booking rules and reporting for each property.
             </p>
-            <p className="mt-4 text-sm font-medium text-ink">From US$299/month</p>
-            <p className="text-xs text-ink-muted">Two-property reference configuration · after-hours · 24/7 and additional properties quoted</p>
             <div className="mt-5">
               <CoverageReviewButton variant="gold" size="sm" ctaLocation="homepage_hotel_groups_card">
                 Book a Coverage Review
@@ -213,8 +209,6 @@ export default function HomePage() {
               <Link href="/services/vacation-rental-answering-service" className="text-gold-dark underline underline-offset-2 hover:text-gold">vacation rental answering service</Link>{" "}
               covers live guest calls, Airbnb and Vrbo messages, listing and house-rule questions, self check-in help, and cleaner, turnover and maintenance coordination.
             </p>
-            <p className="mt-4 text-sm font-medium text-ink">From US$99/month</p>
-            <p className="text-xs text-ink-muted">One listing · 24/7 included · live phone answering and Airbnb and Vrbo messaging</p>
             <div className="mt-5">
               <CoverageReviewButton variant="gold" size="sm" ctaLocation="homepage_vr_card">
                 Book a Coverage Review
@@ -234,7 +228,7 @@ export default function HomePage() {
           className="mx-auto"
         />
         <p className="mt-3 text-center text-sm text-ink-soft">
-          Every service can run at any hour. Starting prices cover the hours listed on each plan, and wider coverage is quoted.
+          Every service can run at any hour. Coverage hours are agreed before your pilot begins.
         </p>
         <div className="mt-8 grid gap-px border border-line bg-line sm:grid-cols-2 lg:grid-cols-4 rounded-lg overflow-hidden">
           {[

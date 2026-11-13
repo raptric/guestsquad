@@ -16,7 +16,7 @@ import { hotelAnsweringServiceData as d } from "@/lib/service-content";
 export const metadata: Metadata = buildMetadata({
   title: "Hotel Answering Service | 24/7 Live Calls",
   description:
-    "Hotel answering service: a hotel call center answering 24/7, after hours or on overflow, in your hotel's name. After-hours plans from US$149/month.",
+    "Hotel answering service: a hotel call center answering 24/7, after hours or on overflow, in your hotel's name. Coverage priced to your hours, channels and call volume.",
   path: "/services/hotel-answering-service",
 });
 
@@ -53,7 +53,7 @@ const FAQS = [
   },
   {
     q: "Can you also handle guest messages and OTA inboxes?",
-    a: "Yes. Guest messaging and OTA inbox support are included in the US$149 starting configuration, within the agreed channels and workload allowance.",
+    a: "Yes. Guest messaging and OTA inbox support are included within the agreed channels and workload allowance.",
   },
   {
     q: "Which countries and time zones do you cover?",
@@ -129,7 +129,7 @@ const CAPABILITY_TABLE = [
   { cap: "Complex or upset callers", how: "A person handles the call and escalates by your rules" },
   { cap: "Booking actions", how: "Only those you authorise, in systems you grant access to" },
   { cap: "Messages and OTA inboxes", how: "Included in the starting configuration, within agreed channels and workload" },
-  { cap: "Pricing basis", how: "From US$149/month for one hotel, after hours or overflow; 24/7 quoted" },
+  { cap: "Pricing basis", how: "Tailored to your hours, call volume, channels and booking actions required" },
 ];
 
 export default function HotelAnsweringServicePage() {
@@ -379,74 +379,43 @@ export default function HotelAnsweringServicePage() {
         </p>
       </Section>
 
-      {/* PRICE */}
+      {/* PRICING */}
       <Section id="price">
-        <div className="grid gap-8 lg:grid-cols-2 lg:items-start">
-          {/* Left: price card */}
-          <div className="rounded-lg border border-line bg-paper p-7">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold-dark">Pricing</p>
-            <p className="mt-3 text-3xl font-semibold tracking-tight text-ink">From US$149<span className="text-base font-normal text-ink-muted">/month</span></p>
-            <p className="mt-1 text-xs text-ink-muted italic">Subject to scope confirmation</p>
-            <p className="mt-4 text-sm leading-relaxed text-ink-soft">
-              One hotel, after-hours or overflow coverage. Shared-support starting configuration.
-            </p>
-            <div className="mt-5 border-t border-line pt-5">
-              <p className="text-xs font-semibold uppercase tracking-[0.12em] text-ink-muted mb-3">Included at this starting price</p>
-              <ul className="flex flex-col gap-2">
-                {[
-                  "Live phone answering during agreed coverage hours",
-                  "Reservation inquiries",
-                  "Late-arrival and access assistance",
-                  "Guest-request routing",
-                  "After-hours or overflow coverage",
-                  "Guest messaging and OTA inbox support",
-                  "Escalation, call logging and handover notes",
-                  "Activity summary",
-                ].map((item) => (
-                  <li key={item} className="flex items-start gap-2.5 text-sm text-ink-soft">
-                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold-dark" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="mt-5 border-t border-line pt-4">
-              <p className="text-xs text-ink-muted">Month-to-month · 30 days&apos; notice</p>
-            </div>
+        <div className="mx-auto max-w-2xl rounded-xl border border-line bg-paper p-8">
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold-dark">Pricing</p>
+          <h2 className="mt-3 text-2xl font-medium text-ink">
+            Hotel Call Coverage That Fits Your Operation.
+          </h2>
+          <p className="mt-4 text-sm leading-relaxed text-ink-soft">
+            Every hotel has different call volumes, reception hours and guest needs. Your monthly coverage is based on the hours you need, the calls and messages we handle, and the responsibilities you want our team to manage.
+          </p>
+          <p className="mt-3 text-sm leading-relaxed text-ink-soft">
+            Start with a pilot and we&apos;ll recommend the right coverage structure for your property — with a written proposal before anything begins.
+          </p>
+          <div className="mt-6 grid gap-2 sm:grid-cols-2">
+            {[
+              "Coverage hours — after-hours, overflow or 24/7",
+              "Expected call and message volume",
+              "Channels covered — phone, OTAs, guest messaging",
+              "Booking actions required in your PMS",
+            ].map((factor) => (
+              <div key={factor} className="flex items-start gap-2.5 text-sm text-ink-soft">
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold-dark" />
+                {factor}
+              </div>
+            ))}
           </div>
-
-          {/* Right: what determines price + CTA */}
-          <div className="flex flex-col gap-6">
-            <div className="rounded-lg border border-line bg-surface p-7">
-              <p className="text-sm font-semibold text-ink mb-3">Your final fee depends on:</p>
-              <ul className="flex flex-col gap-2.5">
-                {[
-                  "Coverage hours — 24/7 is quoted separately",
-                  "Number of properties and call volume",
-                  "Workload allowance and channels covered",
-                  "Booking actions required in your PMS",
-                ].map((item) => (
-                  <li key={item} className="flex items-start gap-2.5 text-sm text-ink-soft">
-                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-ink-muted/50" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-              <p className="mt-4 text-sm text-ink-soft">
-                Work outside the agreed allowance is charged at the rate in your proposal.{" "}
-                <Link href="/pricing" className="text-gold-dark underline underline-offset-2 hover:text-gold">See full pricing</Link>{" "}
-                or our{" "}
-                <Link href="/resources/hotel-answering-service-cost" className="text-gold-dark underline underline-offset-2 hover:text-gold">cost breakdown</Link>.
-              </p>
-            </div>
-            <div className="rounded-lg border border-line bg-paper p-7">
-              <p className="text-sm font-semibold text-ink mb-2">Ready to get a quote?</p>
-              <p className="text-sm text-ink-soft mb-5">Tell us your property, coverage hours and estimated call volume. We will scope the right configuration and send a written proposal.</p>
-              <CoverageReviewButton variant="gold" ctaLocation="hotel_price_cta" className="w-full justify-center">
-                Get a Quote for Your Hotel
-              </CoverageReviewButton>
-            </div>
+          <div className="mt-7 flex flex-wrap items-center gap-4">
+            <CoverageReviewButton variant="gold" ctaLocation="hotel_price_cta">
+              Pilot Hotel Call Coverage
+            </CoverageReviewButton>
+            <Link href="/pricing" className="text-sm text-gold-dark underline underline-offset-2 hover:text-gold">
+              How pricing works →
+            </Link>
           </div>
+          <p className="mt-4 text-xs text-ink-muted">
+            ✓ Written proposal before onboarding &nbsp;·&nbsp; ✓ Month-to-month &nbsp;·&nbsp; ✓ No obligation to continue
+          </p>
         </div>
       </Section>
 

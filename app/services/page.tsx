@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Breadcrumbs } from "@/components/site/breadcrumbs";
+import { CtaSection } from "@/components/site/cta-section";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
@@ -80,6 +81,11 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
+
+      <CtaSection
+        title="Ready to book a coverage review?"
+        description="Tell us your property, coverage hours and channels. We'll walk through exactly what your operation needs."
+      />
     </>
   );
 }

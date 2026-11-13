@@ -115,8 +115,6 @@ export function ServiceDetail({ data }: { data: ServiceDetailData }) {
         description={data.description}
         primaryCta={data.primaryCta}
         primaryHref={data.primaryHref}
-        secondaryCta="View Pricing"
-        secondaryHref="/pricing"
       />
 
       {/* Direct answer block — LLM-extractable summary */}

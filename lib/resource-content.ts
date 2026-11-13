@@ -145,8 +145,6 @@ export const aiVoiceComparison: ResourceArticleData = {
     body: "Before choosing between AI voice and human coverage, it helps to know which call types are hitting your property and which hours are genuinely uncovered.",
     primaryLabel: "See Hotel Answering Service",
     primaryHref: "/services/hotel-answering-service",
-    secondaryLabel: "View Pricing",
-    secondaryHref: "/pricing",
   },
   columnA: "Human Answering Service",
   columnB: "AI Voice Agent",
@@ -207,8 +205,6 @@ export const aiVoiceComparison: ResourceArticleData = {
     body: "A pilot review maps your real guest communication gaps across calls, OTA inboxes, and messaging channels before recommending any coverage model.",
     primaryLabel: "See Hotel Answering Service",
     primaryHref: "/services/hotel-answering-service",
-    secondaryLabel: "View Pricing",
-    secondaryHref: "/pricing",
   },
   verdictHeading: "How to make the right call for your property",
   verdictParagraphs: [

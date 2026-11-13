@@ -393,33 +393,28 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* STARTING PRICES */}
+      {/* PRICING */}
       <Section id="pricing">
-        <SectionHeading
-          eyebrow="Starting prices"
-          title="Transparent pricing by service."
-          align="center"
-          className="mx-auto"
-        />
-        <div className="mt-8 mx-auto max-w-xl flex flex-col divide-y divide-line rounded-lg border border-line bg-paper">
-          {[
-            { label: "Hotel Answering Service", price: "From US$149/month", detail: "One hotel · after-hours or overflow", href: "/services/hotel-answering-service" },
-            { label: "Central Reservations Desk", price: "From US$299/month", detail: "Two properties · after-hours", href: "/services/central-reservations" },
-            { label: "Vacation Rental Answering Service", price: "From US$99/month", detail: "One listing · 24/7 included", href: "/services/vacation-rental-answering-service" },
-          ].map((row) => (
-            <div key={row.label} className="flex items-center justify-between gap-4 px-5 py-4">
-              <div>
-                <Link href={row.href} className="text-sm font-medium text-ink hover:text-gold-dark">{row.label}</Link>
-                <p className="mt-0.5 text-xs text-ink-muted">{row.detail}</p>
-              </div>
-              <p className="shrink-0 text-sm font-medium text-ink">{row.price}</p>
-            </div>
-          ))}
+        <div className="mx-auto max-w-xl rounded-xl border border-line bg-paper p-8">
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold-dark">Pricing</p>
+          <h2 className="mt-3 text-2xl font-medium text-ink">
+            Flexible Guest Support. Pricing Built Around Your Property.
+          </h2>
+          <p className="mt-4 text-sm leading-relaxed text-ink-soft">
+            No two properties operate the same way. Your coverage is tailored to the hours, guest interactions, communication channels and responsibilities you need us to manage.
+          </p>
+          <p className="mt-3 text-sm leading-relaxed text-ink-soft">
+            Start with a pilot to experience how Guest Squad works with your property. We&apos;ll discuss your requirements, agree on the scope and provide transparent pricing before any service begins.
+          </p>
+          <div className="mt-6">
+            <CoverageReviewButton variant="gold" ctaLocation="homepage-pricing" size="default">
+              Explore a Pilot ↗
+            </CoverageReviewButton>
+          </div>
+          <p className="mt-4 text-xs text-ink-muted">
+            ✓ Tailored coverage &nbsp;·&nbsp; ✓ Clear proposal &nbsp;·&nbsp; ✓ No obligation to continue
+          </p>
         </div>
-        <p className="mt-4 text-center text-xs text-ink-muted">
-          24/7 for hotels and hotel groups is quoted. All prices are subject to scope confirmation.{" "}
-          <Link href="/pricing" className="text-gold-dark underline underline-offset-2 hover:text-gold">See full pricing</Link>.
-        </p>
       </Section>
 
       {/* FAQ + STICKY */}

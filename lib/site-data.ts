@@ -37,7 +37,7 @@ export const SERVICES: ServiceSummary[] = [
     title: "Hotel Answering Service",
     shortTitle: "Hotel Answering Service",
     description:
-      "Live phone coverage for independent hotels and boutique properties, with every call answered by a hospitality-trained agent.",
+      "Live phone coverage for independent hotels and boutique properties, answered by a hospitality-trained agent.",
   },
   {
     slug: "central-reservations",
@@ -58,7 +58,7 @@ export const SERVICES: ServiceSummary[] = [
     title: "Hotel Reservation Support",
     shortTitle: "Reservation Support",
     description:
-      "Inbound and outbound reservation calls handled with your rates, availability, and policies, so no booking inquiry goes unanswered.",
+      "Inbound and outbound reservation calls handled with your rates, availability, and policies.",
   },
   {
     slug: "guest-messaging",
@@ -72,7 +72,7 @@ export const SERVICES: ServiceSummary[] = [
     title: "OTA Inbox Management",
     shortTitle: "OTA Inbox Management",
     description:
-      "Booking.com, Expedia and Airbnb message threads monitored and answered around the clock.",
+      "Booking.com, Expedia and Airbnb message threads monitored and answered during the hours you choose.",
   },
   {
     slug: "after-hours-support",

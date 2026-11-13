@@ -163,7 +163,7 @@ export const reservationSupportData: ServiceDetailData = {
   eyebrow: "Reservation Support",
   title: "24/7 Hotel Reservation Support for Booking Calls and Quotes",
   description:
-    "Inbound and outbound reservation calls handled with your rates, availability, and policies, so no booking inquiry goes unanswered, day or night.",
+    "Inbound and outbound reservation calls handled with your rates, availability, and policies, during the hours you choose.",
   schemaAbout: { "@type": "Thing", "name": "Hotel Reservation Management" },
   schemaServiceOutput: "Confirmed hotel bookings, rate quotes, and reservation modifications handled by trained agents working inside the property's PMS",
   schemaSubjectOf: [
@@ -265,7 +265,7 @@ export const reservationSupportData: ServiceDetailData = {
     { label: "Hotel Answering Service vs AI Voice Agent", href: "/resources/hotel-answering-service-vs-ai-voice" },
     { label: "View Sample Weekly Report", href: "/resources/sample-weekly-report" },
   ],
-  ctaTitle: "Stop losing bookings to unanswered reservation calls.",
+  ctaTitle: "Close the reservation coverage gap.",
   ctaDescription: "Book a coverage review and see exactly how Guest Squad would handle your inbound reservation inquiries and guest calls.",
 };
 

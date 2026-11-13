@@ -8,7 +8,7 @@ import { buildMetadata, breadcrumbSchema, webPageSchema, organizationSchema, abo
 import { SITE } from "@/lib/site-data";
 
 export const metadata: Metadata = buildMetadata({
-  title: "About Guest Squad | Our Team & Approach",
+  title: "About | Our Team & Approach",
   description:
     "Guest Squad provides remote hospitality support for hotels and vacation rental operators — calls, reservations, guest messages, and agreed coordination handled by trained people.",
   path: "/about",

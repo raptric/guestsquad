@@ -1,8 +1,8 @@
 ﻿import { CoverageReviewButton } from "@/components/site/coverage-review-button";
 
 export function CtaSection({
-  title = "Stop losing bookings to silence.",
-  description = "Book a coverage review and see exactly how Guest Squad would cover your reservations, guest messages, OTA inboxes, and after-hours calls.",
+  title = "Close the coverage gap.",
+  description = "Book a coverage review and see how Guest Squad would cover your reservations, guest messages, OTA inboxes, and after-hours calls.",
   primaryCta = "Book a Coverage Review",
 }: {
   title?: string;

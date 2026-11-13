@@ -333,7 +333,7 @@ export default function BackOfficeOperationsPage() {
               <Link href="/services/central-reservations" className="text-gold-dark underline underline-offset-2 hover:text-gold">
                 hotel reservation call center
               </Link>
-              . We work with hotels in the US, UK, Canada, Ireland, Australia and New Zealand.
+              . We work with hotels worldwide.
             </p>
           </div>
         </div>

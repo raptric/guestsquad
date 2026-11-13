@@ -242,7 +242,7 @@ export default function AirbnbGuestSupportPage() {
           </ul>
           <div className="rounded-lg border border-line bg-paper p-5 space-y-3">
             <p className="text-sm text-ink-soft">
-              No front desk and no on-site team, but guests still expect a quick reply from a real person. We work with hosts in the US, UK, Canada, Ireland, Australia and New Zealand.
+              No front desk and no on-site team, but guests still expect a quick reply from a real person. We work with hosts worldwide.
             </p>
             <p className="text-sm text-ink-soft">
               Channels covered here: Airbnb, Vrbo and direct-booking messages. For Booking.com and Expedia inboxes, see{" "}

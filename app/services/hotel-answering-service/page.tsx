@@ -55,10 +55,6 @@ const FAQS = [
     q: "Can you also handle guest messages and OTA inboxes?",
     a: "Yes. Guest messaging and OTA inbox support are included within the agreed channels and workload allowance.",
   },
-  {
-    q: "Which countries and time zones do you cover?",
-    a: "We cover hotels in the US, UK, Canada, Ireland, Australia and New Zealand. Our team works remotely, and coverage hours are scheduled around your time zone.",
-  },
 ];
 
 const WORKFLOWS = [

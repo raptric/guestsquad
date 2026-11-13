@@ -53,6 +53,48 @@ export const SERVICES: ServiceSummary[] = [
     description:
       "Listing-specific guest operations for professional STR portfolios, covering calls, OTA inboxes, and coordination.",
   },
+  {
+    slug: "reservation-support",
+    title: "Hotel Reservation Support",
+    shortTitle: "Reservation Support",
+    description:
+      "Inbound and outbound reservation calls handled with your rates, availability, and policies, so no booking inquiry goes unanswered.",
+  },
+  {
+    slug: "guest-messaging",
+    title: "Hotel Guest Messaging",
+    shortTitle: "Guest Messaging",
+    description:
+      "SMS, WhatsApp, email and OTA messages answered by a trained person across the full stay journey.",
+  },
+  {
+    slug: "ota-inbox-management",
+    title: "OTA Inbox Management",
+    shortTitle: "OTA Inbox Management",
+    description:
+      "Booking.com, Expedia and Airbnb message threads monitored and answered around the clock.",
+  },
+  {
+    slug: "after-hours-support",
+    title: "After-Hours Hotel Support",
+    shortTitle: "After-Hours Support",
+    description:
+      "Overnight and weekend front desk coverage for hotels without a 24-hour team.",
+  },
+  {
+    slug: "airbnb-guest-support",
+    title: "Airbnb Guest Support",
+    shortTitle: "Airbnb Guest Support",
+    description:
+      "Round-the-clock Airbnb message handling for hosts and short-term rental operators.",
+  },
+  {
+    slug: "back-office-operations",
+    title: "Hotel Back Office Operations",
+    shortTitle: "Back Office Operations",
+    description:
+      "Daily night audit, OTA reconciliation and guest billing support to catch revenue leakage before month-end.",
+  },
 ];
 
 export const PROPERTY_TYPES = [

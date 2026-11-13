@@ -82,6 +82,31 @@ export function GuideArticle({ data }: { data: GuideArticleData }) {
                 </p>
               ))}
             </div>
+            {section.table && (
+              <div className="mt-6 overflow-x-auto">
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr>
+                      {section.table.headers.map((h) => (
+                        <th key={h} className="border-b border-line pb-2 pr-5 text-left text-xs font-semibold uppercase tracking-[0.1em] text-ink-muted first:pl-0 last:pr-0">{h}</th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {section.table.rows.map((row, ri) => (
+                      <tr key={ri} className="border-b border-line/40 last:border-0">
+                        {row.map((cell, ci) => (
+                          <td key={ci} className="py-3 pr-5 leading-relaxed text-ink-soft first:pl-0 first:font-medium first:text-ink last:pr-0">{cell}</td>
+                        ))}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            )}
+            {section.note && (
+              <p className="mt-3 text-xs leading-relaxed text-ink-muted">{section.note}</p>
+            )}
             {section.checklist && (
               <ul className="mt-2 flex flex-col gap-3">
                 {section.checklist.map((item) => (

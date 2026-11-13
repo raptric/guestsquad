@@ -27,10 +27,10 @@ export const RESOURCES: ResourceSummary[] = [
   },
   {
     slug: "hotel-answering-service-cost",
-    title: "How Much Does a Hotel Answering Service Cost?",
-    shortTitle: "Pricing Guide",
+    title: "How Much Does an Answering Service Cost for a Hotel?",
+    shortTitle: "Answering Service Cost",
     description:
-      "The pricing models hotel answering services actually use, what drives the price up or down, and the hidden costs to watch for.",
+      "The pricing models answering services use, what moves the price, and the fees to ask about before you sign.",
     type: "guide",
   },
   {
@@ -462,6 +462,8 @@ export type GuideSection = {
   heading: string;
   paragraphs: string[];
   checklist?: string[];
+  table?: { headers: string[]; rows: string[][] };
+  note?: string;
 };
 
 export type GuideArticleData = {
@@ -486,98 +488,106 @@ export type GuideArticleData = {
 
 export const answeringServiceCostGuide: GuideArticleData = {
   slug: "hotel-answering-service-cost",
-  title: "How Much Does a Hotel Answering Service Cost?",
+  title: "How Much Does an Answering Service Cost for a Hotel?",
   description:
-    "The pricing models hotel answering services actually use, what drives the price up or down, and the hidden costs worth asking about before you sign.",
-  metaTitle: "Hotel Answering Service Cost & Pricing Guide",
+    "The pricing models answering services use, what moves the price, and the fees to ask about before you sign.",
+  metaTitle: "Answering Service Cost for Hotels: Pricing Models Compared",
   metaDescription:
-    "See how hotel answering service pricing works, including per-call rates, shared coverage, dedicated agents, after-hours support, and what affects your quote.",
+    "Answering service cost for hotels: published plans run $49 to $1,725 a month, or $1.28 to $2.99 a minute. Pricing models and hidden fees compared.",
   datePublished: "2026-08-06T00:00:00+00:00",
-  dateModified: "2026-08-07T00:00:00+00:00",
+  dateModified: "2026-11-14T00:00:00+00:00",
   intro: [
-    "Most hotels ask about price before they ask about fit. That is understandable. The problem is that a flat rate without knowing your call volume, channels, and coverage hours is not a useful number, it is a placeholder. This guide explains what actually drives the cost, what tends to get buried in a quote, and what the right question is before you compare providers.",
-    "What most properties find when they run the numbers: a single recovered group booking or a week of captured after-hours reservations covers the monthly cost entirely. The right question is not what the service costs, but whether it pays for itself on your volume.",
-    "This guide walks through the pricing models actually used in this industry, what genuinely moves the price, and the costs that tend to show up after you've already signed.",
+    "Published prices for live answering services in the US run from $49 a month (pay as you go, with every minute billed) to $1,725 a month for a 500-minute plan. Per-minute rates run from $1.28 to $2.99, and per-call plans charge $8.50 to $11.50 for each call over the allowance. These figures come from five providers' own pricing pages, read on 13 November 2026, in US dollars.",
+    "What a hotel actually pays depends on the pricing model, the hours you need covered, your call and message volume, and what agents are allowed to do. A service that takes messages overnight is priced very differently from one that quotes your rates, makes bookings and answers your OTA inboxes. This guide explains each model, what pushes the price up or down, and the costs that tend to appear after you sign, so you can compare quotes on the same workload.",
   ],
   sections: [
     {
-      heading: "The Three Common Pricing Models",
-      paragraphs: [
-        "Most hotel answering and guest-operations providers price using one of three models, sometimes blended:",
-      ],
+      heading: "Answering service pricing models compared",
+      paragraphs: ["Most providers use one of five models, sometimes blended."],
+      table: {
+        headers: ["Pricing model", "How you're billed", "Published range (US)", "Best fit for a hotel"],
+        rows: [
+          ["Pay as you go", "A small monthly fee plus every minute of talk time", "$49/month + $1.37–$2.99/min", "Very low or unpredictable call volume"],
+          ["Monthly plan with included minutes", "A fixed fee for a block of minutes, then an overage rate", "$99 for 50 min up to $1,725 for 500 min", "Steady, predictable call volume"],
+          ["Per call", "A fixed fee for a number of calls, then a rate per extra call", "$300 for 30 calls up to $2,100 for 300 calls; $8.50–$11.50 per extra call", "Calls that often run long, such as reservation enquiries"],
+          ["AI answering", "A monthly fee for a number of AI-handled calls", "Free (25 calls) to $500/month (300 calls)", "Simple, repeatable questions only"],
+          ["Per property (scoped plan)", "A monthly fee per property, with an agreed workload", "Quoted by the provider", "Hotels that want reservations and guest requests handled, not just messages taken"],
+        ],
+      },
+      note: "Sources: published pricing pages of PATLive, MAP Communications, Ruby, Abby Connect and Smith.ai, read 13 November 2026. Prices change — check each provider's page before you compare. Taxes and telecom fees are usually extra. These are general business answering services; before comparing on price, check which actions their agents can complete in a hotel's booking system.",
+    },
+    {
+      heading: "What drives hotel answering service cost",
+      paragraphs: [""],
       checklist: [
-        "Per-seat / per-FTE: a flat monthly rate for a dedicated agent or team, regardless of exact call volume.",
-        "Per-call or per-message: a rate charged for each interaction handled, which scales directly with volume.",
-        "Per-minute: common with call-center-style providers and AI voice platforms, billed on talk time.",
+        "Call volume and call length. Per-minute and per-call plans scale directly with both. Reservation calls usually run longer than message-taking.",
+        "Hours covered. After-hours or overflow coverage costs less than 24/7 coverage.",
+        "What agents may do. Taking a message costs less than quoting rates, checking availability or changing a booking in your system.",
+        "Channels. Phone only, or phone plus OTA inboxes, SMS, WhatsApp and email.",
+        "Number of properties. Hotel groups are usually priced per property.",
+        "Contract length. Month-to-month plans keep you flexible; some providers discount longer commitments.",
       ],
     },
     {
-      heading: "What Actually Drives the Price",
-      paragraphs: [
-        "Within any of those models, the quote you get depends on a handful of real factors: your monthly call and message volume, how many properties you're covering, which channels are included (phone only, versus phone plus OTA inboxes plus SMS/WhatsApp/email), and how many hours of coverage you need. After-hours-only coverage costs less than full 24/7 coverage.",
-        "Contract length also affects price. Month-to-month plans are typically priced slightly higher per unit than longer commitments, in exchange for the flexibility to leave without penalty.",
-      ],
-    },
-    {
-      heading: "Hidden Costs to Watch For",
-      paragraphs: [
-        "A few things are easy to miss when comparing quotes:",
-      ],
+      heading: "Hidden costs to ask about before you sign",
+      paragraphs: [""],
       checklist: [
-        "Setup or onboarding fees charged separately from the monthly rate.",
-        "Per-minute overage charges once you exceed an included call allotment.",
-        "Long-term contract lock-in with early-termination penalties.",
-        "Integration fees for connecting to your specific PMS or phone system.",
-        "Charges for reporting or analytics that aren't included by default.",
+        "Setup or onboarding fees. Some providers charge one, others don't, and some price it to your scope. Ask for it in writing.",
+        "Overage rates. What each extra minute or call costs once you pass the allowance.",
+        "Minimum billing per call. Some per-minute plans round every call up.",
+        "Contract lock-in. Early-termination penalties on longer contracts.",
+        "System access. Charges for working in your PMS, booking engine or phone system.",
+        "Extra channels and reporting. Whether messaging or call reports cost extra.",
+        "Taxes and telecom fees added on top of the plan price.",
       ],
     },
     {
-      heading: "What We Quote Instead",
+      heading: "Answering service cost vs hiring overnight front desk staff",
       paragraphs: [
-        "Guest Squad pricing is scoped per property: coverage hours, channels, and call volume all affect the number. There is no flat published rate because two properties with different overnight gaps and OTA inbox volume need different plans. Every engagement starts with a pilot, so you see coverage working before committing to anything ongoing.",
-        "If you want to understand scope before requesting a quote, the [hotel answering service](/services/hotel-answering-service) page covers what is included. If your main concern is how the cost compares to hiring staff, or to other providers, the [vs call center guide](/resources/hotel-answering-service-vs-call-center) covers that directly.",
+        "Covering one desk every night of the year takes about 2,920 paid hours (8 hours × 365 nights), before holiday cover, sick days and turnover. Multiply that by your local hourly wage and add employer costs to get the yearly cost of one overnight position.",
+        "An answering service is scoped to the calls and messages you actually get. It can't do on-site tasks, so compare it with the guest-facing part of the night shift: calls, late check-ins and guest questions. If the same person also runs your night audit, that needs covering separately, for example with [hotel night audit support](/services/back-office-operations). Our [after-hours front desk checklist](/resources/after-hours-hotel-support-checklist) helps you list what overnight coverage needs to include before you compare.",
+      ],
+    },
+    {
+      heading: "How Guest Squad quotes",
+      paragraphs: [
+        "Guest Squad runs guest support operations for hotels, hotel groups and vacation rentals: a hospitality call center that answers calls, reservation enquiries and guest messages in your property's name.",
+        "We quote per property rather than per minute. The quote depends on your coverage hours, the channels you want covered, the number of properties or listings, and your typical volume. Any setup fee depends on scope and is set out in your written proposal. Plans are month-to-month.",
+        "To see what's included, read about our [hotel answering service](/services/hotel-answering-service). For hotel groups, see our [hotel reservation call center](/services/central-reservations). Compare like for like: ask every provider to quote the same monthly call volume, hours and tasks.",
       ],
     },
   ],
   faqs: [
     {
-      q: "Is there a setup fee?",
-      a: "No. Getting started with Guest Squad has no setup fee. Book a coverage review to see how coverage works for your property.",
-    },
-    {
-      q: "What does the pilot cover?",
-      a: "The pilot scope is agreed with you before it starts, based on your property's channels, call volume, and coverage gaps. Book a coverage review to walk through what makes sense for your property.",
-    },
-    {
-      q: "Does the price change if our call volume spikes?",
-      a: "Plans are scoped to your typical volume range. A sustained increase would mean revisiting the plan together, not a surprise overage charge.",
-    },
-    {
-      q: "Do you charge per call, per minute, or a flat rate?",
-      a: "Plans are scoped around your volume and channels rather than billed per call or per minute; see Pricing for how the three tiers are structured.",
-    },
-    {
-      q: "How much does it cost to outsource hotel front desk calls?",
-      a: "The cost depends on your call volume, coverage hours, and which channels are included. Most properties find that a single recovered group booking or a week of captured after-hours reservations covers the monthly cost entirely.",
-    },
-    {
       q: "Is a hotel answering service worth the cost?",
-      a: "For most independent hotels: yes. The break-even point is low. One or two reservation calls captured after hours that would have gone to voicemail typically covers the monthly cost. The question is not whether the service pays for itself, it is whether your current missed-call rate is high enough that it already is paying for itself and you have not noticed.",
+      a: "It depends on how many calls you miss now and what a booking is worth to you. If reservation calls regularly ring out after hours or at busy times, the lost bookings can outweigh the cost of covering them. The [missed booking calculator](/resources/missed-booking-calculator) gives you that number for your property.",
     },
     {
-      q: "How does the cost compare to hiring overnight staff?",
-      a: "Hiring a dedicated overnight position involves salary, benefits, and turnover costs year-round regardless of call volume. An answering service is scoped to your actual volume, so for most independent hotels it is significantly less expensive per answered call than a full overnight hire. The [after-hours hotel support checklist](/resources/after-hours-hotel-support-checklist) helps you map what overnight coverage actually needs to include before you compare costs.",
+      q: "Is per-minute or per-call pricing cheaper?",
+      a: "Per-minute pricing usually works out cheaper when calls are short. Per-call pricing usually works out cheaper when calls run long, such as reservation enquiries. Work out your average call length first.",
     },
     {
-      q: "What is included in the price: just calls, or messaging too?",
-      a: "It depends on the plan. Some plans cover phone calls only; others include OTA inbox management, SMS, WhatsApp, and email alongside call answering. Guest Squad scopes each plan to the channels you actually need coverage for.",
+      q: "How much does an AI answering service cost?",
+      a: "Published AI plans run from free for 25 calls a month to about $500 a month for 300 calls (Smith.ai, read 13 November 2026). AI suits simple, repeatable questions; see [AI hotel answering service vs human agents](/resources/hotel-answering-service-vs-ai-voice) for where it fits.",
+    },
+    {
+      q: "Can a general answering service take hotel reservations?",
+      a: "Some can take booking details as a message; fewer can check live availability, quote your rates or change a booking in your system. Ask each provider which actions their agents can complete. For a broader comparison, see [answering service vs call center](/resources/hotel-answering-service-vs-call-center).",
+    },
+    {
+      q: "Is there a setup fee with Guest Squad?",
+      a: "It depends on the scope of coverage. Any setup fee is set out in your written proposal before anything begins.",
+    },
+    {
+      q: "What is included: just calls, or messaging too?",
+      a: "It varies by provider. Many general services price phone calls only and sell messaging separately. With Guest Squad you choose the scope: calls only, or calls plus OTA inboxes, SMS, WhatsApp and email. The quote covers the channels you need.",
     },
     {
       q: "Can we start small and expand later?",
-      a: "Yes. Most clients start with after-hours or overflow coverage, confirm it is working during the pilot, and expand from there. No commitment to full-day or multi-channel coverage before you have seen the first scope perform.",
+      a: "Yes. Many properties start with after-hours or overflow coverage, such as [after-hours hotel front desk support](/services/after-hours-support), and add hours or channels once they've seen how it runs.",
     },
   ],
-  relatedServiceSlugs: ["hotel-answering-service", "after-hours-support"],
+  relatedServiceSlugs: ["hotel-answering-service", "central-reservations", "after-hours-support"],
   relatedResourceSlugs: ["hotel-answering-service-vs-call-center", "hotel-answering-service-vs-ai-voice"],
   inlineAsset: {
     heading: "While you're evaluating costs, find out which hours are actually unprotected at your property.",
@@ -587,100 +597,98 @@ export const answeringServiceCostGuide: GuideArticleData = {
   },
   schemaAbout: { type: "Service", name: "Hotel Answering Service", url: "https://guestsquad.com/services/hotel-answering-service", serviceType: "Hotel Answering Service", areaServed: "Worldwide" },
   schemaMentions: [
-    { type: "Thing", name: "Hotel Answering Service Cost" },
-    { type: "Thing", name: "Flat Monthly Pricing" },
-    { type: "Thing", name: "Per-Minute Call Billing" },
-    { type: "Thing", name: "Hotel Guest Support Coverage" },
-    { type: "Article", name: "When a Hotel or STR Should Outsource Guest Communication — and When It Shouldn't", id: "https://guestsquad.com/resources/insights/when-to-outsource-guest-communication#article" },
-    { type: "Article", name: "The Hidden Revenue Impact of Unanswered Hotel Reservation Calls", id: "https://guestsquad.com/resources/insights/unanswered-reservation-calls-revenue#article" },
+    { type: "Service", name: "Hotel Answering Service", id: "https://guestsquad.com/services/hotel-answering-service#service" },
+    { type: "Service", name: "Hotel Reservation Call Center", id: "https://guestsquad.com/services/central-reservations#service" },
+    { type: "Service", name: "After-Hours Hotel Front Desk Support", id: "https://guestsquad.com/services/after-hours-support#service" },
   ],
-  insightSlugs: ["when-to-outsource-guest-communication", "unanswered-reservation-calls-revenue"],
 };
 
 export const afterHoursChecklistGuide: GuideArticleData = {
   slug: "after-hours-hotel-support-checklist",
   title: "After-Hours Hotel Front Desk Support: A Practical Checklist",
   description:
-    "What a real after-hours setup needs to cover, from overnight calls and night audit phone coverage to emergency escalation, laid out as a working checklist.",
-  metaTitle: "After-Hours Hotel Front Desk Support Checklist",
+    "What a working after-hours setup covers, from overnight calls and night audit phone questions to emergency escalation and the morning handover.",
+  metaTitle: "After-Hours Hotel Front Desk Support Checklist | Guest Squad",
   metaDescription:
     "A practical checklist for after-hours hotel front desk and night audit phone coverage, including escalation rules and morning handoff.",
   datePublished: "2026-06-29T00:00:00+00:00",
-  dateModified: "2026-08-07T00:00:00+00:00",
+  dateModified: "2026-11-14T00:00:00+00:00",
   intro: [
-    "\"After-hours coverage\" means different things to different properties. For some it's just making sure the phone gets answered after 11pm. For others it includes night audit calls, emergency escalation, and a morning handoff report. This checklist breaks down what a complete setup actually covers.",
+    "\"After-hours coverage\" means different things to different hotels. For some it simply means the phone gets answered after 11pm. For others it includes night audit calls, emergency escalation and a handover report for the morning team. This checklist sets out what a complete setup covers, so you can audit yours before you change anything.",
   ],
   sections: [
     {
-      heading: "What Counts as \"After-Hours\" for Most Hotels",
+      heading: "What counts as \"after hours\" for most hotels",
       paragraphs: [
-        "Most independent hotels define after-hours as the period between the last front-desk shift change and the morning team arriving, typically somewhere between 11pm and 7am, plus weekends or holidays where staffing is thin. Night audit duties often fall in this same window.",
-        "This checklist is focused on hotel front-desk and overnight desk operations. If you run Airbnb, Vrbo, or a short-term rental portfolio, the [Vacation Rental Answering Service](/services/vacation-rental-answering-service) may be the better fit for ongoing guest support across your listings.",
+        "Most independent hotels define after hours as the time between the last front desk shift and the morning team arriving, typically somewhere between 11pm and 7am. Add weekends and holidays when staffing is thin. Night audit duties often fall in the same window.",
       ],
     },
     {
-      heading: "What a Complete After-Hours Setup Covers",
-      paragraphs: ["A setup that actually holds up overnight should include:"],
+      heading: "The after-hours checklist",
+      paragraphs: ["A setup that holds up overnight should cover:"],
       checklist: [
-        "Live call answering for reservation and general guest questions, not a phone tree.",
-        "Night audit phone coverage: calls related to billing, late charges, or audit questions.",
-        "Clear emergency escalation rules, agreed in advance, for genuine emergencies.",
-        "Handling for common late-night requests: late checkout, early arrival, lock-out support coordination.",
-        "A morning summary so your day team knows exactly what happened overnight before their shift starts.",
+        "Live call answering for reservation and general guest questions, not a phone tree or voicemail.",
+        "Night audit phone questions: billing, late charges and audit queries.",
+        "Emergency escalation rules, agreed in advance: what counts as an emergency, who is on call, and how to reach them.",
+        "Late-night requests: late checkout, early arrival, and coordinating help when a guest can't get in.",
+        "Guest messages that arrive overnight, not just calls.",
+        "A morning handover so the day team knows what happened before their shift starts.",
+        "Weekend and holiday cover, not only weeknights.",
       ],
     },
     {
-      heading: "The Real Risk of Unanswered Overnight Calls",
+      heading: "The real risk of unanswered overnight calls",
       paragraphs: [
-        "A booking inquiry that calls at 11pm and gets voicemail rarely calls back. They book elsewhere and you never see the lost revenue. The same applies to an existing guest with an urgent issue: if nobody answers, the complaint often surfaces the next morning as a review instead of a call.",
+        "Someone who calls at 11pm to book and gets voicemail rarely calls back. They book elsewhere, and the lost revenue never shows up in your reports. The same goes for a guest with an urgent problem: if nobody answers, the complaint often appears the next morning as a review instead of a call. The [missed booking calculator](/resources/missed-booking-calculator) estimates what unanswered calls may be costing you.",
       ],
     },
     {
-      heading: "Build vs. Outsource",
+      heading: "Build vs. outsource",
       paragraphs: [
-        "Staffing a dedicated overnight position is the traditional fix, but it's expensive for the call volume most independent properties actually get overnight, and turnover on graveyard shifts is high. Outsourced [after-hours hotel support](/services/after-hours-support) is typically priced closer to the actual volume of overnight activity, with the same person or team handling it night after night rather than rotating through whoever's on shift.",
+        "Hiring a dedicated overnight person is the traditional fix. But it's expensive for the overnight call volume most independent hotels get, and turnover on night shifts is high. A hospitality call center such as Guest Squad is scoped closer to your actual overnight volume, with a team briefed on your property that works from your procedures each night. See how our [after-hours hotel front desk support](/services/after-hours-support) works.",
+        "Use this checklist to audit your overnight setup before you put any coverage in place.",
       ],
     },
   ],
   faqs: [
     {
+      q: "What is after-hours hotel front desk support?",
+      a: "After-hours hotel front desk support means a trained person covers guest calls and messages through the night and at weekends. They handle late check-ins and overnight questions and escalate genuine emergencies, without you hiring a full overnight shift.",
+    },
+    {
       q: "Does after-hours coverage include night audit duties?",
-      a: "It can. Phone-based night audit questions (billing, late charges) are typically included; the actual audit/reconciliation process is covered separately under back-office operations.",
+      a: "It can include night audit phone questions such as billing and late charges. The audit and reconciliation work itself is a separate service: [hotel night audit support](/services/back-office-operations).",
     },
     {
       q: "What happens with a genuine emergency overnight?",
-      a: "Escalation rules are agreed before going live, so genuine emergencies are routed to your on-call contact immediately, not held for a morning report.",
+      a: "Escalation rules are agreed before coverage starts. Genuine emergencies go to your on-call contact straight away instead of waiting for the morning handover.",
     },
     {
-      q: "Can we start with just weekends, not every night?",
-      a: "Yes. Many clients start with weekend-only or peak-period overnight coverage before expanding to full nightly coverage.",
+      q: "Can we start with weekends only?",
+      a: "Yes. Many hotels start with weekend or peak-period overnight coverage and expand to every night later.",
     },
     {
       q: "How do we know what happened overnight?",
-      a: "You receive a daily summary every morning logging every call and message handled, so nothing happens in your guest channels you can't see.",
-    },
-    {
-      q: "What is after-hours hotel front desk support?",
-      a: "After-hours hotel front desk support means a trained person covers guest calls and messages through the night and on weekends — handling late check-ins, overnight questions, and escalating genuine emergencies — without you hiring a full overnight shift.",
+      a: "You receive handover notes covering the calls and messages handled and anything escalated, at the frequency agreed in your proposal.",
     },
     {
       q: "How do I cover my hotel phone overnight without hiring staff?",
-      a: "Outsourced after-hours coverage routes overnight calls to a trained team using your property's procedures and escalation rules. Most properties go live within five business days with no new headcount added.",
+      a: "Route overnight calls to a trained team that uses your property's procedures and escalation rules. Coverage starts once your property brief, system access and escalation contacts are agreed, and the go-live date is set with you during the coverage review.",
     },
     {
       q: "What should hotel night audit phone coverage include?",
-      a: "At minimum: live call answering for billing and late-charge questions, clear escalation rules for genuine emergencies, and a morning summary so your day team knows what happened overnight before their shift starts.",
+      a: "At minimum: live answering for billing and late-charge questions, clear escalation rules for emergencies, and a morning handover so your day team knows what happened.",
     },
     {
       q: "How much does after-hours hotel support cost?",
-      a: "There is no setup fee to get started. Coverage is scoped to your overnight call volume and hours. Book a coverage review for a quote scoped to your property.",
+      a: "Coverage is quoted per property, based on your overnight hours and call volume. Any setup fee depends on scope and is confirmed in your written proposal. Book a coverage review for a quote.",
     },
     {
-      q: "Can after-hours coverage handle Airbnb and vacation rental properties?",
-      a: "Yes. After-hours support covers short-term rental operators, Airbnb hosts, and serviced apartment operators as well as hotels — handling check-in questions, access issues, and escalations using your listing-specific instructions.",
+      q: "Does this work for vacation rentals?",
+      a: "Overnight cover works the same way for rental operators, using listing-specific instructions. Hosts and short-term rental managers usually start with our vacation rental answering service.",
     },
   ],
-  relatedServiceSlugs: ["after-hours-support", "vacation-rental-answering-service"],
+  relatedServiceSlugs: ["after-hours-support", "hotel-answering-service", "back-office-operations"],
   relatedResourceSlugs: ["hotel-front-desk-overflow-support", "hotel-answering-service-vs-ai-voice"],
   inlineAsset: {
     heading: "Use this checklist to audit your overnight setup before putting any coverage in place.",
@@ -698,105 +706,103 @@ export const afterHoursChecklistGuide: GuideArticleData = {
   },
   schemaAbout: { type: "Service", name: "After-Hours Hotel Support", url: "https://guestsquad.com/services/after-hours-support", serviceType: "After-Hours Hotel Front Desk Support", areaServed: "Worldwide" },
   schemaMentions: [
-    { type: "Thing", name: "Hotel Night Audit Phone Coverage" },
-    { type: "Thing", name: "Overnight Hotel Front Desk" },
-    { type: "Thing", name: "Hotel Emergency Escalation" },
-    { type: "Thing", name: "After-Hours Hotel Answering Service" },
-    { type: "Thing", name: "Late Check-In Support" },
-    { type: "Thing", name: "Hotel Voicemail Alternative" },
-    { type: "Thing", name: "Overnight Guest Calls" },
-    { type: "Thing", name: "Weekend Hotel Coverage" },
-    { type: "Article", name: "Why Hotels Still Miss Bookings After Hours Even When Demand Is Strong", id: "https://guestsquad.com/resources/insights/why-hotels-miss-bookings-after-hours#article" },
-    { type: "Article", name: "The Hidden Revenue Impact of Unanswered Hotel Reservation Calls", id: "https://guestsquad.com/resources/insights/unanswered-reservation-calls-revenue#article" },
+    { type: "Service", name: "Hotel Answering Service", id: "https://guestsquad.com/services/hotel-answering-service#service" },
+    { type: "Service", name: "Hotel Night Audit Support", id: "https://guestsquad.com/services/back-office-operations#service" },
   ],
-  insightSlugs: ["why-hotels-miss-bookings-after-hours", "unanswered-reservation-calls-revenue"],
 };
 
 export const overflowSupportGuide: GuideArticleData = {
   slug: "hotel-front-desk-overflow-support",
   title: "Hotel Front Desk Overflow Support: When to Outsource and What to Keep In-House",
   description:
-    "How overflow call coverage actually works, the signs your property needs it, and how to set it up without disrupting the team you already have.",
-  metaTitle: "Hotel Front Desk Overflow Support: When and How to Outsource",
+    "How overflow call coverage works, the signs your hotel needs it, and how to set it up without disrupting the team you already have.",
+  metaTitle: "Hotel Front Desk Overflow Support: When to Outsource",
   metaDescription:
     "When to add overflow phone support at your hotel, how it works in practice, and how to set it up alongside your existing front desk team.",
   datePublished: "2026-06-29T00:00:00+00:00",
-  dateModified: "2026-08-07T00:00:00+00:00",
+  dateModified: "2026-11-14T00:00:00+00:00",
   intro: [
-    "Overflow support isn't the same as replacing your front desk. It's coverage that only activates when your team genuinely can't get to the phone. This guide covers when it makes sense, how it actually works day to day, and what to keep in-house regardless.",
+    "Hotel front desk overflow support is call coverage that takes over only when your team can't get to the phone. It doesn't replace your front desk. Your staff answer as normal, and the overflow team picks up calls that would otherwise ring out or go to voicemail. This guide covers when overflow makes sense, how it works day to day, and what to keep in-house.",
   ],
   sections: [
     {
-      heading: "What Overflow Actually Looks Like",
+      heading: "What overflow looks like",
       paragraphs: [
-        "The classic overflow moments are predictable: simultaneous check-in and check-out rushes, group or event arrivals, a single front-desk staff member covering a shift alone, or a sudden spike from an OTA promotion. Overflow coverage picks up calls that would otherwise ring out or go to voicemail during exactly those windows.",
+        "The overflow moments are predictable: check-in and check-out happening at once, group or event arrivals, one person covering the desk alone, or a burst of calls after an OTA promotion. Overflow coverage picks up the calls that would otherwise be missed in exactly those windows.",
       ],
     },
     {
-      heading: "Signs Your Property Needs It",
-      paragraphs: ["A few patterns are worth watching for:"],
+      heading: "Signs your hotel needs it",
+      paragraphs: [""],
       checklist: [
-        "Reception regularly lets calls ring through during check-in/check-out hours.",
-        "Voicemail messages pile up faster than your team can return them.",
-        "Staff describe phones as \"a distraction\" from in-person guests, not a help.",
-        "You suspect, but can't prove, that some calls are going unanswered entirely.",
+        "Calls regularly ring out during check-in and check-out.",
+        "Voicemails pile up faster than your team can return them.",
+        "Staff describe the phone as a distraction from guests at the desk.",
+        "You suspect calls go unanswered, but you can't prove how many.",
       ],
     },
     {
-      heading: "How Overflow Coverage Actually Works",
+      heading: "How overflow coverage works",
       paragraphs: [
-        "Calls route to your existing front desk first. Only calls that aren't picked up within a set number of rings, or calls placed during specific hours you define, route to the [overflow team](/services/hotel-answering-service) instead. Your in-house staff keeps full control of the calls they can take; overflow exists purely to catch what they can't.",
+        "Calls ring at your front desk first. If nobody picks up within a set number of rings, or during hours you choose, the call routes to the overflow team. Your staff keep every call they can take; overflow only catches the rest.",
+        "With Guest Squad, overflow is part of our [hotel answering service](/services/hotel-answering-service). We're a hospitality call center, and agents answer in your hotel's name, using your rates, room types, policies and escalation contacts. They can handle reservation calls, not just take messages, within the scope you agree.",
       ],
     },
     {
-      heading: "Overflow vs. Full Outsourcing",
+      heading: "What to keep in-house",
+      paragraphs: ["Overflow works best when the line between your team and the overflow team is clear. Most hotels keep:"],
+      checklist: [
+        "In-person guests and anything that needs someone on site.",
+        "VIP and group contacts your team already manages.",
+        "Decisions on refunds, compensation and exceptions to policy, which the overflow team escalates to you.",
+      ],
+    },
+    {
+      heading: "Overflow vs. full outsourcing",
       paragraphs: [
-        "Overflow is the lighter-touch option: your team handles the majority of calls as normal, and outside coverage only fills genuine gaps. Full outsourcing (every call, every hour) makes more sense for properties without a dedicated phone-answering role at all. Most clients start with overflow and expand only if the data shows it's worth it.",
+        "Overflow is the lighter option: your team handles most calls and outside coverage fills genuine gaps. Routing every call, every hour, to an external team suits hotels with no dedicated phone role at all. Many hotels start with overflow and expand if the call data shows it's worth it.",
+        "Find out which call volumes and hours are uncovered at your property right now.",
       ],
     },
   ],
   faqs: [
     {
-      q: "Do we lose control of our phone line?",
-      a: "No. Your team continues answering as normal; overflow coverage only activates for calls they genuinely can't reach.",
+      q: "What is hotel front desk overflow support?",
+      a: "It routes calls to a trained external team only when your staff can't get to the phone: during check-in rushes, peak periods, or when one person is covering the desk alone. Your team handles what it can; overflow catches the rest.",
     },
     {
-      q: "How is overflow priced differently from full coverage?",
-      a: "Overflow is typically lower-volume than full coverage, so it's usually the more affordable starting point. There is no setup fee to get started. Book a coverage review for a quote scoped to your property.",
+      q: "Do we lose control of our phone line?",
+      a: "No. Your team keeps answering as normal. Overflow only takes the calls they can't reach, and you set the routing rules.",
     },
     {
       q: "Can overflow handle reservations, or just take messages?",
-      a: "It can handle full reservation calls, not just message-taking. Agents are briefed on your rates, room types, and policies before going live.",
+      a: "It can handle reservation calls within the scope you agree. Agents are briefed on your rates, room types and policies before coverage starts.",
     },
     {
-      q: "How quickly can overflow coverage go live?",
-      a: "Typical onboarding is about five business days from your discovery call to go-live.",
-    },
-    {
-      q: "What is hotel front desk overflow support?",
-      a: "Hotel front desk overflow support routes calls to a trained external team only when your in-house staff can't get to the phone — during check-in rushes, peak periods, or when a single agent is covering the desk alone. Your team handles everything it can; overflow catches the rest.",
+      q: "Will overflow agents know our property details?",
+      a: "Yes. Agents work from a brief on your property (rates, room types, policies and escalation contacts) so callers get answers consistent with your own front desk.",
     },
     {
       q: "When should a hotel consider overflow call coverage?",
-      a: "When calls are regularly going unanswered during check-in and check-out peaks, when voicemails pile up faster than your team can return them, or when front desk staff describe the phone as a distraction from in-person guests rather than a manageable part of the job.",
+      a: "When calls regularly go unanswered at check-in and check-out, when voicemails pile up, or when staff see the phone as a distraction from guests at the desk.",
     },
     {
-      q: "Can overflow coverage handle after-hours calls too?",
-      a: "Yes. Many properties start with overflow during peak daytime hours and expand to overnight and weekend coverage as needed. The two can run from the same setup with different routing rules for each window.",
+      q: "Can overflow cover after-hours calls too?",
+      a: "Yes. Many hotels start with daytime overflow and add overnight and weekend coverage later, using different routing rules for each window. See [after-hours hotel front desk support](/services/after-hours-support).",
     },
     {
-      q: "How is hotel overflow support different from a full answering service?",
-      a: "Overflow is the lighter option — your team handles the majority of calls as normal and outside coverage only catches what they miss. A full hotel answering service routes all calls to the external team. Most clients start with overflow and expand only if the data shows it's worth it.",
+      q: "How is overflow priced compared with full coverage?",
+      a: "Overflow usually handles fewer calls than full coverage, so it's often the more affordable starting point. Coverage is quoted per property, based on your peak windows and call volume. Any setup fee depends on scope and is confirmed in your written proposal.",
     },
     {
-      q: "Will overflow agents know our rates and property details?",
-      a: "Yes. Agents are briefed on your specific property before handling any call — rates, room types, policies, and escalation contacts — so the experience is consistent with your own front desk.",
+      q: "How quickly can overflow coverage go live?",
+      a: "It depends on your routing setup and how much property detail agents need. Coverage starts once your brief, system access and escalation contacts are agreed, and the go-live date is set with you during the coverage review.",
     },
   ],
   relatedServiceSlugs: ["hotel-answering-service", "reservation-support", "after-hours-support"],
   relatedResourceSlugs: ["hotel-answering-service-vs-call-center", "after-hours-hotel-support-checklist"],
   inlineAsset: {
-    heading: "Identify exactly which call volumes and hours your property is leaving uncovered right now.",
+    heading: "Find out which call volumes and hours are uncovered at your property right now.",
     asset: "coverage-gap-assessment",
     pdfHref: "/downloads/coverage-gap-assessment.pdf",
     ctaLabel: "Download Coverage Gap Assessment",
@@ -811,101 +817,93 @@ export const overflowSupportGuide: GuideArticleData = {
   },
   schemaAbout: { type: "Service", name: "Hotel Answering Service", url: "https://guestsquad.com/services/hotel-answering-service", serviceType: "Hotel Front Desk Overflow Support", areaServed: "Worldwide" },
   schemaMentions: [
-    { type: "Thing", name: "Hotel Front Desk Call Overflow" },
-    { type: "Thing", name: "Peak Period Hotel Coverage" },
-    { type: "Thing", name: "Hotel Check-In Rush Coverage" },
-    { type: "Thing", name: "Outsourced Hotel Reception" },
-    { type: "Thing", name: "Hotel Call Routing" },
-    { type: "Thing", name: "Missed Hotel Calls" },
-    { type: "Thing", name: "Hotel Reservation Overflow" },
-    { type: "Thing", name: "Hotel Voicemail Alternative" },
-    { type: "Article", name: "Why Hotels Still Miss Bookings After Hours Even When Demand Is Strong", id: "https://guestsquad.com/resources/insights/why-hotels-miss-bookings-after-hours#article" },
-    { type: "Article", name: "Why Fast Guest Responses Reduce Cancellations and Protect Your Review Score", id: "https://guestsquad.com/resources/insights/fast-responses-reduce-cancellations#article" },
+    { type: "Service", name: "Hotel Reservation Support", id: "https://guestsquad.com/services/reservation-support#service" },
+    { type: "Service", name: "After-Hours Hotel Front Desk Support", id: "https://guestsquad.com/services/after-hours-support#service" },
   ],
-  insightSlugs: ["why-hotels-miss-bookings-after-hours", "fast-responses-reduce-cancellations"],
 };
 
 export const otaInboxChecklistGuide: GuideArticleData = {
   slug: "booking-com-message-support",
   title: "Booking.com and Expedia Message Support: An OTA Inbox Checklist",
   description:
-    "Why OTA response time affects bookings and rankings, and a practical checklist for keeping Booking.com and Expedia message inboxes under control.",
-  metaTitle: "Booking.com and Expedia Message Support: Hotel OTA Inbox Checklist",
+    "Why OTA reply speed matters, and a practical checklist for keeping Booking.com and Expedia inboxes under control.",
+  metaTitle: "Booking.com & Expedia Message Checklist for Hotels | Guest Squad",
   metaDescription:
     "A practical checklist for managing Booking.com and Expedia guest messages, including response-time targets and common message types.",
   datePublished: "2026-06-29T00:00:00+00:00",
-  dateModified: "2026-08-07T00:00:00+00:00",
+  dateModified: "2026-11-14T00:00:00+00:00",
   intro: [
-    "OTA inboxes are easy to under-prioritize. They're not the phone ringing in front of you, so messages can sit for hours. But response time inside Booking.com's and Expedia's own messaging tools directly affects conversion — and on some platforms, it is a factor in how listings are ranked and featured.",
+    "OTA inboxes are easy to neglect. They don't ring in front of you, so messages can sit for hours. But a slow reply to a pre-booking question often means the guest books somewhere else, and Booking.com and Expedia both track how properties respond to guests. This checklist sets out an internal standard you can run with your own team or hand to a support partner.",
   ],
   sections: [
     {
-      heading: "Why OTA Response Time Matters",
+      heading: "Why OTA response time matters",
       paragraphs: [
-        "A pre-booking question left unanswered for hours is a booking that often goes to a competing property instead. Post-booking, slow responses to modification requests or guest questions show up in reviews. Some OTAs also factor response metrics into how listings are ranked or featured, which compounds the cost of slow replies beyond the single missed booking. Consistent [OTA inbox management](/services/ota-inbox-management) is one of the few ranking factors hotels can directly control on these platforms.",
-        "This checklist covers Booking.com and Expedia inbox process specifically. If you need these inboxes monitored and answered on an ongoing basis, [OTA Inbox Management](/services/ota-inbox-management) handles that day-to-day without your team logging into each platform.",
+        "A pre-booking question left unanswered for hours is often a booking that goes to a competing property. After booking, slow replies to change requests or guest questions tend to show up in reviews. Booking.com shows partners how quickly they reply to guests, and the platforms treat responsiveness as part of property performance. Reply speed is one of the few things on these platforms that you control directly.",
+        "If you'd rather have these inboxes monitored and answered day to day, our [OTA inbox management](/services/ota-inbox-management) service does that inside each platform, so your team doesn't have to log in to every extranet.",
       ],
     },
     {
-      heading: "Booking.com Message Center Basics",
+      heading: "Booking.com message centre basics",
       paragraphs: [
-        "Booking.com routes both pre-booking questions and post-booking guest messages through its Message Center, alongside automated requests like late-checkout or special-request approvals. Properties are expected to respond within the platform's own messaging tools rather than directing guests to email or phone.",
+        "Booking.com handles pre-booking questions, post-booking guest messages and automated requests (late checkout or special requests, for example) through its messaging tools. Properties are expected to reply inside the platform rather than moving guests to email or phone.",
       ],
     },
     {
-      heading: "Expedia Inbox Specifics",
+      heading: "Expedia inbox specifics",
       paragraphs: [
-        "Expedia's Partner Central inbox handles a similar mix of pre-arrival questions and reservation-related messages, with its own response-time expectations and templated quick-replies. Running both Booking.com and Expedia inboxes in parallel, on top of phone and direct-channel messages, is exactly where most properties start to fall behind.",
+        "Expedia's Partner Central inbox carries a similar mix of pre-arrival questions and reservation messages, with its own response expectations and quick-reply templates. Running Booking.com and Expedia in parallel, on top of phone calls and direct messages, is where most hotels start to fall behind.",
       ],
     },
     {
-      heading: "OTA Inbox SLA Checklist",
+      heading: "The OTA inbox checklist",
       paragraphs: ["A workable internal standard usually includes:"],
       checklist: [
-        "A defined response-time target (e.g., under 30 minutes) for pre-booking inquiries specifically.",
-        "Someone explicitly responsible for checking each OTA inbox at set intervals, not \"whoever has time.\"",
-        "Template responses for the most common question types, customized to your property's actual policies.",
-        "A process for escalating anything involving a complaint or refund request, rather than answering it inline.",
-        "Regular review of response-time metrics each platform reports back to you.",
+        "A response-time target for pre-booking enquiries, for example under 30 minutes.",
+        "A named owner for checking each OTA inbox at set times, not \"whoever has time\".",
+        "Reply templates for the most common questions, written to your property's actual policies.",
+        "An escalation route for complaints and refund requests, instead of answering them inline.",
+        "Coverage for evenings and weekends, when messages still arrive but the desk is busy or closed.",
+        "A regular review of the response metrics each platform reports back to you.",
       ],
     },
   ],
   faqs: [
     {
-      q: "Do you respond inside Booking.com and Expedia's own tools, or by email?",
-      a: "Inside the platforms' own messaging tools, where guests expect a reply and where response-time metrics are tracked.",
-    },
-    {
-      q: "Can you handle modification and cancellation requests through the OTA, not just questions?",
-      a: "Yes. OTA-side date changes, special requests, and cancellation handling are included.",
-    },
-    {
-      q: "What about Airbnb messages?",
-      a: "Airbnb and Vrbo messaging is covered separately for short-term rental operators under the Vacation Rental Answering Service.",
-    },
-    {
-      q: "Will this help us convert more OTA leads to direct bookings?",
-      a: "Where appropriate, guests are nudged toward booking directly for future stays as part of the same conversation, without disrupting the OTA relationship.",
-    },
-    {
       q: "What is OTA message support for hotels?",
-      a: "OTA message support means your Booking.com, Expedia, and Airbnb inboxes are monitored and answered by a trained person — not checked once a day between other tasks. Pre-booking questions are answered fast enough to win the booking before the guest moves on.",
+      a: "OTA message support means your Booking.com, Expedia and Airbnb inboxes are monitored and answered by a trained person at agreed times, rather than checked once a day between other tasks. Pre-booking questions are answered within the response targets you agree, while the guest is still deciding.",
     },
     {
       q: "How fast should hotels respond to Booking.com messages?",
-      a: "Booking.com tracks response time and factors it into how listings are ranked and featured. A practical internal target is under 30 minutes for pre-booking inquiries specifically — the window where an unanswered question most often results in the guest booking a competitor instead.",
+      a: "A practical internal target is under 30 minutes for pre-booking enquiries. That's the window where an unanswered question most often ends with the guest booking a competitor.",
     },
     {
-      q: "Does slow OTA response time affect hotel rankings?",
-      a: "Yes. On Booking.com and Expedia, response rate and speed are factors in how properties are ranked and featured in search results. Consistently slow replies compound over time — affecting both conversion on individual inquiries and overall listing visibility.",
+      q: "Does slow OTA response time affect hotel performance?",
+      a: "It can. Slow replies cost individual bookings and show up in reviews, and both Booking.com and Expedia track how properties respond to guests. Check each platform's partner help pages for how they use those metrics.",
+    },
+    {
+      q: "Do you reply inside Booking.com and Expedia, or by email?",
+      a: "Inside the platforms' own messaging tools, where guests expect a reply and where response metrics are tracked.",
+    },
+    {
+      q: "Can you handle changes and cancellations, not just questions?",
+      a: "Yes. Date changes, special requests and cancellation messages can be included in the agreed scope.",
+    },
+    {
+      q: "What about Airbnb and Vrbo messages?",
+      a: "OTA inbox management covers Airbnb and Vrbo alongside Booking.com and Expedia. Hosts who want support across the whole stay can look at our Airbnb guest services.",
+    },
+    {
+      q: "Can one team manage Booking.com, Expedia and Airbnb together?",
+      a: "Yes. Guest Squad can cover all of them from one team: pre-booking and post-booking messages across each platform, plus review responses where they're in scope. Your team doesn't need to log in to several extranets.",
+    },
+    {
+      q: "Can this help us win more direct bookings?",
+      a: "Where your OTA agreements allow, agents can mention your direct booking options for future stays. They follow each platform's rules.",
     },
     {
       q: "How much does OTA inbox management cost?",
-      a: "There is no setup fee to get started. Coverage is scoped to your OTA platforms and message volume. Book a coverage review for a quote tailored to your property.",
-    },
-    {
-      q: "Can one team manage Booking.com, Expedia, and Airbnb inboxes together?",
-      a: "Yes. Guest Squad covers all three platforms from a single point of coverage, so pre-booking questions, post-booking messages, and review responses across every OTA are handled without your team logging into multiple extranets.",
+      a: "Coverage is quoted per property, based on your OTA platforms and message volume. Any setup fee depends on scope and is confirmed in your written proposal. Book a coverage review for a quote.",
     },
   ],
   relatedServiceSlugs: ["ota-inbox-management", "guest-messaging"],
@@ -926,18 +924,8 @@ export const otaInboxChecklistGuide: GuideArticleData = {
   },
   schemaAbout: { type: "Service", name: "OTA Inbox Management", url: "https://guestsquad.com/services/ota-inbox-management", serviceType: "OTA Inbox Management for Hotels", areaServed: "Worldwide" },
   schemaMentions: [
-    { type: "Thing", name: "Booking.com Message Center" },
-    { type: "Thing", name: "Expedia Partner Central Inbox" },
-    { type: "Thing", name: "OTA Response Time" },
-    { type: "Thing", name: "Hotel OTA Ranking" },
-    { type: "Thing", name: "Pre-Booking Guest Messages" },
-    { type: "Thing", name: "OTA Cancellation Handling" },
-    { type: "Thing", name: "Airbnb Guest Messaging" },
-    { type: "Thing", name: "Hotel Direct Booking Conversion" },
-    { type: "Article", name: "What Happens to Your Hotel's OTA Ranking When You Reply Slowly", id: "https://guestsquad.com/resources/insights/ota-ranking-response-time#article" },
-    { type: "Article", name: "Booking.com Message Management for Lean Front Desk Teams", id: "https://guestsquad.com/resources/insights/booking-com-message-management-lean-teams#article" },
+    { type: "Service", name: "Hotel Guest Messaging", id: "https://guestsquad.com/services/guest-messaging#service" },
   ],
-  insightSlugs: ["ota-ranking-response-time", "booking-com-message-management-lean-teams"],
 };
 
 export const messagingSopGuide: GuideArticleData = {

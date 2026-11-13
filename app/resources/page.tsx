@@ -13,32 +13,32 @@ import { RESOURCES } from "@/lib/resource-content";
 import { Calculator, FileText, ClipboardList, BarChart2, ArrowUpRight } from "lucide-react";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Hotel Answering Service Guides & Comparisons",
+  title: "Hotel Guest Coverage Guides & Checklists | Guest Squad",
   description:
-    "Guides and comparisons on hotel answering services, AI voice agents, and call centers, to help you evaluate what's actually right for your property.",
+    "Guides, checklists and tools for hotel and vacation rental teams: what drives guest support costs, how to cover nights and overflow, and OTA inbox standards.",
   path: "/resources",
 });
 
 const RESOURCES_FAQS = [
   {
-    q: "What Guest Squad resources should a hotel start with?",
-    a: "Most hotels should start with the [Missed Booking Revenue Calculator](/resources/missed-booking-calculator) to estimate revenue risk, then use the Coverage Gap Assessment or [After-Hours Checklist](/resources/after-hours-hotel-support-checklist) to identify which calls, messages, and OTA inboxes need coverage first.",
+    q: "Which resource should a hotel start with?",
+    a: "Start with the [missed booking calculator](/resources/missed-booking-calculator) to estimate the revenue at stake. Then use the Coverage Gap Assessment or the [after-hours checklist](/resources/after-hours-hotel-support-checklist) to see which calls, messages and OTA inboxes need coverage first.",
   },
   {
-    q: "Which resource helps compare human support with AI voice agents?",
-    a: "The [Hotel Answering Service vs AI Voice guide](/resources/hotel-answering-service-vs-ai-voice) compares human guest support with AI voice tools for reservation calls, guest questions, escalations, and after-hours situations where judgment matters.",
+    q: "Which resource compares human support with AI voice agents?",
+    a: "The [hotel answering service vs AI voice guide](/resources/hotel-answering-service-vs-ai-voice) compares human guest support with AI voice tools for reservation calls, guest questions, escalations and after-hours situations where judgment matters.",
   },
   {
     q: "Which resource helps with Booking.com and Expedia messages?",
-    a: "The [Booking.com and Expedia Message Support Checklist](/resources/booking-com-message-support) helps properties define OTA response standards, common reply types, escalation rules, and inbox coverage gaps.",
+    a: "The [Booking.com and Expedia message checklist](/resources/booking-com-message-support) helps you set OTA response standards, reply types, escalation rules and inbox coverage.",
   },
   {
-    q: "Can these resources help before booking a coverage review?",
-    a: "Yes. Guest Squad resources are designed to help hospitality teams understand missed revenue, after-hours gaps, OTA inbox standards, guest messaging SOPs, and reporting expectations before booking a coverage review.",
+    q: "Can these resources help before a coverage review?",
+    a: "Yes. They help you understand missed revenue, after-hours gaps, OTA inbox standards and messaging SOPs before you speak to us, so the review starts from your own numbers.",
   },
   {
-    q: "Are Guest Squad templates free to use?",
-    a: "Guest Squad provides free tools, checklists, and templates to help hotels and property operators assess guest communication gaps. Some downloadable assets may require a short form before access.",
+    q: "Are the templates free?",
+    a: "Yes. Some downloads ask for a short form before access.",
   },
 ];
 
@@ -53,25 +53,18 @@ export default function ResourcesPage() {
       <JsonLd
         data={[
           webPageSchema({
-            name: "Hotel Answering Service Guides & Comparisons | Guest Squad",
-            description: "Guides and comparisons on hotel answering services, AI voice agents, and call centers, to help you evaluate what's actually right for your property.",
+            name: "Hotel Guest Coverage Guides & Checklists | Guest Squad",
+            description: "Guides, checklists and tools for hotel and vacation rental teams: what drives guest support costs, how to cover nights and overflow, and OTA inbox standards.",
             path: "/resources",
             pageType: "CollectionPage",
             primaryImageUrl: "https://guestsquad.com/brand-assets/og-image.jpg",
-            primaryImageAlt: "Guest Squad resources — hotel answering service guides and comparisons",
+            primaryImageAlt: "Guest Squad resources — hotel guest coverage guides and checklists",
             about: { "@id": "https://guestsquad.com/#organization" },
             audienceTypes: ["Independent Hotel","Boutique Hotel","Inn","Resort","Serviced Apartment","Aparthotel","Airbnb Host","Vrbo Host","Short-Term Rental Operator","Vacation Rental Operator","Vacation Rental Property Manager"],
             mentions: [
               { "@type": "Organization", "name": "Booking.com" },
               { "@type": "Organization", "name": "Expedia" },
               { "@type": "Organization", "name": "Airbnb" },
-              { "@type": "Accommodation", "name": "Hotel" },
-              { "@type": "Accommodation", "name": "Boutique Hotel" },
-              { "@type": "Thing", "name": "Hotel Answering Service" },
-              { "@type": "Thing", "name": "Hotel Guest Operations" },
-              { "@type": "Thing", "name": "After-Hours Hotel Support" },
-              { "@type": "Thing", "name": "OTA Inbox Management" },
-              { "@type": "Thing", "name": "Hotel Front Desk Coverage" },
             ],
           }),
           {
@@ -99,8 +92,8 @@ export default function ResourcesPage() {
       {/* 1 — Hero */}
       <PageHero
         eyebrow="Resources"
-        title="Hotel Answering Service Guides, Comparisons, and Checklists"
-        description="Practical tools, templates, and guides for hospitality operators evaluating guest support options."
+        title="Guides, Checklists and Tools for Hotel and Rental Guest Coverage"
+        description="Practical tools, templates and guides for hotel and vacation rental teams reviewing how guest calls and messages are covered."
       />
 
       {/* 2 — Quick path selector */}
@@ -170,7 +163,7 @@ export default function ResourcesPage() {
                 Missed Booking Revenue Calculator
               </h3>
               <p className="mt-2 max-w-xl text-sm leading-relaxed text-ink-soft">
-                Enter your missed call volume, average booking value, and conversion rate. The calculator shows the monthly and annual revenue impact and exactly how many recovered bookings it takes to break even on coverage.
+                Enter your missed call volume, average booking value and conversion rate. The calculator shows the monthly and annual revenue at stake, and how many bookings a month that represents.
               </p>
               <p className="mt-4 text-xs font-semibold text-gold-dark group-hover:text-gold">
                 Open calculator →
@@ -209,9 +202,9 @@ export default function ResourcesPage() {
               </div>
               <span className="rounded bg-surface px-2 py-1 text-xs font-medium text-ink-muted">Sample Report</span>
             </div>
-            <h3 className="mt-4 text-sm font-medium text-ink">Sample Weekly Guest Operations Report</h3>
+            <h3 className="mt-4 text-sm font-medium text-ink">Sample Guest Operations Report</h3>
             <p className="mt-1.5 flex-1 text-sm leading-relaxed text-ink-soft">
-              See the exact reporting format before committing — calls handled, OTA replies, escalations flagged, and weekly recommendations.
+              See the reporting format before you commit: calls handled, OTA replies, escalations flagged and recommendations.
             </p>
             <div className="mt-5">
               <DownloadGate
@@ -239,6 +232,7 @@ export default function ResourcesPage() {
               tag: "SOP Template",
               title: "Hotel Guest Messaging SOP Template",
               body: "Channels, response-time targets, brand voice, scenario handling, escalation matrix, and logging process.",
+              articleHref: "/resources/hotel-guest-messaging-sop-template",
               asset: "guest-messaging-sop",
               pdf: "/downloads/guest-messaging-sop.pdf",
               cta: "Download PDF",
@@ -246,8 +240,9 @@ export default function ResourcesPage() {
             {
               icon: <ClipboardList className="h-4 w-4 text-gold-dark" />,
               tag: "Checklist",
-              title: "After-Hours Guest Coverage Checklist",
-              body: "Audit overnight and weekend coverage: call handling, emergency escalation, and morning handoff.",
+              title: "After-Hours Hotel Front Desk Support Checklist",
+              body: "What a working overnight setup covers: call handling, night audit questions, emergency escalation and the morning handover.",
+              articleHref: "/resources/after-hours-hotel-support-checklist",
               asset: "after-hours-checklist",
               pdf: "/downloads/after-hours-checklist.pdf",
               cta: "Download PDF",
@@ -255,8 +250,9 @@ export default function ResourcesPage() {
             {
               icon: <ClipboardList className="h-4 w-4 text-gold-dark" />,
               tag: "Checklist",
-              title: "OTA Inbox Response Checklist",
-              body: "Standards for Booking.com, Expedia, and Airbnb inboxes: pre-booking, complaints, and escalation triggers.",
+              title: "Booking.com and Expedia Message Checklist",
+              body: "Response targets, inbox ownership and escalation rules for Booking.com, Expedia and Airbnb inboxes.",
+              articleHref: "/resources/booking-com-message-support",
               asset: "ota-inbox-response-checklist",
               pdf: "/downloads/ota-inbox-response-checklist.pdf",
               cta: "Download PDF",
@@ -272,7 +268,10 @@ export default function ResourcesPage() {
               </div>
               <h3 className="mt-4 text-sm font-medium text-ink">{item.title}</h3>
               <p className="mt-1.5 flex-1 text-sm leading-relaxed text-ink-soft">{item.body}</p>
-              <div className="mt-5">
+              <div className="mt-5 flex flex-col gap-2">
+                <Link href={item.articleHref} className="text-xs font-medium text-gold-dark hover:text-gold">
+                  Read the guide →
+                </Link>
                 <DownloadGate asset={item.asset} pdfHref={item.pdf} ctaLabel={item.cta} block />
               </div>
             </div>
@@ -295,8 +294,7 @@ export default function ResourcesPage() {
             className="group flex flex-col gap-4 rounded-xl border border-line bg-paper p-7 transition-colors hover:border-gold/50 sm:flex-row sm:items-start"
           >
             <div className="flex-1">
-              <span className="text-xs font-semibold uppercase tracking-widest text-gold-dark">Most Read</span>
-              <h3 className="mt-1.5 text-base font-semibold text-ink transition-colors group-hover:text-gold-dark">
+              <h3 className="text-base font-semibold text-ink transition-colors group-hover:text-gold-dark">
                 {featuredComparison.title}
               </h3>
               <p className="mt-2 max-w-xl text-sm leading-relaxed text-ink-soft">{featuredComparison.description}</p>
@@ -343,7 +341,18 @@ export default function ResourcesPage() {
         </div>
       </Section>
 
-      {/* 6 — FAQ */}
+      {/* 6 — Services link */}
+      <div className="container py-6">
+        <p className="text-sm text-ink-soft">
+          Looking for a service?{" "}
+          <Link href="/services" className="text-gold-dark underline underline-offset-4 hover:text-gold">
+            See all guest support services
+          </Link>{" "}
+          for hotels, hotel groups and vacation rentals.
+        </p>
+      </div>
+
+      {/* 7 — FAQ */}
       <Section className="bg-[#F7F5F2]">
         <SectionHeading eyebrow="Common Questions" title="Questions about these resources." />
         <div className="mt-8">

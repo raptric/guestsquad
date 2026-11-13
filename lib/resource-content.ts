@@ -62,7 +62,7 @@ export const RESOURCES: ResourceSummary[] = [
     title: "Hotel Guest Messaging SOP Template",
     shortTitle: "Messaging SOP Template",
     description:
-      "What to include in a guest messaging SOP: response-time targets, escalation rules, tone guidelines, and a sample outline to start from.",
+      "What a guest messaging SOP should include, plus a sample outline covering channels, response times, escalation rules and tone.",
     type: "guide",
   },
 ];
@@ -472,6 +472,9 @@ export type GuideArticleData = {
   description: string;
   metaTitle?: string;
   metaDescription?: string;
+  eyebrow?: string;
+  byline?: string;
+  author?: { "@type": string; name: string; jobTitle?: string };
   datePublished: string;
   dateModified?: string;
   intro: string[];
@@ -932,120 +935,122 @@ export const messagingSopGuide: GuideArticleData = {
   slug: "hotel-guest-messaging-sop-template",
   title: "Hotel Guest Messaging SOP Template",
   description:
-    "What to include in a guest messaging SOP: response-time targets, escalation rules, tone guidelines, and a sample outline to start from.",
-  metaTitle: "Hotel Guest Messaging SOP: Free Template and Checklist",
+    "What a guest messaging SOP should include, plus a sample outline covering channels, response times, escalation rules and tone.",
+  metaTitle: "Hotel Guest Messaging SOP: Free Template",
   metaDescription:
-    "What a hotel guest messaging SOP should include, plus a sample outline covering response times, escalation rules, and tone guidelines.",
+    "A hotel guest messaging SOP template: channels, response-time targets, escalation rules, tone and logging, with a sample outline your team can fill in.",
+  eyebrow: "Template",
+  byline: "By Khadija Khalid, Co-founder · Updated 14 November 2026",
+  author: { "@type": "Person", name: "Khadija Khalid", jobTitle: "Co-founder" },
   datePublished: "2026-06-29T00:00:00+00:00",
-  dateModified: "2026-08-07T00:00:00+00:00",
+  dateModified: "2026-11-14T00:00:00+00:00",
   intro: [
-    "Most hotels handle guest messages on instinct rather than a written standard. That works fine until a busy week, a new hire, or an outsourced team needs to step in and there's nothing to brief them on. A short, specific SOP fixes that without becoming bureaucracy nobody reads.",
+    "A hotel guest messaging SOP is a short written standard for how your property handles guest messages: which channels are covered, who replies, how fast, in what tone, and what gets escalated. Most hotels run messaging on instinct. That works until a busy week, a new hire or an outside team needs to step in and there's nothing to brief them on. A short, specific SOP fixes that without becoming a manual nobody reads.",
   ],
   sections: [
     {
-      heading: "Why Guest Messaging Needs a Written SOP",
+      heading: "Why guest messaging needs a written SOP",
       paragraphs: [
-        "Without one, tone and response quality vary by whoever happens to answer, response times aren't tracked against any target, and anyone new (a hire, a temp, or an outsourced [guest messaging](/services/guest-messaging) team) has nothing concrete to work from beyond \"use your judgment.\" A working SOP doesn't need to be long; it needs to answer the questions that actually come up.",
+        "Without one, tone and reply quality depend on whoever happens to answer, response times aren't measured against any target, and anyone new (a hire, a temp, or a [hotel guest messaging](/services/guest-messaging) partner) has nothing concrete to work from beyond \"use your judgment\". A working SOP doesn't need to be long. It needs to answer the questions that actually come up.",
       ],
     },
     {
-      heading: "Core Sections Every SOP Should Have",
-      paragraphs: ["At minimum, a usable SOP covers:"],
+      heading: "Core sections every SOP should have",
+      paragraphs: [],
       checklist: [
-        "Response-time targets per channel (e.g., SMS within 15 minutes, OTA messages within 30 minutes).",
-        "Escalation rules: what gets handled directly versus routed to a manager, and to whom.",
-        "Tone and brand-voice guidelines, ideally with two or three real example messages.",
-        "A list of every channel actually in use: SMS, WhatsApp, email, OTA inboxes, in-app messaging.",
-        "Short scripts or guidance for the handful of scenarios that come up weekly: late check-in, complaint, refund request, special occasion request.",
+        "Channels in use: SMS, WhatsApp, email, OTA inboxes and in-app messaging, and who monitors each one.",
+        "Response-time targets per channel: for example, SMS within 15 minutes and pre-booking OTA messages within 30 minutes.",
+        "Escalation rules: what gets handled directly, what goes to a manager, and to whom.",
+        "Tone and brand voice: with two or three real example messages.",
+        "Common scenarios: short guidance for the questions that come up every week, such as late check-in, complaints, refund requests and special-occasion requests.",
+        "Logging and handover: where conversations are recorded and how the next shift picks them up.",
       ],
     },
     {
-      heading: "A Sample SOP Outline",
+      heading: "A sample SOP outline",
       paragraphs: ["A simple structure to start from:"],
       checklist: [
-        "1. Channels covered and who monitors each one",
-        "2. Response-time targets by channel and time of day",
-        "3. Tone and brand-voice notes with example messages",
-        "4. Common scenarios and how to handle each",
-        "5. Escalation path: what, when, and to whom",
-        "6. How interactions are logged and reported",
+        "1. Channels and owners: each channel, who monitors it, and when.",
+        "2. Response-time targets: by channel and time of day, including evenings and weekends.",
+        "3. Tone and voice: how you greet, sign off and apologise, with example messages.",
+        "4. Common scenarios: the reply or action for each.",
+        "5. Escalation path: what, when and to whom, with an on-call contact for urgent issues.",
+        "6. Logging and reporting: where each conversation is recorded and what the morning or next-shift handover includes.",
       ],
+      table: {
+        headers: ["Scenario", "Handle directly", "Escalate to"],
+        rows: [
+          ["Late check-in instructions", "Yes, from the property guide", "—"],
+          ["Early check-in or late checkout request", "Within your set policy", "Front office manager for exceptions"],
+          ["Noise or minor complaint", "Acknowledge, log, follow your protocol", "Duty manager if unresolved"],
+          ["Refund or compensation request", "Acknowledge only", "Front office or general manager"],
+          ["Safety, security or damage", "Acknowledge only", "On-call contact, straight away"],
+        ],
+      },
+      note: "Fill it in with your own policies and contacts. The download includes a blank version.",
     },
     {
-      heading: "Keeping the SOP Updated",
+      heading: "Keeping the SOP up to date",
       paragraphs: [
-        "An SOP that's never revisited drifts out of date within a season: new rate structures, new channels, or recurring guest questions that deserve their own scripted response. Treat it as a living document reviewed at least quarterly, not a one-time write-up.",
+        "An SOP that's never revisited drifts out of date within a season: new rate structures, new channels, or recurring questions that deserve their own guidance. Treat it as a living document and review it at least quarterly.",
+        "Ready to put a standard in place? Download the template and fill in your channels, targets and escalation rules.",
       ],
     },
   ],
   faqs: [
     {
-      q: "Do you build this SOP for us, or do we need one already?",
-      a: "We build the property-specific brief covering rates, policies, brand voice, and escalation rules as part of onboarding, whether or not you already have a formal SOP written down.",
-    },
-    {
-      q: "How long should a guest messaging SOP actually be?",
-      a: "Short enough that someone new can read it in 15 minutes and use it immediately: a few pages, not a manual.",
-    },
-    {
-      q: "What if our tone differs across property types in our portfolio?",
-      a: "Each property gets its own brief and tone guidelines; a shared parent SOP plus per-property notes works well for multi-property groups.",
-    },
-    {
-      q: "Does this cover OTA messaging too, or just direct guest messages?",
-      a: "A complete SOP should cover every channel, including OTA inboxes. OTA inbox management covers Booking.com, Expedia, and Airbnb message handling day to day.",
-    },
-    {
       q: "What is a hotel guest messaging SOP?",
-      a: "A hotel guest messaging SOP is a written standard that defines how your property handles every guest message — which channels are covered, who responds, how fast, in what tone, and what gets escalated. It ensures consistent guest communication whether your in-house team or an outsourced partner is handling messages.",
+      a: "It's a written standard that defines how your property handles guest messages: which channels are covered, who responds, how fast, in what tone, and what gets escalated. It keeps guest communication consistent whether your own team or a support partner is replying.",
     },
     {
-      q: "What should a hotel messaging response time target be?",
-      a: "A practical standard: SMS and WhatsApp within 15 minutes, OTA messages within 30 minutes for pre-booking inquiries, email within two hours. The most important target is pre-booking — an unanswered question at that stage often results in the guest booking a competitor instead.",
+      q: "How long should a guest messaging SOP be?",
+      a: "Short enough that someone new can read it in 15 minutes and use it straight away: a few pages, not a manual.",
+    },
+    {
+      q: "What should a hotel messaging response-time target be?",
+      a: "A practical internal standard: SMS and WhatsApp within 15 minutes, pre-booking OTA messages within 30 minutes, and email within two hours. Pre-booking matters most, because an unanswered question at that stage often ends with the guest booking elsewhere. Set targets your team can actually hold.",
+    },
+    {
+      q: "Does the SOP need to cover OTA messages too?",
+      a: "Yes. A complete SOP covers every channel, including Booking.com, Expedia and Airbnb inboxes. Our [Booking.com and Expedia message checklist](/resources/booking-com-message-support) covers OTA inbox standards in more detail.",
+    },
+    {
+      q: "What if tone differs across properties in our portfolio?",
+      a: "Use one parent SOP for the group plus short per-property notes on tone, policies and contacts.",
     },
     {
       q: "How do we handle guest messages overnight without staff?",
-      a: "Two options: an outsourced team covering overnight messaging on your behalf, or an auto-reply that sets expectations and promises a human follow-up by a specific time. The first protects pre-booking conversion; the second is better than silence but loses bookings to faster competitors.",
+      a: "There are two options. An outside team can cover overnight messaging for you, or an auto-reply can set expectations and promise a reply by a specific time. The first protects pre-booking enquiries; the second is better than silence but can lose bookings to faster competitors.",
+    },
+    {
+      q: "Do you build the SOP for us, or do we need one already?",
+      a: "If you work with Guest Squad, we build a property brief covering your policies, tone and escalation rules as part of onboarding, whether or not you already have an SOP.",
     },
     {
       q: "How much does hotel guest messaging support cost?",
-      a: "There is no setup fee to get started. Coverage is scoped to your message volume and channels. Book a coverage review for a quote tailored to your property.",
-    },
-    {
-      q: "Can one team handle SMS, WhatsApp, email, and OTA messages together?",
-      a: "Yes. Guest Squad covers all messaging channels from a single point of coverage — SMS, WhatsApp, email, and OTA inboxes — so your guests get a consistent response regardless of which channel they use.",
+      a: "Coverage is quoted per property, based on your channels and message volume. Any setup fee depends on scope and is confirmed in your written proposal. Book a coverage review for a quote.",
     },
   ],
   relatedServiceSlugs: ["guest-messaging", "ota-inbox-management"],
-  relatedResourceSlugs: ["booking-com-message-support", "hotel-front-desk-overflow-support"],
+  relatedResourceSlugs: ["booking-com-message-support"],
   inlineAsset: {
     heading: "Ready to put a standard in place? Download the SOP template and fill in your channels, targets, and escalation rules.",
     asset: "guest-messaging-sop",
     pdfHref: "/downloads/guest-messaging-sop.pdf",
-    ctaLabel: "Download Guest Messaging SOP Template",
+    ctaLabel: "Download the SOP Template",
   },
   assetCta: {
     heading: "Download the Hotel Guest Messaging SOP Template to put this into practice.",
     asset: "guest-messaging-sop",
     pdfHref: "/downloads/guest-messaging-sop.pdf",
-    ctaLabel: "Download Guest Messaging SOP",
+    ctaLabel: "Download the SOP Template",
     serviceHref: "/services/guest-messaging",
     serviceLabel: "Guest Messaging Service",
   },
   schemaAbout: { type: "Service", name: "Hotel Guest Messaging", url: "https://guestsquad.com/services/guest-messaging", serviceType: "Hotel Guest Messaging Support", areaServed: "Worldwide" },
   schemaMentions: [
-    { type: "Thing", name: "Hotel Guest Messaging SOP" },
-    { type: "Thing", name: "Guest Response Time Standard" },
-    { type: "Thing", name: "Hotel SMS Support" },
-    { type: "Thing", name: "WhatsApp Hotel Messaging" },
-    { type: "Thing", name: "OTA Inbox Response Guidelines" },
-    { type: "Thing", name: "Hotel Brand Voice Guidelines" },
-    { type: "Thing", name: "Guest Escalation Rules" },
-    { type: "Thing", name: "Hotel Messaging Channels" },
-    { type: "Article", name: "What Good Hotel Guest Messaging Looks Like Before Arrival, During Stay, and After Checkout", id: "https://guestsquad.com/resources/insights/hotel-guest-messaging-lifecycle#article" },
-    { type: "Article", name: "Why Fast Guest Responses Reduce Cancellations and Protect Your Review Score", id: "https://guestsquad.com/resources/insights/fast-responses-reduce-cancellations#article" },
+    { type: "Service", name: "OTA Inbox Management", id: "https://guestsquad.com/services/ota-inbox-management#service" },
   ],
-  insightSlugs: ["hotel-guest-messaging-lifecycle", "fast-responses-reduce-cancellations"],
 };
 
 export const RESOURCE_ARTICLES: Record<string, ResourceArticleData> = {

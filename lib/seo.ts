@@ -335,6 +335,7 @@ export function articleSchema({
   wordCount,
   audience,
   citation,
+  author,
 }: {
   headline: string;
   description: string;
@@ -349,6 +350,7 @@ export function articleSchema({
   wordCount?: number;
   audience?: { audienceType: string }[];
   citation?: { name: string; url: string }[];
+  author?: { "@type": string; name: string; jobTitle?: string };
 }) {
   const url = `${SITE.url}${path}`;
   return {
@@ -387,7 +389,7 @@ export function articleSchema({
         height: 900,
       },
     ],
-    author: {
+    author: author ?? {
       "@type": "Organization",
       "@id": `${SITE.url}/#organization`,
       name: SITE.brand,

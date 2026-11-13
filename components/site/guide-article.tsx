@@ -33,6 +33,7 @@ export function GuideArticle({ data }: { data: GuideArticleData }) {
             dateModified: data.dateModified,
             about: data.schemaAbout,
             mentions: data.schemaMentions,
+            author: data.author,
           }),
           breadcrumbSchema([
             { name: "Home", path: "/" },
@@ -52,7 +53,7 @@ export function GuideArticle({ data }: { data: GuideArticleData }) {
       />
 
       <PageHero
-        eyebrow="Guide"
+        eyebrow={data.eyebrow ?? "Guide"}
         title={data.title}
         description={data.description}
         primaryCta="Book a Coverage Review"
@@ -60,6 +61,9 @@ export function GuideArticle({ data }: { data: GuideArticleData }) {
 
       <Section>
         <div className="mx-auto max-w-2xl">
+          {data.byline && (
+            <p className="mb-5 text-xs text-ink-muted">{data.byline}</p>
+          )}
           {data.intro.map((p, i) => (
             <p key={i} className="mb-5 text-sm leading-relaxed text-ink-soft">
               {p}
@@ -82,6 +86,16 @@ export function GuideArticle({ data }: { data: GuideArticleData }) {
                 </p>
               ))}
             </div>
+            {section.checklist && (
+              <ul className="mt-2 flex flex-col gap-3">
+                {section.checklist.map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-sm leading-relaxed text-ink-soft">
+                    <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-gold-dark" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            )}
             {section.table && (
               <div className="mt-6 overflow-x-auto">
                 <table className="w-full text-sm">
@@ -106,16 +120,6 @@ export function GuideArticle({ data }: { data: GuideArticleData }) {
             )}
             {section.note && (
               <p className="mt-3 text-xs leading-relaxed text-ink-muted">{section.note}</p>
-            )}
-            {section.checklist && (
-              <ul className="mt-2 flex flex-col gap-3">
-                {section.checklist.map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-sm leading-relaxed text-ink-soft">
-                    <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-gold-dark" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
             )}
           </div>
         </Section>

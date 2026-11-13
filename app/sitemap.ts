@@ -33,7 +33,7 @@ const LAST_MODIFIED: Record<string, string> = {
   "/resources/after-hours-hotel-support-checklist": "2026-11-14",
   "/resources/hotel-front-desk-overflow-support": "2026-11-14",
   "/resources/booking-com-message-support": "2026-11-14",
-  "/resources/hotel-guest-messaging-sop-template": "2026-08-11",
+  "/resources/hotel-guest-messaging-sop-template": "2026-11-14",
   "/resources/missed-booking-calculator": "2026-11-14",
 };
 

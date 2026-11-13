@@ -59,14 +59,7 @@ export default function GuestMessagingPage() {
               "Hotel guest messaging by trained people: pre-arrival, in-stay and late-night guest texts, WhatsApp and email answered from your property brief and rules.",
             url: `${SITE.url}${PATH}`,
             provider: { "@id": `${SITE.url}/#organization` },
-            areaServed: [
-              { "@type": "Country", name: "US" },
-              { "@type": "Country", name: "GB" },
-              { "@type": "Country", name: "CA" },
-              { "@type": "Country", name: "IE" },
-              { "@type": "Country", name: "AU" },
-              { "@type": "Country", name: "NZ" },
-            ],
+            areaServed: "Worldwide",
             audience: [
               { "@type": "Audience", audienceType: "Independent Hotel" },
               { "@type": "Audience", audienceType: "Hotel Group" },

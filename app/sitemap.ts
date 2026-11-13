@@ -2,16 +2,6 @@ import type { MetadataRoute } from "next";
 import { SITE, SERVICES } from "@/lib/site-data";
 import { RESOURCES } from "@/lib/resource-content";
 
-const PRIORITY: Record<string, number> = {
-  "": 1,
-  "/services": 0.9,
-  "/contact": 0.8,
-  "/resources": 0.6,
-  "/about": 0.6,
-  "/privacy-policy": 0.2,
-  "/terms-of-service": 0.2,
-};
-
 const ASSET_ROUTES = [
   "/resources/missed-booking-calculator",
 ];
@@ -47,14 +37,14 @@ const LAST_MODIFIED: Record<string, string> = {
   "/resources/missed-booking-calculator": "2026-08-08",
 };
 
+const STATIC_ROUTES = ["", "/services", "/contact", "/resources", "/about", "/privacy-policy", "/terms-of-service"];
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes = Object.keys(PRIORITY);
+  const staticRoutes = STATIC_ROUTES;
   const serviceRoutes = SERVICES.map((s) => `/services/${s.slug}`);
   const resourceRoutes = RESOURCES.map((r) => `/resources/${r.slug}`);
   return [...staticRoutes, ...serviceRoutes, ...resourceRoutes, ...ASSET_ROUTES].map((route) => ({
     url: `${SITE.url}${route}`,
     lastModified: new Date(LAST_MODIFIED[route] ?? "2026-08-11"),
-    changeFrequency: "monthly",
-    priority: PRIORITY[route] ?? (route.startsWith("/services/") ? 0.8 : route.startsWith("/resources/insights/") ? 0.6 : 0.5),
   }));
 }

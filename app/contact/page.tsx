@@ -6,7 +6,7 @@ import { Breadcrumbs } from "@/components/site/breadcrumbs";
 import { JsonLd } from "@/components/site/json-ld";
 import { FaqAccordion } from "@/components/site/faq-accordion";
 import { Section, SectionHeading } from "@/components/site/section";
-import { buildMetadata, breadcrumbSchema, faqSchema, contactPageSchema, webPageSchema } from "@/lib/seo";
+import { buildMetadata, breadcrumbSchema, faqSchema, contactPageSchema } from "@/lib/seo";
 import { AssetBlock } from "@/components/site/asset-block";
 import { BoFuTrustBlock } from "@/components/site/bofu-trust-block";
 import { PostBookingSteps } from "@/components/site/post-booking-steps";
@@ -50,30 +50,9 @@ export default function ContactPage() {
     <>
       <JsonLd
         data={[
-          webPageSchema({
-            name: "Contact Guest Squad | Book a Coverage Review",
-            description: "Book a 30-minute coverage review or send your property details. Guest Squad responds within one business day.",
-            path: "/contact",
-            primaryImageUrl: "https://guestsquad.com/brand-assets/og-image.jpg",
-            primaryImageAlt: "Contact Guest Squad — book a hotel coverage review",
-            about: { "@id": "https://guestsquad.com/#organization" },
-            audienceTypes: ["Independent Hotel","Boutique Hotel","Inn","Resort","Serviced Apartment","Aparthotel","Airbnb Host","Vrbo Host","Short-Term Rental Operator","Vacation Rental Operator","Vacation Rental Property Manager"],
-            mentions: [
-              // Accommodation types — named in body text
-              { "@type": "Accommodation", "name": "Hotel" },
-              { "@type": "Accommodation", "name": "Boutique Hotel" },
-              { "@type": "Accommodation", "name": "Independent Hotel" },
-              { "@type": "Accommodation", "name": "Serviced Apartment" },
-              { "@type": "Accommodation", "name": "Vacation Rental" },
-              { "@type": "Accommodation", "name": "Resort" },
-              // Service concepts — named in the form description and body copy
-              { "@type": "Thing", "name": "Hotel Answering Service" },
-              { "@type": "Thing", "name": "Hotel Guest Operations" },
-            ],
-          }),
+          contactPageSchema(),
           breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Contact", path: "/contact" }]),
           faqSchema(FAQS),
-          contactPageSchema(),
         ]}
       />
       <Breadcrumbs items={[{ name: "Home", path: "/" }, { name: "Contact", path: "/contact" }]} />

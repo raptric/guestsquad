@@ -71,14 +71,7 @@ export default function AirbnbGuestSupportPage() {
               "Airbnb guest services for hosts and STR operators: guest messages answered day and night, check-in help, in-stay issues and your response rate protected.",
             url: `${SITE.url}${PATH}`,
             provider: { "@id": `${SITE.url}/#organization` },
-            areaServed: [
-              { "@type": "Country", name: "US" },
-              { "@type": "Country", name: "GB" },
-              { "@type": "Country", name: "CA" },
-              { "@type": "Country", name: "IE" },
-              { "@type": "Country", name: "AU" },
-              { "@type": "Country", name: "NZ" },
-            ],
+            areaServed: "Worldwide",
             audience: [
               { "@type": "Audience", audienceType: "Airbnb Host" },
               { "@type": "Audience", audienceType: "Vrbo Host" },

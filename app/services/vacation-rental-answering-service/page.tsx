@@ -124,14 +124,7 @@ export default function VacationRentalAnsweringServicePage() {
               "Vacation rental answering service: trained people answer guest calls and Airbnb and Vrbo messages 24/7, from late check-ins to lockouts. Coverage scoped to your listings, channels and guest volume.",
             url: `${SITE.url}${PATH}`,
             provider: { "@id": `${SITE.url}/#organization` },
-            areaServed: [
-              { "@type": "Country", name: "US" },
-              { "@type": "Country", name: "GB" },
-              { "@type": "Country", name: "CA" },
-              { "@type": "Country", name: "IE" },
-              { "@type": "Country", name: "AU" },
-              { "@type": "Country", name: "NZ" },
-            ],
+            areaServed: "Worldwide",
             audience: [
               { "@type": "Audience", audienceType: "Short-Term Rental Operator" },
               { "@type": "Audience", audienceType: "Airbnb Host" },

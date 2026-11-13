@@ -126,14 +126,7 @@ export default function CentralReservationsPage() {
               "Hotel reservation call center for hotel groups: one team handles quotes, bookings and changes across your properties. Coverage scoped to your portfolio, enquiry volume and channels.",
             url: `${SITE.url}${PATH}`,
             provider: { "@id": `${SITE.url}/#organization` },
-            areaServed: [
-              { "@type": "Country", name: "US" },
-              { "@type": "Country", name: "GB" },
-              { "@type": "Country", name: "CA" },
-              { "@type": "Country", name: "IE" },
-              { "@type": "Country", name: "AU" },
-              { "@type": "Country", name: "NZ" },
-            ],
+            areaServed: "Worldwide",
             audience: [
               { "@type": "Audience", audienceType: "Hotel Group" },
               { "@type": "Audience", audienceType: "Multi-Property Hotel Operator" },

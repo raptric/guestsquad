@@ -67,14 +67,7 @@ export default function ReservationSupportPage() {
               "Hotel reservation support for one property: availability checks, quotes, bookings and changes handled live to your rates and policies. Coverage scoped to your booking volume, channels and PMS access.",
             url: `${SITE.url}${PATH}`,
             provider: { "@id": `${SITE.url}/#organization` },
-            areaServed: [
-              { "@type": "Country", name: "US" },
-              { "@type": "Country", name: "GB" },
-              { "@type": "Country", name: "CA" },
-              { "@type": "Country", name: "IE" },
-              { "@type": "Country", name: "AU" },
-              { "@type": "Country", name: "NZ" },
-            ],
+            areaServed: "Worldwide",
             audience: [
               { "@type": "Audience", audienceType: "Independent Hotel" },
               { "@type": "Audience", audienceType: "Boutique Hotel" },

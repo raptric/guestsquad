@@ -83,14 +83,7 @@ export default function BackOfficeOperationsPage() {
               "Hotel night audit support and back office operations: billing errors caught, PMS reconciled, OTA payouts matched and rate parity checked overnight.",
             url: `${SITE.url}${PATH}`,
             provider: { "@id": `${SITE.url}/#organization` },
-            areaServed: [
-              { "@type": "Country", name: "US" },
-              { "@type": "Country", name: "GB" },
-              { "@type": "Country", name: "CA" },
-              { "@type": "Country", name: "IE" },
-              { "@type": "Country", name: "AU" },
-              { "@type": "Country", name: "NZ" },
-            ],
+            areaServed: "Worldwide",
             offers: {
               "@type": "Offer",
               description: "Quoted to scope: price depends on number of properties, nights covered, OTA volume and tasks included.",

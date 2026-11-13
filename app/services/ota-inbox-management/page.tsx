@@ -63,14 +63,7 @@ export default function OtaInboxManagementPage() {
               "OTA inbox management for hotels and vacation rentals: Booking.com, Expedia, Airbnb and Vrbo guest messages answered from your property brief and policies.",
             url: `${SITE.url}${PATH}`,
             provider: { "@id": `${SITE.url}/#organization` },
-            areaServed: [
-              { "@type": "Country", name: "US" },
-              { "@type": "Country", name: "GB" },
-              { "@type": "Country", name: "CA" },
-              { "@type": "Country", name: "IE" },
-              { "@type": "Country", name: "AU" },
-              { "@type": "Country", name: "NZ" },
-            ],
+            areaServed: "Worldwide",
             audience: [
               { "@type": "Audience", audienceType: "Independent Hotel" },
               { "@type": "Audience", audienceType: "Hotel Group" },

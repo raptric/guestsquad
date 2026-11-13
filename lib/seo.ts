@@ -400,7 +400,9 @@ export function articleSchema({
       url: SITE.url,
       logo: {
         "@type": "ImageObject",
-        url: `${SITE.url}/brand-assets/guestsquad-favicon-official.svg`,
+        url: `${SITE.url}/brand-assets/favicon-512x512.png`,
+        width: 512,
+        height: 512,
       },
     },
     isPartOf: { "@id": `${SITE.url}/#website` },

@@ -23,7 +23,7 @@ const LAST_MODIFIED: Record<string, string> = {
   "/services": "2026-11-13",
   "/contact": "2026-08-08",
   "/resources": "2026-11-13",
-  "/about": "2026-10-26",
+  "/about": "2026-11-13",
   "/privacy-policy": "2026-10-26",
   "/terms-of-service": "2026-08-08",
   // Service pages

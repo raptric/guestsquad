@@ -10,7 +10,6 @@ import { DownloadGate } from "@/components/site/download-gate";
 import { buildMetadata, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/seo";
 import { SITE } from "@/lib/site-data";
 import { RESOURCES } from "@/lib/resource-content";
-import { INSIGHTS } from "@/lib/insights-content";
 import { Calculator, FileText, ClipboardList, BarChart2, ArrowUpRight } from "lucide-react";
 
 export const metadata: Metadata = buildMetadata({
@@ -43,12 +42,7 @@ const RESOURCES_FAQS = [
   },
 ];
 
-const FEATURED_INSIGHT_SLUG = "ota-ranking-response-time";
-
 export default function ResourcesPage() {
-  const featuredInsight = INSIGHTS.find((i) => i.slug === FEATURED_INSIGHT_SLUG)!;
-  const secondaryInsights = INSIGHTS.filter((i) => i.slug !== FEATURED_INSIGHT_SLUG).slice(0, 4);
-
   const featuredComparison = RESOURCES.find((r) => r.slug === "hotel-answering-service-vs-call-center")!;
   const supportingComparisons = RESOURCES.filter((r) =>
     ["hotel-answering-service-vs-ai-voice", "hotel-answering-service-cost", "hotel-front-desk-overflow-support"].includes(r.slug)
@@ -88,35 +82,13 @@ export default function ResourcesPage() {
             url: `${SITE.url}/resources`,
             itemListElement: [
               { "@type": "ListItem", position: 1, name: "Missed Booking Revenue Calculator", url: `${SITE.url}/resources/missed-booking-calculator` },
-              { "@type": "ListItem", position: 2, name: "Insights — Hotel Operations Analysis", url: `${SITE.url}/resources/insights` },
               ...RESOURCES.map((r, i) => ({
                 "@type": "ListItem",
-                position: i + 3,
+                position: i + 2,
                 name: r.title,
                 url: `${SITE.url}/resources/${r.slug}`,
               })),
             ],
-          },
-          {
-            "@context": "https://schema.org",
-            "@type": "ItemList",
-            "@id": `${SITE.url}/resources#insights-itemlist`,
-            name: "Guest Squad Insights — Hotel Operations Analysis",
-            description: "Analysis and operational insight for independent hoteliers — built around OTA rankings, guest response time, and revenue gaps.",
-            url: `${SITE.url}/resources/insights`,
-            numberOfItems: INSIGHTS.length,
-            itemListElement: INSIGHTS.map((insight, i) => ({
-              "@type": "ListItem",
-              position: i + 1,
-              url: `${SITE.url}/resources/insights/${insight.slug}`,
-              item: {
-                "@type": "Article",
-                "@id": `${SITE.url}/resources/insights/${insight.slug}#article`,
-                name: insight.title,
-                description: insight.description,
-                datePublished: `${insight.datePublished}T00:00:00+00:00`,
-              },
-            })),
           },
           breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Resources", path: "/resources" }]),
           faqSchema(RESOURCES_FAQS),
@@ -371,68 +343,7 @@ export default function ResourcesPage() {
         </div>
       </Section>
 
-      {/* 6 — Insights */}
-      <Section id="insights" className="bg-[#F4F3F1]">
-        <SectionHeading
-          eyebrow="Insights"
-          title="What the data says about hotel operations."
-          description="Analysis and operational insight for independent hoteliers — built around OTA rankings, guest response time, and revenue gaps."
-        />
-
-        {/* Featured insight */}
-        <div className="mt-8">
-          <Link
-            href={`/resources/insights/${featuredInsight.slug}`}
-            className="group flex flex-col gap-3 rounded-xl border border-[#E5E0D8] bg-paper p-7 transition-colors hover:border-gold/50 sm:flex-row sm:items-start sm:gap-8"
-          >
-            <div className="flex-1">
-              <div className="flex items-center gap-3">
-                <span className="text-xs font-semibold uppercase tracking-widest text-gold-dark">{featuredInsight.category}</span>
-                <span className="text-xs text-ink-muted">{featuredInsight.readTime}</span>
-              </div>
-              <h3 className="mt-2 text-base font-semibold text-ink transition-colors group-hover:text-gold-dark">
-                {featuredInsight.title}
-              </h3>
-              <p className="mt-2 max-w-2xl text-sm leading-relaxed text-ink-soft">{featuredInsight.description}</p>
-              <p className="mt-4 text-xs font-semibold text-gold-dark group-hover:text-gold">
-                Read article →
-              </p>
-            </div>
-          </Link>
-        </div>
-
-        {/* Secondary insights grid */}
-        <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {secondaryInsights.map((insight) => (
-            <Link
-              key={insight.slug}
-              href={`/resources/insights/${insight.slug}`}
-              className="group flex flex-col justify-between rounded-lg border border-[#E5E0D8] bg-paper p-5 transition-colors hover:border-gold/50"
-            >
-              <div>
-                <div className="flex items-center justify-between">
-                  <span className="text-xs font-semibold uppercase tracking-widest text-ink-muted">{insight.category}</span>
-                  <span className="text-xs text-ink-muted">{insight.readTime}</span>
-                </div>
-                <h3 className="mt-2.5 text-sm font-medium text-ink transition-colors group-hover:text-gold-dark">
-                  {insight.title}
-                </h3>
-              </div>
-              <p className="mt-4 flex items-center gap-1 text-xs font-medium text-gold-dark group-hover:text-gold">
-                Read <ArrowUpRight className="h-3 w-3" />
-              </p>
-            </Link>
-          ))}
-        </div>
-
-        <p className="mt-6 text-sm text-ink-soft">
-          <Link href="/resources/insights" className="text-gold-dark underline underline-offset-4 hover:text-gold">
-            View all {INSIGHTS.length} insights →
-          </Link>
-        </p>
-      </Section>
-
-      {/* 7 — FAQ */}
+      {/* 6 — FAQ */}
       <Section className="bg-[#F7F5F2]">
         <SectionHeading eyebrow="Common Questions" title="Questions about these resources." />
         <div className="mt-8">

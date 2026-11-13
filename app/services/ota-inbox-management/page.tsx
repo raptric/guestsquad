@@ -70,6 +70,10 @@ export default function OtaInboxManagementPage() {
               { "@type": "Audience", audienceType: "Vacation Rental Operator" },
               { "@type": "Audience", audienceType: "Airbnb Host" },
             ],
+            subjectOf: [
+              { "@id": "https://guestsquad.com/resources/booking-com-message-support#article" },
+              { "@id": "https://guestsquad.com/resources/hotel-guest-messaging-sop-template#article" },
+            ],
           },
           {
             "@context": "https://schema.org",
@@ -377,14 +381,13 @@ export default function OtaInboxManagementPage() {
           ].map((item) => (
             <div key={item.title} className="rounded-lg border border-line bg-paper p-5">
               <p className="text-xs font-semibold uppercase tracking-[0.15em] text-gold-dark">{item.label}</p>
-              <p className="mt-2 text-sm font-medium leading-snug text-ink">{item.title}</p>
-              <p className="mt-2 text-sm leading-relaxed text-ink-soft">{item.body}</p>
               <Link
                 href={item.href}
-                className="mt-4 inline-block text-xs text-gold-dark underline underline-offset-2 hover:text-gold"
+                className="mt-2 block text-sm font-medium leading-snug text-ink hover:text-gold-dark"
               >
-                Read →
+                {item.title}
               </Link>
+              <p className="mt-2 text-sm leading-relaxed text-ink-soft">{item.body}</p>
             </div>
           ))}
         </div>

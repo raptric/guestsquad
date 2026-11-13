@@ -132,6 +132,11 @@ export default function CentralReservationsPage() {
               { "@type": "Audience", audienceType: "Multi-Property Hotel Operator" },
               { "@type": "Audience", audienceType: "Hospitality Management Company" },
             ],
+            subjectOf: [
+              { "@id": "https://guestsquad.com/resources/hotel-answering-service-vs-call-center#article" },
+              { "@id": "https://guestsquad.com/resources/hotel-answering-service-cost#article" },
+              { "@id": "https://guestsquad.com/resources/missed-booking-calculator#webapp" },
+            ],
           },
           {
             "@context": "https://schema.org",
@@ -551,7 +556,9 @@ export default function CentralReservationsPage() {
               <p className="text-xs font-semibold uppercase tracking-[0.14em] text-ink-muted mb-3">Guides</p>
               <div className="flex flex-col divide-y divide-line">
                 {[
-                  { label: "Hotel missed call revenue calculator", detail: "Estimate what unanswered calls cost you.", href: "/resources/missed-booking-calculator" },
+                  { label: "How an answering service compares with a call center", detail: "Differences in training, property knowledge and cost.", href: "/resources/hotel-answering-service-vs-call-center" },
+                  { label: "What drives the cost of outsourced call coverage", detail: "Pricing models and what drives cost.", href: "/resources/hotel-answering-service-cost" },
+                  { label: "Missed booking calculator", detail: "Estimate what unanswered calls cost you.", href: "/resources/missed-booking-calculator" },
                 ].map((guide) => (
                   <Link key={guide.href} href={guide.href} className="flex flex-col py-3 hover:opacity-80 transition-opacity">
                     <p className="text-sm text-gold-dark underline underline-offset-2">{guide.label}</p>

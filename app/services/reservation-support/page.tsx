@@ -72,6 +72,11 @@ export default function ReservationSupportPage() {
               { "@type": "Audience", audienceType: "Independent Hotel" },
               { "@type": "Audience", audienceType: "Boutique Hotel" },
             ],
+            subjectOf: [
+              { "@id": "https://guestsquad.com/resources/missed-booking-calculator#webapp" },
+              { "@id": "https://guestsquad.com/resources/hotel-front-desk-overflow-support#article" },
+              { "@id": "https://guestsquad.com/resources/hotel-answering-service-vs-call-center#article" },
+            ],
           },
           {
             "@context": "https://schema.org",
@@ -402,34 +407,33 @@ export default function ReservationSupportPage() {
         <div className="mt-6 grid gap-4 sm:grid-cols-3">
           {[
             {
-              label: "Operations",
-              title: "Front desk overflow support",
+              label: "Calculator",
+              title: "Missed booking calculator",
+              body: "Estimate what unanswered reservation calls cost you.",
+              href: "/resources/missed-booking-calculator",
+            },
+            {
+              label: "Guide",
+              title: "When to outsource front desk overflow",
               body: "When and how independent hotels route booking calls they can't answer at the desk.",
               href: "/resources/hotel-front-desk-overflow-support",
             },
             {
-              label: "Checklist",
-              title: "After-hours hotel support checklist",
-              body: "What to confirm before anyone handles guests on your behalf, including access and escalation paths.",
-              href: "/resources/after-hours-hotel-support-checklist",
-            },
-            {
-              label: "Template",
-              title: "Hotel guest messaging SOP template",
-              body: "A template for the written rules agents work from.",
-              href: "/resources/hotel-guest-messaging-sop-template",
+              label: "Comparison",
+              title: "How an answering service compares with a call center",
+              body: "Differences in training, property knowledge and cost.",
+              href: "/resources/hotel-answering-service-vs-call-center",
             },
           ].map((item) => (
             <div key={item.title} className="rounded-lg border border-line bg-paper p-5">
               <p className="text-xs font-semibold uppercase tracking-[0.15em] text-gold-dark">{item.label}</p>
-              <p className="mt-2 text-sm font-medium leading-snug text-ink">{item.title}</p>
-              <p className="mt-2 text-sm leading-relaxed text-ink-soft">{item.body}</p>
               <Link
                 href={item.href}
-                className="mt-4 inline-block text-xs text-gold-dark underline underline-offset-2 hover:text-gold"
+                className="mt-2 block text-sm font-medium leading-snug text-ink hover:text-gold-dark"
               >
-                Read →
+                {item.title}
               </Link>
+              <p className="mt-2 text-sm leading-relaxed text-ink-soft">{item.body}</p>
             </div>
           ))}
         </div>

@@ -98,6 +98,12 @@ export default function AfterHoursSupportPage() {
               { "@type": "Audience", audienceType: "Boutique Hotel" },
               { "@type": "Audience", audienceType: "Serviced Apartment Operator" },
             ],
+            subjectOf: [
+              { "@id": "https://guestsquad.com/resources/after-hours-hotel-support-checklist#article" },
+              { "@id": "https://guestsquad.com/resources/hotel-front-desk-overflow-support#article" },
+              { "@id": "https://guestsquad.com/resources/hotel-answering-service-vs-ai-voice#article" },
+              { "@id": "https://guestsquad.com/resources/missed-booking-calculator#webapp" },
+            ],
           },
           {
             "@context": "https://schema.org",
@@ -440,27 +446,38 @@ export default function AfterHoursSupportPage() {
           {[
             {
               label: "Checklist",
-              title: "After-hours coverage checklist",
+              title: "After-hours front desk checklist",
               body: "Map your overnight gaps before choosing coverage.",
               href: "/resources/after-hours-hotel-support-checklist",
             },
             {
+              label: "Guide",
+              title: "When to outsource front desk overflow",
+              body: "Signs your hotel needs overflow coverage.",
+              href: "/resources/hotel-front-desk-overflow-support",
+            },
+            {
               label: "Comparison",
-              title: "AI hotel answering service vs live answering",
-              body: "Where AI and human answering each fit for hotels.",
+              title: "Human agents compared with AI voice",
+              body: "Where each one fits for guest calls.",
               href: "/resources/hotel-answering-service-vs-ai-voice",
+            },
+            {
+              label: "Calculator",
+              title: "Missed booking calculator",
+              body: "Estimate what unanswered calls cost you.",
+              href: "/resources/missed-booking-calculator",
             },
           ].map((item) => (
             <div key={item.title} className="rounded-lg border border-line bg-paper p-5">
               <p className="text-xs font-semibold uppercase tracking-[0.15em] text-gold-dark">{item.label}</p>
-              <p className="mt-2 text-sm font-medium leading-snug text-ink">{item.title}</p>
-              <p className="mt-2 text-sm leading-relaxed text-ink-soft">{item.body}</p>
               <Link
                 href={item.href}
-                className="mt-4 inline-block text-xs text-gold-dark underline underline-offset-2 hover:text-gold"
+                className="mt-2 block text-sm font-medium leading-snug text-ink hover:text-gold-dark"
               >
-                Read →
+                {item.title}
               </Link>
+              <p className="mt-2 text-sm leading-relaxed text-ink-soft">{item.body}</p>
             </div>
           ))}
         </div>

@@ -119,14 +119,14 @@ export type ResourceArticleData = {
   };
   inlineAsset?: ArticleAssetCta;
   assetCta?: ArticleAssetCta;
-  schemaAbout?: { type: string; name: string; url?: string; serviceType?: string; areaServed?: string };
-  schemaMentions?: { type: string; name: string; id?: string }[];
+  schemaAbout?: Record<string, string>;
+  schemaMentions?: Record<string, string>[];
   insightSlugs?: string[];
 };
 
 export const aiVoiceComparison: ResourceArticleData = {
   slug: "hotel-answering-service-vs-ai-voice",
-  relatedServiceSlugs: ["hotel-answering-service", "reservation-support", "guest-messaging"],
+  relatedServiceSlugs: ["hotel-answering-service", "after-hours-support", "vacation-rental-answering-service"],
   title: "Hotel Answering Service vs. AI Voice Agent: Which Is Right for Your Property?",
   description:
     "A hospitality-specific comparison of human hotel answering services and AI voice agents — where each one holds up, where AI still falls short, and what to check before you commit your phone line to either.",
@@ -134,7 +134,7 @@ export const aiVoiceComparison: ResourceArticleData = {
   metaDescription:
     "Compare human hotel answering services with AI voice agents for guest calls, reservations, OTA inboxes and after-hours support.",
   datePublished: "2026-06-26T00:00:00+00:00",
-  dateModified: "2026-08-07T00:00:00+00:00",
+  dateModified: "2026-11-14T00:00:00+00:00",
   intro: [
     "AI voice agents are now actively marketed to hotels as a way to cover every inbound call without adding staff. The pitch is compelling: 24/7 availability, no sick days, consistent tone, and a fraction of the cost of a human team. For some use cases in hospitality, that pitch holds up.",
     "Where it gets complicated is reservation calls, in-stay complaints, booking exceptions, and any situation where a guest's first or lasting impression of your property is being shaped in real time. That is where hospitality operators report the widest gap between what AI voice vendors promise and what the technology actually delivers.",
@@ -271,21 +271,16 @@ export const aiVoiceComparison: ResourceArticleData = {
     pdfHref: "/downloads/after-hours-checklist.pdf",
     ctaLabel: "Download After-Hours Checklist",
   },
-  schemaAbout: { type: "Service", name: "Hotel Answering Service", url: "https://guestsquad.com/services/hotel-answering-service", serviceType: "Hotel Answering Service", areaServed: "Worldwide" },
+  schemaAbout: { "@id": "https://guestsquad.com/services/hotel-answering-service#service" },
   schemaMentions: [
-    { type: "Thing", name: "AI Voice Agent for Hotels" },
-    { type: "Thing", name: "Hotel Phone Answering" },
-    { type: "Thing", name: "After-Hours Hotel Coverage" },
-    { type: "Thing", name: "Hotel Reservation Calls" },
-    { type: "Article", name: "When a Hotel or STR Should Outsource Guest Communication — and When It Shouldn't", id: "https://guestsquad.com/resources/insights/when-to-outsource-guest-communication#article" },
-    { type: "Article", name: "Why Hotels Still Miss Bookings After Hours Even When Demand Is Strong", id: "https://guestsquad.com/resources/insights/why-hotels-miss-bookings-after-hours#article" },
+    { "@id": "https://guestsquad.com/services/after-hours-support#service" },
+    { "@id": "https://guestsquad.com/services/vacation-rental-answering-service#service" },
   ],
-  insightSlugs: ["when-to-outsource-guest-communication", "why-hotels-miss-bookings-after-hours"],
 };
 
 export const callCenterComparison: ResourceArticleData = {
   slug: "hotel-answering-service-vs-call-center",
-  relatedServiceSlugs: ["hotel-answering-service", "after-hours-support"],
+  relatedServiceSlugs: ["hotel-answering-service", "central-reservations", "reservation-support"],
   title: "Hotel Answering Service vs Call Center: Key Differences for Hotels",
   description:
     "Why a hospitality-trained, property-specific answering service performs differently from a generic, multi-industry call center, and what to check before you sign with either.",
@@ -293,7 +288,7 @@ export const callCenterComparison: ResourceArticleData = {
   metaDescription:
     "Compare a hotel answering service with a call center: training, property knowledge, OTA coverage, reporting and cost. See which fits your hotel.",
   datePublished: "2026-06-26T00:00:00+00:00",
-  dateModified: "2026-08-07T00:00:00+00:00",
+  dateModified: "2026-11-14T00:00:00+00:00",
   intro: [
     "Hotels shopping for outsourced phone coverage often hear both terms used for the same product. They are not the same product. The operating model is different, the training is different, and on a reservation call where a guest is choosing between you and a competing property, the difference is audible.",
     "A generic call center runs a shared agent pool across many unrelated industries. There is no property brief, no familiarity with your room types, and no hospitality-specific training before an agent picks up your phone. A [hotel answering service](/services/hotel-answering-service) like Guest Squad is scoped around one property: your rates, your escalation contacts, your tone. Here is where that separation has operational consequences.",
@@ -446,16 +441,11 @@ export const callCenterComparison: ResourceArticleData = {
       a: "Property-specific training, not just industry-general call handling. Ask whether agents know your actual rates and room types, whether they can access your PMS, and whether escalations reach the right person on your team -- not just a shared inbox.",
     },
   ],
-  schemaAbout: { type: "Service", name: "Hotel Answering Service", url: "https://guestsquad.com/services/hotel-answering-service", serviceType: "Hotel Answering Service", areaServed: "Worldwide" },
+  schemaAbout: { "@id": "https://guestsquad.com/services/hotel-answering-service#service" },
   schemaMentions: [
-    { type: "Thing", name: "Hotel Call Center" },
-    { type: "Thing", name: "After-Hours Hotel Support" },
-    { type: "Thing", name: "Answering Service vs Call Center" },
-    { type: "Thing", name: "OTA Inbox Management" },
-    { type: "Article", name: "When a Hotel or STR Should Outsource Guest Communication — and When It Shouldn't", id: "https://guestsquad.com/resources/insights/when-to-outsource-guest-communication#article" },
-    { type: "Article", name: "The Hidden Revenue Impact of Unanswered Hotel Reservation Calls", id: "https://guestsquad.com/resources/insights/unanswered-reservation-calls-revenue#article" },
+    { "@id": "https://guestsquad.com/services/central-reservations#service" },
+    { "@id": "https://guestsquad.com/services/reservation-support#service" },
   ],
-  insightSlugs: ["when-to-outsource-guest-communication", "unanswered-reservation-calls-revenue"],
 };
 
 export type GuideSection = {
@@ -484,8 +474,8 @@ export type GuideArticleData = {
   relatedResourceSlugs?: string[];
   inlineAsset?: ArticleAssetCta;
   assetCta?: ArticleAssetCta;
-  schemaAbout?: { type: string; name: string; url?: string; serviceType?: string; areaServed?: string };
-  schemaMentions?: { type: string; name: string; id?: string }[];
+  schemaAbout?: Record<string, string>;
+  schemaMentions?: Record<string, string>[];
   insightSlugs?: string[];
 };
 
@@ -600,11 +590,10 @@ export const answeringServiceCostGuide: GuideArticleData = {
     pdfHref: "/downloads/coverage-gap-assessment.pdf",
     ctaLabel: "Download Coverage Gap Assessment",
   },
-  schemaAbout: { type: "Service", name: "Hotel Answering Service", url: "https://guestsquad.com/services/hotel-answering-service", serviceType: "Hotel Answering Service", areaServed: "Worldwide" },
+  schemaAbout: { "@id": "https://guestsquad.com/services/hotel-answering-service#service" },
   schemaMentions: [
-    { type: "Service", name: "Hotel Answering Service", id: "https://guestsquad.com/services/hotel-answering-service#service" },
-    { type: "Service", name: "Hotel Reservation Call Center", id: "https://guestsquad.com/services/central-reservations#service" },
-    { type: "Service", name: "After-Hours Hotel Front Desk Support", id: "https://guestsquad.com/services/after-hours-support#service" },
+    { "@id": "https://guestsquad.com/services/central-reservations#service" },
+    { "@id": "https://guestsquad.com/services/after-hours-support#service" },
   ],
 };
 
@@ -711,10 +700,10 @@ export const afterHoursChecklistGuide: GuideArticleData = {
     serviceHref: "/services/after-hours-support",
     serviceLabel: "After-Hours Support",
   },
-  schemaAbout: { type: "Service", name: "After-Hours Hotel Support", url: "https://guestsquad.com/services/after-hours-support", serviceType: "After-Hours Hotel Front Desk Support", areaServed: "Worldwide" },
+  schemaAbout: { "@id": "https://guestsquad.com/services/after-hours-support#service" },
   schemaMentions: [
-    { type: "Service", name: "Hotel Answering Service", id: "https://guestsquad.com/services/hotel-answering-service#service" },
-    { type: "Service", name: "Hotel Night Audit Support", id: "https://guestsquad.com/services/back-office-operations#service" },
+    { "@id": "https://guestsquad.com/services/hotel-answering-service#service" },
+    { "@id": "https://guestsquad.com/services/back-office-operations#service" },
   ],
 };
 
@@ -824,10 +813,10 @@ export const overflowSupportGuide: GuideArticleData = {
     serviceHref: "/services/hotel-answering-service",
     serviceLabel: "Hotel Answering Service",
   },
-  schemaAbout: { type: "Service", name: "Hotel Answering Service", url: "https://guestsquad.com/services/hotel-answering-service", serviceType: "Hotel Front Desk Overflow Support", areaServed: "Worldwide" },
+  schemaAbout: { "@id": "https://guestsquad.com/services/hotel-answering-service#service" },
   schemaMentions: [
-    { type: "Service", name: "Hotel Reservation Support", id: "https://guestsquad.com/services/reservation-support#service" },
-    { type: "Service", name: "After-Hours Hotel Front Desk Support", id: "https://guestsquad.com/services/after-hours-support#service" },
+    { "@id": "https://guestsquad.com/services/reservation-support#service" },
+    { "@id": "https://guestsquad.com/services/after-hours-support#service" },
   ],
 };
 
@@ -933,9 +922,9 @@ export const otaInboxChecklistGuide: GuideArticleData = {
     serviceHref: "/services/ota-inbox-management",
     serviceLabel: "OTA Inbox Management",
   },
-  schemaAbout: { type: "Service", name: "OTA Inbox Management", url: "https://guestsquad.com/services/ota-inbox-management", serviceType: "OTA Inbox Management for Hotels", areaServed: "Worldwide" },
+  schemaAbout: { "@id": "https://guestsquad.com/services/ota-inbox-management#service" },
   schemaMentions: [
-    { type: "Service", name: "Hotel Guest Messaging", id: "https://guestsquad.com/services/guest-messaging#service" },
+    { "@id": "https://guestsquad.com/services/guest-messaging#service" },
   ],
 };
 
@@ -1055,9 +1044,9 @@ export const messagingSopGuide: GuideArticleData = {
     serviceHref: "/services/guest-messaging",
     serviceLabel: "Guest Messaging Service",
   },
-  schemaAbout: { type: "Service", name: "Hotel Guest Messaging", url: "https://guestsquad.com/services/guest-messaging", serviceType: "Hotel Guest Messaging Support", areaServed: "Worldwide" },
+  schemaAbout: { "@id": "https://guestsquad.com/services/guest-messaging#service" },
   schemaMentions: [
-    { type: "Service", name: "OTA Inbox Management", id: "https://guestsquad.com/services/ota-inbox-management#service" },
+    { "@id": "https://guestsquad.com/services/ota-inbox-management#service" },
   ],
 };
 

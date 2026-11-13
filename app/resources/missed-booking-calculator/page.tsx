@@ -47,7 +47,7 @@ const FAQS = [
 ];
 
 export const metadata: Metadata = buildMetadata({
-  title: "Hotel Missed Call Revenue Calculator | Guest Squad",
+  title: "Hotel Missed Call Revenue Calculator",
   description:
     "Estimate how much revenue unanswered reservation calls are costing your hotel each month. Adjust call volume, booking value, and conversion rate.",
   path: "/resources/missed-booking-calculator",

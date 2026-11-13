@@ -27,8 +27,8 @@ const LAST_MODIFIED: Record<string, string> = {
   "/services/airbnb-guest-support": "2026-11-13",
   "/services/vacation-rental-answering-service": "2026-11-13",
   // Resource articles — updated with insight links and schema today
-  "/resources/hotel-answering-service-vs-ai-voice": "2026-10-26",
-  "/resources/hotel-answering-service-vs-call-center": "2026-10-26",
+  "/resources/hotel-answering-service-vs-ai-voice": "2026-11-14",
+  "/resources/hotel-answering-service-vs-call-center": "2026-11-14",
   "/resources/hotel-answering-service-cost": "2026-11-14",
   "/resources/after-hours-hotel-support-checklist": "2026-11-14",
   "/resources/hotel-front-desk-overflow-support": "2026-11-14",

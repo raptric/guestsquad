@@ -5,14 +5,16 @@ export const hotelAnsweringServiceData: ServiceDetailData = {
   eyebrow: "Hotel Answering Service",
   title: "Hotel Answering Service for Independent Hotels and Boutique Properties",
   description:
-    "Live hotel call answering for reservations, overflow and after-hours inquiries. Your greeting, approved procedures and clear escalation to your team.",
+    "Hotel answering service: a hotel call center answering 24/7, after hours or on overflow, in your hotel's name. Coverage priced to your hours, channels and call volume.",
   schemaAbout: { "@type": "Thing", "name": "Hotel Front Desk Call Coverage" },
   schemaServiceOutput: "Inbound hotel calls answered by a hospitality-trained agent using the property's greeting, approved procedures and escalation contacts",
   schemaSubjectOf: [
-    { "@type": "Article", "@id": "https://guestsquad.com/resources/hotel-answering-service-vs-call-center#article" },
-    { "@type": "Article", "@id": "https://guestsquad.com/resources/hotel-answering-service-vs-ai-voice#article" },
+    { "@id": "https://guestsquad.com/resources/hotel-answering-service-cost#article" },
+    { "@id": "https://guestsquad.com/resources/hotel-answering-service-vs-call-center#article" },
+    { "@id": "https://guestsquad.com/resources/hotel-answering-service-vs-ai-voice#article" },
+    { "@id": "https://guestsquad.com/resources/hotel-front-desk-overflow-support#article" },
+    { "@id": "https://guestsquad.com/resources/missed-booking-calculator#webapp" },
   ],
-  insightSlugs: ["when-to-outsource-guest-communication", "unanswered-reservation-calls-revenue"],
   schemaAudienceTypes: [
     "Independent Hotel",
     "Boutique Hotel",
@@ -23,13 +25,9 @@ export const hotelAnsweringServiceData: ServiceDetailData = {
     "Aparthotel",
   ],
   schemaMentions: [
-    { "@type": "Thing", "name": "Hotel Front Desk" },
-    { "@type": "Thing", "name": "Hotel Reservations" },
-    { "@type": "Thing", "name": "After-Hours Call Coverage" },
-    { "@type": "Thing", "name": "Call Overflow Management" },
-    { "@type": "Thing", "name": "Hotel Telephone Routing" },
-    { "@type": "Thing", "name": "Property Management System" },
-    { "@type": "Thing", "name": "Direct Hotel Bookings" },
+    { "@type": "Organization", "name": "Booking.com", "sameAs": "https://en.wikipedia.org/wiki/Booking.com" },
+    { "@type": "Organization", "name": "Expedia", "sameAs": "https://en.wikipedia.org/wiki/Expedia_Group" },
+    { "@type": "Thing", "name": "Property management system", "sameAs": "https://en.wikipedia.org/wiki/Property_management_system" },
   ],
   primaryCta: "Book a Coverage Review",
   primaryHref: undefined,
@@ -167,8 +165,9 @@ export const reservationSupportData: ServiceDetailData = {
   schemaAbout: { "@type": "Thing", "name": "Hotel Reservation Management" },
   schemaServiceOutput: "Confirmed hotel bookings, rate quotes, and reservation modifications handled by trained agents working inside the property's PMS",
   schemaSubjectOf: [
-    { "@type": "Article", "@id": "https://guestsquad.com/resources/hotel-answering-service-cost#article" },
-    { "@type": "Article", "@id": "https://guestsquad.com/resources/hotel-answering-service-vs-call-center#article" },
+    { "@id": "https://guestsquad.com/resources/missed-booking-calculator#webapp" },
+    { "@id": "https://guestsquad.com/resources/hotel-front-desk-overflow-support#article" },
+    { "@id": "https://guestsquad.com/resources/hotel-answering-service-vs-call-center#article" },
   ],
   insightSlugs: ["unanswered-reservation-calls-revenue", "why-hotels-miss-bookings-after-hours"],
   schemaAudienceTypes: [
@@ -278,8 +277,8 @@ export const guestMessagingData: ServiceDetailData = {
   schemaAbout: { "@type": "Thing", "name": "Hotel Guest Messaging" },
   schemaServiceOutput: "Monitored and answered guest messages across SMS, WhatsApp, email, and in-app channels throughout the full stay journey",
   schemaSubjectOf: [
-    { "@type": "Article", "@id": "https://guestsquad.com/resources/hotel-guest-messaging-sop-template#article" },
-    { "@type": "Article", "@id": "https://guestsquad.com/resources/booking-com-message-support#article" },
+    { "@id": "https://guestsquad.com/resources/hotel-guest-messaging-sop-template#article" },
+    { "@id": "https://guestsquad.com/resources/booking-com-message-support#article" },
   ],
   insightSlugs: ["hotel-guest-messaging-lifecycle", "fast-responses-reduce-cancellations"],
   schemaAudienceTypes: [
@@ -384,8 +383,8 @@ export const otaInboxData: ServiceDetailData = {
   schemaAbout: { "@type": "Thing", "name": "OTA Message Response Management" },
   schemaServiceOutput: "Monitored and answered OTA message threads on Booking.com, Expedia, and Airbnb to improve response time, conversion, and platform ranking",
   schemaSubjectOf: [
-    { "@type": "Article", "@id": "https://guestsquad.com/resources/booking-com-message-support#article" },
-    { "@type": "Article", "@id": "https://guestsquad.com/resources/hotel-guest-messaging-sop-template#article" },
+    { "@id": "https://guestsquad.com/resources/booking-com-message-support#article" },
+    { "@id": "https://guestsquad.com/resources/hotel-guest-messaging-sop-template#article" },
   ],
   insightSlugs: ["ota-ranking-response-time", "booking-com-message-management-lean-teams"],
   schemaAudienceTypes: [
@@ -493,10 +492,11 @@ export const afterHoursData: ServiceDetailData = {
   schemaAbout: { "@type": "Thing", "name": "Hotel After-Hours Front Desk Coverage" },
   schemaServiceOutput: "Overnight and weekend call and message coverage for hotels, handling late check-ins, guest inquiries, and emergency escalations outside front desk hours",
   schemaSubjectOf: [
-    { "@type": "Article", "@id": "https://guestsquad.com/resources/after-hours-hotel-support-checklist#article" },
-    { "@type": "Article", "@id": "https://guestsquad.com/resources/hotel-answering-service-vs-ai-voice#article" },
+    { "@id": "https://guestsquad.com/resources/after-hours-hotel-support-checklist#article" },
+    { "@id": "https://guestsquad.com/resources/hotel-front-desk-overflow-support#article" },
+    { "@id": "https://guestsquad.com/resources/hotel-answering-service-vs-ai-voice#article" },
+    { "@id": "https://guestsquad.com/resources/missed-booking-calculator#webapp" },
   ],
-  insightSlugs: ["why-hotels-miss-bookings-after-hours", "unanswered-reservation-calls-revenue"],
   schemaAudienceTypes: [
     "Independent Hotel",
     "Boutique Hotel",
@@ -607,8 +607,7 @@ export const backOfficeData: ServiceDetailData = {
   schemaAbout: { "@type": "Thing", "name": "Hotel Night Audit and Revenue Reconciliation" },
   schemaServiceOutput: "Daily night audit reports, OTA payout reconciliation, and guest billing exception reports delivered to the property's finance team",
   schemaSubjectOf: [
-    { "@type": "Article", "@id": "https://guestsquad.com/resources/after-hours-hotel-support-checklist#article" },
-    { "@type": "Article", "@id": "https://guestsquad.com/resources/hotel-answering-service-cost#article" },
+    { "@id": "https://guestsquad.com/resources/after-hours-hotel-support-checklist#article" },
   ],
   insightSlugs: ["ota-response-back-office-reconciliation", "ota-ranking-response-time"],
   schemaAudienceTypes: [
@@ -714,11 +713,6 @@ export const airbnbSupportData: ServiceDetailData = {
     "Round-the-clock Airbnb guest services and message handling for hosts and serviced apartment operators: check-in help, in-stay issues and review management.",
   schemaAbout: { "@type": "Thing", "name": "Airbnb Guest Communication Management" },
   schemaServiceOutput: "Monitored and answered Airbnb, Vrbo, and direct-booking guest messages around the clock, protecting host response rate and Superhost status",
-  schemaSubjectOf: [
-    { "@type": "Article", "@id": "https://guestsquad.com/resources/hotel-guest-messaging-sop-template#article" },
-    { "@type": "Article", "@id": "https://guestsquad.com/resources/hotel-answering-service-vs-ai-voice#article" },
-  ],
-  insightSlugs: ["airbnb-response-time-visibility", "vacation-rental-response-standards"],
   schemaAudienceTypes: [
     "Airbnb Host",
     "Vrbo Host",
@@ -821,10 +815,8 @@ export const vacationRentalAnsweringData: ServiceDetailData = {
   schemaAbout: { "@type": "Thing", "name": "Vacation Rental Phone Answering" },
   schemaServiceOutput: "Live call answering and guest message handling for short-term rental operators, covering check-in support, access issues, and after-hours guest inquiries",
   schemaSubjectOf: [
-    { "@type": "Article", "@id": "https://guestsquad.com/resources/after-hours-hotel-support-checklist#article" },
-    { "@type": "Article", "@id": "https://guestsquad.com/resources/hotel-answering-service-vs-ai-voice#article" },
+    { "@id": "https://guestsquad.com/resources/hotel-answering-service-vs-ai-voice#article" },
   ],
-  insightSlugs: ["vacation-rental-response-standards", "airbnb-response-time-visibility"],
   schemaAudienceTypes: [
     "Airbnb Host",
     "Vrbo Host",

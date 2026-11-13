@@ -147,10 +147,11 @@ export default function HotelAnsweringServicePage() {
             "@type": "WebPage",
             "@id": `${SITE.url}${PATH}#webpage`,
             "url": `${SITE.url}${PATH}`,
-            "name": "Hotel Answering Service",
+            "name": "Hotel Answering Service | 24/7 Live Calls",
             "description": d.description,
             "inLanguage": "en",
             "isPartOf": { "@id": `${SITE.url}/#website` },
+            "about": { "@id": `${SITE.url}${PATH}#service` },
             "mainEntity": { "@id": `${SITE.url}${PATH}#service` },
             ...(d.schemaMentions && d.schemaMentions.length > 0 && {
               "mentions": d.schemaMentions,
@@ -465,9 +466,9 @@ export default function HotelAnsweringServicePage() {
         </div>
         <p className="mt-4 text-sm text-ink-soft">
           Read about{" "}
-          <Link href="/resources/hotel-answering-service-vs-ai-voice" className="text-gold-dark underline underline-offset-2 hover:text-gold">AI hotel answering service</Link>{" "}
+          <Link href="/resources/hotel-answering-service-vs-ai-voice" className="text-gold-dark underline underline-offset-2 hover:text-gold">human agents compared with AI voice</Link>{" "}
           options, or our guide to{" "}
-          <Link href="/resources/hotel-answering-service-vs-call-center" className="text-gold-dark underline underline-offset-2 hover:text-gold">answering service vs call center</Link>.
+          <Link href="/resources/hotel-answering-service-vs-call-center" className="text-gold-dark underline underline-offset-2 hover:text-gold">how an answering service compares with a call center</Link>.
         </p>
       </Section>
 
@@ -579,9 +580,11 @@ export default function HotelAnsweringServicePage() {
               <p className="text-xs font-semibold uppercase tracking-[0.14em] text-ink-muted mb-3">Guides</p>
               <div className="flex flex-col divide-y divide-line">
                 {[
-                  { label: "Answering service cost", detail: "What coverage costs and what drives the price.", href: "/resources/hotel-answering-service-cost" },
-                  { label: "Human vs AI answering", detail: "Where each one fits.", href: "/resources/hotel-answering-service-vs-ai-voice" },
-                  { label: "Hotel missed call revenue calculator", detail: "Estimate what unanswered calls cost you.", href: "/resources/missed-booking-calculator" },
+                  { label: "What drives the cost of outsourced call coverage", detail: "What coverage costs and what drives the price.", href: "/resources/hotel-answering-service-cost" },
+                  { label: "How an answering service compares with a call center", detail: "Differences in training, property knowledge and cost.", href: "/resources/hotel-answering-service-vs-call-center" },
+                  { label: "Human agents compared with AI voice", detail: "Where each one fits for guest calls.", href: "/resources/hotel-answering-service-vs-ai-voice" },
+                  { label: "When to outsource front desk overflow", detail: "Signs your hotel needs overflow coverage.", href: "/resources/hotel-front-desk-overflow-support" },
+                  { label: "Missed booking calculator", detail: "Estimate what unanswered calls cost you.", href: "/resources/missed-booking-calculator" },
                 ].map((guide) => (
                   <Link key={guide.href} href={guide.href} className="flex flex-col py-3 hover:opacity-80 transition-opacity">
                     <p className="text-sm text-gold-dark underline underline-offset-2">{guide.label}</p>

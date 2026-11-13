@@ -431,42 +431,6 @@ export default function AirbnbGuestSupportPage() {
         </div>
       </Section>
 
-      {/* EXPLORE */}
-      <Section surface id="explore">
-        <SectionHeading
-          eyebrow="Guides"
-          title="Explore what fits your situation."
-        />
-        <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {[
-            {
-              label: "Service",
-              title: "Vacation rental answering service",
-              body: "Live call answering plus messages for short-term rentals.",
-              href: "/services/vacation-rental-answering-service",
-            },
-            {
-              label: "Calculator",
-              title: "Missed booking revenue calculator",
-              body: "Estimate what unanswered messages may be costing you.",
-              href: "/resources/missed-booking-calculator",
-            },
-          ].map((item) => (
-            <div key={item.title} className="rounded-lg border border-line bg-paper p-5">
-              <p className="text-xs font-semibold uppercase tracking-[0.15em] text-gold-dark">{item.label}</p>
-              <p className="mt-2 text-sm font-medium leading-snug text-ink">{item.title}</p>
-              <p className="mt-2 text-sm leading-relaxed text-ink-soft">{item.body}</p>
-              <Link
-                href={item.href}
-                className="mt-4 inline-block text-xs text-gold-dark underline underline-offset-2 hover:text-gold"
-              >
-                Read →
-              </Link>
-            </div>
-          ))}
-        </div>
-      </Section>
-
       {/* MID-PAGE DARK CTA */}
       <div className="bg-ink">
         <div className="container flex flex-col items-start justify-between gap-5 py-8 sm:flex-row sm:items-center">

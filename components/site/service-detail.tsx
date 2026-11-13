@@ -26,8 +26,8 @@ export type ServiceDetailData = {
   schemaAbout?: { "@type": string; name: string };
   schemaServiceOutput?: string;
   schemaAudienceTypes?: string[];
-  schemaMentions?: { "@type": string; name: string }[];
-  schemaSubjectOf?: { "@type": string; "@id": string }[];
+  schemaMentions?: { "@type": string; name: string; sameAs?: string }[];
+  schemaSubjectOf?: { "@id": string }[];
   introHeading?: string;
   answerBlock: string;
   image: { src: string; alt: string };

@@ -13,7 +13,7 @@ import { RESOURCES } from "@/lib/resource-content";
 import { Calculator, FileText, ClipboardList, BarChart2, ArrowUpRight } from "lucide-react";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Hotel Guest Coverage Guides & Checklists | Guest Squad",
+  title: "Hotel Guest Coverage Guides & Checklists",
   description:
     "Guides, checklists and tools for hotel and vacation rental teams: what drives guest support costs, how to cover nights and overflow, and OTA inbox standards.",
   path: "/resources",

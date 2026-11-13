@@ -131,6 +131,9 @@ export default function VacationRentalAnsweringServicePage() {
               { "@type": "Audience", audienceType: "Vrbo Host" },
               { "@type": "Audience", audienceType: "Vacation Rental Property Manager" },
             ],
+            subjectOf: [
+              { "@id": "https://guestsquad.com/resources/hotel-answering-service-vs-ai-voice#article" },
+            ],
           },
           {
             "@context": "https://schema.org",
@@ -564,7 +567,7 @@ export default function VacationRentalAnsweringServicePage() {
               <p className="text-xs font-semibold uppercase tracking-[0.14em] text-ink-muted mb-3">Guides</p>
               <div className="flex flex-col divide-y divide-line">
                 {[
-                  { label: "Human vs AI answering", detail: "Where each one fits for STR operators.", href: "/resources/hotel-answering-service-vs-ai-voice" },
+                  { label: "Human agents compared with AI voice", detail: "Where each one fits for STR operators.", href: "/resources/hotel-answering-service-vs-ai-voice" },
                 ].map((guide) => (
                   <Link key={guide.href} href={guide.href} className="flex flex-col py-3 hover:opacity-80 transition-opacity">
                     <p className="text-sm text-gold-dark underline underline-offset-2">{guide.label}</p>

@@ -94,6 +94,9 @@ export default function BackOfficeOperationsPage() {
               { "@type": "Audience", audienceType: "Hotel Group" },
               { "@type": "Audience", audienceType: "Boutique Hotel" },
             ],
+            subjectOf: [
+              { "@id": "https://guestsquad.com/resources/after-hours-hotel-support-checklist#article" },
+            ],
           },
           {
             "@context": "https://schema.org",
@@ -536,6 +539,35 @@ export default function BackOfficeOperationsPage() {
               </div>
             </div>
           </div>
+        </div>
+      </Section>
+
+      {/* GUIDES */}
+      <Section surface id="guides">
+        <SectionHeading
+          eyebrow="Guides"
+          title="More on after-hours coverage."
+        />
+        <div className="mt-6 grid gap-4 sm:grid-cols-2">
+          {[
+            {
+              label: "Checklist",
+              title: "After-hours front desk checklist",
+              body: "Map your overnight gaps before choosing coverage.",
+              href: "/resources/after-hours-hotel-support-checklist",
+            },
+          ].map((item) => (
+            <div key={item.title} className="rounded-lg border border-line bg-paper p-5">
+              <p className="text-xs font-semibold uppercase tracking-[0.15em] text-gold-dark">{item.label}</p>
+              <Link
+                href={item.href}
+                className="mt-2 block text-sm font-medium leading-snug text-ink hover:text-gold-dark"
+              >
+                {item.title}
+              </Link>
+              <p className="mt-2 text-sm leading-relaxed text-ink-soft">{item.body}</p>
+            </div>
+          ))}
         </div>
       </Section>
 

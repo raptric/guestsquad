@@ -34,7 +34,7 @@ const LAST_MODIFIED: Record<string, string> = {
   "/resources/hotel-front-desk-overflow-support": "2026-11-14",
   "/resources/booking-com-message-support": "2026-11-14",
   "/resources/hotel-guest-messaging-sop-template": "2026-08-11",
-  "/resources/missed-booking-calculator": "2026-08-08",
+  "/resources/missed-booking-calculator": "2026-11-14",
 };
 
 const STATIC_ROUTES = ["", "/services", "/contact", "/resources", "/about", "/privacy-policy", "/terms-of-service"];

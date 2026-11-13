@@ -462,10 +462,14 @@ export function webApplicationSchema({
   name,
   description,
   path,
+  about,
+  mentions,
 }: {
   name: string;
   description: string;
   path: string;
+  about?: Record<string, string>;
+  mentions?: { "@type": string; name?: string; "@id"?: string }[];
 }) {
   const url = `${SITE.url}${path}`;
   return {
@@ -477,12 +481,15 @@ export function webApplicationSchema({
     url,
     applicationCategory: "BusinessApplication",
     operatingSystem: "Web",
+    isAccessibleForFree: true,
     offers: {
       "@type": "Offer",
       price: "0",
       priceCurrency: "USD",
     },
     provider: { "@id": `${SITE.url}/#organization` },
+    ...(about && { about }),
+    ...(mentions && mentions.length > 0 && { mentions }),
   };
 }
 

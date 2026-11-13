@@ -129,11 +129,11 @@ export function MissedBookingCalculator({ compact = false }: Props) {
           </div>
           <div className="rounded-lg border-2 border-gold bg-paper p-5">
             <p className="text-2xl font-medium text-gold-dark">{usd(recovered)}</p>
-            <p className="mt-1 text-xs text-ink-muted">Est. recovered at 70% capture rate</p>
+            <p className="mt-1 text-xs text-ink-muted">Est. recoverable at a 70% capture rate (assumption)</p>
           </div>
         </div>
         <p className="mt-4 text-xs leading-relaxed text-ink-soft">
-          One recovered booking per month can offset a meaningful portion of guest coverage costs.
+          Compare this figure with the cost of covering those calls. A coverage review gives you a quote scoped to your volume.
         </p>
       </div>
 

@@ -79,20 +79,6 @@ export default function AirbnbGuestSupportPage() {
               { "@type": "Country", name: "AU" },
               { "@type": "Country", name: "NZ" },
             ],
-            offers: {
-              "@type": "Offer",
-              price: "99",
-              priceCurrency: "USD",
-              priceSpecification: {
-                "@type": "UnitPriceSpecification",
-                price: "99",
-                priceCurrency: "USD",
-                unitCode: "MON",
-                description:
-                  "Part of the vacation rental answering service: one listing, 24/7 coverage, subject to scope confirmation",
-              },
-              availability: "https://schema.org/InStock",
-            },
             audience: [
               { "@type": "Audience", audienceType: "Airbnb Host" },
               { "@type": "Audience", audienceType: "Vrbo Host" },
@@ -230,21 +216,13 @@ export default function AirbnbGuestSupportPage() {
             .)
           </p>
           <p>
-            The 24-hour rule is the minimum. Guests comparing listings often book the host who answers first, and a question left overnight can become a lost booking or a weaker review. Read more on{" "}
-            <Link href="/resources/insights/airbnb-response-time-visibility" className="text-gold-dark underline underline-offset-2 hover:text-gold">
-              how response time affects Airbnb visibility
-            </Link>
-            .
+            The 24-hour rule is the minimum. Guests comparing listings often book the host who answers first, and a question left overnight can become a lost booking or a weaker review.
           </p>
         </div>
         <div className="mt-6 rounded-lg border border-line bg-surface px-6 py-5 max-w-2xl">
           <p className="text-sm font-medium text-ink mb-2">Help when your Airbnb and Vrbo inbox overflows</p>
           <p className="text-sm leading-relaxed text-ink-soft">
-            Busy weekends, back-to-back turnovers and several listings at once are when replies slip. We cover the hours and listings you agree, so messages keep getting answered when you can&apos;t. For keeping one standard across Airbnb, Vrbo and direct messages, see our guide to{" "}
-            <Link href="/resources/insights/vacation-rental-response-standards" className="text-gold-dark underline underline-offset-2 hover:text-gold">
-              vacation rental response standards
-            </Link>
-            .
+            Busy weekends, back-to-back turnovers and several listings at once are when replies slip. We cover the hours and listings you agree, so messages keep getting answered when you can&apos;t.
           </p>
         </div>
       </Section>
@@ -473,18 +451,6 @@ export default function AirbnbGuestSupportPage() {
               title: "Vacation rental answering service",
               body: "Live call answering plus messages for short-term rentals.",
               href: "/services/vacation-rental-answering-service",
-            },
-            {
-              label: "Insight",
-              title: "How response time affects Airbnb visibility",
-              body: "What Airbnb measures and what it means for your listing ranking.",
-              href: "/resources/insights/airbnb-response-time-visibility",
-            },
-            {
-              label: "Insight",
-              title: "Vacation rental response standards",
-              body: "Standards across Airbnb, Vrbo and direct messages.",
-              href: "/resources/insights/vacation-rental-response-standards",
             },
             {
               label: "Calculator",

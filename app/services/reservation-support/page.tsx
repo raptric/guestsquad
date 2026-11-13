@@ -75,20 +75,6 @@ export default function ReservationSupportPage() {
               { "@type": "Country", name: "AU" },
               { "@type": "Country", name: "NZ" },
             ],
-            offers: {
-              "@type": "Offer",
-              price: "149",
-              priceCurrency: "USD",
-              priceSpecification: {
-                "@type": "UnitPriceSpecification",
-                price: "149",
-                priceCurrency: "USD",
-                unitCode: "MON",
-                description:
-                  "Included in the hotel answering service: one hotel, after-hours or overflow coverage, subject to scope confirmation",
-              },
-              availability: "https://schema.org/InStock",
-            },
             audience: [
               { "@type": "Audience", audienceType: "Independent Hotel" },
               { "@type": "Audience", audienceType: "Boutique Hotel" },

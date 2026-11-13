@@ -4,7 +4,6 @@ import { RESOURCES } from "@/lib/resource-content";
 
 const PRIORITY: Record<string, number> = {
   "": 1,
-  "/pilot": 0.9,
   "/services": 0.9,
   "/contact": 0.8,
   "/resources": 0.6,
@@ -20,24 +19,23 @@ const ASSET_ROUTES = [
 // Update these dates whenever meaningful content changes are made to a page
 const LAST_MODIFIED: Record<string, string> = {
   // Static pages
-  "": "2026-10-26",
-  "/pilot": "2026-08-08",
-  "/services": "2026-11-10",
+  "": "2026-11-13",
+  "/services": "2026-11-13",
   "/contact": "2026-08-08",
-  "/resources": "2026-08-11",
+  "/resources": "2026-11-13",
   "/about": "2026-10-26",
   "/privacy-policy": "2026-10-26",
   "/terms-of-service": "2026-08-08",
-  // Service pages — schema enriched with about, serviceOutput, mentions
-  "/services/hotel-answering-service": "2026-10-26",
-  "/services/reservation-support": "2026-08-11",
-  "/services/guest-messaging": "2026-10-26",
-  "/services/central-reservations": "2026-11-10",
-  "/services/ota-inbox-management": "2026-11-10",
-  "/services/after-hours-support": "2026-10-26",
-  "/services/back-office-operations": "2026-08-11",
-  "/services/airbnb-guest-support": "2026-10-26",
-  "/services/vacation-rental-answering-service": "2026-11-10",
+  // Service pages
+  "/services/hotel-answering-service": "2026-11-13",
+  "/services/reservation-support": "2026-11-13",
+  "/services/guest-messaging": "2026-11-13",
+  "/services/central-reservations": "2026-11-13",
+  "/services/ota-inbox-management": "2026-11-13",
+  "/services/after-hours-support": "2026-11-13",
+  "/services/back-office-operations": "2026-11-13",
+  "/services/airbnb-guest-support": "2026-11-13",
+  "/services/vacation-rental-answering-service": "2026-11-13",
   // Resource articles — updated with insight links and schema today
   "/resources/hotel-answering-service-vs-ai-voice": "2026-10-26",
   "/resources/hotel-answering-service-vs-call-center": "2026-10-26",

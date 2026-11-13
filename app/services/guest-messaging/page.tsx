@@ -370,12 +370,6 @@ export default function GuestMessagingPage() {
               body: "What to include in a guest messaging brief, from check-in procedures to escalation paths.",
               href: "/resources/hotel-guest-messaging-sop-template",
             },
-            {
-              label: "Insight",
-              title: "Hotel guest messaging from pre-arrival to post-checkout",
-              body: "Which messages guests send at each stage of a stay.",
-              href: "/resources/insights/hotel-guest-messaging-lifecycle",
-            },
           ].map((item) => (
             <div key={item.title} className="rounded-lg border border-line bg-paper p-5">
               <p className="text-xs font-semibold uppercase tracking-[0.15em] text-gold-dark">{item.label}</p>

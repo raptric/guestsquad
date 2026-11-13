@@ -128,7 +128,7 @@ const CAPABILITY_TABLE = [
   { cap: "Property knowledge", how: "Your brief, approved rates, policies and contacts, agreed before coverage begins" },
   { cap: "Complex or upset callers", how: "A person handles the call and escalates by your rules" },
   { cap: "Booking actions", how: "Only those you authorise, in systems you grant access to" },
-  { cap: "Messages and OTA inboxes", how: "Included in the starting configuration, within agreed channels and workload" },
+  { cap: "Messages and OTA inboxes", how: "Can be included in the same arrangement, within an agreed workload allowance" },
   { cap: "Pricing basis", how: "Tailored to your hours, call volume, channels and booking actions required" },
 ];
 
@@ -299,8 +299,8 @@ export default function HotelAnsweringServicePage() {
       <Section id="messaging-ota">
         <SectionHeading
           eyebrow="Also Included"
-          title="Guest messaging and OTA inboxes, included in the starting price."
-          description="The US$149 starting configuration also includes guest messaging and OTA inbox support, scoped to your property's systems, agreed channels and an agreed workload allowance."
+          title="Guest messaging and OTA inboxes, included in the same arrangement."
+          description="Guest messaging and OTA inbox support can be included in the same arrangement, scoped to your property's systems, agreed channels and a workload allowance."
         />
         <div className="mt-10 grid gap-5 sm:grid-cols-3">
           {[

@@ -134,19 +134,6 @@ export default function CentralReservationsPage() {
               { "@type": "Country", name: "AU" },
               { "@type": "Country", name: "NZ" },
             ],
-            offers: {
-              "@type": "Offer",
-              price: "299",
-              priceCurrency: "USD",
-              priceSpecification: {
-                "@type": "UnitPriceSpecification",
-                price: "299",
-                priceCurrency: "USD",
-                unitCode: "MON",
-                description: "After-hours coverage for a two-property reference configuration, subject to scope confirmation",
-              },
-              availability: "https://schema.org/InStock",
-            },
             audience: [
               { "@type": "Audience", audienceType: "Hotel Group" },
               { "@type": "Audience", audienceType: "Multi-Property Hotel Operator" },
@@ -253,9 +240,6 @@ export default function CentralReservationsPage() {
               <p className="mt-2 text-sm leading-relaxed text-ink-soft">{s.body}</p>
               {i === 2 && (
                 <div className="mt-3 flex flex-col gap-1">
-                  <Link href="/resources/insights/unanswered-reservation-calls-revenue" className="text-xs text-gold-dark underline underline-offset-2 hover:text-gold">
-                    Cost of unanswered reservation calls →
-                  </Link>
                   <Link href="/resources/missed-booking-calculator" className="text-xs text-gold-dark underline underline-offset-2 hover:text-gold">
                     Hotel missed call revenue calculator →
                   </Link>
@@ -446,7 +430,7 @@ export default function CentralReservationsPage() {
       <Section surface id="reporting">
         <SectionHeading
           eyebrow="Reporting"
-          title="Every reservation logged, every property briefed."
+          title="Reservations logged and handed over to each property"
         />
         <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {[
@@ -574,7 +558,6 @@ export default function CentralReservationsPage() {
               <p className="text-xs font-semibold uppercase tracking-[0.14em] text-ink-muted mb-3">Guides</p>
               <div className="flex flex-col divide-y divide-line">
                 {[
-                  { label: "Cost of unanswered reservation calls", detail: "What missed enquiries cost a hotel group.", href: "/resources/insights/unanswered-reservation-calls-revenue" },
                   { label: "Hotel missed call revenue calculator", detail: "Estimate what unanswered calls cost you.", href: "/resources/missed-booking-calculator" },
                 ].map((guide) => (
                   <Link key={guide.href} href={guide.href} className="flex flex-col py-3 hover:opacity-80 transition-opacity">

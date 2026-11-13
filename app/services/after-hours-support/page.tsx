@@ -452,18 +452,6 @@ export default function AfterHoursSupportPage() {
               href: "/resources/after-hours-hotel-support-checklist",
             },
             {
-              label: "Insight",
-              title: "Why hotels still miss bookings after hours",
-              body: "The overnight gap and what it costs in unanswered calls.",
-              href: "/resources/insights/why-hotels-miss-bookings-after-hours",
-            },
-            {
-              label: "Insight",
-              title: "The revenue impact of unanswered reservation calls",
-              body: "Estimating what missed calls cost your property.",
-              href: "/resources/insights/unanswered-reservation-calls-revenue",
-            },
-            {
               label: "Comparison",
               title: "AI hotel answering service vs live answering",
               body: "Where AI and human answering each fit for hotels.",

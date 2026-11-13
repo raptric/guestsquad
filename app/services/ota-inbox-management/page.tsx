@@ -271,11 +271,7 @@ export default function OtaInboxManagementPage() {
               Each platform sets its own expectations for how quickly properties reply, and guests notice when a question sits unanswered overnight. We agree a response window for each platform during setup and cover the hours your team can&apos;t, including evenings, nights and weekends.
             </p>
             <p className="mt-3 text-sm leading-relaxed text-ink-soft">
-              How reply speed affects visibility differs by platform; our article on{" "}
-              <Link href="/resources/insights/ota-ranking-response-time" className="text-gold-dark underline underline-offset-2 hover:text-gold">
-                OTA response time and ranking
-              </Link>{" "}
-              explains what each platform says. Automated replies help with fixed answers such as directions or check-in times, but they can&apos;t handle a rate question, a change request or anything that needs judgement. OTA inbox management handles the actual conversation, and works alongside your auto-replies.
+              Automated replies help with fixed answers such as directions or check-in times, but they can&apos;t handle a rate question, a change request or anything that needs judgement. OTA inbox management handles the actual conversation, and works alongside your auto-replies.
             </p>
           </div>
 
@@ -384,12 +380,6 @@ export default function OtaInboxManagementPage() {
               title: "Hotel guest messaging SOP template",
               body: "A template for documenting channels, response standards, escalation paths and handovers.",
               href: "/resources/hotel-guest-messaging-sop-template",
-            },
-            {
-              label: "Operations",
-              title: "Managing Booking.com messages with a lean team",
-              body: "How smaller properties keep inboxes covered without someone on them full-time.",
-              href: "/resources/insights/booking-com-message-management-lean-teams",
             },
           ].map((item) => (
             <div key={item.title} className="rounded-lg border border-line bg-paper p-5">

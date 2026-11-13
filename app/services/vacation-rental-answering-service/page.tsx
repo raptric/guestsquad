@@ -132,25 +132,6 @@ export default function VacationRentalAnsweringServicePage() {
               { "@type": "Country", name: "AU" },
               { "@type": "Country", name: "NZ" },
             ],
-            offers: {
-              "@type": "Offer",
-              price: "99",
-              priceCurrency: "USD",
-              priceSpecification: {
-                "@type": "UnitPriceSpecification",
-                price: "99",
-                priceCurrency: "USD",
-                unitCode: "MON",
-                description: "One listing, 24/7 coverage included, subject to scope confirmation",
-              },
-              availability: "https://schema.org/InStock",
-              hoursAvailable: {
-                "@type": "OpeningHoursSpecification",
-                dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-                opens: "00:00",
-                closes: "23:59",
-              },
-            },
             audience: [
               { "@type": "Audience", audienceType: "Short-Term Rental Operator" },
               { "@type": "Audience", audienceType: "Airbnb Host" },
@@ -242,9 +223,7 @@ export default function VacationRentalAnsweringServicePage() {
           title="After-hours calls that can't wait until morning."
         />
         <p className="mt-4 max-w-2xl text-sm leading-relaxed text-ink-soft">
-          Guests call when they are locked out or running late, and you shouldn&apos;t have to be the one picking up at 11pm. A voicemail and a morning callback can turn into a bad review, and slow Airbnb replies can affect your{" "}
-          <Link href="/resources/insights/airbnb-response-time-visibility" className="text-gold-dark underline underline-offset-2 hover:text-gold">response rate and ranking</Link>.
-          {" "}This is how vacation rental after-hours support works for common situations.
+          Guests call when they are locked out or running late, and you shouldn&apos;t have to be the one picking up at 11pm. A voicemail and a morning callback can turn into a bad review. This is how vacation rental after-hours support works for common situations.
         </p>
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {[
@@ -371,8 +350,7 @@ export default function VacationRentalAnsweringServicePage() {
           ))}
         </div>
         <p className="mt-4 text-sm text-ink-soft">
-          Every listing has its own rules, so agents work from the brief for the listing the guest is staying in. For benchmarks, read{" "}
-          <Link href="/resources/insights/vacation-rental-response-standards" className="text-gold-dark underline underline-offset-2 hover:text-gold">vacation rental response standards</Link>.
+          Every listing has its own rules, so agents work from the brief for the listing the guest is staying in.
         </p>
       </Section>
 
@@ -593,8 +571,6 @@ export default function VacationRentalAnsweringServicePage() {
               <p className="text-xs font-semibold uppercase tracking-[0.14em] text-ink-muted mb-3">Guides</p>
               <div className="flex flex-col divide-y divide-line">
                 {[
-                  { label: "Vacation rental response standards", detail: "Benchmarks for Airbnb and Vrbo response times.", href: "/resources/insights/vacation-rental-response-standards" },
-                  { label: "Airbnb response time and visibility", detail: "How response rate affects your ranking.", href: "/resources/insights/airbnb-response-time-visibility" },
                   { label: "Human vs AI answering", detail: "Where each one fits for STR operators.", href: "/resources/hotel-answering-service-vs-ai-voice" },
                 ].map((guide) => (
                   <Link key={guide.href} href={guide.href} className="flex flex-col py-3 hover:opacity-80 transition-opacity">

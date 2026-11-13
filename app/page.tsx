@@ -389,25 +389,67 @@ export default function HomePage() {
 
       {/* PRICING */}
       <Section id="pricing">
-        <div className="mx-auto max-w-xl rounded-xl border border-line bg-paper p-8">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold-dark">Pricing</p>
-          <h2 className="mt-3 text-2xl font-medium text-ink">
-            Flexible Guest Support. Pricing Built Around Your Property.
-          </h2>
-          <p className="mt-4 text-sm leading-relaxed text-ink-soft">
-            No two properties operate the same way. Your coverage is tailored to the hours, guest interactions, communication channels and responsibilities you need us to manage.
-          </p>
-          <p className="mt-3 text-sm leading-relaxed text-ink-soft">
-            Start with a pilot to experience how Guest Squad works with your property. We&apos;ll discuss your requirements, agree on the scope and provide transparent pricing before any service begins.
-          </p>
-          <div className="mt-6">
-            <CoverageReviewButton variant="gold" ctaLocation="homepage-pricing" size="default">
-              Explore a Pilot ↗
-            </CoverageReviewButton>
+        <div className="grid gap-8 lg:grid-cols-2 lg:items-start">
+          {/* Left card */}
+          <div className="rounded-lg border border-line bg-paper p-7">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold-dark">Pricing</p>
+            <h2 className="mt-3 text-2xl font-medium text-ink">Flexible Guest Support. Pricing Built Around Your Property.</h2>
+            <p className="mt-4 text-sm leading-relaxed text-ink-soft">
+              No two properties operate the same way. Your coverage is tailored to the hours, guest interactions, communication channels and responsibilities you need us to manage.
+            </p>
+            <div className="mt-5 border-t border-line pt-5">
+              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.12em] text-ink-muted">What&apos;s included in every plan</p>
+              <ul className="flex flex-col gap-2">
+                {[
+                  "Live answering during agreed coverage hours",
+                  "Guest messaging and OTA inbox support",
+                  "Escalation, call logging and handover notes",
+                  "Coverage scoped to your hours and channels",
+                  "Activity summary and reporting",
+                  "Written proposal before onboarding",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-2.5 text-sm text-ink-soft">
+                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold-dark" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="mt-5 border-t border-line pt-4">
+              <p className="text-xs text-ink-muted">Month-to-month · 30 days&apos; notice</p>
+            </div>
           </div>
-          <p className="mt-4 text-xs text-ink-muted">
-            ✓ Tailored coverage &nbsp;·&nbsp; ✓ Clear proposal &nbsp;·&nbsp; ✓ No obligation to continue
-          </p>
+
+          {/* Right column */}
+          <div className="flex flex-col gap-6">
+            <div className="rounded-lg border border-line bg-surface p-7">
+              <p className="text-sm font-semibold text-ink mb-3">What shapes your pricing:</p>
+              <ul className="flex flex-col gap-2.5">
+                {[
+                  "Coverage hours — after-hours, overflow or 24/7",
+                  "Property type and number of locations",
+                  "Channels — phone, OTAs, guest messaging",
+                  "Expected call and message volume",
+                  "Responsibilities and system access required",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-2.5 text-sm text-ink-soft">
+                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-ink-muted/50" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="rounded-lg border border-line bg-paper p-7">
+              <p className="text-sm font-semibold text-ink mb-2">Start With a Pilot.</p>
+              <p className="text-sm text-ink-soft mb-5">
+                Tell us your property, coverage hours and what you need managed. We&apos;ll agree the scope and provide transparent pricing before any service begins.
+              </p>
+              <CoverageReviewButton variant="gold" ctaLocation="homepage_pricing_cta" className="w-full justify-center">
+                Explore a Pilot ↗
+              </CoverageReviewButton>
+              <p className="mt-4 text-xs text-ink-muted">✓ Tailored coverage · ✓ Clear proposal · ✓ No obligation to continue</p>
+            </div>
+          </div>
         </div>
       </Section>
 

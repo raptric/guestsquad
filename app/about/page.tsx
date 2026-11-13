@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Breadcrumbs } from "@/components/site/breadcrumbs";
 import { JsonLd } from "@/components/site/json-ld";
 import { CoverageReviewButton } from "@/components/site/coverage-review-button";
-import { buildMetadata, breadcrumbSchema, webPageSchema } from "@/lib/seo";
+import { buildMetadata, breadcrumbSchema, webPageSchema, organizationSchema, aboutPageSchema } from "@/lib/seo";
 import { SITE } from "@/lib/site-data";
 
 export const metadata: Metadata = buildMetadata({
@@ -56,28 +56,8 @@ export default function AboutPage() {
     <>
       <JsonLd
         data={[
-          webPageSchema({
-            name: "About Guest Squad | Our Team & Approach",
-            description:
-              "Guest Squad provides remote hospitality support for hotels and vacation rental operators — calls, reservations, guest messages, and agreed coordination handled by trained people.",
-            path: "/about",
-            primaryImageUrl: `${SITE.url}/brand-assets/guestsquad-favicon-official.svg`,
-            primaryImageAlt: "Guest Squad logo",
-            about: { "@id": `${SITE.url}/#organization` },
-            audienceTypes: [
-              "Independent Hotel",
-              "Boutique Hotel",
-              "Serviced Apartment",
-              "Vacation Rental Operator",
-              "Short-Term Rental Operator",
-            ],
-            mentions: [
-              { "@type": "Organization", name: "Raptric LLC" },
-              { "@type": "Person", name: "Usman Khalid" },
-              { "@type": "Thing", name: "Hotel Answering Service" },
-              { "@type": "Thing", name: "OTA Inbox Management" },
-            ],
-          }),
+          organizationSchema(),
+          aboutPageSchema(),
           breadcrumbSchema([
             { name: "Home", path: "/" },
             { name: "About", path: "/about" },

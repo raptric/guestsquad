@@ -3,7 +3,8 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Breadcrumbs } from "@/components/site/breadcrumbs";
 import { CtaSection } from "@/components/site/cta-section";
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, servicesHubSchema, breadcrumbSchema } from "@/lib/seo";
+import { JsonLd } from "@/components/site/json-ld";
 
 export const metadata: Metadata = buildMetadata({
   title: "Services",
@@ -39,6 +40,15 @@ const MAIN_SERVICES = [
 export default function ServicesPage() {
   return (
     <>
+      <JsonLd
+        data={[
+          servicesHubSchema(),
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Services", path: "/services" },
+          ]),
+        ]}
+      />
       <Breadcrumbs items={[{ name: "Home", path: "/" }, { name: "Services", path: "/services" }]} />
 
       <section className="border-b border-line bg-paper">

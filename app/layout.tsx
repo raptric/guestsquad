@@ -4,10 +4,8 @@ import "./globals.css";
 import { Nav } from "@/components/site/nav";
 import { FooterWrapper } from "@/components/site/footer-wrapper";
 import { CookieConsent } from "@/components/site/cookie-consent";
-import { JsonLd } from "@/components/site/json-ld";
 import { ScrollTracker } from "@/components/site/scroll-tracker";
 import { SITE } from "@/lib/site-data";
-import { organizationSchema, websiteSchema } from "@/lib/seo";
 
 const GTM_ID = "GTM-PDHSJNXB";
 
@@ -106,7 +104,6 @@ export default function RootLayout({
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
-        <JsonLd data={[organizationSchema(), websiteSchema()]} />
         <ScrollTracker />
         <Nav />
         <main className="flex-1">{children}</main>

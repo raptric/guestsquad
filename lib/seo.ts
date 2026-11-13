@@ -49,23 +49,18 @@ export function buildMetadata({
   };
 }
 
-/** Organization schema — sitewide identity for the brand. */
+/** Organization schema — home page and /about only. All other pages use @id reference. */
 export function organizationSchema() {
   return {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
+    "@type": "Organization",
     "@id": `${SITE.url}/#organization`,
     name: SITE.brand,
+    alternateName: "GuestSquad",
     legalName: SITE.legalName,
-    alternateName: SITE.name,
-    url: SITE.url,
-    parentOrganization: {
-      "@type": "Organization",
-      name: SITE.legalName,
-      url: SITE.parentUrl,
-    },
+    url: `${SITE.url}/`,
     description:
-      "Guest Squad, a Raptric LLC company, provides 24/7 guest operations support for hotels, boutique properties, resorts, serviced apartments, and Airbnb operators, including reservation support, guest messaging, OTA inbox management, after-hours coverage, and back-office guest operations.",
+      "Guest Squad is a hospitality call center providing Guest Support Operations for hotels, hotel groups and vacation rental operators: guest calls, reservations, guest messaging, OTA inboxes and back office support, after hours, on overflow or 24/7.",
     email: SITE.email,
     telephone: SITE.phone,
     address: {
@@ -79,7 +74,12 @@ export function organizationSchema() {
     areaServed: "Worldwide",
     logo: {
       "@type": "ImageObject",
-      url: `${SITE.url}/brand-assets/guestsquad-favicon-official.svg`,
+      "@id": `${SITE.url}/#logo`,
+      url: `${SITE.url}/brand-assets/favicon-512x512.png`,
+      contentUrl: `${SITE.url}/brand-assets/favicon-512x512.png`,
+      width: 512,
+      height: 512,
+      caption: "Guest Squad",
     },
     image: {
       "@type": "ImageObject",
@@ -89,63 +89,94 @@ export function organizationSchema() {
     },
     sameAs: [
       "https://www.linkedin.com/company/guest-squad/",
-      "https://raptric.com",
       "https://www.crunchbase.com/organization/guest-squad",
-      "https://about.me/usman-khalid",
       "https://www.trustpilot.com/review/guestsquad.com",
     ],
-    contactPoint: {
-      "@type": "ContactPoint",
-      contactType: "sales",
-      email: SITE.email,
-      telephone: SITE.phone,
-      availableLanguage: "English",
-    },
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        contactType: "sales",
+        email: SITE.email,
+        telephone: SITE.phone,
+        availableLanguage: "English",
+      },
+    ],
+    naics: "561421",
+    founder: [
+      {
+        "@type": "Person",
+        "@id": `${SITE.url}/about#khadija-khalid`,
+        name: "Khadija Khalid",
+        jobTitle: "Co-founder",
+      },
+    ],
     knowsAbout: [
-      "Hotel Guest Operations",
-      "Hotel Answering Service",
-      "Guest Reservation Service",
-      "Hotel BPO",
-      "Hotel Back Office Operations",
-      "Virtual Front Desk",
-      "OTA Inbox Management",
-      "Hotel OTA Messaging",
-      "After-Hours Hotel Support",
-      "Vacation Rental Answering Service",
-      "Vacation Rental After-Hours Support",
-      "Airbnb Guest Support",
-      "Airbnb Guest Services",
-      "Guest Operations Coverage Plans",
-      "Booking.com Message Support",
-      "Hotel 24/7 Coverage Without Staff",
-      "Missed Booking Analysis",
+      "Hotel answering service",
+      "Vacation rental answering service",
+      "Hotel reservation call center",
+      "Central reservations",
+      "After-hours hotel front desk support",
+      "Hotel reservation support",
+      "Hotel guest messaging",
+      "OTA inbox management",
+      "Airbnb guest support",
+      "Hotel night audit",
+      "Hotel back office operations",
+      "Hospitality call center",
+      { "@type": "Thing", name: "Call centre", sameAs: "https://en.wikipedia.org/wiki/Call_centre" },
+      { "@type": "Thing", name: "Answering service", sameAs: "https://en.wikipedia.org/wiki/Answering_service" },
     ],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: "Guest Operations Coverage Plans",
+      name: "Guest Support Operations",
       itemListElement: [
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Hotel Answering Service", serviceType: "Hotel Answering Service", url: "https://guestsquad.com/services/hotel-answering-service", areaServed: "Worldwide", hoursAvailable: ALWAYS_AVAILABLE, provider: { "@id": `${SITE.url}/#organization` } } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Reservation Support", serviceType: "Hotel Reservation Support", url: "https://guestsquad.com/services/reservation-support", areaServed: "Worldwide", hoursAvailable: ALWAYS_AVAILABLE, provider: { "@id": `${SITE.url}/#organization` } } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Guest Messaging", serviceType: "Hotel Guest Messaging", url: "https://guestsquad.com/services/guest-messaging", areaServed: "Worldwide", hoursAvailable: ALWAYS_AVAILABLE, provider: { "@id": `${SITE.url}/#organization` } } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "OTA Inbox Management", serviceType: "OTA Inbox Management", url: "https://guestsquad.com/services/ota-inbox-management", areaServed: "Worldwide", hoursAvailable: ALWAYS_AVAILABLE, provider: { "@id": `${SITE.url}/#organization` } } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "After-Hours Hotel Support", serviceType: "After-Hours Hotel Support", url: "https://guestsquad.com/services/after-hours-support", areaServed: "Worldwide", hoursAvailable: ALWAYS_AVAILABLE, provider: { "@id": `${SITE.url}/#organization` } } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Vacation Rental Answering Service", serviceType: "Vacation Rental Answering Service", url: "https://guestsquad.com/services/vacation-rental-answering-service", areaServed: "Worldwide", hoursAvailable: ALWAYS_AVAILABLE, provider: { "@id": `${SITE.url}/#organization` } } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Airbnb Guest Support", serviceType: "Airbnb Guest Support", url: "https://guestsquad.com/services/airbnb-guest-support", areaServed: "Worldwide", hoursAvailable: ALWAYS_AVAILABLE, provider: { "@id": `${SITE.url}/#organization` } } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Back-Office Guest Operations", serviceType: "Hotel Back-Office Operations", url: "https://guestsquad.com/services/back-office-operations", areaServed: "Worldwide", hoursAvailable: ALWAYS_AVAILABLE, provider: { "@id": `${SITE.url}/#organization` } } },
+        { "@type": "Offer", itemOffered: { "@id": `${SITE.url}/services/hotel-answering-service#service` } },
+        { "@type": "Offer", itemOffered: { "@id": `${SITE.url}/services/vacation-rental-answering-service#service` } },
+        { "@type": "Offer", itemOffered: { "@id": `${SITE.url}/services/central-reservations#service` } },
+        { "@type": "Offer", itemOffered: { "@id": `${SITE.url}/services/after-hours-support#service` } },
+        { "@type": "Offer", itemOffered: { "@id": `${SITE.url}/services/reservation-support#service` } },
+        { "@type": "Offer", itemOffered: { "@id": `${SITE.url}/services/guest-messaging#service` } },
+        { "@type": "Offer", itemOffered: { "@id": `${SITE.url}/services/ota-inbox-management#service` } },
+        { "@type": "Offer", itemOffered: { "@id": `${SITE.url}/services/airbnb-guest-support#service` } },
+        { "@type": "Offer", itemOffered: { "@id": `${SITE.url}/services/back-office-operations#service` } },
       ],
     },
   };
 }
 
-/** WebSite schema — helps search/LLM engines understand site identity & structure. */
+/** WebSite schema — home page only. */
 export function websiteSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "@id": `${SITE.url}/#website`,
     name: SITE.brand,
-    url: SITE.url,
+    alternateName: ["GuestSquad", "guestsquad.com"],
+    url: `${SITE.url}/`,
+    inLanguage: "en",
     publisher: { "@id": `${SITE.url}/#organization` },
+  };
+}
+
+/** AboutPage schema — /about only. Use alongside organizationSchema(). */
+export function aboutPageSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "@id": `${SITE.url}/about#webpage`,
+    url: `${SITE.url}/about`,
+    name: "About Guest Squad",
+    inLanguage: "en",
+    isPartOf: { "@id": `${SITE.url}/#website` },
+    about: { "@id": `${SITE.url}/#organization` },
+    mainEntity: { "@id": `${SITE.url}/#organization` },
+    primaryImageOfPage: {
+      "@type": "ImageObject",
+      url: `${SITE.url}/brand-assets/og-image.jpg`,
+      width: 1200,
+      height: 630,
+    },
+    breadcrumb: { "@id": `${SITE.url}/about#breadcrumb` },
   };
 }
 
@@ -161,13 +192,7 @@ export function contactPageSchema() {
       "Contact Guest Squad to book a coverage review for hotel answering service, guest messaging, OTA inbox management, after-hours support, and managed guest operations coverage.",
     isPartOf: { "@id": `${SITE.url}/#website` },
     about: { "@id": `${SITE.url}/#organization` },
-    mainEntity: {
-      "@type": "ContactPoint",
-      contactType: "sales",
-      telephone: SITE.phone,
-      email: SITE.email,
-      availableLanguage: ["English"],
-    },
+    mainEntity: { "@id": `${SITE.url}/#organization` },
   };
 }
 
@@ -181,49 +206,48 @@ const ALWAYS_AVAILABLE = {
 /** Service schema for an individual service detail page. */
 export function serviceSchema({
   name,
+  serviceType,
   description,
   path,
-  about,
   serviceOutput,
-  dateModified,
   audienceTypes,
   subjectOf,
+  isRelatedTo,
 }: {
   name: string;
+  serviceType?: string;
   description: string;
   path: string;
-  about?: { "@type": string; name: string };
   serviceOutput?: string;
-  dateModified?: string;
   audienceTypes?: string[];
-  subjectOf?: { "@type": string; "@id": string }[];
+  subjectOf?: { "@id": string }[];
+  isRelatedTo?: { "@id": string }[];
 }) {
   return {
     "@context": "https://schema.org",
     "@type": "Service",
     "@id": `${SITE.url}${path}#service`,
-    serviceType: name,
     name,
+    serviceType: serviceType ?? name,
+    category: "Hospitality call center",
     description,
     url: `${SITE.url}${path}`,
-    ...(dateModified && { dateModified }),
-    ...(about && { about }),
-    ...(serviceOutput && { serviceOutput }),
-    ...(subjectOf && subjectOf.length > 0 && { subjectOf }),
     provider: { "@id": `${SITE.url}/#organization` },
+    brand: { "@id": `${SITE.url}/#organization` },
+    ...(serviceOutput && { serviceOutput }),
     hoursAvailable: ALWAYS_AVAILABLE,
     areaServed: "Worldwide",
     audience: audienceTypes
-      ? audienceTypes.map((t) => ({ "@type": "Audience", audienceType: t }))
-      : { "@type": "Audience", audienceType: "Hotels, boutique properties, resorts, serviced apartments, Airbnb and short-term rental operators" },
-    offers: {
-      "@type": "Offer",
-      description: "2-week pilot review for qualified properties, then month-to-month coverage with no long-term contract.",
-      url: `${SITE.url}/pilot`,
-      availability: "https://schema.org/InStock",
-      areaServed: "Worldwide",
-      seller: { "@id": `${SITE.url}/#organization` },
+      ? audienceTypes.map((t) => ({ "@type": "BusinessAudience", audienceType: t }))
+      : [{ "@type": "BusinessAudience", audienceType: "Independent hotels" }],
+    availableChannel: {
+      "@type": "ServiceChannel",
+      name: "Book a Coverage Review",
+      serviceUrl: `${SITE.url}/contact`,
     },
+    ...(isRelatedTo && isRelatedTo.length > 0 && { isRelatedTo }),
+    ...(subjectOf && subjectOf.length > 0 && { subjectOf }),
+    mainEntityOfPage: { "@id": `${SITE.url}${path}#webpage` },
   };
 }
 
@@ -245,7 +269,7 @@ export function webPageSchema({
   path: string;
   primaryImageUrl?: string;
   primaryImageAlt?: string;
-  mentions?: { "@type": string; name?: string; "@id"?: string }[];
+  mentions?: { "@type": string; name?: string; "@id"?: string; sameAs?: string }[];
   about?: Record<string, string>;
   audienceTypes?: string[];
   mainEntityId?: string;
@@ -273,10 +297,6 @@ export function webPageSchema({
       audience: audienceTypes.map((t) => ({ "@type": "Audience", audienceType: t })),
     }),
     ...(mainEntityId && { mainEntity: { "@id": mainEntityId } }),
-    speakable: {
-      "@type": "SpeakableSpecification",
-      cssSelector: ["h1", "h2", ".answer-block"],
-    },
   };
 }
 
@@ -382,9 +402,49 @@ export function articleSchema({
     ...(audience && audience.length > 0 && { audience: audience.map((a) => ({ "@type": "Audience", audienceType: a.audienceType })) }),
     ...(mentions && { mentions: mentions.map((m) => ({ "@type": m.type, name: m.name, ...(m.id && { "@id": m.id }) })) }),
     ...(citation && citation.length > 0 && { citation: citation.map((c) => ({ "@type": "WebPage", name: c.name, url: c.url })) }),
-    speakable: {
-      "@type": "SpeakableSpecification",
-      cssSelector: ["h1", "h2", ".answer-block"],
+  };
+}
+
+/** CollectionPage + ItemList schema for the /services hub. */
+export function servicesHubSchema() {
+  const services = [
+    { name: "Hotel Answering Service", path: "/services/hotel-answering-service" },
+    { name: "Vacation Rental Answering Service", path: "/services/vacation-rental-answering-service" },
+    { name: "Central Reservations Desk", path: "/services/central-reservations" },
+    { name: "After-Hours Hotel Front Desk Support", path: "/services/after-hours-support" },
+    { name: "Hotel Reservation Support", path: "/services/reservation-support" },
+    { name: "Hotel Guest Messaging", path: "/services/guest-messaging" },
+    { name: "OTA Inbox Management", path: "/services/ota-inbox-management" },
+    { name: "Airbnb Guest Services", path: "/services/airbnb-guest-support" },
+    { name: "Hotel Night Audit Support and Back Office Operations", path: "/services/back-office-operations" },
+  ];
+  return {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": `${SITE.url}/services#webpage`,
+    url: `${SITE.url}/services`,
+    name: "Services",
+    description: "Live hospitality coverage for hotels, hotel groups and vacation rental operators. Reservation calls, OTA inboxes and guest communication handled by trained people.",
+    inLanguage: "en",
+    isPartOf: { "@id": `${SITE.url}/#website` },
+    about: { "@id": `${SITE.url}/#organization` },
+    breadcrumb: {
+      "@type": "BreadcrumbList",
+      "@id": `${SITE.url}/services#breadcrumb`,
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: `${SITE.url}/` },
+        { "@type": "ListItem", position: 2, name: "Services" },
+      ],
+    },
+    mainEntity: {
+      "@type": "ItemList",
+      numberOfItems: services.length,
+      itemListElement: services.map((s, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        url: `${SITE.url}${s.path}`,
+        name: s.name,
+      })),
     },
   };
 }

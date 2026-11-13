@@ -6,7 +6,7 @@ import { ButtonLink } from "@/components/site/button-link";
 import { Section, SectionHeading } from "@/components/site/section";
 import { PlatformLogos } from "@/components/site/platform-logos";
 import { CtaSection } from "@/components/site/cta-section";
-import { buildMetadata, faqSchema, webPageSchema } from "@/lib/seo";
+import { buildMetadata, faqSchema, webPageSchema, organizationSchema, websiteSchema } from "@/lib/seo";
 import { JsonLd } from "@/components/site/json-ld";
 import { FaqAccordion } from "@/components/site/faq-accordion";
 
@@ -49,36 +49,21 @@ export default function HomePage() {
     <>
       <JsonLd
         data={[
+          organizationSchema(),
+          websiteSchema(),
           webPageSchema({
-            name: "Hospitality Call Center & Guest Support Operations | Guest Squad",
+            name: "Hospitality Call Center & Guest Support Operations",
             description: "Hospitality call center for hotels, hotel groups and vacation rentals. Guest support operations: calls, reservations, messages and OTA inboxes, 24/7.",
-            path: "",
-            primaryImageUrl: "https://guestsquad.com/brand-assets/guestsquad-favicon-official.svg",
-            primaryImageAlt: "Guest Squad logo",
+            path: "/",
+            primaryImageUrl: "https://guestsquad.com/brand-assets/og-image.jpg",
+            primaryImageAlt: "Guest Squad — hospitality call center",
             about: { "@id": "https://guestsquad.com/#organization" },
             mainEntityId: "https://guestsquad.com/#organization",
-            audienceTypes: ["Independent Hotel","Boutique Hotel","Inn","Resort","Serviced Apartment","Aparthotel","Airbnb Host","Vrbo Host","Short-Term Rental Operator","Vacation Rental Operator","Vacation Rental Property Manager"],
             mentions: [
-              { "@type": "Organization", "name": "Booking.com" },
-              { "@type": "Organization", "name": "Expedia" },
-              { "@type": "Organization", "name": "Airbnb" },
+              { "@type": "Organization", "name": "Booking.com", "sameAs": "https://en.wikipedia.org/wiki/Booking.com" },
+              { "@type": "Organization", "name": "Expedia", "sameAs": "https://en.wikipedia.org/wiki/Expedia_Group" },
+              { "@type": "Organization", "name": "Airbnb", "sameAs": "https://en.wikipedia.org/wiki/Airbnb" },
               { "@type": "Organization", "name": "Vrbo" },
-              { "@type": "Organization", "name": "Hotels.com" },
-              { "@type": "Thing", "name": "Cloudbeds" },
-              { "@type": "Thing", "name": "Mews" },
-              { "@type": "Thing", "name": "Opera PMS" },
-              { "@type": "Thing", "name": "Guesty" },
-              { "@type": "Accommodation", "name": "Hotel" },
-              { "@type": "Accommodation", "name": "Boutique Hotel" },
-              { "@type": "Accommodation", "name": "Independent Hotel" },
-              { "@type": "Accommodation", "name": "Serviced Apartment" },
-              { "@type": "Accommodation", "name": "Vacation Rental" },
-              { "@type": "Accommodation", "name": "Resort" },
-              { "@type": "Thing", "name": "Hotel Answering Service" },
-              { "@type": "Thing", "name": "Hotel Guest Operations" },
-              { "@type": "Thing", "name": "OTA Inbox Management" },
-              { "@type": "Thing", "name": "After-Hours Hotel Support" },
-              { "@type": "Thing", "name": "Hotel Front Desk Coverage" },
             ],
           }),
           faqSchema(HOME_FAQS),

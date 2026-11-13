@@ -25,6 +25,7 @@ export const metadata: Metadata = buildMetadata({
   description:
     "Start with a 2-week pilot before monthly coverage. Guest Squad reviews your call gaps, OTA inboxes, and after-hours needs and recommends a plan that fits.",
   path: "/pilot",
+  noindex: true,
 });
 
 const REASSURANCE_POINTS = [

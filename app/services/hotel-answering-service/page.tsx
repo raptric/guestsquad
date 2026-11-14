@@ -190,6 +190,9 @@ export default function HotelAnsweringServicePage() {
             <p className="mt-4 max-w-lg text-base leading-relaxed text-ink-soft">
               Hospitality-trained people answer your guest and booking calls using your approved property information, and pass anything that needs your team to the right contact. Coverage runs on your existing number.
             </p>
+            <p className="mt-4 max-w-lg text-base leading-relaxed text-ink-soft">
+              Guest messaging and OTA inbox support are included, keeping your hotel&apos;s guest communications covered beyond the phone.
+            </p>
             <p className="mt-3 text-sm text-ink-muted">
               For independent hotels, boutique properties, B&amp;Bs, inns, lodges and serviced apartments.
             </p>

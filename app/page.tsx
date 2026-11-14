@@ -266,7 +266,7 @@ export default function HomePage() {
               {[
                 {
                   label: "Your systems.",
-                  body: "Agents work in your PMS, inbox and booking tools, so there is no parallel platform or duplicate data entry.",
+                  body: "Our team works within your PMS, guest messaging and booking systems, following your property's procedures and access permissions.",
                 },
                 {
                   label: "Your procedures.",

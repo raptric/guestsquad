@@ -462,7 +462,7 @@ export default function CentralReservationsPage() {
               <p className="text-xs font-semibold uppercase tracking-[0.12em] text-ink-muted mb-3">What&apos;s included</p>
               <ul className="flex flex-col gap-2">
                 {[
-                  "Reservation inquiry handling across two properties",
+                  "Reservation inquiry handling across your participating properties",
                   "After-hours coverage",
                   "Rate and availability information using your approved data",
                   "Direct booking assistance",

@@ -217,7 +217,7 @@ export default function SampleWeeklyReportPage() {
         {[
           { label: "Booking inquiries handled", value: "14" },
           { label: "Reservations confirmed", value: "9" },
-          { label: "Est. booking value recovered", value: "$6,300" },
+          { label: "Est. confirmed booking value", value: "$6,300" },
         ].map((s) => (
           <div key={s.label} className="rounded-lg border border-line bg-surface p-4 text-center">
             <p className="text-xl font-semibold text-gold-dark">{s.value}</p>

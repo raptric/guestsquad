@@ -19,12 +19,12 @@ const LAST_MODIFIED: Record<string, string> = {
   // Service pages
   "/services/hotel-answering-service": "2026-11-14",
   "/services/reservation-support": "2026-11-14",
-  "/services/guest-messaging": "2026-11-14",
-  "/services/central-reservations": "2026-11-14",
+  "/services/guest-messaging": "2026-11-15",
+  "/services/central-reservations": "2026-11-15",
   "/services/ota-inbox-management": "2026-11-14",
   "/services/after-hours-support": "2026-11-14",
   "/services/back-office-operations": "2026-11-14",
-  "/services/airbnb-guest-support": "2026-11-14",
+  "/services/airbnb-guest-support": "2026-11-15",
   "/services/vacation-rental-answering-service": "2026-11-14",
   // Resource articles — updated with insight links and schema today
   "/resources/hotel-answering-service-vs-ai-voice": "2026-11-14",

@@ -135,12 +135,22 @@ export function ComparisonArticle({ data }: { data: ResourceArticleData }) {
                 {data.postTableCta.primaryLabel}
               </Link>
               {data.postTableCta.secondaryLabel && data.postTableCta.secondaryHref && (
-                <Link
-                  href={data.postTableCta.secondaryHref}
-                  className="inline-flex items-center justify-center rounded-md border border-paper/25 px-6 py-3 text-sm font-medium text-paper hover:border-paper/60"
-                >
-                  {data.postTableCta.secondaryLabel}
-                </Link>
+                data.postTableCta.secondaryHref === "/contact" ? (
+                  <CoverageReviewButton
+                    variant="outline"
+                    ctaLocation="post_table_cta"
+                    className="border-paper/25 text-paper hover:border-paper/60 hover:bg-transparent hover:text-paper"
+                  >
+                    {data.postTableCta.secondaryLabel}
+                  </CoverageReviewButton>
+                ) : (
+                  <Link
+                    href={data.postTableCta.secondaryHref}
+                    className="inline-flex items-center justify-center rounded-md border border-paper/25 px-6 py-3 text-sm font-medium text-paper hover:border-paper/60"
+                  >
+                    {data.postTableCta.secondaryLabel}
+                  </Link>
+                )
               )}
             </div>
           </div>

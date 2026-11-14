@@ -565,7 +565,7 @@ export default function HotelAnsweringServicePage() {
               },
               {
                 label: "The result",
-                body: "Guests reach a live person at any hour. Access issues are resolved on the call where possible, and anything requiring on-site attention is escalated immediately with full context.",
+                body: "Guests reach a live person on every call during agreed coverage hours. Late check-in and access issues that previously went to voicemail are now resolved before the guest reaches the door. Access code troubleshooting is handled on the call, with no wait time for the guest.",
               },
             ].map((item) => (
               <div key={item.label} className="border-t border-line pt-5">

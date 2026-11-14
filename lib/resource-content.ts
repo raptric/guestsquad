@@ -382,7 +382,7 @@ export const callCenterComparison: ResourceArticleData = {
     "How are urgent escalations handled, and what is the expected response time?",
   ],
   verdictClosure:
-    "A provider that can answer all of them directly, with specifics about your property rather than generalities, is worth evaluating further. Managing multiple hotels? Guest Squad also provides a [hotel reservation call center](/services/central-reservations) for hotel groups that need centralised booking inquiries and reservation support across properties. If OTA inboxes are part of your coverage gap, the [Booking.com and Expedia message support checklist](/resources/booking-com-message-support) is a practical starting point. If you are ready to see how a 24/7 hotel answering service works in practice, the [Guest Squad Hotel Answering Service](/services/hotel-answering-service) page covers what is included and how to start.",
+    "A provider that can answer these questions clearly, with specific details about your property, is worth evaluating further.\n\nManaging multiple hotels? Guest Squad also provides a [hotel reservation call center](/services/central-reservations) for hotel groups that need centralised booking inquiries and reservation support across properties.\n\nIf OTA inboxes are part of your coverage gap, the [Booking.com and Expedia message support checklist](/resources/booking-com-message-support) is a practical starting point. If you are ready to see how a 24/7 hotel answering service works in practice, the [Guest Squad Hotel Answering Service](/services/hotel-answering-service) page covers what is included and how to start.",
   inlineAsset: {
     heading: "Not sure where your coverage gaps actually are? The Coverage Gap Assessment identifies your unprotected hours, channels, and escalation blind spots.",
     asset: "coverage-gap-assessment",
@@ -407,8 +407,8 @@ export const callCenterComparison: ResourceArticleData = {
       a: "Yes. Some properties start by routing only specific overflow scenarios (after-hours, peak check-in/out) to Guest Squad while keeping existing arrangements for everything else.",
     },
     {
-      q: "How fast can we switch from our current call center?",
-      a: "Onboarding covers your property brief, system access, call routing and escalation procedures. The timeline depends on your property's requirements and how quickly access and contacts are confirmed.",
+      q: "Can we switch from our current call center without disrupting coverage?",
+      a: "Yes. You can transition gradually by routing selected calls to the new provider while keeping your existing arrangement in place. Confirm call forwarding, responsibilities and escalation contacts before making the switch.",
     },
     {
       q: "What is better for a boutique hotel — a hotel answering service or a call center?",
@@ -433,10 +433,6 @@ export const callCenterComparison: ResourceArticleData = {
     {
       q: "Is a hospitality call center the same as a hotel answering service?",
       a: "Both terms are used interchangeably. A hospitality call center may support one property or several. The more useful question is whether the team is briefed on your property, your rates and your procedures — not what label the provider uses.",
-    },
-    {
-      q: "What should I look for in a hospitality call center for a single hotel?",
-      a: "Property-specific training, not just industry-general call handling. Ask whether agents know your actual rates and room types, whether they can access your PMS, and whether escalations reach the right person on your team -- not just a shared inbox.",
     },
   ],
   schemaAbout: { "@id": "https://guestsquad.com/services/hotel-answering-service#service" },

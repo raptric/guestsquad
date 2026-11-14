@@ -170,14 +170,14 @@ export function ComparisonArticle({ data }: { data: ResourceArticleData }) {
                 ))}
               </ul>
             )}
-            {data.verdictClosure && (
-              <p className="mb-5 text-sm leading-relaxed text-ink-soft">
-                {data.verdictClosure.split(/(\[[^\]]+\]\([^)]+\))/).map((part, j) => {
+            {data.verdictClosure && data.verdictClosure.split("\n\n").map((para, pi) => (
+              <p key={pi} className="mb-5 text-sm leading-relaxed text-ink-soft">
+                {para.split(/(\[[^\]]+\]\([^)]+\))/).map((part, j) => {
                   const m = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
                   return m ? <Link key={j} href={m[2]} className="text-gold-dark underline underline-offset-4 hover:text-gold">{m[1]}</Link> : part;
                 })}
               </p>
-            )}
+            ))}
           </div>
         </div>
       </Section>

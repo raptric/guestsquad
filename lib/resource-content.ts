@@ -317,44 +317,44 @@ export const callCenterComparison: ResourceArticleData = {
   rows: [
     {
       feature: "Agent training",
-      a: "Hospitality-trained, briefed specifically on your property's rates, policies, and tone before going live.",
+      a: "May provide hospitality-trained agents briefed on the hotel's rates, policies and guest-service procedures.",
       b: "Training and property-specific knowledge vary by provider. Some operate shared generalist teams, while others provide dedicated hospitality support.",
       c: "Agents are briefed on your property's room types, approved rates, policies, guest communication standards and escalation contacts before coverage begins.",
     },
     {
       feature: "Agent consistency",
-      a: "The same trained team becomes familiar with your property over time.",
-      b: "Calls are typically picked up by whichever agent in the shared pool is available, a different person each time.",
+      a: "May use dedicated or shared agents trained on the property's procedures.",
+      b: "May use shared agent pools or dedicated teams, depending on the staffing arrangement.",
       c: "Our team follows your property's documented procedures and shared handover notes across shifts, helping maintain consistent guest communication.",
     },
     {
       feature: "Familiarity with PMS / OTA tools",
-      a: "Comfortable operating inside your actual PMS and OTA accounts, not just taking a message.",
-      b: "Often limited to scripted call handling and message-taking, without working inside your systems.",
+      a: "May support reservation inquiries and approved actions within hotel systems when access and training are provided.",
+      b: "PMS access and reservation-handling capabilities depend on the provider's systems, training and permissions.",
       c: "Agents handle reservation inquiries and permitted booking actions using approved PMS access. Requests requiring management approval or on-site assistance are documented or escalated according to the property's procedures.",
     },
     {
       feature: "OTA messages",
       a: "Covered by hotel answering services that include OTA inbox management in their scope.",
-      b: "Not typically covered; most generic call centers handle phone only.",
+      b: "OTA inbox management may be available depending on the provider's service scope and platform access.",
       c: "Guest messaging and OTA inbox support are included in Guest Squad's Hotel Answering Service, using approved channels such as Booking.com and Expedia within the agreed coverage hours and workload allowance.",
     },
     {
       feature: "Reporting",
-      a: "Calls logged with context, summarized into a report that tells you what actually happened.",
-      b: "Typically raw call logs only, with little operational insight into patterns or recovered revenue.",
+      a: "May provide call records, outcomes and follow-up summaries, depending on the reporting arrangement.",
+      b: "Reporting may include call logs, outcomes and performance summaries, depending on the provider.",
       c: "Call activity, outcomes, outstanding requests and escalations are documented and shared according to the agreed reporting arrangements.",
     },
     {
       feature: "Escalation accuracy",
-      a: "Knows what's genuinely urgent for your specific property and routes accordingly.",
-      b: "Follows generic escalation rules not tailored to your operation.",
+      a: "May follow property-specific escalation rules and designated contacts when configured.",
+      b: "Can follow customized escalation procedures when included in the service agreement.",
       c: "Urgent requests follow your property's approved escalation contacts and fallback procedures. Issues requiring physical assistance remain with your on-site team.",
     },
 
     {
       feature: "Speed to launch",
-      a: "Typically one to two weeks depending on onboarding complexity.",
+      a: "Onboarding time depends on property briefing, staffing, system access and call-routing requirements.",
       b: "Implementation time depends on the provider's staffing arrangements, integrations and onboarding requirements.",
       c: "Coverage begins once the property brief, approved system access, call routing and escalation procedures are confirmed. The start date depends on the property's requirements.",
     },
@@ -416,7 +416,7 @@ export const callCenterComparison: ResourceArticleData = {
     },
     {
       q: "Can a hotel call center handle OTA messages from Booking.com or Expedia?",
-      a: "Most generic call centers cover phone only. OTA inbox management (responding inside Booking.com's Message Center, Expedia's Partner Central, or Airbnb's messaging tools) requires platform access and familiarity with each OTA's workflow. It's worth confirming explicitly whether any provider you evaluate covers OTA inboxes as part of their scope. Guest messaging and OTA inbox support are included in Guest Squad's Hotel Answering Service. See the [Booking.com message support checklist](/resources/booking-com-message-support) for the specific standards your OTA inboxes should be meeting.",
+      a: "OTA inbox management is not included in every call center's service offering. Availability depends on the provider's supported platforms, staff training and agreed responsibilities. OTA inbox management (responding inside Booking.com's Message Center, Expedia's Partner Central, or Airbnb's messaging tools) requires platform access and familiarity with each OTA's workflow. It's worth confirming explicitly whether any provider you evaluate covers OTA inboxes as part of their scope. Guest messaging and OTA inbox support are included in Guest Squad's Hotel Answering Service. See the [Booking.com message support checklist](/resources/booking-com-message-support) for the specific standards your OTA inboxes should be meeting.",
     },
     {
       q: "How quickly can Guest Squad start hotel answering service coverage?",

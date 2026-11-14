@@ -28,7 +28,7 @@ const LAST_MODIFIED: Record<string, string> = {
   "/services/vacation-rental-answering-service": "2026-11-14",
   // Resource articles — updated with insight links and schema today
   "/resources/hotel-answering-service-vs-ai-voice": "2026-11-14",
-  "/resources/hotel-answering-service-vs-call-center": "2026-11-14",
+  "/resources/hotel-answering-service-vs-call-center": "2026-11-15",
   "/resources/hotel-answering-service-cost": "2026-11-14",
   "/resources/after-hours-hotel-support-checklist": "2026-11-14",
   "/resources/hotel-front-desk-overflow-support": "2026-11-14",

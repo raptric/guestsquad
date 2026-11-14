@@ -292,7 +292,9 @@ export const callCenterComparison: ResourceArticleData = {
   metaDescription:
     "Compare a hotel answering service with a call center: training, property knowledge, OTA coverage, reporting and cost. See which fits your hotel.",
   datePublished: "2026-06-26T00:00:00+00:00",
-  dateModified: "2026-11-14T00:00:00+00:00",
+  dateModified: "2026-11-15T00:00:00+00:00",
+  byline: "By Khadija Khalid, Co-founder · Updated 15 November 2026",
+  author: { "@type": "Person", "@id": "https://guestsquad.com/about#khadija-khalid", name: "Khadija Khalid", jobTitle: "Co-founder", url: "https://guestsquad.com/about" },
   intro: [
     "Hotels exploring outsourced phone support often compare answering services with traditional call centers. Both can handle incoming calls, but their staffing models, training, system access and responsibilities may differ.",
     "A hotel answering service typically focuses on guest calls, reservation inquiries and front desk coverage. A call center may provide similar support alongside broader customer service or centralized operations.",
@@ -311,8 +313,8 @@ export const callCenterComparison: ResourceArticleData = {
     body: "If your hotel needs live guest call answering, reservation inquiry handling, after-hours coverage or front desk overflow, explore how Guest Squad works within your property's existing systems and procedures. Guest messaging and OTA inbox support are included in our Hotel Answering Service.",
     primaryLabel: "See Hotel Answering Service",
     primaryHref: "/services/hotel-answering-service",
-    secondaryLabel: "Request Pilot Review",
-    secondaryHref: "/pilot",
+    secondaryLabel: "Request Coverage Review",
+    secondaryHref: "/contact",
   },
   columnA: "Hotel Answering Service",
   columnB: "Generic Call Center",
@@ -382,7 +384,7 @@ export const callCenterComparison: ResourceArticleData = {
     "Do you handle OTA inboxes (Booking.com, Expedia, Airbnb) or only phone calls?",
     "Can agents manage guest texts and WhatsApp messages, not just inbound calls?",
     "What call activity, outcomes and escalation reporting will we receive?",
-    "Can we start with a defined pilot, and what are the ongoing agreement and cancellation terms?",
+    "Can we start with a defined trial period, and what are the ongoing agreement and cancellation terms?",
     "How are urgent escalations handled, and what is the expected response time?",
   ],
   verdictClosure:
@@ -400,11 +402,11 @@ export const callCenterComparison: ResourceArticleData = {
     },
     {
       q: "Will agents actually know our rates and policies, or are they reading a generic script?",
-      a: "With Guest Squad, every account gets a property-specific brief covering rates, room types, policies, and tone before a single call is answered.",
+      a: "With Guest Squad, each property receives a brief covering room types, approved rates, policies and tone before coverage begins.",
     },
     {
       q: "Do you require a long-term contract like some call centers do?",
-      a: "Guest Squad offers a paid pilot with the duration, coverage, scope and fee agreed before launch. There is no automatic continuation after the pilot. If you decide to continue, ongoing coverage is arranged under a separate agreement with the applicable payment and cancellation terms.",
+      a: "Guest Squad agrees the coverage scope, duration and fee before service begins. There is no automatic continuation. If you decide to continue, ongoing coverage is arranged under a separate agreement with the applicable payment and cancellation terms.",
     },
     {
       q: "We already use a call center for overflow. Can you work alongside it?",

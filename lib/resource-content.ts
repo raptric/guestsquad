@@ -458,7 +458,7 @@ export type GuideArticleData = {
   metaDescription?: string;
   eyebrow?: string;
   byline?: string;
-  author?: { "@type": string; name: string; jobTitle?: string };
+  author?: { "@type": string; "@id"?: string; name: string; jobTitle?: string; url?: string };
   datePublished: string;
   dateModified?: string;
   intro: string[];

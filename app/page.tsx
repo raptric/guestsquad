@@ -27,14 +27,6 @@ const HOME_FAQS = [
     a: "Before any agent handles a guest interaction, we run a property briefing covering your rates, policies, escalation rules, PMS access and how you talk to guests. Agents follow your procedures, not a generic script. Coverage starts once your brief, system access and escalation contacts are agreed.",
   },
   {
-    q: "What happens if a guest issue needs someone on-site?",
-    a: "Every property brief includes an escalation path. If something needs hands-on attention, the agent contacts the right person at your property the way you have specified. We do not make on-site visits.",
-  },
-  {
-    q: "Can we start with one channel and expand later?",
-    a: "Yes. Many properties start with after-hours phone coverage or OTA inbox management, then add channels or extend hours. You do not have to cover everything on day one.",
-  },
-  {
     q: "Is there a contract or minimum commitment?",
     a: "Plans are month-to-month with 30 days' notice to cancel. Setup fees depend on the property and are confirmed in the scoped proposal.",
   },

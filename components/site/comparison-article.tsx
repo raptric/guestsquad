@@ -8,6 +8,7 @@ import { ComparisonTable } from "@/components/site/comparison-table";
 import { CtaSection } from "@/components/site/cta-section";
 import { JsonLd } from "@/components/site/json-ld";
 import { TrackedLink } from "@/components/site/tracked-link";
+import { CoverageReviewButton } from "@/components/site/coverage-review-button";
 
 const DownloadGate = dynamic(() => import("@/components/site/download-gate").then(m => m.DownloadGate), { ssr: false });
 import { FaqAccordion } from "@/components/site/faq-accordion";
@@ -197,54 +198,67 @@ export function ComparisonArticle({ data }: { data: ResourceArticleData }) {
         </div>
       )}
 
-      <Section className="bg-[#F7F5F2]">
-        <SectionHeading eyebrow="Questions" title="Common questions." />
-        <div className="mt-8">
-          <FaqAccordion items={data.faqs} />
-        </div>
-      </Section>
+      <Section surface>
+        <div className="grid gap-10 lg:grid-cols-[1fr_320px] lg:items-start">
+          {/* FAQ left column */}
+          <div className="rounded-lg border border-line bg-paper p-7">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-gold-dark">Questions</p>
+            <h2 className="text-2xl font-medium text-ink">Common questions.</h2>
+            <div className="mt-6">
+              <FaqAccordion items={data.faqs} defaultOpenCount={2} />
+            </div>
+          </div>
 
-      <Section>
-        <SectionHeading eyebrow="Explore More" title="Related reading and services." />
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {relatedResources.map((r) => (
-            <Link
-              key={r.slug}
-              href={`/resources/${r.slug}`}
-              className="group flex flex-col justify-between rounded-lg border border-line bg-paper p-6 transition-colors hover:border-gold/50"
-            >
-              <div>
-                <span className="text-xs font-semibold uppercase tracking-wider text-ink-muted">
-                  {r.type === "comparison" ? "Comparison" : "Resource"}
-                </span>
-                <h3 className="mt-2 text-sm font-medium text-ink">{r.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-ink-soft">{r.description}</p>
+          {/* Sticky sidebar right column */}
+          <div className="flex flex-col gap-6 lg:sticky lg:top-8">
+            <div className="rounded-lg border border-line bg-paper p-6">
+              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-gold-dark">Next Step</p>
+              <p className="mb-4 text-sm leading-relaxed text-ink-soft">
+                See how coverage works for your property before requesting a quote.
+              </p>
+              <CoverageReviewButton className="w-full" />
+            </div>
+
+            {relatedResources.length > 0 && (
+              <div className="rounded-lg border border-line bg-paper p-6">
+                <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-gold-dark">Related Guides</p>
+                <ul className="space-y-3">
+                  {relatedResources.map((r) => (
+                    <li key={r.slug}>
+                      <Link
+                        href={`/resources/${r.slug}`}
+                        className="group flex items-start gap-2 text-sm leading-snug text-ink-soft hover:text-ink"
+                      >
+                        <ArrowUpRight className="mt-0.5 h-3.5 w-3.5 shrink-0 text-gold-dark" />
+                        {r.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <div className="mt-4 flex items-center gap-1.5 text-xs font-medium text-ink-soft group-hover:text-gold-dark">
-                {r.type === "comparison" ? "Read comparison" : "Read guide"}
-                <ArrowUpRight className="h-3.5 w-3.5" />
+            )}
+
+            {relatedServices.length > 0 && (
+              <div className="rounded-lg border border-line bg-paper p-6">
+                <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-gold-dark">Related Services</p>
+                <ul className="space-y-3">
+                  {relatedServices.map((s) => (
+                    <li key={s.slug}>
+                      <TrackedLink
+                        href={`/services/${s.slug}`}
+                        eventName="resource_to_service_click"
+                        eventParams={{ resource_name: data.slug, service_name: s.slug }}
+                        className="group flex items-start gap-2 text-sm leading-snug text-ink-soft hover:text-ink"
+                      >
+                        <ArrowUpRight className="mt-0.5 h-3.5 w-3.5 shrink-0 text-gold-dark" />
+                        {s.title}
+                      </TrackedLink>
+                    </li>
+                  ))}
+                </ul>
               </div>
-            </Link>
-          ))}
-          {relatedServices.map((s) => (
-            <TrackedLink
-              key={s.slug}
-              href={`/services/${s.slug}`}
-              eventName="resource_to_service_click"
-              eventParams={{ resource_name: data.slug, service_name: s.slug }}
-              className="group flex flex-col justify-between rounded-lg border border-line bg-paper p-6 transition-colors hover:border-gold/50"
-            >
-              <div>
-                <span className="text-xs font-semibold uppercase tracking-wider text-ink-muted">Service</span>
-                <h3 className="mt-2 text-sm font-medium text-ink">{s.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-ink-soft">{s.description}</p>
-              </div>
-              <div className="mt-4 flex items-center gap-1.5 text-xs font-medium text-ink-soft group-hover:text-gold-dark">
-                View service
-                <ArrowUpRight className="h-3.5 w-3.5" />
-              </div>
-            </TrackedLink>
-          ))}
+            )}
+          </div>
         </div>
       </Section>
 

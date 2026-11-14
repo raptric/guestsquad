@@ -536,6 +536,47 @@ export default function HotelAnsweringServicePage() {
         </div>
       </Section>
 
+      {/* CASE EXAMPLE */}
+      <Section surface>
+        <div className="mx-auto max-w-2xl">
+          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-gold-dark mb-4">In Practice</p>
+          <h2 className="text-lg font-medium text-ink">How Guest Squad Supports Contactless Properties and Independent Hotels</h2>
+          <div className="mt-6 flex flex-col gap-5">
+            {[
+              {
+                label: "The property",
+                body: "A contactless property and independent hotel operator based in the United States.",
+              },
+              {
+                label: "The coverage gap",
+                body: "With no on-site reception after hours, guest calls, access questions and OTA messages had no live coverage. Guests were reaching voicemail or waiting until the following morning for a reply.",
+              },
+              {
+                label: "What Guest Squad handles",
+                body: "Live guest calls, Booking.com and direct message replies, check-in coordination and late-arrival support across both properties. Maintenance issues and anything requiring a physical response are escalated to the operator's on-call contact.",
+              },
+              {
+                label: "How it works",
+                body: "Guest Squad was briefed on access procedures, house rules and escalation contacts for each property before going live. Agents answer in the property's name and follow the agreed instructions.",
+              },
+              {
+                label: "Reporting",
+                body: "Each shift ends with a handover covering calls taken, messages handled and anything open for the operator to follow up.",
+              },
+              {
+                label: "The result",
+                body: "Guests reach a live person at any hour. Access issues are resolved on the call where possible, and anything requiring on-site attention is escalated immediately with full context.",
+              },
+            ].map((item) => (
+              <div key={item.label} className="border-t border-line pt-5">
+                <p className="text-xs font-semibold uppercase tracking-[0.1em] text-ink-muted mb-1">{item.label}</p>
+                <p className="text-sm leading-relaxed text-ink-soft">{item.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
+
       {/* TESTIMONIALS */}
       <TestimonialsBlock />
 

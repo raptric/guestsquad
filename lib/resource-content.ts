@@ -165,7 +165,7 @@ export const aiVoiceComparison: ResourceArticleData = {
     },
     {
       feature: "Guest tone and emotional register",
-      a: "Reads the caller's mood and adjusts — slows down for a confused guest, acknowledges frustration before explaining a policy, takes a different tone with a repeat guest.",
+      a: "Trained agents can adapt their tone and responses to the conversation, acknowledge guest concerns and follow approved procedures for sensitive situations.",
       b: "Modern conversational AI can adjust its responses based on context and caller language, although its handling of sensitive or complex conversations depends on system capabilities and configuration.",
       c: "Test complaints, frustrated callers and sensitive guest requests. Evaluate clarity, appropriateness, response accuracy and access to human assistance when needed.",
     },
@@ -215,10 +215,10 @@ export const aiVoiceComparison: ResourceArticleData = {
   ],
   verdictChecklist: [
     "Can you demonstrate a live scenario involving a rate exception, an in-stay complaint, or a last-minute group modification — not a directions or hours-of-operation query?",
-    "What percentage of calls in your hotel deployments resolve without a human transfer?",
+    "What percentage of calls are successfully resolved without human assistance, and how do you measure resolution?",
     "When the AI cannot resolve a call, where does it go — and what happens if that transfer point is unavailable after hours?",
     "Does the pricing include PMS integration and ongoing prompt management, or are those billed separately?",
-    "What is the actual median go-live time for an independent hotel, not an enterprise chain?",
+    "What is your typical go-live timeline for a property with our systems and coverage requirements?",
     "Does the solution cover OTA message inboxes, or phone calls only?",
   ],
   verdictClosure:

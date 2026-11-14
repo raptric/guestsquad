@@ -484,7 +484,7 @@ export const answeringServiceCostGuide: GuideArticleData = {
   datePublished: "2026-08-06T00:00:00+00:00",
   dateModified: "2026-11-14T00:00:00+00:00",
   byline: "By Khadija Khalid, Co-founder · Updated 14 November 2026",
-  author: { "@type": "Person", name: "Khadija Khalid", jobTitle: "Co-founder" },
+  author: { "@type": "Person", "@id": "https://guestsquad.com/about#khadija-khalid", name: "Khadija Khalid", jobTitle: "Co-founder", url: "https://guestsquad.com/about" },
   intro: [
     "Published prices for live answering services in the US run from $49 a month (pay as you go, with every minute billed) to $1,725 a month for a 500-minute plan. Per-minute rates run from $1.28 to $2.99, and per-call plans charge $8.50 to $11.50 for each call over the allowance. These figures come from five providers' own pricing pages, read on 13 November 2026, in US dollars.",
     "What a hotel actually pays depends on the pricing model, the hours you need covered, your call and message volume, and what agents are allowed to do. A service that takes messages overnight is priced very differently from one that quotes your rates, makes bookings and answers your OTA inboxes. This guide explains each model, what pushes the price up or down, and the costs that tend to appear after you sign, so you can compare quotes on the same workload.",
@@ -602,7 +602,7 @@ export const afterHoursChecklistGuide: GuideArticleData = {
   datePublished: "2026-06-29T00:00:00+00:00",
   dateModified: "2026-11-14T00:00:00+00:00",
   byline: "By Khadija Khalid, Co-founder · Updated 14 November 2026",
-  author: { "@type": "Person", name: "Khadija Khalid", jobTitle: "Co-founder" },
+  author: { "@type": "Person", "@id": "https://guestsquad.com/about#khadija-khalid", name: "Khadija Khalid", jobTitle: "Co-founder", url: "https://guestsquad.com/about" },
   intro: [
     "\"After-hours coverage\" means different things to different hotels. For some it simply means the phone gets answered after 11pm. For others it includes night audit calls, emergency escalation and a handover report for the morning team. This checklist sets out what a complete setup covers, so you can audit yours before you change anything.",
   ],
@@ -712,7 +712,7 @@ export const overflowSupportGuide: GuideArticleData = {
   datePublished: "2026-06-29T00:00:00+00:00",
   dateModified: "2026-11-14T00:00:00+00:00",
   byline: "By Khadija Khalid, Co-founder · Updated 14 November 2026",
-  author: { "@type": "Person", name: "Khadija Khalid", jobTitle: "Co-founder" },
+  author: { "@type": "Person", "@id": "https://guestsquad.com/about#khadija-khalid", name: "Khadija Khalid", jobTitle: "Co-founder", url: "https://guestsquad.com/about" },
   intro: [
     "Hotel front desk overflow support is call coverage that takes over only when your team can't get to the phone. It doesn't replace your front desk. Your staff answer as normal, and the overflow team picks up calls that would otherwise ring out or go to voicemail. This guide covers when overflow makes sense, how it works day to day, and what to keep in-house.",
   ],
@@ -825,7 +825,7 @@ export const otaInboxChecklistGuide: GuideArticleData = {
   datePublished: "2026-06-29T00:00:00+00:00",
   dateModified: "2026-11-14T00:00:00+00:00",
   byline: "By Khadija Khalid, Co-founder · Updated 14 November 2026",
-  author: { "@type": "Person", name: "Khadija Khalid", jobTitle: "Co-founder" },
+  author: { "@type": "Person", "@id": "https://guestsquad.com/about#khadija-khalid", name: "Khadija Khalid", jobTitle: "Co-founder", url: "https://guestsquad.com/about" },
   intro: [
     "OTA inboxes are easy to neglect. They don't ring in front of you, so messages can sit for hours. But a slow reply to a pre-booking question often means the guest books somewhere else, and Booking.com and Expedia both track how properties respond to guests. This checklist sets out an internal standard you can run with your own team or hand to a support partner.",
   ],
@@ -932,7 +932,7 @@ export const messagingSopGuide: GuideArticleData = {
     "A hotel guest messaging SOP template: channels, response-time targets, escalation rules, tone and logging, with a sample outline your team can fill in.",
   eyebrow: "Template",
   byline: "By Khadija Khalid, Co-founder · Updated 14 November 2026",
-  author: { "@type": "Person", name: "Khadija Khalid", jobTitle: "Co-founder" },
+  author: { "@type": "Person", "@id": "https://guestsquad.com/about#khadija-khalid", name: "Khadija Khalid", jobTitle: "Co-founder", url: "https://guestsquad.com/about" },
   datePublished: "2026-06-29T00:00:00+00:00",
   dateModified: "2026-11-14T00:00:00+00:00",
   intro: [

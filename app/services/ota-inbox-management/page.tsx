@@ -85,6 +85,8 @@ export default function OtaInboxManagementPage() {
               "OTA inbox management for hotels and vacation rentals: Booking.com, Expedia, Airbnb and Vrbo guest messages answered from your property brief and policies.",
             inLanguage: "en",
             isPartOf: { "@id": `${SITE.url}/#website` },
+            about: { "@id": `${SITE.url}${PATH}#service` },
+            breadcrumb: { "@id": `${SITE.url}${PATH}#breadcrumb` },
             mainEntity: { "@id": `${SITE.url}${PATH}#service` },
           },
           breadcrumbSchema([

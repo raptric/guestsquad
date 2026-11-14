@@ -152,6 +152,7 @@ export default function HotelAnsweringServicePage() {
             "inLanguage": "en",
             "isPartOf": { "@id": `${SITE.url}/#website` },
             "about": { "@id": `${SITE.url}${PATH}#service` },
+            "breadcrumb": { "@id": `${SITE.url}${PATH}#breadcrumb` },
             "mainEntity": { "@id": `${SITE.url}${PATH}#service` },
             ...(d.schemaMentions && d.schemaMentions.length > 0 && {
               "mentions": d.schemaMentions,

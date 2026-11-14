@@ -81,6 +81,8 @@ export default function GuestMessagingPage() {
               "Hotel guest messaging by trained people: pre-arrival, in-stay and late-night guest texts, WhatsApp and email answered from your property brief and rules.",
             inLanguage: "en",
             isPartOf: { "@id": `${SITE.url}/#website` },
+            about: { "@id": `${SITE.url}${PATH}#service` },
+            breadcrumb: { "@id": `${SITE.url}${PATH}#breadcrumb` },
             mainEntity: { "@id": `${SITE.url}${PATH}#service` },
           },
           breadcrumbSchema([

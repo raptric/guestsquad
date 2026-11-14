@@ -290,6 +290,7 @@ export function webPageSchema({
     name,
     description,
     isPartOf: { "@id": `${SITE.url}/#website` },
+    breadcrumb: { "@id": `${url}#breadcrumb` },
     about: about ?? { "@type": "Service", "@id": `${url}#service` },
     ...(primaryImageUrl && {
       primaryImageOfPage: {
@@ -308,15 +309,30 @@ export function webPageSchema({
 
 /** BreadcrumbList schema — pairs with the visible Breadcrumbs component. */
 export function breadcrumbSchema(items: { name: string; path: string }[]) {
+  const pagePath = items[items.length - 1]?.path ?? "";
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
+    "@id": `${SITE.url}${pagePath}#breadcrumb`,
     itemListElement: items.map((item, i) => ({
       "@type": "ListItem",
       position: i + 1,
       name: item.name,
       item: `${SITE.url}${item.path}`,
     })),
+  };
+}
+
+/** Compact Organization stub — include on every page so parsers don't see a dangling @id reference. */
+export function compactOrganizationSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": `${SITE.url}/#organization`,
+    name: SITE.brand,
+    legalName: SITE.legalName,
+    url: `${SITE.url}/`,
+    logo: { "@id": `${SITE.url}/#logo` },
   };
 }
 
@@ -350,7 +366,7 @@ export function articleSchema({
   wordCount?: number;
   audience?: { audienceType: string }[];
   citation?: { name: string; url: string }[];
-  author?: { "@type": string; name: string; jobTitle?: string };
+  author?: { "@type": string; "@id"?: string; name: string; jobTitle?: string; url?: string };
 }) {
   const url = `${SITE.url}${path}`;
   return {

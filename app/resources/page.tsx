@@ -60,6 +60,7 @@ export default function ResourcesPage() {
             primaryImageUrl: "https://guestsquad.com/brand-assets/og-image.jpg",
             primaryImageAlt: "Guest Squad resources — hotel guest coverage guides and checklists",
             about: { "@id": "https://guestsquad.com/#organization" },
+            mainEntityId: "https://guestsquad.com/resources#itemlist",
             audienceTypes: ["Independent Hotel","Boutique Hotel","Inn","Resort","Serviced Apartment","Aparthotel","Airbnb Host","Vrbo Host","Short-Term Rental Operator","Vacation Rental Operator","Vacation Rental Property Manager"],
             mentions: [
               { "@type": "Organization", "name": "Booking.com" },

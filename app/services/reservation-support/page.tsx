@@ -88,6 +88,8 @@ export default function ReservationSupportPage() {
               "Hotel reservation support for one property: availability checks, quotes, bookings and changes handled live to your rates and policies. Coverage scoped to your booking volume, channels and PMS access.",
             inLanguage: "en",
             isPartOf: { "@id": `${SITE.url}/#website` },
+            about: { "@id": `${SITE.url}${PATH}#service` },
+            breadcrumb: { "@id": `${SITE.url}${PATH}#breadcrumb` },
             mainEntity: { "@id": `${SITE.url}${PATH}#service` },
           },
           breadcrumbSchema([

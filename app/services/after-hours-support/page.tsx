@@ -91,7 +91,6 @@ export default function AfterHoursSupportPage() {
             offers: {
               "@type": "Offer",
               description: "Coverage scoped to your overnight hours, call volume and channels. Written proposal provided before onboarding.",
-              availability: "https://schema.org/InStock",
             },
             audience: [
               { "@type": "Audience", audienceType: "Independent Hotel" },
@@ -115,6 +114,8 @@ export default function AfterHoursSupportPage() {
               "After-hours hotel front desk support: hotel after hours calls, late check-ins and guest messages answered live, emergencies escalated. Coverage scoped to your overnight hours and call volume.",
             inLanguage: "en",
             isPartOf: { "@id": `${SITE.url}/#website` },
+            about: { "@id": `${SITE.url}${PATH}#service` },
+            breadcrumb: { "@id": `${SITE.url}${PATH}#breadcrumb` },
             mainEntity: { "@id": `${SITE.url}${PATH}#service` },
           },
           breadcrumbSchema([

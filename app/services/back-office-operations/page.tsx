@@ -87,7 +87,6 @@ export default function BackOfficeOperationsPage() {
             offers: {
               "@type": "Offer",
               description: "Quoted to scope: price depends on number of properties, nights covered, OTA volume and tasks included.",
-              availability: "https://schema.org/InStock",
             },
             audience: [
               { "@type": "Audience", audienceType: "Independent Hotel" },
@@ -108,6 +107,8 @@ export default function BackOfficeOperationsPage() {
               "Hotel night audit support and back office operations: billing errors caught, PMS reconciled, OTA payouts matched and rate parity checked overnight.",
             inLanguage: "en",
             isPartOf: { "@id": `${SITE.url}/#website` },
+            about: { "@id": `${SITE.url}${PATH}#service` },
+            breadcrumb: { "@id": `${SITE.url}${PATH}#breadcrumb` },
             mainEntity: { "@id": `${SITE.url}${PATH}#service` },
           },
           breadcrumbSchema([

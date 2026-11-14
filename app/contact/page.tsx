@@ -25,7 +25,7 @@ const FAQS = [
   },
   {
     q: "Do I need to know which plan I want first?",
-    a: "No. Most clients are not sure which plan fits until we have talked through their volume and channels. See the Pricing page for an overview in the meantime.",
+    a: "No. Most clients are not sure which plan fits until we have talked through their volume and channels. The coverage review is the right starting point.",
   },
   {
     q: "Can I just ask questions before committing to anything?",

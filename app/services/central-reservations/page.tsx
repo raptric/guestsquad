@@ -148,6 +148,8 @@ export default function CentralReservationsPage() {
               "Hotel reservation call center for hotel groups: one team handles quotes, bookings and changes across your properties. Coverage scoped to your portfolio, enquiry volume and channels.",
             inLanguage: "en",
             isPartOf: { "@id": `${SITE.url}/#website` },
+            about: { "@id": `${SITE.url}${PATH}#service` },
+            breadcrumb: { "@id": `${SITE.url}${PATH}#breadcrumb` },
             mainEntity: { "@id": `${SITE.url}${PATH}#service` },
           },
           breadcrumbSchema([

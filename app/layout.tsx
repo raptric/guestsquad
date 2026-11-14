@@ -7,6 +7,16 @@ import { CookieConsent } from "@/components/site/cookie-consent";
 import { ScrollTracker } from "@/components/site/scroll-tracker";
 import { SITE } from "@/lib/site-data";
 
+const COMPACT_ORG_SCHEMA = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": `${SITE.url}/#organization`,
+  name: SITE.brand,
+  legalName: SITE.legalName,
+  url: `${SITE.url}/`,
+  logo: { "@id": `${SITE.url}/#logo` },
+});
+
 const GTM_ID = "GTM-PDHSJNXB";
 
 
@@ -71,6 +81,10 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://images.unsplash.com" />
         <link rel="dns-prefetch" href="https://images.unsplash.com" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: COMPACT_ORG_SCHEMA }}
+        />
       </head>
       <body className="flex min-h-screen flex-col font-sans">
         {/* Microsoft Clarity — lazyOnload keeps it off the critical path */}

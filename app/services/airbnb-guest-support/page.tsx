@@ -89,6 +89,8 @@ export default function AirbnbGuestSupportPage() {
               "Airbnb guest services for hosts and STR operators: guest messages answered day and night, check-in help, in-stay issues and your response rate protected.",
             inLanguage: "en",
             isPartOf: { "@id": `${SITE.url}/#website` },
+            about: { "@id": `${SITE.url}${PATH}#service` },
+            breadcrumb: { "@id": `${SITE.url}${PATH}#breadcrumb` },
             mainEntity: { "@id": `${SITE.url}${PATH}#service` },
           },
           breadcrumbSchema([

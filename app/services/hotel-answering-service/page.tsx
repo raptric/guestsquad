@@ -432,7 +432,7 @@ export default function HotelAnsweringServicePage() {
             </div>
             <div className="rounded-lg border border-line bg-paper p-7">
               <p className="text-sm font-semibold text-ink mb-2">Start With a Pilot.</p>
-              <p className="text-sm text-ink-soft mb-5">Test Guest Squad&apos;s live hotel answering service before committing to ongoing coverage. We&apos;ll agree on the pilot duration, coverage hours, call types and access requirements before launch. At the end of the pilot, you can review the service and decide whether to continue. There is no automatic continuation without your agreement.</p>
+              <p className="text-sm text-ink-soft mb-5">Test Guest Squad&apos;s live hotel answering service before committing to ongoing coverage. We&apos;ll agree on the pilot duration, coverage hours, call types, access requirements and fee before launch. At the end of the pilot, you can review the service and decide whether to continue. There is no automatic continuation without your agreement.</p>
               <CoverageReviewButton variant="gold" ctaLocation="hotel_price_cta" className="w-full justify-center">
                 Pilot Hotel Call Coverage
               </CoverageReviewButton>

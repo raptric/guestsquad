@@ -120,7 +120,12 @@ export function GuideArticle({ data }: { data: GuideArticleData }) {
               </div>
             )}
             {section.note && (
-              <p className="mt-3 text-xs leading-relaxed text-ink-muted">{section.note}</p>
+              <p className="mt-3 text-xs leading-relaxed text-ink-muted">
+                {section.note.split(/(\[[^\]]+\]\([^)]+\))/).map((part, i) => {
+                  const m = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+                  return m ? <a key={i} href={m[2]} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-ink-soft">{m[1]}</a> : part;
+                })}
+              </p>
             )}
           </div>
         </Section>

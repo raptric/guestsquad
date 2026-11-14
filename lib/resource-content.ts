@@ -509,7 +509,7 @@ export const answeringServiceCostGuide: GuideArticleData = {
           ["Per property (scoped plan)", "A monthly fee per property, with an agreed workload", "Quoted by the provider", "Hotels that want reservations and guest requests handled, not just messages taken"],
         ],
       },
-      note: "Sources: published pricing pages of PATLive, MAP Communications, Ruby, Abby Connect and Smith.ai, read 13 November 2026. Prices change — check each provider's page before you compare. Taxes and telecom fees are usually extra. These are general business answering services; before comparing on price, check which actions their agents can complete in a hotel's booking system.",
+      note: "Sources: published pricing pages of [PATLive](https://www.patlive.com/pricing/), [MAP Communications](https://www.mapcommunications.com/pricing/), [Ruby](https://www.ruby.com/pricing/), [Abby Connect](https://abbyconnect.com/pricing/) and [Smith.ai](https://smith.ai/pricing), read 13 November 2026. Prices change — check each provider's page before you compare. Taxes and telecom fees are usually extra. These are general business answering services; before comparing on price, check which actions their agents can complete in a hotel's booking system.",
     },
     {
       heading: "What drives hotel answering service cost",

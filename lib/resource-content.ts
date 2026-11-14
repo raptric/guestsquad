@@ -291,7 +291,8 @@ export const callCenterComparison: ResourceArticleData = {
   dateModified: "2026-11-14T00:00:00+00:00",
   intro: [
     "Hotels exploring outsourced phone support often compare answering services with traditional call centers. Both can handle incoming calls, but their staffing models, training, system access and responsibilities may differ.",
-    "A hotel answering service typically focuses on guest calls, reservation inquiries and front desk coverage. A call center may provide similar support alongside broader customer service or centralized operations. This guide compares the two approaches, explains their differences and helps hotel operators evaluate which model best fits their needs.",
+    "A hotel answering service typically focuses on guest calls, reservation inquiries and front desk coverage. A call center may provide similar support alongside broader customer service or centralized operations.",
+    "This guide compares the two approaches, explains their differences and helps hotel operators evaluate which model best fits their needs.",
   ],
   postIntroCta: {
     heading: "Not sure if you need a hotel answering service or a call center?",

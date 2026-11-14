@@ -124,7 +124,7 @@ const CAPABILITY_TABLE = [
   { cap: "Property knowledge", how: "Your brief, approved rates, policies and contacts, agreed before coverage begins" },
   { cap: "Complex or upset callers", how: "A person handles the call and escalates by your rules" },
   { cap: "Booking actions", how: "Only those you authorise, in systems you grant access to" },
-  { cap: "Messages and OTA inboxes", how: "Can be included in the same arrangement, within an agreed workload allowance" },
+  { cap: "Messages and OTA inboxes", how: "Included alongside live phone answering, using your approved messaging channels and OTA platforms within the agreed coverage hours and workload allowance." },
   { cap: "Pricing basis", how: "Tailored to your hours, call volume, channels and booking actions required" },
 ];
 
@@ -297,7 +297,7 @@ export default function HotelAnsweringServicePage() {
         <SectionHeading
           eyebrow="Also Included"
           title="Guest messaging and OTA inboxes, included in the same arrangement."
-          description="Guest messaging and OTA inbox support can be included in the same arrangement, scoped to your property's systems, agreed channels and a workload allowance."
+          description="Guest messaging and OTA inbox support are included in our Hotel Answering Service, alongside live phone coverage and reservation inquiries. Our team manages guest communications through your approved systems and supported channels, including Booking.com, Expedia and other agreed platforms. Coverage hours, access permissions and workload allowances are confirmed during onboarding."
         />
         <div className="mt-10 grid gap-5 sm:grid-cols-3">
           {[

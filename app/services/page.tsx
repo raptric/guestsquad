@@ -19,7 +19,7 @@ const MAIN_SERVICES = [
     eyebrow: "For independent hotels",
     title: "Hotel Answering Service",
     description:
-      "Live phone coverage for independent hotels and boutique properties. Reservation inquiries, guest calls and OTA inbox management handled by hospitality-trained agents on your existing number.",
+      "Live phone coverage for independent hotels, with guest messaging and OTA inbox support included. Reservation inquiries, guest calls, Booking.com, Expedia and direct messages handled by hospitality-trained agents on your existing number.",
   },
   {
     slug: "central-reservations",

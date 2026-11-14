@@ -8,7 +8,6 @@ import { FaqAccordion } from "@/components/site/faq-accordion";
 import { Section, SectionHeading } from "@/components/site/section";
 import { CoverageReviewButton } from "@/components/site/coverage-review-button";
 import { PilotFormButton } from "@/components/site/pilot-form-button";
-import { SITE } from "@/lib/site-data";
 
 const MissedBookingCalculator = dynamic(
   () => import("@/components/site/missed-booking-calculator").then((m) => m.MissedBookingCalculator),
@@ -203,43 +202,6 @@ export default function PilotPage() {
             { name: "2-Week Pilot", path: "/pilot" },
           ]),
           faqSchema(FAQS),
-          {
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "@id": `${SITE.url}/pilot#service`,
-            name: "2-Week Guest Coverage Pilot",
-            serviceType: "Hotel Guest Operations Pilot",
-            description:
-              "A no-obligation 2-week pilot covering reservation calls, guest texts, OTA inboxes, and after-hours support for independent hotels and short-term rental operators. Scope agreed before coverage begins.",
-            url: `${SITE.url}/pilot`,
-            provider: {
-              "@type": "ProfessionalService",
-              "@id": `${SITE.url}/#organization`,
-              name: SITE.brand,
-              url: SITE.url,
-            },
-            areaServed: "Worldwide",
-            audience: [
-              { "@type": "Audience", audienceType: "Independent Hotel" },
-              { "@type": "Audience", audienceType: "Boutique Hotel" },
-              { "@type": "Audience", audienceType: "Inn" },
-              { "@type": "Audience", audienceType: "Resort" },
-              { "@type": "Audience", audienceType: "Serviced Apartment" },
-              { "@type": "Audience", audienceType: "Aparthotel" },
-              { "@type": "Audience", audienceType: "Airbnb Host" },
-              { "@type": "Audience", audienceType: "Short-Term Rental Operator" },
-              { "@type": "Audience", audienceType: "Vacation Rental Operator" },
-            ],
-            offers: {
-              "@type": "Offer",
-              name: "2-Week No-Obligation Pilot",
-              description: "2-week pilot review with no long-term contract required. Month-to-month coverage available after the pilot.",
-              url: `${SITE.url}/pilot`,
-              availability: "https://schema.org/InStock",
-              areaServed: "Worldwide",
-              seller: { "@type": "Organization", "@id": `${SITE.url}/#organization` },
-            },
-          },
         ]}
       />
 

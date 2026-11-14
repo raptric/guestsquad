@@ -36,8 +36,8 @@ const FAQS = [
     a: "Yes. Coverage can be scoped for agreed overflow periods, evenings, overnight or weekends. Routing depends on your telephone provider and configuration, and is reviewed before coverage starts.",
   },
   {
-    q: "Can agents take reservations?",
-    a: "Where supported system access and booking authority are provided, agents can complete the agreed actions. Without that access, we agree an inquiry-capture and handover process rather than promise an immediate booking confirmation.",
+    q: "Can your hotel answering service handle reservation calls?",
+    a: "Yes. Our team can answer direct booking inquiries, provide approved room and rate information, and capture the guest's stay dates and contact details. When authorized PMS access and booking permissions are provided, agents can complete agreed reservation actions. Otherwise, inquiries are documented and handed over to your reservations team for confirmation.",
   },
   {
     q: "What happens if a call needs to be transferred and nobody answers?",
@@ -429,11 +429,11 @@ export default function HotelAnsweringServicePage() {
             </div>
             <div className="rounded-lg border border-line bg-paper p-7">
               <p className="text-sm font-semibold text-ink mb-2">Start With a Pilot.</p>
-              <p className="text-sm text-ink-soft mb-5">Tell us your property, coverage hours and what you need managed. We&apos;ll agree the scope and send a written proposal before anything begins.</p>
+              <p className="text-sm text-ink-soft mb-5">Test Guest Squad&apos;s live hotel answering service before committing to ongoing coverage. We&apos;ll agree on the pilot duration, coverage hours, call types and access requirements before launch. At the end of the pilot, you can review the service and decide whether to continue. There is no automatic continuation without your agreement.</p>
               <CoverageReviewButton variant="gold" ctaLocation="hotel_price_cta" className="w-full justify-center">
                 Pilot Hotel Call Coverage
               </CoverageReviewButton>
-              <p className="mt-4 text-xs text-ink-muted">✓ Written proposal before onboarding · ✓ Month-to-month · ✓ No obligation to continue</p>
+              <p className="mt-4 text-xs text-ink-muted">✓ Agreed pilot scope · ✓ No automatic continuation · ✓ Flexible ongoing coverage</p>
             </div>
           </div>
         </div>

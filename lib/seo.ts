@@ -376,7 +376,7 @@ export function articleSchema({
     headline,
     description,
     url,
-    mainEntityOfPage: url,
+    mainEntityOfPage: { "@id": `${url}#webpage` },
     datePublished,
     dateModified: dateModified ?? datePublished,
     ...(articleSection && { articleSection }),

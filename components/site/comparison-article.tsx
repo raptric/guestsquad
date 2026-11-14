@@ -32,12 +32,8 @@ export function ComparisonArticle({ data }: { data: ResourceArticleData }) {
             path,
             primaryImageUrl: "https://guestsquad.com/brand-assets/og-image.jpg",
             primaryImageAlt: data.title,
-            about: data.schemaAbout ? {
-              "@type": data.schemaAbout.type,
-              name: data.schemaAbout.name,
-              ...(data.schemaAbout.url && { url: data.schemaAbout.url }),
-            } : undefined,
-            mentions: data.schemaMentions?.map((m) => ({ "@type": m.type, name: m.name })),
+            about: data.schemaAbout,
+            mentions: data.schemaMentions,
           }),
           articleSchema({
             headline: data.title,
@@ -47,6 +43,7 @@ export function ComparisonArticle({ data }: { data: ResourceArticleData }) {
             dateModified: data.dateModified,
             about: data.schemaAbout,
             mentions: data.schemaMentions,
+            ...(data.author && { author: data.author }),
           }),
           breadcrumbSchema([
             { name: "Home", path: "/" },
@@ -100,6 +97,9 @@ export function ComparisonArticle({ data }: { data: ResourceArticleData }) {
 
       <Section>
         <div className="mx-auto max-w-2xl">
+          {data.byline && (
+            <p className="mb-5 text-xs text-ink-soft/70">{data.byline}</p>
+          )}
           {data.intro.map((p, i) => (
             <p key={i} className="mb-5 text-sm leading-relaxed text-ink-soft">
               {p.split(/(\[[^\]]+\]\([^)]+\))/).map((part, j) => {

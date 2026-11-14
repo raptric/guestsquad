@@ -83,6 +83,8 @@ export type ResourceArticleData = {
   description: string;
   metaTitle?: string;
   metaDescription?: string;
+  byline?: string;
+  author?: { "@type": string; "@id"?: string; name: string; jobTitle?: string; url?: string };
   datePublished: string;
   dateModified?: string;
   intro: string[];
@@ -135,6 +137,8 @@ export const aiVoiceComparison: ResourceArticleData = {
     "Compare human hotel answering services with AI voice agents for guest calls, reservations, OTA inboxes and after-hours support.",
   datePublished: "2026-06-26T00:00:00+00:00",
   dateModified: "2026-11-14T00:00:00+00:00",
+  byline: "By Khadija Khalid, Co-founder · Updated 14 November 2026",
+  author: { "@type": "Person", "@id": "https://guestsquad.com/about#khadija-khalid", name: "Khadija Khalid", jobTitle: "Co-founder", url: "https://guestsquad.com/about" },
   intro: [
     "Hotels comparing phone coverage may consider both human answering services and AI voice agents. Both can handle incoming guest calls and provide after-hours coverage, but their capabilities, integrations and operating requirements differ.",
     "AI voice agents can answer guest inquiries and, with suitable system integrations, support reservations and call transfers. Human answering services provide trained agents who follow hotel procedures, communicate directly with guests and coordinate requests requiring additional assistance.",
@@ -222,7 +226,7 @@ export const aiVoiceComparison: ResourceArticleData = {
     "Does the solution cover OTA message inboxes, or phone calls only?",
   ],
   verdictClosure:
-    "Ask providers to demonstrate these capabilities using realistic hotel scenarios and evidence from relevant deployments. A defined pilot can help verify performance before committing to ongoing coverage. For properties choosing consistent human coverage across calls, OTA inboxes, and after-hours windows, the [hotel answering service](/services/hotel-answering-service) page covers what Guest Squad includes and how to start.",
+    "Ask providers to demonstrate these capabilities using realistic hotel scenarios and evidence from relevant deployments. A defined trial period can help verify performance before committing to ongoing coverage. For properties choosing consistent human coverage across calls, OTA inboxes, and after-hours windows, the [hotel answering service](/services/hotel-answering-service) page covers what Guest Squad includes and how to start.",
   faqs: [
     {
       q: "What are AI voice agents for hotels?",
@@ -238,7 +242,7 @@ export const aiVoiceComparison: ResourceArticleData = {
     },
     {
       q: "Is AI voice right for a boutique hotel?",
-      a: "AI voice can be suitable for boutique hotels, depending on their operating needs and the capabilities of the chosen platform. Evaluate how the system handles reservation inquiries, property-specific information, guest requests and escalation. A live pilot using realistic scenarios can help determine whether AI, human answering or a combination is appropriate.",
+      a: "AI voice can be suitable for boutique hotels, depending on their operating needs and the capabilities of the chosen platform. Evaluate how the system handles reservation inquiries, property-specific information, guest requests and escalation. A live trial using realistic scenarios can help determine whether AI, human answering or a combination is appropriate.",
     },
     {
       q: "What is the best AI voice for hotels?",
@@ -254,7 +258,7 @@ export const aiVoiceComparison: ResourceArticleData = {
     },
     {
       q: "Is Guest Squad an AI voice agent?",
-      a: "No. Every guest call is answered by a hospitality-trained person. Technology is used to route calls, log interactions, and generate your reporting — not to handle guest conversations in place of a person.",
+      a: "No. Guest Squad's guest calls are answered by hospitality-trained people. Technology routes calls, logs interactions and produces your reporting; it does not hold guest conversations in place of a person.",
     },
     {
       q: "Can we use both AI and a human answering service?",

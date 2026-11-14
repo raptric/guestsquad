@@ -303,7 +303,7 @@ export const callCenterComparison: ResourceArticleData = {
   },
   postTableCta: {
     heading: "Which one actually fits your situation",
-    body: "If your property needs consistent OTA inbox coverage, after-hours call handling, or property-specific escalation, a hospitality-trained answering service is usually the stronger fit. Guest Squad can review your gaps before you commit to anything.",
+    body: "Looking for live hotel phone coverage? Guest Squad provides hospitality-trained call answering, reservation inquiry handling, front desk overflow and after-hours support. Guest messaging and OTA inbox support are also included. Explore how our Hotel Answering Service works with your existing systems and property procedures.",
     primaryLabel: "See Hotel Answering Service",
     primaryHref: "/services/hotel-answering-service",
     secondaryLabel: "Request Pilot Review",
@@ -324,25 +324,25 @@ export const callCenterComparison: ResourceArticleData = {
       feature: "Agent consistency",
       a: "The same trained team becomes familiar with your property over time.",
       b: "Calls are typically picked up by whichever agent in the shared pool is available, a different person each time.",
-      c: "The same team covers your property over time. Repeat callers get recognized. Patterns get flagged. Nothing resets with every shift.",
+      c: "The same team covers your property over time. Patterns get flagged. Nothing resets with every shift.",
     },
     {
       feature: "Familiarity with PMS / OTA tools",
       a: "Comfortable operating inside your actual PMS and OTA accounts, not just taking a message.",
       b: "Often limited to scripted call handling and message-taking, without working inside your systems.",
-      c: "Agents operate inside your actual PMS, checking live availability, confirming rates, and logging bookings. No message-taking and forwarding. The call is handled, not just noted.",
+      c: "Agents handle reservation inquiries and permitted booking actions using approved PMS access. Requests requiring management approval or on-site assistance are documented or escalated according to the property's procedures.",
     },
     {
       feature: "OTA messages",
       a: "Covered by hotel answering services that include OTA inbox management in their scope.",
       b: "Not typically covered; most generic call centers handle phone only.",
-      c: "Booking.com, Expedia, and Airbnb inboxes are covered inside each platform's own tools, the same channels your OTA visibility depends on. Slow replies cost placement; covered inboxes help protect it.",
+      c: "Guest messaging and OTA inbox support are included in Guest Squad's Hotel Answering Service, using approved channels such as Booking.com and Expedia within the agreed coverage hours and workload allowance.",
     },
     {
       feature: "Reporting",
       a: "Calls logged with context, summarized into a report that tells you what actually happened.",
       b: "Typically raw call logs only, with little operational insight into patterns or recovered revenue.",
-      c: "Weekly report: calls handled, escalations logged, channel breakdown, and patterns flagged. Enough operational detail to make staffing and coverage decisions from, not just a raw call count.",
+      c: "Calls handled, escalations logged, channel breakdown and patterns flagged. Enough operational detail to make staffing and coverage decisions from, not just a raw call count.",
     },
     {
       feature: "Escalation accuracy",
@@ -355,7 +355,7 @@ export const callCenterComparison: ResourceArticleData = {
       feature: "Speed to launch",
       a: "Typically one to two weeks depending on onboarding complexity.",
       b: "Weeks to months depending on integration and script-build requirements.",
-      c: "Live within five business days. Property brief, channel access, and escalation rules are confirmed before the first call is answered.",
+      c: "Coverage begins once the property brief, approved system access, call routing and escalation procedures are confirmed. The start date depends on the property's requirements.",
     },
     {
       feature: "Best suited for",
@@ -380,7 +380,7 @@ export const callCenterComparison: ResourceArticleData = {
     "How are urgent escalations handled, and what is the expected response time?",
   ],
   verdictClosure:
-    "Those seven questions separate a true hotel answering service from a relabeled generic call center quickly. A provider that can answer all of them directly, with specifics about your property rather than generalities, is worth evaluating further. If OTA inboxes are part of your coverage gap, the [Booking.com and Expedia message support checklist](/resources/booking-com-message-support) is a practical starting point. If you are ready to see how a 24/7 hotel answering service works in practice, the [Guest Squad Hotel Answering Service](/services/hotel-answering-service) page covers what is included and how to start.",
+    "Those seven questions separate a true hotel answering service from a relabeled generic call center quickly. A provider that can answer all of them directly, with specifics about your property rather than generalities, is worth evaluating further. Managing multiple hotels? Guest Squad also provides a [hotel reservation call center](/services/central-reservations) for hotel groups that need centralised booking inquiries and reservation support across properties. If OTA inboxes are part of your coverage gap, the [Booking.com and Expedia message support checklist](/resources/booking-com-message-support) is a practical starting point. If you are ready to see how a 24/7 hotel answering service works in practice, the [Guest Squad Hotel Answering Service](/services/hotel-answering-service) page covers what is included and how to start.",
   inlineAsset: {
     heading: "Not sure where your coverage gaps actually are? The Coverage Gap Assessment identifies your unprotected hours, channels, and escalation blind spots.",
     asset: "coverage-gap-assessment",
@@ -406,7 +406,7 @@ export const callCenterComparison: ResourceArticleData = {
     },
     {
       q: "How fast can we switch from our current call center?",
-      a: "Typical onboarding is about five business days from your discovery call to go-live.",
+      a: "Onboarding covers your property brief, system access, call routing and escalation procedures. The timeline depends on your property's requirements and how quickly access and contacts are confirmed.",
     },
     {
       q: "Is a hotel answering service the same as a hotel call center?",

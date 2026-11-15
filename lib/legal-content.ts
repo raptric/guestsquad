@@ -195,12 +195,6 @@ export const TERMS_SECTIONS: LegalSection[] = [
     ],
   },
   {
-    heading: "Pilot Program Terms",
-    paragraphs: [
-      "Where Client purchases a discounted pilot engagement (a \"Pilot\") as described on the Site or in an Order, the Pilot fee is charged at the outset of the Pilot period and is non-refundable once the Pilot has commenced, except as required by applicable law. The Pilot does not automatically convert into a recurring paid plan; continuation beyond the Pilot period requires Client's affirmative agreement to a subsequent Order. Guest Squad will provide a performance summary at or near the end of the Pilot period to support that decision.",
-    ],
-  },
-  {
     heading: "Refunds and Cancellation",
     paragraphs: [
       "Except as expressly stated in an Order or required by applicable law, fees already invoiced or charged for Services already rendered, or for a then-current billing period, are non-refundable. Either party may terminate a month-to-month Order for convenience with at least 30 days' prior written notice unless a different notice period is specified in the Order; fees for the notice period remain payable.",

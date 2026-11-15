@@ -271,9 +271,9 @@ export const reservationSupportData: ServiceDetailData = {
 export const guestMessagingData: ServiceDetailData = {
   slug: "guest-messaging",
   eyebrow: "Guest Messaging",
-  title: "Hotel Guest Messaging Support for SMS, WhatsApp, Email, and OTA Channels",
+  title: "Hotel Guest Messaging Support for SMS, WhatsApp, and Email",
   description:
-    "Guest Squad answers SMS, WhatsApp, email and OTA messages for hotels and short-term rentals, from pre-arrival to post-stay, by a trained person.",
+    "Guest Squad answers SMS, WhatsApp, and email messages for hotels and short-term rentals, from pre-arrival to post-stay, by a trained person.",
   schemaAbout: { "@type": "Thing", "name": "Hotel Guest Messaging" },
   schemaServiceOutput: "Monitored and answered guest messages across SMS, WhatsApp, email, and in-app channels throughout the full stay journey",
   schemaSubjectOf: [

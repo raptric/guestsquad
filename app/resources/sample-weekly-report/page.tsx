@@ -22,9 +22,9 @@ const CALL_DAYS = [
 
 const REQUEST_TYPES = [
   { type: "Rate and availability inquiries", count: 14, resolved: 14, escalated: 0 },
-  { type: "Late checkout requests", count: 12, resolved: 10, escalated: 2 },
+  { type: "Late checkout requests", count: 12, resolved: 12, escalated: 0 },
   { type: "Early check-in inquiries", count: 8, resolved: 8, escalated: 0 },
-  { type: "Cancellation / modification", count: 7, resolved: 6, escalated: 1 },
+  { type: "Cancellation / modification", count: 7, resolved: 7, escalated: 0 },
   { type: "General guest questions", count: 11, resolved: 11, escalated: 0 },
   { type: "After-hours maintenance", count: 3, resolved: 1, escalated: 2 },
   { type: "Complaints", count: 2, resolved: 1, escalated: 1 },

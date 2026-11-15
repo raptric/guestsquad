@@ -46,6 +46,11 @@ export function MissedBookingCalculator({ compact = false }: Props) {
 
   return (
     <div className={compact ? "" : "mx-auto max-w-2xl"}>
+      {/* Disclaimer */}
+      <p className="mb-6 text-xs leading-relaxed text-ink-muted">
+        Default values are illustrative starting points. Adjust all three sliders to match your property&rsquo;s actual call volume, booking value, and conversion rate for a meaningful estimate.
+      </p>
+
       {/* Inputs */}
       <div className="space-y-6">
         <div>
@@ -98,7 +103,7 @@ export function MissedBookingCalculator({ compact = false }: Props) {
             <span className="text-sm font-semibold text-ink">{convRate}%</span>
           </div>
           <p className="mt-0.5 text-xs text-ink-muted">
-            What percentage of answered reservation calls typically result in a booking?
+            What percentage of answered reservation calls typically result in a booking? Independent hotels often see 15–25%. Use your own figure if you track it; the default of 20% is a mid-range starting point.
           </p>
           <input
             type="range"

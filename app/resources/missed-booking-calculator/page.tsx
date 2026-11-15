@@ -129,7 +129,7 @@ export default function CalculatorPage() {
               {
                 step: "03",
                 title: "Conversion rate",
-                body: "The percentage of answered reservation calls that result in a confirmed booking. Industry average for independent hotels is 15 to 25 percent. If you answer a call with your live rates, what proportion turn into reservations?",
+                body: "The percentage of answered reservation calls that result in a confirmed booking. Independent hotels often see 15 to 25 percent. If you track this, use your own figure; the default of 20% is a mid-range starting point.",
               },
             ].map((item) => (
               <div key={item.step} className="flex gap-4 rounded-lg border border-line bg-paper p-5">

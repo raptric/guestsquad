@@ -232,6 +232,7 @@ export const reservationSupportData: ServiceDetailData = {
   pairsWith: [
     { label: "Hotel Answering Service", slug: "hotel-answering-service" },
     { label: "After-Hours Support", slug: "after-hours-support" },
+    { label: "Central Reservations", slug: "central-reservations" },
   ],
   relatedSlugs: ["hotel-answering-service", "after-hours-support", "ota-inbox-management"],
   faqTitle: "Reservation support questions, answered.",

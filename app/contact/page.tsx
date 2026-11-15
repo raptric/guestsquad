@@ -7,6 +7,7 @@ import { JsonLd } from "@/components/site/json-ld";
 import { FaqAccordion } from "@/components/site/faq-accordion";
 import { Section, SectionHeading } from "@/components/site/section";
 import { buildMetadata, breadcrumbSchema, faqSchema, contactPageSchema } from "@/lib/seo";
+import { SITE } from "@/lib/site-data";
 import { AssetBlock } from "@/components/site/asset-block";
 import { BoFuTrustBlock } from "@/components/site/bofu-trust-block";
 import { PostBookingSteps } from "@/components/site/post-booking-steps";
@@ -71,6 +72,12 @@ export default function ContactPage() {
             <p className="mt-5 text-lg leading-relaxed text-ink-soft">
               Book a coverage review directly in the calendar, or fill in the form and we&rsquo;ll
               reach out within one business day.
+            </p>
+            <p className="mt-3 text-sm text-ink-soft">
+              Prefer to call?{" "}
+              <a href={`tel:${SITE.phoneHref}`} className="font-medium text-gold-dark hover:text-gold">
+                {SITE.phone}
+              </a>
             </p>
           </div>
 

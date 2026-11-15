@@ -560,8 +560,9 @@ export const afterHoursData: ServiceDetailData = {
   pairsWith: [
     { label: "Hotel Answering Service", slug: "hotel-answering-service" },
     { label: "Vacation Rental Answering Service", slug: "vacation-rental-answering-service" },
+    { label: "Back-Office Operations", slug: "back-office-operations" },
   ],
-  relatedSlugs: ["vacation-rental-answering-service", "hotel-answering-service"],
+  relatedSlugs: ["vacation-rental-answering-service", "hotel-answering-service", "back-office-operations"],
   faqTitle: "After-hours support questions, answered.",
   relatedTitle: "Pair after-hours coverage with call answering and OTA inbox management.",
   comparisonTitle: "After-hours support vs hiring overnight staff or going unanswered.",

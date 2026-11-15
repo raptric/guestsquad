@@ -463,7 +463,7 @@ export default function CentralReservationsPage() {
               <ul className="flex flex-col gap-2">
                 {[
                   "Reservation inquiry handling across your participating properties",
-                  "After-hours coverage",
+                  "Coverage during agreed operating hours",
                   "Rate and availability information using your approved data",
                   "Direct booking assistance",
                   "Approved changes and cancellations",

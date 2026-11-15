@@ -160,7 +160,7 @@ export function ContactForm() {
         {loading ? "Sending…" : "Send message"}
       </Button>
       <p className="text-xs text-ink-muted">
-        We respond within one business day. Your information is confidential and never shared.
+        We respond within one business day. Your information is handled in accordance with our <a href="/privacy-policy" className="underline underline-offset-2 hover:text-ink-soft">privacy policy</a>.
       </p>
     </form>
   );

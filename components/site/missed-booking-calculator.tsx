@@ -51,7 +51,7 @@ export function MissedBookingCalculator({ compact = false }: Props) {
         <div>
           <div className="flex items-center justify-between">
             <label className="text-sm font-medium text-ink">
-              Monthly missed or unanswered calls
+              Monthly missed reservation enquiries
             </label>
             <span className="text-sm font-semibold text-ink">{missedCalls}</span>
           </div>
@@ -66,6 +66,7 @@ export function MissedBookingCalculator({ compact = false }: Props) {
           <div className="mt-1 flex justify-between text-xs text-ink-muted">
             <span>5</span><span>300</span>
           </div>
+          <p className="mt-1.5 text-xs text-ink-muted">Count only calls or messages where a guest was enquiring about a booking and received no response or was not helped.</p>
         </div>
 
         <div>

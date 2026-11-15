@@ -7,8 +7,12 @@ export function middleware(request: NextRequest) {
   if (pathname === "/resources/insights" || pathname.startsWith("/resources/insights/")) {
     return new NextResponse(null, { status: 410 });
   }
+
+  if (pathname === "/pricing" || pathname === "/pilot") {
+    return new NextResponse(null, { status: 410 });
+  }
 }
 
 export const config = {
-  matcher: ["/resources/insights", "/resources/insights/:path*"],
+  matcher: ["/resources/insights", "/resources/insights/:path*", "/pricing", "/pilot"],
 };

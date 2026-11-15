@@ -19,7 +19,7 @@ const STEPS = [
   {
     num: "04",
     title: "Reporting & refinement",
-    body: "You receive regular reporting on volume, response times, and recovered revenue, with adjustments as needed.",
+    body: "You receive regular reporting on interaction volume, handling outcomes, open requests and escalations, with adjustments as needed.",
   },
 ];
 

@@ -45,6 +45,6 @@ export const DEFAULT_PROCESS: ProcessStep[] = [
     step: "Step 4",
     title: "Reporting & refinement",
     description:
-      "You receive regular reporting on volume, response times, and recovered revenue, with adjustments as needed.",
+      "You receive regular reporting on interaction volume, handling outcomes, open requests and escalations, with adjustments as needed.",
   },
 ];

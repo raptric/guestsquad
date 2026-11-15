@@ -151,7 +151,7 @@ export default function ContactPage() {
           />
           <AssetBlock
             heading="Find your coverage gaps"
-            assets={[{ label: "Start Coverage Gap Assessment", href: "/resources/coverage-gap-assessment" }]}
+            assets={[{ label: "After-Hours Coverage Checklist", href: "/resources/after-hours-hotel-support-checklist" }]}
           />
           <AssetBlock
             heading="Estimate missed revenue"

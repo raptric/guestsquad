@@ -61,7 +61,7 @@ export default function ServicesPage() {
           </h1>
           <p className="mt-5 max-w-xl text-lg leading-relaxed text-ink-soft">
             Three service arrangements, each built around a specific type of operation. All include
-            trained people, your property brief, and weekly reporting.
+            trained people, your property brief, and reporting at the agreed cadence.
           </p>
         </div>
       </section>

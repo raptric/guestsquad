@@ -557,7 +557,7 @@ export default function HotelAnsweringServicePage() {
               },
               {
                 label: "What Guest Squad handles",
-                body: "Live guest calls, Booking.com and direct message replies, check-in coordination and late-arrival support across both properties. Maintenance issues and anything requiring a physical response are escalated to the operator's on-call contact.",
+                body: "Live guest calls, Booking.com and direct message replies, check-in coordination and late-arrival support across the agreed properties. Maintenance issues and anything requiring a physical response are escalated to the operator's on-call contact.",
               },
               {
                 label: "How it works",
@@ -569,7 +569,7 @@ export default function HotelAnsweringServicePage() {
               },
               {
                 label: "The result",
-                body: "Guests reach a live person on every call during agreed coverage hours. Late check-in and access issues that previously went to voicemail are now resolved before the guest reaches the door. Access code troubleshooting is handled on the call, with no wait time for the guest.",
+                body: "Guests reach a live person on calls during agreed coverage hours. Late check-in and access issues that previously went to voicemail are now handled before the guest reaches the door. Access code troubleshooting is handled on the call, without the guest waiting for a callback.",
               },
             ].map((item) => (
               <div key={item.label} className="border-t border-line pt-5">

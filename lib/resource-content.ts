@@ -505,7 +505,7 @@ export const answeringServiceCostGuide: GuideArticleData = {
           ["Pay as you go", "A small monthly fee plus every minute of talk time", "$49/month + $1.37–$2.99/min", "Very low or unpredictable call volume"],
           ["Monthly plan with included minutes", "A fixed fee for a block of minutes, then an overage rate", "$99 for 50 min up to $1,725 for 500 min", "Steady, predictable call volume"],
           ["Per call", "A fixed fee for a number of calls, then a rate per extra call", "$300 for 30 calls up to $2,100 for 300 calls; $8.50–$11.50 per extra call", "Calls that often run long, such as reservation enquiries"],
-          ["AI answering", "A monthly fee for a number of AI-handled calls", "Free (25 calls) to $500/month (300 calls)", "Simple, repeatable questions only"],
+          ["AI answering", "A monthly fee for a number of AI-handled calls", "Free (25 calls) to $500/month (300 calls)", "Routine enquiries where the provider's supported workflows, integrations and escalation arrangements meet the property's requirements"],
           ["Per property (scoped plan)", "A monthly fee per property, with an agreed workload", "Quoted by the provider", "Hotels that want reservations and guest requests handled, not just messages taken"],
         ],
       },

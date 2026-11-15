@@ -123,7 +123,7 @@ export default function AirbnbGuestSupportPage() {
             Guest Support Operations for Airbnb hosts: trained people answer guest messages day and night, within the listings and hours you agree, to help keep your response rate on track.
           </p>
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-ink-soft">
-            Airbnb guest services from Guest Squad mean a trained person reads and answers your Airbnb guest messages around the clock, using each listing&apos;s own brief: check-in questions, house rules, Wi-Fi, in-stay issues and post-stay replies. Prompt, consistent replies support your response rate, one of the Superhost requirements, and help enquiries turn into bookings. Airbnb messaging is part of our{" "}
+            Airbnb guest services from Guest Squad mean a trained person reads and answers your Airbnb guest messages during agreed coverage hours, using each listing&apos;s own brief: check-in questions, house rules, Wi-Fi, in-stay issues and post-stay replies. Prompt, consistent replies support your response rate, one of the Superhost requirements, and help enquiries turn into bookings. Airbnb messaging is part of our{" "}
             <Link href="/services/vacation-rental-answering-service" className="text-gold-dark underline underline-offset-2 hover:text-gold">
               vacation rental answering service
             </Link>
@@ -383,7 +383,7 @@ export default function AirbnbGuestSupportPage() {
               </p>
               <ul className="flex flex-col gap-2">
                 {[
-                  "24/7 Airbnb message monitoring and replies",
+                  "Airbnb message monitoring and replies during agreed coverage hours (24/7 available)",
                   "Check-in coordination and access assistance",
                   "In-stay issue handling and escalation",
                   "Post-stay messages (and review responses where in scope)",

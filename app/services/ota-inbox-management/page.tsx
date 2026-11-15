@@ -268,7 +268,7 @@ export default function OtaInboxManagementPage() {
           {[
             {
               platform: "Booking.com",
-              detail: "Booking.com rates response time and reply rate visibly on your property page — a slow reply affects your Genius programme standing and conversion. Pre-booking enquiries about rates, availability and room type are answered directly from your brief. Modification requests are processed within your policy. Cancellation disputes and commission queries are escalated to your team.",
+              detail: "Booking.com guests use messaging to ask about rates, availability, room types and arrival details. Pre-booking enquiries are answered directly from your brief. Modification requests are processed within your policy. Cancellation disputes and commission queries are escalated to your team.",
             },
             {
               platform: "Expedia",

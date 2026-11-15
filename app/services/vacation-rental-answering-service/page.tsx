@@ -177,7 +177,7 @@ export default function VacationRentalAnsweringServicePage() {
               Vacation Rental Answering Service: 24/7 Guest Support
             </h1>
             <p className="mt-5 max-w-lg text-base font-medium leading-snug text-ink">
-              Guest Support Operations for STR operators: live guest calls and agreed messaging channels covered 24/7, listing by listing.
+              Guest Support Operations for STR operators: live guest calls and agreed messaging channels covered after hours, on overflow or 24/7, listing by listing.
             </p>
             <p className="mt-4 max-w-lg text-base leading-relaxed text-ink-soft">
               Guest Squad is a vacation rental answering service. Trained people answer your guests&apos; phone calls and your Airbnb, Vrbo and other agreed messages, including after hours and overnight, using a brief written for each listing.

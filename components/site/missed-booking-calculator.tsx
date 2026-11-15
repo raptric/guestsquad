@@ -103,7 +103,7 @@ export function MissedBookingCalculator({ compact = false }: Props) {
             <span className="text-sm font-semibold text-ink">{convRate}%</span>
           </div>
           <p className="mt-0.5 text-xs text-ink-muted">
-            What percentage of answered reservation calls typically result in a booking? Use your property's measured conversion rate. If unavailable, the default of 20% is an illustrative planning assumption.
+            What percentage of answered reservation calls typically result in a booking? Use your property&apos;s measured conversion rate. If unavailable, the default of 20% is an illustrative planning assumption.
           </p>
           <input
             type="range"

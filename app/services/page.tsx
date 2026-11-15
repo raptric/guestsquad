@@ -135,7 +135,7 @@ export default function ServicesPage() {
               },
               {
                 title: "OTA Inbox Management",
-                description: "Booking.com, Expedia, and Airbnb message threads monitored and answered around the clock to keep response scores strong and pre-booking inquiries converting.",
+                description: "Booking.com, Expedia, and Airbnb message threads monitored and answered during agreed coverage hours, following your property's procedures and escalation rules.",
                 href: "/services/ota-inbox-management",
               },
               {

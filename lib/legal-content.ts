@@ -210,7 +210,7 @@ export const TERMS_SECTIONS: LegalSection[] = [
   {
     heading: "Term and Termination",
     paragraphs: [
-      "These Terms remain in effect for as long as an Order between the parties is active. Either party may terminate an Order for the other party's uncured material breach upon thirty (30) days' written notice describing the breach, if the breach remains uncured at the end of that period. Guest Squad may suspend or terminate Services immediately for non-payment (subject to Section 4) or for Client's violation of Section 6 (Chargebacks).",
+      "These Terms remain in effect for as long as an Order between the parties is active. Either party may terminate an Order for the other party's uncured material breach upon thirty (30) days' written notice describing the breach, if the breach remains uncured at the end of that period. Guest Squad may suspend or terminate Services immediately for non-payment (subject to Section 4) or for Client's violation of Section 4 (Billing Disputes and Chargebacks).",
       "Upon termination, Client remains liable for all fees accrued prior to the termination date, and Guest Squad will, upon request and consistent with our data processing agreement, return or delete Client and guest data in our possession, except as required to be retained by law.",
     ],
   },
@@ -273,7 +273,6 @@ export const TERMS_SECTIONS: LegalSection[] = [
     heading: "Contact Information",
     paragraphs: [
       `Questions about these Terms should be directed to ${SITE.email} or ${SITE.phone}. ${SITE.legalName} operates Guest Squad; for general company information, visit ${SITE.parentUrl}.`,
-      "These Terms are provided as a general commercial template and do not constitute legal advice. We strongly recommend having these Terms reviewed by qualified legal counsel licensed in your jurisdiction before relying on them, particularly the billing authorization, chargeback, and limitation of liability provisions, to ensure enforceability under applicable law and your card-network/payment-processor rules.",
     ],
   },
 ];

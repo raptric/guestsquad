@@ -396,7 +396,7 @@ export default function VacationRentalAnsweringServicePage() {
               <p className="text-xs font-semibold uppercase tracking-[0.12em] text-ink-muted mb-3">What&apos;s included</p>
               <ul className="flex flex-col gap-2">
                 {[
-                  "Live phone answering, 24/7",
+                  "Live phone answering during agreed coverage hours (24/7 available)",
                   "OTA message handling (Airbnb, Vrbo and agreed channels)",
                   "Guest inquiry responses using your house rules",
                   "Arrival and access assistance",

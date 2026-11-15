@@ -282,6 +282,60 @@ export default function AfterHoursSupportPage() {
         </p>
       </Section>
 
+      {/* OVERNIGHT SCENARIOS */}
+      <Section id="overnight-scenarios">
+        <SectionHeading
+          eyebrow="Common overnight situations"
+          title="How the most common overnight calls are handled."
+        />
+        <div className="mt-8 space-y-4">
+          {[
+            {
+              situation: "Late arrival or lockout",
+              trigger: "Guest calls at 11:30pm — their flight was delayed and they don't have the room access code.",
+              action: "Agent confirms the guest's booking in your PMS, reads them the check-in instructions and access code from your property guide. If a physical key handover is needed, your on-call contact is called with the booking reference.",
+              outcome: "Guest is in their room. Your team is not woken unless a physical handover is needed.",
+            },
+            {
+              situation: "Noise complaint at 2am",
+              trigger: "In-house guest calls to report loud music from an adjacent room.",
+              action: "Agent logs the complaint, acknowledges the guest and contacts your on-call person using your escalation protocol. Guest is called back once the situation is being handled.",
+              outcome: "Complaint is logged and escalated. Guest has spoken to a person, not voicemail.",
+            },
+            {
+              situation: "Overnight booking enquiry",
+              trigger: "Caller wants to know if a room is available for tomorrow night and what the rate is.",
+              action: "Agent checks availability in your PMS, quotes your approved rate and processes the booking if the caller confirms. If availability is blocked or rate requires approval, it is noted and the caller is offered a callback at opening.",
+              outcome: "Booking captured overnight rather than lost to a competitor.",
+            },
+            {
+              situation: "Guest safety concern",
+              trigger: "Guest reports a suspected medical emergency in the next room.",
+              action: "Agent directs the caller to call emergency services immediately, contacts your on-call manager under your emergency protocol, and stays on the line until the situation is handed over.",
+              outcome: "Emergency services and your on-call contact are both reached within two minutes.",
+            },
+          ].map((item) => (
+            <div key={item.situation} className="rounded-lg border border-line bg-paper p-6">
+              <p className="text-sm font-semibold text-ink">{item.situation}</p>
+              <div className="mt-4 grid gap-3 sm:grid-cols-3">
+                <div>
+                  <p className="mb-1.5 text-xs font-semibold uppercase tracking-[0.12em] text-ink-muted">Trigger</p>
+                  <p className="text-sm leading-relaxed text-ink-soft">{item.trigger}</p>
+                </div>
+                <div>
+                  <p className="mb-1.5 text-xs font-semibold uppercase tracking-[0.12em] text-ink-muted">What happens</p>
+                  <p className="text-sm leading-relaxed text-ink-soft">{item.action}</p>
+                </div>
+                <div>
+                  <p className="mb-1.5 text-xs font-semibold uppercase tracking-[0.12em] text-ink-muted">Outcome</p>
+                  <p className="text-sm leading-relaxed text-ink-soft">{item.outcome}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </Section>
+
       {/* 24-HOUR FRONT DESK */}
       <Section surface id="24-hour-front-desk">
         <SectionHeading

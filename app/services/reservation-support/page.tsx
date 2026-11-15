@@ -243,6 +243,50 @@ export default function ReservationSupportPage() {
         </div>
       </Section>
 
+      {/* BOOKING CALL FLOW */}
+      <Section surface id="call-flow">
+        <SectionHeading
+          eyebrow="How a booking call works"
+          title="From inbound call to confirmed reservation."
+        />
+        <div className="mt-8 grid gap-4 md:grid-cols-4">
+          {[
+            {
+              step: "01",
+              label: "Call arrives",
+              body: "Guest calls your number. It routes to a Guest Squad agent during agreed coverage hours — overflow, after hours or full time. The agent answers in your hotel's name.",
+            },
+            {
+              step: "02",
+              label: "Check availability",
+              body: "Agent checks your PMS or channel manager for the requested dates and room type. If availability is accessible in real time, the agent confirms directly. If it requires a check with your team, the guest is placed on a brief hold.",
+            },
+            {
+              step: "03",
+              label: "Quote and confirm",
+              body: "Agent quotes the approved rate from your brief. If the guest confirms, the agent processes the booking in your PMS within the agreed permissions. Confirmation details are read back and a summary is sent if your system supports it.",
+            },
+            {
+              step: "04",
+              label: "Log and escalate if needed",
+              body: "The action is logged with the channel, guest reference and outcome. Requests outside the approved scope — group rates, exceptions, PMS conflicts — are noted and routed to your reservations contact with full context.",
+            },
+          ].map((item) => (
+            <div key={item.step} className="rounded-lg border border-line bg-paper p-6">
+              <p className="text-2xl font-light text-ink-muted">{item.step}</p>
+              <p className="mt-3 text-sm font-semibold text-ink">{item.label}</p>
+              <p className="mt-2 text-sm leading-relaxed text-ink-soft">{item.body}</p>
+            </div>
+          ))}
+        </div>
+        <div className="mt-5 rounded-lg border border-line bg-surface px-6 py-4 max-w-2xl">
+          <p className="text-sm text-ink-soft">
+            <span className="font-medium text-ink">PMS access.</span>{" "}
+            Agents work inside your existing PMS with a named login and only the permissions the agreed tasks need: typically availability lookup, rate display and reservation creation. Rate changes, group contracts and overbooking decisions stay with your team.
+          </p>
+        </div>
+      </Section>
+
       {/* ACTION LOG */}
       <Section id="log">
         <div className="grid gap-10 md:grid-cols-2 md:items-start">

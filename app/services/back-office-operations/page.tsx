@@ -259,6 +259,55 @@ export default function BackOfficeOperationsPage() {
         </div>
       </Section>
 
+      {/* RECONCILIATION WALKTHROUGH */}
+      <Section id="reconciliation-walkthrough">
+        <SectionHeading
+          eyebrow="How reconciliation works"
+          title="From payout statement to flagged exception."
+        />
+        <div className="mt-8 grid gap-4 md:grid-cols-5">
+          {[
+            {
+              step: "01",
+              label: "Pull payout reports",
+              body: "Booking.com, Expedia and Airbnb payout statements and commission summaries are downloaded from each extranet on the schedule you agree — daily or weekly.",
+            },
+            {
+              step: "02",
+              label: "Match to PMS bookings",
+              body: "Each payout line is matched to a booking in your PMS by confirmation number, dates and room type. Amount paid is compared to amount expected after commissions.",
+            },
+            {
+              step: "03",
+              label: "Check processor settlements",
+              body: "Card settlements from your payment processor are matched against the PMS to confirm that what was charged to guests reached your account.",
+            },
+            {
+              step: "04",
+              label: "Flag exceptions",
+              body: "Missing payments, short payouts, duplicate commissions and unreconciled bookings are listed in an exceptions log with booking references, amounts and the platform.",
+            },
+            {
+              step: "05",
+              label: "Report to finance",
+              body: "The exceptions report goes to your finance contact or controller by email on the agreed schedule, ready to act on — not a raw data export, an actionable list.",
+            },
+          ].map((item) => (
+            <div key={item.step} className="rounded-lg border border-line bg-paper p-5">
+              <p className="text-2xl font-light text-ink-muted">{item.step}</p>
+              <p className="mt-3 text-sm font-semibold text-ink">{item.label}</p>
+              <p className="mt-2 text-sm leading-relaxed text-ink-soft">{item.body}</p>
+            </div>
+          ))}
+        </div>
+        <div className="mt-5 rounded-lg border border-line bg-surface px-6 py-4 max-w-2xl">
+          <p className="text-sm text-ink-soft">
+            <span className="font-medium text-ink">What you receive.</span>{" "}
+            An exceptions report listing each discrepancy: OTA name, booking reference, expected amount, amount received, difference, and the action needed. Your controller acts on it; we do the matching.
+          </p>
+        </div>
+      </Section>
+
       {/* HANDLE / ESCALATE */}
       <Section surface id="handle-escalate">
         <SectionHeading

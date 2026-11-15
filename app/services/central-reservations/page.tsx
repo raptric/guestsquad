@@ -22,6 +22,10 @@ const PATH = "/services/central-reservations";
 
 const FAQS = [
   {
+    q: "Is this an outsourced hotel reservations service?",
+    a: "Yes. Guest Squad provides outsourced hotel reservations handling for hotel groups and multi-property operators: booking calls, OTA enquiries and direct reservation messages answered by a remote team briefed on each property's rates, policies and systems. The difference from a generic call centre is that agents work inside your PMS and follow your property-specific procedures, not a shared script.",
+  },
+  {
     q: "What is a central reservations desk for a hotel group?",
     a: "It is one team that handles enquiries and bookings for several properties. Guest Squad provides that team for the agreed work. Agents use each property's information, supported systems and booking permissions.",
   },

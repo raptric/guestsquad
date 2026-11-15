@@ -208,6 +208,46 @@ export default function GuestMessagingPage() {
         </div>
       </Section>
 
+      {/* JOURNEY BY STAGE */}
+      <Section id="journey">
+        <SectionHeading
+          eyebrow="Guest journey"
+          title="What agents handle at each stage of the stay."
+        />
+        <div className="mt-8 grid gap-5 md:grid-cols-3">
+          {[
+            {
+              stage: "Pre-arrival",
+              description: "Messages arrive 24–72 hours before check-in. Most are routine: check-in time, parking, access codes, early arrival requests. Agents reply from your property brief without involving your team. Special requests (cot, allergies, room preference) are confirmed and noted in the PMS where access permits.",
+              examples: ["Check-in time and procedure", "Parking instructions", "Early arrival within your policy", "Special requests and room notes"],
+            },
+            {
+              stage: "In-stay",
+              description: "In-stay messages range from quick questions (pool hours, restaurant recommendation) to issues that need action (heating not working, missing towels). Questions with answers in your brief are replied to directly. Anything needing someone on site — a fault, a safety concern, a complaint — goes to your designated contact, and the guest is kept updated until the issue is resolved.",
+              examples: ["Amenity hours and local recommendations", "Housekeeping requests", "Maintenance issues escalated to your team", "Late checkout requests within policy"],
+            },
+            {
+              stage: "Post-stay",
+              description: "Post-stay messages are typically billing questions, lost property or review-related follow-up. Billing queries are researched against the folio and answered factually, with disputes escalated to your finance contact. Lost property is logged and passed to your team. Guest feedback is acknowledged in your tone.",
+              examples: ["Billing questions on the folio", "Lost property reports", "Guest feedback and review follow-up"],
+            },
+          ].map((item) => (
+            <div key={item.stage} className="rounded-lg border border-line bg-paper p-6">
+              <p className="text-xs font-semibold uppercase tracking-[0.15em] text-gold-dark">{item.stage}</p>
+              <p className="mt-3 text-sm leading-relaxed text-ink-soft">{item.description}</p>
+              <ul className="mt-4 space-y-1.5">
+                {item.examples.map((ex) => (
+                  <li key={ex} className="flex items-start gap-2 text-xs text-ink-soft">
+                    <span className="mt-1 h-1 w-1 shrink-0 rounded-full bg-ink-muted/50" />
+                    {ex}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </Section>
+
       {/* BY PROPERTY TYPE */}
       <Section id="by-property-type">
         <SectionHeading

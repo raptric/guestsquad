@@ -258,6 +258,39 @@ export default function OtaInboxManagementPage() {
         </div>
       </Section>
 
+      {/* PLATFORM BY PLATFORM */}
+      <Section id="platforms">
+        <SectionHeading
+          eyebrow="Platform by platform"
+          title="How each OTA inbox is handled."
+        />
+        <div className="mt-8 grid gap-5 md:grid-cols-2">
+          {[
+            {
+              platform: "Booking.com",
+              detail: "Booking.com rates response time and reply rate visibly on your property page — a slow reply affects your Genius programme standing and conversion. Pre-booking enquiries about rates, availability and room type are answered directly from your brief. Modification requests are processed within your policy. Cancellation disputes and commission queries are escalated to your team.",
+            },
+            {
+              platform: "Expedia",
+              detail: "Expedia messages tend to be heavier on rate and availability questions and policy clarifications. Agents answer from your brief and confirm changes within the permissions you set. Compensation requests and OTA policy questions are escalated, not guessed at.",
+            },
+            {
+              platform: "Airbnb",
+              detail: "Airbnb response rate and response time feed directly into your listing ranking and Superhost status. Pre-booking enquiries often arrive late at night or on weekends. Agents reply inside the app within your agreed window, following your house rules and listing details. Review responses can be included in your scope.",
+            },
+            {
+              platform: "Vrbo",
+              detail: "Vrbo guests frequently ask detailed questions about access, parking, check-in process and house rules before confirming. Agents use your listing brief to answer accurately. Cancellation requests are handled per your Vrbo policy and escalated when the situation is outside what you have agreed agents may confirm.",
+            },
+          ].map((item) => (
+            <div key={item.platform} className="rounded-lg border border-line bg-paper p-6">
+              <p className="text-sm font-semibold text-ink">{item.platform}</p>
+              <p className="mt-3 text-sm leading-relaxed text-ink-soft">{item.detail}</p>
+            </div>
+          ))}
+        </div>
+      </Section>
+
       {/* RESPONSE TIMES */}
       <Section surface id="response-times">
         <div className="grid gap-10 md:grid-cols-2 md:items-start">

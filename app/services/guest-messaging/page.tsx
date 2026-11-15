@@ -312,7 +312,7 @@ export default function GuestMessagingPage() {
             <ul className="flex flex-col gap-2">
               {[
                 "SMS, WhatsApp and email message replies",
-                "OTA inbox handling (Airbnb, Vrbo, Booking.com)",
+                "OTA inbox management can be added within the agreed arrangement",
                 "Pre-arrival, in-stay and post-stay messages",
                 "Escalation and handover notes",
                 "Activity summaries",

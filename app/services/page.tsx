@@ -106,7 +106,7 @@ export default function ServicesPage() {
             Coverage hours, included channels, and escalation rules are agreed before the arrangement starts. What agents can confirm, modify, or decline is defined in advance. Anything outside that scope is routed to your team immediately with full context — no guessing, no improvising.
           </p>
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-ink-soft">
-            All arrangements are month-to-month with 30 days&rsquo; notice. There is no minimum commitment beyond the initial pilot period, which is scoped and priced individually based on your property&rsquo;s actual volume and coverage gaps.
+            The initial pilot has its own agreed scope, duration and fee. Ongoing arrangements after the pilot are month-to-month with 30 days&rsquo; notice, unless otherwise agreed in writing.
           </p>
         </div>
       </section>

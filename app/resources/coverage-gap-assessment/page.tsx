@@ -203,7 +203,7 @@ export default function CoverageGapAssessmentPage() {
                 { gap: "Booking inquiries not converting", service: "Reservation Support" },
                 { gap: "Airbnb or Vrbo guest communication", service: "Airbnb Guest Support" },
                 { gap: "Night audit calls, OTA reconciliation, billing", service: "Back Office Operations" },
-                { gap: "Multiple gaps across channels and hours", service: "Starter Plan — book a demo" },
+                { gap: "Multiple gaps across channels and hours", service: "Book a coverage review to agree service and scope" },
               ].map((row, i, arr) => (
                 <tr key={row.gap} className={i < arr.length - 1 ? "border-b border-line" : ""}>
                   <td className="px-4 py-3 text-ink-soft">{row.gap}</td>

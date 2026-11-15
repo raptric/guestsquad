@@ -148,11 +148,11 @@ export default function AirbnbGuestSupportPage() {
             Airbnb guest services mean your Airbnb inbox is watched and answered by a trained person, instead of waiting until you wake up or finish your other job. Check-in questions, listing FAQs, in-stay issues and post-stay messages are handled from your listing instructions, so guests get consistent answers from one booking to the next.
           </p>
           <p>
-            This Airbnb guest support is built around how the platform works: in-app messaging, response rate, Superhost criteria and guests spread across several listings. It is separate from the{" "}
+            This Airbnb guest support is built around how the platform works: in-app messaging, response rate, Superhost criteria and guests spread across several listings. If your guests also call by phone, the{" "}
             <Link href="/services/vacation-rental-answering-service" className="text-gold-dark underline underline-offset-2 hover:text-gold">
               vacation rental answering service
             </Link>
-            , which is phone-first and covers live call answering for short-term rental operators.
+            {" "}adds live call answering alongside this messaging coverage — both can run together within the same arrangement.
           </p>
         </div>
       </Section>

@@ -26,7 +26,7 @@ const FAQS = [
   },
   {
     q: "What is a realistic conversion rate for hotel reservation calls?",
-    a: "As a rough guide, many independent hotels see 15 to 25 percent of answered reservation calls turn into bookings. Use your own figure if you track it; start with 20 percent if you don't.",
+    a: "Use your property's measured conversion rate if you track it. If not, start with 20 percent as an illustrative planning assumption — the calculator's purpose is to show the shape of the opportunity, not to give you a precise figure.",
   },
   {
     q: "How is the recovery estimate calculated?",
@@ -129,7 +129,7 @@ export default function CalculatorPage() {
               {
                 step: "03",
                 title: "Conversion rate",
-                body: "The percentage of answered reservation calls that result in a confirmed booking. Independent hotels often see 15 to 25 percent. If you track this, use your own figure; the default of 20% is a mid-range starting point.",
+                body: "The percentage of answered reservation calls that result in a confirmed booking. Use your property's measured figure if you track it; the default of 20% is an illustrative planning assumption.",
               },
             ].map((item) => (
               <div key={item.step} className="flex gap-4 rounded-lg border border-line bg-paper p-5">

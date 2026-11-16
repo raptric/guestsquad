@@ -448,7 +448,7 @@ export function servicesHubSchema() {
       "@id": `${SITE.url}/services#breadcrumb`,
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Home", item: `${SITE.url}/` },
-        { "@type": "ListItem", position: 2, name: "Services" },
+        { "@type": "ListItem", position: 2, name: "Services", item: `${SITE.url}/services` },
       ],
     },
     mainEntity: {

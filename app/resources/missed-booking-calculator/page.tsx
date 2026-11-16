@@ -9,7 +9,7 @@ import { FaqAccordion } from "@/components/site/faq-accordion";
 import { Breadcrumbs } from "@/components/site/breadcrumbs";
 import { CtaSection } from "@/components/site/cta-section";
 import { JsonLd } from "@/components/site/json-ld";
-import { faqSchema, breadcrumbSchema, webPageSchema, webApplicationSchema } from "@/lib/seo";
+import { faqSchema, breadcrumbSchema, webPageSchema } from "@/lib/seo";
 
 const FAQS = [
   {
@@ -64,17 +64,6 @@ export default function CalculatorPage() {
             path: "/resources/missed-booking-calculator",
             primaryImageUrl: "https://guestsquad.com/brand-assets/og-image.jpg",
             primaryImageAlt: "Missed booking revenue calculator for hotels",
-            about: { "@id": "https://guestsquad.com/services/reservation-support#service" },
-            mentions: [
-              { "@type": "Service", "@id": "https://guestsquad.com/services/hotel-answering-service#service", "name": "Hotel Answering Service" },
-              { "@type": "Service", "@id": "https://guestsquad.com/services/central-reservations#service", "name": "Hotel Reservation Call Center" },
-              { "@type": "Service", "@id": "https://guestsquad.com/services/after-hours-support#service", "name": "After-Hours Hotel Front Desk Support" },
-            ],
-          }),
-          webApplicationSchema({
-            name: "Hotel Missed Call Revenue Calculator",
-            description: "Estimate how much revenue unanswered reservation calls are costing your hotel each month. Adjust call volume, booking value, and conversion rate.",
-            path: "/resources/missed-booking-calculator",
             about: { "@id": "https://guestsquad.com/services/reservation-support#service" },
             mentions: [
               { "@type": "Service", "@id": "https://guestsquad.com/services/hotel-answering-service#service", "name": "Hotel Answering Service" },

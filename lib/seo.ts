@@ -290,7 +290,7 @@ export function webPageSchema({
     name,
     description,
     isPartOf: { "@id": `${SITE.url}/#website` },
-    breadcrumb: { "@id": `${url}#breadcrumb` },
+    ...(path !== "/" && path !== "" && { breadcrumb: { "@id": `${url}#breadcrumb` } }),
     about: about ?? { "@type": "Service", "@id": `${url}#service` },
     ...(primaryImageUrl && {
       primaryImageOfPage: {

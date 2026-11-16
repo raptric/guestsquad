@@ -15,7 +15,7 @@ import { Calculator, FileText, ClipboardList, BarChart2, ArrowUpRight } from "lu
 export const metadata: Metadata = buildMetadata({
   title: "Hotel Guest Coverage Guides & Checklists",
   description:
-    "Guides, checklists and tools for hotel and vacation rental teams: what drives guest support costs, how to cover nights and overflow, and OTA inbox standards.",
+    "Guides, checklists and tools for hotel and vacation rental teams: guest support costs, overnight coverage, overflow, and OTA inbox standards.",
   path: "/resources",
 });
 

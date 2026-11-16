@@ -16,7 +16,7 @@ import { hotelAnsweringServiceData as d } from "@/lib/service-content";
 export const metadata: Metadata = buildMetadata({
   title: "Hotel Answering Service | 24/7 Live Calls",
   description:
-    "Hotel answering service: a hotel call center answering 24/7, after hours or on overflow, in your hotel's name. Coverage priced to your hours, channels and call volume.",
+    "Hotel answering service: live calls answered in your hotel's name, 24/7, after hours or on overflow. Priced to your hours, channels and call volume.",
   path: "/services/hotel-answering-service",
 });
 

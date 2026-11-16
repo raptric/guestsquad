@@ -42,7 +42,7 @@ const FAQS = [
 export const metadata: Metadata = buildMetadata({
   title: "How Slow Replies Hurt Your Hotel's OTA Ranking",
   description:
-    "Booking.com's reply score directly affects your search ranking. Here's how slow responses trigger ranking drops and what the Preferred Partner penalty costs your listing.",
+    "Booking.com reply score directly affects search ranking. How slow responses trigger ranking drops and what the Preferred Partner penalty costs your listing.",
   path: PATH,
 });
 

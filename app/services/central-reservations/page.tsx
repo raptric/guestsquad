@@ -14,7 +14,7 @@ import { SITE } from "@/lib/site-data";
 export const metadata: Metadata = buildMetadata({
   title: "Hotel Reservation Call Center for Hotel Groups",
   description:
-    "Hotel reservation call center for hotel groups: one team handles quotes, bookings and changes across your properties. Coverage scoped to your portfolio, enquiry volume and channels.",
+    "Hotel reservation call center for groups: one team handles quotes, bookings and changes across all properties, scoped to your enquiry volume and channels.",
   path: "/services/central-reservations",
 });
 
@@ -127,7 +127,7 @@ export default function CentralReservationsPage() {
             serviceType: "Hotel reservation call center",
             alternateName: "Central reservations",
             description:
-              "Hotel reservation call center for hotel groups: one team handles quotes, bookings and changes across your properties. Coverage scoped to your portfolio, enquiry volume and channels.",
+              "Hotel reservation call center for groups: one team handles quotes, bookings and changes across all properties, scoped to your enquiry volume and channels.",
             url: `${SITE.url}${PATH}`,
             provider: { "@id": `${SITE.url}/#organization` },
             areaServed: "Worldwide",
@@ -149,7 +149,7 @@ export default function CentralReservationsPage() {
             url: `${SITE.url}${PATH}`,
             name: "Hotel Reservation Call Center for Hotel Groups",
             description:
-              "Hotel reservation call center for hotel groups: one team handles quotes, bookings and changes across your properties. Coverage scoped to your portfolio, enquiry volume and channels.",
+              "Hotel reservation call center for groups: one team handles quotes, bookings and changes across all properties, scoped to your enquiry volume and channels.",
             inLanguage: "en",
             isPartOf: { "@id": `${SITE.url}/#website` },
             about: { "@id": `${SITE.url}${PATH}#service` },

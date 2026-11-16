@@ -42,7 +42,7 @@ const FAQS = [
 export const metadata: Metadata = buildMetadata({
   title: "Booking.com Message Management for Lean Hotel Teams",
   description:
-    "Booking.com tracks reply scores, and properties below 90% can see ranking impact. Here's how lean hotel teams maintain strong scores without adding headcount.",
+    "Booking.com tracks reply scores and properties below 90% can see ranking impact. How lean hotel teams maintain strong scores without adding headcount.",
   path: PATH,
 });
 

@@ -13,7 +13,7 @@ import { INSIGHTS } from "@/lib/insights-content";
 export const metadata: Metadata = buildMetadata({
   title: "Hotel Operations Insights",
   description:
-    "Data-backed insights on hotel OTA rankings, guest response time, revenue gaps, and the operational decisions that affect how properties perform on Booking.com, Expedia, and Airbnb.",
+    "Insights on hotel OTA rankings, guest response time and revenue gaps — and how operational decisions affect your performance on Booking.com, Expedia and Airbnb.",
   path: "/resources/insights",
 });
 
@@ -25,7 +25,7 @@ export default function InsightsPage() {
           webPageSchema({
             name: "Hotel Operations Insights | Guest Squad",
             description:
-              "Data-backed insights on hotel OTA rankings, guest response time, revenue gaps, and the operational decisions that affect how properties perform on Booking.com, Expedia, and Airbnb.",
+              "Insights on hotel OTA rankings, guest response time and revenue gaps — and how operational decisions affect your performance on Booking.com, Expedia and Airbnb.",
             path: "/resources/insights",
             pageType: "CollectionPage",
             primaryImageUrl: `${SITE.url}/brand-assets/og-image.jpg`,

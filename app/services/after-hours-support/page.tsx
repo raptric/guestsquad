@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   ...buildMetadata({
     title: PAGE_TITLE,
     description:
-      "After-hours hotel front desk support: hotel after hours calls, late check-ins and guest messages answered live, emergencies escalated. Coverage scoped to your overnight hours and call volume.",
+      "After-hours hotel support: overnight calls, late check-ins and guest messages answered live, emergencies escalated to your on-call manager.",
     path: "/services/after-hours-support",
   }),
   title: { absolute: PAGE_TITLE },
@@ -111,7 +111,7 @@ export default function AfterHoursSupportPage() {
             url: `${SITE.url}${PATH}`,
             name: PAGE_TITLE,
             description:
-              "After-hours hotel front desk support: hotel after hours calls, late check-ins and guest messages answered live, emergencies escalated. Coverage scoped to your overnight hours and call volume.",
+              "After-hours hotel support: overnight calls, late check-ins and guest messages answered live, emergencies escalated to your on-call manager.",
             inLanguage: "en",
             isPartOf: { "@id": `${SITE.url}/#website` },
             about: { "@id": `${SITE.url}${PATH}#service` },

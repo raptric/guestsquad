@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   ...buildMetadata({
     title: PAGE_TITLE,
     description:
-      "Hotel reservation support for one property: availability checks, quotes, bookings and changes handled live to your rates and policies. Coverage scoped to your booking volume, channels and PMS access.",
+      "Hotel reservation support for one property: availability checks, quotes, bookings and changes handled live, scoped to your rates, policies and PMS access.",
     path: "/services/reservation-support",
   }),
   title: { absolute: PAGE_TITLE },
@@ -64,7 +64,7 @@ export default function ReservationSupportPage() {
             name: "Hotel Reservation Support",
             serviceType: "Hotel Reservation Support Service",
             description:
-              "Hotel reservation support for one property: availability checks, quotes, bookings and changes handled live to your rates and policies. Coverage scoped to your booking volume, channels and PMS access.",
+              "Hotel reservation support for one property: availability checks, quotes, bookings and changes handled live, scoped to your rates, policies and PMS access.",
             url: `${SITE.url}${PATH}`,
             provider: { "@id": `${SITE.url}/#organization` },
             areaServed: "Worldwide",
@@ -85,7 +85,7 @@ export default function ReservationSupportPage() {
             url: `${SITE.url}${PATH}`,
             name: PAGE_TITLE,
             description:
-              "Hotel reservation support for one property: availability checks, quotes, bookings and changes handled live to your rates and policies. Coverage scoped to your booking volume, channels and PMS access.",
+              "Hotel reservation support for one property: availability checks, quotes, bookings and changes handled live, scoped to your rates, policies and PMS access.",
             inLanguage: "en",
             isPartOf: { "@id": `${SITE.url}/#website` },
             about: { "@id": `${SITE.url}${PATH}#service` },

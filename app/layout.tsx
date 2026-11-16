@@ -72,6 +72,11 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://images.unsplash.com" />
         <link rel="dns-prefetch" href="https://images.unsplash.com" />
+        <Script
+          src="https://analytics.ahrefs.com/analytics.js"
+          data-key="LIyNnCevk/ieatWN5JOZMw"
+          strategy="afterInteractive"
+        />
       </head>
       <body className="flex min-h-screen flex-col font-sans">
         {/* Microsoft Clarity — lazyOnload keeps it off the critical path */}

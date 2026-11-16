@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
     default: "Guest Squad — 24/7 Hotel Guest Support",
-    template: "%s | Guest Squad",
+    template: "%s",
   },
   description:
     "Guest Squad handles reservations, guest messaging, OTA inquiries, callbacks, upsells, and after-hours support, so your front desk stays focused on in-house guests.",

@@ -11,7 +11,7 @@ import { JsonLd } from "@/components/site/json-ld";
 import { FaqAccordion } from "@/components/site/faq-accordion";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Hospitality Call Center & Guest Support Operations | Guest Squad",
+  title: "Hospitality Call Center & Guest Support Operations",
   description:
     "Hospitality call center for hotels, hotel groups and vacation rentals. Guest support operations: calls, reservations, messages and OTA inboxes, 24/7.",
   path: "",

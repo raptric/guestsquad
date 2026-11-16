@@ -10,7 +10,7 @@ import { ServicePageViewTracker } from "@/components/site/service-page-view-trac
 import { buildMetadata, breadcrumbSchema, faqSchema } from "@/lib/seo";
 import { SITE } from "@/lib/site-data";
 
-const PAGE_TITLE = "OTA Inbox Management for Hotels and Rentals | Guest Squad";
+const PAGE_TITLE = "OTA Inbox Management for Hotels and Rentals";
 
 export const metadata: Metadata = {
   ...buildMetadata({

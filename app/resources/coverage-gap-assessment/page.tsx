@@ -7,7 +7,6 @@ export const metadata: Metadata = buildMetadata({
   description:
     "A self-assessment for hotel and STR operators to identify uncovered hours, unmanned channels, escalation gaps, and which Guest Squad service to start with.",
   path: "/resources/coverage-gap-assessment",
-  noindex: true,
 });
 
 function CheckItem({ children }: { children: React.ReactNode }) {

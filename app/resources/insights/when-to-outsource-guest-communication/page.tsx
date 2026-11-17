@@ -74,7 +74,7 @@ export default function WhenToOutsourcePage() {
               { type: "Thing", name: "Hotel Staffing Shortage" },
               { type: "Thing", name: "Guest Operations Outsourcing" },
               { type: "Article", name: "How Much Does a Hotel Answering Service Cost?", id: "https://guestsquad.com/resources/hotel-answering-service-cost#article" },
-              { type: "Article", name: "Hotel Answering Service vs. AI Voice Agent: Which Is Right for Your Property?", id: "https://guestsquad.com/resources/hotel-answering-service-vs-ai-voice#article" },
+              { type: "Article", name: "Hotel Answering Service vs. AI Voice Agent: Which Is Right for You?", id: "https://guestsquad.com/resources/hotel-answering-service-vs-ai-voice#article" },
               { type: "Article", name: "Hotel Answering Service vs Call Center: Key Differences for Hotels", id: "https://guestsquad.com/resources/hotel-answering-service-vs-call-center#article" },
             ],
             articleSection: "Operations",

@@ -43,7 +43,7 @@ export const RESOURCES: ResourceSummary[] = [
   },
   {
     slug: "hotel-front-desk-overflow-support",
-    title: "Hotel Front Desk Overflow Support: When to Outsource and What to Keep In-House",
+    title: "Hotel Front Desk Overflow: When to Outsource and What to Keep In-House",
     shortTitle: "Overflow Support Guide",
     description:
       "How overflow coverage actually works, the signs your property needs it, and how to set it up without disrupting your existing team.",
@@ -129,7 +129,7 @@ export type ResourceArticleData = {
 export const aiVoiceComparison: ResourceArticleData = {
   slug: "hotel-answering-service-vs-ai-voice",
   relatedServiceSlugs: ["hotel-answering-service", "after-hours-support", "vacation-rental-answering-service"],
-  title: "Hotel Answering Service vs. AI Voice Agent: Which Is Right for Your Property?",
+  title: "Hotel Answering Service vs. AI Voice Agent: Which Is Right for You?",
   description:
     "Compare human hotel answering services and AI voice agents by reservation handling, guest communication, system integrations, escalation and cost.",
   metaTitle: "AI Hotel Answering Service vs Human Agents",
@@ -709,7 +709,7 @@ export const afterHoursChecklistGuide: GuideArticleData = {
 
 export const overflowSupportGuide: GuideArticleData = {
   slug: "hotel-front-desk-overflow-support",
-  title: "Hotel Front Desk Overflow Support: When to Outsource and What to Keep In-House",
+  title: "Hotel Front Desk Overflow: When to Outsource and What to Keep In-House",
   description:
     "How overflow call coverage works, the signs your hotel needs it, and how to set it up without disrupting the team you already have.",
   metaTitle: "Hotel Front Desk Overflow Support: When to Outsource",

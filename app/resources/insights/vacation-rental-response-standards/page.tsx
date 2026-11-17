@@ -27,7 +27,7 @@ const FAQS = [
   },
   {
     q: "How do direct booking channels affect response standards?",
-    a: "Direct booking enquiries — via a property website, WhatsApp, or email — carry no platform-enforced response standard, but the practical expectation from guests is the same as OTA enquiries. A guest who sends a direct enquiry and receives no reply within a few hours will often go to Airbnb or Vrbo and book through the platform. Fast response on direct channels supports the goal of growing direct booking share over time.",
+    a: "Direct booking inquiries — via a property website, WhatsApp, or email — carry no platform-enforced response standard, but the practical expectation from guests is the same as OTA inquiries. A guest who sends a direct inquiry and receives no reply within a few hours will often go to Airbnb or Vrbo and book through the platform. Fast response on direct channels supports the goal of growing direct booking share over time.",
   },
   {
     q: "Is it worth responding to Vrbo booking requests that would result in a decline?",
@@ -35,7 +35,7 @@ const FAQS = [
   },
   {
     q: "What is the best way to handle messages from guests in different time zones?",
-    a: "The most practical approach is inbox coverage that extends across the hours when international guests are likely to be searching. A US-based property receiving enquiries from guests in Europe will see those messages arrive overnight US time. Dedicated overnight inbox coverage — whether through a co-host, property management software, or an outsourced support team — is the structural solution. Saved message templates that acknowledge the enquiry immediately and commit to a full reply within a specific timeframe are a minimum standard when live coverage is not available.",
+    a: "The most practical approach is inbox coverage that extends across the hours when international guests are likely to be searching. A US-based property receiving inquiries from guests in Europe will see those messages arrive overnight US time. Dedicated overnight inbox coverage — whether through a co-host, property management software, or an outsourced support team — is the structural solution. Saved message templates that acknowledge the inquiry immediately and commit to a full reply within a specific timeframe are a minimum standard when live coverage is not available.",
   },
 ];
 
@@ -105,19 +105,19 @@ export default function VacationRentalResponseStandardsPage() {
                 "@type": "HowToStep",
                 position: 2,
                 name: "Map the hours when messages from each channel arrive",
-                text: "For each platform — Airbnb, Vrbo, direct enquiries — identify the hours when messages typically arrive. If you manage listings that attract international guests, expect messages outside standard business hours. Mapping the arrival pattern tells you when your coverage needs to be most reliable.",
+                text: "For each platform — Airbnb, Vrbo, direct inquiries — identify the hours when messages typically arrive. If you manage listings that attract international guests, expect messages outside standard business hours. Mapping the arrival pattern tells you when your coverage needs to be most reliable.",
               },
               {
                 "@type": "HowToStep",
                 position: 3,
                 name: "Set a platform-specific reply priority based on enforcement consequences",
-                text: "Vrbo booking requests carry the most urgent consequence — an auto-decline after 24 hours is irreversible and affects ranking. These should be processed first. Airbnb inquiries and booking requests follow. Direct enquiries, while not platform-enforced, should still receive a reply within a few hours to maintain conversion from direct channels.",
+                text: "Vrbo booking requests carry the most urgent consequence — an auto-decline after 24 hours is irreversible and affects ranking. These should be processed first. Airbnb inquiries and booking requests follow. Direct inquiries, while not platform-enforced, should still receive a reply within a few hours to maintain conversion from direct channels.",
               },
               {
                 "@type": "HowToStep",
                 position: 4,
                 name: "Build a shared saved-reply library usable across platforms",
-                text: "Create a library of standard replies covering: availability confirmation, availability decline, special request acknowledgement, pre-arrival information, and check-in details. Keep them short and adaptable. The goal is to reduce the time needed to reply to any common enquiry from five minutes to one minute, making fast response feasible even during busy periods.",
+                text: "Create a library of standard replies covering: availability confirmation, availability decline, special request acknowledgement, pre-arrival information, and check-in details. Keep them short and adaptable. The goal is to reduce the time needed to reply to any common inquiry from five minutes to one minute, making fast response feasible even during busy periods.",
               },
               {
                 "@type": "HowToStep",
@@ -189,7 +189,7 @@ export default function VacationRentalResponseStandardsPage() {
             The rate affects two things: search placement and Superhost eligibility. Listings with consistently high response rates appear higher in search results. Maintaining a response rate at or above 90% over the trailing year is one of Airbnb&apos;s published Superhost requirements. Superhost status is assessed quarterly — a dip below 90% at assessment time means loss of status regardless of review scores or booking volume.
           </p>
           <p className="mb-5 text-sm leading-relaxed text-ink-soft">
-            Airbnb also rewards response speed within the 24-hour window. A listing whose host consistently replies within an hour is not treated identically to one whose host replies at 23 hours and 45 minutes. The search algorithm favours listings that guests are likely to hear back from quickly — which influences where in the search results the listing appears before any guest clicks through.
+            Airbnb also rewards response speed within the 24-hour window. A listing whose host consistently replies within an hour is not treated identically to one whose host replies at 23 hours and 45 minutes. The search algorithm favors listings that guests are likely to hear back from quickly — which influences where in the search results the listing appears before any guest clicks through.
           </p>
 
           <h2 className="mb-3 mt-10 text-lg font-semibold text-ink">
@@ -199,7 +199,7 @@ export default function VacationRentalResponseStandardsPage() {
             Vrbo&apos;s enforcement is more mechanically direct. A booking request that is not accepted or declined within 24 hours is automatically declined by the platform. The guest sees a declined request. The host&apos;s acceptance rate decreases. Acceptance rate is one of the ten metrics Vrbo uses in its search ranking calculation.
           </p>
           <p className="mb-5 text-sm leading-relaxed text-ink-soft">
-            Vrbo&apos;s own documentation states that &ldquo;travelers are more likely to book and less likely to cancel reservations at properties where the owner responds quickly,&rdquo; and that guests are &ldquo;less likely to cancel their reservation&rdquo; and &ldquo;more likely to leave a positive review&rdquo; with fast responses. The platform actively surfaces this connection between response behaviour and guest outcomes.
+            Vrbo&apos;s own documentation states that &ldquo;travelers are more likely to book and less likely to cancel reservations at properties where the owner responds quickly,&rdquo; and that guests are &ldquo;less likely to cancel their reservation&rdquo; and &ldquo;more likely to leave a positive review&rdquo; with fast responses. The platform actively surfaces this connection between response behavior and guest outcomes.
           </p>
           <p className="mb-5 text-sm leading-relaxed text-ink-soft">
             The key practical difference between Airbnb and Vrbo: an Airbnb late reply is a metric degradation; a Vrbo non-response is an irreversible transaction. The booking request is declined, the guest moves on, and the acceptance rate changes. There is no way to undo an auto-decline after it has occurred.
@@ -215,7 +215,7 @@ export default function VacationRentalResponseStandardsPage() {
             The risk is not evenly distributed. Vrbo booking requests arriving on Friday evening must be processed before Friday evening plus 24 hours — which is Saturday evening — or they auto-decline. Saturday evening is often when the manager is busiest. The window is technically 24 hours, but practically it may need to be closed within a few hours to avoid the risk of a weekend booking rush creating auto-declines.
           </p>
           <p className="mb-5 text-sm leading-relaxed text-ink-soft">
-            For managers in one time zone receiving enquiries from guests in another, the timing is further complicated. A European guest booking a US property sends a message at 10pm local time — which is 4pm US time. The message should be answered by 4pm the following day US time. But if it arrives on a Friday, and the manager does not check the inbox until Monday morning, the message is more than 60 hours old and the Vrbo auto-decline has long since fired.
+            For managers in one time zone receiving inquiries from guests in another, the timing is further complicated. A European guest booking a US property sends a message at 10pm local time — which is 4pm US time. The message should be answered by 4pm the following day US time. But if it arrives on a Friday, and the manager does not check the inbox until Monday morning, the message is more than 60 hours old and the Vrbo auto-decline has long since fired.
           </p>
 
           <h2 className="mb-3 mt-10 text-lg font-semibold text-ink">
@@ -236,7 +236,7 @@ export default function VacationRentalResponseStandardsPage() {
               {
                 n: "03",
                 title: "Prioritise by enforcement consequence",
-                body: "Vrbo booking requests carry the most urgent consequence — an auto-decline is irreversible. Process these first. Airbnb inquiries and booking requests follow. Direct enquiries are important for conversion but carry no platform penalty.",
+                body: "Vrbo booking requests carry the most urgent consequence — an auto-decline is irreversible. Process these first. Airbnb inquiries and booking requests follow. Direct inquiries are important for conversion but carry no platform penalty.",
               },
               {
                 n: "04",

@@ -95,13 +95,13 @@ export default function GuestMessagingLifecyclePage() {
               {
                 "@type": "HowToStep",
                 position: 1,
-                name: "Pre-arrival: answer every enquiry within two hours",
+                name: "Pre-arrival: answer every inquiry within two hours",
                 text: "From the moment a potential guest makes contact — via OTA message, phone, email, or direct booking enquiry — the clock is running. Pre-booking enquiries should receive a substantive reply within one to two hours, not just within 24 hours. After booking is confirmed, pre-arrival messages about special requests, check-in timing, and logistics should be answered within the same day. Set up saved message templates for the most common pre-arrival questions so replies are fast and consistent.",
               },
               {
                 "@type": "HowToStep",
                 position: 2,
-                name: "In-stay: prioritise complaints and maintenance above everything else",
+                name: "In-stay: prioritize complaints and maintenance above everything else",
                 text: "During the stay, maintenance requests and complaints carry the highest review risk. A guest who raised an issue and did not hear back will write about it. Establish a clear escalation path: a maintenance request sent by message should trigger an immediate acknowledgement and a time commitment ('our maintenance team will be there within 30 minutes'). Complaints should receive a real response, not just an acknowledgement. In-stay messages about local recommendations and logistics can be answered within a few hours.",
               },
               {

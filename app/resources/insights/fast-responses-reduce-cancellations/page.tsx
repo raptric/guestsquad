@@ -34,7 +34,7 @@ const FAQS = [
     a: "Properties that communicate proactively throughout the guest journey — before arrival, during stay, and after checkout — typically generate more reviews and better ones. Guests who feel looked after are more likely to leave a review, and their review is more likely to mention the service positively. This creates a compounding effect where good response practice improves both ratings and review volume over time.",
   },
   {
-    q: "How should hotels prioritise message types when volume is high?",
+    q: "How should hotels prioritize message types when volume is high?",
     a: "Pre-booking messages from guests who have not yet confirmed should take priority for revenue reasons. Confirmed but pre-arrival messages should be answered within the same day. In-stay issues should be answered as fast as possible — they affect the review that is about to be written. Post-checkout messages deserve a reply even if they are reviews in progress, as a gracious response to a complaint can still influence a reviewer's final star rating on some platforms.",
   },
 ];
@@ -184,7 +184,7 @@ export default function FastResponsesCancellationsPage() {
             The message types that most affect cancellations and reviews
           </h2>
           <p className="mb-5 text-sm leading-relaxed text-ink-soft">
-            Not every message type carries the same cancellation or review risk. Understanding which communications have the highest consequence helps prioritise coverage when inbox volume is high.
+            Not every message type carries the same cancellation or review risk. Understanding which communications have the highest consequence helps prioritize coverage when inbox volume is high.
           </p>
           <div className="mb-5 rounded-lg border border-line bg-paper overflow-hidden">
             <div className="grid grid-cols-3 gap-0 border-b border-line bg-surface px-5 py-3">

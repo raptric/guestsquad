@@ -44,7 +44,7 @@ export const SERVICES: ServiceSummary[] = [
     title: "Central Reservations Desk",
     shortTitle: "Central Reservations Desk",
     description:
-      "A coordinated reservations operation for hotel groups and portfolios, handling multi-property enquiries through your systems.",
+      "A coordinated reservations operation for hotel groups and portfolios, handling multi-property inquiries through your systems.",
   },
   {
     slug: "vacation-rental-answering-service",

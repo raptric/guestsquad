@@ -14,7 +14,7 @@ import { SITE } from "@/lib/site-data";
 export const metadata: Metadata = buildMetadata({
   title: "Hotel Reservation Call Center for Hotel Groups",
   description:
-    "Hotel reservation call center for groups: one team handles quotes, bookings and changes across all properties, scoped to your enquiry volume and channels.",
+    "Hotel reservation call center for groups: one team handles quotes, bookings and changes across all properties, scoped to your inquiry volume and channels.",
   path: "/services/central-reservations",
 });
 
@@ -23,11 +23,11 @@ const PATH = "/services/central-reservations";
 const FAQS = [
   {
     q: "Is this an outsourced hotel reservations service?",
-    a: "Yes. Guest Squad provides outsourced hotel reservations handling for hotel groups and multi-property operators: booking calls, OTA enquiries and direct reservation messages answered by a remote team briefed on each property's rates, policies and systems. The difference from a generic call centre is that agents work inside your PMS and follow your property-specific procedures, not a shared script.",
+    a: "Yes. Guest Squad provides outsourced hotel reservations handling for hotel groups and multi-property operators: booking calls, OTA inquiries and direct reservation messages answered by a remote team briefed on each property's rates, policies and systems. The difference from a generic call center is that agents work inside your PMS and follow your property-specific procedures, not a shared script.",
   },
   {
     q: "What is a central reservations desk for a hotel group?",
-    a: "It is one team that handles enquiries and bookings for several properties. Guest Squad provides that team for the agreed work. Agents use each property's information, supported systems and booking permissions.",
+    a: "It is one team that handles inquiries and bookings for several properties. Guest Squad provides that team for the agreed work. Agents use each property's information, supported systems and booking permissions.",
   },
   {
     q: "Can each property keep its own rates and policies?",
@@ -51,7 +51,7 @@ const FAQS = [
   },
   {
     q: "How much does a hotel reservation call center cost?",
-    a: "Your price depends on enquiry volume, coverage hours, number of properties, channels, system complexity and the actions required. Everything is set out in a written proposal before coverage begins.",
+    a: "Your price depends on inquiry volume, coverage hours, number of properties, channels, system complexity and the actions required. Everything is set out in a written proposal before coverage begins.",
   },
 ];
 
@@ -66,7 +66,7 @@ const WORKFLOWS = [
     label: "Property selection and availability",
     trigger: "A caller needs specific dates checked at a named or suggested property.",
     does: "Checks availability in the PMS for that property. Presents approved options and quotes the correct rate.",
-    boundary: "The property is unavailable. The agent offers alternatives in the portfolio or takes the enquiry for follow-up.",
+    boundary: "The property is unavailable. The agent offers alternatives in the portfolio or takes the inquiry for follow-up.",
   },
   {
     label: "Approved quotes and booking changes",
@@ -76,8 +76,8 @@ const WORKFLOWS = [
   },
   {
     label: "Reservation follow-up",
-    trigger: "A pending enquiry, unanswered quote or incomplete booking needs a follow-up.",
-    does: "Contacts the enquirer on the agreed timeline. Updates the record with the outcome.",
+    trigger: "A pending inquiry, unanswered quote or incomplete booking needs a follow-up.",
+    does: "Contacts the inquirer on the agreed timeline. Updates the record with the outcome.",
     boundary: "There is no response after the agreed attempts. The item is logged and handed to the reservations manager.",
   },
   {
@@ -89,14 +89,14 @@ const WORKFLOWS = [
   {
     label: "Property-level handover and reporting",
     trigger: "The agreed coverage window ends.",
-    does: "Writes a per-property summary of enquiries handled, bookings made, changes processed, open items and escalations. Sends it to the GM or reservations lead.",
+    does: "Writes a per-property summary of inquiries handled, bookings made, changes processed, open items and escalations. Sends it to the GM or reservations lead.",
     boundary: "Unresolved items are flagged clearly. The GM or reservations lead is told before the next operating period.",
   },
 ];
 
 const SITUATIONS = [
   {
-    heading: "Enquiries arrive across multiple properties with no central point",
+    heading: "Inquiries arrive across multiple properties with no central point",
     body: "Calls, messages and OTA threads land at individual hotels. Some get answered fast. Others are missed. Nobody has a consistent record of what was handled or what is still open.",
   },
   {
@@ -104,7 +104,7 @@ const SITUATIONS = [
     body: "A group-level team can't run on one script. The agent must know which property the caller means and apply that property's own instructions.",
   },
   {
-    heading: "Reservation enquiries go unanswered outside office hours",
+    heading: "Reservation inquiries go unanswered outside office hours",
     body: "Guests who call in the evening, at weekends or at peak times may reach voicemail. Many of those bookings move to OTA channels, where you pay commission.",
   },
   {
@@ -127,7 +127,7 @@ export default function CentralReservationsPage() {
             serviceType: "Hotel reservation call center",
             alternateName: "Central reservations",
             description:
-              "Hotel reservation call center for groups: one team handles quotes, bookings and changes across all properties, scoped to your enquiry volume and channels.",
+              "Hotel reservation call center for groups: one team handles quotes, bookings and changes across all properties, scoped to your inquiry volume and channels.",
             url: `${SITE.url}${PATH}`,
             provider: { "@id": `${SITE.url}/#organization` },
             areaServed: "Worldwide",
@@ -149,7 +149,7 @@ export default function CentralReservationsPage() {
             url: `${SITE.url}${PATH}`,
             name: "Hotel Reservation Call Center for Hotel Groups",
             description:
-              "Hotel reservation call center for groups: one team handles quotes, bookings and changes across all properties, scoped to your enquiry volume and channels.",
+              "Hotel reservation call center for groups: one team handles quotes, bookings and changes across all properties, scoped to your inquiry volume and channels.",
             inLanguage: "en",
             isPartOf: { "@id": `${SITE.url}/#website` },
             about: { "@id": `${SITE.url}${PATH}#service` },
@@ -220,7 +220,7 @@ export default function CentralReservationsPage() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/brand-assets/central-reservations-hero.svg"
-              alt="Illustration of three hotel property cards (Edinburgh, Bristol and Bath) feeding a central reservations desk panel that lists a confirmed reservation, a handled enquiry, an escalation to the GM and a daily handover."
+              alt="Illustration of three hotel property cards (Edinburgh, Bristol and Bath) feeding a central reservations desk panel that lists a confirmed reservation, a handled inquiry, an escalation to the GM and a daily handover."
               width={560}
               height={420}
               className="h-auto w-full"
@@ -235,7 +235,7 @@ export default function CentralReservationsPage() {
         <SectionHeading
           eyebrow="When You Need This"
           title="When a hotel group needs a central reservations office."
-          description="Enquiries land at the wrong hotel, at the wrong hour, or with the wrong person. A central reservations office fixes that with one team and one record. These are the four problems we hear most."
+          description="Inquiries land at the wrong hotel, at the wrong hour, or with the wrong person. A central reservations office fixes that with one team and one record. These are the four problems we hear most."
         />
         <div className="mt-10 grid gap-5 sm:grid-cols-2">
           {SITUATIONS.map((s, i) => (
@@ -315,7 +315,7 @@ export default function CentralReservationsPage() {
               </tr>
               <tr>
                 <td className="px-5 py-4 font-medium text-ink">Reservations team (Guest Squad)</td>
-                <td className="px-5 py-4 text-ink-soft">Answers calls and messages, quotes, books and changes reservations, and follows up on open enquiries.</td>
+                <td className="px-5 py-4 text-ink-soft">Answers calls and messages, quotes, books and changes reservations, and follows up on open inquiries.</td>
               </tr>
             </tbody>
           </table>
@@ -362,7 +362,7 @@ export default function CentralReservationsPage() {
           {[
             {
               label: "After-hours",
-              body: "We handle reservation enquiries outside your team's agreed hours, so prospective guests reach a live agent instead of voicemail.",
+              body: "We handle reservation inquiries outside your team's agreed hours, so prospective guests reach a live agent instead of voicemail.",
             },
             {
               label: "Overflow",
@@ -396,7 +396,7 @@ export default function CentralReservationsPage() {
             {
               step: "01",
               title: "Portfolio review",
-              body: "We document your participating properties, enquiry sources, current gaps, required booking actions and the approval limits for each hotel.",
+              body: "We document your participating properties, inquiry sources, current gaps, required booking actions and the approval limits for each hotel.",
             },
             {
               step: "02",
@@ -406,7 +406,7 @@ export default function CentralReservationsPage() {
             {
               step: "03",
               title: "Routing and go-live",
-              body: "We test enquiry routing, property identification, transfers and handover before coverage begins.",
+              body: "We test inquiry routing, property identification, transfers and handover before coverage begins.",
             },
           ].map((s) => (
             <div key={s.step} className="rounded-lg border border-line bg-paper p-6">
@@ -438,10 +438,10 @@ export default function CentralReservationsPage() {
         />
         <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {[
-            { n: "01", title: "Enquiry handled", body: "The agent handles the call or message using the right property brief and agreed permissions." },
+            { n: "01", title: "Inquiry handled", body: "The agent handles the call or message using the right property brief and agreed permissions." },
             { n: "02", title: "Interaction logged", body: "We record the property, action taken, booking outcome, escalation contact and next steps." },
             { n: "03", title: "Handover delivered", body: "Per-property handover notes reach the GM or reservations lead at the agreed time." },
-            { n: "04", title: "Activity report", body: "Enquiries handled, bookings made, open items and escalations, per property." },
+            { n: "04", title: "Activity report", body: "Inquiries handled, bookings made, open items and escalations, per property." },
           ].map((s) => (
             <div key={s.n} className="rounded-lg border border-line bg-paper p-6">
               <p className="text-2xl font-light text-ink-muted">{s.n}</p>
@@ -460,7 +460,7 @@ export default function CentralReservationsPage() {
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold-dark">Pricing</p>
             <h2 className="mt-3 text-2xl font-medium text-ink">Reservation Coverage Built Around Your Portfolio.</h2>
             <p className="mt-4 text-sm leading-relaxed text-ink-soft">
-              Every hotel group has different enquiry volumes, booking rules and channel complexity. Your Central Reservations Desk is scoped around your properties, their systems and your expected reservation workload.
+              Every hotel group has different inquiry volumes, booking rules and channel complexity. Your Central Reservations Desk is scoped around your properties, their systems and your expected reservation workload.
             </p>
             <div className="mt-5 border-t border-line pt-5">
               <p className="text-xs font-semibold uppercase tracking-[0.12em] text-ink-muted mb-3">What&apos;s included</p>
@@ -493,7 +493,7 @@ export default function CentralReservationsPage() {
               <p className="text-sm font-semibold text-ink mb-3">What shapes your pricing:</p>
               <ul className="flex flex-col gap-2.5">
                 {[
-                  "Enquiry volume",
+                  "Inquiry volume",
                   "Coverage hours — after-hours, overflow or 24/7",
                   "Number of participating properties",
                   "Channels — phone, email, OTA, messaging",
@@ -553,7 +553,7 @@ export default function CentralReservationsPage() {
               Start with a portfolio review
             </h3>
             <p className="text-sm leading-relaxed text-ink-soft mb-5">
-              Ready to coordinate reservations across your portfolio? Book a review and start with a selected group of properties. It helps to bring your property list, current systems, enquiry sources and the hours you want covered.
+              Ready to coordinate reservations across your portfolio? Book a review and start with a selected group of properties. It helps to bring your property list, current systems, inquiry sources and the hours you want covered.
             </p>
             <CoverageReviewButton variant="gold" ctaLocation="crd_faq_cta" className="w-full justify-center">
               Book a Portfolio Review

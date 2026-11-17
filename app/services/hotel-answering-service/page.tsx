@@ -114,7 +114,7 @@ const SITUATIONS = [
   },
   {
     heading: "Direct booking calls from your website or Google profile",
-    body: "An unanswered booking enquiry can become a lost direct reservation. When a trained person answers, more bookings stay off commission.",
+    body: "An unanswered booking inquiry can become a lost direct reservation. When a trained person answers, more bookings stay off commission.",
     link: { label: "Estimate what missed calls cost you", href: "/resources/missed-booking-calculator" },
   },
 ];
@@ -123,7 +123,7 @@ const CAPABILITY_TABLE = [
   { cap: "Who answers the call", how: "A trained person, in your hotel's name" },
   { cap: "Property knowledge", how: "Your brief, approved rates, policies and contacts, agreed before coverage begins" },
   { cap: "Complex or upset callers", how: "A person handles the call and escalates by your rules" },
-  { cap: "Booking actions", how: "Only those you authorise, in systems you grant access to" },
+  { cap: "Booking actions", how: "Only those you authorize, in systems you grant access to" },
   { cap: "Messages and OTA inboxes", how: "Included alongside live phone answering, using your approved messaging channels and OTA platforms within the agreed coverage hours and workload allowance." },
   { cap: "Pricing basis", how: "Tailored to your hours, call volume, channels and booking actions required" },
 ];
@@ -249,7 +249,7 @@ export default function HotelAnsweringServicePage() {
         <SectionHeading
           eyebrow="How It Works"
           title="A hotel call center that answers in your hotel's name."
-          description="Our hotel call-answering team learns your room types, policies, approved rates and escalation contacts before coverage begins. Agents answer in your hotel's name and complete only the actions you authorise."
+          description="Our hotel call-answering team learns your room types, policies, approved rates and escalation contacts before coverage begins. Agents answer in your hotel's name and complete only the actions you authorize."
         />
         <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {[

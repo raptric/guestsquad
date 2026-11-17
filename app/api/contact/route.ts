@@ -58,7 +58,7 @@ export async function POST(req: Request) {
     from: `"Guest Squad Website" <${gmailUser}>`,
     to: gmailUser,
     replyTo: email,
-    subject: `New enquiry from ${name} — ${company}`,
+    subject: `New inquiry from ${name} — ${company}`,
     html,
   });
 

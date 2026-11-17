@@ -31,7 +31,7 @@ const FAQS = [
   },
   {
     q: "What hours do most hotel OTA inboxes go unmonitored?",
-    a: "Most independent hotel operations do not actively monitor OTA inboxes between 10pm and 7am to 8am. That is a nine to ten hour overnight gap — the same window when guests in different time zones are most likely to send pre-booking enquiries and compare properties before confirming.",
+    a: "Most independent hotel operations do not actively monitor OTA inboxes between 10pm and 7am to 8am. That is a nine to ten hour overnight gap — the same window when guests in different time zones are most likely to send pre-booking inquiries and compare properties before confirming.",
   },
   {
     q: "Can auto-responses or templates protect my reply score?",
@@ -116,7 +116,7 @@ export default function OtaRankingResponseTimePage() {
                 "@type": "HowToStep",
                 position: 3,
                 name: "Set a triage rule",
-                text: "Pre-booking enquiries — any message that arrives before a reservation exists — need a response within 30 minutes during your operating hours. Post-booking operational questions can wait until morning without ranking penalty.",
+                text: "Pre-booking inquiries — any message that arrives before a reservation exists — need a response within 30 minutes during your operating hours. Post-booking operational questions can wait until morning without ranking penalty.",
               },
               {
                 "@type": "HowToStep",
@@ -304,7 +304,7 @@ export default function OtaRankingResponseTimePage() {
             The reply score lives in the Booking.com Extranet, not in your PMS or your front desk log. If your team is not checking the Messaging Analytics tab, you will not see the number move until it has already affected your position. Most front desk teams do not check it — because the extranet is primarily used for rate and availability management, because the metric is two clicks from the home screen, and because there is no push notification when it falls.
           </p>
           <p className="mb-5 text-sm leading-relaxed text-ink-soft">
-            The feedback loop compounds the delay. Slow replies depress the reply score. A lower score reduces ranking and impressions. Fewer impressions means fewer enquiries. Fewer enquiries means lower occupancy — four to six weeks after the original response-time problem began. By the time a general manager flags underperformance in a monthly review, the cause is already a month old and the window for that period is closed.
+            The feedback loop compounds the delay. Slow replies depress the reply score. A lower score reduces ranking and impressions. Fewer impressions means fewer inquiries. Fewer inquiries means lower occupancy — four to six weeks after the original response-time problem began. By the time a general manager flags underperformance in a monthly review, the cause is already a month old and the window for that period is closed.
           </p>
           <p className="mb-5 text-sm leading-relaxed text-ink-soft">
             The one thing that breaks this loop is checking the metric weekly. Go to Booking.com Extranet → Inbox → Messaging Analytics. Your reply score and average response time are both displayed there. If you have not looked in the past 30 days, you do not currently know whether you have a problem.
@@ -329,10 +329,10 @@ export default function OtaRankingResponseTimePage() {
             Who is monitoring your OTA inbox at 11pm?
           </h2>
           <p className="mb-5 text-sm leading-relaxed text-ink-soft">
-            This is a staffing problem, not a technology problem. Auto-responses and template libraries can acknowledge that a message was received. They cannot answer a rate enquiry, confirm a specific room type&apos;s availability, or reassure a guest who is choosing between your property and two others at 11:45pm.
+            This is a staffing problem, not a technology problem. Auto-responses and template libraries can acknowledge that a message was received. They cannot answer a rate inquiry, confirm a specific room type&apos;s availability, or reassure a guest who is choosing between your property and two others at 11:45pm.
           </p>
           <p className="mb-5 text-sm leading-relaxed text-ink-soft">
-            For most independent properties, evening front desk coverage handles check-in, guest requests, and in-person questions from roughly 3pm to 9pm. OTA pre-booking enquiries arrive during the same window — and the team responds to what is physically in front of them. After 10pm, the inbox is unmanned.
+            For most independent properties, evening front desk coverage handles check-in, guest requests, and in-person questions from roughly 3pm to 9pm. OTA pre-booking inquiries arrive during the same window — and the team responds to what is physically in front of them. After 10pm, the inbox is unmanned.
           </p>
           <p className="mb-5 text-sm leading-relaxed text-ink-soft">
             A guest searching from London at midnight — 7am in their destination&apos;s time zone — sends a pre-booking question to three shortlisted properties. The one that responds overnight takes the booking. The others respond at 8am to find the decision already made.
@@ -388,7 +388,7 @@ export default function OtaRankingResponseTimePage() {
               {
                 n: "03",
                 title: "Set a triage rule",
-                body: "Pre-booking enquiries — any message that arrives before a reservation exists — need a response within 30 minutes during your operating hours. Post-booking operational questions can wait until morning without ranking penalty.",
+                body: "Pre-booking inquiries — any message that arrives before a reservation exists — need a response within 30 minutes during your operating hours. Post-booking operational questions can wait until morning without ranking penalty.",
               },
               {
                 n: "04",
@@ -418,10 +418,10 @@ export default function OtaRankingResponseTimePage() {
             When is the gap too large to close manually?
           </h2>
           <p className="mb-5 text-sm leading-relaxed text-ink-soft">
-            One trained person monitoring your OTA inboxes overnight, replying to pre-booking enquiries within 30 minutes, costs less than the revenue from a single recovered booking per week in almost every hotel market. The question is not whether the economics make sense — it is whether your operation can add that coverage role internally, or whether outsourcing is the more practical path.
+            One trained person monitoring your OTA inboxes overnight, replying to pre-booking inquiries within 30 minutes, costs less than the revenue from a single recovered booking per week in almost every hotel market. The question is not whether the economics make sense — it is whether your operation can add that coverage role internally, or whether outsourcing is the more practical path.
           </p>
           <p className="mb-5 text-sm leading-relaxed text-ink-soft">
-            Properties that outsource OTA inbox management to a dedicated team maintain reply scores in the 95–100% range consistently, because the overnight gap is the first thing a dedicated service closes. That consistent performance compounds into a ranking advantage over properties with structural overnight gaps — an advantage that shows in impressions, enquiries, and occupancy over the following months.
+            Properties that outsource OTA inbox management to a dedicated team maintain reply scores in the 95–100% range consistently, because the overnight gap is the first thing a dedicated service closes. That consistent performance compounds into a ranking advantage over properties with structural overnight gaps — an advantage that shows in impressions, inquiries, and occupancy over the following months.
           </p>
 
         </div>
@@ -435,7 +435,7 @@ export default function OtaRankingResponseTimePage() {
               Guest Squad manages Booking.com, Expedia, and Airbnb inboxes around the clock.
             </p>
             <p className="mt-2 text-sm leading-relaxed text-ink-soft">
-              Pre-booking enquiries, in-stay messages, complaint triage, and escalation to your on-call contact. Your reply score stays healthy. Your ranking reflects it.
+              Pre-booking inquiries, in-stay messages, complaint triage, and escalation to your on-call contact. Your reply score stays healthy. Your ranking reflects it.
             </p>
             <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center">
               <Link

@@ -151,12 +151,12 @@ const FAQS = [
 ];
 
 const SAMPLE_REPORT_ROWS = [
-  { date: "Mon", channel: "Phone", type: "Reservation enquiry", outcome: "Handled", note: "Rate and availability confirmed" },
+  { date: "Mon", channel: "Phone", type: "Reservation inquiry", outcome: "Handled", note: "Rate and availability confirmed" },
   { date: "Mon", channel: "Booking.com", type: "Pre-booking question", outcome: "Handled", note: "Check-in time and parking confirmed" },
   { date: "Tue", channel: "SMS", type: "After-hours access", outcome: "Handled", note: "Key code provided per property brief" },
   { date: "Tue", channel: "Phone", type: "Complaint — noise", outcome: "Escalated", note: "Forwarded to on-call contact per rules" },
   { date: "Wed", channel: "Expedia", type: "Rate dispute", outcome: "Escalated", note: "Outside approved handling scope" },
-  { date: "Wed", channel: "Phone", type: "Reservation enquiry", outcome: "Handled", note: "Booking confirmed" },
+  { date: "Wed", channel: "Phone", type: "Reservation inquiry", outcome: "Handled", note: "Booking confirmed" },
   { date: "Thu", channel: "WhatsApp", type: "Pre-arrival question", outcome: "Handled", note: "Directions and check-in instructions sent" },
   { date: "Thu", channel: "Airbnb", type: "Guest review concern", outcome: "Escalated", note: "Owner decision required" },
 ];
@@ -514,7 +514,7 @@ export default function PilotPage() {
                   </thead>
                   <tbody>
                     {[
-                      { channel: "Phone", type: "Reservation enquiry", outcome: "Handled" },
+                      { channel: "Phone", type: "Reservation inquiry", outcome: "Handled" },
                       { channel: "Booking.com", type: "Pre-arrival question", outcome: "Handled" },
                       { channel: "SMS", type: "After-hours access", outcome: "Handled" },
                       { channel: "Phone", type: "Noise complaint", outcome: "Escalated" },

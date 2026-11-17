@@ -15,27 +15,27 @@ const DATE_PUBLISHED = "2026-08-11T00:00:00+00:00";
 const FAQS = [
   {
     q: "How much revenue do hotels lose from unanswered reservation calls?",
-    a: "The amount depends on call volume, average booking value, and the time of day calls go unanswered. A property with an average booking value of £150 and five unanswered reservation calls per week — a conservative estimate for an understaffed front desk — is exposing roughly £3,000 per month in potential booking revenue to the risk of being lost to voicemail or a competitor who answered.",
+    a: "The amount depends on call volume, average booking value, and the time of day calls go unanswered. A property with an average booking value of $150 and five unanswered reservation calls per week — a conservative estimate for an understaffed front desk — is exposing roughly $3,000 per month in potential booking revenue to the risk of being lost to voicemail or a competitor who answered.",
   },
   {
     q: "Why do reservation calls often go unanswered even during front desk hours?",
     a: "Front desk staff are managing check-ins, check-outs, in-person guest requests, and administrative tasks simultaneously. A phone call arriving during a check-in rush or while the sole desk agent is handling a guest issue will go unanswered or reach voicemail. According to AHLA's December 2024 survey, 26% of hotels cite front desk as a current staffing shortage area, meaning many properties are operating with fewer people than the role demands.",
   },
   {
-    q: "Does voicemail reliably capture reservation enquiries?",
-    a: "Voicemail captures the caller but rarely captures the booking. A guest who leaves a voicemail at 10pm and hears back at 9am the next morning has had 11 hours to find another property. Research on caller behaviour consistently shows that guests making initial hotel enquiries expect a rapid response — a voicemail with a callback promise is effective for in-stay issues but not for converting a first-time booking caller.",
+    q: "Does voicemail reliably capture reservation inquiries?",
+    a: "Voicemail captures the caller but rarely captures the booking. A guest who leaves a voicemail at 10pm and hears back at 9am the next morning has had 11 hours to find another property. Research on caller behaviour consistently shows that guests making initial hotel inquiries expect a rapid response — a voicemail with a callback promise is effective for in-stay issues but not for converting a first-time booking caller.",
   },
   {
     q: "Is call volume for hotel reservations declining as online booking grows?",
     a: "Not uniformly. While a significant share of bookings are made online, reservation calls remain high at properties that handle groups, events, special-request bookings, and leisure travellers who prefer to confirm details before committing. Rate and availability questions from travel agents and corporate bookers also arrive by phone. The mix depends on the property type and market, but very few independent hotels have zero reservation call volume.",
   },
   {
-    q: "What is the difference between a reservation call and a general enquiry call?",
-    a: "A reservation call is one where the guest is actively ready to book — they have a date, a need, and are comparing properties or ready to confirm. A general enquiry call may be earlier in the research process. Both deserve a fast response, but reservation calls have the highest immediate revenue consequence if they go to voicemail.",
+    q: "What is the difference between a reservation call and a general inquiry call?",
+    a: "A reservation call is one where the guest is actively ready to book — they have a date, a need, and are comparing properties or ready to confirm. A general inquiry call may be earlier in the research process. Both deserve a fast response, but reservation calls have the highest immediate revenue consequence if they go to voicemail.",
   },
   {
-    q: "How does a hotel answering service handle reservation calls differently from a generic call centre?",
-    a: "A hospitality-specific answering service is trained in hotel reservation protocols — rate quoting, availability checking, upselling room categories, handling special requests, and processing modifications. A generic call centre typically takes messages. The distinction matters because a guest calling to make a reservation needs an answer, not a message that will be returned during business hours.",
+    q: "How does a hotel answering service handle reservation calls differently from a generic call center?",
+    a: "A hospitality-specific answering service is trained in hotel reservation protocols — rate quoting, availability checking, upselling room categories, handling special requests, and processing modifications. A generic call center typically takes messages. The distinction matters because a guest calling to make a reservation needs an answer, not a message that will be returned during business hours.",
   },
 ];
 
@@ -174,7 +174,7 @@ export default function ReservationCallsRevenuePage() {
             Not all calls carry the same revenue consequence. The highest-value calls that most frequently go unanswered are:
           </p>
           <ul className="mb-5 flex flex-col gap-2 text-sm leading-relaxed text-ink-soft">
-            <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold-dark" /><span><strong className="font-medium text-ink">Group and event enquiries</strong> — these often arrive outside typical business hours from coordinators who have finished their own day. They carry high booking value and usually involve comparison with multiple properties.</span></li>
+            <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold-dark" /><span><strong className="font-medium text-ink">Group and event inquiries</strong> — these often arrive outside typical business hours from coordinators who have finished their own day. They carry high booking value and usually involve comparison with multiple properties.</span></li>
             <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold-dark" /><span><strong className="font-medium text-ink">Same-day and next-day bookings</strong> — time-sensitive by definition. A guest looking for a room tonight who cannot reach the property will book elsewhere within minutes.</span></li>
             <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold-dark" /><span><strong className="font-medium text-ink">Special-request bookings</strong> — guests with accessibility needs, anniversary arrangements, or dietary requirements calling to confirm before committing. These cannot be fully handled through OTA messaging alone.</span></li>
             <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold-dark" /><span><strong className="font-medium text-ink">Corporate and travel agent bookings</strong> — rate negotiations and volume commitments from corporate accounts often happen by phone. These bookings, once made, tend to recur.</span></li>
@@ -184,10 +184,10 @@ export default function ReservationCallsRevenuePage() {
             Calculating the exposure without guessing
           </h2>
           <p className="mb-5 text-sm leading-relaxed text-ink-soft">
-            A rough model is more actionable than a vague concern. Start with the number of missed or voicemail calls over the past 30 days — most phone systems log this. Estimate what proportion were reservation enquiries (check the transcription if your system supports it, or use the callback rate as a rough proxy — callers who needed information tend to call back; callers who booked elsewhere do not). Multiply by your average booking value and a conservative conversion rate of 15-25%.
+            A rough model is more actionable than a vague concern. Start with the number of missed or voicemail calls over the past 30 days — most phone systems log this. Estimate what proportion were reservation inquiries (check the transcription if your system supports it, or use the callback rate as a rough proxy — callers who needed information tend to call back; callers who booked elsewhere do not). Multiply by your average booking value and a conservative conversion rate of 15-25%.
           </p>
           <p className="mb-5 text-sm leading-relaxed text-ink-soft">
-            A property receiving 40 calls per month that go to voicemail, with 30% estimated as reservation enquiries (12 calls) and an average booking value of £160, is exposing approximately £480 to £720 per month in recoverable booking revenue at a 25-35% conversion rate. At a property with higher call volume, a higher booking value, or a longer average stay, the number grows accordingly.
+            A property receiving 40 calls per month that go to voicemail, with 30% estimated as reservation inquiries (12 calls) and an average booking value of $160, is exposing approximately $480 to $720 per month in recoverable booking revenue at a 25-35% conversion rate. At a property with higher call volume, a higher booking value, or a longer average stay, the number grows accordingly.
           </p>
           <p className="mb-5 text-sm leading-relaxed text-ink-soft">
             This is the baseline. It does not include the secondary effects — guests who tried to call, did not leave a voicemail, found a competitor, and left a negative review citing &ldquo;couldn&apos;t get through.&rdquo; It does not include the reduced repeat booking rate from first-time callers who had a bad first interaction. The voicemail figure is the floor.
@@ -210,7 +210,7 @@ export default function ReservationCallsRevenuePage() {
             What changes when every reservation call is answered
           </h2>
           <p className="mb-5 text-sm leading-relaxed text-ink-soft">
-            Properties that shift from reactive call handling to proactive reservation coverage — meaning every call is answered by a person during extended hours — report two changes that show up in the numbers. First, the booking conversion from calls improves because every enquiry receives an actual response rather than a voicemail. Second, the average value of phone bookings increases, because a trained agent can answer questions, address objections, and suggest room upgrades in the conversation rather than simply processing what the guest already decided.
+            Properties that shift from reactive call handling to proactive reservation coverage — meaning every call is answered by a person during extended hours — report two changes that show up in the numbers. First, the booking conversion from calls improves because every inquiry receives an actual response rather than a voicemail. Second, the average value of phone bookings increases, because a trained agent can answer questions, address objections, and suggest room upgrades in the conversation rather than simply processing what the guest already decided.
           </p>
           <p className="mb-5 text-sm leading-relaxed text-ink-soft">
             The operational model that achieves this for most independent hotels is not hiring a second front desk agent — the AHLA data makes clear how difficult that is to fill. It is outsourcing reservation call handling to a hospitality-specific answering service that is trained in the property&apos;s rates, room types, policies, and special-request handling, and can process or route each call appropriately without requiring the front desk to pick up.

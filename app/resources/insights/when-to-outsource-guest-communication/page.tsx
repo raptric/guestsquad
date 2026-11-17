@@ -19,11 +19,11 @@ const FAQS = [
   },
   {
     q: "What should a hotel or STR operator expect to give up in quality when outsourcing?",
-    a: "A hospitality-specific outsourced team, trained on the property's rates, room types, policies, and escalation procedures, will produce responses that are indistinguishable in quality from an in-house team for the majority of enquiries. What changes is the escalation path — complex or high-sensitivity decisions still route back to the operator. The quality risk exists mainly with generic call centres that are not trained for hospitality, not with purpose-built guest operations teams.",
+    a: "A hospitality-specific outsourced team, trained on the property's rates, room types, policies, and escalation procedures, will produce responses that are indistinguishable in quality from an in-house team for the majority of inquiries. What changes is the escalation path — complex or high-sensitivity decisions still route back to the operator. The quality risk exists mainly with generic call centers that are not trained for hospitality, not with purpose-built guest operations teams.",
   },
   {
     q: "How does outsourcing affect the front desk team's role?",
-    a: "Outsourced guest communication typically handles channels and hours that the front desk team cannot adequately cover — OTA inboxes, overnight calls, weekend messages, after-hours reservation enquiries. The front desk team's role is unchanged for in-person service and complex interactions that require physical presence or deep property knowledge. The two functions are complementary, not substitutes.",
+    a: "Outsourced guest communication typically handles channels and hours that the front desk team cannot adequately cover — OTA inboxes, overnight calls, weekend messages, after-hours reservation inquiries. The front desk team's role is unchanged for in-person service and complex interactions that require physical presence or deep property knowledge. The two functions are complementary, not substitutes.",
   },
   {
     q: "What is the typical cost compared to hiring a front desk agent?",
@@ -35,7 +35,7 @@ const FAQS = [
   },
   {
     q: "How long does it take for outsourced coverage to become effective?",
-    a: "A well-structured onboarding for hospitality guest operations typically takes one to two weeks — covering rate sheets, room type details, policies, special-request protocols, escalation procedures, and tone guidelines. After that period, an experienced team will handle the majority of enquiries correctly from day one. The first two to four weeks often surface edge cases that require protocol updates, which is normal and expected.",
+    a: "A well-structured onboarding for hospitality guest operations typically takes one to two weeks — covering rate sheets, room type details, policies, special-request protocols, escalation procedures, and tone guidelines. After that period, an experienced team will handle the majority of inquiries correctly from day one. The first two to four weeks often surface edge cases that require protocol updates, which is normal and expected.",
   },
 ];
 
@@ -147,7 +147,7 @@ export default function WhenToOutsourcePage() {
             The conditions that make outsourcing the right choice
           </h2>
           <p className="mb-5 text-sm leading-relaxed text-ink-soft">
-            There is a recognisable profile for properties where outsourcing guest communication produces a clear return. It tends to include one or more of these conditions:
+            There is a recognizable profile for properties where outsourcing guest communication produces a clear return. It tends to include one or more of these conditions:
           </p>
 
           <div className="mb-5 flex flex-col gap-3">
@@ -184,10 +184,10 @@ export default function WhenToOutsourcePage() {
             What outsourcing actually changes — and what it doesn&apos;t
           </h2>
           <p className="mb-5 text-sm leading-relaxed text-ink-soft">
-            A common concern about outsourcing guest communication is that it will produce generic, impersonal responses that damage the property&apos;s brand. This is a legitimate risk with generic call centres — it is not inherent to the model.
+            A common concern about outsourcing guest communication is that it will produce generic, impersonal responses that damage the property&apos;s brand. This is a legitimate risk with generic call centers — it is not inherent to the model.
           </p>
           <p className="mb-5 text-sm leading-relaxed text-ink-soft">
-            A hospitality-specific team trained on the property&apos;s rates, room types, policies, tone guidelines, and escalation procedures will produce responses that match the property&apos;s voice for the vast majority of standard enquiries. What changes is the escalation path — complex situations, sensitive complaints, or decisions requiring operator judgment still route back to the property team. The outsourced team handles the volume; the operator handles the exceptions.
+            A hospitality-specific team trained on the property&apos;s rates, room types, policies, tone guidelines, and escalation procedures will produce responses that match the property&apos;s voice for the vast majority of standard inquiries. What changes is the escalation path — complex situations, sensitive complaints, or decisions requiring operator judgment still route back to the property team. The outsourced team handles the volume; the operator handles the exceptions.
           </p>
           <p className="mb-5 text-sm leading-relaxed text-ink-soft">
             What does not change: in-person guest service, the physical experience at the property, and the decisions that require on-site presence or deep contextual knowledge. Guest communication outsourcing is specifically about the channels that can be managed remotely — calls, OTA messages, email, and text — not about replacing the people at the front desk.
@@ -209,7 +209,7 @@ export default function WhenToOutsourcePage() {
             Approach 3 — outsourced guest communication: fixed monthly cost covering defined channels and hours. No recruitment, no turnover, no sick days, no requirement for the operator to maintain oversight of a people function. The scope is defined in advance and adjustable as volume changes.
           </p>
           <p className="mb-5 text-sm leading-relaxed text-ink-soft">
-            The comparison shifts further in favour of outsourcing when the revenue cost of the current gap is factored in. A property losing five bookings per month to unanswered calls and slow OTA replies — at an average booking value of £160 — is absorbing £800 per month in recoverable revenue loss. If the cost of closing the gap is less than that, the ROI is immediate.
+            The comparison shifts further in favor of outsourcing when the revenue cost of the current gap is factored in. A property losing five bookings per month to unanswered calls and slow OTA replies — at an average booking value of $160 — is absorbing $800 per month in recoverable revenue loss. If the cost of closing the gap is less than that, the ROI is immediate.
           </p>
 
           <h2 className="mb-3 mt-10 text-lg font-semibold text-ink">

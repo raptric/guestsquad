@@ -158,10 +158,10 @@ export default function OtaInboxManagementPage() {
         />
         <div className="mt-5 max-w-2xl space-y-4 text-sm leading-relaxed text-ink-soft">
           <p>
-            OTA inbox management covers private guest message threads on the platforms you agree: pre-booking enquiries, post-booking questions, modification requests and arrival coordination. Review responses can be added to your scope if you want them.
+            OTA inbox management covers private guest message threads on the platforms you agree: pre-booking inquiries, post-booking questions, modification requests and arrival coordination. Review responses can be added to your scope if you want them.
           </p>
           <p>
-            It does not cover SMS, WhatsApp, email or direct website enquiries. Those channels fall under{" "}
+            It does not cover SMS, WhatsApp, email or direct website inquiries. Those channels fall under{" "}
             <Link href="/services/guest-messaging" className="text-gold-dark underline underline-offset-2 hover:text-gold">
               hotel guest messaging
             </Link>
@@ -268,7 +268,7 @@ export default function OtaInboxManagementPage() {
           {[
             {
               platform: "Booking.com",
-              detail: "Booking.com guests use messaging to ask about rates, availability, room types and arrival details. Pre-booking enquiries are answered directly from your brief. Modification requests are processed within your policy. Cancellation disputes and commission queries are escalated to your team.",
+              detail: "Booking.com guests use messaging to ask about rates, availability, room types and arrival details. Pre-booking inquiries are answered directly from your brief. Modification requests are processed within your policy. Cancellation disputes and commission queries are escalated to your team.",
             },
             {
               platform: "Expedia",
@@ -276,7 +276,7 @@ export default function OtaInboxManagementPage() {
             },
             {
               platform: "Airbnb",
-              detail: "Airbnb response rate and response time feed directly into your listing ranking and Superhost status. Pre-booking enquiries often arrive late at night or on weekends. Agents reply inside the app within your agreed window, following your house rules and listing details. Review responses can be included in your scope.",
+              detail: "Airbnb response rate and response time feed directly into your listing ranking and Superhost status. Pre-booking inquiries often arrive late at night or on weekends. Agents reply inside the app within your agreed window, following your house rules and listing details. Review responses can be included in your scope.",
             },
             {
               platform: "Vrbo",
@@ -350,7 +350,7 @@ export default function OtaInboxManagementPage() {
             <ul className="flex flex-col gap-2">
               {[
                 "Booking.com, Expedia, Airbnb and Vrbo inbox replies",
-                "Pre-booking enquiries and rate questions",
+                "Pre-booking inquiries and rate questions",
                 "Modification and cancellation thread handling",
                 "Escalation and handover notes",
                 "Shift-end thread summaries",

@@ -15,7 +15,7 @@ const DATE_PUBLISHED = "2026-08-11T00:00:00+00:00";
 const FAQS = [
   {
     q: "Why do hotels miss bookings after hours if demand is strong?",
-    a: "Strong demand increases the volume of calls and messages arriving outside front desk hours, but most independent hotels have no coverage once the desk closes. Guests searching in the evening or from different time zones reach voicemail or an unmonitored inbox. By morning the decision is already made — usually in favour of a property that responded.",
+    a: "Strong demand increases the volume of calls and messages arriving outside front desk hours, but most independent hotels have no coverage once the desk closes. Guests searching in the evening or from different time zones reach voicemail or an unmonitored inbox. By morning the decision is already made — usually in favor of a property that responded.",
   },
   {
     q: "What percentage of hotel front desks are currently understaffed?",
@@ -291,7 +291,7 @@ export default function AfterHoursMissedBookingsPage() {
             Properties that outsource after-hours call and message handling to a dedicated hospitality support team close the gap structurally — not by adding to their existing staff&apos;s workload, but by replacing the coverage model. The front desk team starts the next day with a clear summary of what came in overnight, which enquiries converted, and what requires follow-up. The overnight window stops being a blind spot.
           </p>
           <p className="mb-5 text-sm leading-relaxed text-ink-soft">
-            The economics are worth modelling before deciding. A property with an average booking value of £180 and an estimated five unanswered reservation enquiries per night, with a conservative 20% conversion rate, is leaving roughly £5,000 in monthly booking revenue unrecovered. The cost of dedicated after-hours coverage is a fraction of that number for most independent properties.
+            The economics are worth modelling before deciding. A property with an average booking value of $180 and an estimated five unanswered reservation enquiries per night, with a conservative 20% conversion rate, is leaving roughly $5,000 in monthly booking revenue unrecovered. The cost of dedicated after-hours coverage is a fraction of that number for most independent properties.
           </p>
 
         </div>

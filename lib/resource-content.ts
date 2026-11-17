@@ -504,8 +504,8 @@ export const answeringServiceCostGuide: GuideArticleData = {
         rows: [
           ["Pay as you go", "A small monthly fee plus every minute of talk time", "$49/month + $1.37–$2.99/min", "Very low or unpredictable call volume"],
           ["Monthly plan with included minutes", "A fixed fee for a block of minutes, then an overage rate", "$99 for 50 min up to $1,725 for 500 min", "Steady, predictable call volume"],
-          ["Per call", "A fixed fee for a number of calls, then a rate per extra call", "$300 for 30 calls up to $2,100 for 300 calls; $8.50–$11.50 per extra call", "Calls that often run long, such as reservation enquiries"],
-          ["AI answering", "A monthly fee for a number of AI-handled calls", "Free (25 calls) to $500/month (300 calls)", "Routine enquiries where the provider's supported workflows, integrations and escalation arrangements meet the property's requirements"],
+          ["Per call", "A fixed fee for a number of calls, then a rate per extra call", "$300 for 30 calls up to $2,100 for 300 calls; $8.50–$11.50 per extra call", "Calls that often run long, such as reservation inquiries"],
+          ["AI answering", "A monthly fee for a number of AI-handled calls", "Free (25 calls) to $500/month (300 calls)", "Routine inquiries where the provider's supported workflows, integrations and escalation arrangements meet the property's requirements"],
           ["Per property (scoped plan)", "A monthly fee per property, with an agreed workload", "Quoted by the provider", "Hotels that want reservations and guest requests handled, not just messages taken"],
         ],
       },
@@ -546,7 +546,7 @@ export const answeringServiceCostGuide: GuideArticleData = {
     {
       heading: "How Guest Squad quotes",
       paragraphs: [
-        "Guest Squad runs guest support operations for hotels, hotel groups and vacation rentals: a hospitality call center that answers calls, reservation enquiries and guest messages in your property's name.",
+        "Guest Squad runs guest support operations for hotels, hotel groups and vacation rentals: a hospitality call center that answers calls, reservation inquiries and guest messages in your property's name.",
         "We quote per property rather than per minute. The quote depends on your coverage hours, the channels you want covered, the number of properties or listings, and your typical volume. Any setup fee depends on scope and is set out in your written proposal. Plans are month-to-month.",
         "To see what's included, read about our [hotel answering service](/services/hotel-answering-service). For hotel groups, see our [hotel reservation call center](/services/central-reservations). Compare like for like: ask every provider to quote the same monthly call volume, hours and tasks.",
       ],
@@ -559,7 +559,7 @@ export const answeringServiceCostGuide: GuideArticleData = {
     },
     {
       q: "Is per-minute or per-call pricing cheaper?",
-      a: "Per-minute pricing usually works out cheaper when calls are short. Per-call pricing usually works out cheaper when calls run long, such as reservation enquiries. Work out your average call length first.",
+      a: "Per-minute pricing usually works out cheaper when calls are short. Per-call pricing usually works out cheaper when calls run long, such as reservation inquiries. Work out your average call length first.",
     },
     {
       q: "How much does an AI answering service cost?",
@@ -859,7 +859,7 @@ export const otaInboxChecklistGuide: GuideArticleData = {
       heading: "The OTA inbox checklist",
       paragraphs: ["A workable internal standard usually includes:"],
       checklist: [
-        "A response-time target for pre-booking enquiries, for example under 30 minutes.",
+        "A response-time target for pre-booking inquiries, for example under 30 minutes.",
         "A named owner for checking each OTA inbox at set times, not \"whoever has time\".",
         "Reply templates for the most common questions, written to your property's actual policies.",
         "An escalation route for complaints and refund requests, instead of answering them inline.",
@@ -875,7 +875,7 @@ export const otaInboxChecklistGuide: GuideArticleData = {
     },
     {
       q: "How fast should hotels respond to Booking.com messages?",
-      a: "A practical internal target is under 30 minutes for pre-booking enquiries. That's the window where an unanswered question most often ends with the guest booking a competitor.",
+      a: "A practical internal target is under 30 minutes for pre-booking inquiries. That's the window where an unanswered question most often ends with the guest booking a competitor.",
     },
     {
       q: "Does slow OTA response time affect hotel performance?",
@@ -1017,7 +1017,7 @@ export const messagingSopGuide: GuideArticleData = {
     },
     {
       q: "How do we handle guest messages overnight without staff?",
-      a: "There are two options. An outside team can cover overnight messaging for you, or an auto-reply can set expectations and promise a reply by a specific time. The first protects pre-booking enquiries; the second is better than silence but can lose bookings to faster competitors.",
+      a: "There are two options. An outside team can cover overnight messaging for you, or an auto-reply can set expectations and promise a reply by a specific time. The first protects pre-booking inquiries; the second is better than silence but can lose bookings to faster competitors.",
     },
     {
       q: "Do you build the SOP for us, or do we need one already?",

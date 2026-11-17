@@ -19,7 +19,7 @@ const FAQS = [
   },
   {
     q: "Does response rate affect Airbnb search ranking?",
-    a: "Yes. Airbnb states that response rate is a factor in search placement. Hosts who reply consistently within 24 hours are rewarded with better visibility. The platform's goal is to surface listings that guests are likely to hear back from, so properties with lower response rates are deprioritised in search results.",
+    a: "Yes. Airbnb states that response rate is a factor in search placement. Hosts who reply consistently within 24 hours are rewarded with better visibility. The platform's goal is to surface listings that guests are likely to hear back from, so properties with lower response rates are deprioritized in search results.",
   },
   {
     q: "Does Airbnb response rate affect Superhost status?",
@@ -166,7 +166,7 @@ export default function AirbnbResponseTimeVisibilityPage() {
         <div className="mx-auto max-w-2xl">
 
           <p className="mb-5 text-sm leading-relaxed text-ink-soft">
-            Short-term rental operators spend significant time and money optimising their listings — professional photography, competitive pricing, compelling descriptions. What many do not realise is that guest messaging speed is as consequential to their platform ranking as any of those factors. Airbnb and Vrbo both use response behaviour as a direct input to how prominently a listing appears in search results, and both have published the rules clearly.
+            Short-term rental operators spend significant time and money optimizing their listings — professional photography, competitive pricing, compelling descriptions. What many do not realise is that guest messaging speed is as consequential to their platform ranking as any of those factors. Airbnb and Vrbo both use response behaviour as a direct input to how prominently a listing appears in search results, and both have published the rules clearly.
           </p>
           <p className="mb-5 text-sm leading-relaxed text-ink-soft">
             The challenge is that most operators only discover the problem after their ranking drops. By the time a slow response period has pulled the rate below a key threshold, the effect on bookings is already underway. Understanding exactly what the platforms measure — and when it matters — makes the problem preventable rather than reactive.
@@ -179,7 +179,7 @@ export default function AirbnbResponseTimeVisibilityPage() {
             Airbnb&apos;s response rate is calculated as the percentage of new guest inquiries and booking requests that receive a reply within 24 hours, measured over a rolling 30-day window. A reply that arrives after the 24-hour mark counts as late — it does not contribute to the response rate even if the guest eventually received an answer. An inquiry that expires without any response counts as a non-reply and actively lowers the rate.
           </p>
           <p className="mb-5 text-sm leading-relaxed text-ink-soft">
-            Airbnb is explicit that response rate affects where a listing appears in search results. The platform&apos;s stated goal is to surface listings that guests are likely to hear back from, which means properties with lower response rates are systematically deprioritised. This is not a penalty applied after a complaint — it is a structural feature of how search results are ordered for every search by every guest on the platform.
+            Airbnb is explicit that response rate affects where a listing appears in search results. The platform&apos;s stated goal is to surface listings that guests are likely to hear back from, which means properties with lower response rates are systematically deprioritized. This is not a penalty applied after a complaint — it is a structural feature of how search results are ordered for every search by every guest on the platform.
           </p>
           <p className="mb-5 text-sm leading-relaxed text-ink-soft">
             Response rate also gates Superhost status. Maintaining a response rate of 90% or above over the past year is one of Airbnb&apos;s published Superhost eligibility criteria. Dropping below that threshold makes a host ineligible at the next quarterly assessment, regardless of review scores, booking volume, or cancellation rate. Superhost status itself carries search benefits — it is displayed prominently in search results and is a trust signal that influences booking decisions.

@@ -148,7 +148,7 @@ export default function AfterHoursSupportPage() {
             Guest Support Operations for independent hotels: overnight and weekend calls and messages answered live, with emergencies escalated to your on-call manager.
           </p>
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-ink-soft">
-            After-hours hotel front desk support gives your hotel a trained person on guest calls and messages after your desk closes. We answer overnight and weekend calls, late check-in and access questions, and reservation enquiries. Emergencies go to your on-call manager. It works like a 24-hour front desk without a night shift on payroll. After-hours coverage is part of our{" "}
+            After-hours hotel front desk support gives your hotel a trained person on guest calls and messages after your desk closes. We answer overnight and weekend calls, late check-in and access questions, and reservation inquiries. Emergencies go to your on-call manager. It works like a 24-hour front desk without a night shift on payroll. After-hours coverage is part of our{" "}
             <Link href="/services/hotel-answering-service" className="text-gold-dark underline underline-offset-2 hover:text-gold">
               hotel answering service
             </Link>
@@ -170,7 +170,7 @@ export default function AfterHoursSupportPage() {
         />
         <div className="mt-5 max-w-2xl space-y-4 text-sm leading-relaxed text-ink-soft">
           <p>
-            After-hours hotel front desk support means a trained person covers your guest calls and messages through the night and at weekends, without you hiring a full overnight shift. Late check-ins, access questions, noise complaints and routine overnight enquiries are handled using your procedures. Situations involving guest safety, security or property damage go to your designated on-call contact, following the protocol you set during setup.
+            After-hours hotel front desk support means a trained person covers your guest calls and messages through the night and at weekends, without you hiring a full overnight shift. Late check-ins, access questions, noise complaints and routine overnight inquiries are handled using your procedures. Situations involving guest safety, security or property damage go to your designated on-call contact, following the protocol you set during setup.
           </p>
           <p>
             Many independent hotels and boutique properties run the front desk until 10 or 11pm, then have little or no cover overnight. Hotel after hours calls still come in: late arrivals, guests who can&apos;t get in, and people trying to book for tomorrow. Our{" "}
@@ -203,7 +203,7 @@ export default function AfterHoursSupportPage() {
           {[
             {
               label: "Overnight call coverage",
-              body: "Reservation, guest and general enquiry calls answered through the night.",
+              body: "Reservation, guest and general inquiry calls answered through the night.",
             },
             {
               label: "Weekend and holiday coverage",
@@ -265,7 +265,7 @@ export default function AfterHoursSupportPage() {
             <ul className="space-y-2.5">
               {[
                 "Guest safety or medical emergencies",
-                "Security incidents or suspected unauthorised access",
+                "Security incidents or suspected unauthorized access",
                 "Property damage that needs someone on site",
                 "Complaints or compensation requests that can't be settled overnight",
               ].map((item) => (
@@ -303,7 +303,7 @@ export default function AfterHoursSupportPage() {
               outcome: "Complaint is logged and escalated. Guest has spoken to a person, not voicemail.",
             },
             {
-              situation: "Overnight booking enquiry",
+              situation: "Overnight booking inquiry",
               trigger: "Caller wants to know if a room is available for tomorrow night and what the rate is.",
               action: "Agent checks availability in your PMS, quotes your approved rate and processes the booking if the caller confirms. If availability is blocked or rate requires approval, it is noted and the caller is offered a callback at opening.",
               outcome: "Booking captured overnight rather than lost to a competitor.",

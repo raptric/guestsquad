@@ -38,12 +38,12 @@ const FAQS = [
     a: "It depends on your setup: a PMS login, channel manager access, or an availability schedule you provide. The brief includes approved rates, minimum stays, blackout dates and what needs escalation. Access and permissions are confirmed before coverage starts.",
   },
   {
-    q: "Can you handle group or event enquiries?",
-    a: "We can receive and acknowledge group enquiries. Where a group needs contract pricing, negotiation or a sales process, it goes to your team. The scope of group handling is set in your brief.",
+    q: "Can you handle group or event inquiries?",
+    a: "We can receive and acknowledge group inquiries. Where a group needs contract pricing, negotiation or a sales process, it goes to your team. The scope of group handling is set in your brief.",
   },
   {
     q: "What if a guest asks for a rate that isn't in the brief?",
-    a: "It isn't offered or confirmed. The enquiry is acknowledged and passed to the right contact (your reservations lead, revenue manager or the property), and the guest is kept informed.",
+    a: "It isn't offered or confirmed. The inquiry is acknowledged and passed to the right contact (your reservations lead, revenue manager or the property), and the guest is kept informed.",
   },
   {
     q: "We run several hotels. Is this the right service?",
@@ -154,7 +154,7 @@ export default function ReservationSupportPage() {
         />
         <div className="mt-5 max-w-2xl space-y-4 text-sm leading-relaxed text-ink-soft">
           <p>
-            Reservation support covers live and written booking enquiries on the channels you agree: phone, email, OTA message threads and direct booking requests. Agents work from your property brief: approved rates, availability access, permitted actions and escalation contacts.
+            Reservation support covers live and written booking inquiries on the channels you agree: phone, email, OTA message threads and direct booking requests. Agents work from your property brief: approved rates, availability access, permitted actions and escalation contacts.
           </p>
           <p>
             It does not cover revenue management, pricing strategy or contract negotiation. Those decisions stay with your team. Requests within your brief are handled; anything outside it is passed to the right person.
@@ -165,10 +165,10 @@ export default function ReservationSupportPage() {
             <p className="mb-4 text-xs font-semibold uppercase tracking-[0.15em] text-ink-muted">We handle</p>
             <ul className="space-y-2.5">
               {[
-                "Availability checks and room enquiries",
+                "Availability checks and room inquiries",
                 "Rate questions and approved booking actions, within your agreed permissions",
                 "Date changes, cancellations and modifications, per your policy",
-                "Group and special-rate enquiries, routed or answered within your brief",
+                "Group and special-rate inquiries, routed or answered within your brief",
                 "Follow-up and confirmation messages after a booking",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-2.5 text-sm text-ink-soft">
@@ -311,7 +311,7 @@ export default function ReservationSupportPage() {
               {[
                 { channel: "Phone", request: "Availability, 3 nights from 14 Aug", outcome: "Quoted and confirmed", escalated: false },
                 { channel: "Booking.com", request: "Date change, check-out +1 night", outcome: "Processed within policy", escalated: false },
-                { channel: "Email", request: "Group enquiry, 8 rooms", outcome: "Escalated to manager", escalated: true },
+                { channel: "Email", request: "Group inquiry, 8 rooms", outcome: "Escalated to manager", escalated: true },
                 { channel: "Phone", request: "Cancellation, 48 hours' notice", outcome: "Processed within policy", escalated: false },
               ].map((row) => (
                 <div key={row.request} className="flex items-start justify-between gap-3 rounded-lg border border-line bg-surface px-4 py-3">
@@ -347,7 +347,7 @@ export default function ReservationSupportPage() {
                   "Live booking call answering",
                   "Availability checks and rate quotes",
                   "Booking changes and cancellations within your policy",
-                  "OTA and email booking enquiries",
+                  "OTA and email booking inquiries",
                   "Action log and escalation notes",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-2.5 text-sm text-ink-soft">
@@ -369,7 +369,7 @@ export default function ReservationSupportPage() {
                 {[
                   "Coverage hours — overflow, after-hours or full time",
                   "Channels covered — phone, email, OTA",
-                  "Call and enquiry volume",
+                  "Call and inquiry volume",
                   "Actions included in the agreed scope",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-2.5 text-sm text-ink-soft">
@@ -407,13 +407,13 @@ export default function ReservationSupportPage() {
           title="Which service fits your property."
         />
         <p className="mt-4 text-sm text-ink-soft">
-          This page is for single hotels that want booking enquiries handled within their own rates and rules.
+          This page is for single hotels that want booking inquiries handled within their own rates and rules.
         </p>
         <div className="mt-6 grid gap-4 sm:grid-cols-3">
           {[
             {
               label: "For hotel groups",
-              body: "One team handling enquiries and bookings across several properties.",
+              body: "One team handling inquiries and bookings across several properties.",
               href: "/services/central-reservations",
               linkLabel: "Hotel reservation call center",
             },
@@ -523,7 +523,7 @@ export default function ReservationSupportPage() {
               Book a Coverage Review
             </CoverageReviewButton>
             <p className="mt-4 text-xs text-ink-muted">
-              Useful for the conversation: your booking channels, approximate monthly enquiry volume, and your PMS or channel manager.
+              Useful for the conversation: your booking channels, approximate monthly inquiry volume, and your PMS or channel manager.
             </p>
             <div className="mt-6 border-t border-line pt-5">
               <p className="mb-3 text-xs font-semibold uppercase tracking-[0.14em] text-ink-muted">Related services</p>

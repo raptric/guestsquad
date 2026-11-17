@@ -30,7 +30,7 @@ const FAQS = [
   },
   {
     q: "How is the recovery estimate calculated?",
-    a: "The estimate assumes 70 percent of the missed revenue could be recovered once those calls are answered. The other 30 percent allows for callers who have already booked elsewhere, aren't serious enquiries, or call outside bookable hours. It's a planning assumption, not a guaranteed result.",
+    a: "The estimate assumes 70 percent of the missed revenue could be recovered once those calls are answered. The other 30 percent allows for callers who have already booked elsewhere, aren't serious inquiries, or call outside bookable hours. It's a planning assumption, not a guaranteed result.",
   },
   {
     q: "How many calls does the average hotel actually miss?",
@@ -89,7 +89,7 @@ export default function CalculatorPage() {
 
       <PageHero
         eyebrow="Revenue Calculator"
-        title="How much are missed reservation enquiries costing you each month?"
+        title="How much are missed reservation inquiries costing you each month?"
         description="Use this missed booking analysis to estimate how unanswered calls and messages are affecting your monthly and annual revenue. Adjust the inputs below for your property. No email required."
       />
 
@@ -107,8 +107,8 @@ export default function CalculatorPage() {
             {[
               {
                 step: "01",
-                title: "Monthly missed reservation enquiries",
-                body: "The number of reservation enquiries that go unanswered, ring out, or reach voicemail during a typical month — calls or messages where a guest was asking about a booking and received no response or was not helped. This includes after-hours calls, peak-hour overflow, and calls missed while your team is with other guests.",
+                title: "Monthly missed reservation inquiries",
+                body: "The number of reservation inquiries that go unanswered, ring out, or reach voicemail during a typical month — calls or messages where a guest was asking about a booking and received no response or was not helped. This includes after-hours calls, peak-hour overflow, and calls missed while your team is with other guests.",
               },
               {
                 step: "02",

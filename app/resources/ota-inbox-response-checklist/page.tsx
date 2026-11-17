@@ -60,8 +60,8 @@ export default function OtaInboxChecklistPage() {
         title="1. Inbox Setup and Access"
         note="Confirm these are in place before any team member or partner handles OTA messages."
       >
-        <CheckItem>Booking.com Message Center login credentials are documented and accessible to all authorised handlers.</CheckItem>
-        <CheckItem>Expedia Partner Central inbox access is set up for all authorised users.</CheckItem>
+        <CheckItem>Booking.com Message Center login credentials are documented and accessible to all authorized handlers.</CheckItem>
+        <CheckItem>Expedia Partner Central inbox access is set up for all authorized users.</CheckItem>
         <CheckItem>Airbnb account access is granted to the messaging team via Co-Host or shared credentials as appropriate.</CheckItem>
         <CheckItem>Vrbo / VRBO inbox access is confirmed and tested.</CheckItem>
         <CheckItem>Notification settings on each platform are configured so new messages trigger an alert, not just a daily summary.</CheckItem>
@@ -94,12 +94,12 @@ export default function OtaInboxChecklistPage() {
 
       <DocSection
         title="4. Modification and Cancellation Requests"
-        note="Handle within the platform where possible. Never process outside OTA without authorisation."
+        note="Handle within the platform where possible. Never process outside OTA without authorization."
       >
         <CheckItem>Date change requests are handled within the OTA platform using the correct modification flow, not via direct payment or third-party arrangement.</CheckItem>
         <CheckItem>Cancellation requests within the refund window: confirm the policy, process within platform, confirm to guest.</CheckItem>
         <CheckItem>Cancellation requests outside the refund window: acknowledge, explain policy, log, and escalate to GM for any exception decisions.</CheckItem>
-        <CheckItem>No refund or exception is offered without explicit GM or owner authorisation.</CheckItem>
+        <CheckItem>No refund or exception is offered without explicit GM or owner authorization.</CheckItem>
         <CheckItem>Any modification that changes the rate must be reviewed against current pricing before confirmation.</CheckItem>
         <CheckItem>OTA-side modifications are confirmed in PMS to keep records aligned.</CheckItem>
       </DocSection>
@@ -112,7 +112,7 @@ export default function OtaInboxChecklistPage() {
         <CheckItem>Agent empathises and confirms they are looking into the issue before providing any resolution.</CheckItem>
         <CheckItem>Minor complaints (housekeeping, noise, missing item) are handled directly with an apology and a concrete action taken.</CheckItem>
         <CheckItem>Serious complaints (safety, significant property issue, health concern) are escalated to management immediately via call, not held in OTA message thread.</CheckItem>
-        <CheckItem>No compensation, refund, or upgrade is offered without authorisation.</CheckItem>
+        <CheckItem>No compensation, refund, or upgrade is offered without authorization.</CheckItem>
         <CheckItem>Resolution is followed up in the same OTA message thread once actioned, so the guest has a record.</CheckItem>
         <CheckItem>Every complaint is logged regardless of how it was resolved, as it may precede a negative review.</CheckItem>
       </DocSection>

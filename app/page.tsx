@@ -20,7 +20,7 @@ export const metadata: Metadata = buildMetadata({
 const HOME_FAQS = [
   {
     q: "Is Guest Squad a call center?",
-    a: "Yes, one built for hospitality. Our team handles guest calls, reservation enquiries and agreed inboxes using your systems and procedures.",
+    a: "Yes, one built for hospitality. Our team handles guest calls, reservation inquiries and agreed inboxes using your systems and procedures.",
   },
   {
     q: "How does Guest Squad learn our property's procedures and tone?",
@@ -73,7 +73,7 @@ export default function HomePage() {
               Guest Support Operations for Hotels and Vacation Rentals
             </h1>
             <p className="mt-5 max-w-lg text-lg leading-relaxed text-ink-soft">
-              Trained people answer guest calls, handle reservation enquiries and manage agreed inboxes using your property&apos;s systems and procedures.
+              Trained people answer guest calls, handle reservation inquiries and manage agreed inboxes using your property&apos;s systems and procedures.
             </p>
             <div className="mt-7 flex flex-col gap-4 sm:flex-row">
               <CoverageReviewButton variant="gold" size="lg" ctaLocation="homepage_hero">
@@ -117,7 +117,7 @@ export default function HomePage() {
               A hospitality call center for hotels and vacation rentals
             </h2>
             <p className="mt-4 text-sm leading-relaxed text-ink-soft">
-              Our hospitality contact center provides guest communication services through your existing phone, messaging and booking systems. Guest Squad covers the guest calls, reservation enquiries and messages your team cannot take, at any hour you choose. Coverage runs under your brand, to your procedures, and escalates to your people the way you set.
+              Our hospitality contact center provides guest communication services through your existing phone, messaging and booking systems. Guest Squad covers the guest calls, reservation inquiries and messages your team cannot take, at any hour you choose. Coverage runs under your brand, to your procedures, and escalates to your people the way you set.
             </p>
           </div>
         </div>
@@ -144,7 +144,7 @@ export default function HomePage() {
             <p className="mt-3 grow text-sm leading-relaxed text-ink-soft">
               Live phone coverage when your front desk is closed or busy. Our{" "}
               <Link href="/services/hotel-answering-service" className="text-gold-dark underline underline-offset-2 hover:text-gold">hotel answering service</Link>{" "}
-              handles front-desk overflow, room and stay enquiries, late arrivals, guest requests, maintenance escalations and shift handovers. Guest messaging and OTA inbox support are included.
+              handles front-desk overflow, room and stay inquiries, late arrivals, guest requests, maintenance escalations and shift handovers. Guest messaging and OTA inbox support are included.
             </p>
             <div className="mt-5">
               <CoverageReviewButton variant="gold" size="sm" ctaLocation="homepage_hotel_card">
@@ -164,7 +164,7 @@ export default function HomePage() {
             <p className="mt-3 grow text-sm leading-relaxed text-ink-soft">
               One reservations team for several properties. Our{" "}
               <Link href="/services/central-reservations" className="text-gold-dark underline underline-offset-2 hover:text-gold">hotel reservation call center</Link>{" "}
-              handles reservation enquiries, property selection and availability, approved quotes and booking changes, with property-specific booking rules and reporting for each property.
+              handles reservation inquiries, property selection and availability, approved quotes and booking changes, with property-specific booking rules and reporting for each property.
             </p>
             <div className="mt-5">
               <CoverageReviewButton variant="gold" size="sm" ctaLocation="homepage_hotel_groups_card">

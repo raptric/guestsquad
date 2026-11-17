@@ -79,7 +79,7 @@ export default function AfterHoursChecklistPage() {
         <div className="flex flex-col divide-y divide-line rounded-lg border border-line bg-surface">
           <CheckItem>Night audit calls (billing questions, late charges, audit queries) are handled live, not deferred to morning.</CheckItem>
           <CheckItem>The handler understands what night audit calls typically involve and can answer or log correctly.</CheckItem>
-          <CheckItem>Disputes or rate queries during audit hours are logged and escalated correctly, not resolved without authorisation.</CheckItem>
+          <CheckItem>Disputes or rate queries during audit hours are logged and escalated correctly, not resolved without authorization.</CheckItem>
           <CheckItem>Morning team receives a clear summary of any audit-related calls before their shift starts.</CheckItem>
         </div>
       </Section>

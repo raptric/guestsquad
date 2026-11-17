@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   ...buildMetadata({
     title: PAGE_TITLE,
     description:
-      "OTA inbox management for hotels and vacation rentals: Booking.com, Expedia, Airbnb and Vrbo guest messages answered from your property brief and policies.",
+      "OTA inbox management for hotels and vacation rentals: Booking.com, Expedia, Airbnb and Vrbo messages answered to your property brief and policies.",
     path: "/services/ota-inbox-management",
   }),
   title: { absolute: PAGE_TITLE },
@@ -60,7 +60,7 @@ export default function OtaInboxManagementPage() {
             name: "OTA Inbox Management",
             serviceType: "OTA Inbox Management Service",
             description:
-              "OTA inbox management for hotels and vacation rentals: Booking.com, Expedia, Airbnb and Vrbo guest messages answered from your property brief and policies.",
+              "OTA inbox management for hotels and vacation rentals: Booking.com, Expedia, Airbnb and Vrbo messages answered to your property brief and policies.",
             url: `${SITE.url}${PATH}`,
             provider: { "@id": `${SITE.url}/#organization` },
             areaServed: "Worldwide",
@@ -82,7 +82,7 @@ export default function OtaInboxManagementPage() {
             url: `${SITE.url}${PATH}`,
             name: PAGE_TITLE,
             description:
-              "OTA inbox management for hotels and vacation rentals: Booking.com, Expedia, Airbnb and Vrbo guest messages answered from your property brief and policies.",
+              "OTA inbox management for hotels and vacation rentals: Booking.com, Expedia, Airbnb and Vrbo messages answered to your property brief and policies.",
             inLanguage: "en",
             isPartOf: { "@id": `${SITE.url}/#website` },
             about: { "@id": `${SITE.url}${PATH}#service` },

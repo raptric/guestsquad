@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   ...buildMetadata({
     title: PAGE_TITLE,
     description:
-      "Vacation rental answering service: trained people cover guest calls, Airbnb and Vrbo messages, late check-ins and lockouts. Scoped to your listings and volume.",
+      "Vacation rental answering service: trained agents cover guest calls, Airbnb and Vrbo messages, late check-ins and lockouts, scoped to your listings.",
     path: "/services/vacation-rental-answering-service",
   }),
   title: { absolute: PAGE_TITLE },
@@ -121,7 +121,7 @@ export default function VacationRentalAnsweringServicePage() {
             name: "Vacation Rental Answering Service",
             serviceType: "Vacation Rental Answering Service",
             description:
-              "Vacation rental answering service: trained people cover guest calls, Airbnb and Vrbo messages, late check-ins and lockouts. Scoped to your listings and volume.",
+              "Vacation rental answering service: trained agents cover guest calls, Airbnb and Vrbo messages, late check-ins and lockouts, scoped to your listings.",
             url: `${SITE.url}${PATH}`,
             provider: { "@id": `${SITE.url}/#organization` },
             areaServed: "Worldwide",
@@ -142,7 +142,7 @@ export default function VacationRentalAnsweringServicePage() {
             url: `${SITE.url}${PATH}`,
             name: "Vacation Rental Answering Service | 24/7 Guest Calls",
             description:
-              "Vacation rental answering service: trained people cover guest calls, Airbnb and Vrbo messages, late check-ins and lockouts. Scoped to your listings and volume.",
+              "Vacation rental answering service: trained agents cover guest calls, Airbnb and Vrbo messages, late check-ins and lockouts, scoped to your listings.",
             inLanguage: "en",
             isPartOf: { "@id": `${SITE.url}/#website` },
             about: { "@id": `${SITE.url}${PATH}#service` },

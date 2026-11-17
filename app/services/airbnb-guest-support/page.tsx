@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   ...buildMetadata({
     title: PAGE_TITLE,
     description:
-      "Airbnb guest services for hosts and STR operators: guest messages answered day and night, check-in help, in-stay issues and your response rate protected.",
+      "Airbnb guest support for hosts and STR operators: messages answered day and night, check-in help, in-stay issues and your response rate protected.",
     path: "/services/airbnb-guest-support",
   }),
   title: { absolute: PAGE_TITLE },
@@ -68,7 +68,7 @@ export default function AirbnbGuestSupportPage() {
             name: "Airbnb Guest Services",
             serviceType: "Airbnb Guest Support Service",
             description:
-              "Airbnb guest services for hosts and STR operators: guest messages answered day and night, check-in help, in-stay issues and your response rate protected.",
+              "Airbnb guest support for hosts and STR operators: messages answered day and night, check-in help, in-stay issues and your response rate protected.",
             url: `${SITE.url}${PATH}`,
             provider: { "@id": `${SITE.url}/#organization` },
             areaServed: "Worldwide",
@@ -86,7 +86,7 @@ export default function AirbnbGuestSupportPage() {
             url: `${SITE.url}${PATH}`,
             name: PAGE_TITLE,
             description:
-              "Airbnb guest services for hosts and STR operators: guest messages answered day and night, check-in help, in-stay issues and your response rate protected.",
+              "Airbnb guest support for hosts and STR operators: messages answered day and night, check-in help, in-stay issues and your response rate protected.",
             inLanguage: "en",
             isPartOf: { "@id": `${SITE.url}/#website` },
             about: { "@id": `${SITE.url}${PATH}#service` },

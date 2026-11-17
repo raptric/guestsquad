@@ -14,7 +14,7 @@ import { SITE } from "@/lib/site-data";
 export const metadata: Metadata = buildMetadata({
   title: "Hotel Reservation Call Center for Hotel Groups",
   description:
-    "Hotel reservation call center for groups: one team handles quotes, bookings and changes across all properties, scoped to your inquiry volume and channels.",
+    "Hotel reservation call center for hotel groups: one team handles quotes, bookings and changes across all properties, scoped to your inquiry volume.",
   path: "/services/central-reservations",
 });
 
@@ -127,7 +127,7 @@ export default function CentralReservationsPage() {
             serviceType: "Hotel reservation call center",
             alternateName: "Central reservations",
             description:
-              "Hotel reservation call center for groups: one team handles quotes, bookings and changes across all properties, scoped to your inquiry volume and channels.",
+              "Hotel reservation call center for hotel groups: one team handles quotes, bookings and changes across all properties, scoped to your inquiry volume.",
             url: `${SITE.url}${PATH}`,
             provider: { "@id": `${SITE.url}/#organization` },
             areaServed: "Worldwide",
@@ -149,7 +149,7 @@ export default function CentralReservationsPage() {
             url: `${SITE.url}${PATH}`,
             name: "Hotel Reservation Call Center for Hotel Groups",
             description:
-              "Hotel reservation call center for groups: one team handles quotes, bookings and changes across all properties, scoped to your inquiry volume and channels.",
+              "Hotel reservation call center for hotel groups: one team handles quotes, bookings and changes across all properties, scoped to your inquiry volume.",
             inLanguage: "en",
             isPartOf: { "@id": `${SITE.url}/#website` },
             about: { "@id": `${SITE.url}${PATH}#service` },
@@ -220,7 +220,7 @@ export default function CentralReservationsPage() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/brand-assets/central-reservations-hero.svg"
-              alt="Illustration of three hotel property cards (Edinburgh, Bristol and Bath) feeding a central reservations desk panel that lists a confirmed reservation, a handled inquiry, an escalation to the GM and a daily handover."
+              alt="Central reservations dashboard showing three hotel properties with live reservation activity, handled inquiries and escalation routing."
               width={560}
               height={420}
               className="h-auto w-full"

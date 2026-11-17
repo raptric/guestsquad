@@ -9,7 +9,7 @@ import { JsonLd } from "@/components/site/json-ld";
 export const metadata: Metadata = buildMetadata({
   title: "Hotel & Vacation Rental Guest Operations Services",
   description:
-    "Live hospitality coverage for hotels, hotel groups and vacation rental operators. Reservation calls, OTA inboxes and guest communication handled by trained people.",
+    "Live hospitality coverage for hotels and vacation rental operators. Reservation calls, OTA inboxes and guest messages handled by trained people.",
   path: "/services",
 });
 

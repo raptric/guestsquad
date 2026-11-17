@@ -202,10 +202,9 @@ export default function VacationRentalAnsweringServicePage() {
           </div>
           <div className="relative aspect-[4/3] overflow-hidden rounded-xl border border-line">
             <Image
-              src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1200&q=85"
-              alt="Holiday home exterior with a keypad entry door"
+              src="/vacation-rental-interior.webp"
+              alt="Bright vacation rental living room with natural light and plants"
               fill
-              unoptimized
               priority
               sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover"

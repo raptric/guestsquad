@@ -181,7 +181,7 @@ export default function CentralReservationsPage() {
               Central Reservations Desk
             </p>
             <h1 className="text-4xl font-medium leading-[1.08] tracking-tight text-ink md:text-5xl">
-              Hotel Reservation Call Center for Hotel Groups
+              Hotel Reservation Call Center & Front Desk for Hotel Groups
             </h1>
             <p className="mt-5 max-w-lg text-base font-medium leading-snug text-ink">
               Guest Support Operations for hotel groups: one reservations team across your participating properties.

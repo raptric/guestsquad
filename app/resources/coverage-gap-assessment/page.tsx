@@ -1,6 +1,7 @@
 ﻿import type { Metadata } from "next";
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, breadcrumbSchema, webPageSchema } from "@/lib/seo";
 import { PrintLayout } from "@/components/site/print-layout";
+import { JsonLd } from "@/components/site/json-ld";
 
 export const metadata: Metadata = buildMetadata({
   title: "Hotel Guest Coverage Gap Assessment",
@@ -39,7 +40,22 @@ function DocSection({ title, subtitle, children }: { title: string; subtitle?: s
 
 export default function CoverageGapAssessmentPage() {
   return (
-    <PrintLayout
+    <>
+      <JsonLd
+        data={[
+          webPageSchema({
+            name: "Hotel Guest Coverage Gap Assessment | Guest Squad",
+            description: "Self-assessment for hotel and STR operators to identify uncovered hours, unmanned channels, escalation gaps, and which Guest Squad service fits.",
+            path: "/resources/coverage-gap-assessment",
+          }),
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Resources", path: "/resources" },
+            { name: "Coverage Gap Assessment", path: "/resources/coverage-gap-assessment" },
+          ]),
+        ]}
+      />
+      <PrintLayout
       title="Guest Coverage Gap Assessment"
       subtitle="Identify where your property is losing bookings and guests to coverage gaps."
       badge="Self-Assessment"
@@ -219,5 +235,6 @@ export default function CoverageGapAssessmentPage() {
         <p className="mt-1 text-xs text-ink-soft">Book a coverage review at guestsquad.com/contact</p>
       </div>
     </PrintLayout>
+    </>
   );
 }

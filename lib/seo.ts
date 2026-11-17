@@ -132,21 +132,6 @@ export function organizationSchema() {
       { "@type": "Thing", name: "Call centre", sameAs: "https://en.wikipedia.org/wiki/Call_centre" },
       { "@type": "Thing", name: "Answering service", sameAs: "https://en.wikipedia.org/wiki/Answering_service" },
     ],
-    hasOfferCatalog: {
-      "@type": "OfferCatalog",
-      name: "Guest Support Operations",
-      itemListElement: [
-        { "@type": "Offer", itemOffered: { "@id": `${SITE.url}/services/hotel-answering-service#service` } },
-        { "@type": "Offer", itemOffered: { "@id": `${SITE.url}/services/vacation-rental-answering-service#service` } },
-        { "@type": "Offer", itemOffered: { "@id": `${SITE.url}/services/central-reservations#service` } },
-        { "@type": "Offer", itemOffered: { "@id": `${SITE.url}/services/after-hours-support#service` } },
-        { "@type": "Offer", itemOffered: { "@id": `${SITE.url}/services/reservation-support#service` } },
-        { "@type": "Offer", itemOffered: { "@id": `${SITE.url}/services/guest-messaging#service` } },
-        { "@type": "Offer", itemOffered: { "@id": `${SITE.url}/services/ota-inbox-management#service` } },
-        { "@type": "Offer", itemOffered: { "@id": `${SITE.url}/services/airbnb-guest-support#service` } },
-        { "@type": "Offer", itemOffered: { "@id": `${SITE.url}/services/back-office-operations#service` } },
-      ],
-    },
   };
 }
 

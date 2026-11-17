@@ -6,7 +6,7 @@ import { JsonLd } from "@/components/site/json-ld";
 import { LEGAL_EFFECTIVE_DATE, PRIVACY_INTRO, PRIVACY_SECTIONS } from "@/lib/legal-content";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Privacy Policy",
+  title: "Privacy Policy | Guest Squad",
   description:
     "How Guest Squad collects, uses, and protects personal data. Covers data subject rights, our role as controller and processor, and GDPR compliance.",
   path: "/privacy-policy",

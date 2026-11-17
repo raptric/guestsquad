@@ -236,12 +236,11 @@ export default function HomePage() {
           {/* Image */}
           <div className="relative hidden aspect-[4/5] overflow-hidden rounded-2xl shadow-md lg:block">
             <Image
-              src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=900&q=85"
+              src="/team-high-five.webp"
               alt="Hotel front desk team managing guest reservations and calls"
               fill
               loading="lazy"
               sizes="50vw"
-              unoptimized
               className="object-cover object-center"
             />
           </div>

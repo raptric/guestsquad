@@ -35,7 +35,7 @@ export const hotelAnsweringServiceData: ServiceDetailData = {
   answerBlock:
     "A hotel answering service provides remote phone coverage using the property's greeting, information and handling procedures. Guest Squad answers agreed incoming calls, assists callers within the approved scope and passes requests requiring local action or management approval to the right contact.\n\nFor independent hotels and boutique properties with lean front-desk staffing, it means reservation inquiries, guest questions and overflow calls reach a trained person instead of going to voicemail. Coverage hours, call routing and what agents can handle are agreed before any call goes live.",
   image: {
-    src: "https://images.unsplash.com/photo-1525182008055-f88b95ff7980?w=1600&q=90",
+    src: "/agent-on-call.webp",
     alt: "Hospitality-trained agent handling inbound hotel reservation calls and guest inquiries",
   },
   includesTitle: "Hotel calls we can handle for your property",

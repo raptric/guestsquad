@@ -194,7 +194,7 @@ export const reservationSupportData: ServiceDetailData = {
   answerBlock:
     "Hotel reservation support covers inbound and outbound booking calls so that every rate quote, room inquiry, and direct booking request is handled by a trained person — not voicemail. Guest Squad agents work inside your PMS using your live rates, room types, and policies, so reservation calls that arrive overnight, at weekends, or during busy periods convert into confirmed bookings instead of disappearing.\n\nFor hotels losing direct bookings to OTAs after hours, consistent reservation phone coverage is often the single highest-ROI fix: a booking won from a call costs no commission and builds a direct guest relationship. The [missed booking revenue calculator](/resources/missed-booking-calculator) can put a number on what unanswered calls are costing your property before your next coverage review.",
   image: {
-    src: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1600&q=90",
+    src: "/reservation-agent.webp",
     alt: "Reservation agent on a phone call at a desk with monitors",
   },
   includesTitle: "Booking calls answered before guests choose another property.",
@@ -304,7 +304,7 @@ export const guestMessagingData: ServiceDetailData = {
   answerBlock:
     "Hotel guest messaging support means every SMS, WhatsApp, email, and in-app message your property receives is monitored and answered by a trained person — across the full stay journey. Pre-arrival questions get answered before check-in, in-stay requests are handled in real time, and post-stay follow-ups go out without your team having to remember to send them.\n\nGuest Squad agents work in your property's voice using your tone guidelines, policies, and approved responses — documented in a [guest messaging SOP](/resources/hotel-guest-messaging-sop-template) we build with you during onboarding. Housekeeping, maintenance, safety issues, and compensation requests are routed to your on-site team immediately, so nothing sensitive is handled without your knowledge.\n\nIf your primary concern is Booking.com, Expedia, or Airbnb inbox speed and pre-booking reply rates, the [OTA Inbox Management](/services/ota-inbox-management) service covers that scope specifically.",
   image: {
-    src: "https://images.unsplash.com/photo-1592890288564-76628a30a657?w=1600&q=90",
+    src: "/guest-messaging.webp",
     alt: "Hotel guest messaging support across SMS, WhatsApp, and OTA channels",
   },
   includesTitle: "SMS, WhatsApp, email, and guest-app replies across the stay journey.",
@@ -410,7 +410,7 @@ export const otaInboxData: ServiceDetailData = {
   answerBlock:
     "OTA inbox management is included within the Hotel Answering Service and Vacation Rental Answering Service. This page explains its scope for clients who want inbox handling as a standalone arrangement or as part of a multi-property scope.\n\nOTA inbox management means your Booking.com, Expedia, and Airbnb message threads are monitored and answered around the clock — not checked once a day between other tasks. Pre-booking questions are answered fast enough to win the booking before the guest moves on. Post-booking messages are resolved without your team having to log into multiple extranets. Guest reviews are responded to in your brand voice on schedule.\n\nOTA response time is one of the few ranking factors hotels can directly control on Booking.com and Expedia. Slow responses push your property down in search results and conversion rankings on the platforms that drive your occupancy. Guest Squad treats every unread message as a potential booking at risk. The [Booking.com message support checklist](/resources/booking-com-message-support) covers the response standards your property should be hitting across pre-booking, in-stay, and post-stay threads.\n\nIf your issue goes beyond OTA platforms — SMS, WhatsApp, email, or in-stay guest communication — the [Guest Messaging](/services/guest-messaging) service covers that scope separately.",
   image: {
-    src: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=1600&q=90",
+    src: "/ota-inbox-team.webp",
     alt: "Team monitoring OTA inboxes across multiple screens",
   },
   includesTitle: "Booking.com, Expedia, and Airbnb replies before the guest moves on.",
@@ -524,7 +524,7 @@ export const afterHoursData: ServiceDetailData = {
   answerBlock:
     "After-hours coverage is available as part of our Hotel Answering Service — which includes guest messaging and OTA inboxes — or as a standalone phone-only arrangement. If you need messaging coverage alongside overnight calls, see the [Hotel Answering Service](/services/hotel-answering-service).\n\nAfter-hours hotel front desk support means your property has a live, trained person covering guest calls and messages through the night and on weekends, without hiring a full overnight shift. Late check-ins, access questions, noise complaints, and routine overnight inquiries are handled directly. Genuine emergencies involving guest safety, security, or property damage are escalated immediately to your designated on-call contact, following the protocol you set during onboarding.\n\nMost independent hotels and boutique properties run their front desk until 10–11pm and then have no meaningful overnight coverage. That gap costs real bookings and real guest satisfaction scores. After-hours support fills that window without adding permanent headcount to your payroll. The [after-hours hotel support checklist](/resources/after-hours-hotel-support-checklist) walks through how to assess your overnight coverage gaps before setting up a support layer.\n\nIf you operate Airbnb, Vrbo, or a short-term rental portfolio and need broader ongoing guest support rather than hotel-style front-desk coverage, the [Vacation Rental Answering Service](/services/vacation-rental-answering-service) covers that scope separately.",
   image: {
-    src: "https://images.unsplash.com/photo-1534679541758-8dc76ff8081d?w=1600&q=90",
+    src: "/hotel-lobby-night.webp",
     alt: "Modern hotel lobby and reception desk lit at night",
   },
   includesTitle: "Overnight coverage without hiring a full night shift.",
@@ -633,7 +633,7 @@ export const backOfficeData: ServiceDetailData = {
   answerBlock:
     "Hotel back office operations support covers the daily reconciliation and financial administration work that protects your revenue — night audit, OTA payout matching, and guest billing exceptions — for hotels that cannot dedicate in-house staff to this function every day. Guest Squad works inside your existing PMS, OTA extranets, and processor portals, flagging discrepancies between what you were paid and what your records show, the day they occur.\n\nRevenue leakage from missed OTA payouts, short settlements, and unposted charges is easy to miss when night audit is done inconsistently or by someone who is also covering the front desk. Having a dedicated daily reconciliation process means nothing accumulates to month-end without a paper trail. If you have not yet quantified the cost of coverage gaps across your property, the [missed booking revenue calculator](/resources/missed-booking-calculator) is a useful starting point before reviewing your back-office setup.",
   image: {
-    src: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1600&q=90",
+    src: "/back-office-team.webp",
     alt: "Back-office team reviewing daily reconciliation reports",
   },
   includesTitle: "Night audit and OTA reconciliation before leakage reaches month-end.",
@@ -736,7 +736,7 @@ export const airbnbSupportData: ServiceDetailData = {
   answerBlock:
     "Airbnb guest support means your Airbnb message inbox is monitored and answered around the clock by a trained person — not left on read while you sleep or work another job. Check-in questions, listing FAQs, in-stay issues, and post-stay review responses are handled using your specific listing instructions, so your response rate stays high and your guest experience is consistent across every booking.\n\nThis service is built around the Airbnb platform: in-app messaging, response rate metrics, Superhost status protection, and the nuances of managing guests across multiple listings. For STR operators who also need live call answering alongside message coverage, the [vacation rental answering service](/services/vacation-rental-answering-service) covers that scope.",
   image: {
-    src: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1600&q=90",
+    src: "/vacation-rental-interior.webp",
     alt: "Airbnb host property with round-the-clock guest support and messaging coverage",
   },
   includesTitle: "Guest replies, access issues, and listing FAQs handled around the clock.",
@@ -840,7 +840,7 @@ export const vacationRentalAnsweringData: ServiceDetailData = {
   answerBlock:
     "A vacation rental answering service provides live phone coverage for short-term rental operators who cannot personally answer every guest call. When a guest calls with a check-in question, an access problem, or a pre-booking inquiry, a trained agent picks up in your property's name, using your listing-specific instructions, instead of the call hitting your personal voicemail.\n\nThis service is phone-first and built for call volume: prospective guests asking about availability, arriving guests who cannot find the lockbox, in-stay callers reporting an issue. Airbnb and Vrbo in-app messaging is handled separately under [Airbnb Guest Support](/services/airbnb-guest-support), so each service is focused on the channel that needs the most attention.\n\nIf your main concern is hotel-style overnight front-desk coverage and late check-ins rather than STR guest support, the [After-Hours Support](/services/after-hours-support) page covers that scope separately.",
   image: {
-    src: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1600&q=90",
+    src: "/vacation-rental-interior.webp",
     alt: "Short-term rental property where guest communication is managed remotely by a trained support team",
   },
   includesTitle: "Phone and message coverage so you stop being the 24/7 on-call line.",

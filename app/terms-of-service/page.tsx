@@ -6,7 +6,7 @@ import { JsonLd } from "@/components/site/json-ld";
 import { LEGAL_EFFECTIVE_DATE, TERMS_INTRO, TERMS_SECTIONS } from "@/lib/legal-content";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Terms of Service",
+  title: "Terms of Service | Guest Squad",
   description:
     "Guest Squad's Terms of Service, including billing authorization, payment dispute and chargeback handling, pilot terms, and liability terms.",
   path: "/terms-of-service",

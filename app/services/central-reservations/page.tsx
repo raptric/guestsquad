@@ -220,7 +220,7 @@ export default function CentralReservationsPage() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/brand-assets/central-reservations-hero.svg"
-              alt="Central reservations dashboard showing three hotel properties with live reservation activity, handled inquiries and escalation routing."
+              alt="Central reservations dashboard showing live reservation activity and escalation routing."
               width={560}
               height={420}
               className="h-auto w-full"

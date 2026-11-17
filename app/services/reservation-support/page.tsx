@@ -116,7 +116,7 @@ export default function ReservationSupportPage() {
             Capability
           </p>
           <h1 className="max-w-3xl text-4xl font-medium leading-[1.08] tracking-tight text-ink md:text-5xl">
-            Hotel Reservation Support for Independent Hotels
+            Reservation Support for Hotels and Vacation Rentals
           </h1>
           <p className="mt-5 max-w-2xl text-base font-medium leading-snug text-ink">
             Guest Support Operations for single properties: booking calls, availability checks and quotes handled by a team briefed on your hotel.

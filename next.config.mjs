@@ -1,4 +1,64 @@
 /** @type {import('next').NextConfig} */
+
+const ContentSecurityPolicy = `
+  default-src 'self';
+  script-src 'self' 'unsafe-inline' 'unsafe-eval'
+    https://www.googletagmanager.com
+    https://www.clarity.ms
+    https://scripts.clarity.ms
+    https://analytics.ahrefs.com
+    https://assets.calendly.com;
+  style-src 'self' 'unsafe-inline'
+    https://fonts.googleapis.com
+    https://assets.calendly.com;
+  font-src 'self'
+    https://fonts.gstatic.com;
+  img-src 'self' data: blob:
+    https://images.unsplash.com
+    https://www.googletagmanager.com
+    https://www.clarity.ms
+    https://analytics.ahrefs.com
+    https://a0.muscache.com
+    https://cf2.bstatic.com
+    https://www.expedia.com
+    https://www.vrbo.com
+    https://www.hotels.com
+    https://www.cloudbeds.com
+    https://www.mews.com
+    https://www.oracle.com
+    https://www.guesty.com
+    https://www.resnexus.com
+    https://www.airbnb.com
+    https://abbyconnect.com
+    https://smith.ai
+    https://www.mapcommunications.com
+    https://www.patlive.com
+    https://www.ruby.com
+    https://rentalsunited.com
+    https://c.clarity.ms
+    https://*.google.com
+    https://stats.g.doubleclick.net;
+  frame-src
+    https://www.googletagmanager.com
+    https://calendly.com
+    https://assets.calendly.com;
+  connect-src 'self'
+    https://www.google-analytics.com
+    https://analytics.google.com
+    https://www.googletagmanager.com
+    https://www.clarity.ms
+    https://c.clarity.ms
+    https://analytics.ahrefs.com
+    https://calendly.com
+    https://stats.g.doubleclick.net
+    https://region1.google-analytics.com
+    https://region1.analytics.google.com;
+  object-src 'none';
+  base-uri 'self';
+  form-action 'self';
+  frame-ancestors 'none';
+`.replace(/\n/g, ' ').trim();
+
 const nextConfig = {
   reactStrictMode: true,
   compress: true,
@@ -13,6 +73,31 @@ const nextConfig = {
       {
         source: "/downloads/:path*",
         headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }],
+      },
+      {
+        source: "/(.*)",
+        headers: [
+          {
+            key: "Content-Security-Policy",
+            value: ContentSecurityPolicy,
+          },
+          {
+            key: "X-Content-Type-Options",
+            value: "nosniff",
+          },
+          {
+            key: "X-Frame-Options",
+            value: "DENY",
+          },
+          {
+            key: "Referrer-Policy",
+            value: "strict-origin-when-cross-origin",
+          },
+          {
+            key: "Permissions-Policy",
+            value: "camera=(), microphone=(), geolocation=()",
+          },
+        ],
       },
     ];
   },

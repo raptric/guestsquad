@@ -44,6 +44,7 @@ export const metadata: Metadata = buildMetadata({
   description:
     "Booking.com reply score directly affects search ranking. How slow responses trigger ranking drops and what the Preferred Partner penalty costs your listing.",
   path: PATH,
+  noindex: true,
 });
 
 export default function OtaRankingResponseTimePage() {

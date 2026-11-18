@@ -44,6 +44,7 @@ export const metadata: Metadata = buildMetadata({
   description:
     "Airbnb and Vrbo enforce response compliance differently. Here's what each platform requires and how to keep standards consistent across multiple listings.",
   path: PATH,
+  noindex: true,
 });
 
 export default function VacationRentalResponseStandardsPage() {

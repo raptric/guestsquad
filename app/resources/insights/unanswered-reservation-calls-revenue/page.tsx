@@ -44,6 +44,7 @@ export const metadata: Metadata = buildMetadata({
   description:
     "Unanswered reservation calls cost hotels bookings. Here's the revenue impact, why it happens during busy hours, and how to recover lost business.",
   path: PATH,
+  noindex: true,
 });
 
 export default function ReservationCallsRevenuePage() {

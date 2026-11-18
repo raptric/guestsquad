@@ -44,6 +44,7 @@ export const metadata: Metadata = buildMetadata({
   description:
     "Booking.com tracks reply scores and properties below 90% can see ranking impact. How lean hotel teams maintain strong scores without adding headcount.",
   path: PATH,
+  noindex: true,
 });
 
 export default function BookingComLeanTeamsPage() {

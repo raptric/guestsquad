@@ -44,6 +44,7 @@ export const metadata: Metadata = buildMetadata({
   description:
     "Slow OTA replies create back-office problems — inventory mismatches, unprocessed changes, and revenue reporting gaps. Here's how the connection works.",
   path: PATH,
+  noindex: true,
 });
 
 export default function OtaBackOfficeReconciliationPage() {

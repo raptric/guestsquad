@@ -44,6 +44,7 @@ export const metadata: Metadata = buildMetadata({
   description:
     "Hotels lose bookings overnight despite strong demand. Here's why the coverage gap exists and how to close it without hiring a night shift.",
   path: PATH,
+  noindex: true,
 });
 
 export default function AfterHoursMissedBookingsPage() {

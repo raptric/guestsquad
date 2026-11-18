@@ -44,6 +44,7 @@ export const metadata: Metadata = buildMetadata({
   description:
     "Fast guest responses reduce cancellations and protect review scores. Here's what Vrbo and Booking.com show about response speed and its effect on cancellations and ratings.",
   path: PATH,
+  noindex: true,
 });
 
 export default function FastResponsesCancellationsPage() {

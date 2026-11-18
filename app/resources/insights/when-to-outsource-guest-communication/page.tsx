@@ -44,6 +44,7 @@ export const metadata: Metadata = buildMetadata({
   description:
     "Outsourcing guest communication has a clear ROI threshold. Here's how to evaluate the fit and when keeping it in-house is the right call.",
   path: PATH,
+  noindex: true,
 });
 
 export default function WhenToOutsourcePage() {

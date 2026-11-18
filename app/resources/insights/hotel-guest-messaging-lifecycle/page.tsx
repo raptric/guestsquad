@@ -44,6 +44,7 @@ export const metadata: Metadata = buildMetadata({
   description:
     "Hotel guest messaging spans three phases: pre-arrival, during stay, and post-checkout. Here's what strong performance looks like at each stage.",
   path: PATH,
+  noindex: true,
 });
 
 export default function GuestMessagingLifecyclePage() {

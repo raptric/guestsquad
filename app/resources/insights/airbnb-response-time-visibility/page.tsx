@@ -44,6 +44,7 @@ export const metadata: Metadata = buildMetadata({
   description:
     "Slow responses hurt your Airbnb ranking and Superhost status. Vrbo auto-declines after 24 hours. Here's what both platforms measure and enforce.",
   path: PATH,
+  noindex: true,
 });
 
 export default function AirbnbResponseTimeVisibilityPage() {

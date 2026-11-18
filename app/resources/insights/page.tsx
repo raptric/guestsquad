@@ -15,6 +15,7 @@ export const metadata: Metadata = buildMetadata({
   description:
     "Insights on hotel OTA rankings, guest response time and revenue gaps — and how operational decisions affect your performance on Booking.com, Expedia and Airbnb.",
   path: "/resources/insights",
+  noindex: true,
 });
 
 export default function InsightsPage() {

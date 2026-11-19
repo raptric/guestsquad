@@ -37,7 +37,8 @@ const ContentSecurityPolicy = `
     https://www.patlive.com
     https://www.ruby.com
     https://rentalsunited.com
-    https://c.clarity.ms
+    https://assets.calendly.com
+    https://d3v0px0pttie1i.cloudfront.net
     https://*.google.com
     https://stats.g.doubleclick.net;
   frame-src

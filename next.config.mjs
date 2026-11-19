@@ -16,7 +16,7 @@ const ContentSecurityPolicy = `
     https://images.unsplash.com
     https://www.googletagmanager.com
     https://*.clarity.ms
-    https://c.bing.com
+    https://*.bing.com
     https://analytics.ahrefs.com
     https://a0.muscache.com
     https://cf2.bstatic.com

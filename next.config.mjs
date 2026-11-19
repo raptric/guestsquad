@@ -17,6 +17,8 @@ const ContentSecurityPolicy = `
     https://images.unsplash.com
     https://www.googletagmanager.com
     https://www.clarity.ms
+    https://c.clarity.ms
+    https://b.clarity.ms
     https://analytics.ahrefs.com
     https://a0.muscache.com
     https://cf2.bstatic.com
@@ -48,6 +50,7 @@ const ContentSecurityPolicy = `
     https://www.googletagmanager.com
     https://www.clarity.ms
     https://c.clarity.ms
+    https://b.clarity.ms
     https://analytics.ahrefs.com
     https://calendly.com
     https://stats.g.doubleclick.net

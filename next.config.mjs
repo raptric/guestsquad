@@ -4,8 +4,7 @@ const ContentSecurityPolicy = `
   default-src 'self';
   script-src 'self' 'unsafe-inline' 'unsafe-eval'
     https://www.googletagmanager.com
-    https://www.clarity.ms
-    https://scripts.clarity.ms
+    https://*.clarity.ms
     https://analytics.ahrefs.com
     https://assets.calendly.com;
   style-src 'self' 'unsafe-inline'
@@ -16,10 +15,8 @@ const ContentSecurityPolicy = `
   img-src 'self' data: blob:
     https://images.unsplash.com
     https://www.googletagmanager.com
-    https://www.clarity.ms
-    https://c.clarity.ms
-    https://b.clarity.ms
-    https://t.clarity.ms
+    https://*.clarity.ms
+    https://c.bing.com
     https://analytics.ahrefs.com
     https://a0.muscache.com
     https://cf2.bstatic.com
@@ -50,10 +47,7 @@ const ContentSecurityPolicy = `
     https://www.google-analytics.com
     https://analytics.google.com
     https://www.googletagmanager.com
-    https://www.clarity.ms
-    https://c.clarity.ms
-    https://b.clarity.ms
-    https://t.clarity.ms
+    https://*.clarity.ms
     https://analytics.ahrefs.com
     https://calendly.com
     https://stats.g.doubleclick.net

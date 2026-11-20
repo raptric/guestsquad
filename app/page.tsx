@@ -415,12 +415,12 @@ export default function HomePage() {
               </ul>
             </div>
             <div className="rounded-lg border border-line bg-paper p-7">
-              <p className="text-sm font-semibold text-ink mb-2">Start With a Pilot.</p>
+              <p className="text-sm font-semibold text-ink mb-2">Start With a Coverage Review.</p>
               <p className="text-sm text-ink-soft mb-5">
-                Tell us your property, coverage hours and what you need managed. We&apos;ll agree the scope and provide transparent pricing before any service begins.
+                Tell us your property, coverage hours and what you need managed. We&apos;ll agree the scope and confirm pricing before any service begins.
               </p>
               <CoverageReviewButton variant="gold" ctaLocation="homepage_pricing_cta" className="w-full justify-center">
-                Explore a Pilot ↗
+                Book a Coverage Review ↗
               </CoverageReviewButton>
               <p className="mt-4 text-xs text-ink-muted">✓ Tailored coverage · ✓ Clear proposal · ✓ No obligation to continue</p>
             </div>

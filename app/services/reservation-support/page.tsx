@@ -26,8 +26,8 @@ const PATH = "/services/reservation-support";
 
 const FAQS = [
   {
-    q: "Is reservation support included in the hotel answering service?",
-    a: "Yes. For a single hotel, reservation support is part of the hotel answering service. What agents may do is agreed in your brief, with everything set out in a written proposal before coverage begins.",
+    q: "Is reservation support included in my service?",
+    a: "Yes. For a single property, reservation handling is part of the hotel answering service. For hotel groups and multi-property operators, it is covered under the central reservations service. For vacation rentals, reservation inquiries can be scoped into your plan. What agents may do is agreed in your brief, with everything set out in a written proposal before coverage begins.",
   },
   {
     q: "Can your agents make bookings?",

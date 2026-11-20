@@ -34,10 +34,6 @@ const FAQS = [
     a: "Minor requests are handled directly from your property brief. Issues that need on-site action, such as a fault or a safety concern, go to your designated contact, and the guest is kept informed.",
   },
   {
-    q: "Can you handle messages in languages other than English?",
-    a: "English is the primary language. If a guest writes in another language, we reply in English where the guest is likely to understand it, or pass the message to your team where a language barrier would affect the answer. This is agreed in your brief.",
-  },
-  {
     q: "What is the difference between guest messaging and OTA inbox management?",
     a: "OTA inbox management covers threads inside Booking.com, Airbnb, Expedia and similar platforms. Guest messaging covers direct channels: SMS, WhatsApp, email and live chat. The two can run together.",
   },
@@ -115,11 +111,19 @@ export default function GuestMessagingPage() {
             Guest Support Operations for direct guest channels: trained hospitality agents answer texts, WhatsApp and email from your property brief, for hotels, serviced apartments and vacation rentals.
           </p>
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-ink-soft">
-            Hotel guest messaging is the texts, WhatsApp messages and emails guests send before arrival and during their stay: check-in times, parking, access codes, late check-out, an air conditioner that stops working at midnight. Guest Squad answers them from your property brief during the hours you agree, passes anything that needs someone on site to your team, and sends a summary at shift end. Guest messaging is included in our{" "}
+            Hotel guest messaging is the texts, WhatsApp messages and emails guests send before arrival and during their stay: check-in times, parking, access codes, late check-out, an air conditioner that stops working at midnight. Guest Squad answers them from your property brief during the hours you agree, passes anything that needs someone on site to your team, and sends a summary at shift end. Guest messaging is available across all three core services:{" "}
             <Link href="/services/hotel-answering-service" className="text-gold-dark underline underline-offset-2 hover:text-gold">
               hotel answering service
-            </Link>{" "}
-            and can be scoped into vacation rental and multi-property plans.
+            </Link>
+            ,{" "}
+            <Link href="/services/vacation-rental-answering-service" className="text-gold-dark underline underline-offset-2 hover:text-gold">
+              vacation rental support
+            </Link>
+            {" "}and{" "}
+            <Link href="/services/central-reservations" className="text-gold-dark underline underline-offset-2 hover:text-gold">
+              central reservations
+            </Link>
+            . Channels and hours are scoped to what your guests use and what access is available.
           </p>
           <div className="mt-5 flex flex-wrap gap-2">
             {["SMS", "WhatsApp", "Email", "Live chat", "Direct messages"].map((c) => (
